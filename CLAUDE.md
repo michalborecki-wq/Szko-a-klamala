@@ -45,9 +45,10 @@ Stan na 29.10.2026. Właściciel: Michał Borecki. Język pracy: **polski**.
 
 ## Grafiki
 
-- Silnik: skill `szkola-klamala-grafiki`, `scripts/render.py` (Playwright + Pillow + ffmpeg), typy slajdów: cover / hero / myth / number / text / versus / bars / quiz / outro. Automatyczne dopasowanie tekstu, strefy bezpieczne 9:16 (góra 250, dół 430, prawo 150 px), minimalne rozmiary czcionek, limit słów, podglądy zbiorcze, MP4 z cichą ścieżką.
-  Uruchamianie: `python scripts/render.py spec.json --out out --sheet --video`.
-  **Pliki silnika nie są jeszcze w tym repozytorium** – trzeba je dodać z paczki (wraz z `legacy/gen.py` i `examples/przyklad.json`).
+- Silnik: skill `.claude/skills/szkola-klamala-grafiki/` (ładowany automatycznie przez Claude Code), `scripts/render.py` (Playwright + Pillow + ffmpeg), typy slajdów: cover / hero / myth / number / text / versus / bars / quiz / outro. Automatyczne dopasowanie tekstu, strefy bezpieczne 9:16 (góra 250, dół 430, prawo 150 px), minimalne rozmiary czcionek, limit słów, podglądy zbiorcze, MP4 z cichą ścieżką.
+  Uruchamianie: `python3 .claude/skills/szkola-klamala-grafiki/scripts/render.py spec.json --out out --sheet --video` (katalog `out/` jest w `.gitignore`).
+  Zależności Pythona: `pip install -r requirements.txt` (wersja Playwright zgodna z przeglądarką w `/opt/pw-browsers`; nie uruchamiaj `playwright install`).
+- `legacy/` – starszy generator (`gen.py`, `mkreel.py`, `spec_tt.py`) i specyfikacje postów z tygodnia 26–31.10 wraz z tekstami (`TEKSTY_tydzien_26-31.10.md`).
 - Styl: tło #0A0E18→#16203A, niebieskie smugi #2F6BFF, żółte akcenty #FFC727, czerwony pędzel #E53935, Inter Display Black Italic w nagłówkach, Inter w treści, ziarno 7%, kropki postępu, znak „SZKOŁA KŁAMAŁA” u góry, handle @szkola_klamala.
 - Wymaga czcionki Inter / Inter Display z Black Italic: `fc-list | grep -i "Inter Display"`.
 
@@ -57,3 +58,5 @@ Stan na 29.10.2026. Właściciel: Michał Borecki. Język pracy: **polski**.
 - `docs/zrodla.md` – sprawdzone fakty i źródła do ponownego użycia.
 - `docs/profil.md` – bio, teksty TikTok, ustawienia konta.
 - `docs/otwarte-sprawy.md` – lista zadań na później.
+- `docs/KONTEKST_szkola_klamala.md` – oryginalny dokument przekazania projektu (29.10).
+- `docs/archiwum/instagram-mich-bor_SKILL_metricool.md` – dawna wersja skilla treści (z Metricool). **Przy konflikcie obowiązuje ten plik (CLAUDE.md):** bez Metricool i Google Drive, plan publikacji jak wyżej.

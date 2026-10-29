@@ -1,0 +1,42 @@
+{
+  "handle": "@szkola_klamala",
+  "posts": [
+    {
+      "id": "kosmos_mity",
+      "format": "carousel",
+      "vertical_copy": true,
+      "series": "SZKOŁA KŁAMAŁA",
+      "subject": "KOSMOS",
+      "slides": [
+        {"type": "cover", "title": "3 mity o kosmosie,", "accent": "w które wierzysz", "sub": "Ostatni zaskakuje najbardziej. Sprawdzone w źródłach NASA."},
+        {"type": "myth", "num": "01", "myth": "Na stacji kosmicznej nie ma grawitacji.", "fact": "Na wysokości ISS grawitacja to ok. **90%** tej przy powierzchni Ziemi. Astronauci unoszą się, bo cały czas spadają – razem ze stacją.", "source": "NASA"},
+        {"type": "bars", "title": "Mapa", "accent": "pompuje lądy", "body": "Powiększenie powierzchni w projekcji Merkatora:", "rows": [["0°", 1, "×1"], ["45°", 2, "×2"], ["60°", 4, "×4"], ["72° N", 10.47, "×10,5"]], "label_width": 170, "note": "72° N – środek Grenlandii. Obliczenia własne."},
+        {"type": "number", "tag": "FAKT", "big": "243 > 225", "title": "Dzień dłuższy", "accent": "niż rok", "body": "Obrót Wenus wokół osi trwa **243 dni** ziemskie, a okrążenie Słońca – **225**.", "source": "NASA Space Place"},
+        {"type": "versus", "side": "za", "label": "ZA: OWOC", "title": "Botanika", "body": "Owoc rozwija się z kwiatu i zawiera nasiona. Pomidor spełnia to co do joty – botanicznie to **jagoda**.", "source": "Encyclopaedia Britannica"},
+        {"type": "outro", "question": "Który mit siedział w Twojej głowie najdłużej?", "sub": "Napisz, skąd go znasz – z lekcji, z filmu, od rodziny?", "sources": "Źródła: NASA, Encyclopaedia Britannica"}
+      ]
+    },
+    {
+      "id": "strefy_hero",
+      "format": "vertical",
+      "subject": "GEOGRAFIA",
+      "slides": [
+        {"type": "hero", "big": "12", "title": "stref czasowych", "accent": "ma Francja", "sub": "Więcej niż Rosja i USA (po 11). Wszystko przez wyspy.", "source": "timeanddate.com"}
+      ]
+    },
+    {
+      "id": "chemia_quiz",
+      "format": "reel",
+      "subject": "CHEMIA",
+      "durations": [2.4, 3.0, 1.0, 1.0, 1.0, 4.0],
+      "slides": [
+        {"type": "cover", "title": "Który fakt jest", "accent": "fałszywy?", "sub": "Masz 3 sekundy."},
+        {"type": "quiz", "options": ["Diament jest zbudowany z węgla – jak grafit w ołówku.", "Diament może spłonąć.", "Szkło w starych oknach powoli spływa w dół."]},
+        {"type": "quiz", "options": ["Diament jest zbudowany z węgla – jak grafit w ołówku.", "Diament może spłonąć.", "Szkło w starych oknach powoli spływa w dół."], "countdown": 3},
+        {"type": "quiz", "options": ["Diament jest zbudowany z węgla – jak grafit w ołówku.", "Diament może spłonąć.", "Szkło w starych oknach powoli spływa w dół."], "countdown": 2},
+        {"type": "quiz", "options": ["Diament jest zbudowany z węgla – jak grafit w ołówku.", "Diament może spłonąć.", "Szkło w starych oknach powoli spływa w dół."], "countdown": 1},
+        {"type": "quiz", "question": "FAŁSZ: C", "options": ["Diament jest zbudowany z węgla – jak grafit w ołówku.", "Diament może spłonąć.", "Szkło nie płynie – szyba „spłynęłaby” o ok. **1 nm przez miliard lat**."], "reveal": 2}
+      ]
+    }
+  ]
+}

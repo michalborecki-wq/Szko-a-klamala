@@ -1,0 +1,14 @@
+[
+{"id":"mr1_kosmos_wenus","kind":"reel","label":"","slides":[
+"<div class='lbl'>SZKOŁA KŁAMAŁA · KOSMOS</div><div class='tag mit'>MIT</div><h1 style='font-size:104px'>Dzień zawsze jest<span class='y'>krótszy niż rok</span></h1><div class='ul'></div><div class='sub'>Na Wenus – nie.</div>",
+"<div class='tag fakt'>FAKT</div><div class='big' style='font-size:150px;white-space:nowrap'>243 &gt; 225</div><div class='tx' style='margin-top:30px'>Obrót Wenus wokół osi trwa <b>243 dni</b> ziemskie, a okrążenie Słońca – <b>225</b>.</div>",
+"<h2>I jeszcze jedno:</h2><div class='tx'>Wenus kręci się w przeciwną stronę, więc Słońce wschodzi tam <b>na zachodzie</b>.</div><div class='sub' style='margin-top:50px'>Wyślij komuś, kto lubi kosmos.</div><div class='sub' style='font-size:30px;color:#9AA3B5;margin-top:30px'>Źródło: NASA Space Place</div>"]},
+{"id":"mr2_psychologia_mozg","kind":"reel","label":"","slides":[
+"<div class='lbl'>SZKOŁA KŁAMAŁA · PSYCHOLOGIA</div><div class='tag mit'>MIT</div><h1 style='font-size:104px'>Używamy tylko<span class='y'>10% mózgu</span></h1><div class='ul'></div><div class='sub'>Słyszałeś to w szkole albo w filmie?</div>",
+"<div class='tag fakt'>FAKT</div><h2>Pracuje <span class='y'>prawie cały</span></h2><div class='tx'>Badania obrazowe pokazują, że w ciągu dnia działają <b>praktycznie wszystkie</b> obszary mózgu – nawet podczas snu.</div>",
+"<div class='big'>20%</div><h2 style='margin-top:30px'>energii ciała</h2><div class='tx'>Tyle zużywa mózg, choć to ok. <b>3%</b> masy ciała.</div><div class='sub' style='font-size:30px;color:#9AA3B5;margin-top:40px'>Źródło: Scientific American</div>"]},
+{"id":"mr3_chemia_szklo","kind":"reel","label":"","slides":[
+"<div class='lbl'>SZKOŁA KŁAMAŁA · CHEMIA</div><div class='tag mit'>MIT</div><h1 style='font-size:104px'>Szkło w starych oknach<span class='y'>spływa w dół</span></h1><div class='ul'></div><div class='sub'>Dlatego szyby są grubsze u dołu?</div>",
+"<div class='tag fakt'>FAKT</div><h2>Szkło <span class='y'>nie płynie</span></h2><div class='tx'>Wg obliczeń z 2017 r. średniowieczna szyba „spłynęłaby” o ok. <b>1 nanometr przez miliard lat</b>.</div>",
+"<h2>Skąd grubszy <span class='y'>dół?</span></h2><div class='tx'>Szyby wycinano z wirowanej tafli, grubszej w środku. Szklarze wstawiali grubszą krawędź <b>na dół</b>.</div><div class='sub' style='font-size:30px;color:#9AA3B5;margin-top:40px'>Źródło: J. Am. Ceram. Soc. (2017)</div>"]}
+]

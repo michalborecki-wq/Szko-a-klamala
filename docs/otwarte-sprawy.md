@@ -4,4 +4,4 @@
 2. Za 2–3 tygodnie: wybrać zwycięzcę do promocji (wideo, cel „obserwujący”).
 3. Rozważyć zaktualizowanie skilla `instagram-mich-bor` (usunąć Metricool, dodać nowe przedmioty i plan publikacji). Na razie te zmiany są tylko w prompcie zadania cyklicznego.
 4. Media kit: przy ok. 5 tys. obserwujących albo stabilnie powyżej 10 tys. wyświetleń.
-5. Dodać do repozytorium silnik grafik `szkola-klamala-grafiki` (scripts/render.py, examples/, legacy/).
+5. Zrobione 29.10: silnik grafik dodany do `.claude/skills/szkola-klamala-grafiki` i przetestowany na `examples/przyklad.json` (0 ostrzeżeń QA, MP4 z cichą ścieżką AAC).
