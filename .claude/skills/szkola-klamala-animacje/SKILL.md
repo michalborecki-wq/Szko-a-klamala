@@ -17,7 +17,7 @@ Silnik: `.claude/skills/szkola-klamala-grafiki/scripts/render.py` + biblioteka r
    ```bash
    python3 .claude/skills/szkola-klamala-grafiki/scripts/render.py spec.json --out out --video --muzyka
    ```
-   Wynik: `<id>_muzyka.mp4` (gotowy do publikacji, −14 LUFS), `<id>_efekty.mp4` (same efekty dźwiękowe – gdy Michał woli dźwięk z trendów TikToka), `<id>_zdarzenia.json` (oś czasu), okładka `<id>_reel_01.jpg`.
+   Wynik: `<id>_muzyka.mp4` (gotowy do publikacji, −14 LUFS), `<id>_efekty.mp4` (same efekty dźwiękowe – gdy Michał woli dźwięk z trendów TikToka), `<id>_zdarzenia.json` (oś czasu), okładka `<id>_reel_01.jpg`, **`<id>_tiktok_1080.mp4` – wersja na TikTok** (1080×1920; edytor TikToka dubluje obraz pionowych plików 4K – na TikTok nigdy nie wysyłaj pliku 4K).
 4. Zasada nr 8: obejrzyj gotowy film (arkusz klatek w momentach: 0 s, środek wejść, każde przejście, lądowanie liczby, koniec) i sprawdź raport głośności. Dopiero potem wyślij.
 
 ## Biblioteka efektów (`ruch.py`)

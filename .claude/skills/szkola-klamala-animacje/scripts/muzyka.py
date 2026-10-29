@@ -374,6 +374,17 @@ def stereo(x, width=0.0, delay_ms=11):
     return np.stack([lo + hi * (1 + width * .3), lo + r * (1 - width * .3)], 1)
 
 
+def tiktok_1080(src, out):
+    """Wersja na TikTok: 1080×1920 z mastera 4K (lanczos), H.264 High@4.1. Edytor TikToka (iOS, 29.10.2026)
+    po wczytaniu pionowego pliku 2160×3840 wyświetla obraz podwójnie, jeden pod drugim; TikTok i tak
+    pokazuje maks. 1080×1920."""
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", src, "-vf", "scale=1080:1920:flags=lanczos,setsar=1",
+                    "-c:v", "libx264", "-profile:v", "high", "-level:v", "4.1", "-preset", "slow", "-crf", "16",
+                    "-pix_fmt", "yuv420p", "-r", "30", "-g", "60", "-c:a", "aac", "-b:a", "192k", "-ar", "48000",
+                    "-movflags", "+faststart", out], check=True)
+    return out
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("video")
@@ -412,6 +423,11 @@ def main():
         else:
             os.replace(tmp, out)                     # same efekty: bez podbijania – muzyka dojdzie w aplikacji
         wyniki.append(out)
+        if wariant == "muzyka":
+            tt = f"{base}_tiktok_1080.mp4"
+            tiktok_1080(out, tt)
+            wyniki.append(tt)
+            print(f"  TikTok: {tt} (1080×1920 – edytor TikToka dubluje obraz plików 4K w pionie)")
         print(f"{wariant}: nastrój {nastroj}, {bpm} BPM, {len(cuts)} cięć na bicie")
         if wariant == "muzyka":
             montaz.kontrola(out)
