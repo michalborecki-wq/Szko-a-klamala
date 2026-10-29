@@ -52,6 +52,21 @@ Stan na 29.10.2026. Właściciel: Michał Borecki. Język pracy: **polski**.
 - Styl: tło #0A0E18→#16203A, niebieskie smugi #2F6BFF, żółte akcenty #FFC727, czerwony pędzel #E53935, Inter Display Black Italic w nagłówkach, Inter w treści, ziarno 7%, kropki postępu, znak „SZKOŁA KŁAMAŁA” u góry, handle @szkola_klamala.
 - Wymaga czcionki Inter / Inter Display z Black Italic: `fc-list | grep -i "Inter Display"`.
 
+## Wideo: animacje, napisy, montaż
+
+- Narzędzia (darmowe): ffmpeg z libass, faster-whisper (spisywanie mowy offline, model `medium`), auto-editor, Playwright. Kontener jest ulotny – na początku sesji z wideo: `bash scripts/instaluj.sh`.
+- Skille (`.claude/skills/`): `szkola-klamala-animacje` (animowane napisy i plansze Reelsów), `szkola-klamala-napisy` (transkrypcja + napisy PL słowo w słowo w stylu marki), `szkola-klamala-montaz` (montaż nagrań), `szkola-klamala-grafiki` (slajdy i silnik).
+- Poziom: rolki mają wyglądać jak od profesjonalnego grafika / motion designera – jeden język ruchu marki, bez przypadkowych efektów.
+- **Zasady montażu (obowiązują przy każdym filmie):**
+  1. Na start zapytaj, gdzie trafi film i co ma zrobić widz.
+  2. Nigdy nie ruszaj oryginału. Pracuj na kopii.
+  3. Wytnij pauzy i gorsze podejścia.
+  4. Napisy po polsku, słowo w słowo.
+  5. Kolory i krój pisma z plików marki.
+  6. Napisy, ikony i plansze zawsze w kadrze.
+  7. Pion 1080×1920, głośność −14 LUFS.
+  8. Zanim powiesz, że skończyłeś, obejrzyj gotowy film jeszcze raz.
+
 ## Dokumenty
 
 - `docs/opublikowane.md` – tematy już opublikowane i odrzucone (nie powtarzać w tym samym formacie).

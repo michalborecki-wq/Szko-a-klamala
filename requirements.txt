@@ -1,2 +1,7 @@
+# grafiki i animacje (Playwright w wersji zgodnej z przeglądarką w /opt/pw-browsers)
 playwright==1.63.0
 Pillow>=10
+numpy
+# spisywanie mowy (offline, darmowe) i automatyczne cięcie ciszy
+faster-whisper==1.2.1
+auto-editor==29.3.1
