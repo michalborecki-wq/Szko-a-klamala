@@ -27,6 +27,7 @@ bezpiecznej, minimalne rozmiary czcionek, brak ucięć. Ostrzeżenia trafiają d
 """
 import argparse
 import html
+import io
 import json
 import os
 import re
@@ -317,10 +318,180 @@ FIT_AND_QA = """
 """
 
 
-def render_all(spec, out):
+# ───────────────────────── animowane napisy (Reelsy) ─────────────────────────
+# Klatki renderowane deterministycznie: animacje CSS są zatrzymane, a każda klatka ustawia
+# currentTime wszystkich animacji (window.__setT). Dzięki temu wideo jest powtarzalne co do klatki.
+ANIM_CSS = f"""
+.w{{display:inline-block}}
+.m{{display:inline-block;vertical-align:top;padding:0 .14em .34em 0;margin:0 -.14em -.34em 0}}
+.wipe{{position:absolute;inset:0;z-index:20;pointer-events:none;overflow:hidden}}
+.wipe i{{position:absolute;top:-25%;height:150%;transform:skewX(-18deg)}}
+.wipe .wb{{width:220%;left:-60%;background:linear-gradient(90deg,#1E4FD8,{TOK['blue']} 40%,#5B8CFF);
+  box-shadow:0 0 80px rgba(47,107,255,.6)}}
+.wipe .wy2{{width:9%;left:-74%;background:{TOK['yellow']};box-shadow:0 0 50px rgba(255,199,39,.7)}}
+.wipe .wy{{width:9%;left:164%;background:{TOK['yellow']};box-shadow:0 0 50px rgba(255,199,39,.7)}}
+@keyframes kUp{{from{{opacity:0;transform:translateY(.42em);filter:blur(10px)}}to{{opacity:1;transform:none;filter:none}}}}
+@keyframes kRise{{from{{transform:translateY(118%) rotate(4deg)}}to{{transform:none}}}}
+@keyframes kMask{{0%,99.9%{{clip-path:inset(-1em -1em 0 -1em)}}100%{{clip-path:none}}}}
+@keyframes kFlash{{0%,100%{{filter:none}}35%{{filter:brightness(1.4) drop-shadow(0 0 28px rgba(255,199,39,.75))}}}}
+@keyframes kChip{{from{{opacity:0;transform:skew(-8deg) translateX(-70px)}}to{{opacity:1;transform:skew(-8deg)}}}}
+@keyframes kBrush{{from{{clip-path:inset(0 100% 0 0)}}to{{clip-path:inset(0 0 0 0)}}}}
+@keyframes kStrike{{from{{background-size:0% 4px}}to{{background-size:100% 4px}}}}
+@keyframes kPop{{0%{{opacity:0;transform:scale(.55)}}60%{{opacity:1;transform:scale(1.07)}}100%{{opacity:1;transform:none}}}}
+@keyframes kPunch{{from{{transform:scale(1.12)}}to{{transform:none}}}}
+@keyframes kFade{{from{{opacity:0}}to{{opacity:1}}}}
+@keyframes kSlide{{from{{opacity:0;transform:translateX(-80px)}}to{{opacity:1;transform:none}}}}
+@keyframes kGrow{{from{{transform:scaleX(0)}}to{{transform:none}}}}
+@keyframes kHi{{from{{color:{TOK['text']};text-shadow:none}}50%{{text-shadow:0 0 34px rgba(255,199,39,.95)}}to{{color:{TOK['yellow']}}}}}
+@keyframes kShake{{0%,100%{{transform:none}}20%{{transform:translateX(-16px)}}40%{{transform:translateX(14px)}}60%{{transform:translateX(-9px)}}80%{{transform:translateX(5px)}}}}
+@keyframes kDim{{from{{opacity:1}}to{{opacity:.45}}}}
+.big,.num{{transform-origin:left center}} .center .big{{transform-origin:center}}
+.row .fill{{transform-origin:left center}}
+"""
+
+ANIM_PREP = r"""
+(o) => {
+  const c = document.querySelector('.content');
+  const EASE = 'cubic-bezier(.2,.8,.2,1)';
+  const anim = (el, name, dur, delay, add) => {
+    const a = `${name} ${dur}s ${EASE} ${delay.toFixed(3)}s both`;
+    el.style.animation = add && el.style.animation ? el.style.animation + ', ' + a : a;
+  };
+  // podział tekstu na słowa (twarde spacje zostają wewnątrz „słowa” – frazy wchodzą razem)
+  const split = (el, mask) => {
+    const walk = (n) => [...n.childNodes].forEach(ch => {
+      if (ch.nodeType === 3) {
+        const frag = document.createDocumentFragment();
+        ch.textContent.split(/( +)/).forEach(p => {
+          if (!p) return;
+          if (/^ +$/.test(p)) { frag.appendChild(document.createTextNode(p)); return; }
+          const s = document.createElement('span'); s.className = 'w'; s.textContent = p;
+          if (mask) { const m = document.createElement('span'); m.className = 'm'; m.appendChild(s); frag.appendChild(m); }
+          else frag.appendChild(s);
+        });
+        n.replaceChild(frag, ch);
+      } else if (ch.nodeType === 1 && ch.tagName !== 'BR' && !ch.classList.contains('m')) walk(ch);
+    });
+    walk(el);
+    return [...el.querySelectorAll('.w')];
+  };
+  // liczniki: liczby w .big i wartościach wykresów odliczają się od zera
+  window.__counters = [];
+  const addCounter = (el, start, dur) => {
+    if (!o.count) return;
+    const nodes = [];
+    const tw = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+    while (tw.nextNode()) if (/\d/.test(tw.currentNode.textContent)) nodes.push({node: tw.currentNode, orig: tw.currentNode.textContent});
+    if (nodes.length) window.__counters.push({nodes, start, dur});
+  };
+  let t = 0;
+  if (!o.enter) {   // kolejna klatka tego samego quizu – bez ponownego wejścia, tylko odliczanie / rozwiązanie
+    c.querySelectorAll('.cd').forEach(el => anim(el, 'kPop', .45, 0));
+    c.querySelectorAll('.opt.bad').forEach(el => anim(el, 'kShake', .5, .1));
+    c.querySelectorAll('.opt.dim').forEach(el => anim(el, 'kDim', .4, .1));
+  } else {
+  const hw = [...c.querySelectorAll('h1,h2')].reduce((a, e) => a + e.innerText.split(/\s+/).length, 0) || 1;
+  const bw = [...c.querySelectorAll('.sub,.body,.opt')].reduce((a, e) => a + e.innerText.split(/\s+/).length, 0) || 1;
+  const sh = Math.min(.075, .55 / hw), sb = Math.min(.035, .75 / bw);
+  const units = c.querySelectorAll('.chip,.tag,.num,h1,h2,.brush,.big,.myth,.sub,.body,.opt,.row,.cd,.note,.src,.partner');
+  units.forEach(el => {
+    if (el.matches('.chip,.tag')) {
+      if (!o.first) { anim(el, 'kChip', .38, t); t += .14; }
+    } else if (el.matches('h1,h2')) {
+      if (o.first) { el.style.transformOrigin = 'left center'; anim(el, 'kPunch', .55, 0); }   // haczyk widoczny od 1. klatki
+      else {   // słowa wysuwają się spod linii (maska), maska znika po wejściu, żeby nie ucinać poświaty
+        split(el, true).forEach((w, k) => { anim(w, 'kRise', .55, t + k * sh); anim(w.parentNode, 'kMask', .55, t + k * sh); });
+        t += hw * sh + .15;
+      }
+    } else if (el.matches('.brush')) {
+      anim(el, 'kBrush', .42, o.first ? .12 : t); t += .12;
+    } else if (el.matches('.big,.num,.cd')) {
+      if (!(o.first && el.matches('.big'))) anim(el, 'kPop', .5, t);
+      if (el.matches('.big')) { addCounter(el, o.first ? 0 : t, .9); anim(el, 'kFlash', .6, (o.first ? 0 : t) + .85, true); }
+      t += .32;
+    } else if (el.matches('.myth')) {
+      anim(el, 'kFade', .3, t);
+      el.querySelectorAll('span').forEach(s => anim(s, 'kStrike', .5, t + .3));
+      t += .75;
+    } else if (el.matches('.sub,.body,.opt')) {
+      if (o.first) t = Math.max(t, .35);
+      if (el.matches('.opt')) { anim(el, 'kSlide', .4, t); t += .16; return; }
+      const ws = split(el);
+      ws.forEach((w, k) => anim(w, 'kUp', .42, t + k * sb));
+      el.querySelectorAll('b').forEach(b => {
+        const k = ws.indexOf(b.querySelector('.w'));
+        anim(b, 'kHi', .55, t + Math.max(0, k) * sb + .3);
+      });
+      t += ws.length * sb + .1;
+    } else if (el.matches('.row')) {
+      anim(el, 'kFade', .3, t);
+      el.querySelectorAll('.fill').forEach(f => anim(f, 'kGrow', .65, t + .05));
+      el.querySelectorAll('.n').forEach(n => addCounter(n, t + .05, .65));
+      t += .14;
+    } else {
+      anim(el, 'kFade', .4, t); t += .08;
+    }
+  });
+  }
+  const wipe = document.createElement('div'); wipe.className = 'wipe';
+  wipe.innerHTML = '<i class="wb"></i><i class="wy"></i><i class="wy2"></i>'; document.body.appendChild(wipe);
+  const W = innerWidth;
+  const io = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+  window.__setT = (t, g, dur, exit, enterWipe, push) => {
+    document.getAnimations().forEach(a => { a.pause(); a.currentTime = t * 1000; });
+    const RE = /\d{1,3}(?:[  ]\d{3})+|\d+(?:[.,]\d+)?/g;
+    const fmt = (m, e) => {
+      const grp = /[  ]/.test(m) ? m.match(/[  ]/)[0] : null;
+      const dec = (m.match(/[.,](\d+)$/) || [, ''])[1].length;
+      const sep = dec ? m[m.length - dec - 1] : '';
+      const v = parseFloat(m.replace(/[  ]/g, '').replace(',', '.')) * e;
+      let s = v.toFixed(dec);
+      if (sep === ',') s = s.replace('.', ',');
+      if (grp) s = s.replace(/\B(?=(\d{3})+(?!\d))/g, grp);
+      return s;
+    };
+    (window.__counters || []).forEach(cn => {
+      const tq = Math.floor(t * 30 + 1e-6) / 30;   // cyfry zmieniają się na granicy klatek – bez „duchów” po rozmyciu ruchu
+      const p = Math.min(1, Math.max(0, (tq - cn.start) / cn.dur)), e = 1 - Math.pow(1 - p, 3);
+      cn.nodes.forEach(n => { n.node.textContent = p >= 1 ? n.orig : n.orig.replace(RE, m => fmt(m, e)); });
+    });
+    // przejście: markowa smuga wjeżdża w ostatnich 0,22 s planszy i zjeżdża w pierwszych 0,22 s następnej
+    const WT = .22;
+    let x = null;
+    if (exit && t > dur - WT) x = -1 + io((t - (dur - WT)) / WT);          // -1 → 0 (zakrywa)
+    else if (enterWipe && t < WT) x = io(t / WT);                          // 0 → 1 (odsłania)
+    wipe.style.display = x === null ? 'none' : '';
+    if (x !== null) [...wipe.children].forEach(e => e.style.translate = `${x * W * 2.4}px 0`);
+    // powolny najazd kamery: treść 1 → 1,025 w obrębie planszy, tło 1 → 1,06 przez cały film
+    if (push) c.style.transform = `scale(${1 + .025 * Math.min(1, t / dur)})`; else c.style.transform = '';
+    document.querySelectorAll('.bg').forEach(e => e.style.transform = `scale(${1 + .004 * g})`);
+    const gr = document.querySelector('.grain');
+    if (gr) gr.style.backgroundPosition = `${(g * 7919) % 240}px ${(g * 6271) % 240}px`;   // żywe ziarno
+    document.querySelectorAll('.st').forEach((e, i) =>
+      e.style.translate = `${Math.sin(g * .5 + i * 1.7) * 16}px ${Math.cos(g * .4 + i) * 8}px`);  // smugi lekko dryfują
+  };
+  return t;
+}
+"""
+
+
+def open_video_pipe(out_mp4, fps=30):
+    """ffmpeg czyta klatki JPEG ze stdin; dokłada cichą ścieżkę AAC (część systemów odrzuca wideo bez audio)."""
+    cmd = ["ffmpeg", "-y", "-v", "error", "-f", "image2pipe", "-framerate", str(fps), "-c:v", "mjpeg", "-i", "-",
+           "-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo", "-map", "0:v", "-map", "1:a",
+           "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-pix_fmt", "yuv420p", "-r", str(fps),
+           "-c:a", "aac", "-b:a", "128k", "-shortest", "-movflags", "+faststart", out_mp4]
+    return subprocess.Popen(cmd, stdin=subprocess.PIPE)
+
+
+def default_durations(n):
+    return [2.6] + [3.6] * (n - 2) + [3.6] if n > 1 else [4.0]
+
+
+def render_all(spec, out, video=False, fps=30, sub=2):
     from playwright.sync_api import sync_playwright
     os.makedirs(out, exist_ok=True)
-    report, produced = [], {}
+    report, produced, animated = [], {}, {}
     handle = spec.get("handle", "@szkola_klamala")
     with sync_playwright() as p:
         br = p.chromium.launch()
@@ -335,12 +506,33 @@ def render_all(spec, out):
                 suffix = {"carousel": "", "vertical": "_916", "reel": "_reel"}[fmt]
                 files = []
                 n = len(post["slides"])
+                anim = video and fmt == "reel" and post.get("animate", True)
+                if anim:
+                    durs = post.get("durations") or default_durations(n)
+                    if len(durs) != n:
+                        durs = default_durations(n)
+                    mp4 = os.path.join(out, f"{post['id']}.mp4")
+                    proc, g = open_video_pipe(mp4, fps), 0.0
+                    # klatka quizu z odliczaniem/rozwiązaniem kontynuuje poprzednią – bez wyjścia i ponownego wejścia
+                    cont = [s["type"] == "quiz" and (s.get("countdown") or s.get("reveal") is not None)
+                            for s in post["slides"]]
                 for i, s in enumerate(post["slides"]):
                     doc = tpl(s, post, f, i, n)
                     pg.set_viewport_size({"width": f["W"], "height": f["H"]})
                     pg.set_content(doc, wait_until="load")
                     pg.evaluate("document.fonts.ready")
+                    if anim:
+                        pg.add_style_tag(content=ANIM_CSS)
+                        enter = s.get("enter", not cont[i])
+                        intro = pg.evaluate(ANIM_PREP, {"first": i == 0, "enter": enter,
+                                                        "count": s.get("count", True)})
+                        # stan końcowy animacji – pomiar i JPEG bez przesunięć i powiększeń z wejścia
+                        pg.evaluate("window.__setT(60, 0, 999, false, false, false)")
                     qa = pg.evaluate(FIT_AND_QA, f["min_body"])
+                    if anim:
+                        if enter and intro > durs[i] - 1.2:
+                            qa["issues"].append(f"wejście napisów trwa {intro:.1f} s przy planszy {durs[i]} s"
+                                                " – wydłuż planszę albo skróć tekst")
                     words_max = 40 if s["type"] in ("quiz", "versus") else 32
                     if qa["words"] > words_max:
                         qa["issues"].append(f"{qa['words']} słów (> {words_max}) – za dużo tekstu na slajd")
@@ -353,17 +545,43 @@ def render_all(spec, out):
                     files.append(path)
                     tagline = f"{name}: słowa={qa['words']} skala={qa['scale']}"
                     report.append(tagline + ("" if not qa["issues"] else "  ⚠ " + " | ".join(qa["issues"])))
+                    if anim:
+                        nf = round(durs[i] * fps)
+                        exit_ = i < n - 1 and not cont[i + 1]
+                        wipe_in = i > 0 and not cont[i]
+                        push = not cont[i] and not (i + 1 < n and cont[i + 1])   # quiz stoi w miejscu
+                        for k in range(nf):
+                            # rozmycie ruchu: średnia z `sub` podklatek w obrębie jednej klatki wyjściowej
+                            if sub == 1:
+                                pg.evaluate("(a) => window.__setT(...a)", [k / fps, g + k / fps, durs[i], exit_, wipe_in, push])
+                                proc.stdin.write(pg.screenshot(type="jpeg", quality=93))
+                                continue
+                            acc = None
+                            for j in range(sub):
+                                tt = (k + j / sub) / fps
+                                pg.evaluate("(a) => window.__setT(...a)", [tt, g + tt, durs[i], exit_, wipe_in, push])
+                                im = Image.open(io.BytesIO(pg.screenshot(type="jpeg", quality=96))).convert("RGB")
+                                acc = im if acc is None else Image.blend(acc, im, 1 / (j + 1))
+                            buf = io.BytesIO()
+                            acc.save(buf, "JPEG", quality=93)
+                            proc.stdin.write(buf.getvalue())
+                        g += nf / fps
                 produced[(post["id"], fmt)] = files
+                if anim:
+                    proc.stdin.close()
+                    if proc.wait() != 0:
+                        raise RuntimeError(f"ffmpeg nie złożył {mp4}")
+                    animated[post["id"]] = mp4
         br.close()
     with open(os.path.join(out, "qa_report.txt"), "w") as fh:
         fh.write("\n".join(report) + "\n")
-    return produced, report
+    return produced, report, animated
 
 
 # ───────────────────────── wideo (Reelsy) ─────────────────────────
 def make_video(files, durations, out_mp4, trans=0.28):
     if not durations or len(durations) != len(files):
-        durations = [2.6] + [3.6] * (len(files) - 2) + [3.6] if len(files) > 1 else [4.0]
+        durations = default_durations(len(files))
     inp = []
     for im, d in zip(files, durations):
         inp += ["-loop", "1", "-t", f"{d + trans:.2f}", "-framerate", "30", "-i", im]
@@ -404,13 +622,16 @@ def main():
     ap.add_argument("--out", default="out")
     ap.add_argument("--sheet", action="store_true", help="podgląd zbiorczy każdego posta (do kontroli Read)")
     ap.add_argument("--video", action="store_true", help="złóż MP4 dla postów 'reel'")
+    ap.add_argument("--draft", action="store_true", help="szybki podgląd wideo bez rozmycia ruchu (do sprawdzania układu)")
     a = ap.parse_args()
     spec = json.load(open(a.spec, encoding="utf-8"))
-    produced, report = render_all(spec, a.out)
+    produced, report, animated = render_all(spec, a.out, video=a.video, sub=1 if a.draft else 2)
     for (pid, fmt), files in produced.items():
         if a.sheet:
             contact_sheet(files, os.path.join(a.out, f"_podglad_{pid}_{fmt}.jpg"))
-        if a.video and fmt == "reel":
+        if pid in animated and fmt == "reel":
+            print("MP4 (animowane napisy):", animated[pid])
+        elif a.video and fmt == "reel":
             post = next(p for p in spec["posts"] if p["id"] == pid)
             mp4 = make_video(files, post.get("durations"), os.path.join(a.out, f"{pid}.mp4"))
             print("MP4:", mp4)

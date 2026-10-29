@@ -17,6 +17,7 @@
 | `series` | nie | Domyślnie `SZKOŁA KŁAMAŁA`. Dla sporu: `SPÓR TYGODNIA`, dla quizu: `QUIZ W PIĄTEK`. |
 | `subject` | tak | Przedmiot wersalikami: `HISTORIA`, `KOSMOS`, `PRAWO`, `MOTORYZACJA`, `MEDYCYNA`, `FINANSE`… |
 | `durations` | przy `reel` | Lista sekund na planszę (tyle elementów, ile slajdów). |
+| `animate` | nie | Tylko `reel`: domyślnie `true` – animowane napisy w MP4; `false` = prosty pokaz plansz. |
 | `slides` | tak | Lista slajdów (niżej). |
 
 Pliki wynikowe: `<id>_NN.jpg` (4:5), `<id>_916_NN.jpg` (9:16), `<id>_reel_NN.jpg` + `<id>.mp4`, podglądy `_podglad_<id>_<format>.jpg`, raport `qa_report.txt`.
@@ -58,6 +59,8 @@ Pliki wynikowe: `<id>_NN.jpg` (4:5), `<id>_916_NN.jpg` (9:16), `<id>_reel_NN.jpg
 
 **quiz** – `options` (2–4 zdania), `question` (napis w etykiecie, domyślnie „KTÓRY FAKT JEST FAŁSZYWY?”), `countdown` (3/2/1 – duża cyfra pod opcjami), `reveal` (indeks fałszywej odpowiedzi od 0 – podświetla ją na czerwono, resztę przyciemnia, etykieta robi się czerwona). W klatkach odliczania podawaj identyczne `options`, żeby nic nie skakało w wideo.
 
+Pola animacji (każdy slajd Reela, opcjonalne): `count` (`false` = duża liczba nie odlicza się od zera, np. przy roku „1569”), `enter` (`false` = plansza bez wejścia napisów; ustawiane automatycznie dla klatek odliczania i rozwiązania quizu).
+
 **outro** – `question` (otwarte pytanie), `sub`, `sources` („Źródła: …”), `partner_slot` (domyślnie `true` – puste miejsce na logo partnera).
 
 ## Typowe układy
@@ -65,6 +68,6 @@ Pliki wynikowe: `<id>_NN.jpg` (4:5), `<id>_916_NN.jpg` (9:16), `<id>_reel_NN.jpg
 - **Karuzela „Mit vs fakt” (7):** cover → 5× myth (z `num`) → outro.
 - **Karuzela „wyjaśniam” (6–8):** cover → number (drugi haczyk) → 2–4× text/bars → outro.
 - **Spór tygodnia (8):** cover (`series: "SPÓR TYGODNIA"`) → number (kontekst) → 2× versus za → 2× versus przeciw → text (`tag: "ŹRÓDŁA"`, „Co mówią źródła”) → outro.
-- **Reel „jeden mit” (3 plansze, ok. 10 s):** cover (mit jako haczyk) → number/myth (fakt z liczbą) → text albo outro (puenta + źródło). `durations: [2.6, 4.0, 3.6]`.
+- **Reel „jeden mit” (3 plansze, ok. 10 s):** cover (mit jako haczyk) → number/myth (fakt z liczbą) → text albo outro (puenta + źródło). `durations: [2.6, 4.2, 3.8]`.
 - **Reel „Quiz w piątek”:** cover → quiz → quiz `countdown` 3 → 2 → 1 → quiz `reveal` (+ opcjonalnie text z wyjaśnieniem). `durations: [2.4, 3.0, 1, 1, 1, 4.0]`.
 - **TikTok zdjęcia (4):** hero lub cover → 2× text/number → outro; `format: "vertical"`.

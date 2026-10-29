@@ -47,11 +47,13 @@ Treść (temat, fakty, źródła, podpisy, hashtagi) pochodzi ze skilla **instag
 - **Zdjęcia i ilustracje:** domyślnie ich nie ma – typografia i liczby wystarczą i nie łamią praw autorskich. Ilustracje AI tylko niefotorealistyczne, nigdy wizerunki prawdziwych osób; wtedy oznacz treść jako AI przy publikacji.
 - **Reklama:** gdy post jest płatną współpracą, `cover.sub` zaczyna się od „Reklama · współpraca z [marka]” (UOKiK), a logo partnera trafia w miejsce `partner_slot` na ostatnim slajdzie.
 
-## Reelsy (MP4)
+## Reelsy (MP4) – animowane napisy
 
-- Plansze w formacie `reel`, 3–6 plansz, łącznie 8–20 s. `durations` w sekundach na planszę: haczyk 2,4–3 s, treść 3,5–4,5 s (tyle, ile trwa spokojne przeczytanie), puenta 3–4 s, odliczanie po 1 s.
-- Skrypt dodaje lekki zoom pierwszej planszy, przejścia slide/fade, 30 kl./s, H.264 i **cichą ścieżkę AAC**. Muzykę Michał dodaje w aplikacji (biblioteka IG / dźwięki z trendów TikToka) – nigdy nie wgrywaj własnych MP3.
-- Po złożeniu sprawdź `ffprobe` (długość, obecność ścieżki audio) i obejrzyj 1–2 klatki (`ffmpeg -ss <s> -frames:v 1`).
+- Plansze w formacie `reel`, 3–6 plansz, łącznie 8–20 s. Z flagą `--video` każdy Reel dostaje **animowane napisy** (kinetyczna typografia) – szczegóły ruchu i zasady opisuje skill **szkola-klamala-animacje**. `"animate": false` w poście wraca do prostego pokazu plansz.
+- `durations` w sekundach na planszę: haczyk 2,4–3 s, treść 4–4,5 s (napisy najpierw wjeżdżają, potem trzeba zdążyć przeczytać), puenta 3,5–4 s, odliczanie quizu po 1 s. QA ostrzega, gdy wejście napisów zjada czas na czytanie.
+- 30 kl./s, H.264, **cicha ścieżka AAC**. Muzykę Michał dodaje w aplikacji (biblioteka IG / dźwięki z trendów TikToka) – nigdy nie wgrywaj własnych MP3.
+- Render z rozmyciem ruchu trwa ok. 1,5–2 min na 10 s filmu; `--draft` daje szybki podgląd bez rozmycia (do sprawdzania układu, nie do publikacji).
+- Po złożeniu sprawdź `ffprobe` (długość, ścieżka audio) i obejrzyj klatki z kilku momentów: początek (haczyk musi być czytelny w klatce 0), środek wejścia napisów, przejście, koniec każdej planszy.
 
 ## Wymagania techniczne
 
