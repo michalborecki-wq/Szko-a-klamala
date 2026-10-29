@@ -54,7 +54,7 @@ Stan na 29.10.2026. Właściciel: Michał Borecki. Język pracy: **polski**.
 
 ## Wideo: animacje, napisy, montaż
 
-- Narzędzia (darmowe): ffmpeg z libass, faster-whisper (spisywanie mowy offline, model `medium`), auto-editor, Playwright. Kontener jest ulotny – na początku sesji z wideo: `bash scripts/instaluj.sh`.
+- Narzędzia (darmowe): ffmpeg z libass, faster-whisper (spisywanie mowy offline, model `medium`), auto-editor, Playwright, Piper TTS (lektor, głos `mc_speech`). Kontener jest ulotny – na początku sesji z wideo: `bash scripts/instaluj.sh`.
 - Skille (`.claude/skills/`): `szkola-klamala-animacje` (animowane napisy i plansze Reelsów), `szkola-klamala-napisy` (transkrypcja + napisy PL słowo w słowo w stylu marki), `szkola-klamala-montaz` (montaż nagrań), `szkola-klamala-grafiki` (slajdy i silnik).
 - Poziom: rolki mają wyglądać jak od profesjonalnego grafika / motion designera – jeden język ruchu marki, bez przypadkowych efektów.
 - **Zasady montażu (obowiązują przy każdym filmie):**

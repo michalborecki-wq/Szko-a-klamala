@@ -20,6 +20,19 @@ Silnik jest wspólny z grafikami: `.claude/skills/szkola-klamala-grafiki/scripts
 4. Wersja finalna (z rozmyciem ruchu, ok. 1,5–2 min na 10 s): to samo polecenie bez `--draft`.
 5. Przed oddaniem obejrzyj gotowy film jeszcze raz (arkusz klatek + `ffprobe`) – zasada nr 8 montażu.
 
+## Rolka z lektorem
+
+Gdy rolka ma mieć głos, dodaj w każdym slajdzie pole `"lektor"` (tekst czytany na tej planszy) i uruchom:
+```bash
+python3 .claude/skills/szkola-klamala-animacje/scripts/lektor.py spec.json --out out --tempo 0.9
+```
+- Głos: Piper TTS (darmowy, offline), domyślnie `mc_speech` – w teście rozpoznawania mowy najczytelniejszy z polskich głosów (`gosia`, `darkman` gorzej). Tempo 0.9 = żywe, ale wyraźne.
+- Plansze same wydłużają się do długości wypowiedzi; lektor startuje 0,1 s po początku filmu i 0,32 s po każdym przejściu. Głos przechodzi obróbkę radiową (filtr, kompresja, EQ), całość −14 LUFS, szczyt ≤ −1,5 dBTP.
+- **Tekst lektora = tekst na ekranie** (ta sama myśl, te same słowa kluczowe) – rozjazd między tym, co słychać i co widać, od razu wygląda amatorsko.
+- Pisz dla ucha: liczby słowami („dziewięćdziesięciu procent”), bez skrótów („około”, nie „ok.”), krótkie zdania. Unikaj zbitek, które syntezator „połyka” – skrypt po złożeniu sam sprawdza rozpoznawaniem mowy, czy każde zdanie jest zrozumiałe i pada na swojej planszy (⚠ = przeformułuj, np. „ciągle mijają” → „wciąż mijają”).
+- Wynik: `<id>_lektor.mp4` + `<id>_lektor.srt` (napisy słowo w słowo do wgrania w aplikacji). Lektor wydłuża rolkę – pilnuj 8–15 s; tnij tekst, nie tempo.
+- Gdy Michał nagra własny głos – to montaż (`szkola-klamala-montaz`), nie syntezator.
+
 ## Język ruchu (wbudowany w silnik – nie dokładaj innych efektów)
 
 | Element | Ruch | Po co |

@@ -29,7 +29,7 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 NAPISY = os.path.join(HERE, "..", "..", "szkola-klamala-napisy", "scripts", "napisy.py")
 KLATKI = os.path.join(HERE, "klatki.py")
-LUFS, TP, LRA = -14.0, -1.0, 11.0
+LUFS, TP, LRA = -14.0, -1.5, 11.0   # TP z zapasem: kodowanie AAC podbija szczyt o ok. 0,3–0,5 dB
 
 
 def run(cmd, **kw):

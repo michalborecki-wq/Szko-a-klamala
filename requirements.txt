@@ -5,3 +5,5 @@ numpy
 # spisywanie mowy (offline, darmowe) i automatyczne cięcie ciszy
 faster-whisper==1.2.1
 auto-editor==29.3.1
+# lektor (syntezator mowy offline, polskie głosy z rhasspy/piper-voices)
+piper-tts
