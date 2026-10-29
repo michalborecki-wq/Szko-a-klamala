@@ -25,7 +25,7 @@ Stan na 29.10.2026. Właściciel: Michał Borecki. Język pracy: **polski**.
 - **Instagram:** pon.–sob. codziennie 1 Reel „jeden mit”, 8–12 s, 3 plansze: MIT → FAKT z liczbą → puenta + źródło. Do tego 1 karuzela tygodniowo, jako **jeden** post.
 - **TikTok:** 2–3 posty dziennie (ok. 15 tygodniowo): te same Reelsy jako wideo, karuzela w 9:16 i dodatkowe karuzele zdjęć 9:16 (4 slajdy). Godziny: 10:00, 13:00, 18:00.
 - **Priorytet tematów:** najbardziej znane mity z szerokim zasięgiem (kosmos, ciało, mózg, medycyna, motoryzacja, prawo w codziennym życiu, pieniądze w codziennym życiu). Węższe tematy (język, ekonomia) rzadziej. Co tydzień co najmniej 3 z: prawo, finanse, motoryzacja, medycyna.
-- Muzykę Michał dodaje ręcznie w aplikacji. Pliki MP4 mają cichą ścieżkę AAC.
+- Muzyka (decyzja 29.10): rolki mają **oryginalny podkład generowany w kodzie + efekty dźwiękowe** zsynchronizowane z animacją (`<id>_muzyka.mp4`, −14 LUFS), zamiast lektora. Dodatkowo `<id>_efekty.mp4` (same efekty), gdy Michał woli dźwięk z trendów w aplikacji. Nigdy cudzych plików MP3.
 - Przekazanie materiałów: pliki post po poście (bez ZIP-ów i duplikatów), opisy IG i TikTok w blokach do skopiowania, źródła, propozycje dźwięków.
 
 ## Przypomnienia dla Michała (z doświadczenia)
@@ -54,9 +54,9 @@ Stan na 29.10.2026. Właściciel: Michał Borecki. Język pracy: **polski**.
 
 ## Wideo: animacje, napisy, montaż
 
-- Narzędzia (darmowe): ffmpeg z libass, faster-whisper (spisywanie mowy offline, model `medium`), auto-editor, Playwright, Piper TTS (lektor, głos `mc_speech`). Kontener jest ulotny – na początku sesji z wideo: `bash scripts/instaluj.sh`.
-- Skille (`.claude/skills/`): `szkola-klamala-animacje` (animowane napisy i plansze Reelsów), `szkola-klamala-napisy` (transkrypcja + napisy PL słowo w słowo w stylu marki), `szkola-klamala-montaz` (montaż nagrań), `szkola-klamala-grafiki` (slajdy i silnik).
-- Poziom: rolki mają wyglądać jak od profesjonalnego grafika / motion designera – jeden język ruchu marki, bez przypadkowych efektów.
+- Narzędzia (darmowe): ffmpeg z libass, faster-whisper (spisywanie mowy offline, model `medium`), auto-editor, Playwright, numpy/scipy (generator muzyki), Piper TTS (lektor – opcja, domyślnie nie używamy). Kontener jest ulotny – na początku sesji z wideo: `bash scripts/instaluj.sh`.
+- Skille (`.claude/skills/`): `szkola-klamala-animacje` (animowane rolki: biblioteka efektów `ruch.py` + muzyka `muzyka.py`), `szkola-klamala-napisy` (transkrypcja + napisy PL słowo w słowo w stylu marki), `szkola-klamala-montaz` (montaż nagrań), `szkola-klamala-grafiki` (slajdy i silnik).
+- Poziom: rolki mają wyglądać jak od profesjonalnego grafika / motion designera – urozmaicone efekty (każda rolka inna kombinacja), ale z jednej palety marki; cięcia na bicie muzyki.
 - **Zasady montażu (obowiązują przy każdym filmie):**
   1. Na start zapytaj, gdzie trafi film i co ma zrobić widz.
   2. Nigdy nie ruszaj oryginału. Pracuj na kopii.

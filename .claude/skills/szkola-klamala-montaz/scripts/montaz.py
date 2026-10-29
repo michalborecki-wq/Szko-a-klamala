@@ -156,15 +156,18 @@ def glosnosc(src, out):
     tmp = out + ".etap.mp4"
     run(["ffmpeg", "-y", "-v", "error", "-i", src, "-af", af, "-ar", "48000", "-c:v", "copy", "-c:a", "aac",
          "-b:a", "192k", "-movflags", "+faststart", tmp])
-    # loudnorm w trybie liniowym bywa ograniczany przez szczyt – dociągnij do celu wzmocnieniem z limiterem (−1 dBTP)
-    i, _ = zmierz_lufs(tmp)
-    if i is not None and abs(i - LUFS) > 0.3:
+    # loudnorm bywa ograniczany przez szczyt albo go przekracza – dociągnij głośność do celu i zawsze pilnuj
+    # szczytu limiterem (próbkowy, więc z zapasem 1 dB na nadwyżkę true peak po kodowaniu AAC); maks. 3 rundy
+    for _ in range(3):
+        i, tp = zmierz_lufs(tmp)
+        if i is None or (abs(i - LUFS) <= 0.4 and (tp is None or tp <= TP)):
+            break
+        nxt = out + ".etap2.mp4"
         run(["ffmpeg", "-y", "-v", "error", "-i", tmp, "-af",
-             f"volume={LUFS - i:.2f}dB,alimiter=limit={10 ** ((TP - 0.5) / 20):.3f}:level=false,aresample=48000",
-             "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", out])
-        os.remove(tmp)
-    else:
-        os.replace(tmp, out)
+             f"volume={LUFS - i:.2f}dB,alimiter=limit={10 ** ((TP - 1.0) / 20):.3f}:attack=2:release=60:level=false,"
+             "aresample=48000", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", nxt])
+        os.replace(nxt, tmp)
+    os.replace(tmp, out)
     return out, m
 
 

@@ -42,8 +42,11 @@ def main():
     with tempfile.TemporaryDirectory() as tmp:
         for k, t in enumerate(ts):
             f = os.path.join(tmp, f"{k}.png")
-            subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", f"{t:.3f}", "-i", a.video, "-frames:v", "1",
-                            "-vf", f"scale={a.w}:-2", f], check=True)
+            for back in (0, .1, .2, .4):   # dźwięk bywa dłuższy niż obraz – cofnij się do ostatniej klatki
+                subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", f"{max(0, t - back):.3f}", "-i", a.video,
+                                "-frames:v", "1", "-vf", f"scale={a.w}:-2", f], check=True)
+                if os.path.exists(f):
+                    break
             im = Image.open(f).convert("RGB")
             dr = ImageDraw.Draw(im)
             try:

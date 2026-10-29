@@ -1,70 +1,69 @@
 ---
 name: szkola-klamala-animacje
-description: Animowane napisy i ruch w Reelsach i filmach TikTok „Szkoła kłamała” (@szkola_klamala) – kinetyczna typografia na poziomie profesjonalnego motion designera: słowa wysuwane spod maski, rysowane przekreślenie mitu, odliczane liczby, markowe przejścia, rozmycie ruchu. Używaj ZAWSZE, gdy trzeba zrobić lub poprawić rolkę, Reel, film, wideo, animację, „ruszające się napisy”, planszę wideo albo MP4 dla „Szkoła kłamała” – także przy „zrób z tego rolkę”, „ożyw te slajdy”, „wersja wideo”. Wygląd plansz opisuje skill szkola-klamala-grafiki, napisy do nagranej mowy – szkola-klamala-napisy, montaż nagrań – szkola-klamala-montaz.
+description: Animowane rolki „Szkoła kłamała” (@szkola_klamala) z oryginalną muzyką i efektami dźwiękowymi – kinetyczna typografia na poziomie profesjonalnego motion designera z biblioteką zróżnicowanych efektów (litery, zoom, marker, licznik-bandyta, pasek postępu, pieczątka MIT, iskry, wstrząs, tła gwiazdy/siatka/kule, przejścia smuga/zoom/paski/błysk), cięcia na bicie, rozmycie ruchu. Używaj ZAWSZE, gdy trzeba zrobić lub poprawić rolkę, Reel, film, wideo, animację, „ruszające się napisy”, muzykę albo dźwięk do rolki dla „Szkoła kłamała” – także przy „zrób z tego rolkę”, „ożyw te slajdy”, „wersja wideo”, „dodaj muzykę”. Wygląd plansz opisuje szkola-klamala-grafiki, napisy do nagranej mowy – szkola-klamala-napisy, montaż nagrań – szkola-klamala-montaz.
 ---
 
-# Animacje „Szkoła kłamała”
+# Animacje i muzyka „Szkoła kłamała”
 
-Rolka ma wyglądać, jakby zrobił ją profesjonalny motion designer: jeden spójny język ruchu, nic przypadkowego, tekst zawsze da się spokojnie przeczytać, haczyk widać od pierwszej klatki.
+Rolka ma wyglądać i brzmieć, jakby zrobił ją profesjonalny motion designer: urozmaicone efekty z jednej palety marki, tekst zawsze czytelny, haczyk od pierwszej klatki, cięcia na bicie muzyki, dźwięk podkreślający każde ważne zdarzenie na ekranie.
 
-Silnik jest wspólny z grafikami: `.claude/skills/szkola-klamala-grafiki/scripts/render.py`. Ten skill opisuje, **jak** go używać do wideo i jakie decyzje podejmować. Treść i fakty – `instagram-mich-bor` / `CLAUDE.md`; wygląd plansz – `szkola-klamala-grafiki`.
+Silnik: `.claude/skills/szkola-klamala-grafiki/scripts/render.py` + biblioteka ruchu `ruch.py` (ten sam katalog). Muzyka: `scripts/muzyka.py` w tym skillu. Treść i fakty – `CLAUDE.md`; wygląd plansz – `szkola-klamala-grafiki`.
 
 ## Jak pracować
 
-1. Rozpisz Reel w JSON (`format: "reel"`, format pól: `szkola-klamala-grafiki/references/spec-format.md`). Typowy „jeden mit”: `cover` (mit jako haczyk) → `number` (fakt z liczbą) → `text` (puenta + źródło), `durations: [2.6, 4.2, 3.8]`.
-2. Szybki podgląd układu i tempa:
+1. Rozpisz Reel w JSON (`format: "reel"`, pola: `szkola-klamala-grafiki/references/spec-format.md`) i dodaj `"muzyka": {}` (nastrój i tempo dobiorą się same z przedmiotu). Typowy „jeden mit”: `cover` → `myth` albo `number` → `text`/`number`, `durations: [2.6, 4.4, 4.4]` – silnik dociągnie je do pełnych uderzeń tempa.
+2. Szybki podgląd: `render.py spec.json --out out --video --draft` → arkusz klatek (`szkola-klamala-montaz/scripts/klatki.py out/<id>.mp4 --times …`) → Read. Poprawiaj treść, `durations`, ewentualnie `fx`.
+3. Wersja finalna z muzyką – jedno polecenie:
    ```bash
-   python3 .claude/skills/szkola-klamala-grafiki/scripts/render.py spec.json --out out --video --draft
+   python3 .claude/skills/szkola-klamala-grafiki/scripts/render.py spec.json --out out --video --muzyka
    ```
-3. Obejrzyj klatki (`python3 .claude/skills/szkola-klamala-montaz/scripts/klatki.py out/<id>.mp4` → arkusz JPEG, potem Read). Sprawdź listę kontrolną niżej. Popraw treść / `durations` i powtórz.
-4. Wersja finalna (z rozmyciem ruchu, ok. 1,5–2 min na 10 s): to samo polecenie bez `--draft`.
-5. Przed oddaniem obejrzyj gotowy film jeszcze raz (arkusz klatek + `ffprobe`) – zasada nr 8 montażu.
+   Wynik: `<id>_muzyka.mp4` (gotowy do publikacji, −14 LUFS), `<id>_efekty.mp4` (same efekty dźwiękowe – gdy Michał woli dźwięk z trendów TikToka), `<id>_zdarzenia.json` (oś czasu), okładka `<id>_reel_01.jpg`.
+4. Zasada nr 8: obejrzyj gotowy film (arkusz klatek w momentach: 0 s, środek wejść, każde przejście, lądowanie liczby, koniec) i sprawdź raport głośności. Dopiero potem wyślij.
 
-## Rolka z lektorem
+## Biblioteka efektów (`ruch.py`)
 
-Gdy rolka ma mieć głos, dodaj w każdym slajdzie pole `"lektor"` (tekst czytany na tej planszy) i uruchom:
-```bash
-python3 .claude/skills/szkola-klamala-animacje/scripts/lektor.py spec.json --out out --tempo 0.9
-```
-- Głos: Piper TTS (darmowy, offline), domyślnie `mc_speech` – w teście rozpoznawania mowy najczytelniejszy z polskich głosów (`gosia`, `darkman` gorzej). Tempo 0.9 = żywe, ale wyraźne.
-- Plansze same wydłużają się do długości wypowiedzi; lektor startuje 0,1 s po początku filmu i 0,32 s po każdym przejściu. Głos przechodzi obróbkę radiową (filtr, kompresja, EQ), całość −14 LUFS, szczyt ≤ −1,5 dBTP.
-- **Tekst lektora = tekst na ekranie** (ta sama myśl, te same słowa kluczowe) – rozjazd między tym, co słychać i co widać, od razu wygląda amatorsko.
-- Pisz dla ucha: liczby słowami („dziewięćdziesięciu procent”), bez skrótów („około”, nie „ok.”), krótkie zdania. Unikaj zbitek, które syntezator „połyka” – skrypt po złożeniu sam sprawdza rozpoznawaniem mowy, czy każde zdanie jest zrozumiałe i pada na swojej planszy (⚠ = przeformułuj, np. „ciągle mijają” → „wciąż mijają”).
-- Wynik: `<id>_lektor.mp4` + `<id>_lektor.srt` (napisy słowo w słowo do wgrania w aplikacji). Lektor wydłuża rolkę – pilnuj 8–15 s; tnij tekst, nie tempo.
-- Gdy Michał nagra własny głos – to montaż (`szkola-klamala-montaz`), nie syntezator.
+Każda rolka dostaje **inną kombinację** (wybór deterministyczny z `id` rolki – ten sam spec = ten sam film), a każda plansza inny wariant niż poprzednia. Paleta ruchów jest jedna – marka zostaje spójna, a widz nie widzi dwa razy tego samego.
 
-## Język ruchu (wbudowany w silnik – nie dokładaj innych efektów)
-
-| Element | Ruch | Po co |
+| Grupa (`fx`) | Warianty | Co widać |
 |---|---|---|
-| Nagłówek (`h1`, `h2`) | słowa wysuwają się spod niewidocznej linii (maska), lekko obrócone, po kolei | klasyczna kinetyczna typografia, prowadzi wzrok słowo po słowie |
-| Haczyk na planszy 1 | **widoczny od klatki 0**, tylko delikatne „uderzenie” (skala 1,12 → 1) | okładka i pierwsze 0,3 s decydują, czy ktoś zostanie |
-| Etykieta (chip, MIT/FAKT) | wjazd z lewej z pochyleniem | zapowiada, co zaraz przeczytasz |
-| Pędzel pod tytułem | rysuje się od lewej | „ręczny” akcent marki |
-| Duża liczba (`big`) | wyskakuje i **odlicza się od zera**, na końcu błysk | liczba jest bohaterem – widz czeka na wynik |
-| MIT | pojawia się, potem czerwona linia **przekreśla go na oczach widza** | najmocniejszy moment „szkoła kłamała” |
-| Tekst treści | słowa wchodzą z rozmycia do ostrości; `**wyróżnienia**` po chwili zapalają się na żółto | czytelność + jeden akcent na zdanie |
-| Wykres (`bars`) | słupki rosną, wartości się odliczają | dane „dzieją się” |
-| Quiz | opcje wjeżdżają raz; cyfry 3-2-1 wyskakują; zła odpowiedź drga na czerwono, reszta gaśnie | napięcie bez skakania układu |
-| Przejście między planszami | markowa niebieska smuga z żółtymi paskami przecina ekran (0,22 s + 0,22 s) | jeden, rozpoznawalny „stinger” marki zamiast losowych przejść |
-| Tło | smugi lekko dryfują, ziarno filmowe żyje, powolny najazd kamery (treść 1 → 1,025) | brak martwych klatek |
-| Całość | rozmycie ruchu (2 podklatki na klatkę) | płynność jak z programu do animacji |
+| `haczyk` (plansza 1) | `uderzenie`, `blysk` | tytuł widoczny od klatki 0; lekkie uderzenie skali albo połysk przelatujący przez litery |
+| `naglowek` | `maska`, `litery`, `zoom`, `przesun` | słowa spod linii / litery spadają z obrotem / słowa z rozmytego zbliżenia / wjazd z pochyleniem |
+| `tresc` | `rozmycie`, `marker` | słowa z rozmycia do ostrości; `**wyróżnienie**` zapala się na żółto albo dostaje żółty marker |
+| `liczba` | `licznik`, `slot` | odliczanie od zera albo cyfry kręcące się jak w jednorękim bandycie; przy `%` pasek postępu; przy lądowaniu iskry, błysk i wstrząs kadru |
+| `mit` | `kreska`, `pieczatka` | czerwone przekreślenie; dodatkowo pieczątka „MIT” wbijana obok etykiety ze wstrząsem |
+| `tlo` | `gwiazdy`, `siatka`, `kule` | wg przedmiotu: KOSMOS – gwiazdy z paralaksą; nauki ścisłe i finanse – perspektywiczna siatka; reszta – dryfujące światła; zawsze wielki konturowy napis (liczba albo przedmiot) |
+| `przejscie` | `smuga`, `zoom`, `paski`, `blysk` | pierwsze cięcie zawsze markową smugą, kolejne rotują |
 
-Wszystkie ruchy mają tę samą krzywą (szybki start, miękkie lądowanie). Nie dodawaj obrotów 3D, odbić, wirujących liter, emoji, efektów „glitch” ani przejść innych niż smuga – mieszanie stylów to pierwszy znak amatorskiego montażu.
+Nadpisanie: `"fx": {...}` w poście (cała rolka) albo w slajdzie (jedna plansza), np. `"fx": {"mit": "pieczatka", "przejscie": "paski"}`. Używaj, gdy treść czegoś wymaga (np. pieczątka przy bardzo znanym micie), nie dla zasady.
 
-## Tempo
+Zasady: jeden wariant na grupę na planszy; nie dokładaj efektów spoza biblioteki (3D, glitch, emoji, odbicia) – nowy efekt najpierw dopisz do `ruch.py` w stylu marki, sprawdź na arkuszu klatek i dopiero wtedy używaj.
 
-- Napisy wchodzą w ok. 0,8–1,6 s; **potem tekst musi stać** – licz ok. 0,25 s na słowo treści + 1 s zapasu. QA w `qa_report.txt` ostrzega, gdy plansza jest za krótka na wejście i czytanie – wtedy wydłuż `durations` albo skróć tekst.
-- Haczyk 2,4–3 s, fakt 4–4,5 s, puenta 3,5–4 s. Cały „jeden mit”: 9–12 s (krótkie filmy oglądane do końca i powtarzane są promowane).
-- Ostatnia plansza nie ma wyjścia – film zapętla się płynnie do haczyka.
-- Liczby, które nie powinny się odliczać (rok „1569”, numer „01”), oznacz w slajdzie `"count": false`.
+## Muzyka i dźwięk (`muzyka.py`)
+
+- **Oryginalny podkład generowany w kodzie** – bez praw autorskich osób trzecich, bez ryzyka wyciszenia. Nigdy nie wgrywaj cudzych MP3.
+- Nastrój i tempo wg przedmiotu (`ruch.NASTROJ_PRZEDMIOTU`): `kosmos` 92 BPM (pad, dzwonki z echem), `elektro` 120 (nauki ścisłe, motoryzacja), `napiecie` 100 (historia, Spór tygodnia), `lekki` 120 (pozostałe, quiz), `spokojny` 90 (finanse, ekonomia, prawo). Nadpisanie: `"muzyka": {"nastroj": "...", "bpm": 110}`.
+- Struktura: plansza 1 startuje uderzeniem i lżejszym rytmem, od planszy 2 pełny rytm; **każde cięcie na bicie**, przed nim narastanie, na nim świst + talerz + niskie „boom”.
+- Efekty z osi zdarzeń animacji: uderzenie (liczba ląduje), stuk pieczątki, „szur” przekreślenia, marker, delikatne „pop” etykiet, tik odliczania quizu, buczek złej odpowiedzi. Uderzenia na moment ściszają podkład (ducking), więc są wyraźne.
+- Miks pod telefon: subbas przycięty (głośniki telefonu nie grają < 80 Hz), −14 LUFS, szczyt ≤ −1,5 dBTP.
+- Wersja `_efekty.mp4` jest celowo cichsza – gdy Michał dodaje dźwięk z trendów w aplikacji, efekty zostają pod spodem.
+
+## Tempo i czytelność
+
+- Napisy wchodzą w ok. 0,8–1,6 s, **potem tekst stoi** – ok. 0,25 s na słowo + 1 s zapasu. QA ostrzega, gdy plansza jest za krótka.
+- Haczyk ok. 2,5 s, fakt 4–4,5 s, puenta 4–4,5 s. Cały „jeden mit”: 9–12 s.
+- Liczby, które nie powinny się odliczać (rok „1958”, numer „01”), oznacz `"count": false`.
+- Ostatnia plansza nie ma wyjścia – film zapętla się do haczyka.
 
 ## Lista kontrolna przed oddaniem
 
 - Klatka 0: haczyk czytelny, bez pustego ekranu i bez logo na start.
-- Żadne słowo nie jest ucięte (ogonki ą/ę, poświata liczb) – w trakcie wjazdu i po nim.
-- Każdy tekst stoi nieruchomo wystarczająco długo, by przeczytać go dwa razy.
-- Przejście w pełni zakrywa ekran w momencie cięcia (nie widać „przeskoku”).
-- Napisy, liczby i źródła w strefie bezpiecznej 9:16 (góra 250, dół 430, prawo 150 px) – silnik tego pilnuje, ale sprawdź wzrokiem.
-- `ffprobe`: 1080×1920, 30 kl./s, H.264 + ścieżka AAC, długość zgodna z sumą `durations`.
-- Wysyłaj Michałowi jeden MP4 na Reel (ten sam plik na IG i TikTok) oraz okładkę `<id>_reel_01.jpg`.
+- Nic nie jest ucięte ani zasłonięte (ogonki ą/ę, poświata, pieczątka nie wchodzi na tekst, tła nie konkurują z tekstem).
+- Każdy tekst stoi wystarczająco długo, by przeczytać go dwa razy.
+- Przejście w pełni zakrywa cięcie.
+- Strefa bezpieczna 9:16 (góra 250, dół 430, prawo 150 px).
+- Raport: 1080×1920, 30 kl./s, dźwięk, −14 LUFS ±1, szczyt ≤ −1 dB.
+- Wysyłaj Michałowi jeden MP4 na rolkę (ten sam na IG i TikTok) + okładkę; opis IG i TikTok w blokach do skopiowania.
+
+## Lektor (opcjonalnie)
+
+`scripts/lektor.py` (Piper TTS, głos `mc_speech`, pole `"lektor"` w slajdach) zostaje jako opcja, ale **domyślnie rolki mają muzykę, nie lektora** (decyzja Michała). Gdy Michał nagra własny głos – to montaż (`szkola-klamala-montaz`).

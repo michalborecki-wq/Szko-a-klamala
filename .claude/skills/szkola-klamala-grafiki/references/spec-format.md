@@ -18,6 +18,8 @@
 | `subject` | tak | Przedmiot wersalikami: `HISTORIA`, `KOSMOS`, `PRAWO`, `MOTORYZACJA`, `MEDYCYNA`, `FINANSE`… |
 | `durations` | przy `reel` | Lista sekund na planszę (tyle elementów, ile slajdów). |
 | `animate` | nie | Tylko `reel`: domyślnie `true` – animowane napisy w MP4; `false` = prosty pokaz plansz. |
+| `muzyka` | nie | Tylko `reel`: `{}` = podkład i efekty dźwiękowe dobrane do przedmiotu; `{"nastroj": "kosmos|elektro|napiecie|lekki|spokojny", "bpm": 110}` nadpisuje. Obecność pola włącza cięcia na bicie. |
+| `fx` | nie | Tylko `reel`: nadpisanie wariantów efektów dla całej rolki (lista w skillu `szkola-klamala-animacje`); to samo pole w slajdzie – dla jednej planszy. |
 | `slides` | tak | Lista slajdów (niżej). |
 
 Pliki wynikowe: `<id>_NN.jpg` (4:5), `<id>_916_NN.jpg` (9:16), `<id>_reel_NN.jpg` + `<id>.mp4`, podglądy `_podglad_<id>_<format>.jpg`, raport `qa_report.txt`.
