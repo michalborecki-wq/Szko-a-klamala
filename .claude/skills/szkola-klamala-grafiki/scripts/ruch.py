@@ -100,8 +100,8 @@ def css(TOK):
 .wipe .wy2{{width:9%;left:-74%;background:{TOK['yellow']};box-shadow:0 0 50px rgba(255,199,39,.7)}}
 .wipe .wy{{width:9%;left:164%;background:{TOK['yellow']};box-shadow:0 0 50px rgba(255,199,39,.7)}}
 .slats{{position:absolute;inset:0;z-index:20;pointer-events:none}}
-.slats i{{position:absolute;left:0;width:100%;background:linear-gradient(90deg,#1E4FD8,{TOK['blue']})}}
-.slats i:nth-child(3n){{background:{TOK['yellow']}}}
+.slats i{{position:absolute;left:0;width:100%;background:linear-gradient(90deg,#1E4FD8,{TOK['blue']} 70%,#5B8CFF);
+  border-right:12px solid {TOK['yellow']};box-shadow:12px 0 40px rgba(255,199,39,.45)}}
 .flash{{position:absolute;inset:0;z-index:19;pointer-events:none;background:radial-gradient(circle at 50% 45%,rgba(255,255,255,.95),rgba(91,140,255,.55) 40%,rgba(47,107,255,0) 72%);opacity:0}}
 .spark{{position:absolute;z-index:6;width:8px;height:26px;border-radius:4px;background:{TOK['yellow']};
   box-shadow:0 0 14px rgba(255,199,39,.9);pointer-events:none;opacity:0}}
@@ -336,7 +336,7 @@ PREP = r"""
   const wipe = document.createElement('div'); wipe.className = 'wipe';
   wipe.innerHTML = '<i class="wb"></i><i class="wy"></i><i class="wy2"></i>'; document.body.appendChild(wipe);
   const slats = document.createElement('div'); slats.className = 'slats';
-  for (let k = 0; k < 7; k++) { const s = document.createElement('i'); s.style.top = (k * H / 7 - 1) + 'px'; s.style.height = (H / 7 + 2) + 'px'; slats.appendChild(s); }
+  for (let k = 0; k < 5; k++) { const s = document.createElement('i'); s.style.top = (k * H / 5 - 1) + 'px'; s.style.height = (H / 5 + 2) + 'px'; slats.appendChild(s); }
   document.body.appendChild(slats);
   const flash = document.createElement('div'); flash.className = 'flash'; document.body.appendChild(flash);
   const io = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
@@ -397,10 +397,11 @@ PREP = r"""
       flash.style.opacity = (isOut ? q : 1 - q) * .25;
     } else if (kind === 'paski') {
       slats.style.display = '';
+      // jeden kierunek (z lewej w prawo), minimalne przesunięcie pasów – czyste zakrycie i odsłonięcie
       [...slats.children].forEach((s, k) => {
-        const d = k % 2 ? 1 : -1, st = clamp(isOut ? (q * 1.35 - k * .05) : (q * 1.35 - k * .05));
-        const x = isOut ? d * (1 - io(st)) : -d * io(st);
-        s.style.transform = `translateX(${x * W * 1.02}px)`;
+        const e = io(clamp(q * 1.15 - k * .03));
+        const x = isOut ? -(1 - e) : e;
+        s.style.transform = `translateX(${x * (W + 60)}px)`;
       });
     } else if (kind === 'blysk') {
       if (isOut) { tx = -W * .55 * q; blur = 22 * q; op = 1 - q; } else { tx = W * .55 * (1 - q); blur = 22 * (1 - q); op = q; }
