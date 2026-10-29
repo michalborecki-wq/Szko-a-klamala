@@ -57,7 +57,7 @@ Stan na 29.10.2026. Właściciel: Michał Borecki. Język pracy: **polski**.
 - Narzędzia (darmowe): ffmpeg z libass, faster-whisper (spisywanie mowy offline, model `medium`), auto-editor, Playwright, numpy/scipy (generator muzyki), Piper TTS (lektor – opcja, domyślnie nie używamy). Kontener jest ulotny – na początku sesji z wideo: `bash scripts/instaluj.sh`.
 - Skille (`.claude/skills/`): `szkola-klamala-animacje` (animowane rolki: biblioteka efektów `ruch.py` + muzyka `muzyka.py`), `szkola-klamala-napisy` (transkrypcja + napisy PL słowo w słowo w stylu marki), `szkola-klamala-montaz` (montaż nagrań), `szkola-klamala-grafiki` (slajdy i silnik).
 - **Rozdzielczość: grafika i napisy zawsze w 4K** (decyzja 29.10): rolki i TikTok 2160×3840, karuzele 4:5 2160×2700 – silnik renderuje z podwójną gęstością pikseli przy tym samym układzie 1080 px CSS; `--hd`/`--draft` tylko do podglądów.
-- **Tempo czytania** (decyzja 29.10): człowiek musi zdążyć przeczytać całość informacji ze slajdu – plansza nigdy krótsza niż wejście napisów + 0,3 s/słowo (z etykietą i źródłem) + 0,8 s.
+- **Tempo czytania** (decyzja 29.10): człowiek musi zdążyć przeczytać całość informacji ze slajdu – plansza nigdy krótsza niż czas przeczytania całości (0,3 s/słowo z etykietą i źródłem, z zapasem; silnik liczy i wydłuża sam). Dlatego w rolce maks. ok. 15 słów na planszę – rolka 6 plansz ma wtedy 25–30 s.
 - Poziom: rolki mają wyglądać jak od profesjonalnego grafika / motion designera – urozmaicone efekty (każda rolka inna kombinacja), ale z jednej palety marki; cięcia na bicie muzyki.
 - **Zasady montażu (obowiązują przy każdym filmie):**
   1. Na start zapytaj, gdzie trafi film i co ma zrobić widz.

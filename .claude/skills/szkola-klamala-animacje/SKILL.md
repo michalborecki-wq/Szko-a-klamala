@@ -49,8 +49,8 @@ Zasady: jeden wariant na grupę na planszy; nie dokładaj efektów spoza bibliot
 
 ## Tempo i czytelność
 
-- **Zasada Michała: widz musi zdążyć przeczytać CAŁOŚĆ informacji z planszy.** Silnik liczy minimum: wejście napisów + 0,3 s na każde słowo (z etykietą i źródłem) + 0,8 s zapasu (+0,25 s na przejście) i sam wydłuża planszę do pełnego bitu, gdy `durations` są za krótkie (raport: `czytanie=… plansza=… (wydłużono …)`). Nigdy nie skraca. Gdy rolka robi się za długa – skróć tekst, nie tempo.
-- Haczyk ok. 2,5 s, każda kolejna plansza 4–4,5 s, outro ok. 3,5–4 s. Cała rolka: **20–25 s, min. 4 plansze**. Brakujący czas uzupełniaj kolejną planszą z treścią (drugi fakt z liczbą, skąd wziął się mit, jak to sprawdzono), nigdy wydłużaniem pustego stania.
+- **Zasada Michała: widz musi zdążyć przeczytać CAŁOŚĆ informacji z planszy.** Silnik liczy minimum: max(koniec wejścia napisów + 1,2 s; 0,3 s × liczba słów z etykietą i źródłem + 0,4 s) + 0,6 s zapasu (+0,25 s na przejście) i sam wydłuża planszę do pełnego bitu, gdy `durations` są za krótkie (raport: `czytanie=… plansza=… (wydłużono …)`). Nigdy nie skraca. Gdy rolka robi się za długa – skróć tekst, nie tempo.
+- **Maks. ok. 15 słów na planszę rolki** (z etykietą i źródłem; QA ostrzega powyżej 18) – każde słowo to 0,3 s ekranu. Przy 6 planszach po 10–15 słów rolka ma ok. 25–30 s. Cała rolka: **min. 20 s, min. 4 plansze**, celuj w 25–30 s. Brakujący czas uzupełniaj kolejną planszą z treścią (drugi fakt z liczbą, skąd wziął się mit, jak to sprawdzono), nigdy wydłużaniem pustego stania.
 - Liczby, które nie powinny się odliczać (rok „1958”, numer „01”), oznacz `"count": false`.
 - Ostatnia plansza nie ma wyjścia – film zapętla się do haczyka.
 

@@ -349,7 +349,9 @@ def default_durations(n):
 
 
 # czas czytania: tyle musi stać tekst po wejściu, żeby przeczytać CAŁOŚĆ planszy (z etykietą i źródłem)
-SEK_NA_SLOWO, ZAPAS_CZYTANIA = 0.30, 0.8
+# Czytanie zaczyna się już w trakcie wjeżdżania słów, więc liczy się późniejsze z dwóch: koniec wejścia + 1,2 s
+# na doczytanie ostatnich słów albo pełny czas czytania całości (0,3 s/słowo ≈ tempo napisów ekranowych).
+SEK_NA_SLOWO, ZAPAS_CZYTANIA, MAX_SLOW_ROLKA = 0.30, 0.6, 18
 
 
 def render_all(spec, out, video=False, fps=30, sub=2, scale=2):
@@ -409,7 +411,7 @@ def render_all(spec, out, video=False, fps=30, sub=2, scale=2):
                         pg.evaluate("window.__layout()")   # pozycje iskier po dopasowaniu tekstu
                         if enter:
                             # plansza stoi tak długo, żeby przeczytać całość: wejście napisów + czas czytania + zapas
-                            need = (0 if i == 0 else intro) + qa["words"] * SEK_NA_SLOWO + ZAPAS_CZYTANIA
+                            need = max((0 if i == 0 else intro) + 1.2, qa["words"] * SEK_NA_SLOWO + 0.4) + ZAPAS_CZYTANIA
                             if i < n - 1:
                                 need += 0.25          # ostatnie ćwierć sekundy zabiera przejście
                             if need > durs[i] + 1e-6:
@@ -418,6 +420,8 @@ def render_all(spec, out, video=False, fps=30, sub=2, scale=2):
                                 qa.setdefault("notes", []).append(f"wydłużono {old:.1f}→{durs[i]:.1f} s (czytanie)")
                             qa["czytanie"] = round(need, 1)
                     words_max = 40 if s["type"] in ("quiz", "versus") else 32
+                    if fmt == "reel" and s["type"] != "quiz":
+                        words_max = MAX_SLOW_ROLKA   # w rolce każde słowo kosztuje 0,3 s – krótko i konkretnie
                     if qa["words"] > words_max:
                         qa["issues"].append(f"{qa['words']} słów (> {words_max}) – za dużo tekstu na slajd")
                     name = f"{post['id']}{suffix}_{i+1:02d}.jpg"
