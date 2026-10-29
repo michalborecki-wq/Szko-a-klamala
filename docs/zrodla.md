@@ -24,11 +24,15 @@
 | Monety | Lidia, krótko po 650 r. p.n.e., elektrum („białe złoto”) | britannica.com/money/coin/Origins-of-coins |
 | Instagram | Burbn (check-in) 2009; start 6.10.2010; 1 mln w ok. 2 mies.; pierwsze zdjęcie: pies, „Test” (16.07.2010); Facebook kupił w 04.2012 za ok. 1 mld USD, 13 pracowników; pion i poziom od 27.08.2015 | spokesman.com/stories/2020/jun/24/how-instagram-hit-one-billion-users; npr.org (9.04.2012); about.instagram.com (27.08.2015) |
 
+| ISS – prędkość i orbita | Ok. 28 000 km/h (17 500 mph), okrążenie Ziemi ok. 90 min, 16 wschodów Słońca na dobę; wysokość ok. 400 km (250 mil) | nasa.gov/learning-resources/for-kids-and-students/what-is-the-international-space-station-grades-5-8/; nasa.gov/international-space-station/space-station-overview/ |
+| 400 km w Polsce | Poznań–Zakopane 405 km, Kraków–Białystok 407 km w linii prostej; Warszawa–Gdańsk tylko 284 km (NIE porównywać 400 km z Warszawa–Gdańsk) | obliczenia własne (wzór haversine) |
+| Lemingi – cykl | Liczebność rośnie i spada w cyklu ok. 3–4 lat; w szczycie migracje | kids.britannica.com/students/article/lemming/275427; britannica.com (wideo o migracji) |
+| Lemingi – film | Film przyrodniczy z 1958 r.: scenę „samobójstwa” zainscenizowano – lemingi zepchnięto z urwiska; „migrację” nakręcono z kilkudziesięcioma lemingami na obrotowej platformie ze śniegiem, ciasnymi kadrami i montażem | britannica.com/story/do-lemmings-really-commit-mass-suicide; adfg.alaska.gov (Alaska Fish & Wildlife News) |
+
 ## Kandydaci (sprawdzone wstępnie 29.10, przed użyciem potwierdzić źródłem głównym)
 
 | Temat | Fakt | Źródło |
 |---|---|---|
-| Lemingi | Nie popełniają masowych samobójstw; scena w filmie Disneya „White Wilderness” (1958) była zainscenizowana | britannica.com/story/do-lemmings-really-commit-mass-suicide; adfg.alaska.gov (Alaska Fish & Wildlife News) |
 | Byk i czerwień | Bydło ma 2 typy czopków (dichromaci); byk reaguje na ruch płachty, nie na kolor (Jacobs, Deegan, Neitz 1998) | do potwierdzenia w publikacji (Vis. Neurosci. 1998) |
 | Nietoperze | Nie są ślepe – widzą, w różnym stopniu zależnie od gatunku; część owocożernych w ogóle nie używa echolokacji | livescience.com/55986-are-bats-really-blind.html |
 | Pluton | IAU 2006: 3 warunki planety, Pluton nie spełnia „oczyszczenia orbity”; A. Stern proponuje definicję geofizyczną (Spór tygodnia) | do potwierdzenia na iau.org |

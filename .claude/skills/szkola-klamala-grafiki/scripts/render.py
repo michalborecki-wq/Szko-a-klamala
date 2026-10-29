@@ -27,6 +27,7 @@ bezpiecznej, minimalne rozmiary czcionek, brak ucięć. Ostrzeżenia trafiają d
 """
 import argparse
 import html
+import math
 import io
 import json
 import os
@@ -339,18 +340,27 @@ def open_video_pipe(out_mp4, fps=30):
     return subprocess.Popen(cmd, stdin=subprocess.PIPE)
 
 
+# standard rolki (decyzja Michała 29.10): co najmniej 4 plansze i 20 s
+REEL_MIN_SLIDES, REEL_MIN_SEC = 4, 20.0
+
+
 def default_durations(n):
-    return [2.6] + [3.6] * (n - 2) + [3.6] if n > 1 else [4.0]
+    return [2.6] + [4.2] * (n - 2) + [3.8] if n > 1 else [4.0]
 
 
-def render_all(spec, out, video=False, fps=30, sub=2):
+# czas czytania: tyle musi stać tekst po wejściu, żeby przeczytać CAŁOŚĆ planszy (z etykietą i źródłem)
+SEK_NA_SLOWO, ZAPAS_CZYTANIA = 0.30, 0.8
+
+
+def render_all(spec, out, video=False, fps=30, sub=2, scale=2):
+    """scale=2 → pliki w 4K (2160×3840 dla 9:16, 2160×2700 dla 4:5) przy niezmienionym układzie 1080 px CSS."""
     from playwright.sync_api import sync_playwright
     os.makedirs(out, exist_ok=True)
     report, produced, animated = [], {}, {}
     handle = spec.get("handle", "@szkola_klamala")
     with sync_playwright() as p:
         br = p.chromium.launch()
-        pg = br.new_page()
+        pg = br.new_page(device_scale_factor=scale)
         for post in spec["posts"]:
             fmts = [post.get("format", "carousel")]
             if fmts[0] == "carousel" and post.get("vertical_copy"):
@@ -397,9 +407,16 @@ def render_all(spec, out, video=False, fps=30, sub=2):
                     qa = pg.evaluate(FIT_AND_QA, f["min_body"])
                     if anim:
                         pg.evaluate("window.__layout()")   # pozycje iskier po dopasowaniu tekstu
-                        if enter and intro > durs[i] - 1.2:
-                            qa["issues"].append(f"wejście napisów trwa {intro:.1f} s przy planszy {durs[i]} s"
-                                                " – wydłuż planszę albo skróć tekst")
+                        if enter:
+                            # plansza stoi tak długo, żeby przeczytać całość: wejście napisów + czas czytania + zapas
+                            need = (0 if i == 0 else intro) + qa["words"] * SEK_NA_SLOWO + ZAPAS_CZYTANIA
+                            if i < n - 1:
+                                need += 0.25          # ostatnie ćwierć sekundy zabiera przejście
+                            if need > durs[i] + 1e-6:
+                                old = durs[i]
+                                durs[i] = (math.ceil(need / beat - 1e-6) * beat) if bpm else round(need, 2)
+                                qa.setdefault("notes", []).append(f"wydłużono {old:.1f}→{durs[i]:.1f} s (czytanie)")
+                            qa["czytanie"] = round(need, 1)
                     words_max = 40 if s["type"] in ("quiz", "versus") else 32
                     if qa["words"] > words_max:
                         qa["issues"].append(f"{qa['words']} słów (> {words_max}) – za dużo tekstu na slajd")
@@ -410,16 +427,24 @@ def render_all(spec, out, video=False, fps=30, sub=2):
                     Image.open(png).convert("RGB").save(path, "JPEG", quality=93, optimize=True, subsampling=0)
                     os.remove(png)
                     files.append(path)
-                    tagline = f"{name}: słowa={qa['words']} skala={qa['scale']}"
+                    tagline = f"{name}: słowa={qa['words']} skala={qa['scale']}" + (
+                        f" czytanie={qa['czytanie']}s plansza={durs[i]:.1f}s" if anim and "czytanie" in qa else "") + (
+                        " (" + "; ".join(qa["notes"]) + ")" if qa.get("notes") else "")
                     report.append(tagline + ("" if not qa["issues"] else "  ⚠ " + " | ".join(qa["issues"])))
                     if anim:
                         nf = round(durs[i] * fps)
                         exit_ = fxs[i + 1]["przejscie"] if i < n - 1 and not cont[i + 1] else None
                         wipe_in = fxs[i]["przejscie"] if i > 0 and not cont[i] else None
                         push = not cont[i] and not (i + 1 < n and cont[i + 1])   # quiz stoi w miejscu
+                        hits = [e["t"] for e in res["ev"] if e["typ"] in ("uderzenie", "pieczatka", "start")]
                         for k in range(nf):
-                            # rozmycie ruchu: średnia z `sub` podklatek w obrębie jednej klatki wyjściowej
-                            if sub == 1:
+                            tk = k / fps
+                            # rozmycie ruchu (średnia z `sub` podklatek) tylko tam, gdzie coś szybko się rusza:
+                            # wejścia napisów, przejścia, uderzenia; w czasie czytania – pojedyncza klatka (4K jest kosztowne)
+                            fast = (enter and tk < intro + .7) or (exit_ and tk > durs[i] - .35) or \
+                                (wipe_in and tk < .35) or any(-.05 < tk - h < .55 for h in hits) or \
+                                (cont[i] and tk < .6)
+                            if sub == 1 or not fast:
                                 pg.evaluate("(a) => window.__setT(...a)", [k / fps, g + k / fps, durs[i], exit_, wipe_in, push])
                                 proc.stdin.write(pg.screenshot(type="jpeg", quality=93))
                                 continue
@@ -435,6 +460,11 @@ def render_all(spec, out, video=False, fps=30, sub=2):
                         g += nf / fps
                         t_start += nf / fps
                 produced[(post["id"], fmt)] = files
+                if fmt == "reel":
+                    total = sum(durs) if anim else sum(post.get("durations") or default_durations(n))
+                    if n < REEL_MIN_SLIDES or total < REEL_MIN_SEC - 0.05:
+                        report.append(f"{post['id']}: {n} plansz, {total:.1f} s  ⚠ rolka ma mieć min. {REEL_MIN_SLIDES} plansze"
+                                      f" i {REEL_MIN_SEC:.0f} s – dodaj planszę (np. drugi fakt, „jak to sprawdzono”, outro)")
                 if anim:
                     proc.stdin.close()
                     if proc.wait() != 0:
@@ -462,8 +492,9 @@ def make_video(files, durations, out_mp4, trans=0.28):
     inp += ["-f", "lavfi", "-t", f"{total:.2f}", "-i", "anullsrc=r=44100:cl=stereo"]
     chain, prev, off = [], "[0:v]", 0.0
     # delikatny „oddech” pierwszej planszy (zoom 1.00→1.03), żeby haczyk nie był martwą klatką
-    chain.append(f"[0:v]scale=1080:1920,zoompan=z='min(1+0.0009*on,1.03)':d=1:x='iw/2-(iw/zoom/2)':"
-                 f"y='ih/2-(ih/zoom/2)':s=1080x1920:fps=30[z0]")
+    w, h = Image.open(files[0]).size        # 4K albo 1080p – zgodnie z rozdzielczością plansz
+    chain.append(f"[0:v]scale={w}:{h},zoompan=z='min(1+0.0009*on,1.03)':d=1:x='iw/2-(iw/zoom/2)':"
+                 f"y='ih/2-(ih/zoom/2)':s={w}x{h}:fps=30[z0]")
     prev = "[z0]"
     for k in range(1, len(files)):
         off += durations[k - 1]
@@ -495,12 +526,15 @@ def main():
     ap.add_argument("--out", default="out")
     ap.add_argument("--sheet", action="store_true", help="podgląd zbiorczy każdego posta (do kontroli Read)")
     ap.add_argument("--video", action="store_true", help="złóż MP4 dla postów 'reel'")
-    ap.add_argument("--draft", action="store_true", help="szybki podgląd wideo bez rozmycia ruchu (do sprawdzania układu)")
+    ap.add_argument("--draft", action="store_true",
+                    help="szybki podgląd wideo w 1080p bez rozmycia ruchu (do sprawdzania układu, nie do publikacji)")
+    ap.add_argument("--hd", action="store_true", help="pliki w 1080p zamiast domyślnego 4K")
     ap.add_argument("--muzyka", action="store_true",
                     help="po złożeniu wideo dodaj oryginalny podkład i efekty dźwiękowe (skill szkola-klamala-animacje)")
     a = ap.parse_args()
     spec = json.load(open(a.spec, encoding="utf-8"))
-    produced, report, animated = render_all(spec, a.out, video=a.video, sub=1 if a.draft else 2)
+    produced, report, animated = render_all(spec, a.out, video=a.video, sub=1 if a.draft else 2,
+                                            scale=1 if (a.draft or a.hd) else 2)
     for (pid, fmt), files in produced.items():
         if a.sheet:
             contact_sheet(files, os.path.join(a.out, f"_podglad_{pid}_{fmt}.jpg"))

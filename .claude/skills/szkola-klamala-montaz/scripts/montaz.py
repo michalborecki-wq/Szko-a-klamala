@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """
 Montaż nagrań „Szkoła kłamała” według 8 zasad (SKILL.md):
-kopia oryginału → wycięcie pauz i gorszych podejść → pion 1080×1920 → napisy PL słowo w słowo
+kopia oryginału → wycięcie pauz i gorszych podejść → pion 4K 2160×3840 → napisy PL słowo w słowo
 → głośność −14 LUFS → kontrola gotowego filmu.
 
 Użycie:
   python3 montaz.py przygotuj nagranie.mov --praca praca/odcinek1
       # kopia oryginału (suma SHA-256), transkrypcja, PROPOZYCJA cięć → praca/.../ciecia.json do przejrzenia
   python3 montaz.py zloz praca/odcinek1 [--kadr blur|crop] [--bez-napisow]
-      # wykonuje cięcia z ciecia.json, kadruje do 1080×1920, wypala napisy, normalizuje do −14 LUFS,
+      # wykonuje cięcia z ciecia.json, kadruje do pionu 4K (2160×3840), wypala napisy, normalizuje do −14 LUFS,
       # transkrybuje film po cięciach do korekty napisów
   python3 napisy.py wypal …  (polecenie wypisuje montaz.py zloz)
   python3 montaz.py wykoncz praca/odcinek1
@@ -29,6 +29,7 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 NAPISY = os.path.join(HERE, "..", "..", "szkola-klamala-napisy", "scripts", "napisy.py")
 KLATKI = os.path.join(HERE, "klatki.py")
+PW, PH = 2160, 3840   # pion 9:16 w 4K
 LUFS, TP, LRA = -14.0, -1.5, 11.0   # TP z zapasem: kodowanie AAC podbija szczyt o ok. 0,3–0,5 dB
 
 
@@ -127,13 +128,14 @@ def tnij(kopia, zostaw, out):
 
 
 def pion(src, out, kadr="blur"):
-    """1080×1920. 'crop' – wypełnij i przytnij środek; 'blur' – całe ujęcie na rozmytym, przyciemnionym tle."""
+    """Pion 4K 2160×3840 (zasada marki: grafika i napisy w 4K). 'crop' – wypełnij i przytnij środek;
+    'blur' – całe ujęcie na rozmytym, przyciemnionym tle."""
     if kadr == "crop":
-        vf = "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setsar=1,fps=30"
+        vf = f"scale={PW}:{PH}:flags=lanczos:force_original_aspect_ratio=increase,crop={PW}:{PH},setsar=1,fps=30"
         args = ["-vf", vf]
     else:
-        fc = ("[0:v]split[a][b];[a]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,"
-              "gblur=sigma=40,eq=brightness=-0.18[bg];[b]scale=1080:1920:force_original_aspect_ratio=decrease[fg];"
+        fc = (f"[0:v]split[a][b];[a]scale={PW}:{PH}:force_original_aspect_ratio=increase,crop={PW}:{PH},"
+              f"gblur=sigma=80,eq=brightness=-0.18[bg];[b]scale={PW}:{PH}:flags=lanczos:force_original_aspect_ratio=decrease[fg];"
               "[bg][fg]overlay=(W-w)/2:(H-h)/2,setsar=1,fps=30[v]")
         args = ["-filter_complex", fc, "-map", "[v]", "-map", "0:a?"]
     run(["ffmpeg", "-y", "-v", "error", "-i", src, *args, "-c:v", "libx264", "-preset", "medium", "-crf", "17",
@@ -199,7 +201,7 @@ def zloz(praca, kadr, napisy, model):
 
 def wykoncz(praca, src=None):
     src = src or os.path.join(praca, "3_napisy.mp4")
-    gotowe = os.path.join(praca, "GOTOWE_1080x1920.mp4")
+    gotowe = os.path.join(praca, "GOTOWE_4K_2160x3840.mp4")
     glosnosc(src, gotowe)
     kontrola(gotowe)
 
@@ -209,9 +211,9 @@ def kontrola(path):
     v = next(s for s in p["streams"] if s["codec_type"] == "video")
     a = [s for s in p["streams"] if s["codec_type"] == "audio"]
     i, tp = zmierz_lufs(path)
-    ok_wh = (v["width"], v["height"]) == (1080, 1920)
+    ok_wh = (v["width"], v["height"]) == (PW, PH)
     print(f"Gotowe: {path}")
-    print(f"  obraz {v['width']}×{v['height']} {'✓' if ok_wh else '✗ (wymagane 1080×1920)'}, {v['r_frame_rate']} kl./s, "
+    print(f"  obraz {v['width']}×{v['height']} {'✓' if ok_wh else '✗ (wymagane 4K 2160×3840)'}, {v['r_frame_rate']} kl./s, "
           f"dźwięk: {'tak' if a else 'NIE'}, długość {float(p['format']['duration']):.1f} s")
     if i is not None:
         ok_l = abs(i - LUFS) <= 1.0

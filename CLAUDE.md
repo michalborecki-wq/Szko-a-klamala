@@ -22,7 +22,7 @@ Stan na 29.10.2026. Właściciel: Michał Borecki. Język pracy: **polski**.
 
 ## Plan publikacji (decyzja Michała 29.10)
 
-- **Instagram:** pon.–sob. codziennie 1 Reel „jeden mit”, 8–12 s, 3 plansze: MIT → FAKT z liczbą → puenta + źródło. Do tego 1 karuzela tygodniowo, jako **jeden** post.
+- **Instagram:** pon.–sob. codziennie 1 Reel „jeden mit”, **min. 4 plansze i min. 20 s** (zwykle 5–6 plansz, 20–25 s; decyzja 29.10): MIT → FAKT z liczbą → rozwinięcie (drugi fakt, skąd mit, jak to sprawdzono) → puenta/pytanie + źródło. Długość z treści, nie z pustego czasu. **Tempo: każda plansza stoi tyle, by przeczytać całość jej informacji** (silnik liczy: wejście napisów + 0,3 s na słowo + 0,8 s i sam wydłuża planszę). Do tego 1 karuzela tygodniowo, jako **jeden** post.
 - **TikTok:** 2–3 posty dziennie (ok. 15 tygodniowo): te same Reelsy jako wideo, karuzela w 9:16 i dodatkowe karuzele zdjęć 9:16 (4 slajdy). Godziny: 10:00, 13:00, 18:00.
 - **Priorytet tematów:** najbardziej znane mity z szerokim zasięgiem (kosmos, ciało, mózg, medycyna, motoryzacja, prawo w codziennym życiu, pieniądze w codziennym życiu). Węższe tematy (język, ekonomia) rzadziej. Co tydzień co najmniej 3 z: prawo, finanse, motoryzacja, medycyna.
 - Muzyka (decyzja 29.10): rolki mają **oryginalny podkład generowany w kodzie + efekty dźwiękowe** zsynchronizowane z animacją (`<id>_muzyka.mp4`, −14 LUFS), zamiast lektora. Dodatkowo `<id>_efekty.mp4` (same efekty), gdy Michał woli dźwięk z trendów w aplikacji. Nigdy cudzych plików MP3.
@@ -56,6 +56,8 @@ Stan na 29.10.2026. Właściciel: Michał Borecki. Język pracy: **polski**.
 
 - Narzędzia (darmowe): ffmpeg z libass, faster-whisper (spisywanie mowy offline, model `medium`), auto-editor, Playwright, numpy/scipy (generator muzyki), Piper TTS (lektor – opcja, domyślnie nie używamy). Kontener jest ulotny – na początku sesji z wideo: `bash scripts/instaluj.sh`.
 - Skille (`.claude/skills/`): `szkola-klamala-animacje` (animowane rolki: biblioteka efektów `ruch.py` + muzyka `muzyka.py`), `szkola-klamala-napisy` (transkrypcja + napisy PL słowo w słowo w stylu marki), `szkola-klamala-montaz` (montaż nagrań), `szkola-klamala-grafiki` (slajdy i silnik).
+- **Rozdzielczość: grafika i napisy zawsze w 4K** (decyzja 29.10): rolki i TikTok 2160×3840, karuzele 4:5 2160×2700 – silnik renderuje z podwójną gęstością pikseli przy tym samym układzie 1080 px CSS; `--hd`/`--draft` tylko do podglądów.
+- **Tempo czytania** (decyzja 29.10): człowiek musi zdążyć przeczytać całość informacji ze slajdu – plansza nigdy krótsza niż wejście napisów + 0,3 s/słowo (z etykietą i źródłem) + 0,8 s.
 - Poziom: rolki mają wyglądać jak od profesjonalnego grafika / motion designera – urozmaicone efekty (każda rolka inna kombinacja), ale z jednej palety marki; cięcia na bicie muzyki.
 - **Zasady montażu (obowiązują przy każdym filmie):**
   1. Na start zapytaj, gdzie trafi film i co ma zrobić widz.
@@ -64,7 +66,7 @@ Stan na 29.10.2026. Właściciel: Michał Borecki. Język pracy: **polski**.
   4. Napisy po polsku, słowo w słowo.
   5. Kolory i krój pisma z plików marki.
   6. Napisy, ikony i plansze zawsze w kadrze.
-  7. Pion 1080×1920, głośność −14 LUFS.
+  7. Pion 9:16 w **4K (2160×3840)**, głośność −14 LUFS.
   8. Zanim powiesz, że skończyłeś, obejrzyj gotowy film jeszcze raz.
 
 ## Dokumenty

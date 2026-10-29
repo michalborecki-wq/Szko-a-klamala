@@ -30,6 +30,9 @@ Skrypt: `.claude/skills/szkola-klamala-napisy/scripts/napisy.py`. Narzędzia: fa
 
 ## Styl (wbudowany – nie zmieniaj bez powodu)
 
+- Napisy renderują się w rozdzielczości filmu – w pionie 4K (2160×3840) są natywnie ostre (współrzędne w pliku ASS są w skali 1080×1920 i skalują się automatycznie).
+- Fraza musi wisieć na ekranie tyle, by dało się ją przeczytać: krótkie frazy 1–3 słów nadążają za mową; gdy ktoś mówi bardzo szybko, łącz słowa w dłuższe frazy zamiast skracać czas wyświetlania.
+
 - Inter Display Black Italic, wersaliki, biały tekst z ciemnym obrysem i **niebieskim cieniem przesuniętym w dół** – jak nagłówki marki.
 - **Aktualnie wypowiadane słowo żółte** (#FFC727) z krótkim „pop” 108% → 100%. Nowa fraza wjeżdża lekko z dołu.
 - 1–3 słowa, maks. ok. 15 znaków – zawsze **jedna linia**. Podział na pauzach i końcach zdań; przyimki, spójniki i „nie” („w”, „na”, „ze”, „że”, „nie”…) nigdy nie kończą frazy; „%” i interpunkcja trzymają się słowa.

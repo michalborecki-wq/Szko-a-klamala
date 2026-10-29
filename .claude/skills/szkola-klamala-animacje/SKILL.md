@@ -11,9 +11,9 @@ Silnik: `.claude/skills/szkola-klamala-grafiki/scripts/render.py` + biblioteka r
 
 ## Jak pracować
 
-1. Rozpisz Reel w JSON (`format: "reel"`, pola: `szkola-klamala-grafiki/references/spec-format.md`) i dodaj `"muzyka": {}` (nastrój i tempo dobiorą się same z przedmiotu). Typowy „jeden mit”: `cover` → `myth` albo `number` → `text`/`number`, `durations: [2.6, 4.4, 4.4]` – silnik dociągnie je do pełnych uderzeń tempa.
-2. Szybki podgląd: `render.py spec.json --out out --video --draft` → arkusz klatek (`szkola-klamala-montaz/scripts/klatki.py out/<id>.mp4 --times …`) → Read. Poprawiaj treść, `durations`, ewentualnie `fx`.
-3. Wersja finalna z muzyką – jedno polecenie:
+1. Rozpisz Reel w JSON (`format: "reel"`, pola: `szkola-klamala-grafiki/references/spec-format.md`) i dodaj `"muzyka": {}` (nastrój i tempo dobiorą się same z przedmiotu). Standard (decyzja Michała 29.10): **min. 4 plansze i min. 20 s**, zwykle 5–6 plansz: `cover` (mit) → `myth` (FAKT z liczbą) → `number` (drugi fakt) → `text` (skąd mit / jak to sprawdzono) → `outro` (pytanie + źródła, `"partner_slot": false`), `durations` ok. `[2.6, 4.4, 4.2, 4.4, 4.4, 3.8]` – silnik dociągnie je do pełnych uderzeń tempa. QA ostrzega, gdy rolka ma mniej niż 4 plansze albo 20 s.
+2. Szybki podgląd (1080p, bez rozmycia ruchu – nie do publikacji): `render.py spec.json --out out --video --draft` → arkusz klatek (`szkola-klamala-montaz/scripts/klatki.py out/<id>.mp4 --times …`) → Read. Poprawiaj treść, `durations`, ewentualnie `fx`.
+3. Wersja finalna z muzyką – jedno polecenie (domyślnie **4K 2160×3840**; render ok. 8–15 min na rolkę 20–25 s; rozmycie ruchu liczone tylko w wejściach, przejściach i uderzeniach):
    ```bash
    python3 .claude/skills/szkola-klamala-grafiki/scripts/render.py spec.json --out out --video --muzyka
    ```
@@ -49,8 +49,8 @@ Zasady: jeden wariant na grupę na planszy; nie dokładaj efektów spoza bibliot
 
 ## Tempo i czytelność
 
-- Napisy wchodzą w ok. 0,8–1,6 s, **potem tekst stoi** – ok. 0,25 s na słowo + 1 s zapasu. QA ostrzega, gdy plansza jest za krótka.
-- Haczyk ok. 2,5 s, fakt 4–4,5 s, puenta 4–4,5 s. Cały „jeden mit”: 9–12 s.
+- **Zasada Michała: widz musi zdążyć przeczytać CAŁOŚĆ informacji z planszy.** Silnik liczy minimum: wejście napisów + 0,3 s na każde słowo (z etykietą i źródłem) + 0,8 s zapasu (+0,25 s na przejście) i sam wydłuża planszę do pełnego bitu, gdy `durations` są za krótkie (raport: `czytanie=… plansza=… (wydłużono …)`). Nigdy nie skraca. Gdy rolka robi się za długa – skróć tekst, nie tempo.
+- Haczyk ok. 2,5 s, każda kolejna plansza 4–4,5 s, outro ok. 3,5–4 s. Cała rolka: **20–25 s, min. 4 plansze**. Brakujący czas uzupełniaj kolejną planszą z treścią (drugi fakt z liczbą, skąd wziął się mit, jak to sprawdzono), nigdy wydłużaniem pustego stania.
 - Liczby, które nie powinny się odliczać (rok „1958”, numer „01”), oznacz `"count": false`.
 - Ostatnia plansza nie ma wyjścia – film zapętla się do haczyka.
 
@@ -61,7 +61,7 @@ Zasady: jeden wariant na grupę na planszy; nie dokładaj efektów spoza bibliot
 - Każdy tekst stoi wystarczająco długo, by przeczytać go dwa razy.
 - Przejście w pełni zakrywa cięcie.
 - Strefa bezpieczna 9:16 (góra 250, dół 430, prawo 150 px).
-- Raport: 1080×1920, 30 kl./s, dźwięk, −14 LUFS ±1, szczyt ≤ −1 dB.
+- Raport: **4K 2160×3840**, 30 kl./s, dźwięk, −14 LUFS ±1, szczyt ≤ −1 dB, **≥ 20 s i ≥ 4 plansze**.
 - Wysyłaj Michałowi jeden MP4 na rolkę (ten sam na IG i TikTok) + okładkę; opis IG i TikTok w blokach do skopiowania.
 
 ## Lektor (opcjonalnie)

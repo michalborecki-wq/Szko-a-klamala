@@ -68,7 +68,13 @@ def styl(post, i, n):
     for k, opts in WARIANTY.items():
         if k == "przejscie":
             # pierwsze cięcie zawsze markową smugą, kolejne rotują
-            fx[k] = "smuga" if i <= 1 else opts[(base + i) % len(opts)]   # przejście DO planszy i
+            # przejście DO planszy i: pierwsze zawsze markową smugą, potem rotacja pozostałych wariantów
+            # (kolejność zależna od rolki – dwie rolki nie mają tego samego układu)
+            reszta = [o for o in opts if o != "smuga"]
+            perm = [reszta[(base // 5 + j) % len(reszta)] for j in range(len(reszta))]
+            if (base // 11) % 2:
+                perm.reverse()
+            fx[k] = "smuga" if i <= 1 else perm[(i - 2) % len(perm)]
         else:
             fx[k] = opts[(base // (7 + len(k)) + i) % len(opts)]
     fx["tlo"] = TLO_PRZEDMIOTU.get(post.get("subject", "").upper(), "kule")
@@ -180,7 +186,9 @@ PREP = r"""
   document.querySelector('.vig').before(bg);
   let cv = null, ctx = null, stars = [], orbs = [];
   if (fx.tlo === 'gwiazdy' || fx.tlo === 'siatka') {
-    cv = document.createElement('canvas'); cv.width = W; cv.height = H; bg.appendChild(cv); ctx = cv.getContext('2d');
+    const dpr = devicePixelRatio || 1;            // 4K: płótno w pełnej rozdzielczości, rysowanie w px CSS
+    cv = document.createElement('canvas'); cv.width = W * dpr; cv.height = H * dpr;
+    cv.style.width = W + 'px'; cv.style.height = H + 'px'; bg.appendChild(cv); ctx = cv.getContext('2d'); ctx.scale(dpr, dpr);
     let s2 = 9173; const r2 = () => { s2 = (s2 * 1664525 + 1013904223) >>> 0; return s2 / 4294967296; };
     for (let k = 0; k < 170; k++) stars.push({x: r2() * W, y: r2() * H, z: .25 + r2() * .75, ph: r2() * 6.28, sp: .6 + r2() * 2});
   } else {
@@ -274,7 +282,7 @@ PREP = r"""
                 col.innerHTML = seq.map(x => `<i>${x}</i>`).join(''); sl.appendChild(col); frag.appendChild(sl);
                 window.__slots.push({col, n: seq.length - 1, start: t0 + .05 + ci * .12, dur: .9 + ci * .08});
                 land = Math.max(land, t0 + .05 + ci * .12 + .9 + ci * .08); ci++;
-              } else { const s = document.createElement('span'); s.className = 'nd'; s.textContent = chr; frag.appendChild(s); }
+              } else { const s = document.createElement('span'); s.className = 'nd'; s.textContent = /\s/.test(chr) ? '\u00a0' : chr; frag.appendChild(s); }
             });
             nd.replaceWith(frag);
           });

@@ -9,6 +9,10 @@ Ten skill zamienia gotową, sprawdzoną treść w pliki gotowe do publikacji. Wy
 
 Treść (temat, fakty, źródła, podpisy, hashtagi) pochodzi ze skilla **instagram-mich-bor** albo od Michała. Tu nie wymyślamy faktów – każda liczba na slajdzie musi mieć źródło lub być policzona w kodzie.
 
+## Rozdzielczość: 4K
+
+Wszystkie pliki domyślnie w 4K (zasada Michała): karuzele 4:5 – 2160×2700, pion 9:16 (TikTok, Reelsy) – 2160×3840. Układ, czcionki i strefy bezpieczne są opisane w px CSS dla 1080 szerokości; silnik renderuje je z gęstością 2×, więc tekst jest ostry także po kompresji aplikacji. `--hd` daje 1080p (tylko gdy ktoś wyraźnie o to prosi), `--draft` – szybki podgląd 1080p.
+
 ## Jak pracować
 
 1. **Rozpisz treść na slajdy** w pliku JSON (format: `references/spec-format.md`). Nie pisz HTML ręcznie – szablony w `scripts/render.py` pilnują typografii, siatki i stref bezpiecznych. Dobierz typ slajdu do treści (tabela niżej).
@@ -49,7 +53,7 @@ Treść (temat, fakty, źródła, podpisy, hashtagi) pochodzi ze skilla **instag
 
 ## Reelsy (MP4) – animowane napisy
 
-- Plansze w formacie `reel`, 3–6 plansz, łącznie 8–20 s. Z flagą `--video` każdy Reel dostaje **animowane napisy** (kinetyczna typografia) – szczegóły ruchu i zasady opisuje skill **szkola-klamala-animacje**. `"animate": false` w poście wraca do prostego pokazu plansz.
+- Plansze w formacie `reel`, **min. 4 plansze i min. 20 s** (zwykle 5–6 plansz, 20–25 s). Z flagą `--video` każdy Reel dostaje **animowane napisy** (kinetyczna typografia) – szczegóły ruchu i zasady opisuje skill **szkola-klamala-animacje**. `"animate": false` w poście wraca do prostego pokazu plansz.
 - `durations` w sekundach na planszę: haczyk 2,4–3 s, treść 4–4,5 s (napisy najpierw wjeżdżają, potem trzeba zdążyć przeczytać), puenta 3,5–4 s, odliczanie quizu po 1 s. QA ostrzega, gdy wejście napisów zjada czas na czytanie.
 - 30 kl./s, H.264, **cicha ścieżka AAC**. Muzykę Michał dodaje w aplikacji (biblioteka IG / dźwięki z trendów TikToka) – nigdy nie wgrywaj własnych MP3.
 - Render z rozmyciem ruchu trwa ok. 1,5–2 min na 10 s filmu; `--draft` daje szybki podgląd bez rozmycia (do sprawdzania układu, nie do publikacji).
