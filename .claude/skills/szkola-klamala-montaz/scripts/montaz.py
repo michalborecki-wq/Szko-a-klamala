@@ -169,6 +169,16 @@ def glosnosc(src, out):
              f"volume={LUFS - i:.2f}dB,alimiter=limit={10 ** ((TP - 1.0) / 20):.3f}:attack=2:release=60:level=false,"
              "aresample=48000", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", nxt])
         os.replace(nxt, tmp)
+    # zabezpieczenie: gdy szczyt nadal powyżej limitu – sam limiter z niższym progiem (bez podbijania głośności)
+    for ceil in (2.5, 4.0):
+        i, tp = zmierz_lufs(tmp)
+        if tp is None or tp <= TP:
+            break
+        nxt = out + ".etap2.mp4"
+        run(["ffmpeg", "-y", "-v", "error", "-i", tmp, "-af",
+             f"alimiter=limit={10 ** ((TP - ceil) / 20):.3f}:attack=1:release=50:level=false,aresample=48000",
+             "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", nxt])
+        os.replace(nxt, tmp)
     os.replace(tmp, out)
     return out, m
 
