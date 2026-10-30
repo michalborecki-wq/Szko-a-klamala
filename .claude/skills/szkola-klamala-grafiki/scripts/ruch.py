@@ -121,7 +121,7 @@ def css(TOK):
 .big.slotbig{{display:flex;align-items:flex-start;text-shadow:none;filter:drop-shadow(0 0 34px rgba(255,199,39,.45))}}
 .sl,.nd{{display:inline-block;height:1.2em;line-height:1.05em;overflow:hidden;text-shadow:0 10px 0 {TOK['blue']}}}
 .sl{{-webkit-mask-image:linear-gradient(transparent 0,#000 14%,#000 86%,transparent 100%);mask-image:linear-gradient(transparent 0,#000 14%,#000 86%,transparent 100%)}}
-.sl .col{{display:block}} .sl .col i{{display:block;height:1.6em;font-style:inherit}}
+.sl .col{{display:block}} .sl .col i{{display:block;height:1.6em;font-style:inherit;text-align:center;margin:0 -.3em}}
 @keyframes kUp{{from{{opacity:0;transform:translateY(.42em);filter:blur(10px)}}to{{opacity:1;transform:none;filter:none}}}}
 @keyframes kRise{{from{{transform:translateY(118%) rotate(4deg)}}to{{transform:none}}}}
 @keyframes kMask{{0%,99.9%{{clip-path:inset(-1em -1em 0 -1em)}}100%{{clip-path:none}}}}
@@ -280,11 +280,17 @@ PREP = r"""
                 const sl = document.createElement('span'); sl.className = 'sl';
                 const col = document.createElement('span'); col.className = 'col';
                 col.innerHTML = seq.map(x => `<i>${x}</i>`).join(''); sl.appendChild(col); frag.appendChild(sl);
-                window.__slots.push({col, n: seq.length - 1, start: t0 + .05 + ci * .12, dur: .9 + ci * .08});
+                window.__slots.push({col, n: seq.length - 1, start: t0 + .05 + ci * .12, dur: .9 + ci * .08, sl, d});
                 land = Math.max(land, t0 + .05 + ci * .12 + .9 + ci * .08); ci++;
               } else { const s = document.createElement('span'); s.className = 'nd'; s.textContent = /\s/.test(chr) ? '\u00a0' : chr; frag.appendChild(s); }
             });
             nd.replaceWith(frag);
+          });
+          // każda kolumna ma szerokość swojej docelowej cyfry (w em) – „1” nie zostawia dziury jak „1 00”
+          window.__slots.filter(q => q.sl && el.contains(q.sl)).forEach(q => {
+            const m = document.createElement('span'); m.className = 'nd'; m.textContent = String(q.d); el.appendChild(m);
+            q.sl.style.width = (m.offsetWidth / parseFloat(getComputedStyle(m).fontSize)).toFixed(4) + 'em';
+            m.remove();
           });
         } else {
           addCounter(el, t0, .9); if (o.count && /\d/.test(txt)) land = t0 + .9;
