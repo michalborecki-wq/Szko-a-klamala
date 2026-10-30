@@ -108,6 +108,8 @@ def kick(g=1.0):
     f = 48 + 110 * np.exp(-t * 28)
     x = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t * 7.5)
     x[:240] += RNG.standard_normal(240) * np.linspace(.5, 0, 240)
+    click = filt(RNG.standard_normal(600) * np.exp(-np.arange(600) / SR * 160), "bandpass", [1800, 5000])
+    x[:600] += click * .5                               # „klik” stopy – słyszalny w telefonie
     return np.tanh(x * 1.6) * g
 
 
@@ -159,6 +161,8 @@ def bass(m, d, g=1.0, cutoff=380):
     t = tt(d)
     f = mtof(m)
     x = 0.4 * np.sin(2 * np.pi * f * t) + 0.55 * filt(saw(f, d, (0.0,), 20), "lowpass", cutoff * 1.6)
+    # nasycenie dodaje harmoniczne – bas „słychać” także w głośniku telefonu, który nie gra < ~200 Hz
+    x = filt(np.tanh(2.4 * x), "highpass", 55)
     return x * env(len(t), 0.004, 0.25, 0.7, 0.05, hold=d * 0.85) * g
 
 
@@ -279,8 +283,8 @@ def compose(nastroj, bpm, length, cuts):
                 place(L["bass"], bass(root, beat * .45, .65 if k == 0 else .45), t0 + k * beat / 2)
         # ── pad (akord na takt)
         if pos == 0:
-            cutoff = 900 if not full else (1600 if nastroj != "kosmos" else 2400)
-            place(L["pad"], pad(chord, beat * 4 + .3, .32, cutoff), t0)
+            cutoff = 1400 if not full else 2800
+            place(L["pad"], pad(chord, beat * 4 + .3, .4, cutoff), t0)
         # ── melodia / arpeggio
         if nastroj == "kosmos":
             for k in range(2):
@@ -289,7 +293,10 @@ def compose(nastroj, bpm, length, cuts):
         elif nastroj == "spokojny":
             if pos in (0, 2):
                 for m in chord:
-                    place(L["lead"], pluck(m + 12, beat * 1.5, .12, .5), t0 + (m % 3) * .012)
+                    place(L["lead"], pluck(m + 12, beat * 1.5, .2, .5), t0 + (m % 3) * .012)
+            for k in range(2):                            # ósemkowe arpeggio – melodia, którą słychać
+                m = chord[(b * 2 + k + 1) % 3] + 24
+                place(L["lead"], pluck(m, beat * .45, .2 if full else .13, .8), t0 + k * beat / 2)
         else:
             steps = 4 if nastroj in ("elektro", "napiecie") else 2
             for k in range(steps):
@@ -303,8 +310,17 @@ def compose(nastroj, bpm, length, cuts):
         echo[d:] = lead[:-d] * .35
         echo[2 * d:] += lead[:-2 * d] * .15
         lead = lead + filt(echo, "lowpass", 4000)
-    mix = (L["drums"] * .85 + L["bass"] * .5 + reverb(L["pad"], 2.4, .35) * 1.0 + reverb(lead, 1.6, .28) * 1.1)
+    mix = (L["drums"] * .7 + L["bass"] * .35 + reverb(L["pad"], 2.4, .35) * 1.3 + reverb(lead, 1.6, .28) * 2.0)
+    # miks pod głośnik telefonu: mniej subbasu, więcej środka (melodia i akordy na wierzchu)
+    mix = mix - .55 * filt(mix, "lowpass", 160)
     return mix[: int(length * SR)]
+
+
+def pasmo_telefonu(x):
+    """Udział energii w paśmie, które realnie gra głośnik telefonu (300–6000 Hz)."""
+    m = x.mean(axis=1) if x.ndim == 2 else x
+    hi = signal.sosfilt(sos("bandpass", [300, 6000], 4), m)
+    return float(np.sum(hi ** 2) / (np.sum(m ** 2) + 1e-12))
 
 
 def sfx_track(events, length, cuts):
@@ -411,6 +427,10 @@ def main():
         else:
             mix = stereo(fx, .5)
         mix = master(mix, 0.8 if wariant == "muzyka" else 0.5)   # same efekty: zapas – muzyka dojdzie w aplikacji
+        if wariant == "muzyka":
+            pt = pasmo_telefonu(mix)
+            print(f"  pasmo telefonu (300–6000 Hz): {pt * 100:.0f}% energii" +
+                  ("" if pt >= .35 else "  ⚠ za mało – muzyka może być niesłyszalna w głośniku telefonu"))
         wav = f"{base}_{wariant}.wav"
         write_wav(wav, mix)
         tmp = f"{base}_{wariant}_tmp.mp4"
