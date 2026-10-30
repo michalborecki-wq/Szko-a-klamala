@@ -20,6 +20,10 @@ Silnik: `.claude/skills/szkola-klamala-grafiki/scripts/render.py` + biblioteka r
    Wynik: `<id>_muzyka.mp4` (gotowy do publikacji, −14 LUFS), `<id>_efekty.mp4` (same efekty dźwiękowe – gdy Michał woli dźwięk z trendów TikToka), `<id>_zdarzenia.json` (oś czasu), okładka `<id>_reel_01.jpg`, **`<id>_tiktok_1080.mp4` – wersja na TikTok** (1080×1920; edytor TikToka dubluje obraz pionowych plików 4K – na TikTok nigdy nie wysyłaj pliku 4K).
 4. Zasada nr 8: obejrzyj gotowy film (arkusz klatek w momentach: 0 s, środek wejść, każde przejście, lądowanie liczby, koniec) i sprawdź raport głośności. Dopiero potem wyślij.
 
+## Logo na końcu (zasada Michała, 30.10)
+
+Każdy film kończy się ok. 2,8 s animowanym logo twórcy (`szkola-klamala-grafiki/scripts/logo_outro.py`, grafika `assets/logo.png`): błysk na cięciu → logo wskakuje z obrotem i z rozmycia → złota poświata i fala → połysk → handle @szkola_klamala. `render.py --video` dokleja je automatycznie przed muzyką (oś zdarzeń dostaje cięcie i uderzenie logo). Do gotowego filmu: `python3 .../logo_outro.py out/<id>.mp4`, potem ponownie `muzyka.py`. Montaż nagrań (`szkola-klamala-montaz`) – to samo outro na końcu.
+
 ## Biblioteka efektów (`ruch.py`)
 
 Każda rolka dostaje **inną kombinację** (wybór deterministyczny z `id` rolki – ten sam spec = ten sam film), a każda plansza inny wariant niż poprzednia. Paleta ruchów jest jedna – marka zostaje spójna, a widz nie widzi dwa razy tego samego.

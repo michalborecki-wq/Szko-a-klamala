@@ -544,6 +544,13 @@ def main():
             contact_sheet(files, os.path.join(a.out, f"_podglad_{pid}_{fmt}.jpg"))
         if pid in animated and fmt == "reel":
             print("MP4 (animowane napisy):", animated[pid])
+            post = next(p for p in spec["posts"] if p["id"] == pid)
+            if post.get("logo", True):
+                # zasada Michała (30.10): animowane logo twórcy na końcu każdego filmu – przed muzyką,
+                # żeby dźwięk zgrał się z wejściem logo
+                import logo_outro
+                logo_outro.dodaj_logo(animated[pid])
+                print("Logo na końcu:", animated[pid])
             if a.muzyka:
                 muz = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..",
                                    "szkola-klamala-animacje", "scripts", "muzyka.py")
