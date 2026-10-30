@@ -24,3 +24,16 @@ Stan na 29.10.2026.
 ## Odrzucone
 
 - Wzrost Napoleona – zbyt słabe źródło; nie używać bez źródła encyklopedycznego.
+
+## Przygotowane 30.10 (do publikacji 30.10–1.11 – po publikacji nie powtarzać)
+
+- Finanse: drugi próg podatkowy (32% tylko od nadwyżki) – Reel
+- Prawo: „znalezione nie kradzione” (rzeczy znalezione, znaleźne 10%) – Reel
+- Prawo: grób na 20 lat (art. 7 ustawy o cmentarzach) – Reel
+- Historia: Halloween starsze niż Polska (Samhain, rzepa zamiast dyni) – Reel
+- Motoryzacja: rozgrzewanie silnika na postoju – Reel
+- Medycyna: przeziębienie od zimna – Reel
+- Prawo: 14 dni na zwrot tylko online – Reel
+- Finanse: lokata 6% = 4,86% po podatku Belki – Reel
+- Kosmos: ISS (90% grawitacji, 400 km, 28 000 km/h) – Reel
+- Biologia: lemingi i film z 1958 r. – Reel
