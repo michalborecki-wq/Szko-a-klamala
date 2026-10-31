@@ -37,3 +37,4 @@ Stan na 29.10.2026.
 - Finanse: lokata 6% = 4,86% po podatku Belki – Reel
 - Kosmos: ISS (90% grawitacji, 400 km, 28 000 km/h) – Reel
 - Biologia: lemingi i film z 1958 r. – Reel
+- Kosmos: pory roku – najbliżej Słońca w styczniu (pierwsza rolka 3D, Blender) – Reel (przygotowany 31.10)

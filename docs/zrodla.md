@@ -4,7 +4,7 @@
 |---|---|---|
 | Zmiana czasu | Pierwsze na skalę państwa Niemcy 1916, oszczędność paliwa w czasie I wojny światowej; rolnicy byli przeciwnikami | britannica.com/today-in-history/March-31-How-WWI-Invented-Daylight-Saving-Time; stacker.com (history of DST) |
 | ISS | Grawitacja na wysokości ISS ok. 90% ziemskiej; nieważkość = swobodny spadek | nasa.gov/learning-resources/for-kids-and-students/what-is-microgravity-grades-5-8/ |
-| Pory roku | Najbliżej Słońca w styczniu; pory roku wynikają z nachylenia osi | spaceplace.nasa.gov/seasons/en/ |
+| Pory roku | Najbliżej Słońca na początku stycznia (2027: ok. 147,1 mln km, 3.01), najdalej na początku lipca (ok. 152,1 mln km, 5.07); różnica ok. 5 mln km, w styczniu ok. 7% więcej światła ((152,1/147,1)² ≈ 1,069); pory roku wynikają z nachylenia osi 23,4° | spaceplace.nasa.gov/seasons/en/; science.nasa.gov/earth/facts/; weather.gov/fsd/season |
 | Księżyc | Brak stałej „ciemnej strony”, druga strona dostaje tyle samo światła | science.nasa.gov/moon/top-moon-questions/ |
 | Wenus | Najgorętsza planeta, ok. 467°C; dzień 243 dni, rok 225 dni; obrót wsteczny; wschód Słońca co ok. 117 dni | science.nasa.gov/venus/venus-facts/; spaceplace.nasa.gov/all-about-venus/en/ |
 | Wielki Mur | Z orbity praktycznie niewidoczny gołym okiem; Yang Liwei: „nie widziałem naszego Muru” | skyatnightmagazine.com/space-science/can-you-see-great-wall-china-from-space |
