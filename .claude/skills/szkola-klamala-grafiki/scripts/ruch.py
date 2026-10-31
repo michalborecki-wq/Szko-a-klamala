@@ -94,7 +94,7 @@ def css(TOK):
 .fxbg canvas{{position:absolute;inset:0}}
 .orb{{position:absolute;border-radius:50%;filter:blur(60px)}}
 .t3d{{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}}
-.t3dv{{position:absolute;inset:0;background:radial-gradient(ellipse 95% 50% at 50% 47%,rgba(10,14,24,.70) 0%,rgba(10,14,24,.42) 62%,rgba(10,14,24,.22) 100%)}}
+.t3dv{{position:absolute;inset:0;background:radial-gradient(ellipse 95% 50% at 50% 47%,rgba(10,14,24,.58) 0%,rgba(10,14,24,.36) 62%,rgba(10,14,24,.18) 100%)}}
 .kontur{{position:absolute;left:50%;top:50%;white-space:nowrap;font-family:'Inter Display','Inter';font-weight:900;
   font-style:italic;font-size:560px;line-height:1;color:transparent;-webkit-text-stroke:3px rgba(47,107,255,.22);
   letter-spacing:-12px;text-transform:uppercase}}

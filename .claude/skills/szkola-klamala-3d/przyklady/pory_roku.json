@@ -1,0 +1,68 @@
+{
+ "handle": "@szkola_klamala",
+ "posts": [
+  {
+   "id": "kosmos_pory_roku_3d",
+   "format": "reel",
+   "subject": "KOSMOS",
+   "durations": [
+    2.6,
+    3.4,
+    4.6,
+    4.6,
+    4.6
+   ],
+   "muzyka": {
+    "nastroj": "kosmos"
+   },
+   "fx": {
+    "haczyk": "blysk"
+   },
+   "slides": [
+    {
+     "type": "cover",
+     "title": "Latem jesteśmy",
+     "accent": "bliżej Słońca?",
+     "sub": "Sprawdź datę."
+    },
+    {
+     "type": "text",
+     "title": "Większość",
+     "accent": "myśli:",
+     "body": "lato = Ziemia **bliżej** Słońca. Logiczne?"
+    },
+    {
+     "type": "number",
+     "tag": "FAKT",
+     "big": "147,1 mln km",
+     "count": false,
+     "title": "najbliżej Słońca:",
+     "accent": "początek stycznia",
+     "body": "W środku **zimy**.",
+     "source": "NASA; NOAA"
+    },
+    {
+     "type": "number",
+     "tag": "TWIST",
+     "big": "+7%",
+     "title": "więcej światła",
+     "accent": "w styczniu",
+     "body": "A u nas **zima**.",
+     "source": "NASA/JPL"
+    },
+    {
+     "type": "outro",
+     "question": "Pory roku robi nachylenie osi: 23,4°.",
+     "sub": "Wyślij komuś, kto wciąż mówi „bliżej Słońca”.",
+     "sources": "Źródła: NASA, NOAA (NWS)",
+     "partner_slot": false
+    }
+   ],
+   "tlo3d": {
+    "klatki": "out/klatki3d_pory_roku",
+    "fps": 30,
+    "krycie": 0.9
+   }
+  }
+ ]
+}

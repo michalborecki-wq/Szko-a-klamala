@@ -128,10 +128,10 @@ for f in range(1, N + 1):
     # kamera: plan ogólny obrócony o 90° (orbita stoi pionowo i mieści się w kadrze 9:16:
     # lipiec u góry, styczeń na dole) → w końcówce zbliżenie na Ziemię i powrót do poziomu (widać nachylenie osi)
     z = M.wygladz((t - 0.75) / 0.2)
-    ogolny = Vector((0.6 * math.sin(t * 1.3), -15.8, 11.8))
+    ogolny = Vector((0.6 * math.sin(t * 1.3), -17.6, 13.2))
     blisko = p + Vector((0.6, -4.2, 1.1))
     cam.location = ogolny.lerp(blisko, z)
-    cel_p = Vector((0, 0, 0)).lerp(p, z)
+    cel_p = Vector((0, 0, -0.9)).lerp(p, z)
     kier = cel_p - cam.location
     q = kier.to_track_quat("-Z", "Y")
     przechyl = math.radians(90 + 4 * math.sin(t * 2.0)) * (1 - z)
