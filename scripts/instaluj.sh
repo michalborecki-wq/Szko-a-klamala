@@ -24,6 +24,14 @@ for ext in ("", ".json"):
     hf_hub_download("rhasspy/piper-voices", rel + ext, local_dir="/root/piper")
 PY
 
+# Blender 4.2 LTS (sceny 3D, skill szkola-klamala-3d) – ok. 350 MB, render Cycles na CPU
+if ! command -v blender >/dev/null; then
+  curl -sSfL -o /tmp/blender.tar.xz https://download.blender.org/release/Blender4.2/blender-4.2.3-linux-x64.tar.xz
+  mkdir -p /opt/blender && tar -xJf /tmp/blender.tar.xz -C /opt/blender --strip-components=1 && rm /tmp/blender.tar.xz
+  ln -sf /opt/blender/blender /usr/local/bin/blender
+fi
+echo "$(blender --version 2>/dev/null | head -1)"
+
 echo "ffmpeg: $(ffmpeg -version | head -1 | cut -d' ' -f3)"
 python3 -c "import faster_whisper, playwright; print('faster-whisper', faster_whisper.__version__)"
 auto-editor --version

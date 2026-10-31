@@ -26,6 +26,7 @@ Każdy slajd przechodzi automatyczną kontrolę jakości (QA): tekst mieszczący
 bezpiecznej, minimalne rozmiary czcionek, brak ucięć. Ostrzeżenia trafiają do qa_report.txt.
 """
 import argparse
+import base64
 import html
 import math
 import io
@@ -389,6 +390,7 @@ def render_all(spec, out, video=False, fps=30, sub=2, scale=2):
                     mp4 = os.path.join(out, f"{post['id']}.mp4")
                     proc, g = open_video_pipe(mp4, fps), 0.0
                     # klatka quizu z odliczaniem/rozwiązaniem kontynuuje poprzednią – bez wyjścia i ponownego wejścia
+                    t3d = Tlo3D(post["tlo3d"]) if post.get("tlo3d") else None
                     cont = [s["type"] == "quiz" and (s.get("countdown") or s.get("reveal") is not None)
                             for s in post["slides"]]
                 for i, s in enumerate(post["slides"]):
@@ -406,6 +408,9 @@ def render_all(spec, out, video=False, fps=30, sub=2, scale=2):
                             events.append({"t": round(t_start, 3), "typ": "przejscie", "wariant": fxs[i]["przejscie"]})
                         events += [{"t": round(t_start + e["t"], 3), "typ": e["typ"]} for e in res["ev"]]
                         # stan końcowy animacji – pomiar i JPEG bez przesunięć i powiększeń z wejścia
+                        if t3d:
+                            t3d.last = None                 # nowa strona – obraz trzeba wczytać od nowa
+                            t3d.ustaw(pg, g + min(2.0, durs[i] * .5))
                         pg.evaluate("window.__setT(60, 0, 999, null, null, false)")
                     qa = pg.evaluate(FIT_AND_QA, f["min_body"])
                     if anim:
@@ -450,6 +455,8 @@ def render_all(spec, out, video=False, fps=30, sub=2, scale=2):
                             fast = (enter and tk < intro + .7) or (exit_ and tk > durs[i] - .35) or \
                                 (wipe_in and tk < .35) or any(-.05 < tk - h < .55 for h in hits) or \
                                 (cont[i] and tk < .6)
+                            if t3d:
+                                t3d.ustaw(pg, g + tk)
                             if sub == 1 or not fast:
                                 pg.evaluate("(a) => window.__setT(...a)", [k / fps, g + k / fps, durs[i], exit_, wipe_in, push])
                                 proc.stdin.write(pg.screenshot(type="jpeg", quality=93))
@@ -488,6 +495,28 @@ def render_all(spec, out, video=False, fps=30, sub=2, scale=2):
     with open(os.path.join(out, "qa_report.txt"), "w") as fh:
         fh.write("\n".join(report) + "\n")
     return produced, report, animated
+
+
+class Tlo3D:
+    """Tło z renderu 3D (skill szkola-klamala-3d): katalog klatek JPEG, klatka wybierana z czasu globalnego rolki.
+
+    W poście: "tlo3d": {"klatki": "ścieżka/do/klatek", "fps": 30, "krycie": 0.85}. Klatki skalowane do 4K w przeglądarce.
+    """
+    def __init__(self, cfg):
+        import glob as _g
+        self.files = sorted(_g.glob(os.path.join(cfg["klatki"], "*.jpg")))
+        if not self.files:
+            raise RuntimeError(f"tlo3d: brak klatek JPEG w {cfg['klatki']}")
+        self.fps, self.op, self.last = cfg.get("fps", 30), cfg.get("krycie", 0.85), None
+
+    def ustaw(self, pg, g):
+        k = min(len(self.files) - 1, max(0, int(round(g * self.fps))))
+        if k == self.last:
+            return
+        with open(self.files[k], "rb") as fh:
+            src = "data:image/jpeg;base64," + base64.b64encode(fh.read()).decode()
+        pg.evaluate("(a) => window.__t3d(a[0], a[1])", [src, self.op])
+        self.last = k
 
 
 # ───────────────────────── wideo (Reelsy) ─────────────────────────

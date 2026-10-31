@@ -10,7 +10,7 @@ Warianty (wybierane per rolka i per plansza funkcją `styl()`, nadpisywane w spe
   tresc:     rozmycie | marker                         – wejście tekstu i żółtych wyróżnień
   liczba:    licznik | slot                            – duża liczba (+ pasek postępu dla %)
   mit:       kreska | pieczatka                        – przekreślenie mitu
-  tlo:       gwiazdy | siatka | kule                   – warstwa tła (domyślnie wg przedmiotu)
+  tlo:       gwiazdy | siatka | kule | 3d (z pola "tlo3d")                   – warstwa tła (domyślnie wg przedmiotu)
   przejscie: smuga | zoom | paski | blysk              – cięcie między planszami
 Każde wejście zgłasza zdarzenia (uderzenie, przekreślenie, marker…) – trafiają do <id>_zdarzenia.json
 i synchronizują efekty dźwiękowe w muzyka.py.
@@ -79,6 +79,8 @@ def styl(post, i, n):
             fx[k] = opts[(base // (7 + len(k)) + i) % len(opts)]
     fx["tlo"] = TLO_PRZEDMIOTU.get(post.get("subject", "").upper(), "kule")
     fx["kontur"] = True
+    if post.get("tlo3d"):        # tło z renderu 3D (skill szkola-klamala-3d) zamiast warstw rysowanych w przeglądarce
+        fx["tlo"], fx["kontur"] = "3d", False
     fx.update(post.get("fx", {}))                       # nadpisanie dla całej rolki
     fx.update(post["slides"][i].get("fx", {}))          # nadpisanie dla planszy
     return fx
@@ -91,6 +93,8 @@ def css(TOK):
 .fxbg{{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}}
 .fxbg canvas{{position:absolute;inset:0}}
 .orb{{position:absolute;border-radius:50%;filter:blur(60px)}}
+.t3d{{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}}
+.t3dv{{position:absolute;inset:0;background:radial-gradient(ellipse 95% 50% at 50% 47%,rgba(10,14,24,.70) 0%,rgba(10,14,24,.42) 62%,rgba(10,14,24,.22) 100%)}}
 .kontur{{position:absolute;left:50%;top:50%;white-space:nowrap;font-family:'Inter Display','Inter';font-weight:900;
   font-style:italic;font-size:560px;line-height:1;color:transparent;-webkit-text-stroke:3px rgba(47,107,255,.22);
   letter-spacing:-12px;text-transform:uppercase}}
@@ -185,7 +189,12 @@ PREP = r"""
   const bg = document.createElement('div'); bg.className = 'fxbg';
   document.querySelector('.vig').before(bg);
   let cv = null, ctx = null, stars = [], orbs = [];
-  if (fx.tlo === 'gwiazdy' || fx.tlo === 'siatka') {
+  if (fx.tlo === '3d') {
+    // klatka renderu 3D podmieniana z Pythona dla każdej klatki filmu (czas globalny g); przyciemnienie pod tekstem
+    const im = document.createElement('img'); im.className = 't3d'; bg.appendChild(im);
+    const sh = document.createElement('div'); sh.className = 't3dv'; bg.appendChild(sh);
+    window.__t3d = (src, op) => { im.style.opacity = op; im.src = src; return im.decode().catch(() => {}); };
+  } else if (fx.tlo === 'gwiazdy' || fx.tlo === 'siatka') {
     const dpr = devicePixelRatio || 1;            // 4K: płótno w pełnej rozdzielczości, rysowanie w px CSS
     cv = document.createElement('canvas'); cv.width = W * dpr; cv.height = H * dpr;
     cv.style.width = W + 'px'; cv.style.height = H + 'px'; bg.appendChild(cv); ctx = cv.getContext('2d'); ctx.scale(dpr, dpr);

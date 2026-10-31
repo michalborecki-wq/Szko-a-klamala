@@ -11,7 +11,7 @@ Silnik: `.claude/skills/szkola-klamala-grafiki/scripts/render.py` + biblioteka r
 
 ## Jak pracować
 
-0. **Najpierw scenariusz wg skilla `szkola-klamala-viral`** (pętla ciekawości, karta oceny min. 12/16) – i zatwierdzenie Michała.
+0. **Najpierw scenariusz wg skilla `szkola-klamala-viral`** (pętla ciekawości, karta oceny min. 15/20) – i zatwierdzenie Michała.
 1. Rozpisz Reel w JSON (`format: "reel"`, pola: `szkola-klamala-grafiki/references/spec-format.md`) i dodaj `"muzyka": {}` (nastrój i tempo dobiorą się same z przedmiotu). Standard (decyzja Michała 29.10): **min. 4 plansze i min. 20 s**, zwykle 5–6 plansz: `cover` (mit) → `myth` (FAKT z liczbą) → `number` (drugi fakt) → `text` (skąd mit / jak to sprawdzono) → `outro` (pytanie + źródła, `"partner_slot": false`), `durations` ok. `[2.6, 4.4, 4.2, 4.4, 4.4, 3.8]` – silnik dociągnie je do pełnych uderzeń tempa. QA ostrzega, gdy rolka ma mniej niż 4 plansze albo 20 s.
 2. Szybki podgląd (1080p, bez rozmycia ruchu – nie do publikacji): `render.py spec.json --out out --video --draft` → arkusz klatek (`szkola-klamala-montaz/scripts/klatki.py out/<id>.mp4 --times …`) → Read. Poprawiaj treść, `durations`, ewentualnie `fx`.
 3. Wersja finalna z muzyką – jedno polecenie (domyślnie **4K 2160×3840**; render ok. 8–15 min na rolkę 20–25 s; rozmycie ruchu liczone tylko w wejściach, przejściach i uderzeniach):
@@ -38,6 +38,7 @@ Każda rolka dostaje **inną kombinację** (wybór deterministyczny z `id` rolki
 | `mit` | `kreska`, `pieczatka` | czerwone przekreślenie; dodatkowo pieczątka „MIT” wbijana obok etykiety ze wstrząsem |
 | `tlo` | `gwiazdy`, `siatka`, `kule` | wg przedmiotu: KOSMOS – gwiazdy z paralaksą; nauki ścisłe i finanse – perspektywiczna siatka; reszta – dryfujące światła; zawsze wielki konturowy napis (liczba albo przedmiot) |
 | `przejscie` | `smuga`, `zoom`, `paski`, `blysk` | pierwsze cięcie zawsze markową smugą, kolejne rotują |
+| tło 3D | pole `"tlo3d"` w poście | render Blendera (skill `szkola-klamala-3d`) zamiast gwiazd/siatki/kul, z przyciemnieniem pod tekstem |
 
 Nadpisanie: `"fx": {...}` w poście (cała rolka) albo w slajdzie (jedna plansza), np. `"fx": {"mit": "pieczatka", "przejscie": "paski"}`. Używaj, gdy treść czegoś wymaga (np. pieczątka przy bardzo znanym micie), nie dla zasady.
 
