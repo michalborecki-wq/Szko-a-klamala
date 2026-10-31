@@ -8,3 +8,5 @@ faster-whisper==1.2.1
 auto-editor==29.3.1
 # lektor (syntezator mowy offline, polskie głosy z rhasspy/piper-voices)
 piper-tts
+# Higgsfield – generowanie wideo AI (wymaga klucza API w zmiennych środowiska)
+higgsfield-client
