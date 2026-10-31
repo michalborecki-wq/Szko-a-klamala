@@ -351,7 +351,8 @@ def default_durations(n):
 # czas czytania: tyle musi stać tekst po wejściu, żeby przeczytać CAŁOŚĆ planszy (z etykietą i źródłem)
 # Czytanie zaczyna się już w trakcie wjeżdżania słów, więc liczy się późniejsze z dwóch: koniec wejścia + 1,2 s
 # na doczytanie ostatnich słów albo pełny czas czytania całości (0,3 s/słowo ≈ tempo napisów ekranowych).
-SEK_NA_SLOWO, ZAPAS_CZYTANIA, MAX_SLOW_ROLKA = 0.30, 0.6, 18
+SEK_NA_SLOWO, ZAPAS_CZYTANIA, MAX_SLOW_ROLKA, MAX_SLOW_OUTRO = 0.30, 0.6, 12, 18
+REEL_CEL_SEC = 30.0   # pętla ciekawości: 20–28 s treści; dłużej spada odsetek obejrzeń do końca
 
 
 def render_all(spec, out, video=False, fps=30, sub=2, scale=2):
@@ -421,7 +422,8 @@ def render_all(spec, out, video=False, fps=30, sub=2, scale=2):
                             qa["czytanie"] = round(need, 1)
                     words_max = 40 if s["type"] in ("quiz", "versus") else 32
                     if fmt == "reel" and s["type"] != "quiz":
-                        words_max = MAX_SLOW_ROLKA   # w rolce każde słowo kosztuje 0,3 s – krótko i konkretnie
+                        # w rolce każde słowo kosztuje 0,3 s – krótko i konkretnie (skill szkola-klamala-viral)
+                        words_max = MAX_SLOW_OUTRO if s["type"] == "outro" else MAX_SLOW_ROLKA
                     if qa["words"] > words_max:
                         qa["issues"].append(f"{qa['words']} słów (> {words_max}) – za dużo tekstu na slajd")
                     name = f"{post['id']}{suffix}_{i+1:02d}.jpg"
@@ -466,6 +468,9 @@ def render_all(spec, out, video=False, fps=30, sub=2, scale=2):
                 produced[(post["id"], fmt)] = files
                 if fmt == "reel":
                     total = sum(durs) if anim else sum(post.get("durations") or default_durations(n))
+                    if total > REEL_CEL_SEC + 0.05:
+                        report.append(f"{post['id']}: {total:.1f} s  ⚠ ponad {REEL_CEL_SEC:.0f} s – skróć tekst albo usuń planszę"
+                                      " (cel 20–28 s, skill szkola-klamala-viral)")
                     if n < REEL_MIN_SLIDES or total < REEL_MIN_SEC - 0.05:
                         report.append(f"{post['id']}: {n} plansz, {total:.1f} s  ⚠ rolka ma mieć min. {REEL_MIN_SLIDES} plansze"
                                       f" i {REEL_MIN_SEC:.0f} s – dodaj planszę (np. drugi fakt, „jak to sprawdzono”, outro)")

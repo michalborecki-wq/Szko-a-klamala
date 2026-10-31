@@ -22,10 +22,13 @@ Stan na 29.10.2026. Właściciel: Michał Borecki. Język pracy: **polski**.
 
 ## Plan publikacji (decyzja Michała 29.10)
 
-- **Instagram:** pon.–sob. codziennie 1 Reel „jeden mit”, **min. 4 plansze i min. 20 s** (zwykle 5–6 plansz, 20–25 s; decyzja 29.10): MIT → FAKT z liczbą → rozwinięcie (drugi fakt, skąd mit, jak to sprawdzono) → puenta/pytanie + źródło. Długość z treści, nie z pustego czasu. **Tempo: każda plansza stoi tyle, by przeczytać całość jej informacji** (silnik liczy: wejście napisów + 0,3 s na słowo + 0,8 s i sam wydłuża planszę). Do tego 1 karuzela tygodniowo, jako **jeden** post.
+- **Instagram:** pon.–sob. codziennie 1 Reel „jeden mit”, **min. 4 plansze i min. 20 s** (decyzja 29.10). **Szablon od 31.10: pętla ciekawości** (skill `szkola-klamala-viral`): haczyk bez odpowiedzi → napięcie („większość myśli…”) → odpowiedź z liczbą na ok. 50–70% filmu → twist/drugi fakt → zdanie do wysłania + źródło; 4–5 plansz, maks. ok. 12 słów na planszę, cel 20–28 s. Każdy scenariusz oceniany kartą 16 pkt (min. 12) przed renderem. Długość z treści, nie z pustego czasu. **Tempo: każda plansza stoi tyle, by przeczytać całość jej informacji** (silnik liczy: wejście napisów + 0,3 s na słowo + 0,8 s i sam wydłuża planszę). Do tego 1 karuzela tygodniowo, jako **jeden** post.
 - **TikTok:** 2–3 posty dziennie (ok. 15 tygodniowo): te same Reelsy jako wideo, karuzela w 9:16 i dodatkowe karuzele zdjęć 9:16 (4 slajdy). Godziny: 10:00, 13:00, 18:00.
 - **Priorytet tematów:** najbardziej znane mity z szerokim zasięgiem (kosmos, ciało, mózg, medycyna, motoryzacja, prawo w codziennym życiu, pieniądze w codziennym życiu). Węższe tematy (język, ekonomia) rzadziej. Co tydzień co najmniej 3 z: prawo, finanse, motoryzacja, medycyna.
 - Muzyka (decyzja 29.10): rolki mają **oryginalny podkład generowany w kodzie + efekty dźwiękowe** zsynchronizowane z animacją (`<id>_muzyka.mp4`, −14 LUFS), zamiast lektora. Dodatkowo `<id>_efekty.mp4` (same efekty), gdy Michał woli dźwięk z trendów w aplikacji. Nigdy cudzych plików MP3.
+- **Dźwięk wg sieci (31.10):** Instagram – nasz podkład `<id>_muzyka.mp4`; TikTok – `<id>_efekty` w 1080 + dźwięk z trendów dodany w aplikacji (oryginał ok. 30%).
+- **Serie:** numer „Szkoła kłamała #N” w opisie i małą etykietą na haczyku; serie tematyczne (Mit tygodnia, Prawo, którego nie znasz, Pieniądze bez ściemy).
+- **Wyniki:** co tydzień zrzuty statystyk od Michała → `docs/wyniki.md` → korekta tematów i haczyków.
 - Przekazanie materiałów: pliki post po poście (bez ZIP-ów i duplikatów), opisy IG i TikTok w blokach do skopiowania, źródła, propozycje dźwięków.
 
 ## Przypomnienia dla Michała (z doświadczenia)
@@ -77,5 +80,7 @@ Stan na 29.10.2026. Właściciel: Michał Borecki. Język pracy: **polski**.
 - `docs/zrodla.md` – sprawdzone fakty i źródła do ponownego użycia.
 - `docs/profil.md` – bio, teksty TikTok, ustawienia konta.
 - `docs/otwarte-sprawy.md` – lista zadań na później.
+- `docs/analiza-konkurencji-2026-10.md` – konkurencja i sygnały algorytmów IG/TikTok (podstawa szablonu pętli ciekawości).
+- `docs/wyniki.md` – wyniki rolek (temat, haczyk, długość, wyświetlenia, wysłania, czas oglądania).
 - `docs/KONTEKST_szkola_klamala.md` – oryginalny dokument przekazania projektu (29.10).
 - `docs/archiwum/instagram-mich-bor_SKILL_metricool.md` – dawna wersja skilla treści (z Metricool). **Przy konflikcie obowiązuje ten plik (CLAUDE.md):** bez Metricool i Google Drive, plan publikacji jak wyżej.

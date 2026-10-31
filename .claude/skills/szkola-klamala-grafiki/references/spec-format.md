@@ -70,6 +70,7 @@ Pola animacji (każdy slajd Reela, opcjonalne): `count` (`false` = duża liczba 
 - **Karuzela „Mit vs fakt” (7):** cover → 5× myth (z `num`) → outro.
 - **Karuzela „wyjaśniam” (6–8):** cover → number (drugi haczyk) → 2–4× text/bars → outro.
 - **Spór tygodnia (8):** cover (`series: "SPÓR TYGODNIA"`) → number (kontekst) → 2× versus za → 2× versus przeciw → text (`tag: "ŹRÓDŁA"`, „Co mówią źródła”) → outro.
-- **Reel „jeden mit” (min. 4 plansze, min. 20 s; zwykle 5–6 plansz):** cover (mit jako haczyk) → myth (FAKT z liczbą) → number (drugi fakt) → text (skąd mit / jak sprawdzono) → outro (pytanie + źródła, `partner_slot: false`). `durations: [2.6, 4.4, 4.2, 4.4, 4.4, 3.8]`, `muzyka: {}`.
+- **Reel „pętla ciekawości” (od 31.10, domyślny):** cover (haczyk bez odpowiedzi) → text (napięcie: „większość myśli…”) → number/myth (odpowiedź z liczbą) → number/text (twist) → outro (wysłanie + źródło, `partner_slot: false`); maks. 12 słów na planszę, cel 20–28 s. Szczegóły: skill `szkola-klamala-viral`.
+- **Reel „jeden mit” – stary układ (min. 4 plansze, min. 20 s):** cover (mit jako haczyk) → myth (FAKT z liczbą) → number (drugi fakt) → text (skąd mit / jak sprawdzono) → outro (pytanie + źródła, `partner_slot: false`). `durations: [2.6, 4.4, 4.2, 4.4, 4.4, 3.8]`, `muzyka: {}`.
 - **Reel „Quiz w piątek”:** cover → quiz → quiz `countdown` 3 → 2 → 1 → quiz `reveal` (+ opcjonalnie text z wyjaśnieniem). `durations: [2.4, 3.0, 1, 1, 1, 4.0]`.
 - **TikTok zdjęcia (4):** hero lub cover → 2× text/number → outro; `format: "vertical"`.
