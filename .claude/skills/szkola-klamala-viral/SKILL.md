@@ -23,6 +23,26 @@ Oparte na analizie z 31.10.2026 (`docs/analiza-konkurencji-2026-10.md`). Najważ
 - Źródło: krótko na planszy odpowiedzi albo outro, pełne w opisie. Nie na każdej planszy.
 - Etykieta „SZKOŁA KŁAMAŁA · PRZEDMIOT” tylko na haczyku (rozpoznawalność serii).
 
+## 1a. Kilkukrotne obejrzenie (decyzja Michała 31.10 – priorytet)
+
+Każda rolka musi mieć **co najmniej 2** z tych mechanizmów:
+- **Pętla:** ostatnia plansza kończy się zdaniem, które wraca do haczyka (np. haczyk „Grób nie jest Twój na zawsze” → koniec „…więc czy na pewno jest Twój?”), a cięcie do logo i z powrotem do haczyka jest płynne.
+- **Twist na końcu**, który zmienia sens początku – widz wraca, żeby „zobaczyć to jeszcze raz”.
+- **Liczba do sprawdzenia:** konkret (kwota, rok, procent), który chce się przeczytać drugi raz albo pokazać komuś.
+- **Szybki ostatni fakt:** ostatnia plansza z treścią krótka (≤ 8 słów) – widz nie zdąży „przetrawić” i ogląda ponownie (zasada czytania nadal obowiązuje).
+- **Detal w tle:** liczba/słowo w konturze tła lub mała etykieta, które zauważa się dopiero za drugim razem.
+
+## 1b. Kontrowersja (decyzja Michała 31.10 – mocna, ale w granicach)
+
+Treść ma być **na tyle kontrowersyjna, by zatrzymać i wywołać dyskusję** – zawsze prawdziwa i ze źródłem:
+- „Wszyscy tak robią, a to błąd / wykroczenie / strata pieniędzy” (prawo, motoryzacja, finanse).
+- „Szkoła/rodzice uczyli źle” – podważenie powszechnego przekonania.
+- Osobista stawka: pieniądze, rodzina, kara, zdrowie (bez porad), własność.
+- Liczba, która oburza lub zaskakuje („20 lat i grób może być użyty ponownie”).
+- Uczciwy spór dwóch stron (Spór tygodnia) – pytanie, przy którym ludzie się kłócą w komentarzach.
+
+**Granice bez wyjątków (CLAUDE.md):** polityka, religia, szczepionki i spory medyczne, płeć, migracja, teorie spiskowe, atakowanie osób i instytucji, drastyczne treści. Kontrowersja = zaskakujący fakt, nie atak i nie światopogląd. Haczyk musi spełnić obietnicę (zawiedzione oczekiwania obniżają zasięg).
+
 ## 2. Biblioteka haczyków (pierwsza plansza)
 
 | Typ | Wzór | Przykład |
@@ -60,7 +80,7 @@ Każdy scenariusz musi mieć **adresata**: „wyślij mamie / kierowcy / komuś,
 - 3–5 hashtagów, w tym 1 serii (#szkolaklamala) i 1–2 tematyczne z wyszukiwanych.
 - Przypięty komentarz: źródło + jedno prawdziwe pytanie do dyskusji.
 
-## 7. Ocena scenariusza przed renderem (0–2 pkt za każdy punkt, min. 12/16)
+## 7. Ocena scenariusza przed renderem (0–2 pkt za każdy punkt)
 
 1. Haczyk ≤ 8 słów, stawka lub sprzeczność, bez odpowiedzi.
 2. Odpowiedź dopiero na ok. 50–70% filmu.
@@ -70,6 +90,10 @@ Każdy scenariusz musi mieć **adresata**: „wyślij mamie / kierowcy / komuś,
 6. Każda plansza ≤ 12 słów (outro ≤ 18), całość 20–28 s.
 7. Liczba-bohater (konkret, który się zapamiętuje).
 8. Fakty ze źródłem, zgodne z granicami z CLAUDE.md (to warunek konieczny – 0 pkt = odrzucenie).
+9. Co najmniej 2 mechanizmy kilkukrotnego obejrzenia (1a).
+10. Kontrowersja z 1b – zatrzymuje i prowokuje dyskusję, w granicach marki.
+
+Minimum do renderu: **15/20**.
 
 Wynik i krótkie uzasadnienie podaj Michałowi razem ze scenariuszem do zatwierdzenia.
 
