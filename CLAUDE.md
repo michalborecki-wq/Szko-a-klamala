@@ -82,6 +82,7 @@ Stan na 29.10.2026. Właściciel: Michał Borecki. Język pracy: **polski**.
 
 - `docs/opublikowane.md` – tematy już opublikowane i odrzucone (nie powtarzać w tym samym formacie).
 - `docs/zrodla.md` – sprawdzone fakty i źródła do ponownego użycia.
+- `docs/pomysly-tematow.md` – bank tematów z haczykami (finanse – mechanizmy; prawo – „co mogą, a czego nie mogą” policja i ochrona), ze statusem sprawdzenia; brać stąd tematy do planu tygodnia.
 - `docs/profil.md` – bio, teksty TikTok, ustawienia konta.
 - `docs/otwarte-sprawy.md` – lista zadań na później.
 - `docs/analiza-konkurencji-2026-10.md` – konkurencja i sygnały algorytmów IG/TikTok (podstawa szablonu pętli ciekawości).
