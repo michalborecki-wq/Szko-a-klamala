@@ -40,6 +40,8 @@ Każda rolka dostaje **inną kombinację** (wybór deterministyczny z `id` rolki
 | `przejscie` | `smuga`, `zoom`, `paski`, `blysk` | pierwsze cięcie zawsze markową smugą, kolejne rotują |
 | tło 3D | pole `"tlo3d"` w poście | render Blendera (skill `szkola-klamala-3d`) zamiast gwiazd/siatki/kul, z przyciemnieniem pod tekstem |
 
+**Moc ruchu (od 1.11, wnioski z rolki ISS):** domyślnie `"moc": "mocna"` – stały najazd kamery 4,5% na planszę, puls kadru na każdym bicie muzyki, wstrząsy przy uderzeniach ×1,6. `"moc": "spokojna"` przywraca dawny, łagodniejszy ruch (np. dla tematów poważnych).
+
 Nadpisanie: `"fx": {...}` w poście (cała rolka) albo w slajdzie (jedna plansza), np. `"fx": {"mit": "pieczatka", "przejscie": "paski"}`. Używaj, gdy treść czegoś wymaga (np. pieczątka przy bardzo znanym micie), nie dla zasady.
 
 Zasady: jeden wariant na grupę na planszy; nie dokładaj efektów spoza biblioteki (3D, glitch, emoji, odbicia) – nowy efekt najpierw dopisz do `ruch.py` w stylu marki, sprawdź na arkuszu klatek i dopiero wtedy używaj.

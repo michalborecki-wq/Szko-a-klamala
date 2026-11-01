@@ -12,6 +12,7 @@ Warianty (wybierane per rolka i per plansza funkcją `styl()`, nadpisywane w spe
   mit:       kreska | pieczatka                        – przekreślenie mitu
   tlo:       gwiazdy | siatka | kule | 3d (z pola "tlo3d")                   – warstwa tła (domyślnie wg przedmiotu)
   przejscie: smuga | zoom | paski | blysk              – cięcie między planszami
+  moc:       mocna (domyślnie) | spokojna              – najazd kamery 4,5%/planszę, puls na bicie, wstrząsy ×1,6
 Każde wejście zgłasza zdarzenia (uderzenie, przekreślenie, marker…) – trafiają do <id>_zdarzenia.json
 i synchronizują efekty dźwiękowe w muzyka.py.
 """
@@ -79,6 +80,10 @@ def styl(post, i, n):
             fx[k] = opts[(base // (7 + len(k)) + i) % len(opts)]
     fx["tlo"] = TLO_PRZEDMIOTU.get(post.get("subject", "").upper(), "kule")
     fx["kontur"] = True
+    # moc ruchu: „mocna” (domyślnie od 1.11 – ciągły najazd kamery, puls na bicie, mocniejsze wstrząsy)
+    # albo „spokojna” (dawny styl). Wnioski z rolki ISS: kadr nigdy nie stoi.
+    fx["moc"] = post.get("moc", "mocna")
+    fx["bpm"] = bpm(post) or 0
     if post.get("tlo3d"):        # tło z renderu 3D (skill szkola-klamala-3d) zamiast warstw rysowanych w przeglądarce
         fx["tlo"], fx["kontur"] = "3d", False
     fx.update(post.get("fx", {}))                       # nadpisanie dla całej rolki
@@ -223,7 +228,7 @@ PREP = r"""
     if (nodes.length) window.__counters.push({nodes, start, dur});
   };
   const impact = (el, t0, amp) => {
-    window.__shakes.push({t0, amp});
+    window.__shakes.push({t0, amp: fx.moc === 'mocna' ? amp * 1.6 : amp});
     const sp = [];
     for (let k = 0; k < 16; k++) {
       const s = document.createElement('i'); s.className = 'spark'; document.body.appendChild(s);
@@ -320,7 +325,7 @@ PREP = r"""
         if (fx.mit === 'pieczatka') {
           el.classList.add('stampbox');
           const st = document.createElement('div'); st.className = 'stamp'; st.textContent = 'MIT'; el.appendChild(st);
-          anim(st, 'kStamp', .38, t + .75); window.__shakes.push({t0: t + .96, amp: 14}); ev.push({t: t + .96, typ: 'pieczatka'});
+          anim(st, 'kStamp', .38, t + .75); window.__shakes.push({t0: t + .96, amp: fx.moc === 'mocna' ? 22 : 14}); ev.push({t: t + .96, typ: 'pieczatka'});
           t += .5;
         }
         t += .75;
@@ -401,7 +406,12 @@ PREP = r"""
     const WT = .24;
     const pOut = exitT && t > dur - WT ? io(clamp((t - (dur - WT)) / WT)) : null;     // 0 → 1
     const pIn = enterT && t < WT ? io(clamp(t / WT)) : null;                           // 0 → 1
-    let scale = push ? 1 + .025 * Math.min(1, t / dur) : 1, blur = 0, op = 1, tx = 0;
+    const mocna = fx.moc === 'mocna';
+    let scale = push ? 1 + (mocna ? .045 : .025) * Math.min(1, t / dur) : 1, blur = 0, op = 1, tx = 0;
+    if (mocna && fx.bpm) {          // puls na bicie muzyki – kadr „oddycha” z rytmem
+      const bt = 60 / fx.bpm, ph = ((g % bt) + bt) % bt;
+      scale *= 1 + .012 * Math.exp(-ph * 9);
+    }
     wipe.style.display = 'none'; slats.style.display = 'none'; flash.style.opacity = 0;
     const kind = pOut !== null ? exitT : (pIn !== null ? enterT : null), q = pOut !== null ? pOut : pIn, isOut = pOut !== null;
     if (kind === 'smuga') {

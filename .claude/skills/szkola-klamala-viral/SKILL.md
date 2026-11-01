@@ -5,9 +5,43 @@ description: Scenariusze rolek „Szkoła kłamała” (@szkola_klamala) pisane 
 
 # Scenariusze pod zasięg
 
-Oparte na analizie z 31.10.2026 (`docs/analiza-konkurencji-2026-10.md`). Najważniejsze sygnały: **Instagram** – czas oglądania i **wysłania** (sends) na zasięg; **TikTok** – **obejrzenie do końca** i **ponowne obejrzenia**, potem zapisy i udostępnienia. Wszystko poniżej służy tym czterem liczbom. Rzetelność i granice tematów z `CLAUDE.md` są nadrzędne – haczyk może być prowokujący, treść zawsze prawdziwa.
+Oparte na analizie z 31.10.2026 i wynikach rolek (rekord: ISS, 1100 wyświetleń) (`docs/analiza-konkurencji-2026-10.md`). Najważniejsze sygnały: **Instagram** – czas oglądania i **wysłania** (sends) na zasięg; **TikTok** – **obejrzenie do końca** i **ponowne obejrzenia**, potem zapisy i udostępnienia. Wszystko poniżej służy tym czterem liczbom. Rzetelność i granice tematów z `CLAUDE.md` są nadrzędne – haczyk może być prowokujący, treść zawsze prawdziwa.
 
-## 1. Szablon: pętla ciekawości (zamiast MIT → FAKT na planszy 2)
+## 0. Wnioski z wyników (aktualizuj co tydzień)
+
+**Rolka ISS – 1100 wyświetleń, rekord konta (1.11).** Pozostałe rolki: kilkadziesiąt do ok. 300. Co miała ISS:
+- **Mit, który zna każdy** („w kosmosie nie ma grawitacji”). Temat szeroki: kosmos.
+- **Haczyk-pytanie z 5 słów** z obietnicą sprawdzenia: „Na ISS nie ma grawitacji? Sprawdźmy.”
+- **Stos liczb.** Co plansza, to nowa, konkretna liczba: 90%, 400 km, 28 000 km/h, 90 min. Gęstość faktów, jak u kont, które rosną (`docs/analiza-konkurencji-2026-10.md`).
+- **Porównanie do Polski:** „400 km – jak z Poznania do Zakopanego, tylko w górę”. Swojski punkt odniesienia.
+- **Wyjaśnienie „dlaczego”** na końcu: „bo spadają razem ze stacją”. Satysfakcja i powód do wysłania.
+- 6 plansz, ok. 32 s z logo. Gęstość okazała się ważniejsza niż krótkość.
+
+To jeden wynik, a nie prawo. Dlatego testujemy **dwa szablony na zmianę** (A i B niżej) i po 2–3 tygodniach zostawiamy zwycięzcę według `docs/wyniki.md`.
+
+## 0a. Tryb „100 tys.” – co musi mieć każda rolka
+
+Treść:
+1. **Mit, który powie babcia i kolega z pracy.** Jeśli trzeba go tłumaczyć, temat jest za wąski.
+2. **Liczby-bohaterowie:** min. 3 konkretne liczby w rolce, w tym **1 porównanie do Polski** (miasto, odległość, pensja, cena chleba, liczba mieszkańców). Porównania licz w kodzie.
+3. **Kontrowersja z 1b w pierwszych 2 s:** „wszyscy się mylą”, „to wykroczenie”, „tracisz pieniądze”. Zawsze prawdziwa i ze źródłem.
+4. **Wypłata:** ostatnia plansza z treścią to „dlaczego” albo twist, a nie podsumowanie.
+
+Obraz i montaż (silnik robi to domyślnie od 1.11, `"moc": "mocna"`):
+- **Kadr nigdy nie stoi.** Kamera stale najeżdża (4,5% na planszę), kadr pulsuje na bicie muzyki, uderzenia liczb i pieczątki mają mocniejszy wstrząs.
+- W obrębie planszy **coś się dzieje co ok. 1,5 s:** licznik, marker, pieczątka MIT, iskry. Plansza z samym tekstem to najwyżej jedna na rolkę.
+- **Haczyk 3–6 słów,** największy krój, żółte słowo-szok, widoczny od klatki 0. Okładka = haczyk.
+- Zjawisko, które da się pokazać (kosmos, ciało, auto), dostaje **scenę 3D** (`szkola-klamala-3d`), gdy jest czas na render.
+- Cięcia na bicie co 3–6 s. Zasada czytania obowiązuje bez wyjątków – mniej słów, nie krótsze plansze.
+
+Dystrybucja (bez niej 100 tys. jest mało prawdopodobne):
+- **Trial Reels** na IG: 2 warianty haczyka, zwycięzca idzie normalnie.
+- **TikTok tego samego dnia**, 1–2 h po IG. Odpowiedzi na komentarze **filmem** (TikTok „odpowiedz wideo”) – gotowa plansza z odpowiedzią.
+- **Wspólne posty (IG „Zaproś współtwórcę”)** z większymi kontami edukacyjnymi – najsilniejszy sposób na zasięg poza obserwującymi. Propozycja w raporcie co tydzień.
+- **Promocja zwycięzców** na TikToku: rolka rosnąca szybciej niż średnia, mały budżet, cel „obserwujący”.
+- Przypięty komentarz z pytaniem, przy którym ludzie się kłócą, w granicach z CLAUDE.md.
+
+## 1. Szablon A: pętla ciekawości (zamiast MIT → FAKT na planszy 2)
 
 | # | Plansza | Czas | Zadanie |
 |---|---|---|---|
@@ -22,6 +56,21 @@ Oparte na analizie z 31.10.2026 (`docs/analiza-konkurencji-2026-10.md`). Najważ
 - **Budżet słów: maks. ok. 10–12 słów na planszę** (outro do 18). Zasada czytania zostaje – mniej słów = krótsza plansza = wyższy odsetek obejrzeń do końca.
 - Źródło: krótko na planszy odpowiedzi albo outro, pełne w opisie. Nie na każdej planszy.
 - Etykieta „SZKOŁA KŁAMAŁA · PRZEDMIOT” tylko na haczyku (rozpoznawalność serii).
+
+## 1'. Szablon B: stos liczb (wzór ISS, 1100 wyświetleń)
+
+| # | Plansza | Zadanie |
+|---|---|---|
+| 1 | **Haczyk-pytanie** | mit jako pytanie + „Sprawdźmy.” (3–6 słów) |
+| 2 | **MIT → FAKT** | przekreślenie lub pieczątka MIT, odpowiedź z liczbą (pierwsza „wypłata” już po ok. 4 s) |
+| 3 | **Liczba 2** | porównanie do Polski („jak z Poznania do Zakopanego”) |
+| 4 | **Liczba 3** | jeszcze mocniejsza liczba (prędkość, kwota, czas) |
+| 5 | **Dlaczego?** | wyjaśnienie, które zmienia sposób myślenia |
+| 6 | **Wysłanie** | „Wyślij komuś, kto w to wierzy” + źródło |
+
+- 5–6 plansz, 25–32 s z logo. Każda plansza ma **nową liczbę albo nowe „dlaczego”**. Plansza bez nowej informacji wypada.
+- Działa przy mitach powszechnych, gdzie odpowiedź nie zaskakuje sama, ale zaskakuje skala (liczby).
+- Wybór: A, gdy odpowiedź sama jest szokiem (data, kwota, kara). B, gdy mamy kilka mocnych liczb i porównanie do Polski. W raporcie zapisz, którego szablonu użyto, a w `docs/wyniki.md` – kolumnę „szablon”.
 
 ## 1a. Kilkukrotne obejrzenie (decyzja Michała 31.10 – priorytet)
 
@@ -83,12 +132,12 @@ Każdy scenariusz musi mieć **adresata**: „wyślij mamie / kierowcy / komuś,
 ## 7. Ocena scenariusza przed renderem (0–2 pkt za każdy punkt)
 
 1. Haczyk ≤ 8 słów, stawka lub sprzeczność, bez odpowiedzi.
-2. Odpowiedź dopiero na ok. 50–70% filmu.
+2. Struktura szablonu A (odpowiedź na ok. 50–70%) albo B (co plansza nowa liczba, „dlaczego” na końcu).
 3. Twist / drugi fakt na końcu.
 4. Wyraźny adresat do wysłania.
 5. Temat szeroki (dotyczy większości dorosłych w Polsce).
-6. Każda plansza ≤ 12 słów (outro ≤ 18), całość 20–28 s.
-7. Liczba-bohater (konkret, który się zapamiętuje).
+6. Każda plansza ≤ 12 słów (outro ≤ 18), całość 20–28 s (A) lub 25–32 s (B), bez planszy bez nowej informacji.
+7. Min. 3 liczby-bohaterowie, w tym 1 porównanie do Polski (policzone w kodzie).
 8. Fakty ze źródłem, zgodne z granicami z CLAUDE.md (to warunek konieczny – 0 pkt = odrzucenie).
 9. Co najmniej 2 mechanizmy kilkukrotnego obejrzenia (1a).
 10. Kontrowersja z 1b – zatrzymuje i prowokuje dyskusję, w granicach marki.

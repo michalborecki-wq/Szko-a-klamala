@@ -39,6 +39,7 @@ Stan na 29.10.2026. Właściciel: Michał Borecki. Język pracy: **polski**.
 
 ## Wnioski z wyników (29.10)
 
+- **1.11: Reel ISS – 1100 wyświetleń (rekord).** Wzór: powszechny mit + stos liczb (4 liczby) + porównanie do Polski + „dlaczego” na końcu, ok. 32 s. Cel Michała: 100 tys. wyświetleń – skill `szkola-klamala-viral` (sekcje 0, 0a, szablony A i B na zmianę), silnik domyślnie w trybie `"moc": "mocna"` (kadr nigdy nie stoi, puls na bicie).
 - Reel z jednym mitem (Merkury → Wenus najgorętsza) – 316 wyświetleń; karuzele i pojedyncze zdjęcia – 5–19; dwa inne posty 208 i 256 (prawdopodobnie Reelsy). Reel o urodzinach – 19: sam format nie wystarcza, potrzebny mocny, powszechny mit.
 
 ## Zadanie cykliczne – NIE DUBLOWAĆ
