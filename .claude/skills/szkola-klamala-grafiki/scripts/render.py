@@ -129,6 +129,16 @@ body{{font-family:'Inter',sans-serif;color:{TOK['text']};background:{TOK['bg0']}
 .content.toptight{{justify-content:flex-start;padding-top:{int(f['H']*0.06)}px}}
 .content.hook h1{{font-size:{int(f['h1']*1.35)}px;line-height:.98}}
 .content.hook .sub{{font-weight:700}}
+.content.withhero{{justify-content:flex-end;padding-top:{HERO_H + 20}px}}
+body.zolty{{background:{TOK['yellow']}}}
+body.zolty .bg{{background:radial-gradient(ellipse 85% 60% at 50% 38%,#FFD95A 0%,{TOK['yellow']} 70%)}}
+body.zolty .st,body.zolty .orb,body.zolty .fxbg canvas{{display:none}}
+body.zolty .vig{{background:radial-gradient(ellipse at 50% 50%,transparent 60%,rgba(120,80,0,.22) 100%)}}
+body.zolty .kontur{{-webkit-text-stroke:3px rgba(10,14,24,.10)}}
+body.zolty h1{{color:{TOK['bg0']};text-shadow:0 7px 0 rgba(10,14,24,.16)}}
+body.zolty h1 .y{{color:#C62828;text-shadow:0 7px 0 rgba(10,14,24,.16)}}
+body.zolty .sub{{color:{TOK['bg0']}}} body.zolty .hd{{color:{TOK['bg0']}}}
+body.zolty .chip{{background:{TOK['bg0']};color:{TOK['yellow']}}}
 .chip.red{{background:{TOK['red']};color:#fff;box-shadow:0 8px 24px rgba(229,57,53,.25)}}
 
 .chip{{display:inline-block;align-self:flex-start;background:{TOK['yellow']};color:{TOK['bg0']};
@@ -208,9 +218,14 @@ def tpl(s, post, f, i, n):
     cls = ""
 
     if t == "cover":
+        hero = ""
         if post.get("_fmt") == "reel":
             cls = "hook"      # haczyk rolki: największy krój (wyniki 1.11 – widzowie odpadają w 1–2 s)
-        b = (f"<div class='chip'>{html.escape(label)}</div>"
+            if s.get("obraz"):  # obraz-bohater nad haczykiem (analiza w Canvie 1.11: pierwsza klatka musi mieć co oglądać)
+                import obrazy
+                hero = obrazy.html(s["obraz"], s.get("obraz_opcje"), HERO_H, s.get("pieczatka"))
+                cls = "hook withhero"
+        b = (hero +f"<div class='chip'>{html.escape(label)}</div>"
              f"<h1 data-fit>{title}<span class='y'>{accent}</span></h1>{BRUSH}"
              f"<div class='sub'>{rich(s.get('sub',''))}</div>{note}")
     elif t == "myth":
@@ -280,7 +295,8 @@ def tpl(s, post, f, i, n):
     swipe = "" if (i == n - 1 or post["_fmt"] == "reel") else f"<span class='sw'>przesuń {ARROW}</span>"
     bot = f"<div class='bot'><span class='hd'>{html.escape(post['_handle'])}</span>{swipe}</div>"
 
-    return (f"<!doctype html><html><head><meta charset='utf-8'><style>{css(f)}</style></head><body>"
+    body_cls = " class='zolty'" if (t == "cover" and s.get("uklad") == "zolty") else ""
+    return (f"<!doctype html><html><head><meta charset='utf-8'><style>{css(f)}</style></head><body{body_cls}>"
             f"<div class='bg'></div><div class='st a'></div><div class='st a2'></div><div class='st b'></div>"
             f"<div class='st b2'></div><div class='vig'></div><div class='grain'></div>"
             f"{top}<div class='content {cls}'>{b}</div>{bot}</body></html>")
@@ -357,6 +373,7 @@ def default_durations(n):
 # Czytanie zaczyna się już w trakcie wjeżdżania słów, więc liczy się późniejsze z dwóch: koniec wejścia + 1,2 s
 # na doczytanie ostatnich słów albo pełny czas czytania całości (0,3 s/słowo ≈ tempo napisów ekranowych).
 SEK_NA_SLOWO, ZAPAS_CZYTANIA, MAX_SLOW_ROLKA, MAX_SLOW_OUTRO = 0.30, 0.6, 12, 18
+HERO_H = 520         # wysokość obrazu-bohatera na okładce rolki (px w układzie 1080)
 REEL_CEL_SEC = 29.2   # szablon B: 25–32 s z logo (2,8 s) → maks. ok. 29 s treści; dłużej spada odsetek obejrzeń
 
 

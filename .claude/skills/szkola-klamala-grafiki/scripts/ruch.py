@@ -239,6 +239,9 @@ PREP = r"""
   };
 
   let t = 0;
+  if (o.first) c.querySelectorAll('.cstamp').forEach(st => {       // pieczątka na okładce – wbita w 0,55 s
+    anim(st, 'kStamp', .38, .55); window.__shakes.push({t0: .76, amp: fx.moc === 'mocna' ? 24 : 14}); ev.push({t: .76, typ: 'pieczatka'});
+  });
   if (!o.enter) {
     c.querySelectorAll('.cd').forEach(el => { anim(el, 'kPop', .45, 0); ev.push({t: 0, typ: 'tik'}); });
     c.querySelectorAll('.opt.bad').forEach(el => { anim(el, 'kShake', .5, .1); ev.push({t: .1, typ: 'zle'}); });
