@@ -16,8 +16,8 @@ Y, B, R, N, N2, W = "#FFC727", "#2F6BFF", "#E53935", "#0A0E18", "#16203A", "#F4F
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 CSS = f"""
-.hero-ill{{position:absolute;left:-20px;right:-20px;top:0;height:{{h}}px;display:flex;align-items:center;justify-content:center;z-index:3;pointer-events:none}}
-.hero-ill svg{{height:100%;width:auto;max-width:100%;overflow:visible;filter:drop-shadow(0 24px 40px rgba(0,0,0,.45))}}
+.hero-ill{{position:absolute;left:0;right:0;top:0;overflow:hidden;height:{{h}}px;display:flex;align-items:center;justify-content:center;z-index:3;pointer-events:none}}
+.hero-ill svg{{height:100%;width:auto;max-width:100%;overflow:visible}}
 .ob-in{{animation:obIn .7s cubic-bezier(.2,.9,.25,1.15) 0s both;transform-box:fill-box;transform-origin:center}}
 .ob-draw{{stroke-dasharray:1;stroke-dashoffset:1;animation:obDraw .9s ease-out .25s forwards}}
 .ob-pulse{{animation:obPulse 1.2s ease-in-out .9s infinite;transform-box:fill-box;transform-origin:center}}
@@ -49,15 +49,17 @@ def polska(granica="CZE", przekreslona="DEU", **_):
                   for c in k if c != "POL")
     body = (f"<defs><linearGradient id='plg' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='#3D7BFF'/>"
             f"<stop offset='1' stop-color='#1E4FD8'/></linearGradient>"
-            f"<filter id='glow'><feGaussianBlur stdDeviation='9' result='b'/><feMerge><feMergeNode in='b'/>"
-            f"<feMergeNode in='SourceGraphic'/></feMerge></filter></defs>"
+            f"</defs>"
             f"<g class='ob-in'>{sas}<path d='{k['POL']}' fill='url(#plg)' stroke='{W}' stroke-width='4'/></g>")
     if przekreslona and g.get(przekreslona):
         body += (f"<path d='{g[przekreslona]}' fill='none' stroke='{R}' stroke-width='12' stroke-linecap='round' "
                  f"stroke-dasharray='4 22' opacity='.95'/>")
     if granica and g.get(granica):
-        body += (f"<path d='{g[granica]}' pathLength='1' class='ob-draw' fill='none' stroke='{Y}' stroke-width='16' "
-                 f"stroke-linecap='round' stroke-linejoin='round' filter='url(#glow)'/>")
+        # poświata bez filtra rozmycia (tanio w 4K): szeroka półprzezroczysta linia pod właściwą
+        body += (f"<path d='{g[granica]}' pathLength='1' class='ob-draw' fill='none' stroke='{Y}' stroke-width='40' "
+                 f"stroke-linecap='round' stroke-linejoin='round' opacity='.28'/>"
+                 f"<path d='{g[granica]}' pathLength='1' class='ob-draw' fill='none' stroke='{Y}' stroke-width='16' "
+                 f"stroke-linecap='round' stroke-linejoin='round'/>")
     return _svg(f"-20 -20 {d['W'] + 40} {d['H'] + 40}", body)
 
 

@@ -59,6 +59,12 @@ Pliki wynikowe: `<id>_NN.jpg` (4:5), `<id>_916_NN.jpg` (9:16), `<id>_reel_NN.jpg
 {"type": "bars", "title": "Ranking", "rows": [["Francja", 12, "12"], ["Rosja", 11, "11"], ["USA", 11, "11"]], "label_width": 200}
 ```
 
+**Okładka rolki – obraz-bohater i dopalacze (od 1.11, wnioski z analizy w Canvie):** w slajdzie `cover` rolki:
+- `obraz`: `polska` | `torba` | `suwak` | `dowod` | `monety` – wektorowa ilustracja w palecie marki nad haczykiem (górne ok. 600 px), animowana od klatki 0 (`scripts/obrazy.py`). `polska` przyjmuje `"obraz_opcje": {"granica": "CZE", "przekreslona": "DEU"}` (kody ISO3 sąsiadów; mapa z Natural Earth, domena publiczna).
+- `pieczatka`: krótki napis (np. „MIT”, „PRZEPIS”, „WYROK SN”) wbijany na obraz w 0,55 s z wstrząsem i dźwiękiem.
+- `uklad`: `"zolty"` – żółte tło i granatowy tekst na okładce (przerwanie wzorca w feedzie; kolejna plansza wraca na granat). Nie łącz z żółtymi obrazami (`torba`, `monety`).
+Nowy obraz: dopisz funkcję w `obrazy.py` (główny kształt widoczny od klatki 0, bez twarzy i cudzych grafik, bez filtrów rozmycia – drogie w 4K) i dodaj do `OBRAZY`.
+
 **quiz** – `options` (2–4 zdania), `question` (napis w etykiecie, domyślnie „KTÓRY FAKT JEST FAŁSZYWY?”), `countdown` (3/2/1 – duża cyfra pod opcjami), `reveal` (indeks fałszywej odpowiedzi od 0 – podświetla ją na czerwono, resztę przyciemnia, etykieta robi się czerwona). W klatkach odliczania podawaj identyczne `options`, żeby nic nie skakało w wideo.
 
 Pola animacji (każdy slajd Reela, opcjonalne): `count` (`false` = duża liczba nie odlicza się od zera, np. przy roku „1569”), `enter` (`false` = plansza bez wejścia napisów; ustawiane automatycznie dla klatek odliczania i rozwiązania quizu).

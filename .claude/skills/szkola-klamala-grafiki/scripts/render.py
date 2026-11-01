@@ -129,7 +129,9 @@ body{{font-family:'Inter',sans-serif;color:{TOK['text']};background:{TOK['bg0']}
 .content.toptight{{justify-content:flex-start;padding-top:{int(f['H']*0.06)}px}}
 .content.hook h1{{font-size:{int(f['h1']*1.35)}px;line-height:.98}}
 .content.hook .sub{{font-weight:700}}
-.content.withhero{{justify-content:flex-end;padding-top:{HERO_H + 20}px}}
+.content.withhero{{justify-content:flex-start;padding-top:{HERO_H + 20}px}}
+.content.withhero > .chip{{margin-top:auto}}
+.content.withhero h1{{font-size:{int(f['h1']*1.15)}px}}
 body.zolty{{background:{TOK['yellow']}}}
 body.zolty .bg{{background:radial-gradient(ellipse 85% 60% at 50% 38%,#FFD95A 0%,{TOK['yellow']} 70%)}}
 body.zolty .st,body.zolty .orb,body.zolty .fxbg canvas{{display:none}}
@@ -332,12 +334,13 @@ FIT_AND_QA = """
   // 3) nic nie wystaje poza płótno
   const W = innerWidth, H = innerHeight;
   c.querySelectorAll('*').forEach(el => {
+    if (el.closest('.hero-ill')) return;               // ilustracja jest przycinana do swojego pola
     const r = el.getBoundingClientRect();
     if (r.width && (r.right > W + 1 || r.left < -1 || r.bottom > H + 1)) issues.push('element poza kadrem: ' + el.tagName);
   });
   // 4) liczba słów na slajd (czytelność w ruchu)
   const cl = c.cloneNode(true);                       // bez kopii do połysku i kolumn cyfr licznika
-  cl.querySelectorAll('.sheen,.col').forEach(e => e.remove());
+  cl.querySelectorAll('.sheen,.col,style,svg').forEach(e => e.remove());   // obraz-bohater i jego CSS to nie tekst
   const words = (cl.textContent || '').split(/\\s+/).filter(Boolean).length;
   return {issues: [...new Set(issues)], words, scale: +scale.toFixed(2)};
 }
@@ -373,7 +376,7 @@ def default_durations(n):
 # Czytanie zaczyna się już w trakcie wjeżdżania słów, więc liczy się późniejsze z dwóch: koniec wejścia + 1,2 s
 # na doczytanie ostatnich słów albo pełny czas czytania całości (0,3 s/słowo ≈ tempo napisów ekranowych).
 SEK_NA_SLOWO, ZAPAS_CZYTANIA, MAX_SLOW_ROLKA, MAX_SLOW_OUTRO = 0.30, 0.6, 12, 18
-HERO_H = 520         # wysokość obrazu-bohatera na okładce rolki (px w układzie 1080)
+HERO_H = 600         # wysokość obrazu-bohatera na okładce rolki (px w układzie 1080)
 REEL_CEL_SEC = 29.2   # szablon B: 25–32 s z logo (2,8 s) → maks. ok. 29 s treści; dłużej spada odsetek obejrzeń
 
 

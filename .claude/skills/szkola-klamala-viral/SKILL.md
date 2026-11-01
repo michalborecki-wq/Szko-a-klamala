@@ -20,6 +20,7 @@ Zasady, które z tego wynikają (obowiązują od 1.11):
 1. **Haczyk = stwierdzenie, nie pytanie.** Zaprzecza temu, co widz „wie”: „Najwięcej X nie ma Y.”, „Z dalej: Z”, „X wcale nie robi Y”. Mieści się w 3–8 słowach, jest napisany największym krojem (silnik: klasa `hook`, 1,35× nagłówka) i czytelny od klatki 0. Pod nim co najwyżej 1–3 słowa dopowiedzenia („Ani USA.”). Nigdy akapit.
 2. **Szablon B jest domyślny.** Pierwsza wielka liczba stoi na planszy 2. Szablon A (odpowiedź na 50–70%) zawieszony, dopóki pominięcia nie spadną poniżej ok. 60%.
 3. **Okładka zawsze ręcznie** z `_okladka.jpg`, czyli z planszy haczyka. Okładka ISS na profilu to klatka przejścia.
+3a. **Okładka nigdy nie jest samym tekstem** (analiza w Canvie 1.11): obraz-bohater tematu u góry (`"obraz"`), pieczątka na sprzecznym przekonaniu (`"pieczatka": "MIT"`), co 2–3 rolki inny układ (np. `"uklad": "zolty"`), żeby okładki w feedzie i siatce profilu się nie zlewały. Pola opisuje `szkola-klamala-grafiki/references/spec-format.md`.
 4. **Pytanie-reakcja na końcu** („Który kraj obstawiałeś/aś?”) i to samo pytanie w opisie – przeciw zeru komentarzy.
 5. Każdy tydzień porównujemy: pominięcia i średni czas dla 2 najlepszych i 1 najsłabszej rolki.
 

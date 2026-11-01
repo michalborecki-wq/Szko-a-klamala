@@ -56,6 +56,7 @@ Stan na 29.10.2026. Właściciel: Michał Borecki. Język pracy: **polski**.
   Uruchamianie: `python3 .claude/skills/szkola-klamala-grafiki/scripts/render.py spec.json --out out --sheet --video` (katalog `out/` jest w `.gitignore`).
   Zależności Pythona: `pip install -r requirements.txt` (wersja Playwright zgodna z przeglądarką w `/opt/pw-browsers`; nie uruchamiaj `playwright install`).
 - `legacy/` – starszy generator (`gen.py`, `mkreel.py`, `spec_tt.py`) i specyfikacje postów z tygodnia 26–31.10 wraz z tekstami (`TEKSTY_tydzien_26-31.10.md`).
+- **Okładki rolek (1.11, analiza w Canvie):** nigdy sam tekst – obraz-bohater tematu (`"obraz"`: polska/torba/suwak/dowod/monety, `scripts/obrazy.py`), pieczątka (`"pieczatka"`) i zmienny układ (`"uklad": "zolty"`). Folder w Canvie: „Szkoła kłamała – rolki (analiza)”.
 - Styl: tło #0A0E18→#16203A, niebieskie smugi #2F6BFF, żółte akcenty #FFC727, czerwony pędzel #E53935, Inter Display Black Italic w nagłówkach, Inter w treści, ziarno 7%, kropki postępu, znak „SZKOŁA KŁAMAŁA” u góry, handle @szkola_klamala.
 - Wymaga czcionki Inter / Inter Display z Black Italic: `fc-list | grep -i "Inter Display"`.
 
