@@ -38,3 +38,4 @@ Stan na 29.10.2026.
 - Kosmos: ISS (90% grawitacji, 400 km, 28 000 km/h) – Reel
 - Biologia: lemingi i film z 1958 r. – Reel
 - Kosmos: pory roku – najbliżej Słońca w styczniu (pierwsza rolka 3D, Blender) – Reel (przygotowany 31.10)
+- Prawo: ochroniarz nie ma prawa przeszukać torby (art. 36 ustawy o ochronie osób i mienia; wyjątek – imprezy masowe, art. 20) – Reel (przygotowany 1.11)
