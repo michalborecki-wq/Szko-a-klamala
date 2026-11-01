@@ -6,7 +6,7 @@ Stan na 29.10.2026. Właściciel: Michał Borecki. Język pracy: **polski**.
 
 - Konto edukacyjne **@szkola_klamala** (Instagram, TikTok): ciekawostki i obalanie mitów ze wszystkich dziedzin, bez twarzy autora i bez treści prywatnych. Obietnica marki: „to, czego szkoła nie powiedziała albo powiedziała źle”.
 - Odbiorcy: dorośli, którzy pamiętają polską szkołę. Cel długoterminowy: zasięg, potem sponsoring per przedmiot (oznaczanie reklam zgodnie z rekomendacjami UOKiK).
-- **Michał publikuje wszystko ręcznie** w aplikacjach IG i TikTok. **Nie używamy Metricool** (marka blogId 7581117 istnieje, ale nie tworzymy tam szkiców) ani Google Drive. Facebook nie jest podłączony – pomijamy.
+- **Michał publikuje wszystko ręcznie** w aplikacjach IG i TikTok. **Nie używamy Metricool** (marka blogId 7581117 istnieje, ale nie tworzymy tam szkiców) ani Google Drive. **Facebook: crosspost z Instagrama jest włączony i daje ponad 90% wyświetleń rolek (statystyki 1.11)** – przy publikacji rolki zawsze zostawiać „Udostępnij na Facebooku”. Osobnych postów na FB nie robimy.
 
 ## Zasady treści
 
@@ -33,13 +33,15 @@ Stan na 29.10.2026. Właściciel: Michał Borecki. Język pracy: **polski**.
 
 ## Przypomnienia dla Michała (z doświadczenia)
 
+- Rolka na IG: **ustaw okładkę ręcznie** (Edytuj okładkę → Dodaj z galerii → `_okladka.jpg`) i zostaw włączone **„Udostępnij na Facebooku”** – stamtąd przychodzi ponad 90% wyświetleń.
+
 - Karuzela = **jeden post** (zaznacz wszystkie zdjęcia naraz) i format **4:5** (ikona dwóch strzałek), inaczej IG przycina do kwadratu.
 - TikTok: wysyłać tylko jedną wersję slajdu na sieć (podwójnie zapisane wersje w galerii dawały duplikat pierwszego zdjęcia).
 - Promowanie na TikToku działa tylko dla filmów (TikTok Studio albo tiktok.com/promote/web/main), nie dla karuzel zdjęć. Najpierw 2–3 tygodnie regularnych publikacji, potem promować tylko zwycięzców, małym budżetem, cel „więcej obserwujących”.
 
 ## Wnioski z wyników (29.10)
 
-- **1.11 (zrzut statystyk):** próg bazowy rolki 200–340 wyświetleń; rekordy po **1,1 tys.**: Francja – 12 stref czasowych i ISS – grawitacja. Wzór: wiedza ogólna typu rekord/zaskakująca odpowiedź, haczyk podważa oczywistą odpowiedź („nie ma Rosja”), jedna wielka liczba + ranking/porównanie, „dlaczego” na końcu. Prawo/finanse/święta – na progu (210–290). **Zero polubień, komentarzy i wysłań wszędzie** → każda rolka kończy się pytaniem, na które każdy zna swoją odpowiedź. Karuzele/zdjęcia/relacje na IG: 3–18. Szczegóły: `docs/wyniki.md`. Cel Michała: 100 tys. wyświetleń – skill `szkola-klamala-viral` (sekcje 0, 0a, szablony A i B na zmianę), silnik domyślnie w trybie `"moc": "mocna"` (kadr nigdy nie stoi, puls na bicie).
+- **1.11 (zrzut statystyk):** próg bazowy rolki 200–340 wyświetleń; rekordy po **1,1 tys.**: Francja – 12 stref czasowych i ISS – grawitacja. Wzór: wiedza ogólna typu rekord/zaskakująca odpowiedź, haczyk podważa oczywistą odpowiedź („nie ma Rosja”), jedna wielka liczba + ranking/porównanie, „dlaczego” na końcu. Prawo/finanse/święta – na progu (210–290). **Zero polubień, komentarzy i wysłań wszędzie** → każda rolka kończy się pytaniem, na które każdy zna swoją odpowiedź. Karuzele/zdjęcia/relacje na IG: 3–18. **Statystyki szczegółowe: >90% wyświetleń z Facebooka (crosspost), pominięcia 73–96%, średni czas 2–3 s → wszystko rozstrzyga pierwsza klatka; najlepszy haczyk to stwierdzenie zaprzeczające oczywistej odpowiedzi (Francja 73% pominięć), najgorszy – pytanie „…? Sprawdźmy.” (ISS 96%). Szablon B domyślny, A zawieszony; okładka zawsze ręcznie z `_okladka.jpg`.** Szczegóły: `docs/wyniki.md`. Cel Michała: 100 tys. wyświetleń – skill `szkola-klamala-viral` (sekcje 0, 0a, szablony A i B na zmianę), silnik domyślnie w trybie `"moc": "mocna"` (kadr nigdy nie stoi, puls na bicie).
 - Reel z jednym mitem (Merkury → Wenus najgorętsza) – 316 wyświetleń; karuzele i pojedyncze zdjęcia – 5–19; dwa inne posty 208 i 256 (prawdopodobnie Reelsy). Reel o urodzinach – 19: sam format nie wystarcza, potrzebny mocny, powszechny mit.
 
 ## Zadanie cykliczne – NIE DUBLOWAĆ

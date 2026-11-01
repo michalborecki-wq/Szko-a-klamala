@@ -127,6 +127,8 @@ body{{font-family:'Inter',sans-serif;color:{TOK['text']};background:{TOK['bg0']}
   display:flex;flex-direction:column;justify-content:center;z-index:4}}
 .content.center{{align-items:center;text-align:center}}
 .content.toptight{{justify-content:flex-start;padding-top:{int(f['H']*0.06)}px}}
+.content.hook h1{{font-size:{int(f['h1']*1.35)}px;line-height:.98}}
+.content.hook .sub{{font-weight:700}}
 .chip.red{{background:{TOK['red']};color:#fff;box-shadow:0 8px 24px rgba(229,57,53,.25)}}
 
 .chip{{display:inline-block;align-self:flex-start;background:{TOK['yellow']};color:{TOK['bg0']};
@@ -206,6 +208,8 @@ def tpl(s, post, f, i, n):
     cls = ""
 
     if t == "cover":
+        if post.get("_fmt") == "reel":
+            cls = "hook"      # haczyk rolki: największy krój (wyniki 1.11 – widzowie odpadają w 1–2 s)
         b = (f"<div class='chip'>{html.escape(label)}</div>"
              f"<h1 data-fit>{title}<span class='y'>{accent}</span></h1>{BRUSH}"
              f"<div class='sub'>{rich(s.get('sub',''))}</div>{note}")
@@ -288,7 +292,7 @@ FIT_AND_QA = """
   const c = document.querySelector('.content');
   const over = () => c.scrollHeight > c.clientHeight + 1 || c.scrollWidth > c.clientWidth + 1;
   // 0) duże liczby dopasuj najpierw do szerokości – osobno, żeby nie zmniejszać przez nie reszty tekstu
-  c.querySelectorAll('.big').forEach(el => {
+  c.querySelectorAll('.big, .hook h1').forEach(el => {   // też wielki nagłówek haczyka rolki
     let fs = parseFloat(getComputedStyle(el).fontSize), g = 0;
     while (el.scrollWidth > c.clientWidth && g++ < 60) { fs *= 0.97; el.style.fontSize = fs + 'px'; }
   });

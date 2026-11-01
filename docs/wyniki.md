@@ -29,3 +29,21 @@ Zrzut z IG „Twój pulpit” z 1.11 (wyświetlenia; polubienia, komentarze, udo
 4. **Zero polubień, komentarzy i wysłań** nawet przy 1,1 tys. Ludzie oglądają, ale nie reagują. Bez reakcji nie ma drugiej fali zasięgu, więc potrzebne jest pytanie, na które każdy ma odpowiedź (patrz skill viral, sekcja 0).
 5. **Karuzele, zdjęcia i relacje na IG: 3–18** – nie warto w nie inwestować na IG. Karuzele zostają na TikToku.
 6. Dwie wersje tego samego tematu („Znalezione”) zjadają sobie zasięg. Jeden temat publikujemy raz.
+
+## Szczegóły rolek (zakładka „Statystyki rolek”, 1.11)
+
+| Rolka | Wyświetlenia razem | z Instagrama | z Facebooka (crosspost) | Widzowie | Śr. czas oglądania | Współczynnik pominięć | Polubienia |
+|---|---|---|---|---|---|---|---|
+| ISS – grawitacja (haczyk-pytanie „…? Sprawdźmy.”) | 1108 | 57 | 1051 | 50 | 3 s | **96,0%** (wyższy niż typowy) | 1 |
+| Francja – strefy (haczyk-stwierdzenie „…nie ma Rosja. Ani USA.”) | ok. 1057 | 19 | 1038 | – | – | **73,3%** (niższy niż typowy) | 0 |
+| Szkło nie płynie (pierwsza klatka: akapit tekstu) | 343 | 120 | 223 | 98 | 2 s | 88,8% (niższy niż typowy) | 1 |
+
+Krzywa utrzymania: po 1 s zostaje ok. 30–60% widzów, po 2–3 s ok. 15–35%, do końca dochodzi kilka procent.
+
+## Wnioski (1.11, po statystykach szczegółowych)
+
+1. **Ponad 90% wyświetleń „rekordów” to Facebook** (crosspost z IG). Na samym Instagramie rolki mają 19–120 wyświetleń. Crosspost na Facebooka musi zostać włączony przy każdej rolce. Tam jest nasza grupa: dorośli.
+2. **Widzowie odpadają w 1–2 s** (pominięcia 73–96%, średni czas 2–3 s). Prawie nikt nie widzi drugiej planszy. **Wszystko rozstrzyga pierwsza klatka.**
+3. **Najlepszy haczyk (73% pominięć):** stwierdzenie, które zaprzecza oczywistej odpowiedzi – „Najwięcej stref czasowych nie ma Rosja. Ani USA.”. Najgorszy (96%): pytanie z „Sprawdźmy.”. Akapit tekstu na pierwszej klatce (szkło) – 89%.
+4. **Okładka ISS na profilu to klatka przejścia** (niebieska smuga). Okładkę trzeba ustawiać ręcznie z pliku `_okladka.jpg`.
+5. Szablon A (odpowiedź na 50–70%) przy średnim czasie 3 s nie ma kogo zatrzymać. Wracamy do niego, gdy pominięcia spadną poniżej ok. 60%.

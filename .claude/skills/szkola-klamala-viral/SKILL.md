@@ -9,21 +9,19 @@ Oparte na analizie z 31.10.2026 i wynikach rolek (rekord: ISS, 1100 wyświetleń
 
 ## 0. Wnioski z wyników (aktualizuj co tydzień; pełna tabela w `docs/wyniki.md`)
 
-**Stan 1.11.** Próg bazowy rolki na IG to ok. 200–340 wyświetleń. Wybiły się 2 z ok. 12 rolek, obie po **1,1 tys.**:
-- **Francja – 12 stref czasowych:** „Najwięcej stref czasowych nie ma Rosja. Ani USA.” → **12** → ranking → „wszystko przez wyspy”.
-- **ISS – grawitacja:** „Na ISS nie ma grawitacji? Sprawdźmy.” → **90%**, 400 km (jak z Poznania do Zakopanego), 28 000 km/h → „bo spadają”.
+**Stan 1.11 – statystyki szczegółowe (pełne dane w `docs/wyniki.md`):**
+- **Ponad 90% wyświetleń przychodzi z Facebooka** (crosspost z IG). ISS: 1051 z FB, 57 z IG. Francja: 1038 z FB, 19 z IG. Crosspost na FB zawsze włączony. Pierwsze zdanie opisu pisz też pod Facebooka (dorośli, 35+).
+- **Widzowie odpadają w 1–2 s:** pominięcia 73–96%, średni czas oglądania 2–3 s. Prawie nikt nie widzi drugiej planszy, więc **wszystko rozstrzyga pierwsza klatka**.
+- **Najlepszy haczyk** (73% pominięć, najniżej): **stwierdzenie zaprzeczające oczywistej odpowiedzi** – „Najwięcej stref czasowych nie ma Rosja. Ani USA.”
+- **Najgorszy** (96%): pytanie z „Sprawdźmy.” („Na ISS nie ma grawitacji? Sprawdźmy.”). Akapit tekstu na pierwszej klatce (szkło): 89%.
+- Prawo, finanse i święta: 210–290 wyświetleń. Karuzele i zdjęcia: 3–19. Polubienia, komentarze i wysłania: prawie 0.
 
-Wspólny wzór zwycięzców:
-1. **Wiedza ogólna typu rekord / zaskakująca odpowiedź** (geografia, kosmos – potem sprawdzać: ciało, zwierzęta, historia rekordów).
-2. Haczyk **podważa oczywistą odpowiedź, którą widz ma w głowie** („Rosja”, „brak grawitacji”). Widz chce wiedzieć „to kto/ile?”.
-3. **Jedna wielka liczba-bohater** i ranking albo porównanie.
-4. Na końcu **„dlaczego”**, które wszystko wyjaśnia.
-
-Co się nie wybiło: prawo, finanse i święta (210–290) – przydatne, ale bez efektu „wow”. Listy („5 mitów” – 66), karuzele, zdjęcia i relacje (3–18). Dwie wersje jednego tematu.
-
-**Najważniejszy problem: zero polubień, komentarzy i wysłań przy każdej rolce**, nawet przy 1,1 tys. Bez reakcji nie ma drugiej fali zasięgu. Dlatego od 1.11 każda rolka kończy się **pytaniem, na które każdy zna swoją odpowiedź i chce ją wpisać**. Pytanie jest prawdziwe, otwarte i bez „wpisz A albo B”, np. „Który kraj obstawiałeś/aś?”, „Ile stref ma Polska? Bez sprawdzania.”. Do tego krótkie „Wyślij komuś, kto…” z konkretnym adresatem.
-
-To wciąż mała próbka. Szablony A i B testujemy na zmianę, a w `docs/wyniki.md` dopisujemy co tydzień: szablon, typ haczyka i średni czas oglądania. Średni czas i wskaźnik pominięć bierzemy z zakładki „Skuteczność”.
+Zasady, które z tego wynikają (obowiązują od 1.11):
+1. **Haczyk = stwierdzenie, nie pytanie.** Zaprzecza temu, co widz „wie”: „Najwięcej X nie ma Y.”, „Z dalej: Z”, „X wcale nie robi Y”. Mieści się w 3–8 słowach, jest napisany największym krojem (silnik: klasa `hook`, 1,35× nagłówka) i czytelny od klatki 0. Pod nim co najwyżej 1–3 słowa dopowiedzenia („Ani USA.”). Nigdy akapit.
+2. **Szablon B jest domyślny.** Pierwsza wielka liczba stoi na planszy 2. Szablon A (odpowiedź na 50–70%) zawieszony, dopóki pominięcia nie spadną poniżej ok. 60%.
+3. **Okładka zawsze ręcznie** z `_okladka.jpg`, czyli z planszy haczyka. Okładka ISS na profilu to klatka przejścia.
+4. **Pytanie-reakcja na końcu** („Który kraj obstawiałeś/aś?”) i to samo pytanie w opisie – przeciw zeru komentarzy.
+5. Każdy tydzień porównujemy: pominięcia i średni czas dla 2 najlepszych i 1 najsłabszej rolki.
 
 ## 0a. Tryb „100 tys.” – co musi mieć każda rolka
 
@@ -67,7 +65,7 @@ Dystrybucja (bez niej 100 tys. jest mało prawdopodobne):
 
 | # | Plansza | Zadanie |
 |---|---|---|
-| 1 | **Haczyk** | mit jako pytanie + „Sprawdźmy.” albo zaprzeczenie oczywistej odpowiedzi („…nie ma Rosja. Ani USA.”) (3–8 słów) |
+| 1 | **Haczyk** | stwierdzenie zaprzeczające oczywistej odpowiedzi („Najwięcej stref czasowych nie ma Rosja. Ani USA.”), 3–8 słów, bez pytania |
 | 2 | **MIT → FAKT** | przekreślenie lub pieczątka MIT, odpowiedź z liczbą (pierwsza „wypłata” już po ok. 4 s) |
 | 3 | **Liczba 2** | porównanie do Polski („jak z Poznania do Zakopanego”) |
 | 4 | **Liczba 3** | jeszcze mocniejsza liczba (prędkość, kwota, czas) |
@@ -137,7 +135,7 @@ Każdy scenariusz musi mieć **adresata**: „wyślij mamie / kierowcy / komuś,
 
 ## 7. Ocena scenariusza przed renderem (0–2 pkt za każdy punkt)
 
-1. Haczyk ≤ 8 słów, stawka lub sprzeczność, bez odpowiedzi.
+1. Haczyk ≤ 8 słów: stwierdzenie zaprzeczające oczywistej odpowiedzi (nie pytanie, nie akapit), czytelne od klatki 0.
 2. Struktura szablonu A (odpowiedź na ok. 50–70%) albo B (co plansza nowa liczba, „dlaczego” na końcu).
 3. Twist / drugi fakt na końcu.
 4. Wyraźny adresat do wysłania.
