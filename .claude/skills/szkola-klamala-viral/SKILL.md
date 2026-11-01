@@ -7,22 +7,28 @@ description: Scenariusze rolek „Szkoła kłamała” (@szkola_klamala) pisane 
 
 Oparte na analizie z 31.10.2026 i wynikach rolek (rekord: ISS, 1100 wyświetleń) (`docs/analiza-konkurencji-2026-10.md`). Najważniejsze sygnały: **Instagram** – czas oglądania i **wysłania** (sends) na zasięg; **TikTok** – **obejrzenie do końca** i **ponowne obejrzenia**, potem zapisy i udostępnienia. Wszystko poniżej służy tym czterem liczbom. Rzetelność i granice tematów z `CLAUDE.md` są nadrzędne – haczyk może być prowokujący, treść zawsze prawdziwa.
 
-## 0. Wnioski z wyników (aktualizuj co tydzień)
+## 0. Wnioski z wyników (aktualizuj co tydzień; pełna tabela w `docs/wyniki.md`)
 
-**Rolka ISS – 1100 wyświetleń, rekord konta (1.11).** Pozostałe rolki: kilkadziesiąt do ok. 300. Co miała ISS:
-- **Mit, który zna każdy** („w kosmosie nie ma grawitacji”). Temat szeroki: kosmos.
-- **Haczyk-pytanie z 5 słów** z obietnicą sprawdzenia: „Na ISS nie ma grawitacji? Sprawdźmy.”
-- **Stos liczb.** Co plansza, to nowa, konkretna liczba: 90%, 400 km, 28 000 km/h, 90 min. Gęstość faktów, jak u kont, które rosną (`docs/analiza-konkurencji-2026-10.md`).
-- **Porównanie do Polski:** „400 km – jak z Poznania do Zakopanego, tylko w górę”. Swojski punkt odniesienia.
-- **Wyjaśnienie „dlaczego”** na końcu: „bo spadają razem ze stacją”. Satysfakcja i powód do wysłania.
-- 6 plansz, ok. 32 s z logo. Gęstość okazała się ważniejsza niż krótkość.
+**Stan 1.11.** Próg bazowy rolki na IG to ok. 200–340 wyświetleń. Wybiły się 2 z ok. 12 rolek, obie po **1,1 tys.**:
+- **Francja – 12 stref czasowych:** „Najwięcej stref czasowych nie ma Rosja. Ani USA.” → **12** → ranking → „wszystko przez wyspy”.
+- **ISS – grawitacja:** „Na ISS nie ma grawitacji? Sprawdźmy.” → **90%**, 400 km (jak z Poznania do Zakopanego), 28 000 km/h → „bo spadają”.
 
-To jeden wynik, a nie prawo. Dlatego testujemy **dwa szablony na zmianę** (A i B niżej) i po 2–3 tygodniach zostawiamy zwycięzcę według `docs/wyniki.md`.
+Wspólny wzór zwycięzców:
+1. **Wiedza ogólna typu rekord / zaskakująca odpowiedź** (geografia, kosmos – potem sprawdzać: ciało, zwierzęta, historia rekordów).
+2. Haczyk **podważa oczywistą odpowiedź, którą widz ma w głowie** („Rosja”, „brak grawitacji”). Widz chce wiedzieć „to kto/ile?”.
+3. **Jedna wielka liczba-bohater** i ranking albo porównanie.
+4. Na końcu **„dlaczego”**, które wszystko wyjaśnia.
+
+Co się nie wybiło: prawo, finanse i święta (210–290) – przydatne, ale bez efektu „wow”. Listy („5 mitów” – 66), karuzele, zdjęcia i relacje (3–18). Dwie wersje jednego tematu.
+
+**Najważniejszy problem: zero polubień, komentarzy i wysłań przy każdej rolce**, nawet przy 1,1 tys. Bez reakcji nie ma drugiej fali zasięgu. Dlatego od 1.11 każda rolka kończy się **pytaniem, na które każdy zna swoją odpowiedź i chce ją wpisać**. Pytanie jest prawdziwe, otwarte i bez „wpisz A albo B”, np. „Który kraj obstawiałeś/aś?”, „Ile stref ma Polska? Bez sprawdzania.”. Do tego krótkie „Wyślij komuś, kto…” z konkretnym adresatem.
+
+To wciąż mała próbka. Szablony A i B testujemy na zmianę, a w `docs/wyniki.md` dopisujemy co tydzień: szablon, typ haczyka i średni czas oglądania. Średni czas i wskaźnik pominięć bierzemy z zakładki „Skuteczność”.
 
 ## 0a. Tryb „100 tys.” – co musi mieć każda rolka
 
 Treść:
-1. **Mit, który powie babcia i kolega z pracy.** Jeśli trzeba go tłumaczyć, temat jest za wąski.
+1. **Mit albo „oczywista odpowiedź”, którą powie babcia i kolega z pracy** – i która jest błędna (wzór: „Najwięcej stref czasowych nie ma Rosja”). Jeśli temat trzeba tłumaczyć, jest za wąski. Prawo i finanse też w tej formie: „rekord / zaskakująca liczba”, nie poradnik.
 2. **Liczby-bohaterowie:** min. 3 konkretne liczby w rolce, w tym **1 porównanie do Polski** (miasto, odległość, pensja, cena chleba, liczba mieszkańców). Porównania licz w kodzie.
 3. **Kontrowersja z 1b w pierwszych 2 s:** „wszyscy się mylą”, „to wykroczenie”, „tracisz pieniądze”. Zawsze prawdziwa i ze źródłem.
 4. **Wypłata:** ostatnia plansza z treścią to „dlaczego” albo twist, a nie podsumowanie.
@@ -57,16 +63,16 @@ Dystrybucja (bez niej 100 tys. jest mało prawdopodobne):
 - Źródło: krótko na planszy odpowiedzi albo outro, pełne w opisie. Nie na każdej planszy.
 - Etykieta „SZKOŁA KŁAMAŁA · PRZEDMIOT” tylko na haczyku (rozpoznawalność serii).
 
-## 1'. Szablon B: stos liczb (wzór ISS, 1100 wyświetleń)
+## 1'. Szablon B: stos liczb / rekord (wzór ISS i Francji, po 1,1 tys.)
 
 | # | Plansza | Zadanie |
 |---|---|---|
-| 1 | **Haczyk-pytanie** | mit jako pytanie + „Sprawdźmy.” (3–6 słów) |
+| 1 | **Haczyk** | mit jako pytanie + „Sprawdźmy.” albo zaprzeczenie oczywistej odpowiedzi („…nie ma Rosja. Ani USA.”) (3–8 słów) |
 | 2 | **MIT → FAKT** | przekreślenie lub pieczątka MIT, odpowiedź z liczbą (pierwsza „wypłata” już po ok. 4 s) |
 | 3 | **Liczba 2** | porównanie do Polski („jak z Poznania do Zakopanego”) |
 | 4 | **Liczba 3** | jeszcze mocniejsza liczba (prędkość, kwota, czas) |
 | 5 | **Dlaczego?** | wyjaśnienie, które zmienia sposób myślenia |
-| 6 | **Wysłanie** | „Wyślij komuś, kto w to wierzy” + źródło |
+| 6 | **Reakcja** | pytanie, na które każdy zna swoją odpowiedź („Który kraj obstawiałeś/aś?”) + „Wyślij komuś, kto…” + źródło |
 
 - 5–6 plansz, 25–32 s z logo. Każda plansza ma **nową liczbę albo nowe „dlaczego”**. Plansza bez nowej informacji wypada.
 - Działa przy mitach powszechnych, gdzie odpowiedź nie zaskakuje sama, ale zaskakuje skala (liczby).
