@@ -39,3 +39,7 @@ Stan na 29.10.2026.
 - Biologia: lemingi i film z 1958 r. – Reel
 - Kosmos: pory roku – najbliżej Słońca w styczniu (pierwsza rolka 3D, Blender) – Reel (przygotowany 31.10)
 - Prawo: ochroniarz nie ma prawa przeszukać torby (art. 36 ustawy o ochronie osób i mienia; wyjątek – imprezy masowe, art. 20) – Reel (przygotowany 1.11)
+- Granica Polski z Czechami najdłuższa (796 km) – Reel (przygotowany 1.11)
+- Jazda na suwak – obowiązek z art. 22 ust. 4a PoRD – Reel (przygotowany 1.11)
+- Odmowa podania danych policji bez podstawy – wyrok SN II KK 473/25 – Reel (przygotowany 1.11)
+- IKZE – 3617 zł zwrotu podatku – Reel (przygotowany 1.11)

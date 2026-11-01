@@ -48,6 +48,7 @@ Stan na 29.10.2026. Właściciel: Michał Borecki. Język pracy: **polski**.
 
 - W claude.ai działa zadanie „„Szkoła kłamała” – materiały tygodnia do ręcznej publikacji (IG, TikTok)”, id `trig_012NQ3c9krCrwpm1W16pPmbU`, niedziela 17:32 (Europe/Warsaw). Przygotowuje materiały na pon.–sob. według planu wyżej i wysyła push.
 - **Nie twórz drugiego, równoległego zadania** – Michał dostałby podwójne materiały.
+- **Tydzień 2–7.11: rolki IG przygotowane ręcznie 1.11 (`docs/plan-2-7.11.md`)** – zadanie tygodniowe w tym tygodniu nie robi nowych rolek. Dokłada tylko posty uzupełniające (karuzele TikTok, karuzela IG) i nie powtarza tych tematów.
 
 ## Grafiki
 
