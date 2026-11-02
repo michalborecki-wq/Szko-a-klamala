@@ -56,3 +56,19 @@ Teza serii: **nie „zły policjant”, tylko system rozliczania liczbami** (leg
 | S5 | „Za ten sam znak: 10 zł albo 500 zł.” | NIK (lata 90.): liczba mandatów głównym kryterium oceny policjantów drogówki; rozrzut 10–500 zł za „zakaz wjazdu”. Odcinek historyczny – zestawić z dzisiejszym taryfikatorem (`zmiany/20_zm_2021_2484.txt`). | **odnaleźć raport NIK i datę** |
 
 Do każdego odcinka „jak się bronić”: zapytaj o podstawę prawną (§ 2 ust. 1 rozp. 2023 poz. 2535), możesz odmówić mandatu (art. 97 § 2 KPSW), skarga do komendanta (KPA, dział VIII), RPO (bip.brpo.gov.pl – wniosek bezpłatny).
+
+## Nurt „Twoje prawa w kontakcie z policją” (decyzja Michała 2.11) – sprawdzone w tekstach
+
+| # | Haczyk | Co Ci wolno / co musi policjant | Podstawa |
+|---|---|---|---|
+| P1 | „Masz prawo znać nazwisko policjanta.” | Podaje stopień, imię i nazwisko tak, byś mógł zapisać, i przyczynę; podstawę prawną – na Twoje żądanie. | § 2 ust. 1 rozp. RM, Dz.U. 2023 poz. 2535 |
+| P2 | „Policjant w cywilu? Poproś o legitymację – i ją przepisz.” | Nieumundurowany okazuje legitymację, a na żądanie – tak, byś mógł zapisać dane. | § 2 ust. 2 tamże |
+| P3 | „Mandat? Możesz powiedzieć «nie».” | Prawo odmowy; funkcjonariusz musi pouczyć o nim i o skutkach (sprawa w sądzie). | art. 97 § 2–3, art. 99 KPSW |
+| P4 | „Zatrzymany? 4 rzeczy, które musisz usłyszeć.” | Natychmiast: przyczyna i prawa – adwokat/radca, tłumacz, odmowa składania oświadczenia, odpis protokołu, pomoc medyczna; zażalenie do sądu. | art. 244 § 2–3 KPK (t.j. Dz.U. 2026 poz. 490) |
+| P5 | „Zatrzymany może zadzwonić do adwokata.” | Na żądanie – niezwłocznie kontakt i bezpośrednia rozmowa (wyjątkowo w obecności zatrzymującego); na żądanie zawiadamia się osobę najbliższą. | art. 245 § 1 i 3 KPK |
+| P6 | „Zatrzymanie nielegalne? Sąd może Cię wypuścić od ręki.” | Zażalenie do sądu na zasadność, legalność i prawidłowość; przy nielegalności – natychmiastowe zwolnienie. | art. 246 § 1–3 KPK |
+| P7 | „48 godzin – i ani minuty dłużej.” | 48 h do przekazania sądowi + 24 h na postanowienie o areszcie. | art. 41 ust. 3 Konstytucji, art. 248 KPK |
+| P8 | „Kontrola osobista na ulicy?” | Zasada: ta sama płeć, miejsce niedostępne dla postronnych; wyjątek – pilna potrzeba. | art. 15d ust. 5–6 ustawy o Policji |
+| P9 | „Dowodu nie musisz nosić.” | Obowiązek posiadania, nie noszenia; tożsamość można ustalić inaczej. | art. 5 ust. 2 ustawy o dowodach osobistych |
+
+Do sprawdzenia: nagrywanie interwencji (brak zakazu w ustawie – potrzebne orzecznictwo/stanowisko RPO lub UODO), odmowa wylegitymowania się bez podstawy (wyroki SN II KK 40/21, II KK 422/20 – tezy z sn.pl), przeszukanie mieszkania (art. 219–220 KPK).
