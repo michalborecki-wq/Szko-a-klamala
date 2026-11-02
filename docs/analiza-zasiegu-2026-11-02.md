@@ -43,10 +43,10 @@ Dane: Instagram API przez Composio (17 rolek, 25.10–2.11), statystyki konta 20
 | Działanie | Status |
 |---|---|
 | Rolka „opony” z **ruchomym tłem 3D** (realistyczne koło, kamera zgrana z planszami) i haczykiem bez odpowiedzi („Od 1 listopada zimówki albo mandat? Odpowiedź na końcu.”) | render w toku, ok. 15:30 |
-| **Test krótkich rolek ok. 10 s** (4 plansze, zapętlenie): suwak i IKZE – wersje „krótkie” | gotowe w `do_publikacji` |
+| **Test krótszych rolek** (4 plansze zamiast 6): suwak i IKZE – wersje „krótkie”, **ok. 21 s z logo** (zasada czasu czytania wydłużyła plansze z planowanych 10 s) | gotowe w `do_publikacji` |
 | Analiza i plan (ten plik), aktualizacja `docs/wyniki.md` | zrobione |
 
-**Test krótkich rolek** jest wyjątkiem od reguły „min. 20 s” (CLAUDE.md, 29.10) – tylko jako test na TikToku i jako Rolka próbna na IG. Długie wersje tych tematów zostają w planie (śr. 4.11 i czw. 5.11). Po 7 dniach porównujemy: % obejrzenia, pominięcia, wysłania. Jeśli krótka wygra, Michał decyduje o zmianie reguły.
+**Test krótszych rolek** jest wyjątkiem od reguły „min. 20 s” (CLAUDE.md, 29.10) – tylko jako test na TikToku i jako Rolka próbna na IG. Długie wersje tych tematów zostają w planie (śr. 4.11 i czw. 5.11). Po 7 dniach porównujemy: % obejrzenia, pominięcia, wysłania. Jeśli krótka wygra, Michał decyduje o zmianie reguły.
 
 ## 4. Plan – co da najszybszy efekt
 
@@ -80,3 +80,7 @@ Dane: Instagram API przez Composio (17 rolek, 25.10–2.11), statystyki konta 20
 | IKZE | Wiedziałeś wcześniej o IKZE? Kto Ci o nim powiedział? |
 | Ochroniarz | Zdarzyło Ci się, że ochrona chciała zajrzeć do torby? Co zrobiłeś? |
 | Granica | Na który kraj stawiałeś przed obejrzeniem? |
+
+## 6. Uwaga do testu długości
+
+Zasada czasu czytania (0,3 s/słowo + etykieta i źródło) daje przy 4 planszach min. ok. 18 s treści. Prawdziwe 8–12 s wymaga 3 plansz po ok. 5 słów albo poluzowania zasady czytania – to decyzja Michała.
