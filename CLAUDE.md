@@ -44,6 +44,11 @@ Stan na 29.10.2026. Właściciel: Michał Borecki. Język pracy: **polski**.
 - **1.11 (zrzut statystyk):** próg bazowy rolki 200–340 wyświetleń; rekordy po **1,1 tys.**: Francja – 12 stref czasowych i ISS – grawitacja. Wzór: wiedza ogólna typu rekord/zaskakująca odpowiedź, haczyk podważa oczywistą odpowiedź („nie ma Rosja”), jedna wielka liczba + ranking/porównanie, „dlaczego” na końcu. Prawo/finanse/święta – na progu (210–290). **Zero polubień, komentarzy i wysłań wszędzie** → każda rolka kończy się pytaniem, na które każdy zna swoją odpowiedź. Karuzele/zdjęcia/relacje na IG: 3–18. **Statystyki szczegółowe: >90% wyświetleń z Facebooka (crosspost), pominięcia 73–96%, średni czas 2–3 s → wszystko rozstrzyga pierwsza klatka; najlepszy haczyk to stwierdzenie zaprzeczające oczywistej odpowiedzi (Francja 73% pominięć), najgorszy – pytanie „…? Sprawdźmy.” (ISS 96%). Szablon B domyślny, A zawieszony; okładka zawsze ręcznie z `_okladka.jpg`.** Szczegóły: `docs/wyniki.md`. Cel Michała: 100 tys. wyświetleń – skill `szkola-klamala-viral` (sekcje 0, 0a; szablon B domyślny), silnik domyślnie w trybie `"moc": "mocna"` (kadr nigdy nie stoi, puls na bicie).
 - Reel z jednym mitem (Merkury → Wenus najgorętsza) – 316 wyświetleń; karuzele i pojedyncze zdjęcia – 5–19; dwa inne posty 208 i 256 (prawdopodobnie Reelsy). Reel o urodzinach – 19: sam format nie wystarcza, potrzebny mocny, powszechny mit.
 
+## Test 2.11 (analiza `docs/analiza-zasiegu-2026-11-02.md`)
+
+- Na polecenie Michała „zasięg jak najszybciej”: **test krótkich rolek ok. 10 s** (4 plansze, wersja „krótka” obok długiej, TikTok + Rolka próbna IG) i **ruch w 1. sekundzie** (tło 3D). Reguła „min. 20 s” obowiązuje dalej dla głównych rolek do wyniku testu (porównanie po 7 dniach).
+- Każda rolka: pierwszy komentarz autora z pytaniem (przypięty), odpowiedzi w 1. godzinie.
+
 ## Zadanie cykliczne – NIE DUBLOWAĆ
 
 - W claude.ai działa zadanie „„Szkoła kłamała” – materiały tygodnia do ręcznej publikacji (IG, TikTok)”, id `trig_012NQ3c9krCrwpm1W16pPmbU`, niedziela 17:32 (Europe/Warsaw). Przygotowuje materiały na pon.–sob. według planu wyżej i wysyła push.

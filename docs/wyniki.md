@@ -71,3 +71,19 @@ Wnioski:
 2. Im szerzej Instagram pokazuje rolkę obcym osobom (granica, szkło, lemingi – 84–128 wyświetleń), tym wyższe są pominięcia (88–96%) i krótszy czas oglądania (1,6–2,8 s). Okładka to wciąż za mało, żeby zatrzymać obcego widza. Od 2.11 rolki mają obraz-bohatera na okładce – porównać po tygodniu.
 3. Najniższe pominięcia ma nadal Francja (68,8%): haczyk-stwierdzenie „…nie ma Rosja. Ani USA.”.
 4. Rolka o granicy dała pierwszą dyskusję w komentarzach (TikTok). Szybka odpowiedź autora z pytaniem do komentującego to wzór na kolejne rolki.
+
+## Dane z Instagram API przez Composio (2.11.2026, 13:00)
+
+Konto: 19 obserwujących, 81 obserwowanych. 20.10–2.11: zasięg 667 kont, 947 wyświetleń, **9 wizyt w profilu**, 8 interakcji. Pełna tabela i plan: `docs/analiza-zasiegu-2026-11-02.md`.
+
+| Rolka | Wyśw. IG | Pominięcia | Śr. czas | Polubienia |
+|---|---|---|---|---|
+| Granica z Czechami (1.11) | 128 | 95,8% | 1,7 s | 2 |
+| Szkło nie płynie (29.10) | 123 | 87,0% | 2,9 s | 2 |
+| Lemingi (30.10) | 84 | 94,8% | 1,6 s | 0 |
+| ISS (29.10) | 61 | 96,2% | 3,2 s | 0 |
+| Ochroniarz (2.11, okładka z obrazem i pieczątką) | 52 | 95,7% | 1,6 s | 1 |
+| Halloween (31.10) | 33 | 83,9% | 4,0 s | 1 |
+| Francja (29.10) | 22 | 64,7% | 4,0 s | 0 |
+
+Wniosek: okładka z obrazem nie obniżyła pominięć. Następny test: ruch w 1. sekundzie (opony 3D) i rolki ok. 10 s (suwak, IKZE – wersje krótkie).
