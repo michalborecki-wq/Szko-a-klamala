@@ -28,7 +28,7 @@ Stan na 29.10.2026. Właściciel: Michał Borecki. Język pracy: **polski**.
 - Muzyka (decyzja 29.10): rolki mają **oryginalny podkład generowany w kodzie + efekty dźwiękowe** zsynchronizowane z animacją (`<id>_muzyka.mp4`, −14 LUFS), zamiast lektora. Dodatkowo `<id>_efekty.mp4` (same efekty), gdy Michał woli dźwięk z trendów w aplikacji. Nigdy cudzych plików MP3.
 - **Dźwięk wg sieci (31.10):** Instagram – nasz podkład `<id>_muzyka.mp4`; TikTok – `<id>_efekty` w 1080 + dźwięk z trendów dodany w aplikacji (oryginał ok. 30%).
 - **Serie:** numer „Szkoła kłamała #N” w opisie i małą etykietą na haczyku; serie tematyczne (Mit tygodnia, Prawo, którego nie znasz, Pieniądze bez ściemy).
-- **Wyniki:** co tydzień zrzuty statystyk od Michała → `docs/wyniki.md` → korekta tematów i haczyków.
+- **Wyniki (od 2.11):** statystyki Instagrama pobieram sam przez **Composio** (konektor MCP, konto IG `szkola_klamala` połączone; narzędzia `INSTAGRAM_GET_IG_USER_MEDIA` i `INSTAGRAM_GET_IG_MEDIA_INSIGHTS` z metrykami views, reach, likes, comments, shares, saved, ig_reels_avg_watch_time, reels_skip_rate; komentarze `INSTAGRAM_GET_IG_MEDIA_COMMENTS`) → `docs/wyniki.md` → korekta tematów i haczyków. Facebook w Composio – **decyzja Michała 2.11: nie łączymy**; wyświetlenia z Facebooka (crosspost) tylko ze zrzutu „Statystyki rolki” w aplikacji IG, gdy potrzebne. Composio nie publikuje – Michał publikuje ręcznie.
 - Przekazanie materiałów: pliki post po poście (bez ZIP-ów i duplikatów), opisy IG i TikTok w blokach do skopiowania, źródła, propozycje dźwięków.
 
 ## Przypomnienia dla Michała (z doświadczenia)
