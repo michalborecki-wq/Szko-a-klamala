@@ -11,11 +11,9 @@ do ujęć kamery (promień zewnętrzny w scenie = 1,35):
   • tarcza hamulcowa (obraca się) i żółty zacisk (nie obraca się);
   • oświetlenie: odbicia z HDRI dołączonego do Blendera + światła marki.
 
-Ruch kamery zgrany z planszami rolki (28 s treści):
-  0–14% haczyk – 3/4 z przodu, najazd · 14–43% szeroko z boku · 43–61% makro na bieżnik („1,6 mm”)
-  61–77% nisko przy drodze · 77–100% odjazd w górę.
+Ruch kamery zgrany z planszami rolki (pętla ciekawości – odpowiedź na końcu), szczegóły przy POZY.
 
-  blender -b -P sceny/opona.py -- --out klatki --sek 29 --fps 24 --szer 540 --probki 12 --odszum 1
+  blender -b -P sceny/opona.py -- --out klatki --sek 28.5 --fps 24 --szer 540 --probki 12 --odszum 1
   (ok. 16 s/klatkę na 4 rdzeniach CPU → ok. 3 h; tło podkładane polem "tlo3d" z "fps": 24)
 """
 import bpy, bmesh, math, os, sys, random
@@ -388,15 +386,19 @@ cam, cel = M.kamera((4, -5, 2.2), (0, 0, R_OP), ogniskowa=35)
 M.poswiata(rozmiar=7, prog=1.2, mix=.06)
 
 POZY = [  # (t, kamera wzgl. koła, cel wzgl. koła, ogniskowa) – koło jedzie w stronę +Y
-    (0.00, (2.6, 3.6, .5), (0, 0, 0), 38),
-    (0.12, (2.0, 3.0, .35), (0, 0, 0), 40),
-    (0.20, (6.0, .8, 1.0), (0, 0, 0), 32),
-    (0.40, (6.0, -1.5, 1.4), (0, 0, 0), 32),
-    (0.46, (.9, 2.2, 1.6), (0, .95, .95), 50),      # makro na bieżnik (plansza „1,6 mm”)
-    (0.59, (-.5, 2.2, 1.7), (0, .95, .95), 50),
-    (0.66, (2.6, 5.2, -1.0), (0, 0, -.5), 28),       # nisko przy drodze
-    (0.76, (2.0, 4.2, -1.05), (0, 0, -.6), 28),
-    (0.86, (5.5, 6.5, 3.5), (0, 0, 0), 30),
+    # kolejność plansz (28,5 s): haczyk 0–4,5 · sąsiedzi 4,5–8,5 · „1,6 mm” 8,5–13,5 · „ślisko” 13,5–18
+    # · odpowiedź „0 przepisów” 18–22 · pytanie końcowe 22–28,5
+    (0.00, (2.6, 3.6, .5), (0, 0, 0), 38),           # haczyk – 3/4 z przodu, najazd
+    (0.13, (2.0, 3.0, .35), (0, 0, 0), 40),
+    (0.17, (6.0, .8, 1.0), (0, 0, 0), 32),           # sąsiedzi – szeroko z boku, śnieg
+    (0.29, (6.0, -1.5, 1.4), (0, 0, 0), 32),
+    (0.32, (.9, 2.2, 1.6), (0, .95, .95), 50),       # makro na bieżnik („1,6 mm”)
+    (0.46, (-.5, 2.2, 1.7), (0, .95, .95), 50),
+    (0.50, (2.6, 5.2, -1.0), (0, 0, -.5), 28),       # nisko przy drodze („gdy jest ślisko”)
+    (0.62, (2.0, 4.2, -1.05), (0, 0, -.6), 28),
+    (0.66, (4.2, 2.8, .6), (0, 0, 0), 34),           # odpowiedź – bohaterskie ujęcie z obrotem
+    (0.76, (3.6, -.8, .9), (0, 0, 0), 34),
+    (0.86, (5.5, 6.5, 3.5), (0, 0, 0), 30),          # odjazd w górę
     (1.00, (7.5, 8.5, 6.0), (0, -2, 0), 30),
 ]
 
