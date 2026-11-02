@@ -198,6 +198,10 @@ PREP = r"""
     // klatka renderu 3D podmieniana z Pythona dla każdej klatki filmu (czas globalny g); przyciemnienie pod tekstem
     const im = document.createElement('img'); im.className = 't3d'; bg.appendChild(im);
     const sh = document.createElement('div'); sh.className = 't3dv'; bg.appendChild(sh);
+    // drobne podpisy (źródło, dopisek prawny) czytelne także na jasnej felgi/śniegu
+    const st3 = document.createElement('style');
+    st3.textContent = '.src{color:#D5DCEC!important;text-shadow:0 0 4px rgba(0,0,0,.95),0 2px 14px rgba(0,0,0,.9)}.src:before{background:#D5DCEC!important}';
+    document.head.appendChild(st3);
     window.__t3d = (src, op) => { im.style.opacity = op; im.src = src; return im.decode().catch(() => {}); };
   } else if (fx.tlo === 'gwiazdy' || fx.tlo === 'siatka') {
     const dpr = devicePixelRatio || 1;            // 4K: płótno w pełnej rozdzielczości, rysowanie w px CSS
