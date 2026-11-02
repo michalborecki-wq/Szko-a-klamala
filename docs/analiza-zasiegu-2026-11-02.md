@@ -42,7 +42,7 @@ Dane: Instagram API przez Composio (17 rolek, 25.10–2.11), statystyki konta 20
 
 | Działanie | Status |
 |---|---|
-| Rolka „opony” z **ruchomym tłem 3D** (realistyczne koło, kamera zgrana z planszami) i haczykiem bez odpowiedzi („Od 1 listopada zimówki albo mandat? Odpowiedź na końcu.”) | render w toku, ok. 15:30 |
+| Rolka „opony” z **ruchomym tłem 3D** (realistyczne koło, kamera zgrana z planszami) i haczykiem bez odpowiedzi („Od 1 listopada zimówki albo mandat? Odpowiedź na końcu.”) | gotowe (2.11, 31 s) |
 | **Test krótszych rolek** (4 plansze zamiast 6): suwak i IKZE – wersje „krótkie”, **ok. 21 s z logo** (zasada czasu czytania wydłużyła plansze z planowanych 10 s) | gotowe w `do_publikacji` |
 | Analiza i plan (ten plik), aktualizacja `docs/wyniki.md` | zrobione |
 
