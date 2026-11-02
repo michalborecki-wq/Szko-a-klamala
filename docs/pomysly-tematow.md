@@ -26,3 +26,10 @@ Kanał to głównie vlog z prywatnego portfela z nazwami spółek i brokerów �
 | P4 | „Nagrywanie policjanta jest legalne. Publikacja – już nie zawsze.” | brak przepisu zakazującego nagrywania interwencji (gdy nie utrudnia czynności). Publikacja wizerunku bez zgody bywa naruszeniem dóbr osobistych (art. 23–24 k.c.). Zapadały wyroki: 5–10 tys. zł. | omówienia orzeczeń (TVN24, Interia); stanowisko HFPC | **wymaga źródła pierwotnego** (wyrok z sygnaturą lub stanowisko RPO) – bez tego nie renderować |
 
 Odrzucone z tych kanałów: konkretne interwencje i nazwy firm ochroniarskich, zakazy fotografowania obiektów wojskowych i infrastruktury krytycznej (bezpieczeństwo państwa, blisko polityki), wszystkie nazwy spółek, brokerów i indeksów.
+
+## Tematy sezonowe – listopad/grudzień 2026 (sprawdzone 2.11)
+
+| # | Kiedy publikować | Haczyk (stwierdzenie) | Fakt | Źródło | Status |
+|---|---|---|---|---|---|
+| S1 | 2–15.11 (sezon wymiany opon) | „Zimowe opony nie są obowiązkowe. Nie w Polsce.” | brak przepisu w PoRD (sprawdzone również nowelizacje 2025–2026: Dz.U. 2025 poz. 1872, 2026 poz. 180 i 982 – bez słowa „opon”); Litwa 10.11–1.04, Słowacja/Czechy/Niemcy – przy śniegu i lodzie; bieżnik min. 1,6 mm lub wskaźnik zużycia (§ 11 ust. 7 pkt 4 rozp. o warunkach technicznych, t.j. Dz.U. 2024 poz. 502) | ISAP/Sejm API; Europejskie Centrum Konsumenckie (europe-consommateurs.eu) | **zrobione 2.11** (rolka moto_opony_zimowe) |
+| S2 | 20–27.11 (Black Friday 27.11) | „»Było 999 zł« to nie jest cena sprzed promocji.” | przy obniżce sklep musi podać najniższą cenę z 30 dni przed obniżką (art. 4 ust. 2 ustawy o informowaniu o cenach towarów i usług, dyrektywa Omnibus); rabat liczy się od niej; UOKiK nakłada kary | UOKiK, ustawa o informowaniu o cenach | sprawdzić tekst art. 4 ust. 2 w ISAP przed renderem |

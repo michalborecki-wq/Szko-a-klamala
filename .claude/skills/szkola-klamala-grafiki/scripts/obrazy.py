@@ -5,7 +5,7 @@ Wektorowe ilustracje w palecie marki, rysowane w kodzie – bez cudzych grafik i
 Każda ma animację CSS (silnik ustawia czas klatki, więc ruch jest deterministyczny),
 a główny kształt jest widoczny od klatki 0. Użycie w slajdzie `cover`: "obraz": "<nazwa>".
 
-Nazwy: polska (+ "obraz_opcje": {"granica": "CZE", "przekreslona": "DEU"}), torba, suwak,
+Nazwy: opona, polska (+ "obraz_opcje": {"granica": "CZE", "przekreslona": "DEU"}), torba, suwak,
 dowod, monety. Nowy obraz: dopisz funkcję i dodaj do OBRAZY.
 """
 import json
@@ -25,9 +25,11 @@ CSS = f"""
 .ob-drop{{animation:obDrop .5s cubic-bezier(.3,1.4,.5,1) both;transform-box:fill-box}}
 .ob-car{{animation:obCar 2.4s linear infinite}}
 .ob-merge{{animation:obMerge 2.4s ease-in-out infinite}}
+.ob-spin{{animation:obSpin 3.2s linear infinite;transform-box:fill-box;transform-origin:center}}
 .cstamp{{position:absolute;z-index:7;right:40px;top:{{st}}px;font-family:'Inter Display','Inter';font-weight:900;font-style:italic;
   font-size:84px;line-height:1;color:{R};border:9px solid {R};border-radius:14px;padding:8px 26px 4px;letter-spacing:3px;
   transform:rotate(-12deg);background:rgba(10,14,24,.55);box-shadow:0 0 40px rgba(229,57,53,.45);white-space:nowrap}}
+@keyframes obSpin{{from{{transform:rotate(0)}}to{{transform:rotate(360deg)}}}}
 @keyframes obIn{{from{{transform:scale(1.14) rotate(-2deg)}}to{{transform:none}}}}
 @keyframes obDraw{{to{{stroke-dashoffset:0}}}}
 @keyframes obPulse{{0%,100%{{transform:none}}50%{{transform:scale(1.06)}}}}
@@ -122,7 +124,29 @@ def monety(**_):
     return _svg("130 80 820 820", f"<g class='ob-in'>{stack}</g>{arrow}")
 
 
-OBRAZY = {"polska": polska, "torba": torba, "suwak": suwak, "dowod": dowod, "monety": monety}
+def opona(**_):
+    # opona zimowa z bieżnikiem (kręci się) + płatek śniegu na znaczku
+    import math as _m
+    bloki = "".join(
+        f"<rect x='-26' y='-318' width='52' height='70' rx='10' fill='#46527A' transform='rotate({k * 15})'/>"
+        for k in range(24))
+    lamele = "".join(
+        f"<path d='M0 -300 L0 -262' stroke='#0A0E18' stroke-width='6' transform='rotate({k * 15 + 7.5})'/>"
+        for k in range(24))
+    szprychy = "".join(
+        f"<path d='M0 -40 L0 -165' stroke='#C9D3EA' stroke-width='34' stroke-linecap='round' transform='rotate({k * 72})'/>"
+        for k in range(5))
+    kolo = (f"<g class='ob-spin'><circle r='300' fill='#2B3350' stroke='#4A5578' stroke-width='6'/>{bloki}{lamele}"
+            f"<circle r='215' fill='#1B2236'/><circle r='190' fill='#8FA1C7'/><circle r='178' fill='#1B2236'/>"
+            f"{szprychy}<circle r='52' fill='#C9D3EA'/><circle r='22' fill='#1B2236'/></g>")
+    ramie = lambda a: (f"<g transform='rotate({a})'><path d='M0 0 V-92' stroke='{W}' stroke-width='16' stroke-linecap='round'/>"
+                       f"<path d='M0 -58 L-24 -80 M0 -58 L24 -80' stroke='{W}' stroke-width='12' stroke-linecap='round'/></g>")
+    platek = (f"<g transform='translate(250 -250)' class='ob-pulse'><circle r='120' fill='{B}'/>"
+              + "".join(ramie(a) for a in range(0, 360, 60)) + "</g>")
+    return _svg("-340 -400 760 760", f"<g class='ob-in'>{kolo}</g>{platek}")
+
+
+OBRAZY = {"polska": polska, "torba": torba, "suwak": suwak, "dowod": dowod, "monety": monety, "opona": opona}
 
 
 def html(nazwa, opcje=None, wysokosc=520, pieczatka=None):
