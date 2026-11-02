@@ -47,3 +47,27 @@ Krzywa utrzymania: po 1 s zostaje ok. 30–60% widzów, po 2–3 s ok. 15–35%,
 3. **Najlepszy haczyk (73% pominięć):** stwierdzenie, które zaprzecza oczywistej odpowiedzi – „Najwięcej stref czasowych nie ma Rosja. Ani USA.”. Najgorszy (96%): pytanie z „Sprawdźmy.”. Akapit tekstu na pierwszej klatce (szkło) – 89%.
 4. **Okładka ISS na profilu to klatka przejścia** (niebieska smuga). Okładkę trzeba ustawiać ręcznie z pliku `_okladka.jpg`.
 5. Szablon A (odpowiedź na 50–70%) przy średnim czasie 3 s nie ma kogo zatrzymać. Wracamy do niego, gdy pominięcia spadną poniżej ok. 60%.
+
+## Dane z Instagram API przez Composio (2.11.2026, rano) – tylko widzowie z Instagrama, bez Facebooka
+
+Konto: 20 obserwujących, 22 posty.
+
+| Rolka (data publikacji) | Wyświetlenia IG | Zasięg | Pominięcia w 3 s | Śr. czas oglądania | Polubienia | Komentarze / wysłania / zapisy |
+|---|---|---|---|---|---|---|
+| Granica z Czechami (1.11, wieczór) | 128 | 120 | 95,8% | 1,6 s | 2 | 0 / 0 / 0 (na TikToku pierwszy komentarz i dyskusja) |
+| Szkło nie płynie (29.10) | 122 | 101 | 87,9% | 2,8 s | 2 | 0 / 0 / 0 |
+| Lemingi (30.10) | 84 | 77 | 94,8% | 1,6 s | 0 | 0 / 0 / 0 |
+| ISS (29.10) | 58 | 52 | 96,1% | 3,3 s | 0 | 0 / 0 / 0 |
+| Halloween (31.10) | 33 | 31 | 83,9% | 4,0 s | 1 | 0 / 0 / 0 |
+| 10% mózgu (28.10) | 23 | 18 | 89,5% | 4,0 s | 0 | 0 / 0 / 0 |
+| Grób 20 lat (31.10) | 21 | 19 | 94,7% | 2,2 s | 0 | 0 / 0 / 0 |
+| Francja – strefy (29.10) | 20 | 16 | **68,8%** (najlepiej) | 3,4 s | 0 | 0 / 0 / 0 |
+| Lokata 6% (1.11) | 12 | 12 | 83,3% | 3,4 s | 1 | 0 / 0 / 0 |
+| Znalezione nie kradzione – 2 wersje (30.10) | 12 + 10 | 9 + 10 | 77,8% / 88,9% | 3,0 / 4,8 s | 0 | 0 / 0 / 0 |
+| Instagram plan B (28.10) | 7 | 5 | 80% | 6,2 s | 1 | 0 / 0 / 0 |
+
+Wnioski:
+1. Na Instagramie zasięg jest jeszcze bardzo mały (konto ma 20 obserwujących). Główny ruch to Facebook, a tych danych API Instagrama nie podaje – potrzebne jest połączenie Facebooka (strona) w Composio.
+2. Im szerzej Instagram pokazuje rolkę obcym osobom (granica, szkło, lemingi – 84–128 wyświetleń), tym wyższe są pominięcia (88–96%) i krótszy czas oglądania (1,6–2,8 s). Okładka to wciąż za mało, żeby zatrzymać obcego widza. Od 2.11 rolki mają obraz-bohatera na okładce – porównać po tygodniu.
+3. Najniższe pominięcia ma nadal Francja (68,8%): haczyk-stwierdzenie „…nie ma Rosja. Ani USA.”.
+4. Rolka o granicy dała pierwszą dyskusję w komentarzach (TikTok). Szybka odpowiedź autora z pytaniem do komentującego to wzór na kolejne rolki.
