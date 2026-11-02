@@ -1,0 +1,121 @@
+{
+ "handle": "@szkola_klamala",
+ "posts": [
+  {
+   "id": "prawo_policja_norma_legitymowan_wariantB",
+   "format": "reel",
+   "subject": "PRAWO",
+   "muzyka": {},
+   "durations": [
+    3.5,
+    4.5,
+    4.5,
+    4.5,
+    4.5,
+    6.5
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "dowod",
+     "pieczatka": "SN",
+     "uklad": "zolty",
+     "title": "Nie zawsze musisz",
+     "accent": "pokazać dowód policji."
+    },
+    {
+     "type": "number",
+     "tag": "RPO",
+     "big": "3",
+     "count": true,
+     "title": "legitymowania",
+     "accent": "minimum na służbę",
+     "body": "Brak? Stażysta pisze **notatkę służbową**.",
+     "source": "RPO, wizytacja 14.12.2022"
+    },
+    {
+     "type": "text",
+     "title": "Powód?",
+     "accent": "Bez znaczenia.",
+     "body": "RPO: **norma ustalona arbitralnie** – niezależnie od przyczyny.",
+     "source": "RPO, II.519.47.2023"
+    },
+    {
+     "type": "number",
+     "tag": "KARA",
+     "big": "5000 zł",
+     "count": false,
+     "title": "grzywny",
+     "accent": "za utrudnianie czynności",
+     "body": "Albo nawet **areszt**.",
+     "source": "k.w. art. 65a i 24"
+    },
+    {
+     "type": "number",
+     "tag": "TWIST",
+     "big": "0 zł",
+     "count": false,
+     "title": "gdy brak",
+     "accent": "podstawy prawnej",
+     "body": "Odmowa **nie jest wykroczeniem**.",
+     "source": "SN, II KK 40/21"
+    },
+    {
+     "type": "outro",
+     "question": "Pytasz policjanta o przyczynę legitymowania?",
+     "sub": "Wyślij komuś, kto pokazuje dowód bez pytania.",
+     "sources": "To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ]
+  },
+  {
+   "id": "prawo_policja_norma_legitymowan_krotka",
+   "format": "reel",
+   "subject": "PRAWO",
+   "muzyka": {},
+   "durations": [
+    3.5,
+    4.5,
+    4.5,
+    6.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "dowod",
+     "pieczatka": "NORMA",
+     "title": "Policjant miał wylegitymować",
+     "accent": "3 osoby. Kogokolwiek."
+    },
+    {
+     "type": "number",
+     "tag": "RPO",
+     "big": "3",
+     "count": true,
+     "title": "legitymowania",
+     "accent": "minimum na służbę",
+     "body": "Brak? Stażysta pisze **notatkę służbową**.",
+     "source": "RPO, wizytacja 14.12.2022"
+    },
+    {
+     "type": "number",
+     "tag": "TWIST",
+     "big": "0 zł",
+     "count": false,
+     "title": "gdy brak",
+     "accent": "podstawy prawnej",
+     "body": "Odmowa **nie jest wykroczeniem**.",
+     "source": "SN, II KK 40/21"
+    },
+    {
+     "type": "outro",
+     "question": "Pytasz policjanta o przyczynę legitymowania?",
+     "sub": "Wyślij komuś, kto pokazuje dowód bez pytania.",
+     "sources": "To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ]
+  }
+ ]
+}
