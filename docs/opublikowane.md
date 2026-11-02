@@ -56,3 +56,4 @@ Stan na 29.10.2026.
 - Geografia: Australia szersza niż Księżyc – karuzela TikTok 9:16
 
 Odrzucone 1.11: ujęcie obywatelskie (art. 243 k.p.k.) – polityka/migracja; kości noworodka – brak źródła pierwotnego.
+- Motoryzacja: zimowe opony nie są obowiązkowe w Polsce (sąsiedzi – tak; bieżnik 1,6 mm) – Reel (przygotowany 2.11)
