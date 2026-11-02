@@ -2,7 +2,7 @@
 
 Źródła: teksty jednolite pobrane z API Sejmu (ELI) do `zrodla/prawo/policja/` (spis: `INDEKS.md`). Przy każdym temacie artykuł i plik, w którym przepis sprawdzono. **Przed renderem każdej rolki sprawdzić przepis w ISAP na dzień publikacji** (część aktów ma zmiany po tekście jednolitym, lista w `INDEKS.md`).
 
-Zasady serii (CLAUDE.md): kontrowersja tylko z faktu („myślałeś, że…, a przepis mówi…”), **bez atakowania policji i bez polityki**. Pokazujemy prawa i obowiązki obu stron – część odcinków powinna obalać mity „na korzyść” policjanta (np. że kontrola może się odbyć bez świadków). Dopisek „To nie jest porada prawna”. Szablon B, odpowiedź na końcu.
+Zasady serii (CLAUDE.md, decyzja 2.11): dwa nurty – (a) „co może, a czego nie” z przepisów, (b) **pomyłki i nadużycia** – wyroki, raporty RPO/KMPT i NIK, statystyki oraz głośne sprawy z mediów (bez wyroku: min. 2 wiarygodne źródła + „sprawa w toku – obowiązuje domniemanie niewinności”). Bez nazwisk i wizerunków policjantów bez prawomocnego wyroku, bez polityki i protestów, bez drastycznych opisów. Fakt, nie ocena. Na końcu zawsze: jak się bronić (skarga do komendanta, zażalenie do sądu, RPO). Dopisek „To nie jest porada prawna”. Szablon B, odpowiedź na końcu.
 
 ## Sprawdzone w tekście (gotowe do scenariusza)
 
@@ -32,3 +32,13 @@ Zasady serii (CLAUDE.md): kontrowersja tylko z faktu („myślałeś, że…, a 
 - Mandaty: `20_…` (t.j. 2013) + **tabela B (ruch drogowy) w brzmieniu od 1.01.2022: `zmiany/20_zm_2021_2484.txt`** + zmiana 2023 (`zmiany/20_zm_2023_1256.txt`).
 - Punkty karne: `27_punkty_karne_ewidencja_kierujacych.txt` (2026).
 - Mandaty straży gminnej: `26_…`.
+
+## Nurt „pomyłki i nadużycia” – gdzie szukać (do zebrania)
+
+- Wyroki ETPCz przeciw Polsce (HUDOC) – art. 3 i 5 Konwencji (traktowanie przy zatrzymaniu, bezprawne pozbawienie wolności).
+- Odszkodowania za niesłuszne zatrzymanie (art. 552 KPK) – statystyki Ministerstwa Sprawiedliwości, wyroki sądów apelacyjnych.
+- Raporty RPO / Krajowego Mechanizmu Prewencji Tortur z wizytacji izb zatrzymań; wystąpienia RPO do Komendanta Głównego.
+- NIK – kontrole Policji (np. mandaty, kontrole drogowe, izby zatrzymań).
+- Statystyki skarg na policjantów (KGP, Biuro Kontroli) i postępowań dyscyplinarnych.
+- Głośne sprawy medialne – tylko z min. 2 źródeł, z dopiskiem o domniemaniu niewinności.
+- Typowe pomyłki „z przepisów”: mandat bez pouczenia o prawie odmowy (art. 97 § 3 KPSW), brak podania danych (§ 2 rozp. 2023 poz. 2535), kontrola osobista przez osobę innej płci bez pilnej potrzeby (art. 15d ust. 5 ustawy o Policji) – co wtedy zrobić.

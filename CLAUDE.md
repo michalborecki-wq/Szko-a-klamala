@@ -13,6 +13,7 @@ Stan na 29.10.2026. Właściciel: Michał Borecki. Język pracy: **polski**.
 - Każdy fakt sprawdzony w wiarygodnym źródle w trakcie przygotowania, nie z pamięci. Obliczenia w kodzie. Źródło na slajdzie (krótko) i w podpisie (pełne).
 - Teksty pisane od zera, własnymi słowami (od 04.2026 Instagram nie poleca kont z cudzymi lub nieprzetworzonymi treściami).
 - **Zakazane:** polityka, religia, szczepionki i spory medyczne, płeć, migracja, teorie spiskowe, atakowanie osób i instytucji, drastyczne treści.
+- **Wyjątek – seria o policji (decyzja Michała 2.11):** wolno pokazywać pomyłki i nadużycia policji – prawomocne wyroki (sądy PL, ETPCz), raporty RPO/KMPT i NIK, statystyki oraz głośne sprawy z mediów bez wyroku. Warunki: sprawa bez wyroku tylko z min. 2 wiarygodnych źródeł (duże media lub komunikat prokuratury/RPO) i z dopiskiem „sprawa w toku – obowiązuje domniemanie niewinności”; bez nazwisk i wizerunków policjantów (tylko funkcja i miasto), chyba że zapadł prawomocny wyrok; bez spraw politycznych, protestów i drastycznych opisów; fakt, nie ocena („sąd uznał…”, „prokuratura zarzuca…”); każda rolka kończy się tym, jak obywatel może się bronić (skarga, zażalenie, RPO). Pozostałe zakazy bez zmian.
 - **Finanse:** tylko mechanizmy; nigdy nazwy instrumentów, banków, funduszy ani kryptowalut. Dopisek „To nie jest porada inwestycyjna”.
 - **Prawo:** stan prawny z artykułem i ustawą (ISAP, UOKiK, gov.pl), dopisek „To nie jest porada prawna”, bez polityki.
 - **Motoryzacja:** mity kierowców i ciekawostki techniczne (przepisy, ADAC, PZM, ITS), bez reklam marek.
