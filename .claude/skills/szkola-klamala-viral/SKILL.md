@@ -77,6 +77,26 @@ Dystrybucja (bez niej 100 tys. jest mało prawdopodobne):
 - Działa przy mitach powszechnych, gdzie odpowiedź nie zaskakuje sama, ale zaskakuje skala (liczby).
 - Wybór: A, gdy odpowiedź sama jest szokiem (data, kwota, kara). B, gdy mamy kilka mocnych liczb i porównanie do Polski. W raporcie zapisz, którego szablonu użyto, a w `docs/wyniki.md` – kolumnę „szablon”.
 
+## 1''. Szablon C „ujawnienie” – DOMYŚLNY od 3.11 (decyzja Michała: „rolki w tym stylu, by zatrzymać widza”)
+
+Wzór: Policja #1 „Norma legitymowań” – najlepszy wynik konta (śr. czas 5 s vs 1,3–4 s, pominięcia 83% „niższe niż typowe”, pierwszy komentarz). Spec: `specs/prawo_policja_norma_legitymowan.json`.
+
+| # | Plansza | Zadanie | Przykład |
+|---|---|---|---|
+| 1 | **Haczyk-ujawnienie** (`cover` + `obraz` + `pieczatka`) | konkretna, ukryta reguła/liczba z życia widza, podana jak przeciek; 5–8 słów, bez pytania; pieczątka = słowo-klucz | „Policjant miał wylegitymować 3 osoby. Kogokolwiek.” + pieczątka NORMA |
+| 2 | **Dokument** (`number`, tag = instytucja) | ta liczba wielko + źródło urzędowe (RPO, NIK, ustawa, GUS) – „to nie plotka” | „3 – legitymowania minimum na służbę”, RPO 14.12.2022 |
+| 3 | **Stawka** (`number`, tag KARA/KOSZT) | co grozi/ile kosztuje widza | „5000 zł grzywny” |
+| 4 | **Zwrot** (`number`, tag TWIST, najczęściej „0”) | odwrócenie: prawo/fakt po stronie widza | „0 zł – gdy brak podstawy prawnej” |
+| 5 | **Outro** | pytanie o własne doświadczenie + „Wyślij komuś, kto…” + dopisek | „Pytasz policjanta o przyczynę?” |
+
+Zasady C:
+- **Zwrot najpóźniej ok. 12–14 s** (w #1 był na 18 s, a widzowie odpadli na 17 s). Plansza „dlaczego/opinia” (#1 miał „Powód? Bez znaczenia.”) tylko, jeśli mieści się przed 14 s – inaczej wypada. Całość **20–24 s z logo** (wyjątek od 25–32 s z szablonu B).
+- Liczby: min. 3 (reguła, stawka, zwrot); porównanie do Polski mile widziane, nie obowiązkowe.
+- Wygląd jak #1: granatowe tło, okładka z obrazem-bohaterem i pieczątką, żółte liczby, etykiety-tagi (RPO / KARA / TWIST), źródło pod każdą liczbą, `"moc": "mocna"`. Okładka = plansza 1.
+- Działa w każdej dziedzinie, nie tylko prawo: „Producent zakłada, że…”, „Bank liczy…”, „Lekarz ma na Ciebie X minut” – zawsze ukryta reguła + dokument + stawka + zwrot.
+- Wersja B do Rolki próbnej: inna formuła haczyka (np. „Nie zawsze musisz…”), ta sama treść.
+- Karta 20 pkt jak w sekcji 7; punkt 2 („struktura”) liczy się dla C, punkt 6 – długość 20–24 s.
+
 ## 1a. Kilkukrotne obejrzenie (decyzja Michała 31.10 – priorytet)
 
 Każda rolka musi mieć **co najmniej 2** z tych mechanizmów:
