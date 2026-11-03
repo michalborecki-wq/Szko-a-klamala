@@ -1,0 +1,124 @@
+{
+ "handle": "@szkola_klamala",
+ "posts": [
+  {
+   "id": "prawo_policja2_recydywa",
+   "format": "reel",
+   "subject": "PRAWO",
+   "muzyka": {},
+   "durations": [
+    3.5,
+    4.5,
+    4.5,
+    4.5,
+    6.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "monety",
+     "pieczatka": "WSTECZ",
+     "title": "2000 zł mandatu.",
+     "accent": "Połowa – bezprawnie."
+    },
+    {
+     "type": "number",
+     "tag": "RPO",
+     "big": "2000 zł",
+     "count": false,
+     "title": "podwójny mandat",
+     "accent": "+11 punktów",
+     "body": "Wcześniejsze wykroczenie – **sprzed zmiany**.",
+     "source": "RPO, II.565.3.2022"
+    },
+    {
+     "type": "number",
+     "tag": "ZASADA",
+     "big": "17.09.2022",
+     "count": false,
+     "title": "recydywa liczy się",
+     "accent": "od tej daty",
+     "body": "Oba wykroczenia – **po niej**.",
+     "source": "k.w. art. 38"
+    },
+    {
+     "type": "number",
+     "tag": "TWIST",
+     "big": "6",
+     "count": true,
+     "title": "takich pomyłek",
+     "accent": "przyznała policja",
+     "body": "Na **560 tys.** mandatów. Każdą naprawia.",
+     "source": "KGP dla RPO, 24.01.2023"
+    },
+    {
+     "type": "outro",
+     "question": "Czytasz mandat, zanim go przyjmiesz?",
+     "sub": "Wyślij komuś, kto płaci bez czytania.",
+     "sources": "Możesz odmówić mandatu. To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ]
+  },
+  {
+   "id": "prawo_policja2_recydywa_wariantB",
+   "format": "reel",
+   "subject": "PRAWO",
+   "muzyka": {},
+   "durations": [
+    3.5,
+    4.5,
+    4.5,
+    4.5,
+    6.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "monety",
+     "pieczatka": "6",
+     "uklad": "zolty",
+     "title": "Policja przyznała:",
+     "accent": "6 mandatów podwoiła bezprawnie."
+    },
+    {
+     "type": "number",
+     "tag": "RPO",
+     "big": "2000 zł",
+     "count": false,
+     "title": "podwójny mandat",
+     "accent": "+11 punktów",
+     "body": "Wcześniejsze wykroczenie – **sprzed zmiany**.",
+     "source": "RPO, II.565.3.2022"
+    },
+    {
+     "type": "number",
+     "tag": "ZASADA",
+     "big": "17.09.2022",
+     "count": false,
+     "title": "recydywa liczy się",
+     "accent": "od tej daty",
+     "body": "Oba wykroczenia – **po niej**.",
+     "source": "k.w. art. 38"
+    },
+    {
+     "type": "number",
+     "tag": "SKALA",
+     "big": "560 tys.",
+     "count": false,
+     "title": "mandatów",
+     "accent": "w 3,5 miesiąca",
+     "body": "Policja: **pomyłki incydentalne**.",
+     "source": "KGP dla RPO, 24.01.2023"
+    },
+    {
+     "type": "outro",
+     "question": "Czytasz mandat, zanim go przyjmiesz?",
+     "sub": "Wyślij komuś, kto płaci bez czytania.",
+     "sources": "Możesz odmówić mandatu. To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ]
+  }
+ ]
+}
