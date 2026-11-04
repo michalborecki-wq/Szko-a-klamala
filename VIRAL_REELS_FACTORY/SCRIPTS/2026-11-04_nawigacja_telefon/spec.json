@@ -36,8 +36,8 @@
      "tag": "PUNKTY",
      "big": "12",
      "count": false,
-     "title": "z 24",
-     "accent": "dopuszczalnych",
+     "title": "punktów",
+     "accent": "z limitu 24",
      "body": "Trzeci raz = **ponowny egzamin**.",
      "source": "rozp. MSWiA, poz. H 09"
     },
@@ -96,8 +96,8 @@
      "tag": "PUNKTY",
      "big": "12",
      "count": false,
-     "title": "z 24",
-     "accent": "dopuszczalnych",
+     "title": "punktów",
+     "accent": "z limitu 24",
      "body": "Trzeci raz = **ponowny egzamin**.",
      "source": "rozp. MSWiA, poz. H 09"
     },
