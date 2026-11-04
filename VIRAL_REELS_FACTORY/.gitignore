@@ -6,3 +6,4 @@ VIDEOS/**
 !VIDEOS/.gitkeep
 READY_TO_PUBLISH/**/*.jpg
 PUBLISHED/**/*.jpg
+DOSTAWA/**/*.jpg

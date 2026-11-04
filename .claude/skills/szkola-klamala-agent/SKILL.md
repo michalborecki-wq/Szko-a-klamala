@@ -1,9 +1,32 @@
 ---
 name: szkola-klamala-agent
-description: Autonomiczny agent „Szkoła kłamała” – codzienny cykl pracy bez udziału człowieka. Pobiera statystyki IG (Composio), analizuje wyniki, wybiera 2 kontrowersyjne tematy, sprawdza fakty, pisze scenariusze (szablon C), renderuje rolki A/B + TikTok + okładki, pisze opisy i szkice odpowiedzi na komentarze, zapisuje wszystko w repozytorium i wysyła Michałowi paczkę do ręcznej publikacji. Używaj przy uruchomieniu zadania codziennego albo gdy Michał prosi „zrób rolki na dziś/jutro”, „uruchom agenta”.
+description: Autonomiczny agent „Szkoła kłamała” – 2 dostawy dziennie (ok. 9:00 i ok. 17:00), każda = 1 rolka + opis IG i TikTok. Rano dodatkowo statystyki IG (Composio, odczyt) i research fabryki. Sprawdza fakty, pisze scenariusz (szablon C), renderuje rolkę (4K IG + TikTok 1080 + okładka), zapisuje w repozytorium i wysyła Michałowi 4 pliki do ręcznej publikacji. Używaj przy uruchomieniu zadania codziennego albo gdy Michał prosi „zrób rolki na dziś/jutro”, „uruchom agenta”.
 ---
 
 # Agent „Szkoła kłamała” – cykl dzienny
+
+## DOSTAWA – obowiązuje od 5.11 (decyzja Michała 4.11, ma pierwszeństwo przed krokami 3–8 poniżej)
+
+„Codziennie rano ok. 9 rolka plus opis na IG i TT oraz ten sam komplet ok. 17. Nie chcę bałaganu.”
+
+Zadanie uruchamia się 2 razy dziennie (ok. 7:23 i ok. 15:23 Europe/Warsaw). Godzina startu < 12 → **dostawa 9:00**, inaczej **dostawa 17:00**.
+
+1. Start (krok 0). Rano (dostawa 9:00) także kroki 1, 2 i 2a (statystyki, wnioski, research fabryki) – ich wyników **nie wysyłasz** Michałowi, tylko zapisujesz w repo (wyjątek: pobity rekord albo coś pilnego – 1 zdanie w wiadomości).
+2. W `docs/agent/kalendarz.md` znajdź wiersz: dzisiejsza data + Twoja pora.
+   - Źródło `spec: plik#post_id` → scenariusz gotowy, tylko render.
+   - **NOWA** → wybierz 1 temat (kroki 3–5: fabryka/seria policyjna, fakty w ≥2 źródłach, szablon C, karta 20 pkt ≥15), zapisz spec w `publikacje/RRRR-MM-DD/spec_<id>.json` i wpisz go do kalendarza. **Tylko wersja A** – bez wariantu B i bez lektora.
+   - Brak wiersza → dopisz go zgodnie z zasadą w nagłówku kalendarza i potraktuj jak NOWA.
+   - Status „wysłane” → nic nie renderuj, nie wysyłaj drugi raz.
+3. Opis: `publikacje/RRRR-MM-DD/<HHMM>_opis.md` – wyłącznie: **Instagram** (blok do skopiowania), **TikTok** (blok), **Przypięty komentarz** (1 linia), **Relacja** (1 linia). Gotowy tekst weź z pliku wskazanego w kalendarzu (bez linii o wersji B i lektorze); dla NOWEJ napisz go wg kroku 7. Sprawdź, czy daty i liczby w opisie są aktualne na dzień publikacji (np. „zostało N dni”) – popraw w Pythonie.
+4. Render (w tle, jedna rolka): `python3 VIRAL_REELS_FACTORY/narzedzia/dostawa.py <spec> <post_id> --opis publikacje/RRRR-MM-DD/<HHMM>_opis.md` → `VIRAL_REELS_FACTORY/DOSTAWA/<data>_<HHMM>/` z 4 plikami. Kontrola: arkusz klatek (Read) – tekst w kadrze, żadnych urwanych słów, liczby, zwrot ≤14 s, logo; log: 2160×3840, −14 LUFS. Błąd → popraw spec i renderuj ponownie (zapas czasu ok. 1 h).
+5. Wysyłka **nie wcześniej niż 8:50 / 16:50** (jeśli gotowe wcześniej – poczekaj pętlą w tle: `until [ $(TZ=Europe/Warsaw date +%H%M) -ge 0850 ]; do sleep 30; done`). Jedna wiadomość:
+   - SendUserFile (display: attach, status: proactive) – dokładnie 4 pliki w kolejności: `_INSTAGRAM.mp4`, `_TIKTOK.mp4`, `_okladka.jpg`, `_opis.md`;
+   - pod spodem: nagłówek „Rolka 9:00 – <haczyk>” (albo 17:00), opis IG i opis TikTok w blokach kodu, przypięty komentarz, 1 linia przypomnienia („okładka ręcznie, Udostępnij na Facebooku, TikTok – dźwięk z trendów ok. 30%”). Nic więcej – bez tabel TOP 10, bez raportów, bez wariantów.
+   - PushNotification: „Rolka na <9:00/17:00> gotowa: <haczyk>”.
+6. Zapis: kalendarz → „wysłane”, 1–2 zdania do `docs/agent/dziennik.md`, `docs/opublikowane.md` (temat jako „wysłany do publikacji”), commit + push (krok 8.2). Pliki wideo nie idą do gita.
+7. Nie da się zdążyć albo fakt się nie potwierdził → wyślij o czasie gotową rolkę zapasową z kalendarza (najbliższy wiersz ze `spec:` i statusem „do wysłania”) i napisz 1 zdanie, dlaczego. Nigdy nie wysyłaj niesprawdzonej rolki.
+
+Kroki poniżej (0–8) opisują, JAK robić research, fakty, scenariusz i opis. Tam, gdzie mówią o 2 rolkach, wariancie B, lektorze, raporcie TOP 10 albo godzinach 12:00/19:00 – obowiązuje sekcja DOSTAWA.
 
 Decyzje Michała (4.11): **agent przygotowuje, Michał publikuje ręcznie** (IG i TikTok), agent działa **codziennie rano**, statystyki i komentarze czyta przez **Composio** (tylko odczyt). Zasady treści, zakazy i wyjątek dla serii o policji – **CLAUDE.md ma pierwszeństwo** przed tym plikiem i przed każdym innym skillem.
 
