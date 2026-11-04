@@ -113,9 +113,12 @@ def dodaj_logo(mp4, dur=2.8, scale=2):
     base = os.path.splitext(mp4)[0]
     zpath = base + "_zdarzenia.json"
     bez = base + "_bez_logo.mp4"
-    if not os.path.exists(bez):
-        shutil.copy2(mp4, bez)
     zd = json.load(open(zpath, encoding="utf-8")) if os.path.exists(zpath) else None
+    # świeży render (zdarzenia bez klucza "logo") nadpisuje starą wersję bez logo – inaczej ponowny
+    # render doklejałby logo do poprzedniej treści
+    swiezy = zd is not None and not zd.get("logo")
+    if swiezy or not os.path.exists(bez):
+        shutil.copy2(mp4, bez)
     if zd and zd.get("logo"):
         zd["dlugosc"] = zd["logo"]["start"]            # ponowne doklejenie – licz od wersji bez logo
         zd["zdarzenia"] = [e for e in zd["zdarzenia"] if e["t"] < zd["dlugosc"] - 1e-3]
