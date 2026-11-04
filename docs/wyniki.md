@@ -97,3 +97,5 @@ Wniosek: okładka z obrazem nie obniżyła pominięć. Następny test: ruch w 1.
 - Krzywa (tylko IG, 6 osób): spadek do ok. 30% w 2,5 s, potem **płasko do ok. 17 s** (koniec planszy „5000 zł”), potem zero. Przy 6 widzach to 2 osoby – sygnał, nie dowód.
 - IG rozdaje słabo (6 wyśw. vs typowa ok. 38 w 6 h), Facebook 97%. Źródła IG: karta Rolki 50%, Aktualności 16,7%.
 - Wniosek roboczy: haczyk z liczbą i „normą” trzyma lepiej niż poprzednie (5 s vs 1,3–4 s); zwrot akcji („0 zł”) jest za późno – przy następnych odcinkach twist najpóźniej ok. 12–14 s, rolka ok. 20–24 s. Porównać z wersją krótką (22 s) i B.
+
+**Aktualizacja 4.11 (Michał):** Policja #1 „Norma legitymowań” – **ponad 2 tys. wyświetleń** (rekord konta, ok. 2× poprzednie maksimum 1,1 tys.). Wniosek: mocna, prawdziwa kontrowersja wokół policji + szablon C działa – trzymać w każdej rolce.

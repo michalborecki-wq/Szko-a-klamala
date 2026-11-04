@@ -1,0 +1,120 @@
+{
+ "handle": "@szkola_klamala",
+ "posts": [
+  {
+   "id": "prawo_policja6_50kmh",
+   "format": "reel",
+   "subject": "PRAWO",
+   "muzyka": {},
+   "durations": [
+    3.5,
+    4.5,
+    4.5,
+    4.5,
+    6.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "licznik",
+     "pieczatka": "51",
+     "title": "Za miastem +51 km/h.",
+     "accent": "Prawko zostaje."
+    },
+    {
+     "type": "number",
+     "tag": "MANDAT",
+     "big": "1500 zł",
+     "count": false,
+     "title": "i 13 punktów",
+     "accent": "za 51–60 km/h",
+     "body": "Przy recydywie: **3000 zł**.",
+     "source": "taryfikator, poz. 79"
+    },
+    {
+     "type": "number",
+     "tag": "STAROSTA",
+     "big": "3 mies.",
+     "count": false,
+     "title": "zatrzymania",
+     "accent": "decyzją starosty",
+     "body": "Mimo to jedziesz? **6 mies.**",
+     "source": "ustawa o kierujących, art. 102"
+    },
+    {
+     "type": "text",
+     "tag": "TWIST",
+     "title": "Poza miastem",
+     "accent": "prawo jazdy zostaje.",
+     "body": "Przepis: **teren zabudowany**.",
+     "source": "art. 102 ust. 1"
+    },
+    {
+     "type": "outro",
+     "question": "Powinno być tak samo poza miastem?",
+     "sub": "Wyślij komuś, kto ma ciężką nogę.",
+     "sources": "To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ]
+  },
+  {
+   "id": "prawo_policja6_50kmh_wariantB",
+   "format": "reel",
+   "subject": "PRAWO",
+   "muzyka": {},
+   "durations": [
+    3.5,
+    4.5,
+    4.5,
+    4.5,
+    6.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "licznik",
+     "pieczatka": "STOP",
+     "title": "+51 km/h w mieście",
+     "accent": "i 3 miesiące pieszo.",
+     "uklad": "zolty"
+    },
+    {
+     "type": "number",
+     "tag": "MANDAT",
+     "big": "1500 zł",
+     "count": false,
+     "title": "i 13 punktów",
+     "accent": "za 51–60 km/h",
+     "body": "Przy recydywie: **3000 zł**.",
+     "source": "taryfikator, poz. 79"
+    },
+    {
+     "type": "number",
+     "tag": "STAROSTA",
+     "big": "3 mies.",
+     "count": false,
+     "title": "zatrzymania",
+     "accent": "decyzją starosty",
+     "body": "Mimo to jedziesz? **6 mies.**",
+     "source": "ustawa o kierujących, art. 102"
+    },
+    {
+     "type": "text",
+     "tag": "TWIST",
+     "title": "Poza miastem",
+     "accent": "prawo jazdy zostaje.",
+     "body": "Przepis: **teren zabudowany**.",
+     "source": "art. 102 ust. 1"
+    },
+    {
+     "type": "outro",
+     "question": "Powinno być tak samo poza miastem?",
+     "sub": "Wyślij komuś, kto ma ciężką nogę.",
+     "sources": "To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,120 @@
+{
+ "handle": "@szkola_klamala",
+ "posts": [
+  {
+   "id": "prawo_policja7_milczenie",
+   "format": "reel",
+   "subject": "PRAWO",
+   "muzyka": {},
+   "durations": [
+    3.5,
+    4.5,
+    4.5,
+    4.5,
+    6.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "odznaka",
+     "pieczatka": "ZAKAZ",
+     "title": "Policja nie może",
+     "accent": "zmusić Cię do mówienia."
+    },
+    {
+     "type": "number",
+     "tag": "K.P.K.",
+     "big": "0",
+     "count": false,
+     "title": "obowiązku",
+     "accent": "składania wyjaśnień",
+     "body": "Bez **podawania powodu**.",
+     "source": "k.p.k. art. 175"
+    },
+    {
+     "type": "number",
+     "tag": "ADWOKAT",
+     "big": "1",
+     "count": false,
+     "title": "rozmowa",
+     "accent": "z adwokatem",
+     "body": "Na żądanie – **niezwłocznie**.",
+     "source": "k.p.k. art. 245"
+    },
+    {
+     "type": "text",
+     "tag": "TWIST",
+     "title": "Wymuszone słowa",
+     "accent": "nie są dowodem.",
+     "body": "Przymus = **nie ma dowodu**.",
+     "source": "k.p.k. art. 171"
+    },
+    {
+     "type": "outro",
+     "question": "Milczałbyś czy tłumaczył się?",
+     "sub": "Wyślij komuś, kto zawsze się tłumaczy.",
+     "sources": "To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ]
+  },
+  {
+   "id": "prawo_policja7_milczenie_wariantB",
+   "format": "reel",
+   "subject": "PRAWO",
+   "muzyka": {},
+   "durations": [
+    3.5,
+    4.5,
+    4.5,
+    4.5,
+    6.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "odznaka",
+     "pieczatka": "0",
+     "title": "Zatrzymany nie musi",
+     "accent": "nic mówić.",
+     "uklad": "zolty"
+    },
+    {
+     "type": "number",
+     "tag": "K.P.K.",
+     "big": "0",
+     "count": false,
+     "title": "obowiązku",
+     "accent": "składania wyjaśnień",
+     "body": "Bez **podawania powodu**.",
+     "source": "k.p.k. art. 175"
+    },
+    {
+     "type": "number",
+     "tag": "ADWOKAT",
+     "big": "1",
+     "count": false,
+     "title": "rozmowa",
+     "accent": "z adwokatem",
+     "body": "Na żądanie – **niezwłocznie**.",
+     "source": "k.p.k. art. 245"
+    },
+    {
+     "type": "text",
+     "tag": "TWIST",
+     "title": "Wymuszone słowa",
+     "accent": "nie są dowodem.",
+     "body": "Przymus = **nie ma dowodu**.",
+     "source": "k.p.k. art. 171"
+    },
+    {
+     "type": "outro",
+     "question": "Milczałbyś czy tłumaczył się?",
+     "sub": "Wyślij komuś, kto zawsze się tłumaczy.",
+     "sources": "To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ]
+  }
+ ]
+}
