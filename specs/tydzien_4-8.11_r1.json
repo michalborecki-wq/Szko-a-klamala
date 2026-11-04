@@ -1,0 +1,120 @@
+{
+ "handle": "@szkola_klamala",
+ "posts": [
+  {
+   "id": "prawo_policja3_48h",
+   "format": "reel",
+   "subject": "PRAWO",
+   "muzyka": {},
+   "durations": [
+    3.5,
+    4.5,
+    4.5,
+    4.5,
+    6.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "zegar",
+     "pieczatka": "48 H",
+     "title": "Policja trzyma Cię",
+     "accent": "najwyżej 48 godzin."
+    },
+    {
+     "type": "number",
+     "tag": "K.P.K.",
+     "big": "48 h",
+     "count": false,
+     "title": "na wniosek",
+     "accent": "do sądu",
+     "body": "Sąd: **24 h** na areszt.",
+     "source": "k.p.k. art. 248"
+    },
+    {
+     "type": "number",
+     "tag": "PRAWO",
+     "big": "1",
+     "count": false,
+     "title": "bliska osoba",
+     "accent": "dowie się",
+     "body": "Na Twoje **żądanie**.",
+     "source": "k.p.k. art. 245"
+    },
+    {
+     "type": "text",
+     "tag": "TWIST",
+     "title": "Zatrzymanie bezprawne?",
+     "accent": "Sąd zwalnia od razu.",
+     "body": "Zażalenie przysługuje **każdemu** zatrzymanemu.",
+     "source": "k.p.k. art. 246"
+    },
+    {
+     "type": "outro",
+     "question": "Ile godzin to rozsądny czas zatrzymania?",
+     "sub": "Wyślij komuś, kto boi się zatrzymania.",
+     "sources": "To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ]
+  },
+  {
+   "id": "prawo_policja3_48h_wariantB",
+   "format": "reel",
+   "subject": "PRAWO",
+   "muzyka": {},
+   "durations": [
+    3.5,
+    4.5,
+    4.5,
+    4.5,
+    6.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "zegar",
+     "pieczatka": "STOP",
+     "uklad": "zolty",
+     "title": "Po 48 godzinach:",
+     "accent": "sąd albo wolność."
+    },
+    {
+     "type": "number",
+     "tag": "K.P.K.",
+     "big": "48 h",
+     "count": false,
+     "title": "na wniosek",
+     "accent": "do sądu",
+     "body": "Sąd: **24 h** na areszt.",
+     "source": "k.p.k. art. 248"
+    },
+    {
+     "type": "number",
+     "tag": "PRAWO",
+     "big": "1",
+     "count": false,
+     "title": "bliska osoba",
+     "accent": "dowie się",
+     "body": "Na Twoje **żądanie**.",
+     "source": "k.p.k. art. 245"
+    },
+    {
+     "type": "text",
+     "tag": "TWIST",
+     "title": "Zatrzymanie bezprawne?",
+     "accent": "Sąd zwalnia od razu.",
+     "body": "Zażalenie przysługuje **każdemu** zatrzymanemu.",
+     "source": "k.p.k. art. 246"
+    },
+    {
+     "type": "outro",
+     "question": "Ile godzin to rozsądny czas zatrzymania?",
+     "sub": "Wyślij komuś, kto boi się zatrzymania.",
+     "sources": "To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ]
+  }
+ ]
+}

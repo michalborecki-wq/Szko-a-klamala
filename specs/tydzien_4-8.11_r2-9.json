@@ -1,0 +1,701 @@
+{
+ "handle": "@szkola_klamala",
+ "posts": [
+  {
+   "id": "prawo_policja4_kontrola",
+   "format": "reel",
+   "subject": "PRAWO",
+   "muzyka": {},
+   "durations": [
+    3.5,
+    4.5,
+    4.5,
+    4.5,
+    6.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "odznaka",
+     "pieczatka": "ZASADA",
+     "title": "Kontroluje Cię",
+     "accent": "policjant tej samej płci."
+    },
+    {
+     "type": "number",
+     "tag": "USTAWA",
+     "big": "1",
+     "count": false,
+     "title": "miejsce",
+     "accent": "bez świadków",
+     "body": "Niewidoczne dla **postronnych**.",
+     "source": "ustawa o Policji, art. 15d"
+    },
+    {
+     "type": "number",
+     "tag": "ZAKRES",
+     "big": "3",
+     "count": false,
+     "title": "rzeczy",
+     "accent": "sprawdza policjant",
+     "body": "Odzież, bagaż – zwykle **bez rozbierania**.",
+     "source": "art. 15d ust. 1"
+    },
+    {
+     "type": "text",
+     "tag": "TWIST",
+     "title": "Wyjątek:",
+     "accent": "zagrożenie życia.",
+     "body": "Wtedy **inna płeć** też może.",
+     "source": "art. 15d ust. 6"
+    },
+    {
+     "type": "outro",
+     "question": "Kontrolowano Cię kiedyś na ulicy?",
+     "sub": "Wyślij komuś, kto nie zna swoich praw.",
+     "sources": "To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ]
+  },
+  {
+   "id": "prawo_policja4_kontrola_wariantB",
+   "format": "reel",
+   "subject": "PRAWO",
+   "muzyka": {},
+   "durations": [
+    3.5,
+    4.5,
+    4.5,
+    4.5,
+    6.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "odznaka",
+     "pieczatka": "PRAWO",
+     "title": "Na ulicy nie muszą",
+     "accent": "Cię rozbierać.",
+     "uklad": "zolty"
+    },
+    {
+     "type": "number",
+     "tag": "USTAWA",
+     "big": "1",
+     "count": false,
+     "title": "miejsce",
+     "accent": "bez świadków",
+     "body": "Niewidoczne dla **postronnych**.",
+     "source": "ustawa o Policji, art. 15d"
+    },
+    {
+     "type": "number",
+     "tag": "ZAKRES",
+     "big": "3",
+     "count": false,
+     "title": "rzeczy",
+     "accent": "sprawdza policjant",
+     "body": "Odzież, bagaż – zwykle **bez rozbierania**.",
+     "source": "art. 15d ust. 1"
+    },
+    {
+     "type": "text",
+     "tag": "TWIST",
+     "title": "Wyjątek:",
+     "accent": "zagrożenie życia.",
+     "body": "Wtedy **inna płeć** też może.",
+     "source": "art. 15d ust. 6"
+    },
+    {
+     "type": "outro",
+     "question": "Kontrolowano Cię kiedyś na ulicy?",
+     "sub": "Wyślij komuś, kto nie zna swoich praw.",
+     "sources": "To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ]
+  },
+  {
+   "id": "finanse_ike_limit",
+   "format": "reel",
+   "subject": "FINANSE",
+   "muzyka": {},
+   "durations": [
+    3.5,
+    4.5,
+    4.5,
+    4.5,
+    6.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "monety",
+     "pieczatka": "31.12",
+     "title": "28 260 zł ulgi",
+     "accent": "przepada 31 grudnia."
+    },
+    {
+     "type": "number",
+     "tag": "LIMIT",
+     "big": "28 260 zł",
+     "count": false,
+     "title": "wpłat na IKE",
+     "accent": "w 2026 roku",
+     "body": "Niewykorzystany **nie przechodzi** dalej.",
+     "source": "obwieszczenie MRPiPS"
+    },
+    {
+     "type": "number",
+     "tag": "PODATEK",
+     "big": "19%",
+     "count": false,
+     "title": "podatku Belki",
+     "accent": "nie płacisz",
+     "body": "Po **60 r.ż.** i 5 latach.",
+     "source": "ustawa o IKE, art. 34"
+    },
+    {
+     "type": "number",
+     "tag": "TWIST",
+     "big": "57",
+     "count": true,
+     "title": "dni",
+     "accent": "zostało w tym roku",
+     "body": "Od 5.11 do **31.12**.",
+     "source": "obliczenia własne"
+    },
+    {
+     "type": "outro",
+     "question": "Odkładasz na emeryturę sam?",
+     "sub": "Wyślij komuś, kto płaci podatek od zysków.",
+     "sources": "To nie jest porada inwestycyjna.",
+     "partner_slot": false
+    }
+   ]
+  },
+  {
+   "id": "prawo_policja5_dowod",
+   "format": "reel",
+   "subject": "PRAWO",
+   "muzyka": {},
+   "durations": [
+    3.5,
+    4.5,
+    4.5,
+    4.5,
+    6.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "dowod",
+     "pieczatka": "MIT",
+     "title": "Nie musisz nosić",
+     "accent": "dowodu osobistego."
+    },
+    {
+     "type": "number",
+     "tag": "USTAWA",
+     "big": "18",
+     "count": false,
+     "title": "lat",
+     "accent": "i obowiązek",
+     "body": "Dowód trzeba **mieć**, nie nosić.",
+     "source": "ustawa o dowodach, art. 5"
+    },
+    {
+     "type": "text",
+     "tag": "KARA",
+     "title": "Nie masz go?",
+     "accent": "To wykroczenie.",
+     "body": "Grzywna albo **ograniczenie wolności**.",
+     "source": "ustawa o dowodach, art. 79"
+    },
+    {
+     "type": "number",
+     "tag": "TWIST",
+     "big": "8",
+     "count": true,
+     "title": "sposobów",
+     "accent": "ustalenia tożsamości",
+     "body": "Dowód, paszport, mObywatel, **świadek**…",
+     "source": "rozp. RM 2023 poz. 2535, § 4"
+    },
+    {
+     "type": "outro",
+     "question": "Nosisz dowód przy sobie?",
+     "sub": "Wyślij komuś, kto wraca po dowód do domu.",
+     "sources": "To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ]
+  },
+  {
+   "id": "prawo_policja5_dowod_wariantB",
+   "format": "reel",
+   "subject": "PRAWO",
+   "muzyka": {},
+   "durations": [
+    3.5,
+    4.5,
+    4.5,
+    4.5,
+    6.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "dowod",
+     "pieczatka": "8",
+     "title": "Policja ma 8 sposobów,",
+     "accent": "by ustalić, kim jesteś.",
+     "uklad": "zolty"
+    },
+    {
+     "type": "number",
+     "tag": "USTAWA",
+     "big": "18",
+     "count": false,
+     "title": "lat",
+     "accent": "i obowiązek",
+     "body": "Dowód trzeba **mieć**, nie nosić.",
+     "source": "ustawa o dowodach, art. 5"
+    },
+    {
+     "type": "text",
+     "tag": "KARA",
+     "title": "Nie masz go?",
+     "accent": "To wykroczenie.",
+     "body": "Grzywna albo **ograniczenie wolności**.",
+     "source": "ustawa o dowodach, art. 79"
+    },
+    {
+     "type": "number",
+     "tag": "TWIST",
+     "big": "8",
+     "count": true,
+     "title": "sposobów",
+     "accent": "ustalenia tożsamości",
+     "body": "Dowód, paszport, mObywatel, **świadek**…",
+     "source": "rozp. RM 2023 poz. 2535, § 4"
+    },
+    {
+     "type": "outro",
+     "question": "Nosisz dowód przy sobie?",
+     "sub": "Wyślij komuś, kto wraca po dowód do domu.",
+     "sources": "To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ]
+  },
+  {
+   "id": "moto_punkty_rok",
+   "format": "reel",
+   "subject": "MOTORYZACJA",
+   "muzyka": {},
+   "durations": [
+    3.5,
+    4.5,
+    4.5,
+    4.5,
+    6.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "licznik",
+     "pieczatka": "1 ROK",
+     "title": "Punkty znikają",
+     "accent": "rok po zapłacie."
+    },
+    {
+     "type": "number",
+     "tag": "LIMIT",
+     "big": "25",
+     "count": false,
+     "title": "punktów",
+     "accent": "i ponowny egzamin",
+     "body": "Kontrolne sprawdzenie **kwalifikacji**.",
+     "source": "ustawa o kierujących, art. 99"
+    },
+    {
+     "type": "number",
+     "tag": "MAKS.",
+     "big": "15",
+     "count": false,
+     "title": "punktów",
+     "accent": "za jedną kontrolę",
+     "body": "Nawet za **kilka** wykroczeń.",
+     "source": "art. 98 ust. 3"
+    },
+    {
+     "type": "number",
+     "tag": "TWIST",
+     "big": "1 rok",
+     "count": false,
+     "title": "od zapłaty",
+     "accent": "nie od wykroczenia",
+     "body": "Zapłacisz później – **dłużej**.",
+     "source": "art. 98 ust. 5"
+    },
+    {
+     "type": "outro",
+     "question": "Wiesz, ile masz teraz punktów?",
+     "sub": "Wyślij komuś, kto zbiera punkty jak naklejki.",
+     "sources": "Sprawdzisz na gov.pl. To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ]
+  },
+  {
+   "id": "prawo_policja6_50kmh",
+   "format": "reel",
+   "subject": "PRAWO",
+   "muzyka": {},
+   "durations": [
+    3.5,
+    4.5,
+    4.5,
+    4.5,
+    6.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "licznik",
+     "pieczatka": "STOP",
+     "title": "+51 km/h w mieście",
+     "accent": "i 3 miesiące pieszo."
+    },
+    {
+     "type": "number",
+     "tag": "MANDAT",
+     "big": "1500 zł",
+     "count": false,
+     "title": "i 13 punktów",
+     "accent": "za 51–60 km/h",
+     "body": "Przy recydywie: **3000 zł**.",
+     "source": "taryfikator, poz. 79"
+    },
+    {
+     "type": "number",
+     "tag": "STAROSTA",
+     "big": "3 mies.",
+     "count": false,
+     "title": "zatrzymania",
+     "accent": "decyzją starosty",
+     "body": "Mimo to jedziesz? **6 mies.**",
+     "source": "ustawa o kierujących, art. 102"
+    },
+    {
+     "type": "text",
+     "tag": "TWIST",
+     "title": "Poza miastem",
+     "accent": "prawo jazdy zostaje.",
+     "body": "Przepis: **teren zabudowany**.",
+     "source": "art. 102 ust. 1"
+    },
+    {
+     "type": "outro",
+     "question": "Powinno być tak samo poza miastem?",
+     "sub": "Wyślij komuś, kto ma ciężką nogę.",
+     "sources": "To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ]
+  },
+  {
+   "id": "prawo_policja6_50kmh_wariantB",
+   "format": "reel",
+   "subject": "PRAWO",
+   "muzyka": {},
+   "durations": [
+    3.5,
+    4.5,
+    4.5,
+    4.5,
+    6.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "licznik",
+     "pieczatka": "51",
+     "title": "Za miastem +51 km/h.",
+     "accent": "Prawko zostaje.",
+     "uklad": "zolty"
+    },
+    {
+     "type": "number",
+     "tag": "MANDAT",
+     "big": "1500 zł",
+     "count": false,
+     "title": "i 13 punktów",
+     "accent": "za 51–60 km/h",
+     "body": "Przy recydywie: **3000 zł**.",
+     "source": "taryfikator, poz. 79"
+    },
+    {
+     "type": "number",
+     "tag": "STAROSTA",
+     "big": "3 mies.",
+     "count": false,
+     "title": "zatrzymania",
+     "accent": "decyzją starosty",
+     "body": "Mimo to jedziesz? **6 mies.**",
+     "source": "ustawa o kierujących, art. 102"
+    },
+    {
+     "type": "text",
+     "tag": "TWIST",
+     "title": "Poza miastem",
+     "accent": "prawo jazdy zostaje.",
+     "body": "Przepis: **teren zabudowany**.",
+     "source": "art. 102 ust. 1"
+    },
+    {
+     "type": "outro",
+     "question": "Powinno być tak samo poza miastem?",
+     "sub": "Wyślij komuś, kto ma ciężką nogę.",
+     "sources": "To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ]
+  },
+  {
+   "id": "mat_ruletka",
+   "format": "reel",
+   "subject": "MATEMATYKA",
+   "muzyka": {},
+   "durations": [
+    3.5,
+    4.5,
+    4.5,
+    4.5,
+    6.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "ruletka",
+     "pieczatka": "2,7%",
+     "title": "Kasyno nie oszukuje.",
+     "accent": "Ma jedno zero."
+    },
+    {
+     "type": "number",
+     "tag": "KOŁO",
+     "big": "37",
+     "count": false,
+     "title": "pól na kole",
+     "accent": "36 liczb + zero",
+     "body": "Płaci jak przy **36**.",
+     "source": "zasady ruletki europejskiej"
+    },
+    {
+     "type": "number",
+     "tag": "PRZEWAGA",
+     "big": "2,7%",
+     "count": false,
+     "title": "z każdego zakładu",
+     "accent": "zostaje w kasynie",
+     "body": "1 do 37 – **policzone**.",
+     "source": "rachunek prawdopodobieństwa"
+    },
+    {
+     "type": "number",
+     "tag": "TWIST",
+     "big": "52,6 zł",
+     "count": false,
+     "title": "z każdego 1000 zł",
+     "accent": "przy dwóch zerach",
+     "body": "Jedno zero: **27 zł**.",
+     "source": "obliczenia własne"
+    },
+    {
+     "type": "outro",
+     "question": "Znasz kogoś z „systemem” na ruletkę?",
+     "sub": "Wyślij mu – matematyka wygrywa.",
+     "sources": "Hazard uzależnia.",
+     "partner_slot": false
+    }
+   ]
+  },
+  {
+   "id": "prawo_policja7_milczenie",
+   "format": "reel",
+   "subject": "PRAWO",
+   "muzyka": {},
+   "durations": [
+    3.5,
+    4.5,
+    4.5,
+    4.5,
+    6.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "odznaka",
+     "pieczatka": "PRAWO",
+     "title": "Zatrzymany nie musi",
+     "accent": "nic mówić."
+    },
+    {
+     "type": "number",
+     "tag": "K.P.K.",
+     "big": "0",
+     "count": false,
+     "title": "obowiązku",
+     "accent": "składania wyjaśnień",
+     "body": "Bez **podawania powodu**.",
+     "source": "k.p.k. art. 175"
+    },
+    {
+     "type": "number",
+     "tag": "ADWOKAT",
+     "big": "1",
+     "count": false,
+     "title": "rozmowa",
+     "accent": "z adwokatem",
+     "body": "Na żądanie – **niezwłocznie**.",
+     "source": "k.p.k. art. 245"
+    },
+    {
+     "type": "text",
+     "tag": "TWIST",
+     "title": "Nie musisz",
+     "accent": "dowodzić niewinności.",
+     "body": "Winę musi **udowodnić** oskarżyciel.",
+     "source": "k.p.k. art. 74 § 1"
+    },
+    {
+     "type": "outro",
+     "question": "Milczałbyś czy tłumaczył się?",
+     "sub": "Wyślij komuś, kto zawsze się tłumaczy.",
+     "sources": "To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ]
+  },
+  {
+   "id": "prawo_policja7_milczenie_wariantB",
+   "format": "reel",
+   "subject": "PRAWO",
+   "muzyka": {},
+   "durations": [
+    3.5,
+    4.5,
+    4.5,
+    4.5,
+    6.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "odznaka",
+     "pieczatka": "0",
+     "title": "Nie musisz",
+     "accent": "udowadniać, że jesteś niewinny.",
+     "uklad": "zolty"
+    },
+    {
+     "type": "number",
+     "tag": "K.P.K.",
+     "big": "0",
+     "count": false,
+     "title": "obowiązku",
+     "accent": "składania wyjaśnień",
+     "body": "Bez **podawania powodu**.",
+     "source": "k.p.k. art. 175"
+    },
+    {
+     "type": "number",
+     "tag": "ADWOKAT",
+     "big": "1",
+     "count": false,
+     "title": "rozmowa",
+     "accent": "z adwokatem",
+     "body": "Na żądanie – **niezwłocznie**.",
+     "source": "k.p.k. art. 245"
+    },
+    {
+     "type": "text",
+     "tag": "TWIST",
+     "title": "Nie musisz",
+     "accent": "dowodzić niewinności.",
+     "body": "Winę musi **udowodnić** oskarżyciel.",
+     "source": "k.p.k. art. 74 § 1"
+    },
+    {
+     "type": "outro",
+     "question": "Milczałbyś czy tłumaczył się?",
+     "sub": "Wyślij komuś, kto zawsze się tłumaczy.",
+     "sources": "To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ]
+  },
+  {
+   "id": "kosmos_saturn_woda",
+   "format": "reel",
+   "subject": "KOSMOS",
+   "muzyka": {},
+   "durations": [
+    3.5,
+    4.5,
+    4.5,
+    4.5,
+    6.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "saturn",
+     "pieczatka": "0,69",
+     "title": "Saturn",
+     "accent": "pływałby w wodzie."
+    },
+    {
+     "type": "number",
+     "tag": "NASA",
+     "big": "0,687",
+     "count": false,
+     "title": "g/cm³",
+     "accent": "średnia gęstość",
+     "body": "Woda: **1**. Saturn – mniej.",
+     "source": "NASA, Saturn Fact Sheet"
+    },
+    {
+     "type": "number",
+     "tag": "SKALA",
+     "big": "95",
+     "count": false,
+     "title": "mas Ziemi",
+     "accent": "a i tak lekki",
+     "body": "Ma **764** objętości Ziemi.",
+     "source": "NASA, Saturn Fact Sheet"
+    },
+    {
+     "type": "number",
+     "tag": "TWIST",
+     "big": "8×",
+     "count": false,
+     "title": "gęstsza",
+     "accent": "jest Ziemia",
+     "body": "Ziemia: **5,51** g/cm³.",
+     "source": "NASA, Earth Fact Sheet"
+    },
+    {
+     "type": "outro",
+     "question": "Wiedziałeś, że Saturn jest lżejszy od wody?",
+     "sub": "Wyślij komuś, kto patrzy w gwiazdy.",
+     "sources": "Źródło: NASA.",
+     "partner_slot": false
+    }
+   ]
+  }
+ ]
+}

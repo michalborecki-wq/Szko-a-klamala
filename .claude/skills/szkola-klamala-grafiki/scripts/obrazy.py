@@ -6,7 +6,7 @@ Każda ma animację CSS (silnik ustawia czas klatki, więc ruch jest determinist
 a główny kształt jest widoczny od klatki 0. Użycie w slajdzie `cover`: "obraz": "<nazwa>".
 
 Nazwy: opona, polska (+ "obraz_opcje": {"granica": "CZE", "przekreslona": "DEU"}), torba, suwak,
-dowod, monety. Nowy obraz: dopisz funkcję i dodaj do OBRAZY.
+dowod, monety, zegar, licznik, ruletka, saturn, odznaka. Nowy obraz: dopisz funkcję i dodaj do OBRAZY.
 """
 import json
 import math
@@ -146,7 +146,73 @@ def opona(**_):
     return _svg("-340 -400 760 760", f"<g class='ob-in'>{kolo}</g>{platek}")
 
 
-OBRAZY = {"polska": polska, "torba": torba, "suwak": suwak, "dowod": dowod, "monety": monety, "opona": opona}
+def zegar(**_):
+    # tarcza zegara z biegnącą wskazówką i łukiem „48 h”
+    ticks = "".join(f"<path d='M0 -270 V-{240 if k % 3 else 215}' stroke='{W}' stroke-width='{10 if k % 3 else 18}' "
+                    f"stroke-linecap='round' transform='rotate({k * 30})'/>" for k in range(12))
+    luk = (f"<circle r='320' fill='none' stroke='{Y}' stroke-width='34' stroke-linecap='round' pathLength='1' "
+           f"class='ob-draw' transform='rotate(-90)'/>")
+    wsk = (f"<g class='ob-spin'><path d='M0 30 V-235' stroke='{R}' stroke-width='16' stroke-linecap='round'/></g>"
+           f"<path d='M0 0 V-150' stroke='{W}' stroke-width='24' stroke-linecap='round' transform='rotate(60)'/>"
+           f"<circle r='26' fill='{W}'/>")
+    return _svg("-380 -380 760 760", f"<g class='ob-in'><circle r='290' fill='{N2}' stroke='{B}' stroke-width='18'/>"
+                f"{ticks}{wsk}</g>{luk}")
+
+
+def licznik(**_):
+    # prędkościomierz: łuk, czerwona strefa i wskazówka wbijająca się w czerwone
+    kreski = "".join(f"<path d='M0 -300 V-262' stroke='{W}' stroke-width='10' stroke-linecap='round' "
+                     f"transform='rotate({-120 + k * 20})'/>" for k in range(13))
+    czerw = (f"<path d='M{300*math.sin(math.radians(60)):.1f} {-300*math.cos(math.radians(60)):.1f} "
+             f"A300 300 0 0 1 {300*math.sin(math.radians(120)):.1f} {-300*math.cos(math.radians(120)):.1f}' "
+             f"fill='none' stroke='{R}' stroke-width='40'/>")
+    wsk = (f"<g style='transform-box:view-box;transform-origin:0 0;animation:obNeedle 1.4s cubic-bezier(.3,1.5,.5,1) .2s both'>"
+           f"<path d='M-14 0 L0 -250 L14 0 Z' fill='{Y}'/></g><circle r='34' fill='{W}'/>"
+           f"<style>@keyframes obNeedle{{from{{transform:rotate(-120deg)}}to{{transform:rotate(95deg)}}}}</style>")
+    return _svg("-380 -360 760 620", f"<g class='ob-in'><path d='M-260 150 A300 300 0 1 1 260 150' fill='none' "
+                f"stroke='{N2}' stroke-width='70'/>{czerw}{kreski}{wsk}</g>")
+
+
+def ruletka(**_):
+    pola = ""
+    for k in range(37):
+        a0, a1 = math.radians(k * 360 / 37), math.radians((k + 1) * 360 / 37)
+        col = "#1FA35A" if k == 0 else (R if k % 2 else "#141A2B")
+        pola += (f"<path d='M0 0 L{300*math.sin(a0):.1f} {-300*math.cos(a0):.1f} A300 300 0 0 1 "
+                 f"{300*math.sin(a1):.1f} {-300*math.cos(a1):.1f} Z' fill='{col}' stroke='{Y}' stroke-width='2'/>")
+    kolo = (f"<g class='ob-spin'>{pola}<circle r='170' fill='#7A4A1A'/><circle r='150' fill='#5C3510'/>"
+            + "".join(f"<path d='M0 -40 V-140' stroke='{Y}' stroke-width='16' stroke-linecap='round' transform='rotate({k*90})'/>" for k in range(4))
+            + f"<circle r='40' fill='{Y}'/></g>")
+    return _svg("-360 -360 720 720", f"<g class='ob-in'><circle r='330' fill='#5C3510'/>{kolo}"
+                f"<circle cx='0' cy='-250' r='22' fill='{W}' class='ob-pulse'/></g>")
+
+
+def saturn(**_):
+    ring = lambda op, back: (f"<ellipse rx='380' ry='92' fill='none' stroke='{Y}' stroke-width='30' opacity='{op}' "
+                             f"transform='rotate(-18)' {'clip-path="url(#tyl)"' if back else ''}/>")
+    planeta = (f"<defs><clipPath id='tyl'><rect x='-500' y='-500' width='1000' height='500'/></clipPath>"
+               f"<linearGradient id='sat' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='#F2D38A'/>"
+               f"<stop offset='.5' stop-color='#D9A94E'/><stop offset='1' stop-color='#B8812F'/></linearGradient></defs>"
+               f"{ring(.55, True)}<circle r='200' fill='url(#sat)'/>"
+               + "".join(f"<path d='M-200 {y} Q0 {y+18} 200 {y}' stroke='#B8812F' stroke-width='10' fill='none' opacity='.5'/>" for y in (-90, -20, 60))
+               + f"<ellipse rx='380' ry='92' fill='none' stroke='{Y}' stroke-width='30' transform='rotate(-18)' "
+               f"stroke-dasharray='600 1800' stroke-dashoffset='-300'/>")
+    woda = (f"<path d='M-420 250 Q-320 220 -210 250 T0 250 T210 250 T420 250 V420 H-420 Z' fill='{B}' opacity='.75'/>")
+    return _svg("-440 -330 880 760", f"<g class='ob-in'><g style='animation:obPulse 2.4s ease-in-out infinite;"
+                f"transform-box:fill-box;transform-origin:center'>{planeta}</g>{woda}</g>")
+
+
+def odznaka(**_):
+    # ogólna tarcza „służb” (bez godła i bez logo Policji)
+    tarcza = (f"<path d='M0 -300 L240 -210 V20 C240 180 120 270 0 320 C-120 270 -240 180 -240 20 V-210 Z' "
+              f"fill='{B}' stroke='{W}' stroke-width='18'/>"
+              f"<path d='M0 -220 L170 -155 V20 C170 130 90 200 0 235 C-90 200 -170 130 -170 20 V-155 Z' fill='{N2}'/>")
+    gw = "M0 -120 L32 -40 L118 -38 L50 14 L74 98 L0 50 L-74 98 L-50 14 L-118 -38 L-32 -40 Z"
+    return _svg("-320 -340 640 700", f"<g class='ob-in'>{tarcza}<path d='{gw}' fill='{Y}' class='ob-pulse'/></g>")
+
+
+OBRAZY = {"polska": polska, "torba": torba, "suwak": suwak, "dowod": dowod, "monety": monety, "opona": opona, "zegar": zegar,
+          "licznik": licznik, "ruletka": ruletka, "saturn": saturn, "odznaka": odznaka}
 
 
 def html(nazwa, opcje=None, wysokosc=520, pieczatka=None):
