@@ -50,12 +50,11 @@ Stan na 29.10.2026. Właściciel: Michał Borecki. Język pracy: **polski**.
 - Na polecenie Michała „zasięg jak najszybciej”: **test krótkich rolek ok. 10 s** (4 plansze, wersja „krótka” obok długiej, TikTok + Rolka próbna IG) i **ruch w 1. sekundzie** (tło 3D). Reguła „min. 20 s” obowiązuje dalej dla głównych rolek do wyniku testu (porównanie po 7 dniach).
 - Każda rolka: pierwszy komentarz autora z pytaniem (przypięty), odpowiedzi w 1. godzinie.
 
-## Zadanie cykliczne – NIE DUBLOWAĆ
+## Agent autonomiczny i zadanie cykliczne – NIE DUBLOWAĆ
 
-- W claude.ai działa zadanie „„Szkoła kłamała” – materiały tygodnia do ręcznej publikacji (IG, TikTok)”, id `trig_012NQ3c9krCrwpm1W16pPmbU`, niedziela 17:32 (Europe/Warsaw). Przygotowuje materiały na pon.–sob. według planu wyżej i wysyła push.
-- **Nie twórz drugiego, równoległego zadania** – Michał dostałby podwójne materiały.
-- **4–8.11: nowe rolki w szablonie C przygotowane ręcznie 4.11 (`specs/tydzien_4-8.11_*.json`; środa wieczór + po 2 dziennie czw.–nd., 6 z serii o policji) – zastępują resztę planu z `docs/plan-2-7.11.md`.**
-- **Tydzień 2–7.11: rolki IG przygotowane ręcznie 1.11 (`docs/plan-2-7.11.md`)** – zadanie tygodniowe w tym tygodniu nie robi nowych rolek. Dokłada tylko posty uzupełniające (karuzele TikTok, karuzela IG) i nie powtarza tych tematów.
+- **Od 5.11 (decyzja Michała 4.11): agent codzienny** – skill `.claude/skills/szkola-klamala-agent/` (procedura krok po kroku) i subagent `.claude/agents/szkola-klamala-agent.md`. Codziennie ok. 7:13 (Europe/Warsaw) zadanie w claude.ai uruchamia agenta: statystyki IG przez Composio (tylko odczyt) → analiza → 2 rolki w szablonie C (A + B do Rolki próbnej, TikTok 1080, okładki) → opisy, przypięte komentarze, relacje, szkice odpowiedzi → zapis w `publikacje/RRRR-MM-DD/` i `docs/agent/` → push. **Agent nie publikuje** – Michał publikuje ręcznie.
+- Plan i status dni: `docs/agent/kalendarz.md` (dni oznaczone „gotowe” agent pomija przy tworzeniu rolek); wnioski: `docs/agent/dziennik.md`.
+- **Jest tylko jedno zadanie cykliczne** (dawne tygodniowe `trig_012NQ3c9krCrwpm1W16pPmbU` usunięte 4.11 i zastąpione codziennym – id w `docs/agent/dziennik.md`). Nie twórz drugiego.
 
 ## Grafiki
 
