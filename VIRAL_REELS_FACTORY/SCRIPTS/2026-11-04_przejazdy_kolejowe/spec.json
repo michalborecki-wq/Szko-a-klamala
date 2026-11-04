@@ -1,0 +1,120 @@
+{
+ "handle": "@szkola_klamala",
+ "posts": [
+  {
+   "id": "przejazdy_kolejowe",
+   "format": "reel",
+   "subject": "MOTORYZACJA",
+   "muzyka": {},
+   "durations": [
+    3.5,
+    4.5,
+    4.5,
+    4.5,
+    6.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "licznik",
+     "pieczatka": "STOP",
+     "title": "Pod szlabanem",
+     "accent": "tracisz prawo jazdy."
+    },
+    {
+     "type": "number",
+     "tag": "NOWE PRAWO",
+     "big": "3 mies.",
+     "count": false,
+     "title": "bez prawa jazdy",
+     "accent": "za pokwitowaniem",
+     "body": "Zabiera **policja od ręki**.",
+     "source": "druk 3101"
+    },
+    {
+     "type": "number",
+     "tag": "KODEKS KARNY",
+     "big": "3 lata",
+     "count": false,
+     "title": "zakazu jazdy",
+     "accent": "minimum",
+     "body": "Za **spowodowanie katastrofy**.",
+     "source": "art. 173 i 42 k.k. (druk 3101)"
+    },
+    {
+     "type": "text",
+     "tag": "TWIST",
+     "title": "Korek za torami?",
+     "accent": "Też tracisz prawko.",
+     "body": "Brak **miejsca za przejazdem**.",
+     "source": "druk 3101"
+    },
+    {
+     "type": "outro",
+     "question": "Za surowo czy za późno?",
+     "sub": "Wyślij komuś, kto przemyka pod szlabanem.",
+     "sources": "Ustawa podpisana 4.11. To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ]
+  },
+  {
+   "id": "przejazdy_kolejowe_wariantB",
+   "format": "reel",
+   "subject": "MOTORYZACJA",
+   "muzyka": {},
+   "durations": [
+    3.5,
+    4.5,
+    4.5,
+    4.5,
+    6.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "licznik",
+     "pieczatka": "3 MIES.",
+     "title": "Korek za torami",
+     "accent": "i tracisz prawko.",
+     "uklad": "zolty"
+    },
+    {
+     "type": "number",
+     "tag": "NOWE PRAWO",
+     "big": "3 mies.",
+     "count": false,
+     "title": "bez prawa jazdy",
+     "accent": "za pokwitowaniem",
+     "body": "Zabiera **policja od ręki**.",
+     "source": "druk 3101"
+    },
+    {
+     "type": "number",
+     "tag": "KODEKS KARNY",
+     "big": "3 lata",
+     "count": false,
+     "title": "zakazu jazdy",
+     "accent": "minimum",
+     "body": "Za **spowodowanie katastrofy**.",
+     "source": "art. 173 i 42 k.k. (druk 3101)"
+    },
+    {
+     "type": "text",
+     "tag": "TWIST",
+     "title": "Korek za torami?",
+     "accent": "Też tracisz prawko.",
+     "body": "Brak **miejsca za przejazdem**.",
+     "source": "druk 3101"
+    },
+    {
+     "type": "outro",
+     "question": "Za surowo czy za późno?",
+     "sub": "Wyślij komuś, kto przemyka pod szlabanem.",
+     "sources": "Ustawa podpisana 4.11. To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ]
+  }
+ ]
+}

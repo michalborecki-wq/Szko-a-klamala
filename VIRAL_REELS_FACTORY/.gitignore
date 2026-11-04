@@ -1,0 +1,8 @@
+# pliki binarne nie trafiają do gita (rozmiar) – zostają w kontenerze i idą do Michała przez SendUserFile
+*.mp4
+*.wav
+*.mp3
+VIDEOS/**
+!VIDEOS/.gitkeep
+READY_TO_PUBLISH/**/*.jpg
+PUBLISHED/**/*.jpg

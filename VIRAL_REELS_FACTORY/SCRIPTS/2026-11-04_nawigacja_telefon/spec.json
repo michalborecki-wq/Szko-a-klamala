@@ -1,0 +1,124 @@
+{
+ "handle": "@szkola_klamala",
+ "posts": [
+  {
+   "id": "nawigacja_telefon",
+   "format": "reel",
+   "subject": "MOTORYZACJA",
+   "muzyka": {},
+   "durations": [
+    3.5,
+    4.5,
+    4.5,
+    4.5,
+    6.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "licznik",
+     "pieczatka": "500 ZŁ",
+     "title": "Nawigacja w telefonie",
+     "accent": "– 500 zł mandatu."
+    },
+    {
+     "type": "number",
+     "tag": "TARYFIKATOR",
+     "big": "500 zł",
+     "count": false,
+     "title": "i 12 punktów",
+     "accent": "telefon w ręku",
+     "body": "Nawet przy **samej mapie**.",
+     "source": "taryfikator, poz. 67"
+    },
+    {
+     "type": "number",
+     "tag": "PUNKTY",
+     "big": "12",
+     "count": false,
+     "title": "z 24",
+     "accent": "dopuszczalnych",
+     "body": "Trzeci raz = **ponowny egzamin**.",
+     "source": "rozp. MSWiA, poz. H 09"
+    },
+    {
+     "type": "number",
+     "tag": "TWIST",
+     "big": "0 zł",
+     "count": false,
+     "title": "w uchwycie",
+     "accent": "ta sama mapa",
+     "body": "Zakaz: telefon **w ręku**.",
+     "source": "PoRD art. 45"
+    },
+    {
+     "type": "outro",
+     "question": "Trzymasz telefon w ręku, gdy jedziesz?",
+     "sub": "Wyślij komuś, kto nawiguje z kolan.",
+     "sources": "To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ]
+  },
+  {
+   "id": "nawigacja_telefon_wariantB",
+   "format": "reel",
+   "subject": "MOTORYZACJA",
+   "muzyka": {},
+   "durations": [
+    3.5,
+    4.5,
+    4.5,
+    4.5,
+    6.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "licznik",
+     "pieczatka": "UCHWYT",
+     "title": "W uchwycie 0 zł.",
+     "accent": "W ręku 500 zł.",
+     "uklad": "zolty"
+    },
+    {
+     "type": "number",
+     "tag": "TARYFIKATOR",
+     "big": "500 zł",
+     "count": false,
+     "title": "i 12 punktów",
+     "accent": "telefon w ręku",
+     "body": "Nawet przy **samej mapie**.",
+     "source": "taryfikator, poz. 67"
+    },
+    {
+     "type": "number",
+     "tag": "PUNKTY",
+     "big": "12",
+     "count": false,
+     "title": "z 24",
+     "accent": "dopuszczalnych",
+     "body": "Trzeci raz = **ponowny egzamin**.",
+     "source": "rozp. MSWiA, poz. H 09"
+    },
+    {
+     "type": "number",
+     "tag": "TWIST",
+     "big": "0 zł",
+     "count": false,
+     "title": "w uchwycie",
+     "accent": "ta sama mapa",
+     "body": "Zakaz: telefon **w ręku**.",
+     "source": "PoRD art. 45"
+    },
+    {
+     "type": "outro",
+     "question": "Trzymasz telefon w ręku, gdy jedziesz?",
+     "sub": "Wyślij komuś, kto nawiguje z kolan.",
+     "sources": "To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,184 @@
+{
+ "handle": "@szkola_klamala",
+ "posts": [
+  {
+   "id": "zus_umorzenie",
+   "format": "reel",
+   "subject": "FINANSE",
+   "muzyka": {},
+   "durations": [
+    3.5,
+    4.5,
+    4.5,
+    4.5,
+    6.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "monety",
+     "pieczatka": "UMORZONE",
+     "title": "ZUS daruje 315 mln zł.",
+     "accent": "Jest haczyk."
+    },
+    {
+     "type": "number",
+     "tag": "SEJM",
+     "big": "315 mln zł",
+     "count": false,
+     "title": "długów",
+     "accent": "sprzed 1999 roku",
+     "body": "**7,1 tys.** płatników.",
+     "source": "druk sejmowy nr 3010"
+    },
+    {
+     "type": "number",
+     "tag": "KOSZT",
+     "big": "135 mln zł",
+     "count": false,
+     "title": "na ściąganie",
+     "accent": "przez 10 lat",
+     "body": "Odzyskano by **13,9 mln**.",
+     "source": "uzasadnienie projektu"
+    },
+    {
+     "type": "text",
+     "tag": "TWIST",
+     "title": "Przedsiębiorcom",
+     "accent": "lata wypadną z emerytury.",
+     "body": "Odmowa: **30 dni**.",
+     "source": "art. 3 i 6"
+    },
+    {
+     "type": "outro",
+     "question": "Co byś wybrał na ich miejscu?",
+     "sub": "Wyślij komuś, kto miał firmę w latach 90.",
+     "sources": "To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ]
+  },
+  {
+   "id": "zus_umorzenie_wariantB",
+   "format": "reel",
+   "subject": "FINANSE",
+   "muzyka": {},
+   "durations": [
+    3.5,
+    4.5,
+    4.5,
+    4.5,
+    6.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "monety",
+     "pieczatka": "135 MLN",
+     "title": "ZUS wydałby 135 mln",
+     "accent": "na 14 mln.",
+     "uklad": "zolty"
+    },
+    {
+     "type": "number",
+     "tag": "SEJM",
+     "big": "315 mln zł",
+     "count": false,
+     "title": "długów",
+     "accent": "sprzed 1999 roku",
+     "body": "**7,1 tys.** płatników.",
+     "source": "druk sejmowy nr 3010"
+    },
+    {
+     "type": "number",
+     "tag": "KOSZT",
+     "big": "135 mln zł",
+     "count": false,
+     "title": "na ściąganie",
+     "accent": "przez 10 lat",
+     "body": "Odzyskano by **13,9 mln**.",
+     "source": "uzasadnienie projektu"
+    },
+    {
+     "type": "text",
+     "tag": "TWIST",
+     "title": "Przedsiębiorcom",
+     "accent": "lata wypadną z emerytury.",
+     "body": "Odmowa: **30 dni**.",
+     "source": "art. 3 i 6"
+    },
+    {
+     "type": "outro",
+     "question": "Co byś wybrał na ich miejscu?",
+     "sub": "Wyślij komuś, kto miał firmę w latach 90.",
+     "sources": "To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ]
+  },
+  {
+   "id": "zus_umorzenie_lektor",
+   "format": "reel",
+   "subject": "FINANSE",
+   "muzyka": {
+    "nastroj": "spokojny"
+   },
+   "durations": [
+    3.5,
+    4.5,
+    4.5,
+    4.5,
+    6.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "monety",
+     "pieczatka": "UMORZONE",
+     "title": "ZUS daruje 315 mln zł.",
+     "accent": "Jest haczyk.",
+     "lektor": "ZUS daruje trzysta piętnaście milionów złotych długów. Ale jest haczyk."
+    },
+    {
+     "type": "number",
+     "tag": "SEJM",
+     "big": "315 mln zł",
+     "count": false,
+     "title": "długów",
+     "accent": "sprzed 1999 roku",
+     "body": "**7,1 tys.** płatników.",
+     "source": "druk sejmowy nr 3010",
+     "lektor": "Chodzi o składki sprzed tysiąc dziewięćset dziewięćdziesiątego dziewiątego roku. Około siedmiu tysięcy płatników. Bez żadnego wniosku."
+    },
+    {
+     "type": "number",
+     "tag": "KOSZT",
+     "big": "135 mln zł",
+     "count": false,
+     "title": "na ściąganie",
+     "accent": "przez 10 lat",
+     "body": "Odzyskano by **13,9 mln**.",
+     "source": "uzasadnienie projektu",
+     "lektor": "Dlaczego? Bo przez dziesięć lat ściąganie tych długów kosztowałoby około stu trzydziestu pięciu milionów złotych. A odzyskano by niecałe czternaście."
+    },
+    {
+     "type": "text",
+     "tag": "TWIST",
+     "title": "Przedsiębiorcom",
+     "accent": "lata wypadną z emerytury.",
+     "body": "Odmowa: **30 dni**.",
+     "source": "art. 3 i 6",
+     "lektor": "Haczyk: przedsiębiorcom umorzone lata nie wliczą się do emerytury. Na odmowę jest tylko trzydzieści dni."
+    },
+    {
+     "type": "outro",
+     "question": "Co byś wybrał na ich miejscu?",
+     "sub": "Wyślij komuś, kto miał firmę w latach 90.",
+     "sources": "To nie jest porada prawna.",
+     "partner_slot": false,
+     "lektor": "Co byś wybrał na ich miejscu? Wyślij to komuś, kto miał firmę w latach dziewięćdziesiątych."
+    }
+   ]
+  }
+ ]
+}

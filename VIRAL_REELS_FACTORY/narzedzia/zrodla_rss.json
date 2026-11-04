@@ -1,0 +1,40 @@
+{
+ "uwaga": "Kanały RSS do porannego przeglądu. Nagłówki to tylko punkt wyjścia – każdy fakt sprawdzić w źródle pierwotnym (min. 2 niezależne źródła).",
+ "kanaly": [
+  {
+   "nazwa": "Google News PL",
+   "url": "https://news.google.com/rss?hl=pl&gl=PL&ceid=PL:pl",
+   "typ": "agregator"
+  },
+  {
+   "nazwa": "Google News PL – prawo",
+   "url": "https://news.google.com/rss/search?q=przepisy+OR+ustawa+OR+mandat+OR+policja&hl=pl&gl=PL&ceid=PL:pl",
+   "typ": "agregator"
+  },
+  {
+   "nazwa": "Google News PL – pieniądze",
+   "url": "https://news.google.com/rss/search?q=podatek+OR+ceny+OR+pensja+OR+ZUS&hl=pl&gl=PL&ceid=PL:pl",
+   "typ": "agregator"
+  },
+  {
+   "nazwa": "Google News PL – nauka i technologia",
+   "url": "https://news.google.com/rss/search?q=naukowcy+OR+odkrycie+OR+sztuczna+inteligencja&hl=pl&gl=PL&ceid=PL:pl",
+   "typ": "agregator"
+  },
+  {
+   "nazwa": "Rzeczpospolita",
+   "url": "https://www.rp.pl/rss_main",
+   "typ": "dziennik"
+  },
+  {
+   "nazwa": "TVN24 – najnowsze",
+   "url": "https://tvn24.pl/najnowsze.xml",
+   "typ": "telewizja"
+  },
+  {
+   "nazwa": "Google News – world (EN)",
+   "url": "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en",
+   "typ": "agregator"
+  }
+ ]
+}

@@ -28,6 +28,15 @@ Nie wolno: publikować, komentować ani odpowiadać na koncie (żadnych narzędz
 - Wniosek w 1–3 zdaniach do `docs/agent/dziennik.md`. Jeśli wzór się powtarza 3 razy – dopisz go do sekcji 0 skilla `szkola-klamala-viral`.
 - Rekord do pobicia: Policja #1 „norma legitymowań” – ponad 2 tys. wyświetleń (4.11).
 
+## 2a. Fabryka – research i ranking (codziennie, VIRAL_REELS_FACTORY)
+
+1. `cd VIRAL_REELS_FACTORY/narzedzia && python3 research.py` → `RESEARCH/<data>/naglowki.md` (RSS z 72 h).
+2. Z nagłówków i z WebSearch wybierz ok. 12–15 kandydatów we wszystkich kategoriach A–E (A: bieżące decyzje i absurdy prawa – **polityka tylko jako fakty**; B: ciekawostki; C: pieniądze, praca, codzienność; D: technologia i AI; E: dylematy, podwójne standardy). Dla każdego: oceny 1–10 (emocje, dyskusja, aktualność, zaskoczenie, film, udostępnienia), źródła z datami, `weryfikacja`, `rodzaj`, `granice` → `TOPICS/<data>/tematy.json` (wzór: `TOPICS/2026-11-04/tematy.json`).
+3. `python3 ranking.py` → `TOP10.md` + `top3.json`. Do produkcji tylko tematy dopuszczone (fakt, ≥2 niezależne źródła, w granicach). Nie wymyślaj aktualności; strona niedostępna (np. 403) = szukaj innego źródła albo odrzuć.
+4. Dla TOP 3: `python3 nowa_rolka.py <nazwa> --tytul "…" [--lektor]` (lektor: 1 rolka dziennie, decyzja 4.11) → wypełnij `scenariusz.md` (3 warianty: kontrowersyjny / ciekawostkowy / emocjonalny + rekomendacja + karta 20 pkt + tekst lektorski), `spec.json` (A, `_wariantB`, opcjonalnie `_lektor`), `opis.md`, `zrodla.md`, `meta.json`. Wzory: `SCRIPTS/2026-11-04_*`.
+5. Produkcja: `python3 produkcja.py <rid>` w tle, rolka po rolce (2 rolki na dziś; trzecia – scenariusz na zapas). Gotowe paczki: `READY_TO_PUBLISH/<rid>/` (pliki, okładki, opis, LISTA.md).
+6. Statystyki: wpisz wyniki z Composio i zrzutów (`python3 analityka.py dodaj …` albo `import`), raz w tygodniu `python3 analityka.py raport` → wnioski do kroku 2.
+
 ## 3. Wybór 2 tematów na dziś
 
 - **Rytm tygodnia:** pon., śr., pt. – 2. rolka dnia z serii **„Co może policja”** (wieczór); pozostałe dni – 1 rolka policyjna co drugi dzień. Każdego dnia co najmniej 1 temat z: prawo / finanse / motoryzacja / medycyna. Raz w tygodniu wiedza ogólna (rekord, kosmos, ciało) w szablonie B.

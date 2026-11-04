@@ -1,0 +1,118 @@
+[
+ {
+  "id": "zus_umorzenie_1999",
+  "tytul": "ZUS umarza 315 mln zł długów sprzed 1999 r. – ale te lata wypadną z emerytury",
+  "kategoria": "C",
+  "oceny": {
+   "emocje": 8,
+   "dyskusja": 9,
+   "aktualnosc": 10,
+   "zaskoczenie": 9,
+   "film": 8,
+   "udostepnienia": 8
+  },
+  "zrodla": [
+   {
+    "nazwa": "Sejm – druk nr 3010 (rządowy projekt z uzasadnieniem)",
+    "url": "https://api.sejm.gov.pl/sejm/term10/prints/3010",
+    "data": "2026-09"
+   },
+   {
+    "nazwa": "Polsat News – komunikat KPRP o podpisaniu 5 ustaw",
+    "url": "https://www.polsatnews.pl/wiadomosc/2026-11-04/karol-nawrocki-podpisal-piec-ustaw-jest-komunikat-kancelarii-prezydenta/",
+    "data": "2026-11-04"
+   },
+   {
+    "nazwa": "Interia Biznes",
+    "url": "https://biznes.interia.pl/gospodarka/news-karol-nawrocki-podpisal-piec-ustaw-zmiany-dotycza-m-in-zus-i,nId,23568864",
+    "data": "2026-11-04"
+   }
+  ],
+  "weryfikacja": "potwierdzone",
+  "rodzaj": "fakt",
+  "granice": "polityka-fakty",
+  "haczyk": "ZUS daruje 315 mln zł długów. Jest haczyk.",
+  "uwagi": "Liczby z uzasadnienia projektu (stan na 31.12.2025?) – podać „wg uzasadnienia rządowego projektu”; tekst uchwalony mógł się różnić – sprawdzić Dz.U. po ogłoszeniu.",
+  "suma": 52,
+  "dopuszczony": true
+ },
+ {
+  "id": "przejazdy_kolejowe_3mies",
+  "tytul": "Szlaban w dół i jedziesz? Od teraz 3 miesiące bez prawa jazdy od ręki",
+  "kategoria": "A",
+  "oceny": {
+   "emocje": 7,
+   "dyskusja": 8,
+   "aktualnosc": 10,
+   "zaskoczenie": 6,
+   "film": 8,
+   "udostepnienia": 8
+  },
+  "zrodla": [
+   {
+    "nazwa": "Sejm – druk nr 3101 (rządowy projekt)",
+    "url": "https://api.sejm.gov.pl/sejm/term10/prints/3101",
+    "data": "2026-09-15"
+   },
+   {
+    "nazwa": "Polsat News – komunikat KPRP",
+    "url": "https://www.polsatnews.pl/wiadomosc/2026-11-04/karol-nawrocki-podpisal-piec-ustaw-jest-komunikat-kancelarii-prezydenta/",
+    "data": "2026-11-04"
+   },
+   {
+    "nazwa": "Rzeczpospolita",
+    "url": "https://www.rp.pl/prawo-w-polsce/art45443541-prezydent-karol-nawrocki-podpisal-piec-ustaw",
+    "data": "2026-11-04"
+   }
+  ],
+  "weryfikacja": "potwierdzone",
+  "rodzaj": "fakt",
+  "granice": "polityka-fakty",
+  "haczyk": "Szlaban w dół? Prawo jazdy zostaje na torach.",
+  "uwagi": "Wchodzi 14 dni po ogłoszeniu w Dz.U. (wg projektu). Policja zatrzymuje dokument za pokwitowaniem; k.k. – obligatoryjny zakaz przy art. 173/174.",
+  "suma": 47,
+  "dopuszczony": true
+ },
+ {
+  "id": "nawigacja_telefon_500",
+  "tytul": "Nawigacja w ręku = 500 zł i 12 punktów. W uchwycie – 0 zł",
+  "kategoria": "C",
+  "oceny": {
+   "emocje": 6,
+   "dyskusja": 7,
+   "aktualnosc": 7,
+   "zaskoczenie": 7,
+   "film": 7,
+   "udostepnienia": 8
+  },
+  "zrodla": [
+   {
+    "nazwa": "Prawo o ruchu drogowym, art. 45 ust. 2 pkt 1 (t.j. Dz.U. 2024 poz. 1251)",
+    "url": "https://api.sejm.gov.pl/eli/acts/DU/2024/1251",
+    "data": "2024"
+   },
+   {
+    "nazwa": "Taryfikator mandatów, tabela B poz. 67 (Dz.U. 2021 poz. 2484)",
+    "url": "https://api.sejm.gov.pl/eli/acts/DU/2021/2484",
+    "data": "2021-12-30"
+   },
+   {
+    "nazwa": "Rozp. MSWiA – punkty, poz. H 09 (Dz.U. 2026 poz. 724)",
+    "url": "https://api.sejm.gov.pl/eli/acts/DU/2026/724",
+    "data": "2026-05-29"
+   },
+   {
+    "nazwa": "Rzeczpospolita",
+    "url": "https://www.rp.pl/prawo-drogowe/art45442891-500-zl-mandat",
+    "data": "2026-11-04"
+   }
+  ],
+  "weryfikacja": "potwierdzone",
+  "rodzaj": "fakt",
+  "granice": "ok",
+  "haczyk": "Nawigacja w telefonie może kosztować 500 zł.",
+  "uwagi": "Zakaz dotyczy telefonu trzymanego w ręku; uchwyt nie może zasłaniać widoczności.",
+  "suma": 42,
+  "dopuszczony": true
+ }
+]
