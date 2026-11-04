@@ -53,7 +53,7 @@ Stan na 4.11.2026. Właściciel: Michał Borecki. Język pracy: **polski**.
 
 - **Od 5.11 (decyzja Michała 4.11): agent codzienny** – skill `.claude/skills/szkola-klamala-agent/` (procedura krok po kroku) i subagent `.claude/agents/szkola-klamala-agent.md`. Codziennie ok. 7:13 (Europe/Warsaw) zadanie w claude.ai uruchamia agenta: statystyki IG przez Composio (tylko odczyt) → analiza → 2 rolki w szablonie C (A + B do Rolki próbnej, TikTok 1080, okładki) → opisy, przypięte komentarze, relacje, szkice odpowiedzi → zapis w `publikacje/RRRR-MM-DD/` i `docs/agent/` → push. **Agent nie publikuje** – Michał publikuje ręcznie.
 - Plan i status dni: `docs/agent/kalendarz.md` (dni oznaczone „gotowe” agent pomija przy tworzeniu rolek); wnioski: `docs/agent/dziennik.md`.
-- **Jest tylko jedno zadanie cykliczne** (dawne tygodniowe `trig_012NQ3c9krCrwpm1W16pPmbU` usunięte 4.11 i zastąpione codziennym – id w `docs/agent/dziennik.md`). Nie twórz drugiego.
+- **Jest tylko jedno zadanie cykliczne** (dawne tygodniowe `trig_012NQ3c9krCrwpm1W16pPmbU` usunięte 4.11 i zastąpione codziennym `trig_01SeXEiKGkqsPEVp6gZ8TnTi`, codziennie 7:13 Europe/Warsaw). Nie twórz drugiego.
 
 ## Grafiki
 
