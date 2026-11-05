@@ -11,7 +11,7 @@ Po wysłaniu agent zmienia status na **wysłane**. Gdy brakuje dni – dopisuje 
 | Data | Pora | Rolka | Źródło (spec) | Opis | Status |
 |---|---|---|---|---|---|
 | czw. 5.11 | 9:00 | IKE – 28 260 zł przepada 31.12 | `specs/tydzien_4-8.11_r2-9.json#finanse_ike_limit` | `docs/agent/opisy/tydzien_4-8.11.md` (czw. 5.11, IKE) | wysłane (5.11 rano) |
-| czw. 5.11 | 18:00 | Co może policja #4 – kontrola osobista | `specs/tydzien_4-8.11_r2-9.json#prawo_policja4_kontrola` | j.w. (Co może policja #4) | do wysłania |
+| czw. 5.11 | 18:00 | Co może policja #4 – kontrola osobista | `specs/tydzien_4-8.11_r2-9.json#prawo_policja4_kontrola` | j.w. (Co może policja #4) | wysłane (5.11 wieczór) |
 | pt. 6.11 | 9:00 | Punkty karne znikają rok po zapłacie | `specs/tydzien_4-8.11_r2-9.json#moto_punkty_rok` | j.w. (Motoryzacja: punkty karne) | do wysłania |
 | pt. 6.11 | 13:00 | NOWA – karuzela 9:16 (TikTok) | NOWA | NOWA | do zrobienia |
 | pt. 6.11 | 18:00 | Co może policja #5 – dowód osobisty | `specs/tydzien_4-8.11_r2-9.json#prawo_policja5_dowod` | j.w. (Co może policja #5) | do wysłania |
