@@ -23,8 +23,8 @@ Zaproszenie z TikTok Shop przyszło 4–5.11. Stan wiedzy z jawnych źródeł. *
 
 Konto żyje z zaufania („szkoła kłamała, my sprawdzamy”). Koszyk pod rolką o faktach może wyglądać jak naciąganie. Dlatego:
 
-1. **Rolki faktów bez koszyka.** Koszyk trafia tylko do osobnych, oznaczonych filmów albo pod rolkę, w której produkt jest naturalnym „co z tym zrobić”.
-2. **Najwyżej 1 rolka z koszykiem na 5 publikacji na TikToku.** Na Instagramie bez koszyka (IG nie ma TikTok Shop).
+1. **Decyzja Michała (5.11): koszyk w każdej rolce na TikToku.** Produkt ma być naturalnym „co z tym zrobić” po rolce (nawigacja → uchwyt). Fakty w rolce nigdy nie zmieniają się pod produkt. Na Instagramie bez koszyka (IG nie ma TikTok Shop).
+2. Lista dozwolonych produktów: `docs/tiktok-shop-produkty.md` (to, co Michał dodał do Showcase).
 3. **Dobór produktów – tylko to, co pasuje do tematu i nie łamie CLAUDE.md:**
    - ✅ motoryzacja (np. uchwyt na telefon do nawigacji, skrobaczka, kamizelka, apteczka, gaśnica) – zasady ogólne, w opisie bez porównywania marek;
    - ✅ nauka i kosmos (globusy, lunety dla dzieci, zestawy eksperymentów, książki popularnonaukowe w wersji papierowej);
@@ -43,8 +43,8 @@ Konto żyje z zaufania („szkoła kłamała, my sprawdzamy”). Koszyk pod rolk
 
 ## 5. Jak to wejdzie do dostaw
 
-- Rolka z koszykiem powstaje tylko, gdy w `docs/agent/kalendarz.md` stoi przy niej **„TikTok Shop: <produkt z Showcase>”**. Agent sam produktów nie wybiera i nie dodaje.
-- Taka rolka ma: na ostatniej planszy przed logo napis „Reklama – <marka>” (link w koszyku), w opisie TikTok pierwsze słowo „Reklama:”, a wersja na IG – bez wzmianki o produkcie.
-- Pierwszy test: rolka „Nawigacja w telefonie – 500 zł” (wt. 10.11, 17:00) + uchwyt samochodowy, jeśli Michał doda taki produkt do Showcase do poniedziałku 9.11.
+- Każda dostawa (9:00 i 17:00): agent wybiera produkt z `docs/tiktok-shop-produkty.md`, a plik TikTok dostaje etykietę „Reklama – <marka>” przez całą rolkę (żółta etykieta pod znakiem marki, poza strefą napisów aplikacji). Opis TikTok zaczyna się od „Reklama:”. W wiadomości jest linia „Koszyk: <produkt>”, a Michał dodaje koszyk przy publikacji.
+- Plik na IG – bez etykiety i bez wzmianki o produkcie.
+- Dopóki lista jest pusta, dostawy idą bez etykiety, z propozycją produktu do dodania.
 
 Źródła: [tokacademy.pl](https://tokacademy.pl/artykul/tiktok-shop-polska-2026-przewodnik), [spidersweb.pl](https://spidersweb.pl/2026/06/tiktok-shop-zarobki-prowizja.html), [tkdami.com](https://www.tkdami.com/blog/9935/), [TikTok Creator Eligibility Policy (USA)](https://seller-us.tiktok.com/university/essay?knowledge_id=6939143037667118&lang=en), [money.pl – limit 2026](https://direct.money.pl/artykuly/porady/dzialalnosc-nierejestrowana-2026-limit-10-813,50-zl,-po-przekroczeniu-7-dni-na-ceidg), [ifirma.pl – wytyczne UOKiK](https://www.ifirma.pl/blog/aktualnosci/reklama-w-social-mediach-najnowsze-wytyczne-prezesa-uokik/).

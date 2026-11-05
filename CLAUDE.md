@@ -26,8 +26,8 @@ Stan na 4.11.2026. Właściciel: Michał Borecki. Język pracy: **polski**.
 ## Zarabianie – TikTok Shop (5.11)
 
 - Zaproszenie do TikTok Shop (afiliacja twórcy: koszyk z cudzym produktem, prowizja 5–30% ustalana przez sprzedawcę). Pełna analiza i kroki: `docs/tiktok-shop.md`. Akceptację, dane do wypłat i wybór produktów robi **wyłącznie Michał w aplikacji** (TikTok Studio → Monetyzacja); nie klikać linków z e-maili/DM.
-- **Rolki faktów zostają bez koszyka.** Koszyk tylko tam, gdzie w `docs/agent/kalendarz.md` stoi „TikTok Shop: <produkt z Showcase>” (agent sam produktów nie wybiera); najwyżej 1 na 5 publikacji na TikToku; na IG ta sama rolka bez wzmianki o produkcie.
-- Oznaczenie wg UOKiK: „Reklama – <marka>” na planszy przed logo + „Reklama:” na początku opisu TikTok + przełącznik „Treści komercyjne”. Bez „#ad”/„#współpraca” jako jedynego oznaczenia.
+- **Koszyk w każdej rolce na TikToku (decyzja Michała 5.11).** Agent dobiera do każdej rolki 1 pasujący produkt z `docs/tiktok-shop-produkty.md` (lista z Showcase Michała); produkt spoza listy – nie, tylko propozycja „dodaj do Showcase”. Gdy nic nie pasuje albo lista pusta – rolka idzie bez etykiety i bez „Reklama:”, z propozycją produktu. Na IG ta sama rolka bez wzmianki o produkcie (IG nie ma TikTok Shop).
+- Oznaczenie wg UOKiK przy każdym koszyku: etykieta „Reklama – <marka>” na całym pliku TikTok (`dostawa.py --reklama "<marka>"`), „Reklama:” na początku opisu TikTok, przełącznik „Treści komercyjne” w aplikacji. Bez „#ad”/„#współpraca” jako jedynego oznaczenia. Fakty w rolce nigdy nie zmieniają się pod produkt.
 - Produkty: motoryzacja (akcesoria, bez porównywania marek), nauka/kosmos, praktyczne do prawa. **Nigdy:** produkty finansowe i krypto, suplementy i „zdrowie”, hazard, antyradary i gadżety „policyjne”, polityka, produkty bez sprawdzalnych danych. Fakty o produkcie też sprawdzamy.
 - Podatek: prowizje to przychód; do 10 813,50 zł/kwartał (2026) działalność nierejestrowana + PIT-36, potem CEIDG w 7 dni – przed pierwszą wypłatą konsultacja z księgową.
 

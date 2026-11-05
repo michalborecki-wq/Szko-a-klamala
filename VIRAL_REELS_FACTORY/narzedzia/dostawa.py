@@ -3,7 +3,7 @@
 Dostawa dla Michała (decyzja 4.11): 2 razy dziennie – ok. 9:00 i ok. 17:00 – JEDNA rolka + opis IG i TikTok.
 Bez wariantów B, bez wersji z lektorem, bez paczek zbiorczych – żeby nie było bałaganu.
 
-  python3 dostawa.py <spec.json> <post_id> --opis opis.md [--pora 0900|1700] [--data RRRR-MM-DD]
+  python3 dostawa.py <spec.json> <post_id> --opis opis.md [--reklama "<marka>"] [--pora 0900|1700] [--data RRRR-MM-DD]
 
 Robi:
   1. wyciąga z <spec.json> jeden post <post_id> i renderuje go (render.py --video --muzyka: 4K, podkład, logo, TikTok 1080),
@@ -44,6 +44,8 @@ def main():
     teraz = dt.datetime.now(TZ)
     ap.add_argument("--pora", default="0900" if teraz.hour < 12 else "1700")
     ap.add_argument("--data", default=teraz.date().isoformat())
+    ap.add_argument("--reklama", default="", help="marka produktu z koszyka TikTok Shop – na pliku TikTok pojawi się "
+                    "etykieta „Reklama – <marka>” (UOKiK); IG zostaje bez niej")
     a = ap.parse_args()
 
     spec = json.load(open(a.spec, encoding="utf-8"))
@@ -69,6 +71,17 @@ def main():
             raise SystemExit(f"Render nie dał pliku {f}")
     okl = os.path.join(work, f"{pid}_okladka.jpg")
     run(["ffmpeg", "-v", "error", "-y", "-ss", "2.6", "-i", ig, "-frames:v", "1", "-q:v", "2", okl])
+
+    if a.reklama:  # koszyk TikTok Shop: oznaczenie na filmie tylko w wersji TikTok
+        txt = os.path.join(work, "reklama.txt")
+        open(txt, "w", encoding="utf-8").write(f"Reklama – {a.reklama}")
+        font = "/usr/share/fonts/opentype/inter/Inter-Bold.otf"
+        tt_rek = os.path.join(work, f"{pid}_tiktok_1080_reklama.mp4")
+        run(["ffmpeg", "-v", "error", "-y", "-i", tt, "-vf",
+             f"drawtext=fontfile={font}:textfile={txt}:fontsize=34:fontcolor=0x0A0E18:box=1:boxcolor=0xFFC727:"
+             "boxborderw=14:x=60:y=262", "-c:v", "libx264", "-profile:v", "high", "-level", "4.1",
+             "-pix_fmt", "yuv420p", "-crf", "18", "-c:a", "copy", "-movflags", "+faststart", tt_rek])
+        tt = tt_rek
 
     temat = pid.upper()
     out = os.path.join(ROOT, "DOSTAWA", f"{a.data}_{a.pora}")
