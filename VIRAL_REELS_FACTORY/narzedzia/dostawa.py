@@ -46,6 +46,8 @@ def main():
     ap.add_argument("--data", default=teraz.date().isoformat())
     ap.add_argument("--reklama", default="", help="marka produktu z koszyka TikTok Shop – na pliku TikTok pojawi się "
                     "etykieta „Reklama – <marka>” (UOKiK); IG zostaje bez niej")
+    ap.add_argument("--suplement", action="store_true", help="produkt w koszyku to suplement diety – dodaje na pliku "
+                    "TikTok ostrzeżenie „Suplement diety jest żywnością, a nie lekiem. Nie leczy chorób.” przez całą rolkę")
     a = ap.parse_args()
 
     spec = json.load(open(a.spec, encoding="utf-8"))
@@ -72,14 +74,20 @@ def main():
     okl = os.path.join(work, f"{pid}_okladka.jpg")
     run(["ffmpeg", "-v", "error", "-y", "-ss", "2.6", "-i", ig, "-frames:v", "1", "-q:v", "2", okl])
 
+    if a.suplement and not a.reklama:
+        raise SystemExit("--suplement wymaga --reklama \"<marka>\"")
     if a.reklama:  # koszyk TikTok Shop: oznaczenie na filmie tylko w wersji TikTok
         txt = os.path.join(work, "reklama.txt")
         open(txt, "w", encoding="utf-8").write(f"Reklama – {a.reklama}")
         font = "/usr/share/fonts/opentype/inter/Inter-Bold.otf"
+        ost = os.path.join(work, "suplement.txt")
+        open(ost, "w", encoding="utf-8").write("Suplement diety jest żywnością, a nie lekiem.\nNie leczy chorób.")
         tt_rek = os.path.join(work, f"{pid}_tiktok_1080_reklama.mp4")
         run(["ffmpeg", "-v", "error", "-y", "-i", tt, "-vf",
              f"drawtext=fontfile={font}:textfile={txt}:fontsize=34:fontcolor=0x0A0E18:box=1:boxcolor=0xFFC727:"
-             "boxborderw=14:x=60:y=262", "-c:v", "libx264", "-profile:v", "high", "-level", "4.1",
+             "boxborderw=14:x=60:y=262" + (
+                 f",drawtext=fontfile={font}:textfile={ost}:fontsize=30:fontcolor=white:box=1:boxcolor=0xE53935:"
+                 "boxborderw=12:x=60:y=330:line_spacing=6" if a.suplement else ""), "-c:v", "libx264", "-profile:v", "high", "-level", "4.1",
              "-pix_fmt", "yuv420p", "-crf", "18", "-c:a", "copy", "-movflags", "+faststart", tt_rek])
         tt = tt_rek
 

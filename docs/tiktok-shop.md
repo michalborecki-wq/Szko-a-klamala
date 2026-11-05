@@ -29,7 +29,8 @@ Konto żyje z zaufania („szkoła kłamała, my sprawdzamy”). Koszyk pod rolk
    - ✅ motoryzacja (np. uchwyt na telefon do nawigacji, skrobaczka, kamizelka, apteczka, gaśnica) – zasady ogólne, w opisie bez porównywania marek;
    - ✅ nauka i kosmos (globusy, lunety dla dzieci, zestawy eksperymentów, książki popularnonaukowe w wersji papierowej);
    - ✅ prawo w praktyce (np. etui na dokumenty, wideorejestrator – z opisem przepisów o nagrywaniu);
-   - ⛔ finanse (produkty finansowe, kryptowaluty), medycyna (suplementy, wyroby „zdrowotne”), zakłady i hazard, polityka, gadżety „policyjne” (np. antyradary, wykrywacze);
+   - ✅ suplementy diety (decyzja Michała 5.11) – z ostrzeżeniem „Suplement diety jest żywnością, a nie lekiem. Nie leczy chorób.” na filmie i w opisie, tylko oświadczenia z karty produktu (rejestr UE), nie pod rolkami o chorobach i medycynie; według branżowych źródeł od 1.01.2026 ostrzeżenie w wideo musi być widoczne min. 7 s, a wizerunek lekarzy jest zakazany – **status przepisu do potwierdzenia w Dz.U.**, stosujemy wersję najostrzejszą;
+   - ⛔ finanse (produkty finansowe, kryptowaluty), zakłady i hazard, polityka, gadżety „policyjne” (np. antyradary, wykrywacze);
    - ⛔ produkty, których nie da się sprawdzić (brak opinii, brak danych sprzedawcy, „cudowne” obietnice).
 4. **Fakty o produkcie też sprawdzamy.** Żadnych obietnic, których nie potwierdza karta produktu lub norma. Zawsze „Reklama” i nazwa marki.
 

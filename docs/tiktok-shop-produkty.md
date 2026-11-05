@@ -16,4 +16,6 @@ Listę uzupełnia Michał (albo przysyła zrzut z Centrum afiliacyjnego, a Claud
 | Matematyka i ciekawostki (ruletka, rekordy) | gry logiczne i łamigłówki, książki popularnonaukowe (papier) |
 | Prawo i pieniądze w codzienności (ZUS, IKE, zwroty) | segregator/organizer na dokumenty, kalkulator, planer budżetu (papierowy) |
 
-Nigdy (CLAUDE.md): produkty finansowe i kryptowaluty, suplementy i „zdrowie”, hazard, antyradary i gadżety „policyjne”, polityka, produkty bez sprawdzalnych danych.
+Suplementy diety – dozwolone (decyzja Michała 5.11) z warunkami z CLAUDE.md: ostrzeżenie na filmie i w opisie (`--suplement`), tylko oświadczenia z karty produktu, nie pod rolkami o chorobach i medycynie.
+
+Nigdy (CLAUDE.md): produkty finansowe i kryptowaluty, hazard, antyradary i gadżety „policyjne”, polityka, produkty bez sprawdzalnych danych.
