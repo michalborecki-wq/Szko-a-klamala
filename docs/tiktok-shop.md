@@ -14,6 +14,16 @@ Zaproszenie z TikTok Shop przyszło 4–5.11. Stan wiedzy z jawnych źródeł. *
 | Zakazane produkty | m.in. alkohol, tytoń, leki na receptę, broń, hazard, kryptowaluty, produkty dla dorosłych; od 6.08.2026 w UE nie ma produktów cyfrowych (ebooki, muzyka, wideo) | blog, odsyła do polityki TikToka |
 | Koszyk tylko w filmach i na LIVE | karuzele zdjęć – nie; LIVE Shopping – osobny próg | blogi |
 
+## 1a. Potwierdzone w regulaminie TikToka (zrzuty Michała 5.11, „Affiliate Commission and Payout Rules”, Academy → Creator → Finance, wersja z 21.03.2025, dotyczy twórców w UE)
+
+- **Dostęp:** imię i nazwisko w TikToku muszą się zgadzać z właścicielem konta bankowego. **Nie da się ich zmienić po wysłaniu.** Wymagane: lokalne konto bankowe i weryfikacja tożsamości (KYC).
+- **Prowizja = (przychód – zwroty) × stawka produktu.** Kwota „szacowana” to średnia cena po rabatach × stawka; końcowa może być niższa (kupony, zwroty).
+- **Termin:** prowizja wpływa na saldo **15 dni po dostarczeniu zamówienia**; dłużej, gdy trwa spór, zwrot lub reklamacja. Na stronie „Not Settled” prowizja pokazuje 0 do rozliczenia.
+- **Brak prowizji:** anulowanie przed dostawą, zwrot w okresie posprzedażowym; częściowy zwrot = częściowa prowizja.
+- **Wypłata:** ręcznie z „Payout Summary” w E-commerce Creator Center albo automatycznie **1. dnia co drugi miesiąc (co 60 dni)**, jeśli jest saldo, ważne konto i brak blokad. Obsługa wypłat: Stripe (Connected Account Agreement).
+- **DAC7:** blokada wypłat przy braku danych podatkowych. DAC7 to unijny obowiązek, w którym platforma zgłasza urzędowi skarbowemu dochody użytkowników. Trzeba podać PESEL/NIP i adres. Urząd zobaczy te kwoty, więc trzeba je wykazać w PIT.
+- Przykład: sprzedaż 10.11 → dostawa ok. 13.11 → prowizja na saldzie ok. 28.11 → wypłata ręczna od razu albo automatyczna 1. dnia kolejnego cyklu.
+
 ## 2. Prawo i podatki (Polska)
 
 - **Oznaczanie reklam (UOKiK, rekomendacje z 26.09.2022):** link afiliacyjny lub koszyk to reklama. Oznaczenie po polsku, w dwóch miejscach: na filmie (plansza lub napis „Reklama – <marka>”) i w opisie, plus przełącznik „Treści komercyjne” w TikToku. Samo „#ad” albo „#współpraca” nie wystarczy. Grozi kara do 10% obrotu.
