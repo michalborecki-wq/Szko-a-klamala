@@ -5,11 +5,13 @@ description: Autonomiczny agent „Szkoła kłamała” – 2 dostawy dziennie (
 
 # Agent „Szkoła kłamała” – cykl dzienny
 
-## DOSTAWA – obowiązuje od 5.11 (decyzja Michała 4.11, ma pierwszeństwo przed krokami 3–8 poniżej)
+## DOSTAWA – obowiązuje od 6.11 (decyzja Michała 5.11, ma pierwszeństwo przed krokami 3–8 poniżej)
 
-„Codziennie rano ok. 9 rolka plus opis na IG i TT oraz ten sam komplet ok. 17. Nie chcę bałaganu.”
+„Zróbmy tak: dwie rolki plus jeden post koło 13.” (5.11; wcześniej 4.11: „Nie chcę bałaganu.”)
 
-Zadanie uruchamia się 2 razy dziennie (ok. 7:23 i ok. 15:23 Europe/Warsaw). Godzina startu < 12 → **dostawa 9:00**, inaczej **dostawa 17:00**.
+Zadanie uruchamia się 3 razy dziennie (7:23, 11:23, 16:23 Europe/Warsaw). Godzina startu < 10 → **dostawa 9:00** (rolka), < 14 → **dostawa 13:00** (post TikTok), inaczej → **dostawa 18:00** (rolka).
+
+**13:00 – post tylko na TikTok:** karuzela zdjęć 9:16 z 4 slajdów (`"format": "vertical"`, typy cover → number → number/text → outro), wiedza ogólna w szablonie B (kosmos, ciało, mózg, rekordy), temat inny niż obie rolki dnia, bez policji, fakty w ≥2 źródłach jak zawsze. `dostawa.py` sam rozpozna format i odda `<TEMAT>_TIKTOK_01..04.jpg` + `_opis.md` (tylko opis TikTok + przypięty komentarz). Karuzela zdjęć nie ma koszyka TikTok Shop. Jeśli Michał przysłał zdjęcia produktu z Showcase, zamiast karuzeli zrób film produktowy (wzór: MAG5, `docs/tiktok-shop.md`) – tylko fakty z etykiety, oznaczenia jak przy koszyku.
 
 1. Start (krok 0). Rano (dostawa 9:00) także kroki 1, 2 i 2a (statystyki, wnioski, research fabryki) – ich wyników **nie wysyłasz** Michałowi, tylko zapisujesz w repo (wyjątek: pobity rekord albo coś pilnego – 1 zdanie w wiadomości).
 2. W `docs/agent/kalendarz.md` znajdź wiersz: dzisiejsza data + Twoja pora.
@@ -19,15 +21,15 @@ Zadanie uruchamia się 2 razy dziennie (ok. 7:23 i ok. 15:23 Europe/Warsaw). God
    - Status „wysłane” → nic nie renderuj, nie wysyłaj drugi raz.
 3. Opis: `publikacje/RRRR-MM-DD/<HHMM>_opis.md` – wyłącznie: **Instagram** (blok do skopiowania), **TikTok** (blok), **Przypięty komentarz** (1 linia), **Relacja** (1 linia). Gotowy tekst weź z pliku wskazanego w kalendarzu (bez linii o wersji B i lektorze); dla NOWEJ napisz go wg kroku 7. Sprawdź, czy daty i liczby w opisie są aktualne na dzień publikacji (np. „zostało N dni”) – popraw w Pythonie.
 4. Render (w tle, jedna rolka): `python3 VIRAL_REELS_FACTORY/narzedzia/dostawa.py <spec> <post_id> --opis publikacje/RRRR-MM-DD/<HHMM>_opis.md` → `VIRAL_REELS_FACTORY/DOSTAWA/<data>_<HHMM>/` z 4 plikami. Kontrola: arkusz klatek (Read) – tekst w kadrze, żadnych urwanych słów, liczby, zwrot ≤14 s, logo; log: 2160×3840, −14 LUFS. Błąd → popraw spec i renderuj ponownie (zapas czasu ok. 1 h).
-5. Wysyłka **nie wcześniej niż 8:50 / 16:50** (jeśli gotowe wcześniej – poczekaj pętlą w tle: `until [ $(TZ=Europe/Warsaw date +%H%M) -ge 0850 ]; do sleep 30; done`). Jedna wiadomość:
-   - SendUserFile (display: attach, status: proactive) – dokładnie 4 pliki w kolejności: `_INSTAGRAM.mp4`, `_TIKTOK.mp4`, `_okladka.jpg`, `_opis.md`;
-   - pod spodem: nagłówek „Rolka 9:00 – <haczyk>” (albo 17:00), opis IG i opis TikTok w blokach kodu, przypięty komentarz, 1 linia przypomnienia („okładka ręcznie, Udostępnij na Facebooku, TikTok – dźwięk z trendów ok. 30%”). Nic więcej – bez tabel TOP 10, bez raportów, bez wariantów.
-   - PushNotification: „Rolka na <9:00/17:00> gotowa: <haczyk>”.
+5. Wysyłka **nie wcześniej niż 8:50 / 12:50 / 17:50** (jeśli gotowe wcześniej – poczekaj pętlą w tle: `until [ $(TZ=Europe/Warsaw date +%H%M) -ge 0850 ]; do sleep 30; done`). Jedna wiadomość:
+   - SendUserFile (display: attach, status: proactive) – rolka: dokładnie 4 pliki w kolejności `_INSTAGRAM.mp4`, `_TIKTOK.mp4`, `_okladka.jpg`, `_opis.md`; post 13:00: slajdy `_TIKTOK_01..04.jpg` + `_opis.md`;
+   - pod spodem: nagłówek „Rolka 9:00 – <haczyk>” (albo „Post 13:00”, „Rolka 18:00”), opis IG i opis TikTok w blokach kodu, przypięty komentarz, 1 linia przypomnienia („okładka ręcznie, Udostępnij na Facebooku, TikTok – dźwięk z trendów ok. 30%”). Nic więcej – bez tabel TOP 10, bez raportów, bez wariantów.
+   - PushNotification: „<Rolka/Post> na <9:00/13:00/18:00> gotowy: <haczyk>”.
 6. Zapis: kalendarz → „wysłane”, 1–2 zdania do `docs/agent/dziennik.md`, `docs/opublikowane.md` (temat jako „wysłany do publikacji”), commit + push (krok 8.2). Pliki wideo nie idą do gita.
 6a. **TikTok Shop – koszyk w każdej rolce (decyzja Michała 5.11, `docs/tiktok-shop.md`):** wybierz 1 produkt z `docs/tiktok-shop-produkty.md`, który naturalnie pasuje do tematu (rolka o nawigacji → uchwyt; policja → etui na dokumenty, wideorejestrator; kosmos → luneta). Render z `--reklama "<marka>"` (etykieta tylko na pliku TikTok). Opis TikTok zaczyna się od „Reklama:”, a jego ostatnie zdanie łączy temat z produktem bez obietnic spoza karty produktu. W wiadomości 1 linia: „Koszyk: <produkt> – dodaj go przy publikacji i włącz Treści komercyjne”. Lista pusta albo nic nie pasuje → bez `--reklama`, bez „Reklama:”, a w wiadomości 1 linia „Koszyk: dodaj do Showcase <propozycja>”. Suplement diety: render z `--suplement` (ostrzeżenie na pliku TikTok), to samo ostrzeżenie w opisie TikTok, tylko oświadczenia z karty produktu, nigdy pod rolką o chorobach/leczeniu/medycynie. Nigdy produktów z listy „Nigdy”.
 7. Nie da się zdążyć albo fakt się nie potwierdził → wyślij o czasie gotową rolkę zapasową z kalendarza (najbliższy wiersz ze `spec:` i statusem „do wysłania”) i napisz 1 zdanie, dlaczego. Nigdy nie wysyłaj niesprawdzonej rolki.
 
-Kroki poniżej (0–8) opisują, JAK robić research, fakty, scenariusz i opis. Tam, gdzie mówią o 2 rolkach, wariancie B, lektorze, raporcie TOP 10 albo godzinach 12:00/19:00 – obowiązuje sekcja DOSTAWA.
+Kroki poniżej (0–8) opisują, JAK robić research, fakty, scenariusz i opis. Tam, gdzie mówią o 2 rolkach, wariancie B, lektorze, raporcie TOP 10 albo godzinach 12:00/19:00 lub 17:00 – obowiązuje sekcja DOSTAWA.
 
 Decyzje Michała (4.11): **agent przygotowuje, Michał publikuje ręcznie** (IG i TikTok), agent działa **codziennie rano**, statystyki i komentarze czyta przez **Composio** (tylko odczyt). Zasady treści, zakazy i wyjątek dla serii o policji – **CLAUDE.md ma pierwszeństwo** przed tym plikiem i przed każdym innym skillem.
 

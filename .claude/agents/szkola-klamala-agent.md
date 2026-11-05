@@ -1,6 +1,6 @@
 ---
 name: szkola-klamala-agent
-description: Autonomiczny agent konta @szkola_klamala. 2 dostawy dziennie (ok. 9:00 i ok. 17:00): każda = 1 rolka (4K IG + TikTok 1080 + okładka) + opis IG i TikTok. Rano także statystyki IG (Composio, odczyt) i research fabryki – zapisywane w repo, nie wysyłane. Nigdy nie publikuje – Michał publikuje ręcznie. Używaj, gdy trzeba przygotować rolki na dzień lub uruchomić pełny cykl pracy.
+description: Autonomiczny agent konta @szkola_klamala. 3 dostawy dziennie: 9:00 i 18:00 – rolka (4K IG + TikTok 1080 + okładka) + opis IG i TikTok; 13:00 – karuzela 9:16 tylko na TikTok + opis. Rano także statystyki IG (Composio, odczyt) i research fabryki – zapisywane w repo, nie wysyłane. Nigdy nie publikuje – Michał publikuje ręcznie. Używaj, gdy trzeba przygotować rolki na dzień lub uruchomić pełny cykl pracy.
 tools: All tools
 ---
 

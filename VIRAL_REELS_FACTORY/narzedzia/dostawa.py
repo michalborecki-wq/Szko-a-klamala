@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """
-Dostawa dla Michała (decyzja 4.11): 2 razy dziennie – ok. 9:00 i ok. 17:00 – JEDNA rolka + opis IG i TikTok.
+Dostawa dla Michała (decyzja 5.11): 3 razy dziennie – 9:00 rolka, 13:00 post TikTok (karuzela 9:16), 18:00 rolka.
 Bez wariantów B, bez wersji z lektorem, bez paczek zbiorczych – żeby nie było bałaganu.
 
-  python3 dostawa.py <spec.json> <post_id> --opis opis.md [--reklama "<marka>"] [--pora 0900|1700] [--data RRRR-MM-DD]
+  python3 dostawa.py <spec.json> <post_id> --opis opis.md [--reklama "<marka>"] [--pora 0900|1300|1800] [--data RRRR-MM-DD]
+
+Post z "format": "vertical" (karuzela 9:16, zwykle 13:00) → DOSTAWA/<data>_<pora>/<TEMAT>_TIKTOK_01..NN.jpg + _opis.md.
+Rolka ("format": "reel"):
 
 Robi:
   1. wyciąga z <spec.json> jeden post <post_id> i renderuje go (render.py --video --muzyka: 4K, podkład, logo, TikTok 1080),
@@ -42,7 +45,7 @@ def main():
     ap.add_argument("post_id")
     ap.add_argument("--opis", required=True, help="plik .md z opisem IG, TikTok i przypiętym komentarzem")
     teraz = dt.datetime.now(TZ)
-    ap.add_argument("--pora", default="0900" if teraz.hour < 12 else "1700")
+    ap.add_argument("--pora", default="0900" if teraz.hour < 10 else "1300" if teraz.hour < 14 else "1800")
     ap.add_argument("--data", default=teraz.date().isoformat())
     ap.add_argument("--reklama", default="", help="marka produktu z koszyka TikTok Shop – na pliku TikTok pojawi się "
                     "etykieta „Reklama – <marka>” (UOKiK); IG zostaje bez niej")
@@ -65,6 +68,32 @@ def main():
     os.makedirs(work, exist_ok=True)
     one = os.path.join(work, f"spec_{pid}.json")
     json.dump(dict(spec, posts=posty), open(one, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    temat = pid.upper()
+    out = os.path.join(ROOT, "DOSTAWA", f"{a.data}_{a.pora}")
+
+    if posty[0].get("format") == "vertical":  # karuzela zdjęć 9:16 na TikTok (post 13:00)
+        run([sys.executable, RENDER, one, "--out", work, "--sheet"])
+        import glob
+        jpgi = sorted(glob.glob(os.path.join(work, f"{pid}_916_*.jpg")) or glob.glob(os.path.join(work, f"{pid}_[0-9][0-9].jpg")))
+        if not jpgi:
+            raise SystemExit("Render nie dał slajdów 9:16")
+        if os.path.isdir(out):
+            shutil.rmtree(out)
+        os.makedirs(out)
+        wynik = []
+        for i, f in enumerate(jpgi, 1):
+            dst = os.path.join(out, f"{temat}_TIKTOK_{i:02d}.jpg")
+            shutil.copy2(f, dst)
+            wynik.append(dst)
+        dst = os.path.join(out, f"{temat}_opis.md")
+        shutil.copy2(a.opis, dst)
+        wynik.append(dst)
+        print("Podgląd do kontroli:", " ".join(glob.glob(os.path.join(work, "_podglad_*.jpg"))))
+        print(f"DOSTAWA – wyślij te {len(wynik)} pliki:")
+        for w in wynik:
+            print(w)
+        return
+
     run([sys.executable, RENDER, one, "--out", work, "--video", "--muzyka"])
 
     ig, tt = os.path.join(work, f"{pid}_muzyka.mp4"), os.path.join(work, f"{pid}_tiktok_1080.mp4")
@@ -91,8 +120,6 @@ def main():
              "-pix_fmt", "yuv420p", "-crf", "18", "-c:a", "copy", "-movflags", "+faststart", tt_rek])
         tt = tt_rek
 
-    temat = pid.upper()
-    out = os.path.join(ROOT, "DOSTAWA", f"{a.data}_{a.pora}")
     if os.path.isdir(out):
         shutil.rmtree(out)
     os.makedirs(out)

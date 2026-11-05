@@ -11,3 +11,7 @@ Każdy dzień: data, statystyki (najlepsza i najsłabsza rolka), wnioski, co prz
 
 ## 4.11 wieczorem – zmiana trybu
 Decyzja Michała: 2 dostawy dziennie (ok. 9:00 i 17:00), każda = 1 rolka + opis IG i TikTok, bez wariantów B i lektora. Zadanie: starty 7:23 i 15:23, narzędzie `dostawa.py`, kalendarz przepisany na pory 9:00/17:00 (5–10.11 z gotowych scenariuszy, od 11.11 nowe).
+
+## 5.11
+- 9:00 – IKE wysłane do Michała; push z sesji zadania nie przeszedł (403, zadanie bez podpiętego repozytorium) – status poprawiony ręcznie.
+- Decyzja Michała: 3 dostawy (9:00 rolka, 13:00 karuzela 9:16 na TikTok, 18:00 rolka), od 5.11 wieczór o 18:00.
