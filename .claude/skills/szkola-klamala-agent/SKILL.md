@@ -24,6 +24,7 @@ Zadanie uruchamia się 2 razy dziennie (ok. 7:23 i ok. 15:23 Europe/Warsaw). God
    - pod spodem: nagłówek „Rolka 9:00 – <haczyk>” (albo 17:00), opis IG i opis TikTok w blokach kodu, przypięty komentarz, 1 linia przypomnienia („okładka ręcznie, Udostępnij na Facebooku, TikTok – dźwięk z trendów ok. 30%”). Nic więcej – bez tabel TOP 10, bez raportów, bez wariantów.
    - PushNotification: „Rolka na <9:00/17:00> gotowa: <haczyk>”.
 6. Zapis: kalendarz → „wysłane”, 1–2 zdania do `docs/agent/dziennik.md`, `docs/opublikowane.md` (temat jako „wysłany do publikacji”), commit + push (krok 8.2). Pliki wideo nie idą do gita.
+6a. **TikTok Shop (od 5.11, `docs/tiktok-shop.md`):** tylko gdy wiersz kalendarza ma „TikTok Shop: <produkt>”. Wtedy: ostatnia plansza przed outro z napisem „Reklama – <marka>” w wersji TikTok (IG bez wzmianki), opis TikTok zaczyna się od „Reklama:”, w przypomnieniu: „dodaj koszyk z <produkt> i włącz Treści komercyjne”. Bez takiego wpisu – żadnych produktów, linków ani koszyków.
 7. Nie da się zdążyć albo fakt się nie potwierdził → wyślij o czasie gotową rolkę zapasową z kalendarza (najbliższy wiersz ze `spec:` i statusem „do wysłania”) i napisz 1 zdanie, dlaczego. Nigdy nie wysyłaj niesprawdzonej rolki.
 
 Kroki poniżej (0–8) opisują, JAK robić research, fakty, scenariusz i opis. Tam, gdzie mówią o 2 rolkach, wariancie B, lektorze, raporcie TOP 10 albo godzinach 12:00/19:00 – obowiązuje sekcja DOSTAWA.

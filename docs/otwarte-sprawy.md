@@ -5,3 +5,4 @@
 3. Rozważyć zaktualizowanie skilla `instagram-mich-bor` (usunąć Metricool, dodać nowe przedmioty i plan publikacji). Na razie te zmiany są tylko w prompcie zadania cyklicznego.
 4. Media kit: przy ok. 5 tys. obserwujących albo stabilnie powyżej 10 tys. wyświetleń.
 5. Zrobione 29.10: silnik grafik dodany do `.claude/skills/szkola-klamala-grafiki` i przetestowany na `examples/przyklad.json` (0 ostrzeżeń QA, MP4 z cichą ścieżką AAC).
+- TikTok Shop (5.11): Michał weryfikuje zaproszenie w aplikacji, akceptuje, dodaje 3–5 produktów do Showcase i przysyła zrzut regulaminu – szczegóły `docs/tiktok-shop.md`.
