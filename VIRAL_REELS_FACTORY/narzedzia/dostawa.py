@@ -11,10 +11,11 @@ Rolka ("format": "reel"):
 Robi:
   1. wyciąga z <spec.json> jeden post <post_id> i renderuje go (render.py --video --muzyka: 4K, podkład, logo, TikTok 1080),
   2. okładka = klatka z 2,6 s,
-  3. DOSTAWA/<data>_<pora>/ – dokładnie 4 pliki:
+  3. DOSTAWA/<data>_<pora>/ – dokładnie 5 plików:
        <TEMAT>_INSTAGRAM.mp4  (4K, nasz podkład)
        <TEMAT>_TIKTOK.mp4     (1080×1920)
        <TEMAT>_okladka.jpg
+       <TEMAT>_relacja.jpg    (wklejka do relacji z okładką rolki, miejsce na ankietę – relacja.py, --relacja "nagłówek|podtekst")
        <TEMAT>_opis.md        (IG + TikTok + przypięty komentarz – z pliku --opis)
 Na końcu wypisuje ścieżki 4 plików (do SendUserFile).
 """
@@ -51,6 +52,8 @@ def main():
                     "etykieta „Reklama – <marka>” (UOKiK); IG zostaje bez niej")
     ap.add_argument("--suplement", action="store_true", help="produkt w koszyku to suplement diety – dodaje na pliku "
                     "TikTok ostrzeżenie „Suplement diety jest żywnością, a nie lekiem. Nie leczy chorób.” przez całą rolkę")
+    ap.add_argument("--relacja", default="", help="„nagłówek|podtekst” – wklejka do relacji (*gwiazdki* = żółty akcent); "
+                    "bez tego: nagłówek „Nowa rolka”")
     a = ap.parse_args()
 
     spec = json.load(open(a.spec, encoding="utf-8"))
@@ -123,8 +126,12 @@ def main():
     if os.path.isdir(out):
         shutil.rmtree(out)
     os.makedirs(out)
+    rel = os.path.join(work, f"{pid}_relacja.jpg")  # wklejka do relacji IG/TikTok (9:16, 4K)
+    nag, _, pod = (a.relacja or "Nowa *rolka*|").partition("|")
+    run([sys.executable, os.path.join(HERE, "relacja.py"), okl, rel, "--naglowek", nag.strip()]
+        + (["--pod", pod.strip()] if pod.strip() else []))
     pliki = [(ig, f"{temat}_INSTAGRAM.mp4"), (tt, f"{temat}_TIKTOK.mp4"), (okl, f"{temat}_okladka.jpg"),
-             (a.opis, f"{temat}_opis.md")]
+             (rel, f"{temat}_relacja.jpg"), (a.opis, f"{temat}_opis.md")]
     wynik = []
     for src, name in pliki:
         dst = os.path.join(out, name)
@@ -132,7 +139,7 @@ def main():
         wynik.append(dst)
     print("Arkusz klatek do kontroli:", os.path.join(work, f"{pid}_muzyka_klatki.jpg"))
 
-    print("DOSTAWA – wyślij te 4 pliki:")
+    print("DOSTAWA – wyślij te 5 plików:")
     for w in wynik:
         print(w)
 
