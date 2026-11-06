@@ -53,14 +53,16 @@
      }
     },
     {
-     "type": "myth",
-     "myth_label": "TWIST",
-     "fact_label": "FAKT",
-     "myth": "Legalna, więc strzelam wszędzie",
-     "fact": "Poza strzelnicą: **areszt albo grzywna**.",
-     "source": "art. 45, art. 51",
+     "type": "number",
+     "tag": "TWIST",
+     "big": "30",
+     "count": true,
+     "title": "dni aresztu",
+     "accent": "za trening poza strzelnicą",
+     "source": "art. 51 ustawy; art. 19 k.w.",
      "fx": {
-      "mit": "pieczatka",
+      "liczba": "slot",
+      "naglowek": "zoom",
       "przejscie": "blysk"
      }
     },
