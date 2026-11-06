@@ -4,7 +4,7 @@ Listę uzupełnia Michał (albo przysyła zrzut z Centrum afiliacyjnego, a Claud
 
 | Produkt (nazwa w Showcase) | Marka | Kategoria | Pasuje do tematów | Prowizja | Dodano |
 |---|---|---|---|---|---|
-| _(pusto – dodaj produkty w aplikacji i wpisz je tutaj)_ | | | | | |
+| MAG5 Premium Complex – magnez 5 form, 60 kaps. (suplement diety, zawsze `--suplement`) | Lanco Nutrition | suplementy | energia, zmęczenie, sen, praca, nauka, sport, zima/jesień (NIE choroby/medycyna) | 69 zł → 20,70 zł (30%), próbka refundowana | 6.11 |
 
 ## Propozycje kategorii do dodania (dopasowane do serii)
 
