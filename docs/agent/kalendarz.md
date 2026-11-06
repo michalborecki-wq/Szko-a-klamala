@@ -18,7 +18,7 @@ Po wysłaniu agent zmienia status na **wysłane**. Gdy brakuje dni – dopisuje 
 | sob. 7.11 | 9:00 | Ruletka – 2,7% | `specs/tydzien_4-8.11_r2-9.json#mat_ruletka` | j.w. (Matematyka: ruletka) | do wysłania |
 | sob. 7.11 | 13:00 | NOWA – karuzela 9:16 (TikTok) | NOWA | NOWA | do zrobienia |
 | sob. 7.11 | 18:00 | Co może policja #6 – +51 km/h | `specs/tydzien_4-8.11_r2-9.json#prawo_policja6_50kmh` | j.w. (Co może policja #6) | do wysłania |
-| nd 8.11 | 9:00 | Saturn pływałby w wodzie | `specs/tydzien_4-8.11_r2-9.json#kosmos_saturn_woda` | j.w. (Kosmos: Saturn) | do wysłania |
+| nd 8.11 | 9:00 | Saturn pływałby w wodzie (TikTok Shop: ROBOTIME globus 3D) | `specs/tydzien_4-8.11_r2-9.json#kosmos_saturn_woda` | j.w. (Kosmos: Saturn) | do wysłania |
 | nd 8.11 | 13:00 | NOWA – karuzela 9:16 (TikTok) | NOWA | NOWA | do zrobienia |
 | nd 8.11 | 18:00 | Co może policja #7 – milczenie | `specs/tydzien_4-8.11_r2-9.json#prawo_policja7_milczenie` | j.w. (Co może policja #7) | do wysłania |
 | pon. 9.11 | 9:00 | ZUS daruje 315 mln zł. Jest haczyk. | `VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_zus_umorzenie/spec.json#zus_umorzenie` | `VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_zus_umorzenie/opis.md` (bez linii o B i lektorze) | do wysłania |
@@ -26,7 +26,7 @@ Po wysłaniu agent zmienia status na **wysłane**. Gdy brakuje dni – dopisuje 
 | pon. 9.11 | 18:00 | Co może policja #8 | NOWA (`docs/seria-policja.md`) | NOWA | do zrobienia |
 | wt. 10.11 | 9:00 | Pod szlabanem tracisz prawo jazdy | `VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_przejazdy_kolejowe/spec.json#przejazdy_kolejowe` | `…/2026-11-04_przejazdy_kolejowe/opis.md` | do wysłania |
 | wt. 10.11 | 13:00 | NOWA – karuzela 9:16 (TikTok) | NOWA | NOWA | do zrobienia |
-| wt. 10.11 | 18:00 | Nawigacja w telefonie – 500 zł | `VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_nawigacja_telefon/spec.json#nawigacja_telefon` | `…/2026-11-04_nawigacja_telefon/opis.md` | do wysłania |
+| wt. 10.11 | 18:00 | Nawigacja w telefonie – 500 zł (TikTok Shop: uchwyt Laayee) | `VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_nawigacja_telefon/spec.json#nawigacja_telefon` | `…/2026-11-04_nawigacja_telefon/opis.md` | do wysłania |
 | śr. 11.11 | 9:00 | NOWA (fabryka) | NOWA | NOWA | do zrobienia |
 | śr. 11.11 | 13:00 | NOWA – karuzela 9:16 (TikTok) | NOWA | NOWA | do zrobienia |
 | śr. 11.11 | 18:00 | Co może policja #9 | NOWA | NOWA | do zrobienia |

@@ -5,6 +5,9 @@ Listę uzupełnia Michał (albo przysyła zrzut z Centrum afiliacyjnego, a Claud
 | Produkt (nazwa w Showcase) | Marka | Kategoria | Pasuje do tematów | Prowizja | Dodano |
 |---|---|---|---|---|---|
 | MAG5 Premium Complex – magnez 5 form, 60 kaps. (suplement diety, zawsze `--suplement`) | Lanco Nutrition | suplementy | energia, zmęczenie, sen, praca, nauka, sport, zima/jesień (NIE choroby/medycyna) | 69 zł → 20,70 zł (30%), próbka refundowana | 6.11 |
+| ROBOTIME puzzle 3D z drewna – mechaniczny globus z podświetleniem | ROBOTIME (sklep supermi store) | nauka/kosmos | kosmos, Ziemia, geografia, strefy czasowe, pory roku, rekordy | 307,77 zł → 38,47 zł (12,5%); sprzedaż zagraniczna, **tylko filmy**, 20 szt. | 6.11 |
+| Magnetyczny uchwyt na telefon, regulowany | Laayee | motoryzacja | nawigacja, telefon za kierownicą, mandaty, punkty karne, podróże | 44 zł → 6,60 zł (15%), darmowa próbka, 16,1 tys. szt. – **pierwszy wybór** do uchwytu | 6.11 |
+| NIKLOK magnetyczny uchwyt na telefon | NIKLOK (Hijo de la Suerte) | motoryzacja | jak wyżej – zapasowy, gdy Laayee niedostępny | 59,99 zł → 4,80 zł (8%), darmowa próbka, 37 szt. | 6.11 |
 
 ## Propozycje kategorii do dodania (dopasowane do serii)
 
