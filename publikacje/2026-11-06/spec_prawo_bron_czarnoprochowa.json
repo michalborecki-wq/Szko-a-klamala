@@ -1,0 +1,62 @@
+{
+ "handle": "@szkola_klamala",
+ "posts": [
+  {
+   "id": "prawo_bron_czarnoprochowa",
+   "format": "reel",
+   "subject": "PRAWO",
+   "muzyka": {},
+   "durations": [
+    3.5,
+    4.5,
+    4.5,
+    4.5,
+    6.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "dowod",
+     "pieczatka": "BEZ POZWOLENIA",
+     "title": "Broń palną możesz mieć",
+     "accent": "bez pozwolenia."
+    },
+    {
+     "type": "number",
+     "tag": "USTAWA",
+     "big": "1885",
+     "count": false,
+     "title": "sprzed roku",
+     "accent": "lub replika",
+     "body": "Czarnoprochowa – **bez pozwolenia**.",
+     "source": "art. 11 ustawy o broni"
+    },
+    {
+     "type": "number",
+     "tag": "REJESTRACJA",
+     "big": "0",
+     "count": false,
+     "title": "zgłoszeń",
+     "accent": "na Policji",
+     "body": "Bez **badań** i bez **rejestracji**.",
+     "source": "art. 13 ust. 1"
+    },
+    {
+     "type": "text",
+     "tag": "TWIST",
+     "title": "Trening w lesie?",
+     "accent": "Grozi areszt.",
+     "body": "Ćwiczyć wolno **tylko na strzelnicy**.",
+     "source": "art. 45, art. 51"
+    },
+    {
+     "type": "outro",
+     "question": "Powinna być bez pozwolenia?",
+     "sub": "Wyślij komuś, kto zbiera militaria.",
+     "sources": "To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ]
+  }
+ ]
+}

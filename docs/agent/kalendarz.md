@@ -14,7 +14,7 @@ Po wysłaniu agent zmienia status na **wysłane**. Gdy brakuje dni – dopisuje 
 | czw. 5.11 | 18:00 | Co może policja #4 – kontrola osobista | `specs/tydzien_4-8.11_r2-9.json#prawo_policja4_kontrola` | j.w. (Co może policja #4) | wysłane (5.11 wieczór) |
 | pt. 6.11 | 9:00 | Punkty karne znikają rok po zapłacie | `specs/tydzien_4-8.11_r2-9.json#moto_punkty_rok` | j.w. (Motoryzacja: punkty karne) | do wysłania |
 | pt. 6.11 | 13:00 | NOWA – karuzela 9:16 (TikTok) | NOWA | NOWA | do zrobienia |
-| pt. 6.11 | 18:00 | Co może policja #5 – dowód osobisty | `specs/tydzien_4-8.11_r2-9.json#prawo_policja5_dowod` | j.w. (Co może policja #5) | do wysłania |
+| pt. 6.11 | 18:00 | Broń palną możesz mieć bez pozwolenia (czarnoprochowa) – decyzja Michała 6.11 | `publikacje/2026-11-06/spec_prawo_bron_czarnoprochowa.json#prawo_bron_czarnoprochowa` | `publikacje/2026-11-06/1800_opis.md` | wysłane (6.11, sesja główna) |
 | sob. 7.11 | 9:00 | Ruletka – 2,7% | `specs/tydzien_4-8.11_r2-9.json#mat_ruletka` | j.w. (Matematyka: ruletka) | do wysłania |
 | sob. 7.11 | 13:00 | NOWA – karuzela 9:16 (TikTok) | NOWA | NOWA | do zrobienia |
 | sob. 7.11 | 18:00 | Co może policja #6 – +51 km/h | `specs/tydzien_4-8.11_r2-9.json#prawo_policja6_50kmh` | j.w. (Co może policja #6) | do wysłania |
@@ -23,7 +23,7 @@ Po wysłaniu agent zmienia status na **wysłane**. Gdy brakuje dni – dopisuje 
 | nd 8.11 | 18:00 | Co może policja #7 – milczenie | `specs/tydzien_4-8.11_r2-9.json#prawo_policja7_milczenie` | j.w. (Co może policja #7) | do wysłania |
 | pon. 9.11 | 9:00 | ZUS daruje 315 mln zł. Jest haczyk. | `VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_zus_umorzenie/spec.json#zus_umorzenie` | `VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_zus_umorzenie/opis.md` (bez linii o B i lektorze) | do wysłania |
 | pon. 9.11 | 13:00 | NOWA – karuzela 9:16 (TikTok) | NOWA | NOWA | do zrobienia |
-| pon. 9.11 | 18:00 | Co może policja #8 | NOWA (`docs/seria-policja.md`) | NOWA | do zrobienia |
+| pon. 9.11 | 18:00 | Co może policja #5 – dowód osobisty (przeniesione z 6.11) | `specs/tydzien_4-8.11_r2-9.json#prawo_policja5_dowod` | `docs/agent/opisy/tydzien_4-8.11.md` (Co może policja #5) | do wysłania |
 | wt. 10.11 | 9:00 | Pod szlabanem tracisz prawo jazdy | `VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_przejazdy_kolejowe/spec.json#przejazdy_kolejowe` | `…/2026-11-04_przejazdy_kolejowe/opis.md` | do wysłania |
 | wt. 10.11 | 13:00 | NOWA – karuzela 9:16 (TikTok) | NOWA | NOWA | do zrobienia |
 | wt. 10.11 | 18:00 | Nawigacja w telefonie – 500 zł (TikTok Shop: uchwyt Laayee) | `VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_nawigacja_telefon/spec.json#nawigacja_telefon` | `…/2026-11-04_nawigacja_telefon/opis.md` | do wysłania |
