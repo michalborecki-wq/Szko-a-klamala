@@ -5,58 +5,82 @@
    "id": "prawo_bron_czarnoprochowa",
    "format": "reel",
    "subject": "PRAWO",
-   "muzyka": {},
+   "muzyka": {
+    "nastroj": "napiecie",
+    "bpm": 110
+   },
    "durations": [
-    3.5,
-    4.5,
-    4.5,
-    4.5,
-    6.0
+    3.0,
+    4.8,
+    4.8,
+    4.4,
+    5.5
    ],
    "slides": [
     {
      "type": "cover",
-     "obraz": "dowod",
-     "pieczatka": "BEZ POZWOLENIA",
-     "title": "Broń palną możesz mieć",
-     "accent": "bez pozwolenia."
+     "obraz": "odznaka",
+     "pieczatka": "BEZ REJESTRACJI",
+     "title": "Mocną wiatrówkę rejestrujesz.",
+     "accent": "Broń palną sprzed 1885 – nie."
     },
     {
      "type": "number",
-     "tag": "USTAWA",
-     "big": "1885",
-     "count": false,
-     "title": "sprzed roku",
-     "accent": "lub replika",
-     "body": "Czarnoprochowa – **bez pozwolenia**.",
-     "source": "art. 11 ustawy o broni"
+     "tag": "WIATRÓWKA >17 J",
+     "big": "5",
+     "count": true,
+     "title": "dni na rejestrację",
+     "accent": "+ lekarz i psycholog",
+     "source": "art. 13, 15",
+     "fx": {
+      "liczba": "licznik",
+      "naglowek": "litery",
+      "przejscie": "smuga"
+     }
     },
     {
      "type": "number",
-     "tag": "REJESTRACJA",
+     "tag": "SPRZED 1885 LUB REPLIKA",
      "big": "0",
-     "count": false,
-     "title": "zgłoszeń",
-     "accent": "na Policji",
-     "body": "Bez **badań** i bez **rejestracji**.",
-     "source": "art. 13 ust. 1"
+     "count": true,
+     "title": "pozwoleń",
+     "accent": "i rejestracji",
+     "source": "art. 11 pkt 10, art. 13",
+     "fx": {
+      "liczba": "slot",
+      "naglowek": "zoom",
+      "przejscie": "paski"
+     }
     },
     {
-     "type": "text",
-     "tag": "TWIST",
-     "title": "Trening w lesie?",
-     "accent": "Grozi areszt.",
-     "body": "Ćwiczyć wolno **tylko na strzelnicy**.",
-     "source": "art. 45, art. 51"
+     "type": "myth",
+     "myth_label": "TWIST",
+     "fact_label": "FAKT",
+     "myth": "Legalna, więc strzelam wszędzie",
+     "fact": "Poza strzelnicą: **areszt albo grzywna**.",
+     "source": "art. 45, art. 51",
+     "fx": {
+      "mit": "pieczatka",
+      "przejscie": "blysk"
+     }
     },
     {
      "type": "outro",
-     "question": "Powinna być bez pozwolenia?",
-     "sub": "Wyślij komuś, kto zbiera militaria.",
+     "question": "Wiatrówka surowiej niż broń palna. Słusznie?",
+     "sub": "Wyślij komuś, kto strzela z wiatrówki.",
      "sources": "To nie jest porada prawna.",
-     "partner_slot": false
+     "partner_slot": false,
+     "fx": {
+      "naglowek": "przesun",
+      "przejscie": "zoom"
+     }
     }
-   ]
+   ],
+   "moc": "mocna",
+   "fx": {
+    "haczyk": "uderzenie",
+    "tresc": "marker"
+   }
   }
  ]
 }
