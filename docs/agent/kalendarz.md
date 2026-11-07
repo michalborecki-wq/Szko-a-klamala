@@ -6,6 +6,8 @@ Agent czyta ten plik na starcie. Kolumna „Źródło”:
 - **spec: plik#post_id** – scenariusz gotowy, tylko render (`dostawa.py`) i opis z podanego pliku;
 - **NOWA** – agent sam wybiera temat (fabryka: research → weryfikacja w 2 źródłach → scenariusz C), dopisuje tu spec i opis.
 
+**Uwaga 7.11:** po zamachu w Krakowie (7.11) przez kilka dni bez rolek o broni i bez zaczepnych rolek o policji; nigdy treści wykorzystujących to wydarzenie.
+
 Po wysłaniu agent zmienia status na **wysłane**. Gdy brakuje dni – dopisuje kolejne: 9:00 – prawo/finanse/motoryzacja/medycyna/ciekawostka; 13:00 – karuzela 9:16 z wiedzy ogólnej (kosmos, ciało, mózg, rekordy; szablon B, **nie policja**, temat inny niż rolki tego dnia); 18:00 w pon., śr., pt. – „Co może policja”, w pozostałe dni – temat z fabryki z mocną kontrowersją.
 
 | Data | Pora | Rolka | Źródło (spec) | Opis | Status |
@@ -17,8 +19,8 @@ Po wysłaniu agent zmienia status na **wysłane**. Gdy brakuje dni – dopisuje 
 | pt. 6.11 | 18:00 | Broń palną możesz mieć bez pozwolenia (czarnoprochowa) – decyzja Michała 6.11 | `publikacje/2026-11-06/spec_prawo_bron_czarnoprochowa.json#prawo_bron_czarnoprochowa` | `publikacje/2026-11-06/1800_opis.md` | wysłane (6.11, sesja główna) |
 | sob. 7.11 | 9:00 | Ruletka – 2,7% | `specs/tydzien_4-8.11_r2-9.json#mat_ruletka` | j.w. (Matematyka: ruletka) | do wysłania |
 | sob. 7.11 | 13:00 | NOWA – karuzela 9:16 (TikTok) | NOWA | NOWA | do zrobienia |
-| sob. 7.11 | 18:00 | Co może policja #6 – +51 km/h | `specs/tydzien_4-8.11_r2-9.json#prawo_policja6_50kmh` | j.w. (Co może policja #6) | do wysłania |
-| nd 8.11 | 9:00 | Saturn pływałby w wodzie (TikTok Shop: ROBOTIME globus 3D) | `specs/tydzien_4-8.11_r2-9.json#kosmos_saturn_woda` | j.w. (Kosmos: Saturn) | do wysłania |
+| sob. 7.11 | 18:00 | Saturn pływałby w wodzie (TikTok Shop: ROBOTIME globus 3D) – zamiast policji #6 po zamachu w Krakowie | `specs/tydzien_4-8.11_r2-9.json#kosmos_saturn_woda` | `publikacje/2026-11-07/1800_opis.md` | wysłane (7.11, sesja główna) |
+| nd 8.11 | 9:00 | NOWA – temat neutralny (ciało, mózg, rekord), bez broni, policji i przemocy (dzień po zamachu w Krakowie) | NOWA | NOWA | do zrobienia |
 | nd 8.11 | 13:00 | NOWA – karuzela 9:16 (TikTok) | NOWA | NOWA | do zrobienia |
 | nd 8.11 | 18:00 | Co może policja #7 – milczenie | `specs/tydzien_4-8.11_r2-9.json#prawo_policja7_milczenie` | j.w. (Co może policja #7) | do wysłania |
 | pon. 9.11 | 9:00 | ZUS daruje 315 mln zł. Jest haczyk. | `VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_zus_umorzenie/spec.json#zus_umorzenie` | `VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_zus_umorzenie/opis.md` (bez linii o B i lektorze) | do wysłania |
@@ -29,6 +31,6 @@ Po wysłaniu agent zmienia status na **wysłane**. Gdy brakuje dni – dopisuje 
 | wt. 10.11 | 18:00 | Nawigacja w telefonie – 500 zł (TikTok Shop: uchwyt Laayee) | `VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_nawigacja_telefon/spec.json#nawigacja_telefon` | `…/2026-11-04_nawigacja_telefon/opis.md` | do wysłania |
 | śr. 11.11 | 9:00 | NOWA (fabryka) | NOWA | NOWA | do zrobienia |
 | śr. 11.11 | 13:00 | NOWA – karuzela 9:16 (TikTok) | NOWA | NOWA | do zrobienia |
-| śr. 11.11 | 18:00 | Co może policja #9 | NOWA | NOWA | do zrobienia |
+| śr. 11.11 | 18:00 | Co może policja #6 – +51 km/h (przeniesione z 7.11) | `specs/tydzien_4-8.11_r2-9.json#prawo_policja6_50kmh` | `docs/agent/opisy/tydzien_4-8.11.md` (Co może policja #6) | do wysłania |
 
 Wcześniej (4.11, ręcznie): Co może policja #3 – 48 h – wysłane.
