@@ -24,8 +24,39 @@ WARIANTY = {
     "tresc": ["rozmycie", "marker"],
     "liczba": ["licznik", "slot"],
     "mit": ["kreska", "pieczatka"],
-    "przejscie": ["smuga", "zoom", "paski", "blysk"],
+    "przejscie": ["smuga", "zoom", "paski", "blysk", "kierunek", "przeslona"],
+    # Dynamic Visual Engine (8.11): otwarcie rolki (pierwsze 2 s), akcent na wielkiej liczbie
+    "otwarcie": ["uderzenie", "blysk", "zoomout", "ciecie", "skan", "ramka", "kinowe"],
+    "akcent": ["ramka", "ostrosc"],
 }
+# Dobór animacji do rodzaju treści (pole posta "ton" albo przedmiot) – z tych list styl() losuje deterministycznie.
+# Nie jeden styl dla wszystkich tematów: prawo/polityka = dokument i ramki, historia = skan i kino, nauka = zoom i ostrość,
+# kontrowersja = cięcie, uderzenie, szybkie przejścia kierunkowe.
+PRESETY = {
+    "PRAWO":        {"otwarcie": ["ramka", "skan", "kinowe"], "przejscie": ["kierunek", "paski", "przeslona", "smuga"], "akcent": ["ramka"]},
+    "POLITYKA":     {"otwarcie": ["ramka", "skan", "ciecie"], "przejscie": ["kierunek", "paski", "smuga"], "akcent": ["ramka"]},
+    "HISTORIA":     {"otwarcie": ["skan", "kinowe"], "przejscie": ["przeslona", "zoom", "smuga"], "akcent": ["ostrosc"]},
+    "KOSMOS":       {"otwarcie": ["zoomout", "kinowe", "blysk"], "przejscie": ["przeslona", "zoom", "blysk"], "akcent": ["ostrosc"]},
+    "NAUKA":        {"otwarcie": ["zoomout", "skan", "blysk"], "przejscie": ["zoom", "przeslona", "paski"], "akcent": ["ostrosc", "ramka"]},
+    "MOTORYZACJA":  {"otwarcie": ["ciecie", "uderzenie", "ramka"], "przejscie": ["kierunek", "smuga", "blysk"], "akcent": ["ramka"]},
+    "FINANSE":      {"otwarcie": ["ramka", "zoomout", "skan"], "przejscie": ["paski", "kierunek", "zoom"], "akcent": ["ramka", "ostrosc"]},
+    "KONTROWERSJA": {"otwarcie": ["ciecie", "uderzenie", "ramka"], "przejscie": ["kierunek", "blysk", "paski"], "akcent": ["ramka"]},
+    "CIEKAWOSTKA":  {"otwarcie": ["zoomout", "blysk", "kinowe"], "przejscie": ["przeslona", "zoom", "smuga"], "akcent": ["ostrosc"]},
+}
+PRESET_PRZEDMIOTU = {"PRAWO": "PRAWO", "POLITYKA": "POLITYKA", "HISTORIA": "HISTORIA", "KOSMOS": "KOSMOS",
+                     "FIZYKA": "NAUKA", "CHEMIA": "NAUKA", "BIOLOGIA": "NAUKA", "CIAŁO": "NAUKA", "MÓZG": "NAUKA",
+                     "MEDYCYNA": "NAUKA", "TECHNOLOGIA": "NAUKA", "MATEMATYKA": "NAUKA", "MOTORYZACJA": "MOTORYZACJA",
+                     "FINANSE": "FINANSE", "EKONOMIA": "FINANSE", "GEOGRAFIA": "CIEKAWOSTKA"}
+
+
+def preset(post):
+    """Nazwa presetu animacji: jawne "ton" (np. "kontrowersja") > seria SPÓR > przedmiot > CIEKAWOSTKA."""
+    ton = (post.get("ton") or "").upper()
+    if ton in PRESETY:
+        return ton
+    if "SPÓR" in post.get("series", "").upper():
+        return "KONTROWERSJA"
+    return PRESET_PRZEDMIOTU.get(post.get("subject", "").upper(), "CIEKAWOSTKA")
 TLO_PRZEDMIOTU = {"KOSMOS": "gwiazdy", "MATEMATYKA": "siatka", "FIZYKA": "siatka", "TECHNOLOGIA": "siatka",
                   "CHEMIA": "siatka", "FINANSE": "siatka", "EKONOMIA": "siatka"}
 
@@ -65,13 +96,15 @@ def styl(post, i, n):
     tej samej rolki (przesunięcie indeksu), zawsze z tej samej palety ruchów marki."""
     pid = post["id"]
     base = _h(pid)
+    pr = PRESETY[preset(post)]
     fx = {}
     for k, opts in WARIANTY.items():
+        opts = pr.get(k, opts)
         if k == "przejscie":
             # pierwsze cięcie zawsze markową smugą, kolejne rotują
             # przejście DO planszy i: pierwsze zawsze markową smugą, potem rotacja pozostałych wariantów
             # (kolejność zależna od rolki – dwie rolki nie mają tego samego układu)
-            reszta = [o for o in opts if o != "smuga"]
+            reszta = [o for o in opts if o != "smuga"] or ["zoom"]
             perm = [reszta[(base // 5 + j) % len(reszta)] for j in range(len(reszta))]
             if (base // 11) % 2:
                 perm.reverse()
@@ -83,6 +116,8 @@ def styl(post, i, n):
     # moc ruchu: „mocna” (domyślnie od 1.11 – ciągły najazd kamery, puls na bicie, mocniejsze wstrząsy)
     # albo „spokojna” (dawny styl). Wnioski z rolki ISS: kadr nigdy nie stoi.
     fx["moc"] = post.get("moc", "mocna")
+    fx["swiatlo"] = fx["moc"] == "mocna"          # smuga światła i oddychający gradient w tle
+    fx["preset"] = preset(post)
     fx["bpm"] = bpm(post) or 0
     if post.get("tlo3d"):        # tło z renderu 3D (skill szkola-klamala-3d) zamiast warstw rysowanych w przeglądarce
         fx["tlo"], fx["kontur"] = "3d", False
@@ -153,6 +188,35 @@ def css(TOK):
 @keyframes kShake{{0%,100%{{transform:none}}20%{{transform:translateX(-16px)}}40%{{transform:translateX(14px)}}60%{{transform:translateX(-9px)}}80%{{transform:translateX(5px)}}}}
 @keyframes kDim{{from{{opacity:1}}to{{opacity:.45}}}}
 .big,.num{{transform-origin:left center}} .center .big{{transform-origin:center}}
+.beam{{position:absolute;top:-30%;left:0;width:46%;height:160%;transform-origin:center;pointer-events:none;
+  background:linear-gradient(90deg,transparent,rgba(91,140,255,.10) 35%,rgba(255,255,255,.07) 50%,rgba(91,140,255,.10) 65%,transparent);filter:blur(8px)}}
+.grad{{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 80% 55% at 50% 38%,rgba(47,107,255,.20),transparent 70%)}}
+.brk{{position:absolute;z-index:7;pointer-events:none;opacity:0}}
+.brk i{{position:absolute;width:64px;height:64px;border:0 solid {TOK['yellow']};filter:drop-shadow(0 0 12px rgba(255,199,39,.6))}}
+.brk i:nth-child(1){{left:0;top:0;border-left-width:9px;border-top-width:9px}}
+.brk i:nth-child(2){{right:0;top:0;border-right-width:9px;border-top-width:9px}}
+.brk i:nth-child(3){{left:0;bottom:0;border-left-width:9px;border-bottom-width:9px}}
+.brk i:nth-child(4){{right:0;bottom:0;border-right-width:9px;border-bottom-width:9px}}
+.lbox{{position:absolute;left:0;width:100%;z-index:18;background:#05070D;pointer-events:none}}
+.scanl{{position:absolute;left:0;width:100%;height:10px;z-index:8;pointer-events:none;
+  background:linear-gradient(90deg,transparent,{TOK['yellow']} 20%,#fff 50%,{TOK['yellow']} 80%,transparent);
+  box-shadow:0 0 40px 10px rgba(255,199,39,.55),0 -120px 120px -40px rgba(255,199,39,.18)}}
+.tl{{position:relative;margin-top:10px;padding-left:64px}}
+.tl-line{{position:absolute;left:18px;top:12px;bottom:12px;width:6px;border-radius:3px;transform-origin:top;
+  background:linear-gradient(180deg,{TOK['yellow']},{TOK['blue']})}}
+.tl-it{{position:relative;margin:0 0 34px}}
+.tl-dot{{position:absolute;left:-58px;top:.35em;width:30px;height:30px;border-radius:50%;background:{TOK['yellow']};
+  box-shadow:0 0 0 7px rgba(255,199,39,.22),0 0 26px rgba(255,199,39,.7)}}
+.q-mark{{font-family:'Inter Display','Inter';font-weight:900;font-style:italic;font-size:260px;line-height:.6;color:{TOK['yellow']};
+  text-shadow:0 10px 0 {TOK['blue']};height:120px;transform-origin:left bottom}}
+@keyframes kZoomOut{{from{{transform:scale(1.14);filter:blur(2px)}}to{{transform:none;filter:none}}}}
+@keyframes kCutL{{0%,100%{{transform:none}}45%{{transform:translateX(-46px) skewX(-6deg)}}}}
+@keyframes kCutR{{0%,100%{{transform:none}}45%{{transform:translateX(46px) skewX(-6deg)}}}}
+@keyframes kBrk{{0%{{opacity:0;transform:scale(1.45)}}70%{{opacity:1;transform:scale(.97)}}100%{{opacity:1;transform:none}}}}
+@keyframes kLbox{{from{{height:16%}}to{{height:0}}}}
+@keyframes kScan{{from{{top:18%;opacity:1}}85%{{opacity:1}}to{{top:74%;opacity:0}}}}
+@keyframes kSrc{{from{{clip-path:inset(0 100% 0 0);transform:translateX(-12px)}}to{{clip-path:inset(0 0 0 0);transform:none}}}}
+@keyframes kGrowY{{from{{transform:scaleY(0)}}to{{transform:none}}}}
 .row .fill{{transform-origin:left center}}
 """
 
@@ -215,6 +279,11 @@ PREP = r"""
       Object.assign(d.style, {width: sz + 'px', height: sz + 'px', background: col}); bg.appendChild(d); orbs.push({d, k, sz});
     });
   }
+  let beam = null, grad = null;
+  if (fx.swiatlo) {
+    grad = document.createElement('div'); grad.className = 'grad'; bg.appendChild(grad);
+    beam = document.createElement('div'); beam.className = 'beam'; bg.appendChild(beam);
+  }
   let kontur = null;
   if (fx.kontur) {
     kontur = document.createElement('div'); kontur.className = 'kontur';
@@ -225,6 +294,7 @@ PREP = r"""
 
   // ── liczniki, iskry, wstrząsy
   window.__counters = []; window.__slots = []; window.__bars = []; window.__sparks = []; window.__shakes = [];
+  window.__brk = []; window.__focus = [];
   const addCounter = (el, start, dur) => {
     if (!o.count) return;
     const nodes = []; const tw = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
@@ -255,13 +325,28 @@ PREP = r"""
     const hc = [...c.querySelectorAll('h1,h2')].reduce((a, e) => a + e.innerText.replace(/\s/g, '').length, 0) || 1;
     const bw = [...c.querySelectorAll('.sub,.body,.opt')].reduce((a, e) => a + e.innerText.split(/\s+/).length, 0) || 1;
     const sh = Math.min(.075, .55 / hw), sc = Math.min(.032, .7 / hc), sb = Math.min(.035, .75 / bw);
-    c.querySelectorAll('.chip,.tag,.num,h1,h2,.brush,.big,.myth,.sub,.body,.opt,.row,.cd,.note,.src,.partner').forEach(el => {
+    c.querySelectorAll('.chip,.tag,.num,h1,h2,.brush,.big,.myth,.sub,.body,.opt,.row,.cd,.note,.src,.partner,.tl,.q-mark,.q-txt,.q-who').forEach(el => {
       if (el.matches('.chip,.tag')) {
         if (!o.first) { anim(el, 'kChip', .38, t); ev.push({t, typ: 'etykieta'}); t += .14; }
       } else if (el.matches('h1,h2')) {
         if (o.first) {                                  // haczyk widoczny od klatki 0
           el.style.transformOrigin = 'left center'; anim(el, 'kPunch', .55, 0); ev.push({t: 0, typ: 'start'});
-          if (fx.haczyk === 'blysk') {
+          const ot = fx.otwarcie || fx.haczyk;
+          if (ot === 'zoomout') { el.style.transformOrigin = 'center center'; anim(el, 'kZoomOut', .45, 0, true); }
+          else if (ot === 'ciecie') {                   // cięcie liniami: pytanie z lewej, żółty akcent z prawej – czytelne od klatki 0
+            const ac = el.querySelector('.y'); split(el, 'w').forEach(w => anim(w, ac && ac.contains(w) ? 'kCutR' : 'kCutL', .34, .22));
+            window.__shakes.push({t0: .56, amp: fx.moc === 'mocna' ? 14 : 8}); ev.push({t: .56, typ: 'uderzenie'}); }
+          else if (ot === 'skan') {
+            const sl = document.createElement('div'); sl.className = 'scanl'; document.body.appendChild(sl);
+            anim(sl, 'kScan', .75, .05); ev.push({t: .05, typ: 'marker'});
+          } else if (ot === 'ramka') {
+            window.__brk.push({el, t0: .3}); window.__shakes.push({t0: .55, amp: fx.moc === 'mocna' ? 16 : 9}); ev.push({t: .55, typ: 'uderzenie'});
+          } else if (ot === 'kinowe') {
+            ['top', 'bottom'].forEach(side => { const b = document.createElement('div'); b.className = 'lbox'; b.style[side] = 0;
+              document.body.appendChild(b); anim(b, 'kLbox', .7, .1); });
+            ev.push({t: .1, typ: 'start'});
+          }
+          if (ot === 'blysk') {
             el.style.position = 'relative';
             const sh2 = document.createElement('span'); sh2.className = 'sheen'; sh2.innerHTML = el.innerHTML;
             el.appendChild(sh2); anim(sh2, 'kSheen', .9, .35);
@@ -322,6 +407,8 @@ PREP = r"""
         }
         anim(el, 'kFlash', .6, land - .05, true);
         impact(el, land, o.first ? 6 : 12);
+        if (!o.first && fx.akcent === 'ramka') window.__brk.push({el, t0: land - .12});
+        if (!o.first && fx.akcent === 'ostrosc') window.__focus.push(land);
         t += .32;
       } else if (el.matches('.num,.cd')) {
         anim(el, 'kPop', .5, t); ev.push({t, typ: 'pop'}); t += .32;
@@ -348,6 +435,24 @@ PREP = r"""
           else anim(b, 'kHi', .55, tb);
         });
         t += ws.length * sb + .1;
+      } else if (el.matches('.tl')) {                 // oś czasu: linia się rysuje, punkty wskakują po kolei
+        const ln = el.querySelector('.tl-line'); if (ln) anim(ln, 'kGrowY', .9, t);
+        el.querySelectorAll('.tl-it').forEach((it, k) => {
+          const tk = t + .15 + k * .32;
+          anim(it, 'kSlide', .42, tk); const d = it.querySelector('.tl-dot'); if (d) anim(d, 'kPop', .4, tk);
+          ev.push({t: tk, typ: 'pop'});
+        });
+        t += .15 + el.querySelectorAll('.tl-it').length * .32 + .2;
+      } else if (el.matches('.q-mark')) {
+        anim(el, 'kStamp', .4, t); window.__shakes.push({t0: t + .22, amp: 8}); ev.push({t: t + .22, typ: 'pieczatka'}); t += .3;
+      } else if (el.matches('.q-txt')) {
+        const ws = split(el, 'w'); ws.forEach((w, k) => anim(w, 'kUp', .42, t + k * sb)); ev.push({t, typ: 'tekst'});
+        el.querySelectorAll('b').forEach(b => { const k = Math.max(0, ws.indexOf(b.querySelector('.w'))); b.classList.add('mk'); anim(b, 'kMarker', .5, t + k * sb + .3); });
+        t += ws.length * sb + .15;
+      } else if (el.matches('.q-who')) {
+        anim(el, 'kSlide', .42, t); t += .2;
+      } else if (el.matches('.src')) {                 // znacznik źródła: odsłonięcie od lewej
+        anim(el, 'kSrc', .5, t); t += .1;
       } else if (el.matches('.row')) {
         anim(el, 'kFade', .3, t);
         el.querySelectorAll('.fill').forEach(f => anim(f, 'kGrow', .65, t + .05));
@@ -371,6 +476,11 @@ PREP = r"""
   let rects = null;
   window.__layout = () => {                          // pozycje po dopasowaniu tekstu (stan końcowy)
     rects = window.__sparks.map(s => { const r = s.el.getBoundingClientRect(); return {x: r.left + r.width / 2, y: r.top + r.height / 2}; });
+    window.__brk.forEach(b => {                       // ramka ostrości wokół elementu (stan końcowy, z zapasem)
+      const r = b.el.getBoundingClientRect(), pad = 26;
+      if (!b.box) { b.box = document.createElement('div'); b.box.className = 'brk'; b.box.innerHTML = '<i></i><i></i><i></i><i></i>'; document.body.appendChild(b.box); }
+      Object.assign(b.box.style, {left: (r.left - pad) + 'px', top: (r.top - pad) + 'px', width: (r.width + 2 * pad) + 'px', height: (r.height + 2 * pad) + 'px'});
+    });
   };
 
   window.__setT = (t, g, dur, exitT, enterT, push) => {
@@ -419,7 +529,16 @@ PREP = r"""
       const bt = 60 / fx.bpm, ph = ((g % bt) + bt) % bt;
       scale *= 1 + .012 * Math.exp(-ph * 9);
     }
-    wipe.style.display = 'none'; slats.style.display = 'none'; flash.style.opacity = 0;
+    wipe.style.display = 'none'; slats.style.display = 'none'; flash.style.opacity = 0; c.style.clipPath = '';
+    // ramki ostrości: wskakują z powiększenia i zostają (lekko „oddychają”)
+    window.__brk.forEach(b => { if (!b.box) return; const u = t - b.t0;
+      if (u < 0) { b.box.style.opacity = 0; return; }
+      const p = clamp(u / .35), e = 1 - Math.pow(1 - p, 3);
+      b.box.style.opacity = Math.min(1, p * 1.6).toFixed(3);
+      b.box.style.transform = `scale(${(1.45 - .45 * e + .012 * Math.sin(u * 4)).toFixed(4)})`; });
+    // zmiana ostrości: przy lądowaniu liczby tło na chwilę rozmyte, uwaga na liczbie
+    let fb = 0; window.__focus.forEach(f0 => { const u = t - f0; if (u > -.15) fb += 9 * Math.exp(-Math.max(0, u) * 2.2) * clamp((u + .15) / .15); });
+    bg.style.filter = fb > .2 ? `blur(${fb.toFixed(1)}px)` : '';
     const kind = pOut !== null ? exitT : (pIn !== null ? enterT : null), q = pOut !== null ? pOut : pIn, isOut = pOut !== null;
     if (kind === 'smuga') {
       wipe.style.display = ''; const x = isOut ? -1 + q : q;
@@ -438,7 +557,17 @@ PREP = r"""
     } else if (kind === 'blysk') {
       if (isOut) { tx = -W * .55 * q; blur = 22 * q; op = 1 - q; } else { tx = W * .55 * (1 - q); blur = 22 * (1 - q); op = q; }
       flash.style.opacity = (isOut ? q : 1 - q) * .3;
+    } else if (kind === 'kierunek') {                 // szybki „obrót kamery” w lewo z rozmyciem ruchu
+      if (isOut) { tx = -W * 1.15 * q; blur = 26 * q; } else { tx = W * 1.15 * (1 - q); blur = 26 * (1 - q); }
+      wipe.style.display = ''; const x = isOut ? -1 + q : q;
+      [...wipe.children].forEach((e, k) => e.style.translate = `${x * W * 2.4}px 0`);
+      wipe.style.opacity = .55;
+    } else if (kind === 'przeslona') {                // przesłona: kadr zamyka się i otwiera okręgiem
+      const r = isOut ? 120 * (1 - q) : 120 * q;
+      c.style.clipPath = `circle(${r.toFixed(1)}% at 50% 46%)`;
+      flash.style.opacity = (isOut ? q : 1 - q) * .22;
     }
+    if (kind !== 'kierunek') wipe.style.opacity = '';
     c.style.transform = scale !== 1 ? `scale(${scale})` : '';
     c.style.filter = blur ? `blur(${blur.toFixed(1)}px)` : '';
     c.style.opacity = op < 1 ? op.toFixed(3) : '';
@@ -470,6 +599,8 @@ PREP = r"""
       const y = H * (.25 + .5 * (.5 + .5 * Math.cos(g * .28 + o2.k * 1.7))) - o2.sz / 2;
       o2.d.style.transform = `translate(${x.toFixed(1)}px,${y.toFixed(1)}px)`;
     });
+    if (beam) beam.style.transform = `translateX(${((g * .11) % 1.6 * W * 1.6 - W * .9).toFixed(1)}px) rotate(18deg)`;
+    if (grad) grad.style.opacity = (.55 + .45 * Math.sin(g * .7)).toFixed(3);
     if (kontur) kontur.style.transform = `translate(calc(-50% + ${(60 - g * 22).toFixed(1)}px), -58%) rotate(-8deg)`;
     document.querySelectorAll('.bg').forEach(e => e.style.transform = `scale(${1 + .004 * g})`);
     const gr = document.querySelector('.grain');

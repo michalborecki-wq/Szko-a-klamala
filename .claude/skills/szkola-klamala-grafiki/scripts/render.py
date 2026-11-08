@@ -180,6 +180,16 @@ h1 .y{{display:block}}
 .myth span{{background-image:linear-gradient({TOK['red']},{TOK['red']});background-size:100% 4px;
   background-position:0 58%;background-repeat:no-repeat;-webkit-box-decoration-break:clone;box-decoration-break:clone}}
 
+.tl-y{{display:block;font-family:'Inter Display','Inter';font-weight:900;font-style:italic;font-size:{int(f['big']*0.42)}px;
+  line-height:1;color:{TOK['yellow']};text-shadow:0 5px 0 {TOK['blue']};margin-bottom:6px}}
+.tl-t{{display:block;font-size:{int(f['body']*0.92)}px;line-height:1.3;color:{TOK['text']}}}
+.tl-t b{{color:{TOK['yellow']};font-weight:800}}
+.q-txt{{font-family:'Inter Display','Inter';font-weight:800;font-style:italic;font-size:{int(f['h2']*0.82)}px;line-height:1.18;
+  color:#fff;margin:6px 0 26px;text-wrap:balance}}
+.q-txt b{{color:{TOK['yellow']}}}
+.q-who{{font-size:{f['note']}px;color:{TOK['muted']};font-weight:700;letter-spacing:.5px}}
+.q-who:before{{content:'';display:inline-block;width:46px;height:4px;background:{TOK['yellow']};vertical-align:middle;margin-right:14px}}
+
 .card{{background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.08);
   border-radius:22px;padding:36px 38px;box-shadow:0 24px 60px rgba(0,0,0,.35)}}
 .card + .card{{margin-top:22px}}
@@ -267,6 +277,18 @@ def tpl(s, post, f, i, n):
         b = (f"<h2>{title} <span class='y'>{accent}</span></h2>"
              + (f"<div class='body'>{rich(s['body'])}</div>" if s.get("body") else "")
              + f"<div class='rows' style='--kw:{kw}px'>{rr}</div>{note}{src}")
+    elif t == "timeline":
+        # oś czasu: "items": [{"rok": "1610", "tekst": "…"}, …] (2–4 punkty) – linia rysuje się, punkty wskakują po kolei
+        tag = f"<div class='tag t-{s['tag'].lower()}'>{html.escape(s['tag'])}</div>" if s.get("tag") else ""
+        its = "".join(f"<div class='tl-it'><span class='tl-dot'></span><span class='tl-y'>{rich(it['rok'])}</span>"
+                      f"<span class='tl-t'>{rich(it['tekst'])}</span></div>" for it in s["items"])
+        b = (f"{tag}" + (f"<h2>{title} <span class='y'>{accent}</span></h2>" if title or accent else "")
+             + f"<div class='tl'><div class='tl-line'></div>{its}</div>{note}{src}")
+    elif t == "quote":
+        # cytat: TYLKO dosłowny tekst ze źródła (ustawa, dokument, wypowiedź z nagrania) – "kto": autor/akt
+        tag = f"<div class='tag t-{s['tag'].lower()}'>{html.escape(s['tag'])}</div>" if s.get("tag") else ""
+        b = (f"{tag}<div class='q-mark'>„</div><div class='q-txt' data-fit>{rich(s['cytat'])}</div>"
+             f"<div class='q-who'>{rich(s.get('kto',''))}</div>{note}{src}")
     elif t == "quiz":
         opts = s["options"]
         rev = s.get("reveal")
@@ -318,7 +340,7 @@ FIT_AND_QA = """
   let scale = 1, guard = 0;
   while (over() && guard++ < 40) {
     scale *= 0.96;
-    c.querySelectorAll('h1,h2,.body,.sub,.myth,.opt,.big,.num,.cd,.row').forEach(el => {
+    c.querySelectorAll('h1,h2,.body,.sub,.myth,.opt,.big,.num,.cd,.row,.tl-y,.tl-t,.q-txt,.q-mark').forEach(el => {
       const base = parseFloat(el.dataset.base || getComputedStyle(el).fontSize);
       el.dataset.base = base;
       el.style.fontSize = (base * scale) + 'px';
@@ -327,7 +349,7 @@ FIT_AND_QA = """
   const issues = [];
   if (over()) issues.push('TREŚĆ NIE MIEŚCI SIĘ w strefie bezpiecznej – skróć tekst');
   // 2) minimalna czytelność tekstu ciągłego
-  c.querySelectorAll('.body,.sub,.myth,.opt').forEach(el => {
+  c.querySelectorAll('.body,.sub,.myth,.opt,.tl-t,.q-txt').forEach(el => {
     const fs = parseFloat(getComputedStyle(el).fontSize);
     if (fs < minBody) issues.push(`czcionka ${fs.toFixed(0)}px < ${minBody}px (${el.className}) – skróć tekst`);
   });
