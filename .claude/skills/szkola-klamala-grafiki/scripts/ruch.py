@@ -24,7 +24,7 @@ WARIANTY = {
     "tresc": ["rozmycie", "marker"],
     "liczba": ["licznik", "slot"],
     "mit": ["kreska", "pieczatka"],
-    "przejscie": ["smuga", "zoom", "paski", "blysk", "kierunek", "przeslona"],
+    "przejscie": ["smuga", "zoom", "paski", "blysk", "kierunek", "przeslona", "warstwy"],
     # Dynamic Visual Engine (8.11): otwarcie rolki (pierwsze 2 s), akcent na wielkiej liczbie
     "otwarcie": ["uderzenie", "blysk", "zoomout", "ciecie", "skan", "ramka", "kinowe"],
     "akcent": ["ramka", "ostrosc"],
@@ -33,14 +33,14 @@ WARIANTY = {
 # Nie jeden styl dla wszystkich tematów: prawo/polityka = dokument i ramki, historia = skan i kino, nauka = zoom i ostrość,
 # kontrowersja = cięcie, uderzenie, szybkie przejścia kierunkowe.
 PRESETY = {
-    "PRAWO":        {"otwarcie": ["ramka", "skan", "kinowe"], "przejscie": ["kierunek", "paski", "przeslona", "smuga"], "akcent": ["ramka"]},
+    "PRAWO":        {"otwarcie": ["ramka", "skan", "kinowe"], "przejscie": ["kierunek", "warstwy", "paski", "przeslona", "smuga"], "akcent": ["ramka"]},
     "POLITYKA":     {"otwarcie": ["ramka", "skan", "ciecie"], "przejscie": ["kierunek", "paski", "smuga"], "akcent": ["ramka"]},
-    "HISTORIA":     {"otwarcie": ["skan", "kinowe"], "przejscie": ["przeslona", "zoom", "smuga"], "akcent": ["ostrosc"]},
+    "HISTORIA":     {"otwarcie": ["skan", "kinowe"], "przejscie": ["przeslona", "warstwy", "zoom", "smuga"], "akcent": ["ostrosc"]},
     "KOSMOS":       {"otwarcie": ["zoomout", "kinowe", "blysk"], "przejscie": ["przeslona", "zoom", "blysk"], "akcent": ["ostrosc"]},
     "NAUKA":        {"otwarcie": ["zoomout", "skan", "blysk"], "przejscie": ["zoom", "przeslona", "paski"], "akcent": ["ostrosc", "ramka"]},
     "MOTORYZACJA":  {"otwarcie": ["ciecie", "uderzenie", "ramka"], "przejscie": ["kierunek", "smuga", "blysk"], "akcent": ["ramka"]},
     "FINANSE":      {"otwarcie": ["ramka", "zoomout", "skan"], "przejscie": ["paski", "kierunek", "zoom"], "akcent": ["ramka", "ostrosc"]},
-    "KONTROWERSJA": {"otwarcie": ["ciecie", "uderzenie", "ramka"], "przejscie": ["kierunek", "blysk", "paski"], "akcent": ["ramka"]},
+    "KONTROWERSJA": {"otwarcie": ["ciecie", "uderzenie", "ramka"], "przejscie": ["kierunek", "warstwy", "blysk", "paski"], "akcent": ["ramka"]},
     "CIEKAWOSTKA":  {"otwarcie": ["zoomout", "blysk", "kinowe"], "przejscie": ["przeslona", "zoom", "smuga"], "akcent": ["ostrosc"]},
 }
 PRESET_PRZEDMIOTU = {"PRAWO": "PRAWO", "POLITYKA": "POLITYKA", "HISTORIA": "HISTORIA", "KOSMOS": "KOSMOS",
@@ -217,6 +217,7 @@ def css(TOK):
 @keyframes kScan{{from{{top:18%;opacity:1}}85%{{opacity:1}}to{{top:74%;opacity:0}}}}
 @keyframes kSrc{{from{{clip-path:inset(0 100% 0 0);transform:translateX(-12px)}}to{{clip-path:inset(0 0 0 0);transform:none}}}}
 @keyframes kGrowY{{from{{transform:scaleY(0)}}to{{transform:none}}}}
+@keyframes kDocIn{{from{{opacity:0;transform:perspective(1400px) rotateX(28deg) translateY(120px) scale(.9)}}to{{opacity:1;transform:none}}}}
 .row .fill{{transform-origin:left center}}
 """
 
@@ -325,7 +326,7 @@ PREP = r"""
     const hc = [...c.querySelectorAll('h1,h2')].reduce((a, e) => a + e.innerText.replace(/\s/g, '').length, 0) || 1;
     const bw = [...c.querySelectorAll('.sub,.body,.opt')].reduce((a, e) => a + e.innerText.split(/\s+/).length, 0) || 1;
     const sh = Math.min(.075, .55 / hw), sc = Math.min(.032, .7 / hc), sb = Math.min(.035, .75 / bw);
-    c.querySelectorAll('.chip,.tag,.num,h1,h2,.brush,.big,.myth,.sub,.body,.opt,.row,.cd,.note,.src,.partner,.tl,.q-mark,.q-txt,.q-who').forEach(el => {
+    c.querySelectorAll('.chip,.tag,.num,h1,h2,.brush,.big,.myth,.sub,.body,.opt,.row,.cd,.note,.src,.partner,.tl,.q-mark,.q-txt,.q-who,.doc').forEach(el => {
       if (el.matches('.chip,.tag')) {
         if (!o.first) { anim(el, 'kChip', .38, t); ev.push({t, typ: 'etykieta'}); t += .14; }
       } else if (el.matches('h1,h2')) {
@@ -443,6 +444,12 @@ PREP = r"""
           ev.push({t: tk, typ: 'pop'});
         });
         t += .15 + el.querySelectorAll('.tl-it').length * .32 + .2;
+      } else if (el.matches('.doc')) {                // odsłonięcie dokumentu: wjazd w perspektywie, potem marker na wyróżnieniach
+        anim(el, 'kDocIn', .7, t); ev.push({t: t + .5, typ: 'uderzenie'}); window.__shakes.push({t0: t + .62, amp: 6});
+        const tx2 = el.querySelector('.doc-t'), ws = tx2 ? split(tx2, 'w') : [];
+        let tb = t + .8;
+        el.querySelectorAll('.doc-t b').forEach(b => { b.classList.add('mk'); anim(b, 'kMarker', .55, tb); ev.push({t: tb, typ: 'marker'}); tb += .45; });
+        t = tb + .1;
       } else if (el.matches('.q-mark')) {
         anim(el, 'kStamp', .4, t); window.__shakes.push({t0: t + .22, amp: 8}); ev.push({t: t + .22, typ: 'pieczatka'}); t += .3;
       } else if (el.matches('.q-txt')) {
@@ -462,6 +469,13 @@ PREP = r"""
         anim(el, 'kFade', .4, t); t += .08;
       }
     });
+  }
+
+  // ── stop-klatka na zwrocie akcji: krótkie zatrzymanie – błysk, przyciemnienie tła, najazd (fx.zwrot = "stop" | "brak")
+  window.__stop = [];
+  const isTwist = [...c.querySelectorAll('.tag')].some(e => /TWIST|ZWROT/i.test(e.textContent));
+  if (!o.first && o.enter && isTwist && (fx.zwrot || 'stop') === 'stop') {
+    const ts2 = Math.max(.35, t - .25); window.__stop.push(ts2); ev.push({t: ts2, typ: 'uderzenie'});
   }
 
   // ── drugi akcent w trakcie czytania (co 2–3 s coś się dzieje): najazd kamery + błysk liczby / żółtego słowa
@@ -570,6 +584,12 @@ PREP = r"""
       c.style.clipPath = `circle(${r.toFixed(1)}% at 50% 46%)`;
       flash.style.opacity = (isOut ? q : 1 - q) * .22;
     }
+    const kids = [...c.children];
+    if (kind === 'warstwy') {
+      kids.forEach((e, k) => { const sp = 1 + k * .45, x = isOut ? -q * W * .9 * sp : (1 - q) * W * .9 * sp;
+        e.style.translate = `${x.toFixed(1)}px 0`; e.style.opacity = (isOut ? 1 - q * .8 : .2 + .8 * q).toFixed(3); });
+      blur = 8 * (isOut ? q : 1 - q);
+    } else if (kids.length && kids[0].style.translate) kids.forEach(e => { e.style.translate = ''; e.style.opacity = ''; });
     if (kind !== 'kierunek') wipe.style.opacity = '';
     // ramki ostrości: wskakują z powiększenia, „oddychają” i znikają razem z treścią w przejściu
     const vis = pOut !== null ? 1 - pOut : (pIn !== null ? pIn : 1);
@@ -579,6 +599,11 @@ PREP = r"""
       b.box.style.opacity = (Math.min(1, p * 1.6) * vis).toFixed(3);
       b.box.style.translate = (tx || sx || sy) ? `${(tx + sx).toFixed(1)}px ${sy.toFixed(1)}px` : '';
       b.box.style.transform = `scale(${((1.45 - .45 * e + .012 * Math.sin(u * 4)) * scale).toFixed(4)})`; });
+    let stopDim = 0;
+    window.__stop.forEach(ts2 => { const u = t - ts2; if (u >= 0 && u < .9) {
+      scale *= 1 + .06 * Math.exp(-u * 5); stopDim = Math.max(stopDim, .55 * Math.exp(-u * 3.5));
+      flash.style.opacity = Math.max(+flash.style.opacity || 0, .5 * Math.exp(-u * 9)); } });
+    bg.style.opacity = stopDim > .02 ? (1 - stopDim).toFixed(3) : '';
     window.__pulse.forEach(tp => { const u = t - tp; if (u > 0 && u < 1.2) scale *= 1 + .04 * Math.sin(Math.min(1, u / .18) * Math.PI / 2) * Math.exp(-u * 3.2); });
     c.style.transform = scale !== 1 ? `scale(${scale})` : '';
     c.style.filter = blur ? `blur(${blur.toFixed(1)}px)` : '';

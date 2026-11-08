@@ -190,6 +190,14 @@ h1 .y{{display:block}}
 .q-who{{font-size:{f['note']}px;color:{TOK['muted']};font-weight:700;letter-spacing:.5px}}
 .q-who:before{{content:'';display:inline-block;width:46px;height:4px;background:{TOK['yellow']};vertical-align:middle;margin-right:14px}}
 
+.doc{{position:relative;background:linear-gradient(180deg,#F4F6FB,#E3E8F2);color:#121826;border-radius:14px;padding:0 0 34px;
+  box-shadow:0 40px 90px rgba(0,0,0,.55),0 0 0 2px rgba(47,107,255,.35);transform-origin:50% 0;overflow:hidden}}
+.doc-h{{background:{TOK['blue']};color:#fff;font-family:'Inter Display','Inter';font-weight:900;font-style:italic;
+  font-size:{int(f['note']*1.05)}px;letter-spacing:1px;padding:16px 30px 14px;text-transform:uppercase}}
+.doc-t{{font-family:Georgia,'Times New Roman',serif;font-size:{int(f['body']*0.98)}px;line-height:1.42;padding:28px 34px 0}}
+.doc-t b{{font-weight:700;color:#121826}}
+.doc-l{{height:10px;margin:14px 34px 0;border-radius:5px;background:rgba(18,24,38,.10)}}
+
 .card{{background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.08);
   border-radius:22px;padding:36px 38px;box-shadow:0 24px 60px rgba(0,0,0,.35)}}
 .card + .card{{margin-top:22px}}
@@ -284,6 +292,14 @@ def tpl(s, post, f, i, n):
                       f"<span class='tl-t'>{rich(it['tekst'])}</span></div>" for it in s["items"])
         b = (f"{tag}" + (f"<h2>{title} <span class='y'>{accent}</span></h2>" if title or accent else "")
              + f"<div class='tl'><div class='tl-line'></div>{its}</div>{note}{src}")
+    elif t == "dokument":
+        # odsłonięcie dokumentu: DOSŁOWNY fragment aktu prawnego / dokumentu (nie fikcyjny zrzut ekranu);
+        # "naglowek": nazwa i jednostka aktu, "tekst": cytat z **wyróżnieniem**, "linie": ile szarych linii kontekstu (0–3)
+        tag = f"<div class='tag t-{s['tag'].lower()}'>{html.escape(s['tag'])}</div>" if s.get("tag") else ""
+        ln = "".join("<div class='doc-l' style='width:%d%%'></div>" % w for w in (88, 72, 80)[:int(s.get("linie", 2))])
+        b = (f"{tag}" + (f"<h2>{title} <span class='y'>{accent}</span></h2>" if title or accent else "")
+             + f"<div class='doc'><div class='doc-h'>{rich(s['naglowek'])}</div>"
+             f"<div class='doc-t' data-fit>{rich(s['tekst'])}</div>{ln}</div>{note}{src}")
     elif t == "quote":
         # cytat: TYLKO dosłowny tekst ze źródła (ustawa, dokument, wypowiedź z nagrania) – "kto": autor/akt
         tag = f"<div class='tag t-{s['tag'].lower()}'>{html.escape(s['tag'])}</div>" if s.get("tag") else ""
@@ -340,7 +356,7 @@ FIT_AND_QA = """
   let scale = 1, guard = 0;
   while (over() && guard++ < 40) {
     scale *= 0.96;
-    c.querySelectorAll('h1,h2,.body,.sub,.myth,.opt,.big,.num,.cd,.row,.tl-y,.tl-t,.q-txt,.q-mark').forEach(el => {
+    c.querySelectorAll('h1,h2,.body,.sub,.myth,.opt,.big,.num,.cd,.row,.tl-y,.tl-t,.q-txt,.q-mark,.doc-t,.doc-h').forEach(el => {
       const base = parseFloat(el.dataset.base || getComputedStyle(el).fontSize);
       el.dataset.base = base;
       el.style.fontSize = (base * scale) + 'px';
@@ -349,7 +365,7 @@ FIT_AND_QA = """
   const issues = [];
   if (over()) issues.push('TREŚĆ NIE MIEŚCI SIĘ w strefie bezpiecznej – skróć tekst');
   // 2) minimalna czytelność tekstu ciągłego
-  c.querySelectorAll('.body,.sub,.myth,.opt,.tl-t,.q-txt').forEach(el => {
+  c.querySelectorAll('.body,.sub,.myth,.opt,.tl-t,.q-txt,.doc-t').forEach(el => {
     const fs = parseFloat(getComputedStyle(el).fontSize);
     if (fs < minBody) issues.push(`czcionka ${fs.toFixed(0)}px < ${minBody}px (${el.className}) – skróć tekst`);
   });

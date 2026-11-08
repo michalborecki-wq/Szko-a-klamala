@@ -78,10 +78,13 @@ Moduły w `scripts/ruch.py` (paleta i logo bez zmian). Wszystko konfigurowalne p
 - **Dobór do treści:** pole posta `"ton"` (`PRAWO`, `POLITYKA`, `HISTORIA`, `KOSMOS`, `NAUKA`, `MOTORYZACJA`, `FINANSE`, `KONTROWERSJA`, `CIEKAWOSTKA`) albo przedmiot (`subject`) → preset `PRESETY` w `ruch.py` (otwarcie, przejścia, akcent). Seria „SPÓR” = KONTROWERSJA.
 - **Otwarcie (pierwsze 2 s, haczyk czytelny od klatki 0):** `fx.otwarcie` = `uderzenie` | `blysk` | `zoomout` | `ciecie` | `skan` | `ramka` | `kinowe`.
 - **Akcent na wielkiej liczbie:** `fx.akcent` = `ramka` (celownik wokół liczby) | `ostrosc` (tło na chwilę rozmyte – „przesunięcie ostrości”).
-- **Przejścia:** `smuga` | `zoom` | `paski` | `blysk` | `kierunek` (szybki obrót kamery z rozmyciem ruchu) | `przeslona` (okrągła maska).
+- **Przejścia:** `smuga` | `zoom` | `paski` | `blysk` | `kierunek` (szybki obrót kamery z rozmyciem ruchu) | `przeslona` (okrągła maska) | `warstwy` (elementy planszy przesuwają się z różną prędkością).
+- **Zwrot akcji:** plansza z tagiem TWIST/ZWROT dostaje stop-klatkę (błysk, przyciemnienie tła, najazd); wyłączenie `"fx": {"zwrot": "brak"}`.
 - **Ciągły ruch:** smuga światła i oddychający gradient w tle (`fx.swiatlo`, domyślnie przy `"moc": "mocna"`); drugi akcent ok. 1,6–2,2 s po wejściu planszy (najazd kamery + błysk liczby/żółtego słowa) – kadr zmienia się co 2–3 s.
 - **Nowe plansze:**
   - `timeline` – oś czasu: `"items": [{"rok": "0 h", "tekst": "…"}, …]` (2–4 punkty), linia się rysuje, punkty wskakują;
-  - `quote` – cytat: `"cytat": "…"` (TYLKO dosłowny tekst ze źródła, skróty oznaczone „(…)”), `"kto": "Konstytucja RP, art. 41 ust. 3"`.
+  - `quote` – cytat: `"cytat": "…"` (TYLKO dosłowny tekst ze źródła, skróty oznaczone „(…)”), `"kto": "Konstytucja RP, art. 41 ust. 3"`;
+  - `dokument` – odsłonięcie dokumentu: `"naglowek"`, `"tekst"` (dosłowny fragment, `**wyróżnienie**` dostaje marker), `"linie"` 0–3; nigdy fikcyjnych dokumentów ani „zrzutów”.
+- Pełny opis, presety i kontrola jakości: skill `szkola-klamala-dynamic-visual`.
 - **Nie ma (świadomie):** mapy, wycinki prasowe, zdjęcia z ruchem 3D – wymagają prawdziwych materiałów źródłowych; nie generujemy fikcyjnych dokumentów ani zdjęć udających autentyczne.
 - Demo (nie do publikacji): `specs/demo_silnik/demo.json` (wszystkie moduły), `specs/demo_silnik/otwarcia.json` (7 otwarć).
