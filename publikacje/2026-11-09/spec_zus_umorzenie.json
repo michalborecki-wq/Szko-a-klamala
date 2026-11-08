@@ -1,0 +1,75 @@
+{
+ "handle": "@szkola_klamala",
+ "posts": [
+  {
+   "id": "zus_umorzenie",
+   "format": "reel",
+   "subject": "FINANSE",
+   "muzyka": {
+    "nastroj": "napiecie",
+    "bpm": 110
+   },
+   "durations": [
+    3.5,
+    4.5,
+    4.5,
+    4.5,
+    5.5,
+    6.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "monety",
+     "pieczatka": "UMORZONE",
+     "title": "ZUS daruje 315 mln zł.",
+     "accent": "Jest haczyk."
+    },
+    {
+     "type": "number",
+     "tag": "SEJM",
+     "big": "315 mln zł",
+     "count": true,
+     "title": "długów",
+     "accent": "sprzed 1999 roku",
+     "body": "**7,1 tys.** płatników.",
+     "source": "druk sejmowy nr 3010"
+    },
+    {
+     "type": "number",
+     "tag": "KOSZT",
+     "big": "135 mln zł",
+     "count": true,
+     "title": "na ściąganie",
+     "accent": "przez 10 lat",
+     "body": "Odzyskano by **13,9 mln**.",
+     "source": "uzasadnienie projektu"
+    },
+    {
+     "type": "text",
+     "tag": "TWIST",
+     "title": "Przedsiębiorcom",
+     "accent": "lata wypadną z emerytury.",
+     "body": "Odmowa: **30 dni**.",
+     "source": "art. 3 i 6"
+    },
+    {
+     "type": "dokument",
+     "tag": "PRZEPIS",
+     "naglowek": "Druk nr 3010 · art. 6 ust. 1 pkt 3",
+     "tekst": "(…) okres, za który składki zostały umorzone, **nie podlega uwzględnieniu** (…)",
+     "linie": 1
+    },
+    {
+     "type": "outro",
+     "question": "Co byś wybrał na ich miejscu?",
+     "sub": "Wyślij komuś, kto miał firmę w latach 90.",
+     "sources": "To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ],
+   "ton": "PRAWO",
+   "moc": "mocna"
+  }
+ ]
+}

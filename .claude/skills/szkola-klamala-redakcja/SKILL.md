@@ -138,6 +138,27 @@ Jeśli nie możesz potwierdzić istotnego faktu, zmień temat albo zrezygnuj z m
 
 Nie dopisuj fikcyjnych cytatów, wypowiedzi ani statystyk.
 
+## 7a. DZIENNIKARSTWO ŚLEDCZE I KONTROWERSJA (decyzja Michała 8.11)
+
+Michał: „wdrożyć zasadę dziennikarstwa śledczego i publikowania kontrowersyjnych, sprawdzonych materiałów”. Kontrowersja jest celem rolki, ale bierze się z dowodu, nie z tonu.
+
+**Metoda – szukaj tego, czego nie ma w nagłówkach:**
+1. Czytaj dokument pierwotny, nie omówienie: druk sejmowy z uzasadnieniem i OSR (ocena skutków regulacji), tekst ustawy w ISAP/API Sejmu, wyrok (SAOS, orzeczenia.nsa.gov.pl, HUDOC), raport NIK, wystąpienie RPO/KMPT, dane GUS/BDL, plan finansowy, odpowiedź na interpelację, BIP.
+2. Szukaj ukrytej stawki: koszt po cichu przerzucony na obywatela, liczba z uzasadnienia, której nikt nie podał, przepis „na końcu ustawy”, sprzeczność między zapowiedzią a tekstem, różnica między projektem a uchwaloną wersją, porównanie niesprawiedliwości (X surowiej niż Y).
+3. Policz sam (w kodzie): koszt na osobę, różnicę lat, proporcję – i podaj, skąd są dane.
+4. Pokaż dowód na planszy: `dokument` z dosłownym fragmentem i numerem artykułu/druku (skill `szkola-klamala-dynamic-visual`).
+
+**Próg publikacji (wszystkie warunki naraz):**
+- teza rolki wynika wprost z dokumentu pierwotnego + min. 1 niezależne źródło (CLAUDE.md: min. 2 niezależne źródła);
+- przed renderem adwersaryjny fact-checker (subagent) próbuje obalić tezę i haczyk; jeśli znajdzie słabe miejsce – zmiękcz tezę do tego, co dokument mówi, albo zmień temat;
+- stanowisko drugiej strony, jeśli istnieje (uzasadnienie projektu, komunikat instytucji), jest w opisie jednym zdaniem – „rząd uzasadnia to…”, „ministerstwo wyjaśnia…”;
+- fakt, nie ocena: „ustawa przewiduje…”, „NIK ustaliła…”, „sąd uznał…”; pytanie na końcu otwiera spór o zasadę („Powinno tak być?”), nie atakuje ludzi;
+- sprawa bez prawomocnego wyroku – dopisek „sprawa w toku – obowiązuje domniemanie niewinności”; bez nazwisk i wizerunków osób prywatnych i funkcjonariuszy (tylko funkcja i miasto), chyba że zapadł prawomocny wyrok.
+
+**Granice (bez wyjątków):** zakazy z CLAUDE.md zostają – wojny i konflikty zbrojne, religia, szczepionki i spory medyczne, płeć, migracja, teorie spiskowe, drastyczne treści, wykorzystywanie tragedii (np. zamach w Krakowie 7.11). Polityka tylko jako fakty (ustawa, liczby, skutek dla widza), bez stawania po stronie partii. Nie używaj materiałów wykradzionych, danych osobowych z przecieków ani nagrań bez kontekstu. Nie publikuj zarzutów opartych na jednym anonimowym źródle.
+
+**Sprostowania:** jeśli po wysyłce okaże się, że fakt był błędny – w najbliższej dostawie zgłoś to Michałowi z gotowym tekstem sprostowania (komentarz przypięty + relacja) i zapisz w `docs/agent/dziennik.md`.
+
 ## 8. PRODUKCJA ROLEK
 
 Format: pionowy 9:16; rozdzielczość zgodna z konfiguracją fabryki; szablon C; wyłącznie wersja A.
@@ -359,4 +380,5 @@ Bez bałaganu. Bez powtórzeń. Bez kompromisów w kwestii faktów.
 - **Wklejka do relacji:** od 6.11 każda rolka ma piąty plik `_relacja.jpg` (decyzja Michała) – `dostawa.py --relacja "…|…"` robi go sam; w wiadomości obok treści relacji.
 - **Tematy (sekcja 6) a CLAUDE.md (pierwszeństwo):** polityka wyłącznie jako fakty (ustawa/druk, liczby, skutek, min. 2 niezależne źródła, bez ocen i stron); nadal poza kontem: wojny, religia, szczepionki i spory medyczne, płeć, migracja, teorie spiskowe, drastyczne treści. Tragedie i zamachy (np. Kraków 7.11) – nigdy jako „viral”; uwagi w nagłówku kalendarza są wiążące.
 - **Ciągłość (decyzja Michała 8.11):** „Masz kontynuować do odwołania” – przy braku wpisu agent sam dopisuje dzień do kalendarza (sekcja 5) i robi materiał jako NOWA. Zatrzymuje się tylko na wyraźne polecenie Michała.
+- **Styl wizualny od 9.11:** Dynamic Visual Engine – skill `szkola-klamala-dynamic-visual` (presety po `"ton"`, plansza `dokument` z dosłownym przepisem, stop-klatka na zwrocie, `kontrola.py` przed wysyłką).
 - **Szczegóły techniczne** (fabryka, animacje `moc`/`fx`/`myth`, haczyk „porównanie niesprawiedliwości”, oznaczenia reklam, kolorystyka, strefy bezpieczne): skill `szkola-klamala-agent` (sekcja DOSTAWA → Viral) i `szkola-klamala-grafiki`. Przy konflikcie z tym skillem – ten skill, a nad oboma CLAUDE.md.

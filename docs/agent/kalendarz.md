@@ -6,6 +6,8 @@ Agent czyta ten plik na starcie. Kolumna „Źródło”:
 - **spec: plik#post_id** – scenariusz gotowy, tylko render (`dostawa.py`) i opis z podanego pliku;
 - **NOWA** – agent sam wybiera temat (fabryka: research → weryfikacja w 2 źródłach → scenariusz C), dopisuje tu spec i opis.
 
+**Od 9.11 (decyzja Michała 8.11):** każda rolka w stylu Dynamic Visual Engine (skill `szkola-klamala-dynamic-visual`) i według zasady dziennikarstwa śledczego (skill `szkola-klamala-redakcja`, sekcja 7a).
+
 **Uwaga 7.11:** po zamachu w Krakowie (7.11) przez kilka dni bez rolek o broni i bez zaczepnych rolek o policji; nigdy treści wykorzystujących to wydarzenie.
 
 Po wysłaniu agent zmienia status na **wysłane**. **Decyzja Michała 8.11: „Masz kontynuować do odwołania”** – gdy brakuje dni, agent sam je dopisuje i robi materiał jako NOWA (pełna weryfikacja). Reguła: 9:00 – prawo/finanse/motoryzacja/medycyna/ciekawostka; 13:00 – karuzela 9:16 z wiedzy ogólnej (kosmos, ciało, mózg, rekordy; szablon B, **nie policja**, temat inny niż rolki tego dnia); 18:00 w pon., śr., pt. – „Co może policja”, w pozostałe dni – temat z fabryki z mocną kontrowersją.
@@ -23,7 +25,7 @@ Po wysłaniu agent zmienia status na **wysłane**. **Decyzja Michała 8.11: „M
 | nd 8.11 | 9:00 | NOWA – temat neutralny (ciało, mózg, rekord), bez broni, policji i przemocy (dzień po zamachu w Krakowie) | NOWA | NOWA | do zrobienia |
 | nd 8.11 | 13:00 | NOWA – karuzela 9:16 (TikTok) | NOWA | NOWA | do zrobienia |
 | nd 8.11 | 18:00 | Co może policja #7 – milczenie | `specs/tydzien_4-8.11_r2-9.json#prawo_policja7_milczenie` | j.w. (Co może policja #7) | wysłane (8.11, sesja główna) |
-| pon. 9.11 | 9:00 | ZUS daruje 315 mln zł. Jest haczyk. | `VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_zus_umorzenie/spec.json#zus_umorzenie` | `VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_zus_umorzenie/opis.md` (bez linii o B i lektorze) | do wysłania |
+| pon. 9.11 | 9:00 | ZUS daruje 315 mln zł. Jest haczyk. (nowy styl: plansza `dokument` z art. 6 druku 3010) | `publikacje/2026-11-09/spec_zus_umorzenie.json#zus_umorzenie` | `publikacje/2026-11-09/0900_opis.md` | wysłane (8.11 wieczorem, sesja główna) |
 | pon. 9.11 | 13:00 | NOWA – karuzela 9:16 (TikTok) | NOWA | NOWA | do zrobienia |
 | pon. 9.11 | 18:00 | Co może policja #5 – dowód osobisty (przeniesione z 6.11) | `specs/tydzien_4-8.11_r2-9.json#prawo_policja5_dowod` | `docs/agent/opisy/tydzien_4-8.11.md` (Co może policja #5) | do wysłania |
 | wt. 10.11 | 9:00 | Pod szlabanem tracisz prawo jazdy | `VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_przejazdy_kolejowe/spec.json#przejazdy_kolejowe` | `…/2026-11-04_przejazdy_kolejowe/opis.md` | do wysłania |
