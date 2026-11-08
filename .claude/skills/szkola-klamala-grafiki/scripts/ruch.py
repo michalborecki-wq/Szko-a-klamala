@@ -189,8 +189,8 @@ def css(TOK):
 @keyframes kDim{{from{{opacity:1}}to{{opacity:.45}}}}
 .big,.num{{transform-origin:left center}} .center .big{{transform-origin:center}}
 .beam{{position:absolute;top:-30%;left:0;width:46%;height:160%;transform-origin:center;pointer-events:none;
-  background:linear-gradient(90deg,transparent,rgba(91,140,255,.10) 35%,rgba(255,255,255,.07) 50%,rgba(91,140,255,.10) 65%,transparent);filter:blur(8px)}}
-.grad{{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 80% 55% at 50% 38%,rgba(47,107,255,.20),transparent 70%)}}
+  background:linear-gradient(90deg,transparent,rgba(91,140,255,.20) 35%,rgba(255,255,255,.13) 50%,rgba(91,140,255,.20) 65%,transparent);filter:blur(10px)}}
+.grad{{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 80% 55% at 50% 38%,rgba(47,107,255,.30),transparent 70%)}}
 .brk{{position:absolute;z-index:7;pointer-events:none;opacity:0}}
 .brk i{{position:absolute;width:64px;height:64px;border:0 solid {TOK['yellow']};filter:drop-shadow(0 0 12px rgba(255,199,39,.6))}}
 .brk i:nth-child(1){{left:0;top:0;border-left-width:9px;border-top-width:9px}}
@@ -207,8 +207,8 @@ def css(TOK):
 .tl-it{{position:relative;margin:0 0 34px}}
 .tl-dot{{position:absolute;left:-58px;top:.35em;width:30px;height:30px;border-radius:50%;background:{TOK['yellow']};
   box-shadow:0 0 0 7px rgba(255,199,39,.22),0 0 26px rgba(255,199,39,.7)}}
-.q-mark{{font-family:'Inter Display','Inter';font-weight:900;font-style:italic;font-size:260px;line-height:.6;color:{TOK['yellow']};
-  text-shadow:0 10px 0 {TOK['blue']};height:120px;transform-origin:left bottom}}
+.q-mark{{font-family:'Inter Display','Inter';font-weight:900;font-style:italic;font-size:240px;line-height:1;color:{TOK['yellow']};
+  text-shadow:0 10px 0 {TOK['blue']};height:150px;margin:-60px 0 18px;overflow:visible;transform-origin:left center}}
 @keyframes kZoomOut{{from{{transform:scale(1.14);filter:blur(2px)}}to{{transform:none;filter:none}}}}
 @keyframes kCutL{{0%,100%{{transform:none}}45%{{transform:translateX(-46px) skewX(-6deg)}}}}
 @keyframes kCutR{{0%,100%{{transform:none}}45%{{transform:translateX(46px) skewX(-6deg)}}}}
@@ -464,6 +464,15 @@ PREP = r"""
     });
   }
 
+  // ── drugi akcent w trakcie czytania (co 2–3 s coś się dzieje): najazd kamery + błysk liczby / żółtego słowa
+  window.__pulse = [];
+  if (fx.moc === 'mocna' && !o.first && o.enter) {
+    const tp = Math.max(t + 1.6, 2.2);
+    window.__pulse.push(tp);
+    const hi = c.querySelector('.big') || c.querySelector('h2 .y, .q-txt b, .tl-it:last-child .tl-y, .body b');
+    if (hi) { anim(hi, 'kFlash', .6, tp, true); ev.push({t: tp, typ: 'tik'}); }
+  }
+
   // ── przejścia
   const wipe = document.createElement('div'); wipe.className = 'wipe';
   wipe.innerHTML = '<i class="wb"></i><i class="wy"></i><i class="wy2"></i>'; document.body.appendChild(wipe);
@@ -530,12 +539,6 @@ PREP = r"""
       scale *= 1 + .012 * Math.exp(-ph * 9);
     }
     wipe.style.display = 'none'; slats.style.display = 'none'; flash.style.opacity = 0; c.style.clipPath = '';
-    // ramki ostrości: wskakują z powiększenia i zostają (lekko „oddychają”)
-    window.__brk.forEach(b => { if (!b.box) return; const u = t - b.t0;
-      if (u < 0) { b.box.style.opacity = 0; return; }
-      const p = clamp(u / .35), e = 1 - Math.pow(1 - p, 3);
-      b.box.style.opacity = Math.min(1, p * 1.6).toFixed(3);
-      b.box.style.transform = `scale(${(1.45 - .45 * e + .012 * Math.sin(u * 4)).toFixed(4)})`; });
     // zmiana ostrości: przy lądowaniu liczby tło na chwilę rozmyte, uwaga na liczbie
     let fb = 0; window.__focus.forEach(f0 => { const u = t - f0; if (u > -.15) fb += 9 * Math.exp(-Math.max(0, u) * 2.2) * clamp((u + .15) / .15); });
     bg.style.filter = fb > .2 ? `blur(${fb.toFixed(1)}px)` : '';
@@ -568,6 +571,15 @@ PREP = r"""
       flash.style.opacity = (isOut ? q : 1 - q) * .22;
     }
     if (kind !== 'kierunek') wipe.style.opacity = '';
+    // ramki ostrości: wskakują z powiększenia, „oddychają” i znikają razem z treścią w przejściu
+    const vis = pOut !== null ? 1 - pOut : (pIn !== null ? pIn : 1);
+    window.__brk.forEach(b => { if (!b.box) return; const u = t - b.t0;
+      if (u < 0) { b.box.style.opacity = 0; return; }
+      const p = clamp(u / .35), e = 1 - Math.pow(1 - p, 3);
+      b.box.style.opacity = (Math.min(1, p * 1.6) * vis).toFixed(3);
+      b.box.style.translate = (tx || sx || sy) ? `${(tx + sx).toFixed(1)}px ${sy.toFixed(1)}px` : '';
+      b.box.style.transform = `scale(${((1.45 - .45 * e + .012 * Math.sin(u * 4)) * scale).toFixed(4)})`; });
+    window.__pulse.forEach(tp => { const u = t - tp; if (u > 0 && u < 1.2) scale *= 1 + .04 * Math.sin(Math.min(1, u / .18) * Math.PI / 2) * Math.exp(-u * 3.2); });
     c.style.transform = scale !== 1 ? `scale(${scale})` : '';
     c.style.filter = blur ? `blur(${blur.toFixed(1)}px)` : '';
     c.style.opacity = op < 1 ? op.toFixed(3) : '';
