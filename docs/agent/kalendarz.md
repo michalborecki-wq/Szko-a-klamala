@@ -8,7 +8,7 @@ Agent czyta ten plik na starcie. Kolumna „Źródło”:
 
 **Uwaga 7.11:** po zamachu w Krakowie (7.11) przez kilka dni bez rolek o broni i bez zaczepnych rolek o policji; nigdy treści wykorzystujących to wydarzenie.
 
-Po wysłaniu agent zmienia status na **wysłane**. **Od 8.11 (skill redakcja 2.0) agent NIE dopisuje sam nowych dni** – przy braku wpisu bierze najbliższy `spec:` „do wysłania” albo zgłasza brak. Kalendarz uzupełnia Michał lub sesja główna według reguły: 9:00 – prawo/finanse/motoryzacja/medycyna/ciekawostka; 13:00 – karuzela 9:16 z wiedzy ogólnej (kosmos, ciało, mózg, rekordy; szablon B, **nie policja**, temat inny niż rolki tego dnia); 18:00 w pon., śr., pt. – „Co może policja”, w pozostałe dni – temat z fabryki z mocną kontrowersją.
+Po wysłaniu agent zmienia status na **wysłane**. **Decyzja Michała 8.11: „Masz kontynuować do odwołania”** – gdy brakuje dni, agent sam je dopisuje i robi materiał jako NOWA (pełna weryfikacja). Reguła: 9:00 – prawo/finanse/motoryzacja/medycyna/ciekawostka; 13:00 – karuzela 9:16 z wiedzy ogólnej (kosmos, ciało, mózg, rekordy; szablon B, **nie policja**, temat inny niż rolki tego dnia); 18:00 w pon., śr., pt. – „Co może policja”, w pozostałe dni – temat z fabryki z mocną kontrowersją.
 
 | Data | Pora | Rolka | Źródło (spec) | Opis | Status |
 |---|---|---|---|---|---|
@@ -32,5 +32,28 @@ Po wysłaniu agent zmienia status na **wysłane**. **Od 8.11 (skill redakcja 2.0
 | śr. 11.11 | 9:00 | NOWA (fabryka) | NOWA | NOWA | do zrobienia |
 | śr. 11.11 | 13:00 | NOWA – karuzela 9:16 (TikTok) | NOWA | NOWA | do zrobienia |
 | śr. 11.11 | 18:00 | Co może policja #6 – +51 km/h (przeniesione z 7.11) | `specs/tydzien_4-8.11_r2-9.json#prawo_policja6_50kmh` | `docs/agent/opisy/tydzien_4-8.11.md` (Co może policja #6) | do wysłania |
+
+| czw. 12.11 | 9:00 | NOWA – finanse: „500 zł miesięcznie to nie 180 tys. zł po 30 latach” (procent składany, przykład, nie prognoza) | NOWA (`docs/pomysly-tematow.md` F3) | NOWA | do zrobienia |
+| czw. 12.11 | 13:00 | NOWA – karuzela 9:16 (kosmos/ciało/rekord) | NOWA | NOWA | do zrobienia |
+| czw. 12.11 | 18:00 | NOWA – temat z fabryki z mocną, prawdziwą kontrowersją (bez broni, bez przemocy) | NOWA | NOWA | do zrobienia |
+| pt. 13.11 | 9:00 | NOWA – finanse: „Spadek o 100 tys. zł w jeden dzień to nie strata” (strata papierowa a zrealizowana, art. 30b PIT – sprawdzić) | NOWA (F5) | NOWA | do zrobienia |
+| pt. 13.11 | 13:00 | NOWA – karuzela 9:16 | NOWA | NOWA | do zrobienia |
+| pt. 13.11 | 18:00 | Co może policja #8 – „Mandat? Możesz powiedzieć »nie«” (art. 97 § 2–3, art. 99 KPSW; prawa obywatela, spokojnie) | NOWA (`docs/seria-policja.md` P3) | NOWA | do zrobienia |
+| sob. 14.11 | 9:00 | NOWA – ciało/medycyna (oficjalne źródła, bez porad) | NOWA | NOWA | do zrobienia |
+| sob. 14.11 | 13:00 | NOWA – karuzela 9:16 | NOWA | NOWA | do zrobienia |
+| sob. 14.11 | 18:00 | NOWA – temat z fabryki z kontrowersją | NOWA | NOWA | do zrobienia |
+| nd 15.11 | 9:00 | NOWA – kosmos/rekord (szablon B) | NOWA | NOWA | do zrobienia |
+| nd 15.11 | 13:00 | NOWA – karuzela 9:16 | NOWA | NOWA | do zrobienia |
+| nd 15.11 | 18:00 | NOWA – temat z fabryki z kontrowersją | NOWA | NOWA | do zrobienia |
+| pon. 16.11 | 9:00 | NOWA – prawo w codzienności | NOWA | NOWA | do zrobienia |
+| pon. 16.11 | 13:00 | NOWA – karuzela 9:16 | NOWA | NOWA | do zrobienia |
+| pon. 16.11 | 18:00 | Co może policja #9 – „Masz prawo znać nazwisko policjanta” (§ 2 ust. 1 rozp. RM, Dz.U. 2023 poz. 2535) | NOWA (P1) | NOWA | do zrobienia |
+| wt. 17.11 | 9:00 | NOWA – motoryzacja (przepisy, mity kierowców) | NOWA | NOWA | do zrobienia |
+| wt. 17.11 | 13:00 | NOWA – karuzela 9:16 | NOWA | NOWA | do zrobienia |
+| wt. 17.11 | 18:00 | NOWA – temat z fabryki z kontrowersją | NOWA | NOWA | do zrobienia |
+| śr. 18.11 | 9:00 | NOWA – nauka/mózg | NOWA | NOWA | do zrobienia |
+| śr. 18.11 | 13:00 | NOWA – karuzela 9:16 | NOWA | NOWA | do zrobienia |
+| śr. 18.11 | 18:00 | Co może policja #10 – „Policjant w cywilu? Poproś o legitymację – i ją przepisz” (§ 2 ust. 2 rozp. RM) | NOWA (P2) | NOWA | do zrobienia |
+| czw. 19.11 | 9:00 | Black Friday – „»Było 999 zł« to nie jest cena sprzed promocji” (najniższa cena z 30 dni, art. 4 ust. 2 ustawy o informowaniu o cenach – sprawdzić w ISAP; start oficjalnej sprzedaży TikTok Shop 19.11) | NOWA (S2) | NOWA | do zrobienia |
 
 Wcześniej (4.11, ręcznie): Co może policja #3 – 48 h – wysłane.

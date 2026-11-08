@@ -101,7 +101,7 @@ Możliwe statusy:
 
 **WYSŁANE** – nie wykonuj ponownie dostawy. Nie renderuj ponownie, nie wysyłaj ponownie i nie zmieniaj statusu.
 
-**BRAK WPISU** – nie wymyślaj tematu tylko dlatego, że kalendarz jest pusty. Znajdź najbliższą gotową pozycję oznaczoną `spec:` i statusem „do wysłania”. Jeżeli jej nie ma, zgłoś brak możliwości przygotowania dostawy.
+**BRAK WPISU** – (zmienione decyzją Michała 8.11: „Masz kontynuować do odwołania”) dostawy idą codziennie, bez przerw, dopóki Michał ich nie odwoła. Gdy na dzisiejszą datę i porę nie ma wpisu: najpierw sprawdź, czy jest gotowa pozycja `spec:` „do wysłania” z bliskiej przyszłości – jeśli tak, użyj jej. Jeśli nie – dopisz do kalendarza brakujący dzień według reguły z nagłówka kalendarza (9:00 prawo/finanse/motoryzacja/medycyna/ciekawostka; 13:00 karuzela z wiedzy ogólnej; 18:00 w pon., śr., pt. „Co może policja”, w pozostałe dni temat z fabryki) i potraktuj wpis jak NOWA – z pełną weryfikacją w 2 niezależnych źródłach. Tematy bierz w pierwszej kolejności z `docs/pomysly-tematow.md`, `docs/seria-policja.md` i z rankingu fabryki; nie powtarzaj `docs/opublikowane.md`. Jeśli żadnego tematu nie da się zweryfikować na czas – sekcja 17.
 
 ## 6. ZASADY DOBORU TEMATÓW
 
@@ -358,5 +358,5 @@ Bez bałaganu. Bez powtórzeń. Bez kompromisów w kwestii faktów.
 - **Repozytorium z prawem zapisu:** przed klonowaniem wywołaj `add_repo` (claude-code-remote) z `owner="michalborecki-wq"`, `repo="Szko-a-klamala"`, `access="push"`. Bez tego push zwraca 403 i kolejne uruchomienia nie wiedzą, co wysłano.
 - **Wklejka do relacji:** od 6.11 każda rolka ma piąty plik `_relacja.jpg` (decyzja Michała) – `dostawa.py --relacja "…|…"` robi go sam; w wiadomości obok treści relacji.
 - **Tematy (sekcja 6) a CLAUDE.md (pierwszeństwo):** polityka wyłącznie jako fakty (ustawa/druk, liczby, skutek, min. 2 niezależne źródła, bez ocen i stron); nadal poza kontem: wojny, religia, szczepionki i spory medyczne, płeć, migracja, teorie spiskowe, drastyczne treści. Tragedie i zamachy (np. Kraków 7.11) – nigdy jako „viral”; uwagi w nagłówku kalendarza są wiążące.
-- **Brak wpisu (sekcja 5):** zgodnie z tą wersją agent nie dopisuje sam nowych tematów do kalendarza – bierze najbliższy `spec:` „do wysłania” albo zgłasza brak. Nowe tematy planuje Michał (albo sesja główna na jego prośbę).
+- **Ciągłość (decyzja Michała 8.11):** „Masz kontynuować do odwołania” – przy braku wpisu agent sam dopisuje dzień do kalendarza (sekcja 5) i robi materiał jako NOWA. Zatrzymuje się tylko na wyraźne polecenie Michała.
 - **Szczegóły techniczne** (fabryka, animacje `moc`/`fx`/`myth`, haczyk „porównanie niesprawiedliwości”, oznaczenia reklam, kolorystyka, strefy bezpieczne): skill `szkola-klamala-agent` (sekcja DOSTAWA → Viral) i `szkola-klamala-grafiki`. Przy konflikcie z tym skillem – ten skill, a nad oboma CLAUDE.md.
