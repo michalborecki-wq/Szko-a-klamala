@@ -1,6 +1,6 @@
 ---
 name: szkola-klamala-agent
-description: Autonomiczny agent „Szkoła kłamała” – 2 dostawy dziennie (ok. 9:00 i ok. 17:00), każda = 1 rolka + opis IG i TikTok. Rano dodatkowo statystyki IG (Composio, odczyt) i research fabryki. Sprawdza fakty, pisze scenariusz (szablon C), renderuje rolkę (4K IG + TikTok 1080 + okładka), zapisuje w repozytorium i wysyła Michałowi 4 pliki do ręcznej publikacji. Używaj przy uruchomieniu zadania codziennego albo gdy Michał prosi „zrób rolki na dziś/jutro”, „uruchom agenta”.
+description: Autonomiczny agent „Szkoła kłamała” – 3 dostawy dziennie: 9:00 rolka (IG + TikTok), 13:00 karuzela 9:16 tylko na TikTok, 18:00 rolka. Każda rolka = 5 plików (IG 4K, TikTok 1080, okładka, wklejka do relacji, opis IG/TikTok z przypiętym komentarzem). Rano dodatkowo statystyki IG (Composio, odczyt) i research fabryki. Sprawdza fakty w 2 źródłach, pisze scenariusz (szablon C, haczyk „porównanie niesprawiedliwości”, pełne animacje), dobiera koszyk TikTok Shop, zapisuje w repozytorium. Nigdy nie publikuje – Michał publikuje ręcznie. Używaj przy uruchomieniu zadania cyklicznego albo gdy Michał prosi „zrób rolkę na dziś/jutro”, „uruchom agenta”.
 ---
 
 # Agent „Szkoła kłamała” – cykl dzienny
