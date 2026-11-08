@@ -1,0 +1,159 @@
+{
+ "handle": "@szkola_klamala",
+ "posts": [
+  {
+   "id": "OTW_uderzenie",
+   "format": "reel",
+   "subject": "PRAWO",
+   "moc": "mocna",
+   "logo": false,
+   "durations": [
+    2.4
+   ],
+   "fx": {
+    "otwarcie": "uderzenie"
+   },
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "zegar",
+     "pieczatka": "48 H",
+     "title": "Zatrzymany?",
+     "accent": "Zegar tyka od razu."
+    }
+   ]
+  },
+  {
+   "id": "OTW_blysk",
+   "format": "reel",
+   "subject": "PRAWO",
+   "moc": "mocna",
+   "logo": false,
+   "durations": [
+    2.4
+   ],
+   "fx": {
+    "otwarcie": "blysk"
+   },
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "zegar",
+     "pieczatka": "48 H",
+     "title": "Zatrzymany?",
+     "accent": "Zegar tyka od razu."
+    }
+   ]
+  },
+  {
+   "id": "OTW_zoomout",
+   "format": "reel",
+   "subject": "PRAWO",
+   "moc": "mocna",
+   "logo": false,
+   "durations": [
+    2.4
+   ],
+   "fx": {
+    "otwarcie": "zoomout"
+   },
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "zegar",
+     "pieczatka": "48 H",
+     "title": "Zatrzymany?",
+     "accent": "Zegar tyka od razu."
+    }
+   ]
+  },
+  {
+   "id": "OTW_ciecie",
+   "format": "reel",
+   "subject": "PRAWO",
+   "moc": "mocna",
+   "logo": false,
+   "durations": [
+    2.4
+   ],
+   "fx": {
+    "otwarcie": "ciecie"
+   },
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "zegar",
+     "pieczatka": "48 H",
+     "title": "Zatrzymany?",
+     "accent": "Zegar tyka od razu."
+    }
+   ]
+  },
+  {
+   "id": "OTW_skan",
+   "format": "reel",
+   "subject": "PRAWO",
+   "moc": "mocna",
+   "logo": false,
+   "durations": [
+    2.4
+   ],
+   "fx": {
+    "otwarcie": "skan"
+   },
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "zegar",
+     "pieczatka": "48 H",
+     "title": "Zatrzymany?",
+     "accent": "Zegar tyka od razu."
+    }
+   ]
+  },
+  {
+   "id": "OTW_ramka",
+   "format": "reel",
+   "subject": "PRAWO",
+   "moc": "mocna",
+   "logo": false,
+   "durations": [
+    2.4
+   ],
+   "fx": {
+    "otwarcie": "ramka"
+   },
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "zegar",
+     "pieczatka": "48 H",
+     "title": "Zatrzymany?",
+     "accent": "Zegar tyka od razu."
+    }
+   ]
+  },
+  {
+   "id": "OTW_kinowe",
+   "format": "reel",
+   "subject": "PRAWO",
+   "moc": "mocna",
+   "logo": false,
+   "durations": [
+    2.4
+   ],
+   "fx": {
+    "otwarcie": "kinowe"
+   },
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "zegar",
+     "pieczatka": "48 H",
+     "title": "Zatrzymany?",
+     "accent": "Zegar tyka od razu."
+    }
+   ]
+  }
+ ]
+}
