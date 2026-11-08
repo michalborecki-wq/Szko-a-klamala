@@ -22,7 +22,7 @@ Po wysłaniu agent zmienia status na **wysłane**. Gdy brakuje dni – dopisuje 
 | sob. 7.11 | 18:00 | Saturn pływałby w wodzie (TikTok Shop: ROBOTIME globus 3D) – zamiast policji #6 po zamachu w Krakowie | `specs/tydzien_4-8.11_r2-9.json#kosmos_saturn_woda` | `publikacje/2026-11-07/1800_opis.md` | wysłane (7.11, sesja główna) |
 | nd 8.11 | 9:00 | NOWA – temat neutralny (ciało, mózg, rekord), bez broni, policji i przemocy (dzień po zamachu w Krakowie) | NOWA | NOWA | do zrobienia |
 | nd 8.11 | 13:00 | NOWA – karuzela 9:16 (TikTok) | NOWA | NOWA | do zrobienia |
-| nd 8.11 | 18:00 | Co może policja #7 – milczenie | `specs/tydzien_4-8.11_r2-9.json#prawo_policja7_milczenie` | j.w. (Co może policja #7) | do wysłania |
+| nd 8.11 | 18:00 | Co może policja #7 – milczenie | `specs/tydzien_4-8.11_r2-9.json#prawo_policja7_milczenie` | j.w. (Co może policja #7) | wysłane (8.11, sesja główna) |
 | pon. 9.11 | 9:00 | ZUS daruje 315 mln zł. Jest haczyk. | `VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_zus_umorzenie/spec.json#zus_umorzenie` | `VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_zus_umorzenie/opis.md` (bez linii o B i lektorze) | do wysłania |
 | pon. 9.11 | 13:00 | NOWA – karuzela 9:16 (TikTok) | NOWA | NOWA | do zrobienia |
 | pon. 9.11 | 18:00 | Co może policja #5 – dowód osobisty (przeniesione z 6.11) | `specs/tydzien_4-8.11_r2-9.json#prawo_policja5_dowod` | `docs/agent/opisy/tydzien_4-8.11.md` (Co może policja #5) | do wysłania |
