@@ -8,7 +8,7 @@ Agent czyta ten plik na starcie. Kolumna „Źródło”:
 
 **Uwaga 7.11:** po zamachu w Krakowie (7.11) przez kilka dni bez rolek o broni i bez zaczepnych rolek o policji; nigdy treści wykorzystujących to wydarzenie.
 
-Po wysłaniu agent zmienia status na **wysłane**. Gdy brakuje dni – dopisuje kolejne: 9:00 – prawo/finanse/motoryzacja/medycyna/ciekawostka; 13:00 – karuzela 9:16 z wiedzy ogólnej (kosmos, ciało, mózg, rekordy; szablon B, **nie policja**, temat inny niż rolki tego dnia); 18:00 w pon., śr., pt. – „Co może policja”, w pozostałe dni – temat z fabryki z mocną kontrowersją.
+Po wysłaniu agent zmienia status na **wysłane**. **Od 8.11 (skill redakcja 2.0) agent NIE dopisuje sam nowych dni** – przy braku wpisu bierze najbliższy `spec:` „do wysłania” albo zgłasza brak. Kalendarz uzupełnia Michał lub sesja główna według reguły: 9:00 – prawo/finanse/motoryzacja/medycyna/ciekawostka; 13:00 – karuzela 9:16 z wiedzy ogólnej (kosmos, ciało, mózg, rekordy; szablon B, **nie policja**, temat inny niż rolki tego dnia); 18:00 w pon., śr., pt. – „Co może policja”, w pozostałe dni – temat z fabryki z mocną kontrowersją.
 
 | Data | Pora | Rolka | Źródło (spec) | Opis | Status |
 |---|---|---|---|---|---|
