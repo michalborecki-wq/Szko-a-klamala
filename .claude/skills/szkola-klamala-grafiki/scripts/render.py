@@ -202,6 +202,35 @@ h1 .y{{display:block}}
   text-transform:uppercase;box-shadow:0 10px 0 {TOK['blue']},0 0 40px rgba(255,199,39,.45)}}
 .doc-l{{height:10px;margin:14px 34px 0;border-radius:5px;background:rgba(18,24,38,.10)}}
 
+.wyc{{background:#F2EEE3;background-image:repeating-linear-gradient(0deg,transparent 0 46px,rgba(18,24,38,.05) 46px 48px);
+  border-radius:0;padding:0 0 30px;margin:0 26px;rotate:-1.6deg;overflow:visible;box-shadow:0 40px 90px rgba(0,0,0,.6);
+  clip-path:polygon(0 1.5%,4% 0,9% 1.2%,15% .2%,22% 1.4%,30% .3%,38% 1.1%,47% 0,55% 1.3%,63% .2%,71% 1.2%,79% .1%,87% 1.4%,94% .2%,100% 1%,
+    100% 98.6%,95% 100%,88% 98.8%,80% 99.8%,72% 98.7%,64% 99.9%,56% 98.6%,48% 99.8%,40% 98.9%,32% 100%,24% 98.7%,16% 99.8%,8% 98.8%,0 99.6%)}}
+.wyc:before{{content:'';position:absolute;left:50%;top:-16px;width:190px;height:44px;margin-left:-95px;rotate:3deg;
+  background:rgba(255,199,39,.55);box-shadow:0 2px 6px rgba(0,0,0,.2)}}
+.wyc-k{{font-family:'Inter';font-weight:700;letter-spacing:2px;color:#5B6170;
+  font-size:{int(f['note']*0.8)}px;padding:34px 36px 0;text-transform:uppercase}}
+.wyc .wyc-t{{font-family:Georgia,'Times New Roman',serif;font-weight:700;font-size:{int(f['body']*1.25)}px;line-height:1.2;
+  padding:16px 36px 0;color:#121826}}
+.wyc-tl{{font-size:{int(f['note']*0.95)}px;color:#5B6170;padding:14px 36px 0;font-style:italic}}
+
+.foto{{position:relative;align-self:center;width:86%;aspect-ratio:4/5;max-height:62%;background:#F4F1EA;padding:18px 18px 18px;
+  rotate:1.2deg;box-shadow:0 40px 90px rgba(0,0,0,.6);overflow:hidden}}
+.foto:before{{content:'';position:absolute;left:50%;top:-12px;width:170px;height:40px;margin-left:-85px;rotate:-3deg;z-index:3;
+  background:rgba(255,199,39,.55)}}
+.foto-in{{position:relative;width:100%;height:100%;overflow:hidden;background:#0A0E18}}
+.foto-b,.foto-f{{position:absolute;inset:0;background-size:cover;background-position:center}}
+.foto-b{{filter:blur(14px) brightness(.75);transform-origin:50% 50%}}
+.foto-f{{-webkit-mask-image:radial-gradient(ellipse 72% 78% at 50% 48%,#000 62%,transparent 100%);
+  mask-image:radial-gradient(ellipse 72% 78% at 50% 48%,#000 62%,transparent 100%)}}
+.foto-pod{{font-size:{int(f['note']*0.8)}px;color:{TOK['muted']};margin-top:22px;font-weight:600;letter-spacing:.3px}}
+.foto-pod.ai{{display:inline-block;color:{TOK['bg0']};background:{TOK['yellow']};padding:8px 14px;border-radius:8px;font-weight:800}}
+.fpel{{position:absolute;inset:0;z-index:3;overflow:hidden;pointer-events:none}}
+.fpel .foto-b,.fpel .foto-f{{inset:-6%}}
+.fpel:after{{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,14,24,.55) 0%,rgba(10,14,24,.05) 30%,
+  rgba(10,14,24,.25) 55%,rgba(10,14,24,.92) 80%,#0A0E18 100%)}}
+.content.napelnym{{justify-content:flex-end}}
+
 .card{{background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.08);
   border-radius:22px;padding:36px 38px;box-shadow:0 24px 60px rgba(0,0,0,.35)}}
 .card + .card{{margin-top:22px}}
@@ -231,6 +260,60 @@ h1 .y{{display:block}}
 def head(s):
     """Nagłówek: 'title' + opcjonalny 'accent' (żółty, w nowej linii w h1, w tej samej w h2)."""
     return rich(s.get("title", "")), rich(s.get("accent", ""))
+
+
+# ───────────────────────── wycinki agencji i zdjęcia na wolnych licencjach (decyzja Michała 9.11) ─────────────────────────
+REPO = __import__("pathlib").Path(__file__).resolve().parents[4]
+LIC_OK = ("CC0", "PUBLIC DOMAIN", "DOMENA PUBLICZNA", "PD", "CC BY", "CC-BY", "CC BY-SA", "CC-BY-SA", "NASA")
+
+
+def licencja_ok(lic: str) -> bool:
+    """Tylko CC0, domena publiczna, CC BY, CC BY-SA. NC i ND odrzucamy (konto ma sponsorów, zdjęcie przycinamy)."""
+    u = (lic or "").upper().replace("‑", "-")
+    if re.search(r"\bNC\b|\bND\b|NON-?COMMERCIAL|NO-?DERIV", u):
+        return False
+    return any(k in u for k in LIC_OK)
+
+
+def foto_dane(s):
+    """Ścieżka zdjęcia + metadane (z <slug>.json obok pliku albo z pól planszy). Brak licencji/autora/źródła = błąd."""
+    p = __import__("pathlib").Path(s["zdjecie"])
+    if not p.is_absolute():
+        p = REPO / p
+    if not p.exists():
+        raise ValueError(f"foto: brak pliku zdjęcia {p}")
+    meta = {}
+    mj = p.with_suffix(".json")
+    if mj.exists():
+        meta = json.load(open(mj, encoding="utf-8"))
+    for k in ("autor", "licencja", "zrodlo", "serwis"):
+        if s.get(k):
+            meta[k] = s[k]
+    if s.get("ilustracja_ai"):
+        return p, meta
+    brak = [k for k in ("autor", "licencja", "zrodlo") if not meta.get(k)]
+    if brak:
+        raise ValueError(f"foto {p.name}: brak {', '.join(brak)} – bez pełnych danych licencji zdjęcia nie używamy")
+    if not licencja_ok(meta["licencja"]):
+        raise ValueError(f"foto {p.name}: licencja „{meta['licencja']}” niedozwolona (tylko CC0, domena publiczna, CC BY, CC BY-SA; bez NC/ND)")
+    return p, meta
+
+
+def foto_uri(p, max_h=2400):
+    im = Image.open(p).convert("RGB")
+    if im.height > max_h:
+        im = im.resize((int(im.width * max_h / im.height), max_h), Image.LANCZOS)
+    b = io.BytesIO(); im.save(b, "JPEG", quality=90)
+    return "data:image/jpeg;base64," + base64.b64encode(b.getvalue()).decode(), Image.open(p).size
+
+
+def wycinek_waliduj(s):
+    brak = [k for k in ("agencja", "data", "naglowek", "link") if not s.get(k)]
+    if brak:
+        raise ValueError(f"wycinek: brak pól {', '.join(brak)} (agencja, data, dosłowny nagłówek i link do artykułu są obowiązkowe)")
+    n = len(re.sub(r"\*\*", "", s["naglowek"]).split())
+    if n > 20:
+        raise ValueError(f"wycinek: nagłówek ma {n} słów (> 20) – prawo cytatu: krótki, dosłowny fragment")
 
 
 def tpl(s, post, f, i, n):
@@ -307,6 +390,42 @@ def tpl(s, post, f, i, n):
              # "wskaz": krótka etykieta (2–4 słowa) – linia łączy ją z wyróżnieniem (wskazanie szczegółu, DVE 9.11)
              + (f"<div class='doc-wsk'><span>{rich(s['wskaz'])}</span></div>" if s.get("wskaz") else "")
              + f"{note}{src}")
+    elif t == "wycinek":
+        # wycinek agencji (PAP – Polska, Reuters – świat): NASZA plansza z dosłownym, krótkim nagłówkiem (prawo cytatu, art. 29 pr. aut.),
+        # nazwa agencji zwykłym tekstem + data; bez logo i layoutu agencji, to nie jest „zrzut ekranu”. Link idzie do opisu.
+        wycinek_waliduj(s)
+        tag = f"<div class='tag t-{s['tag'].lower()}'>{html.escape(s['tag'])}</div>" if s.get("tag") else ""
+        tl = f"<div class='wyc-tl'>tłum. red.: {rich(s['tlumaczenie'])}</div>" if s.get("tlumaczenie") else ""
+        src = f"<div class='src'>{rich(s.get('source') or ('Źródło: ' + s['agencja'] + ', ' + s['data']))}</div>"
+        b = (f"{tag}" + (f"<h2>{title} <span class='y'>{accent}</span></h2>" if title or accent else "")
+             + f"<div class='doc wyc'><div class='wyc-k'>Nagłówek · {html.escape(s['agencja'])} · {html.escape(s['data'])}</div>"
+             f"<div class='doc-t wyc-t' data-fit>„{rich(s['naglowek'])}”</div>{tl}</div>"
+             + (f"<div class='doc-wsk'><span>{rich(s['wskaz'])}</span></div>" if s.get("wskaz") else "")
+             + f"{note}{src}")
+    elif t == "foto":
+        # zdjęcie na wolnej licencji (CC0 / domena publiczna / CC BY / CC BY-SA) z podpisem autora i licencji;
+        # "uklad": "ramka" (odbitka z taśmą) albo "pelny" (pełny kadr z paralaksą, zdjęcie min. ok. 1600 px wysokości)
+        p, meta = foto_dane(s)
+        uri, (pw, ph) = foto_uri(p)
+        uk = s.get("uklad", "ramka")
+        if uk == "pelny" and ph < 1600:
+            print(f"  ⚠ foto {p.name}: {pw}×{ph} px – za mało na pełny kadr, używam układu „ramka”")
+            uk = "ramka"
+        if s.get("ilustracja_ai"):
+            pod = "<div class='foto-pod ai'>Ilustracja – nie jest zdjęciem wydarzenia</div>"
+        else:
+            pod = (f"<div class='foto-pod'>Fot. {html.escape(meta['autor'])} · {html.escape(meta['licencja'])}"
+                   + (f" · {html.escape(meta['serwis'])}" if meta.get("serwis") else "") + "</div>")
+        warstwy = f"<div class='foto-b' style=\"background-image:url('{uri}')\"></div><div class='foto-f' style=\"background-image:url('{uri}')\"></div>"
+        tag = f"<div class='tag t-{s['tag'].lower()}'>{html.escape(s['tag'])}</div>" if s.get("tag") else ""
+        tekst = ((f"<h2 data-fit>{title} <span class='y'>{accent}</span></h2>" if title or accent else "")
+                 + (f"<div class='body' data-fit>{rich(s['body'])}</div>" if s.get("body") else ""))
+        if uk == "pelny":
+            cls = "napelnym"
+            s["_pelny"] = f"<div class='fpel'>{warstwy}</div>"
+            b = f"{tag}{tekst}{pod}{note}{src}"
+        else:
+            b = f"{tag}<div class='foto'><div class='foto-in'>{warstwy}</div></div>{tekst}{pod}{note}{src}"
     elif t == "quote":
         # cytat: TYLKO dosłowny tekst ze źródła (ustawa, dokument, wypowiedź z nagrania) – "kto": autor/akt
         tag = f"<div class='tag t-{s['tag'].lower()}'>{html.escape(s['tag'])}</div>" if s.get("tag") else ""
@@ -345,7 +464,7 @@ def tpl(s, post, f, i, n):
     body_cls = " class='zolty'" if (t == "cover" and s.get("uklad") == "zolty") else ""
     return (f"<!doctype html><html><head><meta charset='utf-8'><style>{css(f)}</style></head><body{body_cls}>"
             f"<div class='bg'></div><div class='st a'></div><div class='st a2'></div><div class='st b'></div>"
-            f"<div class='st b2'></div><div class='vig'></div><div class='grain'></div>"
+            f"<div class='st b2'></div><div class='vig'></div><div class='grain'></div>{s.pop('_pelny', '')}"
             f"{top}<div class='content {cls}'>{b}</div>{bot}</body></html>")
 
 
@@ -363,7 +482,7 @@ FIT_AND_QA = """
   let scale = 1, guard = 0;
   while (over() && guard++ < 40) {
     scale *= 0.96;
-    c.querySelectorAll('h1,h2,.body,.sub,.myth,.opt,.big,.num,.cd,.row,.tl-y,.tl-t,.q-txt,.q-mark,.doc-t,.doc-h').forEach(el => {
+    c.querySelectorAll('h1,h2,.body,.sub,.myth,.opt,.big,.num,.cd,.row,.tl-y,.tl-t,.q-txt,.q-mark,.doc-t,.doc-h,.wyc-k').forEach(el => {
       const base = parseFloat(el.dataset.base || getComputedStyle(el).fontSize);
       el.dataset.base = base;
       el.style.fontSize = (base * scale) + 'px';

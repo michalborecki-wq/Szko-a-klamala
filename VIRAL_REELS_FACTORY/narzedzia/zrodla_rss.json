@@ -35,6 +35,17 @@
    "nazwa": "Google News – world (EN)",
    "url": "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en",
    "typ": "agregator"
+  },
+  {
+   "nazwa": "PAP – Polska (przez Google News; bezpośredni RSS PAP blokowany)",
+   "url": "https://news.google.com/rss/search?q=site:pap.pl/aktualnosci+when:2d&hl=pl&gl=PL&ceid=PL:pl",
+   "typ": "agencja"
+  },
+  {
+   "nazwa": "Reuters – świat (przez Google News)",
+   "url": "https://news.google.com/rss/search?q=site:reuters.com+when:2d&hl=en-US&gl=US&ceid=US:en",
+   "typ": "agencja"
   }
- ]
+ ],
+ "uwaga_agencje": "PAP i Reuters (decyzja Michała 9.11): źródło faktów i nagłówków, NIE zdjęć. Tytuł z RSS to punkt wyjścia – dosłowny nagłówek i datę potwierdź na stronie artykułu (WebFetch); gdy strona blokuje pobieranie (PAP – Incapsula), tytuł z Google News + temat potwierdzony w drugim niezależnym źródle i dopisek w zrodla.md „nagłówek z RSS”. Wpisy „Tag: …” pomijaj."
 }

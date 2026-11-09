@@ -147,6 +147,7 @@ Michał: „wdrożyć zasadę dziennikarstwa śledczego i publikowania kontrower
 2. Szukaj ukrytej stawki: koszt po cichu przerzucony na obywatela, liczba z uzasadnienia, której nikt nie podał, przepis „na końcu ustawy”, sprzeczność między zapowiedzią a tekstem, różnica między projektem a uchwaloną wersją, porównanie niesprawiedliwości (X surowiej niż Y).
 3. Policz sam (w kodzie): koszt na osobę, różnicę lat, proporcję – i podaj, skąd są dane.
 4. Pokaż dowód na planszy: `dokument` z dosłownym fragmentem i numerem artykułu/druku (skill `szkola-klamala-dynamic-visual`).
+5. Temat z bieżących wiadomości: dowodem jest `wycinek` z dosłownym nagłówkiem PAP (Polska) lub Reutersa (świat) – nasza plansza, bez logo i layoutu agencji, link w opisie. Agencje to źródło faktów i nagłówków, nie zdjęć. Zdjęcia (`foto`) tylko na wolnych licencjach (CC0, domena publiczna, CC BY, CC BY-SA) z podpisem autora i licencji, pobrane przez `zdjecia.py` (decyzja Michała 9.11). Wycinek agencji to jedno źródło – drugie niezależne nadal obowiązuje.
 
 **Próg publikacji (wszystkie warunki naraz):**
 - teza rolki wynika wprost z dokumentu pierwotnego + min. 1 niezależne źródło (CLAUDE.md: min. 2 niezależne źródła);

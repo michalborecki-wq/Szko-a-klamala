@@ -1,0 +1,27 @@
+{
+ "handle": "@szkola_klamala",
+ "_opis": "DEMO 9.11 – plansze wycinek (nagłówek agencji, prawo cytatu) i foto (zdjęcie na wolnej licencji, ramka i pełny kadr z paralaksą). Nagłówek PAP z kanału Google News 6.11.2026 (strona pap.pl blokuje pobieranie automatyczne). Nie do publikacji.",
+ "posts": [
+  {
+   "id": "DEMO_wycinek_foto",
+   "format": "reel",
+   "subject": "PRAWO",
+   "ton": "PRAWO",
+   "moc": "mocna",
+   "muzyka": {"nastroj": "napiecie", "bpm": 110},
+   "durations": [3.0, 5.0, 4.5, 4.5, 4.5],
+   "slides": [
+    {"type": "cover", "title": "Wycinek i zdjęcie.", "accent": "Test silnika."},
+    {"type": "wycinek", "tag": "PAP", "agencja": "PAP", "data": "6.11.2026",
+     "naglowek": "Resort klimatu chce objąć **kaucją** „małpki” o pojemności do 350 ml",
+     "link": "https://www.pap.pl/aktualnosci/resort-klimatu-chce-objac-kaucja-malpki-o-pojemnosci-do-350-ml",
+     "wskaz": "do 350 ml"},
+    {"type": "foto", "tag": "ZDJĘCIE", "zdjecie": "zrodla/zdjecia/as17-148-22727.jpg",
+     "title": "Ziemia z Apollo 17,", "accent": "grudzień 1972."},
+    {"type": "foto", "uklad": "pelny", "zdjecie": "zrodla/zdjecia/as17-148-22727.jpg",
+     "title": "Pełny kadr", "accent": "z głębią.", "body": "Tył wolniej, przód szybciej."},
+    {"type": "outro", "question": "Wycinek czy zdjęcie?", "sub": "Demo silnika – nie do publikacji.", "partner_slot": false}
+   ]
+  }
+ ]
+}

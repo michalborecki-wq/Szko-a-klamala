@@ -54,6 +54,8 @@ def parsuj(xml, zrodlo):
     ns = {"a": "http://www.w3.org/2005/Atom"}
     for it in root.iter("item"):
         tyt = (it.findtext("title") or "").strip()
+        if tyt.startswith("Tag:"):                     # strony tagów PAP w Google News – to nie są artykuły
+            continue
         src = it.find("source")
         out.append({"tytul": tyt, "link": (it.findtext("link") or "").strip(),
                     "data": it.findtext("pubDate"),

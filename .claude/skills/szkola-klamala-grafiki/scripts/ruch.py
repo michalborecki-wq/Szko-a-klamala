@@ -190,6 +190,7 @@ def css(TOK):
 @keyframes kGrow{{from{{transform:scaleX(0)}}to{{transform:none}}}}
 @keyframes kHi{{from{{color:{TOK['text']};text-shadow:none}}50%{{text-shadow:0 0 34px rgba(255,199,39,.95)}}to{{color:{TOK['yellow']}}}}}
 @keyframes kMarker{{0%{{background-size:0% 100%;color:{TOK['text']}}}45%{{color:{TOK['text']}}}100%{{background-size:100% 100%;color:{TOK['bg0']}}}}}
+@keyframes kMarkerDoc{{0%{{background-size:0% 100%;color:#121826}}100%{{background-size:100% 100%;color:#121826}}}}
 @keyframes kStamp{{0%{{opacity:0;transform:rotate(-12deg) scale(2.8)}}55%{{opacity:1;transform:rotate(-12deg) scale(.9)}}100%{{opacity:1;transform:rotate(-12deg) scale(1)}}}}
 @keyframes kShake{{0%,100%{{transform:none}}20%{{transform:translateX(-16px)}}40%{{transform:translateX(14px)}}60%{{transform:translateX(-9px)}}80%{{transform:translateX(5px)}}}}
 @keyframes kDim{{from{{opacity:1}}to{{opacity:.45}}}}
@@ -224,6 +225,8 @@ def css(TOK):
 @keyframes kSrc{{from{{clip-path:inset(0 100% 0 0);transform:translateX(-12px)}}to{{clip-path:inset(0 0 0 0);transform:none}}}}
 @keyframes kGrowY{{from{{transform:scaleY(0)}}to{{transform:none}}}}
 @keyframes kDocIn{{from{{opacity:0;transform:perspective(1400px) rotateX(28deg) translateY(120px) scale(.9)}}to{{opacity:1;transform:none}}}}
+@keyframes kFotoIn{{from{{clip-path:inset(0 0 100% 0);opacity:.2}}to{{clip-path:inset(0 0 0 0);opacity:1}}}}
+@keyframes kFotoPel{{from{{clip-path:inset(50% 0 50% 0)}}to{{clip-path:inset(0 0 0 0)}}}}
 .row .fill{{transform-origin:left center}}
 .leak{{position:absolute;top:-10%;left:-100%;width:300%;height:120%;z-index:19;pointer-events:none;display:none;mix-blend-mode:screen;
   background:linear-gradient(105deg,transparent 30%,rgba(255,170,40,.35) 40%,rgba(255,214,90,.9) 47%,#fff 50%,rgba(255,199,39,.85) 53%,rgba(229,57,53,.25) 60%,transparent 70%)}}
@@ -307,7 +310,7 @@ PREP = r"""
 
   // ── liczniki, iskry, wstrząsy
   window.__counters = []; window.__slots = []; window.__bars = []; window.__sparks = []; window.__shakes = [];
-  window.__brk = []; window.__focus = []; window.__rgb = []; window.__dolly = null; window.__wsk = null;
+  window.__brk = []; window.__focus = []; window.__rgb = []; window.__dolly = null; window.__wsk = null; window.__flashes = [];
   const addCounter = (el, start, dur) => {
     if (!o.count) return;
     const nodes = []; const tw = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
@@ -339,7 +342,7 @@ PREP = r"""
     const hc = [...c.querySelectorAll('h1,h2')].reduce((a, e) => a + e.innerText.replace(/\s/g, '').length, 0) || 1;
     const bw = [...c.querySelectorAll('.sub,.body,.opt')].reduce((a, e) => a + e.innerText.split(/\s+/).length, 0) || 1;
     const sh = Math.min(.075, .55 / hw), sc = Math.min(.032, .7 / hc), sb = Math.min(.035, .75 / bw);
-    c.querySelectorAll('.chip,.tag,.num,h1,h2,.brush,.big,.myth,.sub,.body,.opt,.row,.cd,.note,.src,.partner,.tl,.q-mark,.q-txt,.q-who,.doc,.doc-wsk').forEach(el => {
+    c.querySelectorAll('.chip,.tag,.num,h1,h2,.brush,.big,.myth,.sub,.body,.opt,.row,.cd,.note,.src,.partner,.tl,.q-mark,.q-txt,.q-who,.doc,.doc-wsk,.foto,.foto-pod').forEach(el => {
       if (el.matches('.chip,.tag')) {
         if (!o.first) { anim(el, 'kChip', .38, t); ev.push({t, typ: 'etykieta'}); t += .14; }
       } else if (el.matches('h1,h2')) {
@@ -466,10 +469,15 @@ PREP = r"""
         anim(el, 'kDocIn', .7, t); ev.push({t: t + .5, typ: 'uderzenie'}); window.__shakes.push({t0: t + .62, amp: 6});
         const tx2 = el.querySelector('.doc-t'), ws = tx2 ? split(tx2, 'w') : [];
         let tb = t + .8;
-        el.querySelectorAll('.doc-t b').forEach(b => { b.classList.add('mk'); anim(b, 'kMarker', .55, tb); ev.push({t: tb, typ: 'marker'}); tb += .45; });
+        el.querySelectorAll('.doc-t b').forEach(b => { b.classList.add('mk'); anim(b, 'kMarkerDoc', .55, tb);   // ciemny tekst na jasnej karcie – słowo widoczne także przed markerem
+ ev.push({t: tb, typ: 'marker'}); tb += .45; });
         const fb2 = el.querySelector('.doc-t b');
         if (fb2) window.__dolly = {el: fb2, t0: tb + .05, amt: fx.moc === 'mocna' ? .13 : .08};   // „kamera” najeżdża na dosłowny fragment
         t = tb + .1;
+      } else if (el.matches('.foto')) {               // odbitka zdjęcia: odsłonięcie maską od góry + krótki błysk
+        anim(el, 'kFotoIn', .6, t); ev.push({t: t + .35, typ: 'uderzenie'}); window.__flashes.push(t + .35); t += .55;
+      } else if (el.matches('.foto-pod')) {
+        anim(el, 'kSrc', .45, t); t += .15;
       } else if (el.matches('.doc-wsk')) {            // wskazanie szczegółu: linia rysuje się od wyróżnienia do etykiety
         const fb3 = c.querySelector('.doc-t b');
         if (fb3) {
@@ -526,6 +534,10 @@ PREP = r"""
   const flash = document.createElement('div'); flash.className = 'flash'; document.body.appendChild(flash);
   const leak = document.createElement('div'); leak.className = 'leak'; document.body.appendChild(leak);
   const hero = c.querySelector('.hero-ill');
+  // zdjęcie (plansza „foto”): dwie warstwy – tył rozmyty i wolniejszy, przód ostry i szybszy → złudzenie głębi
+  const fpel = document.querySelector('.fpel');
+  if (fpel && o.enter) { fpel.style.animation = `kFotoPel .55s cubic-bezier(.2,.7,.2,1) 0s both`; ev.push({t: 0, typ: 'uderzenie'}); }
+  const fB = document.querySelector('.foto-b'), fF = document.querySelector('.foto-f'), fPel = !!fpel;
   const io = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
   const clamp = x => Math.min(1, Math.max(0, x));
   let rects = null;
@@ -686,6 +698,13 @@ PREP = r"""
       hero.style.scale = (1 + .07 * u).toFixed(4);
       hero.style.translate = `${(ry * 10).toFixed(1)}px ${(-26 * u + rx * 8).toFixed(1)}px`;
     }
+    if (fB && fF) {                                   // paralaksa zdjęcia: tył 1,08→1,14, przód 1,00→1,10 i przesuw
+      const u = clamp(t / Math.max(1, dur)), k = fPel ? 1.6 : 1;
+      fB.style.transform = `scale(${(1.08 + .06 * u).toFixed(4)}) translate(${(ry * 6).toFixed(1)}px, ${((-10 + 20 * u) * k).toFixed(1)}px)`;
+      fF.style.transform = `scale(${(1 + .10 * u).toFixed(4)}) translate(${((-30 * u) * k + ry * 12).toFixed(1)}px, ${((20 - 50 * u) * k + rx * 8).toFixed(1)}px)`;
+      if (fpel) fpel.style.opacity = vis.toFixed(3);
+    }
+    window.__flashes.forEach(tf2 => { const u = t - tf2; if (u >= 0 && u < .4) flash.style.opacity = Math.max(+flash.style.opacity || 0, .35 * Math.exp(-u * 10)); });
     // rozszczepienie RGB w kolorach marki przy uderzeniach (gaśnie w ~0,3 s)
     let rg = 0; window.__rgb.forEach(r => { const u = t - r.t0; if (u >= 0 && u < .6) rg += r.amp * Math.exp(-u * (r.k || 9)); });
     const fl = [];
