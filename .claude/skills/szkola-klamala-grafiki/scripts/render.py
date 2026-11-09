@@ -220,7 +220,7 @@ h1 .y{{display:block}}
   background:rgba(255,199,39,.55)}}
 .foto-in{{position:relative;width:100%;height:100%;overflow:hidden;background:#0A0E18}}
 .foto-b,.foto-f{{position:absolute;inset:0;background-size:cover;background-position:center}}
-.foto-b{{filter:blur(14px) brightness(.75);transform-origin:50% 50%}}
+.foto-b{{transform-origin:50% 50%}}
 .foto-f{{-webkit-mask-image:radial-gradient(ellipse 72% 78% at 50% 48%,#000 62%,transparent 100%);
   mask-image:radial-gradient(ellipse 72% 78% at 50% 48%,#000 62%,transparent 100%)}}
 .foto-f.cala{{background-size:contain;background-repeat:no-repeat;-webkit-mask-image:none;mask-image:none}}
@@ -310,10 +310,21 @@ def foto_dane(s):
 
 def foto_uri(p, max_h=2400):
     im = Image.open(p).convert("RGB")
+    size = im.size
     if im.height > max_h:
         im = im.resize((int(im.width * max_h / im.height), max_h), Image.LANCZOS)
     b = io.BytesIO(); im.save(b, "JPEG", quality=90)
-    return "data:image/jpeg;base64," + base64.b64encode(b.getvalue()).decode(), Image.open(p).size
+    return "data:image/jpeg;base64," + base64.b64encode(b.getvalue()).decode(), size
+
+
+def foto_tlo_uri(p):
+    """Tylna warstwa paralaksy: rozmycie i przyciemnienie liczone RAZ w Pythonie (CSS blur w 4K liczył się w każdej klatce)."""
+    from PIL import ImageEnhance, ImageFilter
+    im = Image.open(p).convert("RGB")
+    im.thumbnail((480, 480))
+    im = ImageEnhance.Brightness(im.filter(ImageFilter.GaussianBlur(6))).enhance(.75)
+    b = io.BytesIO(); im.save(b, "JPEG", quality=80)
+    return "data:image/jpeg;base64," + base64.b64encode(b.getvalue()).decode()
 
 
 def wycinek_waliduj(s):
@@ -489,7 +500,7 @@ def tpl(s, post, f, i, n):
         if sa:
             warstwy = f"<div class='foto-f cala' style=\"background-image:url('{uri}');\"></div>"
         else:
-            warstwy = f"<div class='foto-b' style=\"background-image:url('{uri}')\"></div><div class='foto-f' style=\"background-image:url('{uri}')\"></div>"
+            warstwy = f"<div class='foto-b' style=\"background-image:url('{foto_tlo_uri(p)}')\"></div><div class='foto-f' style=\"background-image:url('{uri}')\"></div>"
         tag = f"<div class='tag t-{s['tag'].lower()}'>{html.escape(s['tag'])}</div>" if s.get("tag") else ""
         tekst = ((f"<h2 data-fit>{title} <span class='y'>{accent}</span></h2>" if title or accent else "")
                  + (f"<div class='body' data-fit>{rich(s['body'])}</div>" if s.get("body") else ""))
@@ -579,7 +590,7 @@ FIT_AND_QA = """
   // 3) nic nie wystaje poza płótno
   const W = innerWidth, H = innerHeight;
   c.querySelectorAll('*').forEach(el => {
-    if (el.closest('.hero-ill')) return;               // ilustracja jest przycinana do swojego pola
+    if (el.closest('.hero-ill') || el.closest('.obsy') || el.closest('.foto-in') || el.closest('.fpel')) return;   // przycinane do swojego pola (ilustracja, kontury mapy w clip-path, zdjęcie)
     const r = el.getBoundingClientRect();
     if (r.width && (r.right > W + 1 || r.left < -1 || r.bottom > H + 1)) issues.push('element poza kadrem: ' + el.tagName);
   });

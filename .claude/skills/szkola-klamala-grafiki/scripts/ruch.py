@@ -562,7 +562,7 @@ PREP = r"""
     const sv = [c.style.transform, c.style.translate, c.style.filter]; c.style.transform = ''; c.style.translate = '';
     const cr = c.getBoundingClientRect();
     if (window.__dolly) {                             // punkt najazdu = wyróżnienie, ale karta nie może wyjść z kadru
-      const dl = window.__dolly, r = dl.el.getBoundingClientRect(), dc = (dl.el.closest('.doc') || c).getBoundingClientRect();
+      const dl = window.__dolly, r = dl.el.getBoundingClientRect(), dc = (dl.el.closest('.doc') || dl.el.closest('.mapa') || c).getBoundingClientRect();
       const ox = dc.left + dc.width / 2, oy = r.top + r.height / 2, m = 50;   // poziomo środek karty, pionowo wyróżnienie
       const lim = [ox > dc.left ? (ox - m) / (ox - dc.left) : 9, dc.right > ox ? (W - m - ox) / (dc.right - ox) : 9,
                    oy > dc.top ? (oy - m) / (oy - dc.top) : 9];

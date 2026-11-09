@@ -83,6 +83,7 @@ Każdy efekt zgłasza zdarzenie (`start`, `uderzenie`, `pieczatka`, `marker`, `t
 ## 7. Ograniczenia (stan 9.11)
 
 - 30 kl./s (60 kl./s podwaja czas renderu 4K). Render demo 1080p z muzyką ok. 8 min na 42 s; 4K ok. 2–3× dłużej.
+- Czas renderu 4K na 5 s planszy (pomiar 9.11, 4 rdzenie): zwykła ok. 2 min, zdjęcie ok. 5 min, mapa 6–7 min (setki konturów przeliczane w każdej klatce). Rolka 30 s z jedną mapą ok. 30 min – mieści się w oknie dostawy (start 1,5 h przed publikacją). Nie dawaj więcej niż 1 mapy na rolkę.
 - Mapy: tylko obszary administracyjne (województwa, państwa) z Natural Earth 1:10m/1:50m – bez powiatów, gmin i ulic; miasto = punkt ze współrzędnych.
 - Wikimedia Commons serwuje automatom pliki do 1920 px szerokości (większe i oryginały → HTTP 429); `zdjecia.py` pobiera miniaturę 1920/1280 px z ponowieniem. Na pełny kadr 4K potrzeba zdjęcia pionowego albo ≥1600 px wysokości – inaczej układ `ramka`.
 - pap.pl blokuje pobieranie stron automatem (Incapsula) – dosłowny nagłówek PAP bierzemy z Google News (tytuł strony), potwierdzenie treści z drugiego źródła. Ochrony przed botami nie obchodzimy (bez przeglądarki udającej człowieka).
@@ -91,7 +92,7 @@ Każdy efekt zgłasza zdarzenie (`start`, `uderzenie`, `pieczatka`, `marker`, `t
 
 ## 8. Historia zmian
 
-- **9.11 (wieczór)** – plansza `mapa` (Natural Earth: Polska/Europa/świat, wyróżnienia, punkty ze współrzędnych, rysowanie konturów, najazd na punkt), `zdjecia.py`: wyszukiwanie Openverse z filtrem licencji, adresy `curid`, ponowienia przy 429 i miniatury 1920/1280 px (Commons działa), zdjęcia CC BY-SA pokazywane w całości (bez przeróbki). Render 4K nowych plansz – w toku (wynik w kolejnym wpisie).
+- **9.11 (wieczór)** – plansza `mapa` (Natural Earth: Polska/Europa/świat, wyróżnienia, punkty ze współrzędnych, rysowanie konturów, najazd na punkt), `zdjecia.py`: wyszukiwanie Openverse z filtrem licencji, adresy `curid`, ponowienia przy 429 i miniatury 1920/1280 px (Commons działa), zdjęcia CC BY-SA pokazywane w całości (bez przeróbki). **Render 4K sprawdzony** (demo 48 s, 2160×3840, 30 kl./s, −14,1 LUFS, najdłuższy stojący kadr 0,43 s, kontrola bez błędów). Poprawki po 4K: najazd kamery na mapę ograniczony do ramki mapy (≥50 px od krawędzi – wcześniej mapa Europy wychodziła pod przyciski IG), kontrola nie zgłasza przyciętych konturów i warstw zdjęcia jako „poza kadrem”, rozmycie tylnej warstwy zdjęcia liczone raz w Pythonie zamiast w każdej klatce.
 
 - **9.11 (po południu)** – plansze `wycinek` (PAP/Reuters: dosłowny nagłówek na „papierze” z taśmą, walidacja pól i długości cytatu) i `foto` (zdjęcia CC0/PD/CC BY/CC BY-SA z podpisem; ramka albo pełny kadr, paralaksa dwóch warstw, walidacja licencji), narzędzie `zdjecia.py` (Commons, NASA, plik ręczny), kanały PAP i Reuters w porannym researchu (`zrodla_rss.json`, strony tagów PAP pomijane). Demo: `specs/demo_silnik/demo_wycinek_foto.json` (nagłówek PAP z 6.11, zdjęcie NASA AS17-148-22727). Poprawka błędu: wyróżnione słowo na jasnej karcie (`dokument`, `wycinek`) było niewidoczne przez ok. 0,8 s przed markerem (jasny kolor tekstu na jasnym papierze) – teraz `kMarkerDoc` trzyma ciemny tekst od początku.
 
