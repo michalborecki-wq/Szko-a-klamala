@@ -57,3 +57,5 @@ Stan na 29.10.2026.
 
 Odrzucone 1.11: ujęcie obywatelskie (art. 243 k.p.k.) – polityka/migracja; kości noworodka – brak źródła pierwotnego.
 - Motoryzacja: zimowe opony nie są obowiązkowe w Polsce (sąsiedzi – tak; bieżnik 1,6 mm) – Reel (przygotowany 2.11)
+
+- 9.11 (informacja Michała): **„Dowodu nie musisz nosić” (P9, art. 5 ust. 2 ustawy o dowodach osobistych) – już opublikowane.** Nie powtarzać.
