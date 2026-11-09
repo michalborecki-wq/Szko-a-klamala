@@ -190,6 +190,10 @@ def css(TOK):
 @keyframes kGrow{{from{{transform:scaleX(0)}}to{{transform:none}}}}
 @keyframes kHi{{from{{color:{TOK['text']};text-shadow:none}}50%{{text-shadow:0 0 34px rgba(255,199,39,.95)}}to{{color:{TOK['yellow']}}}}}
 @keyframes kMarker{{0%{{background-size:0% 100%;color:{TOK['text']}}}45%{{color:{TOK['text']}}}100%{{background-size:100% 100%;color:{TOK['bg0']}}}}}
+@keyframes kRysuj{{from{{stroke-dashoffset:1;fill-opacity:0}}70%{{stroke-dashoffset:0;fill-opacity:0}}to{{stroke-dashoffset:0;fill-opacity:1}}}}
+@keyframes kWyr{{from{{fill:rgba(47,107,255,.16);stroke:{TOK['blue']}}}to{{fill:{TOK['yellow']};stroke:{TOK['yellow']}}}}}
+@keyframes kPkt{{0%{{transform:scale(0)}}60%{{transform:scale(1.35)}}100%{{transform:scale(1)}}}}
+@keyframes kPing{{from{{r:16;opacity:.9}}to{{r:70;opacity:0}}}}
 @keyframes kMarkerDoc{{0%{{background-size:0% 100%;color:#121826}}100%{{background-size:100% 100%;color:#121826}}}}
 @keyframes kStamp{{0%{{opacity:0;transform:rotate(-12deg) scale(2.8)}}55%{{opacity:1;transform:rotate(-12deg) scale(.9)}}100%{{opacity:1;transform:rotate(-12deg) scale(1)}}}}
 @keyframes kShake{{0%,100%{{transform:none}}20%{{transform:translateX(-16px)}}40%{{transform:translateX(14px)}}60%{{transform:translateX(-9px)}}80%{{transform:translateX(5px)}}}}
@@ -342,7 +346,7 @@ PREP = r"""
     const hc = [...c.querySelectorAll('h1,h2')].reduce((a, e) => a + e.innerText.replace(/\s/g, '').length, 0) || 1;
     const bw = [...c.querySelectorAll('.sub,.body,.opt')].reduce((a, e) => a + e.innerText.split(/\s+/).length, 0) || 1;
     const sh = Math.min(.075, .55 / hw), sc = Math.min(.032, .7 / hc), sb = Math.min(.035, .75 / bw);
-    c.querySelectorAll('.chip,.tag,.num,h1,h2,.brush,.big,.myth,.sub,.body,.opt,.row,.cd,.note,.src,.partner,.tl,.q-mark,.q-txt,.q-who,.doc,.doc-wsk,.foto,.foto-pod').forEach(el => {
+    c.querySelectorAll('.chip,.tag,.num,h1,h2,.brush,.big,.myth,.sub,.body,.opt,.row,.cd,.note,.src,.partner,.tl,.q-mark,.q-txt,.q-who,.doc,.doc-wsk,.foto,.foto-pod,.mapa').forEach(el => {
       if (el.matches('.chip,.tag')) {
         if (!o.first) { anim(el, 'kChip', .38, t); ev.push({t, typ: 'etykieta'}); t += .14; }
       } else if (el.matches('h1,h2')) {
@@ -474,6 +478,17 @@ PREP = r"""
         const fb2 = el.querySelector('.doc-t b');
         if (fb2) window.__dolly = {el: fb2, t0: tb + .05, amt: fx.moc === 'mocna' ? .13 : .08};   // „kamera” najeżdża na dosłowny fragment
         t = tb + .1;
+      } else if (el.matches('.mapa')) {               // mapa: kontury się rysują, wyróżnienie zalewa żółtym, punkty wskakują z falą, kamera na pierwszy punkt
+        el.querySelectorAll('.obs').forEach((p, k) => anim(p, 'kRysuj', 1.0, t + Math.min(.5, k * .025)));
+        let tm = t + 1.05;
+        const wy = [...el.querySelectorAll('.obs.wyr')];
+        wy.forEach(p => anim(p, 'kWyr', .5, tm, true));
+        if (wy.length) { ev.push({t: tm, typ: 'uderzenie'}); window.__shakes.push({t0: tm + .1, amp: 5}); tm += .45; }
+        el.querySelectorAll('.pkt').forEach(g => { anim(g, 'kPkt', .45, tm); ev.push({t: tm, typ: 'pop'});
+          const r = g.querySelector('.pk-r'); if (r) { r.style.animation = `kPing 1.2s ease-out ${tm.toFixed(2)}s infinite both`; } tm += .35; });
+        const cel = el.querySelector('.pkt .pk-d') || wy[0];
+        if (cel) window.__dolly = {el: cel, t0: tm, amt: fx.moc === 'mocna' ? .22 : .12};
+        t = tm + .1;
       } else if (el.matches('.foto')) {               // odbitka zdjęcia: odsłonięcie maską od góry + krótki błysk
         anim(el, 'kFotoIn', .6, t); ev.push({t: t + .35, typ: 'uderzenie'}); window.__flashes.push(t + .35); t += .55;
       } else if (el.matches('.foto-pod')) {
@@ -538,6 +553,8 @@ PREP = r"""
   const fpel = document.querySelector('.fpel');
   if (fpel && o.enter) { fpel.style.animation = `kFotoPel .55s cubic-bezier(.2,.7,.2,1) 0s both`; ev.push({t: 0, typ: 'uderzenie'}); }
   const fB = document.querySelector('.foto-b'), fF = document.querySelector('.foto-f'), fPel = !!fpel;
+  const fCala = document.querySelector('.foto-f.cala');   // CC BY-SA: całe zdjęcie bez kadrowania – rusza się cała odbitka, nie obraz w niej
+  const fKarta = document.querySelector('.foto');
   const io = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
   const clamp = x => Math.min(1, Math.max(0, x));
   let rects = null;
@@ -704,6 +721,8 @@ PREP = r"""
       fF.style.transform = `scale(${(1 + .10 * u).toFixed(4)}) translate(${((-30 * u) * k + ry * 12).toFixed(1)}px, ${((20 - 50 * u) * k + rx * 8).toFixed(1)}px)`;
       if (fpel) fpel.style.opacity = vis.toFixed(3);
     }
+    if (fCala && fKarta) { const u = clamp(t / Math.max(1, dur));
+      fKarta.style.translate = `${(ry * 8 - 12 * u).toFixed(1)}px ${(14 - 28 * u + rx * 6).toFixed(1)}px`; }
     window.__flashes.forEach(tf2 => { const u = t - tf2; if (u >= 0 && u < .4) flash.style.opacity = Math.max(+flash.style.opacity || 0, .35 * Math.exp(-u * 10)); });
     // rozszczepienie RGB w kolorach marki przy uderzeniach (gaśnie w ~0,3 s)
     let rg = 0; window.__rgb.forEach(r => { const u = t - r.t0; if (u >= 0 && u < .6) rg += r.amp * Math.exp(-u * (r.k || 9)); });

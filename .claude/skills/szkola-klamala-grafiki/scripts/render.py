@@ -223,6 +223,7 @@ h1 .y{{display:block}}
 .foto-b{{filter:blur(14px) brightness(.75);transform-origin:50% 50%}}
 .foto-f{{-webkit-mask-image:radial-gradient(ellipse 72% 78% at 50% 48%,#000 62%,transparent 100%);
   mask-image:radial-gradient(ellipse 72% 78% at 50% 48%,#000 62%,transparent 100%)}}
+.foto-f.cala{{background-size:contain;background-repeat:no-repeat;-webkit-mask-image:none;mask-image:none}}
 .foto-pod{{font-size:{int(f['note']*0.8)}px;color:{TOK['muted']};margin-top:22px;font-weight:600;letter-spacing:.3px}}
 .foto-pod.ai{{display:inline-block;color:{TOK['bg0']};background:{TOK['yellow']};padding:8px 14px;border-radius:8px;font-weight:800}}
 .fpel{{position:absolute;inset:0;z-index:3;overflow:hidden;pointer-events:none}}
@@ -230,6 +231,14 @@ h1 .y{{display:block}}
 .fpel:after{{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,14,24,.55) 0%,rgba(10,14,24,.05) 30%,
   rgba(10,14,24,.25) 55%,rgba(10,14,24,.92) 80%,#0A0E18 100%)}}
 .content.napelnym{{justify-content:flex-end}}
+.mapa{{position:relative;margin:10px 0 18px;flex-shrink:1;min-height:0}}
+.mapa-svg{{display:block;max-height:880px;overflow:visible}}
+.mapa-svg .obs{{fill:rgba(47,107,255,.16);stroke:{TOK['blue']};stroke-width:2.4;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:0}}
+.mapa-svg .obs.wyr{{fill:{TOK['yellow']};stroke:{TOK['yellow']}}}
+.mapa-svg .pk-d{{fill:{TOK['red']};stroke:#fff;stroke-width:5}}
+.mapa-svg .pk-r{{fill:none;stroke:{TOK['red']};stroke-width:5;opacity:.7}}
+.mapa-svg text{{font-family:'Inter Display','Inter';font-weight:900;font-style:italic;font-size:44px;fill:#fff;
+  paint-order:stroke;stroke:{TOK['bg0']};stroke-width:10px;stroke-linejoin:round}}
 
 .card{{background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.08);
   border-radius:22px;padding:36px 38px;box-shadow:0 24px 60px rgba(0,0,0,.35)}}
@@ -314,6 +323,61 @@ def wycinek_waliduj(s):
     n = len(re.sub(r"\*\*", "", s["naglowek"]).split())
     if n > 20:
         raise ValueError(f"wycinek: nagłówek ma {n} słów (> 20) – prawo cytatu: krótki, dosłowny fragment")
+
+
+# ───────────────────────── mapy z prawdziwych konturów (Natural Earth, domena publiczna) ─────────────────────────
+MAPY_BBOX = {"polska": (13.9, 24.3, 48.9, 55.0), "europa": (-12.0, 42.0, 34.0, 71.5), "swiat": (-170.0, 190.0, -58.0, 84.0)}
+
+
+def mapa_svg(s, W=840, Hmax=900):
+    """SVG mapy: obszary (województwa albo państwa), wyróżnienia i punkty z PRAWDZIWYMI współrzędnymi (lat/lon)."""
+    rodzaj = s.get("mapa", "polska")
+    if rodzaj not in MAPY_BBOX:
+        raise ValueError(f"mapa: nieznany rodzaj „{rodzaj}” (polska | europa | swiat)")
+    lon0, lon1, lat0, lat1 = s.get("zakres") or MAPY_BBOX[rodzaj]
+    if rodzaj == "polska":
+        obs = json.load(open(REPO / "zrodla/mapy/polska_wojewodztwa.json", encoding="utf-8"))["obszary"]
+    else:
+        sw = json.load(open(REPO / "zrodla/mapy/swiat_panstwa.json", encoding="utf-8"))["panstwa"]
+        obs = {k: v["obszary"] for k, v in sw.items()}
+    kx = math.cos(math.radians((lat0 + lat1) / 2)) if rodzaj != "swiat" else 1.0
+    sx = W / ((lon1 - lon0) * kx)
+    H = min(Hmax, (lat1 - lat0) * sx)
+    sc = min(sx, H / (lat1 - lat0))
+    ox = (W - (lon1 - lon0) * kx * sc) / 2
+    P = lambda lon, lat: (ox + (lon - lon0) * kx * sc, (lat1 - lat) * sc)
+    wyr = {w.lower() if rodzaj == "polska" else w.upper() for w in s.get("wyroznij", [])}
+    znane = {k.lower() if rodzaj == "polska" else k for k in obs}
+    brak = [w for w in wyr if w not in znane]
+    if brak:
+        raise ValueError(f"mapa: nie ma obszaru {brak} (polska: nazwy województw, np. „mazowieckie”; świat/europa: kody ISO A2, np. „PL”)")
+    pathy = []
+    for k, rings in obs.items():
+        kk = k.lower() if rodzaj == "polska" else k
+        dd = []
+        for r in rings:
+            if not any(lon0 - 5 <= x <= lon1 + 5 and lat0 - 5 <= y <= lat1 + 5 for x, y in r):
+                continue
+            pts = [P(x, y) for x, y in r]
+            dd.append("M" + "L".join(f"{x:.1f} {y:.1f}" for x, y in pts) + "Z")
+        if dd:
+            pathy.append(f"<path class='obs{' wyr' if kk in wyr else ''}' pathLength='1' d='{''.join(dd)}'/>")
+    pk = ""
+    for i, p in enumerate(s.get("punkty", [])):
+        if "lat" not in p or "lon" not in p:
+            raise ValueError("mapa: punkt bez współrzędnych lat/lon – współrzędne tylko ze źródła (GeoNames, Wikipedia), nigdy „na oko”")
+        if not (lon0 <= p["lon"] <= lon1 and lat0 <= p["lat"] <= lat1):
+            raise ValueError(f"mapa: punkt {p.get('nazwa')} ({p['lat']}, {p['lon']}) poza zakresem mapy {rodzaj}")
+        x, y = P(p["lon"], p["lat"])
+        lab = html.escape(p.get("nazwa", ""))
+        anchor = "end" if x > W * .62 else "start"
+        dx = -30 if anchor == "end" else 30
+        pk += (f"<g class='pkt' style='transform-origin:{x:.1f}px {y:.1f}px'><circle class='pk-r' cx='{x:.1f}' cy='{y:.1f}' r='34'/>"
+               f"<circle class='pk-d' cx='{x:.1f}' cy='{y:.1f}' r='15'/>"
+               + (f"<text x='{x + dx:.1f}' y='{y + 12:.1f}' text-anchor='{anchor}'>{lab}</text>" if lab else "") + "</g>")
+    return (f"<svg class='mapa-svg' viewBox='-20 -20 {W + 40} {H + 40:.0f}' width='100%' preserveAspectRatio='xMidYMid meet'>"
+            f"<defs><clipPath id='mapaclip'><rect x='0' y='0' width='{W}' height='{H:.0f}' rx='18'/></clipPath></defs>"
+            f"<g class='obsy' clip-path='url(#mapaclip)'>{''.join(pathy)}</g>{pk}</svg>")
 
 
 def tpl(s, post, f, i, n):
@@ -408,6 +472,12 @@ def tpl(s, post, f, i, n):
         p, meta = foto_dane(s)
         uri, (pw, ph) = foto_uri(p)
         uk = s.get("uklad", "ramka")
+        # CC BY-SA: przycięcie, rozmycie i powiększenie to przeróbka, która musiałaby iść na tej samej licencji –
+        # pokazujemy zdjęcie w całości (bez kadrowania i bez rozmytej warstwy), tylko w ramce
+        sa = bool(re.search(r"\bSA\b|SHARE-?ALIKE", (meta.get("licencja") or "").upper()))
+        if sa and uk == "pelny":
+            print(f"  ⚠ foto {p.name}: licencja {meta['licencja']} – pełny kadr przycina zdjęcie, używam „ramka” (całe zdjęcie)")
+            uk = "ramka"
         if uk == "pelny" and ph < 1600:
             print(f"  ⚠ foto {p.name}: {pw}×{ph} px – za mało na pełny kadr, używam układu „ramka”")
             uk = "ramka"
@@ -416,7 +486,10 @@ def tpl(s, post, f, i, n):
         else:
             pod = (f"<div class='foto-pod'>Fot. {html.escape(meta['autor'])} · {html.escape(meta['licencja'])}"
                    + (f" · {html.escape(meta['serwis'])}" if meta.get("serwis") else "") + "</div>")
-        warstwy = f"<div class='foto-b' style=\"background-image:url('{uri}')\"></div><div class='foto-f' style=\"background-image:url('{uri}')\"></div>"
+        if sa:
+            warstwy = f"<div class='foto-f cala' style=\"background-image:url('{uri}');\"></div>"
+        else:
+            warstwy = f"<div class='foto-b' style=\"background-image:url('{uri}')\"></div><div class='foto-f' style=\"background-image:url('{uri}')\"></div>"
         tag = f"<div class='tag t-{s['tag'].lower()}'>{html.escape(s['tag'])}</div>" if s.get("tag") else ""
         tekst = ((f"<h2 data-fit>{title} <span class='y'>{accent}</span></h2>" if title or accent else "")
                  + (f"<div class='body' data-fit>{rich(s['body'])}</div>" if s.get("body") else ""))
@@ -425,7 +498,15 @@ def tpl(s, post, f, i, n):
             s["_pelny"] = f"<div class='fpel'>{warstwy}</div>"
             b = f"{tag}{tekst}{pod}{note}{src}"
         else:
-            b = f"{tag}<div class='foto'><div class='foto-in'>{warstwy}</div></div>{tekst}{pod}{note}{src}"
+            styl = f" style='aspect-ratio:{pw}/{ph}'" if sa else ""
+            b = f"{tag}<div class='foto'{styl}><div class='foto-in'>{warstwy}</div></div>{tekst}{pod}{note}{src}"
+    elif t == "mapa":
+        # mapa z konturów Natural Earth; "wyroznij": województwa / kody ISO; "punkty": [{"nazwa","lat","lon"}] ze źródła
+        tag = f"<div class='tag t-{s['tag'].lower()}'>{html.escape(s['tag'])}</div>" if s.get("tag") else ""
+        src = f"<div class='src'>{rich(s.get('source') or 'Mapa: Natural Earth')}</div>"
+        b = (f"{tag}" + (f"<h2>{title} <span class='y'>{accent}</span></h2>" if title or accent else "")
+             + f"<div class='mapa'>{mapa_svg(s)}</div>"
+             + (f"<div class='body' data-fit>{rich(s['body'])}</div>" if s.get("body") else "") + f"{note}{src}")
     elif t == "quote":
         # cytat: TYLKO dosłowny tekst ze źródła (ustawa, dokument, wypowiedź z nagrania) – "kto": autor/akt
         tag = f"<div class='tag t-{s['tag'].lower()}'>{html.escape(s['tag'])}</div>" if s.get("tag") else ""

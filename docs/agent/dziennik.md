@@ -15,3 +15,9 @@ Decyzja Michała: 2 dostawy dziennie (ok. 9:00 i 17:00), każda = 1 rolka + opis
 ## 5.11
 - 9:00 – IKE wysłane do Michała; push z sesji zadania nie przeszedł (403, zadanie bez podpiętego repozytorium) – status poprawiony ręcznie.
 - Decyzja Michała: 3 dostawy (9:00 rolka, 13:00 karuzela 9:16 na TikTok, 18:00 rolka), od 5.11 wieczór o 18:00.
+
+## 9.11
+- 9:00 – ZUS (nowy styl, plansza `dokument`) wysłane 8.11 wieczorem z sesji głównej. Błąd silnika wykryty 9.11: wyróżnione słowo na jasnej karcie niewidoczne ok. 0,8 s przed markerem – poprawione (`kMarkerDoc`).
+- 13:00 – sesja zadania (11:23) zrobiła karuzelę „Antarktyda – największa pustynia”, ale ustawiła czekanie na 12:50 w tle i zakończyła się o 11:27 → **wysyłka przepadła**; push 403 (zadanie bez podpiętego repozytorium: `sources: []`, `add_repo` niedostępne w sesji zadania). Karuzelę odtworzono i wysłano z sesji głównej (fakty ponownie sprawdzone: Live Science, Guinness World Records, Wikipedia).
+- Naprawa: polecenie zadania i skille – wysyłka od razu po kontroli, bez czekania w tle; instrukcja instalacji zależności (venv). Do zrobienia przez Michała: dodać repozytorium do zadania (claude.ai → Zaplanowane zadania → zadanie → Edytuj → Repozytoria), inaczej commity z sesji zadania giną.
+- Silnik: plansze `wycinek`, `foto`, `mapa`; `zdjecia.py` (Openverse, Commons, NASA).

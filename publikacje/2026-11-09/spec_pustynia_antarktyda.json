@@ -1,0 +1,44 @@
+{
+ "handle": "@szkola_klamala",
+ "posts": [
+  {
+   "id": "pustynia_antarktyda",
+   "format": "vertical",
+   "subject": "NAUKA",
+   "ton": "CIEKAWOSTKA",
+   "slides": [
+    {
+     "type": "cover",
+     "title": "Największa pustynia świata",
+     "accent": "jest z lodu.",
+     "sub": "I to nie Sahara."
+    },
+    {
+     "type": "number",
+     "tag": "REKORD",
+     "big": "14,2 mln km²",
+     "title": "Antarktyda –",
+     "accent": "największa pustynia",
+     "body": "Pustynia to obszar, gdzie spada mniej niż **250 mm** opadów rocznie. Nie liczy się temperatura.",
+     "source": "Live Science, Wikipedia"
+    },
+    {
+     "type": "number",
+     "tag": "PORÓWNANIE",
+     "big": "9,2 mln km²",
+     "title": "Sahara –",
+     "accent": "największa gorąca",
+     "body": "Antarktyda jest od niej ok. **1,5 raza** większa.",
+     "source": "Live Science, Wikipedia"
+    },
+    {
+     "type": "outro",
+     "question": "Jaką pustynię wskazałbyś na lekcji geografii?",
+     "sub": "Wyślij komuś, kto obstawia Saharę.",
+     "sources": "Źródła: Live Science, Guinness World Records, Wikipedia",
+     "partner_slot": false
+    }
+   ]
+  }
+ ]
+}

@@ -2,6 +2,7 @@
 """
 Zdjęcia na wolnych licencjach do planszy „foto” (decyzja Michała 9.11 – wariant bez kosztów).
 
+  python3 zdjecia.py --szukaj "Morskie Oko"                # Openverse: tylko wolne licencje, źródło Commons
   python3 zdjecia.py --commons "File:Nazwa.jpg"            # albo URL strony pliku na commons.wikimedia.org
   python3 zdjecia.py --nasa <nasa_id>                      # images.nasa.gov – domena publiczna
   python3 zdjecia.py --plik foto.jpg --autor "…" --licencja "CC BY-SA 4.0" --zrodlo "https://…"   # pobrane ręcznie
@@ -47,11 +48,20 @@ def slug(t):
     return re.sub(r"[^a-z0-9]+", "-", t.lower()).strip("-")[:60] or "zdjecie"
 
 
-def get(url, binary=False):
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
-    with urllib.request.urlopen(req, timeout=60) as r:
-        b = r.read()
-    return b if binary else json.loads(b.decode("utf-8"))
+def get(url, binary=False, proby=4):
+    """Pobranie z ponowieniem przy 429/503 (Wikimedia ogranicza wspólne adresy chmury) – czeka wg Retry-After, maks. 4 próby."""
+    import time
+    for k in range(proby):
+        req = urllib.request.Request(url, headers={"User-Agent": UA})
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                b = r.read()
+            return b if binary else json.loads(b.decode("utf-8"))
+        except urllib.error.HTTPError as e:
+            if e.code not in (429, 503) or k == proby - 1:
+                raise
+            ra = e.headers.get("Retry-After")
+            time.sleep(min(30, int(ra) if ra and ra.isdigit() else 2 ** (k + 1)))
 
 
 def zapisz(sl, jpg_bytes_or_path, meta):
@@ -86,7 +96,12 @@ def commons_meta(info, tytul):
 
 
 def commons(tytul, plik_json=None):
-    if tytul.startswith("http"):
+    curid = re.search(r"curid=(\d+)", tytul)
+    if curid:                                      # adres z Openverse: commons…/index.php?curid=N → tytuł pliku z API
+        d0 = get("https://commons.wikimedia.org/w/api.php?" + urllib.parse.urlencode(
+            {"action": "query", "pageids": curid.group(1), "format": "json"}))
+        tytul = next(iter(d0["query"]["pages"].values()))["title"]
+    elif tytul.startswith("http"):
         tytul = urllib.parse.unquote(tytul.rsplit("/wiki/", 1)[-1])
     if not re.match(r"^(File|Plik):", tytul):
         tytul = "File:" + tytul
@@ -105,10 +120,20 @@ def commons(tytul, plik_json=None):
         sys.exit(f"ODRZUCONE: {tytul} – licencja „{meta['licencja']}”.")
     if plik_json:
         print(json.dumps(meta, ensure_ascii=False)); return None
-    try:                                           # miniatura w standardowym rozmiarze Wikimedia (1920 px), w razie odmowy – oryginał
-        dane = get(info.get("thumburl") or info["url"], binary=True)
-    except urllib.error.HTTPError:
-        dane = get(info["url"], binary=True)
+    # Wikimedia serwuje automatom miniatury do 1920 px (większe i oryginały → HTTP 429 dla adresów chmury);
+    # kolejność: miniatura z API → Special:FilePath 1920 → 1280
+    nazwa = urllib.parse.quote(re.sub(r"^(File|Plik):", "", tytul).replace(" ", "_"))
+    kandydaci = [u for u in (info.get("thumburl"),
+                             f"https://commons.wikimedia.org/wiki/Special:FilePath/{nazwa}?width=1920",
+                             f"https://commons.wikimedia.org/wiki/Special:FilePath/{nazwa}?width=1280") if u]
+    dane, ost = None, None
+    for u in kandydaci:
+        try:
+            dane = get(u, binary=True); break
+        except urllib.error.HTTPError as e:
+            ost = e
+    if dane is None:
+        sys.exit(f"Nie udało się pobrać pliku z Commons ({ost}). Pobierz ręcznie i użyj --plik z danymi licencji ze strony: {meta['zrodlo']}")
     return zapisz(slug(tytul), dane, meta)
 
 
@@ -130,15 +155,27 @@ def nasa(nid):
     return zapisz(slug(nid), get(url.replace("http://", "https://"), binary=True), meta)
 
 
+def szukaj(fraza, n=8):
+    """Openverse (api.openverse.org): tylko CC0, domena publiczna, CC BY, CC BY-SA, źródło Wikimedia Commons."""
+    d = get("https://api.openverse.org/v1/images/?" + urllib.parse.urlencode(
+        {"q": fraza, "license": "cc0,pdm,by,by-sa", "source": "wikimedia", "page_size": n}))
+    print(f"wyników: {d.get('result_count')} (pokazuję {len(d['results'])}; licencję i tak sprawdza --commons na stronie pliku)")
+    for r in d["results"]:
+        print(f"- {r.get('width')}×{r.get('height')} | {r['license'].upper()} {r.get('license_version') or ''} | {r.get('creator')} | {r.get('title')}\n"
+              f"  python3 VIRAL_REELS_FACTORY/narzedzia/zdjecia.py --commons \"{r['foreign_landing_url']}\"")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     g = ap.add_mutually_exclusive_group(required=True)
-    g.add_argument("--commons"); g.add_argument("--nasa"); g.add_argument("--plik")
+    g.add_argument("--commons"); g.add_argument("--nasa"); g.add_argument("--plik"); g.add_argument("--szukaj")
     ap.add_argument("--autor"); ap.add_argument("--licencja"); ap.add_argument("--zrodlo"); ap.add_argument("--serwis")
     ap.add_argument("--slug")
     ap.add_argument("--offline-json", help="test: odpowiedź API Commons zapisana w pliku (bez sieci, bez pobierania)")
     a = ap.parse_args()
-    if a.commons:
+    if a.szukaj:
+        szukaj(a.szukaj)
+    elif a.commons:
         commons(a.commons, a.offline_json)
     elif a.nasa:
         nasa(a.nasa)
