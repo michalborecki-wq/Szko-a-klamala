@@ -1,6 +1,6 @@
 ---
 name: szkola-klamala-dynamic-visual
-description: Dynamic Visual Engine „Szkoła kłamała” – ruch, animacje, przejścia, efekty specjalne i kontrola jakości rolek (dynamiczny montaż w stylu serwisu informacyjnego i dokumentu śledczego, przy niezmienionej palecie i logo marki). Używaj zawsze, gdy rolka ma być bardziej dynamiczna, „mniej jak slajdy”, gdy dobierasz otwarcie pierwszych 2 sekund, przejścia, akcenty na liczbach, oś czasu, cytat albo fragment dokumentu, gdy dodajesz nowy efekt do silnika (ruch.py/render.py) albo sprawdzasz pierwsze 2 sekundy i przejścia przed wysłaniem rolki – także gdy Michał mówi tylko „popraw grafikę”, „więcej ruchu”, „efekty”, „żeby wyglądało profesjonalnie”.
+description: Dynamic Visual Engine „Szkoła kłamała” – ruch, animacje, przejścia, efekty specjalne (RGB, światło, głębia 2.5D, najazd na dokument, wskazanie szczegółu) i kontrola jakości rolek z pomiarami (dynamiczny montaż w stylu serwisu informacyjnego i dokumentu śledczego, przy niezmienionej palecie i logo marki). Używaj zawsze, gdy rolka ma być bardziej dynamiczna, „mniej jak slajdy”, gdy dobierasz otwarcie pierwszych 2 sekund, przejścia, akcenty na liczbach, oś czasu, cytat albo fragment dokumentu, gdy dodajesz nowy efekt do silnika (ruch.py/render.py) albo sprawdzasz pierwsze 2 sekundy i przejścia przed wysłaniem rolki – także gdy Michał mówi tylko „popraw grafikę”, „więcej ruchu”, „efekty”, „żeby wyglądało profesjonalnie”.
 ---
 
 # Dynamic Visual Engine – „Szkoła kłamała”
@@ -22,21 +22,23 @@ Ustawiane automatycznie przez preset; nadpisanie: `"fx": {...}` w poście (cała
 
 | Moduł | Pole | Warianty |
 |---|---|---|
-| Otwarcie (plansza 1) | `fx.otwarcie` | `uderzenie`, `blysk`, `zoomout`, `ciecie`, `skan`, `ramka`, `kinowe` |
+| Otwarcie (plansza 1) | `fx.otwarcie` | `uderzenie`, `blysk`, `zoomout`, `ciecie`, `skan`, `ramka`, `kinowe`, `rgb` (rozszczepienie czerwień/niebieski marki w 0 s, drugie uderzenie z „punchem” w 0,52 s, echo w 1,45 s) |
 | Wejście nagłówków | `fx.naglowek` | `maska`, `litery`, `zoom`, `przesun` |
 | Tekst i wyróżnienia | `fx.tresc` | `rozmycie`, `marker` |
 | Wielka liczba | `fx.liczba` (+ `"count": true`) | `licznik`, `slot` |
 | Akcent na liczbie | `fx.akcent` | `ramka` (celownik), `ostrosc` (przesunięcie ostrości) |
 | Przekreślenie mitu | `fx.mit` | `kreska`, `pieczatka` |
-| Przejście DO planszy | `fx.przejscie` | `smuga`, `zoom`, `paski`, `blysk`, `kierunek` (obrót kamery + rozmycie ruchu), `przeslona` (okrąg), `warstwy` (elementy z różną prędkością) |
-| Zwrot akcji | `fx.zwrot` | `stop` (domyślnie przy tagu TWIST/ZWROT: błysk, przyciemnienie tła, najazd), `brak` |
+| Przejście DO planszy | `fx.przejscie` | `smuga`, `zoom`, `paski`, `blysk`, `kierunek` (obrót kamery + rozmycie ruchu), `przeslona` (okrąg), `warstwy` (elementy z różną prędkością; ramka jedzie z warstwą), `swiatlo` (złote prześwietlenie jak poświata logo – mocne, maks. 1–2 na rolkę) |
+| Zwrot akcji | `fx.zwrot` | `stop` (domyślnie przy tagu TWIST/ZWROT: błysk, przyciemnienie tła, najazd, rozszczepienie RGB), `brak` |
+| Rozszczepienie RGB | `fx.rgb` | `true` w presetach KONTROWERSJA, MOTORYZACJA, POLITYKA – przy każdym uderzeniu liczby; gaśnie w ~0,3 s |
+| Głębia 2.5D | `fx.glebia` | `true` przy `moc: mocna` – treść pochylona w perspektywie (≤1,4°, wolno), tło w przeciwną stronę (paralaksa), obraz-bohater okładki na bliższym planie (najeżdża szybciej niż tekst) |
 | Tło | `fx.tlo`, `fx.swiatlo` | `kule`, `gwiazdy`, `siatka`, `3d`; smuga światła i oddychający gradient |
 | Moc | `"moc"` | `mocna` (najazd kamery, puls na bicie, drugi akcent) / `spokojna` |
 
 Plansze z ruchem informacyjnym (render.py):
 - `timeline` – oś czasu: `"items": [{"rok": "0 h", "tekst": "…"}, …]` (2–4), linia rysuje się, punkty wskakują.
 - `quote` – cytat: `"cytat"` (dosłowny, `**wyróżnienie**` dostaje marker), `"kto"`.
-- `dokument` – odsłonięcie dokumentu: `"naglowek"` (np. „Konstytucja RP · art. 41 ust. 3”), `"tekst"` (dosłowny fragment z `**wyróżnieniem**`), `"linie"` (0–3 szare linie kontekstu); karta wjeżdża w perspektywie, marker przechodzi po wyróżnieniach.
+- `dokument` – odsłonięcie dokumentu: `"naglowek"` (np. „Konstytucja RP · art. 41 ust. 3”), `"tekst"` (dosłowny fragment z `**wyróżnieniem**`), `"linie"` (0–3 szare linie kontekstu); karta wjeżdża w perspektywie, marker przechodzi po wyróżnieniach, potem „kamera” najeżdża na wyróżnienie (najazd liczony tak, żeby karta została ≥50 px od krawędzi kadru). Opcjonalnie `"wskaz"` – etykieta 2–4 słowa (np. „Termin z Konstytucji”, „Tu jest kara”): żółta linia rysuje się z dolnej krawędzi karty pod wyróżnieniem do etykiety (wskazanie szczegółu, wypełnia pustą dolną część kadru). Etykieta to komentarz redakcji, nie cytat – nie może zmieniać sensu przepisu.
 - istniejące: `cover`, `number`, `text`, `myth`, `bars` (animowany wykres), `versus`, `quiz`, `outro`.
 
 ## 3. Dobór do treści (presety)
@@ -45,10 +47,10 @@ Plansze z ruchem informacyjnym (render.py):
 
 | Preset | Charakter | Typowe plansze |
 |---|---|---|
-| PRAWO / POLITYKA | ramka, skan, kino; przejścia kierunkowe i warstwy | `dokument`, `quote`, `number` z ramką |
-| HISTORIA | skan, kino; przesłona | `timeline`, `dokument` |
+| PRAWO / POLITYKA | ramka, skan, kino (POLITYKA także rgb); przejścia kierunkowe, warstwy, światło | `dokument` z `wskaz`, `quote`, `number` z ramką |
+| HISTORIA | skan, kino; przesłona, światło | `timeline`, `dokument` |
 | NAUKA / KOSMOS | zoomout, kino, błysk; przesłona, zoom | `number` z `ostrosc`, `bars` |
-| KONTROWERSJA | cięcie, uderzenie, ramka; kierunek, warstwy | `myth` z TWIST (stop-klatka), `versus` |
+| KONTROWERSJA | rgb, cięcie, uderzenie, ramka; kierunek, warstwy; RGB na uderzeniach | `myth` z TWIST (stop-klatka + RGB), `versus` |
 | CIEKAWOSTKA | zoomout, błysk, kino | `number`, `bars` |
 
 Mapy i znaczniki lokalizacji: jeszcze nie ma modułu – dodawaj dopiero z prawdziwymi danymi geograficznymi (np. kontury z otwartych danych), nigdy „na oko”.
@@ -60,7 +62,7 @@ Każdy efekt zgłasza zdarzenie (`start`, `uderzenie`, `pieczatka`, `marker`, `t
 ## 5. Kontrola jakości (przed każdą wysyłką i po każdej zmianie silnika)
 
 1. Render (podgląd szybciej: `--hd`; produkcja 4K przez `dostawa.py`).
-2. `python3 .claude/skills/szkola-klamala-dynamic-visual/scripts/kontrola.py <rolka>_muzyka.mp4 [--przed <stara>.mp4]` → `_2s.jpg`, `_przejscia.jpg`, `_przed_po.jpg`; obejrzyj narzędziem Read.
+2. `python3 .claude/skills/szkola-klamala-dynamic-visual/scripts/kontrola.py <rolka>_muzyka.mp4 [--przed <stara>.mp4]` → `_2s.jpg`, `_przejscia.jpg`, `_przed_po.jpg` (obejrzyj narzędziem Read) oraz `_kontrola.json` z pomiarami: rozdzielczość, kl./s, ścieżka audio, migotanie poza przejściami, czarne klatki, najdłuższy nieruchomy kadr (limit 4 s), średni ruch całości i 0–2 s, LUFS (cel −14). Kod wyjścia 1 = „⚠ BŁĄD” – nie wysyłaj, popraw. Pomiar ruchu liczy jasność, więc efekty barwne (RGB) zaniża – porównuj go między wersjami tej samej rolki, nie jako ocenę estetyki.
 3. Sprawdź: haczyk czytelny w KAŻDEJ klatce 0–2 s; nic nie wychodzi poza kadr i strefy UI; ramki i wyróżnienia nie zostają „w powietrzu” w przejściach; brak migotania; logo na końcu; −14 LUFS.
 4. Jeśli efekt nie jest wyraźnie lepszy od poprzedniej wersji – popraw, nie wysyłaj.
 
@@ -69,10 +71,16 @@ Każdy efekt zgłasza zdarzenie (`start`, `uderzenie`, `pieczatka`, `marker`, `t
 1. `ruch.py`: dopisz wariant do `WARIANTY` (i do odpowiednich `PRESETY`), keyframes do `css()`, logikę wejścia w `PREP` (gałąź w pętli elementów) albo ruch ciągły w `window.__setT` (czas lokalny `t`, globalny `g`).
 2. Efekt zależny od czasu licz z `t` (deterministycznie), nie z `Date`/losowości – ten sam spec musi dać ten sam film.
 3. Nowy typ planszy: szablon w `render.py → tpl()`, CSS w `css(f)`, klasy tekstu dopisz do skalowania w `FIT_AND_QA`.
-4. Test: `specs/demo_silnik/demo.json` (wszystkie moduły), `specs/demo_silnik/otwarcia.json` (7 otwarć) + `kontrola.py`. Demo nigdy nie idzie do publikacji.
+4. Test: `specs/demo_silnik/demo.json` (stan 8.11), `specs/demo_silnik/demo_dve.json` (ta sama treść + moduły 9.11), `specs/demo_silnik/otwarcia.json` (otwarcia) + `kontrola.py --przed`. Demo nigdy nie idzie do publikacji.
 
-## 7. Ograniczenia (stan 8.11)
+## 7. Ograniczenia (stan 9.11)
 
-- 30 kl./s (60 kl./s podwaja czas renderu 4K).
-- Bez map, wycinków prasowych i zdjęć z paralaksą – wymagają prawdziwych materiałów źródłowych; moduły do dodania, gdy będą dane.
+- 30 kl./s (60 kl./s podwaja czas renderu 4K). Render demo 1080p z muzyką ok. 8 min na 42 s; 4K ok. 2–3× dłużej.
+- Bez map, wycinków prasowych i zdjęć z paralaksą – wymagają prawdziwych materiałów źródłowych (kontury z otwartych danych, licencjonowane zdjęcia); paralaksa działa dziś na rysowanych obrazach-bohaterach (`obrazy.py`). Moduły do dodania, gdy będą dane.
 - Opacity elementów sterowanych animacją CSS nie da się nadpisać w przejściu „warstwy” – pracuje tam przesunięcie i rozmycie.
+- Otwarcie `rgb` nie jest „mocniejsze” od `ramka` w pomiarze ruchu 0–2 s (2,4 wobec 2,7) – daje inny bodziec w klatce 0 (kolorowy rozjazd), dlatego jest w rotacji tylko w presetach kontrowersji, motoryzacji i polityki, a nie zamiast ramki.
+
+## 8. Historia zmian
+
+- **9.11** – otwarcie `rgb`, przejście `swiatlo`, rozszczepienie RGB na uderzeniach i zwrocie, głębia 2.5D (pochylenie treści + paralaksa tła i obrazu-bohatera), najazd kamery na wyróżnienie w `dokument` z ograniczeniem do kadru, `wskaz` (linia od dokumentu do etykiety), ramka jedzie z warstwą w przejściu „warstwy” (wcześniej zostawała w powietrzu), pomiary automatyczne w `kontrola.py`. Demo: `specs/demo_silnik/demo_dve.json` (ta sama treść co `demo.json`). Wynik porównania: średni ruch całej rolki 1,03 → 1,32 (+28%), najdłuższy stojący kadr 0,43 s w obu, pusta dolna połowa planszy dokumentu wypełniona wskazaniem.
+- **8.11** – pierwsza wersja (7 otwarć, presety, `dokument`, `timeline`, `quote`, stop-klatka, `kontrola.py`).

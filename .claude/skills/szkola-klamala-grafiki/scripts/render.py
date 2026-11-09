@@ -196,6 +196,10 @@ h1 .y{{display:block}}
   font-size:{int(f['note']*1.05)}px;letter-spacing:1px;padding:16px 30px 14px;text-transform:uppercase}}
 .doc-t{{font-family:Georgia,'Times New Roman',serif;font-size:{int(f['body']*0.98)}px;line-height:1.42;padding:28px 34px 0}}
 .doc-t b{{font-weight:700;color:#121826}}
+.doc-wsk{{align-self:flex-end;margin:120px 10px 0 0;position:relative;z-index:5}}
+.doc-wsk span{{display:inline-block;background:{TOK['yellow']};color:{TOK['bg0']};font-family:'Inter Display','Inter';font-weight:900;
+  font-style:italic;font-size:{int(f['body']*1.05)}px;line-height:1.1;padding:14px 26px 12px;border-radius:10px;transform:skew(-8deg);
+  text-transform:uppercase;box-shadow:0 10px 0 {TOK['blue']},0 0 40px rgba(255,199,39,.45)}}
 .doc-l{{height:10px;margin:14px 34px 0;border-radius:5px;background:rgba(18,24,38,.10)}}
 
 .card{{background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.08);
@@ -299,7 +303,10 @@ def tpl(s, post, f, i, n):
         ln = "".join("<div class='doc-l' style='width:%d%%'></div>" % w for w in (88, 72, 80)[:int(s.get("linie", 2))])
         b = (f"{tag}" + (f"<h2>{title} <span class='y'>{accent}</span></h2>" if title or accent else "")
              + f"<div class='doc'><div class='doc-h'>{rich(s['naglowek'])}</div>"
-             f"<div class='doc-t' data-fit>{rich(s['tekst'])}</div>{ln}</div>{note}{src}")
+             f"<div class='doc-t' data-fit>{rich(s['tekst'])}</div>{ln}</div>"
+             # "wskaz": krótka etykieta (2–4 słowa) – linia łączy ją z wyróżnieniem (wskazanie szczegółu, DVE 9.11)
+             + (f"<div class='doc-wsk'><span>{rich(s['wskaz'])}</span></div>" if s.get("wskaz") else "")
+             + f"{note}{src}")
     elif t == "quote":
         # cytat: TYLKO dosłowny tekst ze źródła (ustawa, dokument, wypowiedź z nagrania) – "kto": autor/akt
         tag = f"<div class='tag t-{s['tag'].lower()}'>{html.escape(s['tag'])}</div>" if s.get("tag") else ""

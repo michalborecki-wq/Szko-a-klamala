@@ -1,0 +1,116 @@
+{
+ "handle": "@szkola_klamala",
+ "posts": [
+  {
+   "id": "DEMO_silnik_prawo",
+   "format": "reel",
+   "subject": "PRAWO",
+   "muzyka": {
+    "nastroj": "napiecie",
+    "bpm": 110
+   },
+   "moc": "mocna",
+   "durations": [
+    3.0,
+    4.5,
+    5.0,
+    5.0,
+    5.5,
+    4.8,
+    5.5
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "zegar",
+     "pieczatka": "48 H",
+     "title": "Zatrzymany?",
+     "accent": "Zegar tyka od razu.",
+     "fx": {
+      "otwarcie": "rgb"
+     }
+    },
+    {
+     "type": "number",
+     "tag": "KONSTYTUCJA",
+     "big": "48",
+     "count": true,
+     "title": "godzin",
+     "accent": "do sądu",
+     "source": "art. 41 ust. 3",
+     "fx": {
+      "liczba": "slot",
+      "przejscie": "kierunek",
+      "naglowek": "litery"
+     }
+    },
+    {
+     "type": "dokument",
+     "tag": "ŹRÓDŁO",
+     "naglowek": "Konstytucja RP · art. 41 ust. 3",
+     "tekst": "Powinien on być w ciągu **48 godzin** od chwili zatrzymania przekazany do dyspozycji sądu.",
+     "linie": 2,
+     "fx": {
+      "przejscie": "warstwy"
+     },
+     "wskaz": "Termin z Konstytucji"
+    },
+    {
+     "type": "quote",
+     "tag": "CYTAT",
+     "cytat": "Każdy zatrzymany powinien być **niezwłocznie** (…) poinformowany o przyczynach zatrzymania.",
+     "kto": "Konstytucja RP, art. 41 ust. 3",
+     "fx": {
+      "przejscie": "swiatlo"
+     }
+    },
+    {
+     "type": "timeline",
+     "tag": "ZEGAR",
+     "items": [
+      {
+       "rok": "0 h",
+       "tekst": "zatrzymanie i pouczenie"
+      },
+      {
+       "rok": "48 h",
+       "tekst": "do dyspozycji sądu"
+      },
+      {
+       "rok": "+24 h",
+       "tekst": "areszt albo **zwolnienie**"
+      }
+     ],
+     "source": "art. 41 ust. 3",
+     "fx": {
+      "przejscie": "kierunek"
+     }
+    },
+    {
+     "type": "myth",
+     "myth_label": "TWIST",
+     "fact_label": "FAKT",
+     "myth": "Mogą trzymać, ile chcą",
+     "fact": "Bez postanowienia sądu – **zwolnienie**.",
+     "source": "art. 41 ust. 3",
+     "fx": {
+      "mit": "pieczatka",
+      "przejscie": "przeslona"
+     }
+    },
+    {
+     "type": "outro",
+     "question": "Wiedziałeś, że zegar tyka od zatrzymania?",
+     "sub": "Wyślij komuś, kto nie zna swoich praw.",
+     "sources": "DEMO SILNIKA – nie do publikacji.",
+     "partner_slot": false,
+     "fx": {
+      "przejscie": "zoom"
+     }
+    }
+   ],
+   "ton": "kontrowersja"
+  }
+ ],
+ "_opis": "DEMO Dynamic Visual Engine 9.11 – ta sama treść co demo.json + nowe moduły (otwarcie rgb, głębia 2.5D, paralaksa okładki, najazd na dokument, wskazanie szczegółu, przejście swiatlo, RGB na zwrocie). Nie do publikacji."
+}

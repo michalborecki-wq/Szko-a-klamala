@@ -11,7 +11,9 @@ Warianty (wybierane per rolka i per plansza funkcją `styl()`, nadpisywane w spe
   liczba:    licznik | slot                            – duża liczba (+ pasek postępu dla %)
   mit:       kreska | pieczatka                        – przekreślenie mitu
   tlo:       gwiazdy | siatka | kule | 3d (z pola "tlo3d")                   – warstwa tła (domyślnie wg przedmiotu)
-  przejscie: smuga | zoom | paski | blysk              – cięcie między planszami
+  przejscie: smuga | zoom | paski | blysk | kierunek | przeslona | warstwy | swiatlo – cięcie między planszami
+  otwarcie:  uderzenie | blysk | zoomout | ciecie | skan | ramka | kinowe | rgb – plansza 1 (DVE)
+  rgb, glebia: rozszczepienie RGB przy uderzeniach; pochylenie 2.5D + paralaksa (DVE 9.11)
   moc:       mocna (domyślnie) | spokojna              – najazd kamery 4,5%/planszę, puls na bicie, wstrząsy ×1,6
 Każde wejście zgłasza zdarzenia (uderzenie, przekreślenie, marker…) – trafiają do <id>_zdarzenia.json
 i synchronizują efekty dźwiękowe w muzyka.py.
@@ -24,24 +26,24 @@ WARIANTY = {
     "tresc": ["rozmycie", "marker"],
     "liczba": ["licznik", "slot"],
     "mit": ["kreska", "pieczatka"],
-    "przejscie": ["smuga", "zoom", "paski", "blysk", "kierunek", "przeslona", "warstwy"],
+    "przejscie": ["smuga", "zoom", "paski", "blysk", "kierunek", "przeslona", "warstwy", "swiatlo"],
     # Dynamic Visual Engine (8.11): otwarcie rolki (pierwsze 2 s), akcent na wielkiej liczbie
-    "otwarcie": ["uderzenie", "blysk", "zoomout", "ciecie", "skan", "ramka", "kinowe"],
+    "otwarcie": ["uderzenie", "blysk", "zoomout", "ciecie", "skan", "ramka", "kinowe", "rgb"],
     "akcent": ["ramka", "ostrosc"],
 }
 # Dobór animacji do rodzaju treści (pole posta "ton" albo przedmiot) – z tych list styl() losuje deterministycznie.
 # Nie jeden styl dla wszystkich tematów: prawo/polityka = dokument i ramki, historia = skan i kino, nauka = zoom i ostrość,
 # kontrowersja = cięcie, uderzenie, szybkie przejścia kierunkowe.
 PRESETY = {
-    "PRAWO":        {"otwarcie": ["ramka", "skan", "kinowe"], "przejscie": ["kierunek", "warstwy", "paski", "przeslona", "smuga"], "akcent": ["ramka"]},
-    "POLITYKA":     {"otwarcie": ["ramka", "skan", "ciecie"], "przejscie": ["kierunek", "paski", "smuga"], "akcent": ["ramka"]},
-    "HISTORIA":     {"otwarcie": ["skan", "kinowe"], "przejscie": ["przeslona", "warstwy", "zoom", "smuga"], "akcent": ["ostrosc"]},
-    "KOSMOS":       {"otwarcie": ["zoomout", "kinowe", "blysk"], "przejscie": ["przeslona", "zoom", "blysk"], "akcent": ["ostrosc"]},
+    "PRAWO":        {"otwarcie": ["ramka", "skan", "kinowe"], "przejscie": ["kierunek", "warstwy", "swiatlo", "paski", "przeslona", "smuga"], "akcent": ["ramka"]},
+    "POLITYKA":     {"otwarcie": ["ramka", "skan", "ciecie", "rgb"], "przejscie": ["kierunek", "paski", "smuga"], "akcent": ["ramka"]},
+    "HISTORIA":     {"otwarcie": ["skan", "kinowe"], "przejscie": ["przeslona", "warstwy", "swiatlo", "zoom", "smuga"], "akcent": ["ostrosc"]},
+    "KOSMOS":       {"otwarcie": ["zoomout", "kinowe", "blysk"], "przejscie": ["przeslona", "swiatlo", "zoom", "blysk"], "akcent": ["ostrosc"]},
     "NAUKA":        {"otwarcie": ["zoomout", "skan", "blysk"], "przejscie": ["zoom", "przeslona", "paski"], "akcent": ["ostrosc", "ramka"]},
-    "MOTORYZACJA":  {"otwarcie": ["ciecie", "uderzenie", "ramka"], "przejscie": ["kierunek", "smuga", "blysk"], "akcent": ["ramka"]},
+    "MOTORYZACJA":  {"otwarcie": ["ciecie", "uderzenie", "ramka", "rgb"], "przejscie": ["kierunek", "smuga", "blysk"], "akcent": ["ramka"]},
     "FINANSE":      {"otwarcie": ["ramka", "zoomout", "skan"], "przejscie": ["paski", "kierunek", "zoom"], "akcent": ["ramka", "ostrosc"]},
-    "KONTROWERSJA": {"otwarcie": ["ciecie", "uderzenie", "ramka"], "przejscie": ["kierunek", "warstwy", "blysk", "paski"], "akcent": ["ramka"]},
-    "CIEKAWOSTKA":  {"otwarcie": ["zoomout", "blysk", "kinowe"], "przejscie": ["przeslona", "zoom", "smuga"], "akcent": ["ostrosc"]},
+    "KONTROWERSJA": {"otwarcie": ["rgb", "ciecie", "uderzenie", "ramka"], "przejscie": ["kierunek", "warstwy", "blysk", "paski"], "akcent": ["ramka"]},
+    "CIEKAWOSTKA":  {"otwarcie": ["zoomout", "blysk", "kinowe"], "przejscie": ["przeslona", "swiatlo", "zoom", "smuga"], "akcent": ["ostrosc"]},
 }
 PRESET_PRZEDMIOTU = {"PRAWO": "PRAWO", "POLITYKA": "POLITYKA", "HISTORIA": "HISTORIA", "KOSMOS": "KOSMOS",
                      "FIZYKA": "NAUKA", "CHEMIA": "NAUKA", "BIOLOGIA": "NAUKA", "CIAŁO": "NAUKA", "MÓZG": "NAUKA",
@@ -118,6 +120,10 @@ def styl(post, i, n):
     fx["moc"] = post.get("moc", "mocna")
     fx["swiatlo"] = fx["moc"] == "mocna"          # smuga światła i oddychający gradient w tle
     fx["preset"] = preset(post)
+    # DVE 9.11: rozszczepienie RGB (czerwień/niebieski marki) przy uderzeniach – tylko tematy „mocne”;
+    # głębia 2.5D: lekkie pochylenie treści w perspektywie + paralaksa tła i obrazu-bohatera
+    fx["rgb"] = fx["preset"] in ("KONTROWERSJA", "MOTORYZACJA", "POLITYKA")
+    fx["glebia"] = fx["moc"] == "mocna"
     fx["bpm"] = bpm(post) or 0
     if post.get("tlo3d"):        # tło z renderu 3D (skill szkola-klamala-3d) zamiast warstw rysowanych w przeglądarce
         fx["tlo"], fx["kontur"] = "3d", False
@@ -219,6 +225,12 @@ def css(TOK):
 @keyframes kGrowY{{from{{transform:scaleY(0)}}to{{transform:none}}}}
 @keyframes kDocIn{{from{{opacity:0;transform:perspective(1400px) rotateX(28deg) translateY(120px) scale(.9)}}to{{opacity:1;transform:none}}}}
 .row .fill{{transform-origin:left center}}
+.leak{{position:absolute;top:-10%;left:-100%;width:300%;height:120%;z-index:19;pointer-events:none;display:none;mix-blend-mode:screen;
+  background:linear-gradient(105deg,transparent 30%,rgba(255,170,40,.35) 40%,rgba(255,214,90,.9) 47%,#fff 50%,rgba(255,199,39,.85) 53%,rgba(229,57,53,.25) 60%,transparent 70%)}}
+.wsk-svg{{position:absolute;left:0;top:0;overflow:visible;pointer-events:none;z-index:4}}
+.wsk-svg path{{fill:none;stroke:{TOK['yellow']};stroke-width:6;stroke-linecap:round;stroke-linejoin:round;
+  filter:drop-shadow(0 0 10px rgba(255,199,39,.7))}}
+.wsk-svg circle{{fill:{TOK['yellow']};filter:drop-shadow(0 0 12px rgba(255,199,39,.9))}}
 """
 
 
@@ -295,7 +307,7 @@ PREP = r"""
 
   // ── liczniki, iskry, wstrząsy
   window.__counters = []; window.__slots = []; window.__bars = []; window.__sparks = []; window.__shakes = [];
-  window.__brk = []; window.__focus = [];
+  window.__brk = []; window.__focus = []; window.__rgb = []; window.__dolly = null; window.__wsk = null;
   const addCounter = (el, start, dur) => {
     if (!o.count) return;
     const nodes = []; const tw = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
@@ -310,6 +322,7 @@ PREP = r"""
       sp.push({s, a: rnd() * 6.283, d: 160 + rnd() * 260, len: .55 + rnd() * .5});
     }
     window.__sparks.push({el, t0, sp});
+    if (fx.rgb) window.__rgb.push({t0, amp: 10});
     ev.push({t: t0, typ: 'uderzenie'});
   };
 
@@ -326,7 +339,7 @@ PREP = r"""
     const hc = [...c.querySelectorAll('h1,h2')].reduce((a, e) => a + e.innerText.replace(/\s/g, '').length, 0) || 1;
     const bw = [...c.querySelectorAll('.sub,.body,.opt')].reduce((a, e) => a + e.innerText.split(/\s+/).length, 0) || 1;
     const sh = Math.min(.075, .55 / hw), sc = Math.min(.032, .7 / hc), sb = Math.min(.035, .75 / bw);
-    c.querySelectorAll('.chip,.tag,.num,h1,h2,.brush,.big,.myth,.sub,.body,.opt,.row,.cd,.note,.src,.partner,.tl,.q-mark,.q-txt,.q-who,.doc').forEach(el => {
+    c.querySelectorAll('.chip,.tag,.num,h1,h2,.brush,.big,.myth,.sub,.body,.opt,.row,.cd,.note,.src,.partner,.tl,.q-mark,.q-txt,.q-who,.doc,.doc-wsk').forEach(el => {
       if (el.matches('.chip,.tag')) {
         if (!o.first) { anim(el, 'kChip', .38, t); ev.push({t, typ: 'etykieta'}); t += .14; }
       } else if (el.matches('h1,h2')) {
@@ -342,6 +355,11 @@ PREP = r"""
             anim(sl, 'kScan', .75, .05); ev.push({t: .05, typ: 'marker'});
           } else if (ot === 'ramka') {
             window.__brk.push({el, t0: .3}); window.__shakes.push({t0: .55, amp: fx.moc === 'mocna' ? 16 : 9}); ev.push({t: .55, typ: 'uderzenie'});
+          } else if (ot === 'rgb') {                  // rozszczepienie kanałów (czerwień/niebieski marki): od klatki 0 czytelne, 2 uderzenia
+            window.__rgb.push({t0: 0, amp: 16, k: 6}); window.__rgb.push({t0: .52, amp: 15, k: 6}); window.__rgb.push({t0: 1.45, amp: 8});
+            anim(el, 'kPunch', .45, .52, true);          // drugie uderzenie: haczyk „uderza” w ekran
+            window.__shakes.push({t0: .52, amp: fx.moc === 'mocna' ? 18 : 10}); ev.push({t: .52, typ: 'uderzenie'});
+            ev.push({t: 1.45, typ: 'tik'});
           } else if (ot === 'kinowe') {
             ['top', 'bottom'].forEach(side => { const b = document.createElement('div'); b.className = 'lbox'; b.style[side] = 0;
               document.body.appendChild(b); anim(b, 'kLbox', .7, .1); });
@@ -449,7 +467,19 @@ PREP = r"""
         const tx2 = el.querySelector('.doc-t'), ws = tx2 ? split(tx2, 'w') : [];
         let tb = t + .8;
         el.querySelectorAll('.doc-t b').forEach(b => { b.classList.add('mk'); anim(b, 'kMarker', .55, tb); ev.push({t: tb, typ: 'marker'}); tb += .45; });
+        const fb2 = el.querySelector('.doc-t b');
+        if (fb2) window.__dolly = {el: fb2, t0: tb + .05, amt: fx.moc === 'mocna' ? .13 : .08};   // „kamera” najeżdża na dosłowny fragment
         t = tb + .1;
+      } else if (el.matches('.doc-wsk')) {            // wskazanie szczegółu: linia rysuje się od wyróżnienia do etykiety
+        const fb3 = c.querySelector('.doc-t b');
+        if (fb3) {
+          const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg'); svg.setAttribute('class', 'wsk-svg');
+          svg.innerHTML = '<path pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/><circle r="11"/>'; c.appendChild(svg);
+          window.__wsk = {svg, from: fb3, to: el, t0: t};
+          ev.push({t, typ: 'marker'});
+        }
+        anim(el, 'kPop', .45, t + .42); ev.push({t: t + .45, typ: 'pop'});
+        t += .7;
       } else if (el.matches('.q-mark')) {
         anim(el, 'kStamp', .4, t); window.__shakes.push({t0: t + .22, amp: 8}); ev.push({t: t + .22, typ: 'pieczatka'}); t += .3;
       } else if (el.matches('.q-txt')) {
@@ -475,7 +505,7 @@ PREP = r"""
   window.__stop = [];
   const isTwist = [...c.querySelectorAll('.tag')].some(e => /TWIST|ZWROT/i.test(e.textContent));
   if (!o.first && o.enter && isTwist && (fx.zwrot || 'stop') === 'stop') {
-    const ts2 = Math.max(.35, t - .25); window.__stop.push(ts2); ev.push({t: ts2, typ: 'uderzenie'});
+    const ts2 = Math.max(.35, t - .25); window.__stop.push(ts2); window.__rgb.push({t0: ts2, amp: 9}); ev.push({t: ts2, typ: 'uderzenie'});
   }
 
   // ── drugi akcent w trakcie czytania (co 2–3 s coś się dzieje): najazd kamery + błysk liczby / żółtego słowa
@@ -494,10 +524,32 @@ PREP = r"""
   for (let k = 0; k < 5; k++) { const s = document.createElement('i'); s.style.top = (k * H / 5 - 1) + 'px'; s.style.height = (H / 5 + 2) + 'px'; slats.appendChild(s); }
   document.body.appendChild(slats);
   const flash = document.createElement('div'); flash.className = 'flash'; document.body.appendChild(flash);
+  const leak = document.createElement('div'); leak.className = 'leak'; document.body.appendChild(leak);
+  const hero = c.querySelector('.hero-ill');
   const io = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
   const clamp = x => Math.min(1, Math.max(0, x));
   let rects = null;
   window.__layout = () => {                          // pozycje po dopasowaniu tekstu (stan końcowy)
+    const sv = [c.style.transform, c.style.translate, c.style.filter]; c.style.transform = ''; c.style.translate = '';
+    const cr = c.getBoundingClientRect();
+    if (window.__dolly) {                             // punkt najazdu = wyróżnienie, ale karta nie może wyjść z kadru
+      const dl = window.__dolly, r = dl.el.getBoundingClientRect(), dc = (dl.el.closest('.doc') || c).getBoundingClientRect();
+      const ox = dc.left + dc.width / 2, oy = r.top + r.height / 2, m = 50;   // poziomo środek karty, pionowo wyróżnienie
+      const lim = [ox > dc.left ? (ox - m) / (ox - dc.left) : 9, dc.right > ox ? (W - m - ox) / (dc.right - ox) : 9,
+                   oy > dc.top ? (oy - m) / (oy - dc.top) : 9];
+      dl.amt = Math.max(0, Math.min(dl.amt, Math.min(...lim) - 1));
+      dl.org = `${(ox - cr.left).toFixed(1)}px ${(oy - cr.top).toFixed(1)}px`; }
+    if (window.__wsk) {                               // łamana: spod wyróżnienia w dół, w bok, do etykiety
+      const a = window.__wsk.from.getBoundingClientRect(), b = window.__wsk.to.getBoundingClientRect();
+      const dk = window.__wsk.from.closest('.doc'), db = dk ? dk.getBoundingClientRect().bottom : a.bottom;
+      // start na dolnej krawędzi karty pod wyróżnieniem – linia nie przecina tekstu dokumentu
+      const x1 = a.left - cr.left + a.width / 2, y1 = db - cr.top + 2, x2 = b.left - cr.left + 40, y2 = b.top - cr.top - 6;
+      const ym = Math.max(y1 + 30, y2 - 60);
+      const s = window.__wsk.svg; s.setAttribute('width', cr.width); s.setAttribute('height', cr.height);
+      s.querySelector('path').setAttribute('d', `M${x1.toFixed(1)} ${y1.toFixed(1)} L${x1.toFixed(1)} ${ym.toFixed(1)} L${x2.toFixed(1)} ${ym.toFixed(1)} L${x2.toFixed(1)} ${y2.toFixed(1)}`);
+      const ci = s.querySelector('circle'); ci.setAttribute('cx', x1.toFixed(1)); ci.setAttribute('cy', y1.toFixed(1));
+    }
+    c.style.transform = sv[0]; c.style.translate = sv[1];
     rects = window.__sparks.map(s => { const r = s.el.getBoundingClientRect(); return {x: r.left + r.width / 2, y: r.top + r.height / 2}; });
     window.__brk.forEach(b => {                       // ramka ostrości wokół elementu (stan końcowy, z zapasem)
       const r = b.el.getBoundingClientRect(), pad = 26;
@@ -584,6 +636,13 @@ PREP = r"""
       c.style.clipPath = `circle(${r.toFixed(1)}% at 50% 46%)`;
       flash.style.opacity = (isOut ? q : 1 - q) * .22;
     }
+    let bright = 0;
+    leak.style.display = 'none';
+    if (kind === 'swiatlo') {                         // prześwietlenie złotym światłem (poświata z logo) – przejście „przez światło”
+      leak.style.display = 'block'; const x = isOut ? (-1.2 + 1.2 * q) : 1.2 * q;
+      leak.style.translate = `${(x * W).toFixed(1)}px 0`;
+      if (isOut) { bright = 1.4 * q; blur = 7 * q; op = 1 - .85 * q; } else { bright = 1.4 * (1 - q); blur = 7 * (1 - q); op = .15 + .85 * q; }
+    }
     const kids = [...c.children];
     if (kind === 'warstwy') {
       kids.forEach((e, k) => { const sp = 1 + k * .45, x = isOut ? -q * W * .9 * sp : (1 - q) * W * .9 * sp;
@@ -592,12 +651,16 @@ PREP = r"""
     } else if (kids.length && kids[0].style.translate) kids.forEach(e => { e.style.translate = ''; e.style.opacity = ''; });
     if (kind !== 'kierunek') wipe.style.opacity = '';
     // ramki ostrości: wskakują z powiększenia, „oddychają” i znikają razem z treścią w przejściu
-    const vis = pOut !== null ? 1 - pOut : (pIn !== null ? pIn : 1);
+    let vis = pOut !== null ? 1 - pOut : (pIn !== null ? pIn : 1);
+    if (kind === 'warstwy' || kind === 'swiatlo') vis = Math.pow(vis, 3);   // ramka nie zostaje „w powietrzu”, gdy treść odjeżdża
     window.__brk.forEach(b => { if (!b.box) return; const u = t - b.t0;
       if (u < 0) { b.box.style.opacity = 0; return; }
       const p = clamp(u / .35), e = 1 - Math.pow(1 - p, 3);
       b.box.style.opacity = (Math.min(1, p * 1.6) * vis).toFixed(3);
-      b.box.style.translate = (tx || sx || sy) ? `${(tx + sx).toFixed(1)}px ${sy.toFixed(1)}px` : '';
+      // w przejściu „warstwy” ramka jedzie razem ze swoją warstwą (tą, w której jest liczba)
+      if (b.kid === undefined) b.kid = [...c.children].find(k => k.contains(b.el)) || null;
+      const lx = kind === 'warstwy' && b.kid ? parseFloat(b.kid.style.translate) || 0 : 0;
+      b.box.style.translate = (tx || sx || sy || lx) ? `${(tx + sx + lx).toFixed(1)}px ${sy.toFixed(1)}px` : '';
       b.box.style.transform = `scale(${((1.45 - .45 * e + .012 * Math.sin(u * 4)) * scale).toFixed(4)})`; });
     let stopDim = 0;
     window.__stop.forEach(ts2 => { const u = t - ts2; if (u >= 0 && u < .9) {
@@ -605,8 +668,31 @@ PREP = r"""
       flash.style.opacity = Math.max(+flash.style.opacity || 0, .5 * Math.exp(-u * 9)); } });
     bg.style.opacity = stopDim > .02 ? (1 - stopDim).toFixed(3) : '';
     window.__pulse.forEach(tp => { const u = t - tp; if (u > 0 && u < 1.2) scale *= 1 + .04 * Math.sin(Math.min(1, u / .18) * Math.PI / 2) * Math.exp(-u * 3.2); });
-    c.style.transform = scale !== 1 ? `scale(${scale})` : '';
-    c.style.filter = blur ? `blur(${blur.toFixed(1)}px)` : '';
+    // najazd „kamery” na dosłowny fragment dokumentu (punkt zaczepienia = wyróżnienie)
+    const dl = window.__dolly;
+    if (dl && dl.org) { const p = io(clamp((t - dl.t0) / 1.1)); scale *= 1 + dl.amt * p; c.style.transformOrigin = dl.org; }
+    // linia wskazania: rysuje się w 0,45 s, kropka pulsuje
+    const wk = window.__wsk;
+    if (wk) { const p = clamp((t - wk.t0) / .45); wk.svg.querySelector('path').setAttribute('stroke-dashoffset', (1 - io(p)).toFixed(4));
+      const ci = wk.svg.querySelector('circle'); ci.style.opacity = p > 0 ? 1 : 0; ci.setAttribute('r', (9 + 3 * Math.sin(t * 6)).toFixed(2)); }
+    // głębia 2.5D: treść lekko pochylona w perspektywie (≤1,4°), tło przesuwa się w przeciwną stronę (paralaksa)
+    let rx = 0, ry = 0;
+    if (fx.glebia) { rx = .9 * Math.sin(g * .53); ry = 1.4 * Math.sin(g * .37); }
+    const tf = (rx || ry ? `perspective(1800px) rotateX(${rx.toFixed(3)}deg) rotateY(${ry.toFixed(3)}deg) ` : '') + (scale !== 1 ? `scale(${scale})` : '');
+    c.style.transform = tf;
+    bg.style.translate = fx.glebia ? `${(-ry * 16).toFixed(1)}px ${(rx * 12).toFixed(1)}px` : '';
+    if (hero) {                                       // obraz-bohater okładki na „bliższym planie”: rusza się szybciej niż tekst
+      const u = push ? Math.min(1, t / dur) : 0;
+      hero.style.scale = (1 + .07 * u).toFixed(4);
+      hero.style.translate = `${(ry * 10).toFixed(1)}px ${(-26 * u + rx * 8).toFixed(1)}px`;
+    }
+    // rozszczepienie RGB w kolorach marki przy uderzeniach (gaśnie w ~0,3 s)
+    let rg = 0; window.__rgb.forEach(r => { const u = t - r.t0; if (u >= 0 && u < .6) rg += r.amp * Math.exp(-u * (r.k || 9)); });
+    const fl = [];
+    if (blur) fl.push(`blur(${blur.toFixed(1)}px)`);
+    if (bright > .01) fl.push(`brightness(${(1 + bright).toFixed(3)})`);
+    if (rg > .4) fl.push(`drop-shadow(${rg.toFixed(1)}px 0 0 rgba(229,57,53,.8)) drop-shadow(${(-rg).toFixed(1)}px 0 0 rgba(47,107,255,.85))`);
+    c.style.filter = fl.join(' ');
     c.style.opacity = op < 1 ? op.toFixed(3) : '';
     c.style.translate = (tx || sx || sy) ? `${(tx + sx).toFixed(1)}px ${sy.toFixed(1)}px` : '';
 
