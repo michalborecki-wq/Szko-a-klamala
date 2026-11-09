@@ -1,0 +1,23 @@
+{
+ "handle": "@szkola_klamala",
+ "posts": [
+  {
+   "id": "policja5_mandat",
+   "format": "reel",
+   "subject": "PRAWO",
+   "series": "CO MOŻE POLICJA #5",
+   "ton": "PRAWO",
+   "moc": "mocna",
+   "muzyka": {"nastroj": "napiecie", "bpm": 110},
+   "durations": [3.2, 5.0, 4.5, 4.8, 5.0],
+   "slides": [
+    {"type": "cover", "obraz": "odznaka", "pieczatka": "ODMOWA", "title": "Mandat?", "accent": "Możesz powiedzieć „nie”."},
+    {"type": "dokument", "tag": "PRZEPIS", "naglowek": "Kodeks postępowania w sprawach o wykroczenia · art. 97 § 2",
+     "tekst": "Sprawca wykroczenia **może odmówić** przyjęcia mandatu karnego.", "linie": 1, "wskaz": "Twoje prawo"},
+    {"type": "text", "tag": "OBOWIĄZEK", "title": "Policjant musi", "accent": "Cię o tym pouczyć.", "body": "O prawie odmowy **i o jej skutkach**.", "source": "art. 97 § 3 KPSW"},
+    {"type": "myth", "myth_label": "TWIST", "myth": "Odmawiam – i sprawy nie ma.", "fact": "Sprawa idzie **do sądu**. Kara może być niższa – albo wyższa.", "source": "art. 99 KPSW"},
+    {"type": "outro", "question": "Przyjąłbyś mandat, z którym się nie zgadzasz?", "sub": "Wyślij komuś, kto podpisuje wszystko.", "sources": "To nie jest porada prawna.", "partner_slot": false}
+   ]
+  }
+ ]
+}
