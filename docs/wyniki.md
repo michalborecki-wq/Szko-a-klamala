@@ -101,3 +101,8 @@ Wniosek: okładka z obrazem nie obniżyła pominięć. Następny test: ruch w 1.
 **Aktualizacja 4.11 (Michał):** Policja #1 „Norma legitymowań” – **ponad 2 tys. wyświetleń** (rekord konta, ok. 2× poprzednie maksimum 1,1 tys.). Wniosek: mocna, prawdziwa kontrowersja wokół policji + szablon C działa – trzymać w każdej rolce.
 
 **Aktualizacja 4.11 (Michał):** Policja #1 „Norma legitymowań” – **ponad 2 tys. wyświetleń** (rekord konta, ok. 2× poprzednie maksimum 1,1 tys.). Wniosek: mocna, prawdziwa kontrowersja wokół policji + szablon C działa – trzymać w każdej rolce.
+
+
+## 9.11 – pomiar IG (Composio)
+
+Pełna tabela i wnioski: `docs/analiza-wynikow-2026-11-09.md`. Najniższe pominięcia na koncie: ZUS w nowym stylu DVE (63,3%, 4,9 s; mediana konta 86.4%). Wszystkie rolki: 0 udostępnień, 0 zapisów w IG. Facebook (ponad 90% wyświetleń) niewidoczny w API.
