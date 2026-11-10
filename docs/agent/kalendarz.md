@@ -28,17 +28,17 @@ Po wysłaniu agent zmienia status na **wysłane**. **Decyzja Michała 8.11: „M
 | pon. 9.11 | 9:00 | ZUS daruje 315 mln zł. Jest haczyk. (nowy styl: plansza `dokument` z art. 6 druku 3010) | `publikacje/2026-11-09/spec_zus_umorzenie.json#zus_umorzenie` | `publikacje/2026-11-09/0900_opis.md` | wysłane (8.11 wieczorem, sesja główna) |
 | pon. 9.11 | 13:00 | Największa pustynia świata jest z lodu (Antarktyda 14,2 mln km² vs Sahara 9,2 mln km²) | `publikacje/2026-11-09/spec_pustynia_antarktyda.json#pustynia_antarktyda` | `publikacje/2026-11-09/1300_opis.md` | wysłane (9.11 12:15, sesja główna – wersja z sesji zadania nie dotarła) |
 | pon. 9.11 | 18:00 | Co może policja #5 – „Mandat? Możesz powiedzieć »nie«” (art. 97 § 2–3, art. 99 KPSW) | `publikacje/2026-11-09/spec_policja5_mandat.json#policja5_mandat` | `publikacje/2026-11-09/1800_opis.md` | wysłane (9.11 ok. 18:40, sesja główna – sesja zadania nie pobrała repozytorium) |
-| wt. 10.11 | 9:00 | Pod szlabanem tracisz prawo jazdy | `VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_przejazdy_kolejowe/spec.json#przejazdy_kolejowe` | `…/2026-11-04_przejazdy_kolejowe/opis.md` | do wysłania |
+| wt. 10.11 | 9:00 | Pieniądze bez ściemy: „500 zł miesięcznie przez 30 lat to nie 180 tys. zł” (F3, przesunięte z 12.11) | `publikacje/2026-11-10/spec_finanse_500zl.json#finanse_500zl` | `publikacje/2026-11-10/0900_opis.md` | wysłane (sesja główna, 10.11 rano) – NIE ROBIĆ |
 | wt. 10.11 | 13:00 | NOWA – karuzela 9:16 (TikTok) | NOWA | NOWA | do zrobienia |
-| wt. 10.11 | 18:00 | Nawigacja w telefonie – 500 zł (TikTok Shop: uchwyt Laayee) | `VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_nawigacja_telefon/spec.json#nawigacja_telefon` | `…/2026-11-04_nawigacja_telefon/opis.md` | do wysłania |
+| wt. 10.11 | 18:00 | NOWA – temat z fabryki z mocną, prawdziwą kontrowersją (bez broni, bez przemocy). **Nie: „Nawigacja w telefonie – 500 zł” (opublikowane 4.11), nie: „Pod szlabanem” (8.11)** | NOWA | NOWA | do zrobienia |
 | śr. 11.11 | 9:00 | NOWA (fabryka) | NOWA | NOWA | do zrobienia |
 | śr. 11.11 | 13:00 | NOWA – karuzela 9:16 (TikTok) | NOWA | NOWA | do zrobienia |
 | śr. 11.11 | 18:00 | Co może policja #6 – +51 km/h (przeniesione z 7.11) | `specs/tydzien_4-8.11_r2-9.json#prawo_policja6_50kmh` | `docs/agent/opisy/tydzien_4-8.11.md` (Co może policja #6) | do wysłania |
 
-| czw. 12.11 | 9:00 | NOWA – finanse: „500 zł miesięcznie to nie 180 tys. zł po 30 latach” (procent składany, przykład, nie prognoza) | NOWA (`docs/pomysly-tematow.md` F3) | NOWA | do zrobienia |
+| czw. 12.11 | 9:00 | NOWA – finanse: „Spadek o 100 tys. zł w jeden dzień to nie strata” (strata papierowa a zrealizowana, art. 30b PIT – sprawdzić) – F5 przesunięte z 13.11 | NOWA (F5) | NOWA | do zrobienia |
 | czw. 12.11 | 13:00 | NOWA – karuzela 9:16 (kosmos/ciało/rekord) | NOWA | NOWA | do zrobienia |
 | czw. 12.11 | 18:00 | NOWA – temat z fabryki z mocną, prawdziwą kontrowersją (bez broni, bez przemocy) | NOWA | NOWA | do zrobienia |
-| pt. 13.11 | 9:00 | NOWA – finanse: „Spadek o 100 tys. zł w jeden dzień to nie strata” (strata papierowa a zrealizowana, art. 30b PIT – sprawdzić) | NOWA (F5) | NOWA | do zrobienia |
+| pt. 13.11 | 9:00 | NOWA – motoryzacja albo prawo w codzienności | NOWA | NOWA | do zrobienia |
 | pt. 13.11 | 13:00 | NOWA – karuzela 9:16 | NOWA | NOWA | do zrobienia |
 | pt. 13.11 | 18:00 | Co może policja #8 – „Masz prawo znać nazwisko policjanta” (§ 2 ust. 1 rozp. RM, Dz.U. 2023 poz. 2535) | NOWA (P1) | NOWA | do zrobienia |
 | sob. 14.11 | 9:00 | NOWA – ciało/medycyna (oficjalne źródła, bez porad) | NOWA | NOWA | do zrobienia |
