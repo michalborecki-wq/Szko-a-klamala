@@ -20,3 +20,7 @@ Wydane kredyty: 110 (całe saldo planu Plus). Koszty: obraz gpt_image_2_6 = 0,25
 
 ## Obrazy (gpt_image_2_6, 752×1344) – tła i okładki
 saturn_ocean, mozg, monety_stosy, szlaban_noc, telefon_platnosc, metka_promocja (Black Friday), koperty_urzad, klasa_tablica, fotoradar, serce, ksiezyc_ziemia, skarbonka, opona_zima, kalendarz_termin, blyskawica, globus, pingwiny, mlotek_prawo, licznik_prad, dystrybutor.
+
+## Status użycia (10.11, uwaga Michała)
+- **Tematy już opublikowane – NIE jako temat rolki:** saturn, mozg, monety, szlaban (oraz obrazy: saturn_ocean, mozg, monety_stosy, szlaban_noc, opona_zima, telefon_platnosc, skarbonka). Mogą być tylko tłem w innym, nowym temacie.
+- **Do użycia:** tablica (intro marki), lupa (slot NEWS), waga i mlotek_prawo (prawo), klepsydra i kalendarz_termin (terminy), ziemia i ksiezyc_ziemia (kosmos – nowe tematy), antarktyda (rolka IG – na TikToku była tylko karuzela), metka_promocja (Black Friday 19.11), fotoradar, dystrybutor, licznik_prad, koperty_urzad, klasa_tablica, globus, blyskawica, serce, pingwiny.
