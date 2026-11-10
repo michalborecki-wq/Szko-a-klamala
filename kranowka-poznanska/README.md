@@ -24,7 +24,7 @@ Punkt wyjścia: film referencyjny Super Studio dla piekarni Rose (wzór z odbitk
 - `index.html` – prezentacja marki (GSAP + ScrollTrigger, responsywna, respektuje „ogranicz ruch”).
 - `rolki/rolka.html?r=1|2|3` – trzy rolki 9:16 (podgląd na żywo); `rolki/render.js` – eksport do MP4.
 - `makiety/makieta.html?m=…` – plakat, billboard, posty, podkładka, naklejka, butelka; `makiety/render.js` – eksport do PNG.
-- `gotowe/` – wyrenderowane pliki: rolki MP4 (1080×1920, 30 kl./s, cicha ścieżka), okładki, makiety PNG, zrzuty prezentacji.
+- `gotowe/` – wyrenderowane pliki: rolki MP4 (1080×1920, 30 kl./s, z muzyką), okładki, makiety PNG, zrzuty prezentacji.
 - `narzedzia/build_assets.py` – generator logo i wzoru.
 
 ## Uruchamianie
@@ -33,7 +33,8 @@ Punkt wyjścia: film referencyjny Super Studio dla piekarni Rose (wzór z odbitk
 python3 -m http.server 8000          # w folderze kranowka-poznanska, potem http://localhost:8000
 pip install fonttools brotli numpy scipy pillow
 python3 narzedzia/build_assets.py    # logo + wzór
-node rolki/render.js                 # wszystkie rolki (albo: node rolki/render.js 2)
+node rolki/render.js                 # wszystkie rolki (albo: node rolki/render.js 2) – obraz z cichą ścieżką
+python3 narzedzia/muzyka.py          # dokłada muzykę i efekty do gotowych rolek
 node makiety/render.js               # makiety + zrzuty prezentacji
 ```
 
@@ -57,11 +58,11 @@ Render wymaga Playwright (Chromium) i ffmpeg.
 - Herb Poznania: plik wektorowy z nagłówka poznan.pl (10.11.2026). Znak Aquanet: z nagłówka aquanet.pl. Oba należą do właścicieli i są użyte poglądowo – **publikacja materiałów z tymi znakami wymaga zgody Miasta Poznania i Aquanet SA**.
 - Kampania „Kranówka Poznańska” jest prowadzona przez Aquanet (kranowkapoznanska.pl); ten projekt to propozycja, nie oficjalny materiał.
 - Kroje: Fraunces i Instrument Sans (SIL Open Font License), GSAP (licencja standardowa, bezpłatna).
-- Rolki nie mają muzyki ani efektów dźwiękowych – ścieżka jest cicha.
+- Muzyka i efekty dźwiękowe rolek są w całości generowane w kodzie (`narzedzia/muzyka.py`), bez cudzych nagrań; głośność −14 LUFS.
 - Liczby (ceny, wyniki badań wody) trafiają do materiałów dopiero po potwierdzeniu u dostawcy. Jedyna liczba w rolkach to arytmetyka: 6 × 1,5 l = 9 l, czyli ok. 9 kg wody.
 
 ## Do zrobienia
 
 - Znak miasta „POZnan*” – brak oficjalnego pliku; dodać po otrzymaniu od Urzędu Miasta.
 - Ujęcie otwierające rolki 1 nagrane kamerą (ręka, szklanka, widok z góry) zamiast animacji.
-- Dźwięk do rolek.
+
