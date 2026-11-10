@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kranówka Poznańska – makieta</title>
+<link rel="stylesheet" href="../assets/css/kp.css">
+<style>
+  body { margin: 0; background: #e9e6df; }
+  #m { display: inline-block; position: relative; overflow: hidden; }
+  #m.pad { padding: 110px; }
+  nav { font: 13px system-ui; padding: 10px; } nav a { margin-right: 12px; }
+</style>
+</head>
+<body>
+<nav></nav>
+<div id="m"></div>
+<script src="../assets/js/logo.js"></script>
+<script src="../assets/js/kp.js"></script>
+<script>
+KP.base = "../";
+/* nazwa → [html, tło, margines?] */
+const M = {
+  "plakat-lej-tej": [KP.apps.plakat(), null],
+  "billboard-nie-dzwigaj": [KP.apps.billboard(), null],
+  "post-zrodlo": [KP.apps.post(), null],
+  "post-lokalna": [KP.apps.post("Lokalna.", "Bardziej", "się nie da."), null],
+  "post-etykieta": [KP.apps.post("Dobra woda", "nie potrzebuje", "etykiety.").replace('<h2 class="kp-d">', '<h2 class="kp-d" style="font-size:132px">'), null],
+  "podkladka": [KP.apps.podkladka(), "#DDE7EF", 1],
+  "naklejka": [KP.apps.naklejka(), "#0B1B3F", 1],
+  "butelka": [KP.apps.butelka(), "#2EA8FF", 1],
+  "butelka-jasna": [KP.apps.butelka("#F5F3EE", "#0B1B3F"), "#0B1B3F", 1],
+};
+const name = new URLSearchParams(location.search).get("m") || "plakat-lej-tej";
+const [html, bg, pad] = M[name], m = document.getElementById("m");
+m.innerHTML = html; if (bg) m.style.background = bg; if (pad) m.className = "pad";
+window.KP_MAKIETY = Object.keys(M);
+if (new URLSearchParams(location.search).has("render")) document.querySelector("nav").remove();
+else document.querySelector("nav").innerHTML = Object.keys(M).map((k) => `<a href="?m=${k}">${k}</a>`).join("");
+</script>
+</body>
+</html>

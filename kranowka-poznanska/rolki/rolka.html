@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kranówka Poznańska – rolka</title>
+<link rel="stylesheet" href="../assets/css/kp.css">
+<style>
+  html, body { margin: 0; height: 100%; background: #05091a; overflow: hidden; }
+  #stage { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: hidden; background: var(--kp-papier); transform-origin: 0 0; }
+  .sc { position: absolute; inset: 0; overflow: hidden; visibility: hidden; }
+  .abs { position: absolute; }
+  .ctr { position: absolute; left: 50%; top: 50%; }
+  .cap-top { position: absolute; left: 0; right: 0; top: 330px; text-align: center; font-size: 42px; }
+  .cicha .kp-kaustyka.a { opacity: .42; } .cicha .kp-kaustyka.b { opacity: .16; }
+  .cap-bot { position: absolute; left: 0; right: 0; top: 1392px; text-align: center; font-size: 28px; }
+  .shadow { filter: drop-shadow(0 50px 60px rgba(7,18,48,.45)); }
+
+  /* szklanka z góry */
+  .glass { position: absolute; left: 190px; top: 590px; width: 700px; height: 700px; }
+  .glass > div { position: absolute; border-radius: 50%; }
+  .g-sh { inset: 0; background: rgba(11,27,63,.30); filter: blur(34px); transform: translate(34px, 46px); }
+  .g-rim { inset: 0; background: rgba(255,255,255,.72); box-shadow: inset 0 0 0 7px var(--kp-atrament); }
+  .g-wall { inset: 30px; box-shadow: inset 0 0 0 3px rgba(11,27,63,.35); background: rgba(221,231,239,.9); overflow: hidden; }
+  .g-water { inset: 0; background: var(--kp-woda); overflow: hidden; border-radius: 50%; position: absolute; }
+  .g-rip { left: 50%; top: 50%; width: 600px; height: 600px; margin: -300px 0 0 -300px; border: 6px solid rgba(255,255,255,.9); opacity: 0; }
+  .g-stream { left: 50%; top: 50%; width: 120px; height: 120px; margin: -60px 0 0 -60px; background: #fff; box-shadow: 0 0 0 16px rgba(255,255,255,.35), 0 0 60px 30px rgba(255,255,255,.35); }
+  .g-hl { inset: 13px; border: 9px solid transparent; border-top-color: #fff; transform: rotate(-38deg); opacity: .95; }
+  .g-hl2 { inset: 13px; border: 5px solid transparent; border-bottom-color: rgba(255,255,255,.8); transform: rotate(-52deg); }
+  .wet { position: absolute; left: 177px; top: 577px; width: 726px; height: 726px; color: var(--kp-woda); }
+  .wet svg { width: 100%; height: 100%; }
+  .dot { position: absolute; border-radius: 50%; background: var(--kp-woda); }
+  .steps span { position: absolute; left: 0; right: 0; }
+  .steps b { color: var(--kp-woda); font-weight: 700; margin-right: .5em; }
+
+  .big { margin: 0; position: absolute; }
+  .outline { color: transparent; -webkit-text-stroke: 4px var(--kp-papier); }
+  .endlogo { position: absolute; left: 110px; top: 640px; width: 860px; }
+  .endslogan { position: absolute; left: 0; right: 0; top: 955px; text-align: center; font-size: 72px; }
+  .endbar { position: absolute; left: 190px; top: 1250px; width: 700px; }
+  .endbar .kp-partnerzy { font-size: 30px; padding: 0; justify-content: center; gap: 1.5em; }
+  .endline { position: absolute; left: 190px; top: 1200px; width: 700px; height: 2px; background: var(--kp-atrament); opacity: .2; transform-origin: 0 50%; }
+  #ui { position: fixed; right: 16px; bottom: 16px; font: 13px/1.4 system-ui; color: #9fb4d8; }
+  #ui a { color: #fff; margin-left: 10px; }
+</style>
+</head>
+<body>
+<div id="stage"></div>
+<div id="ui"></div>
+<script src="../assets/js/gsap.min.js"></script>
+<script src="../assets/js/logo.js"></script>
+<script src="../assets/js/kp.js"></script>
+<script>
+KP.base = "../";
+const q = new URLSearchParams(location.search), R = +(q.get("r") || 1), RENDER = q.has("render");
+const stage = document.getElementById("stage");
+const tl = gsap.timeline({ paused: true });
+const add = (html, cls = "") => { const d = document.createElement("div"); d.className = "sc " + cls; d.innerHTML = html; stage.appendChild(d); return d; };
+const on = (el, at) => tl.set(el, { visibility: "visible" }, at);
+const off = (el, at) => tl.set(el, { visibility: "hidden" }, at);
+const $ = (root, s) => root.querySelector(s), $$ = (root, s) => [...root.querySelectorAll(s)];
+const fit = (el, s) => gsap.set(el, { xPercent: -50, yPercent: -50, scale: s });
+
+/* plansza końcowa – wspólna dla wszystkich rolek */
+function endCard(at, slogan, prev) {
+  const e = add(`<div class="endlogo">${KP.logo()}</div><div class="endslogan kp-di">${slogan}</div>
+    <div class="endline"></div><div class="endbar">${KP.partnerzy()}</div>`, "on-papier");
+  on(e, at); KP.wave(tl, e, at, 0.6);
+  if (prev) off(prev, at + 0.62);
+  KP.assemble(tl, e, at + 0.3);
+  tl.fromTo($(e, ".endslogan"), { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.7, ease: "expo.out" }, at + 1.25);
+  tl.fromTo($(e, ".endline"), { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "expo.inOut" }, at + 1.3);
+  tl.fromTo($(e, ".endbar"), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, at + 1.55);
+  tl.to({}, { duration: 0.01 }, at + 3.0);
+  return e;
+}
+
+/* ============================================================ ROLKA 1 – „Odcisk” (film marki) */
+function rolka1() {
+  const B = KP_LOGO.ringBox, LW = 900, k = LW / B.w, LX = 90, LY = 830;
+  const a = add(`
+    <div class="steps kp-cap cap-top"><span><b>01</b>Nalej</span><span><b>02</b>Postaw</span><span><b>03</b>Podnieś</span></div>
+    <div class="abs" id="lg" style="left:${LX}px;top:${LY}px;width:${LW}px">${KP.logo()}</div>
+    <div class="wet">${KP.odcisk()}</div>
+    <div class="glass"><div class="g-sh"></div><div class="g-rim"></div>
+      <div class="g-wall"><div class="g-water">${KP.kaustyka(true)}</div>
+        <div class="g-rip"></div><div class="g-rip"></div><div class="g-rip"></div><div class="g-stream"></div></div>
+      <div class="g-hl"></div><div class="g-hl2"></div></div>`, "on-papier");
+  on(a, 0);
+  const steps = $$(a, ".steps span"), glass = $(a, ".glass"), wet = $(a, ".wet"), lg = $(a, "#lg");
+  gsap.set(steps.slice(1), { opacity: 0, y: 30 });
+  gsap.set(wet, { opacity: 0 });
+  gsap.set($$(lg, ".kp-l, .kp-drop, .kp-sub path, .kp-ring"), { opacity: 0 });
+  // nalewanie
+  tl.fromTo($(a, ".g-water"), { opacity: 0.12, scale: 0.55 }, { opacity: 1, scale: 1, duration: 1.45, ease: "power1.out" }, 0);
+  $$(a, ".g-rip").forEach((r, i) => tl.fromTo(r, { scale: 0.12, opacity: 0.95 }, { scale: 1, opacity: 0, duration: 0.75, ease: "power1.out", repeat: 2, repeatDelay: 0 }, i * 0.25));
+  tl.fromTo($(a, ".g-stream"), { scale: 0.85 }, { scale: 1.12, duration: 0.16, ease: "sine.inOut", repeat: 8, yoyo: true }, 0);
+  tl.to($(a, ".g-stream"), { scale: 0, duration: 0.2, ease: "power2.in" }, 1.44);
+  const step = (i, at) => { tl.to(steps[i - 1], { opacity: 0, y: -30, duration: 0.22, ease: "power2.in" }, at); tl.to(steps[i], { opacity: 1, y: 0, duration: 0.35, ease: "expo.out" }, at + 0.16); };
+  // postaw
+  step(1, 1.55);
+  tl.to(glass, { scale: 0.962, duration: 0.16, ease: "power2.in" }, 1.72);
+  tl.to($(a, ".g-sh"), { x: 12, y: 16, duration: 0.16 }, 1.72);
+  // podnieś
+  step(2, 2.3);
+  tl.to(wet, { opacity: 1, duration: 0.15 }, 2.42);
+  tl.to(glass, { scale: 2.3, x: 90, y: -70, opacity: 0, filter: "blur(22px)", duration: 0.85, ease: "power2.in" }, 2.45);
+  [[250, 1340, 26], [322, 1392, 12], [905, 800, 16], [860, 1300, 9]].forEach(([x, y, s], i) => {
+    const d = document.createElement("div"); d.className = "dot"; d.style.cssText = `left:${x}px;top:${y}px;width:${s}px;height:${s}px`; a.appendChild(d);
+    tl.fromTo(d, { scale: 0 }, { scale: 1, duration: 0.35, ease: "back.out(2.5)" }, 2.95 + i * 0.07);
+    tl.to(d, { scale: 0, duration: 0.3, ease: "power2.in" }, 3.55 + i * 0.04);
+  });
+  tl.to(steps[2], { opacity: 0, y: -30, duration: 0.25 }, 3.5);
+  // odcisk → Ó
+  const tx = LX + B.cx * k, ty = LY + B.cy * k, s = (B.r * k) / (726 * 100 / 212);
+  tl.to(wet, { x: tx - 540, y: ty - 940, scale: s, duration: 0.8, ease: "expo.inOut" }, 3.55);
+  tl.set($(lg, ".kp-ring"), { opacity: 1 }, 4.36); tl.set(wet, { opacity: 0 }, 4.36);
+  KP.assemble(tl, lg, 3.95, { keepRing: true });
+  tl.fromTo(lg, { scale: 1 }, { scale: 1.07, duration: 1.7, ease: "none", transformOrigin: "50% 50%" }, 4.4);
+  // wzór
+  const c = add(`${KP.kaustyka()}<div class="cap-bot kp-cap">Wzór marki<br><span style="opacity:.6">światło w szklance wody</span></div>`, "on-atrament");
+  on(c, 5.6); KP.wave(tl, c, 5.6, 0.6); off(a, 6.25);
+  tl.fromTo($$(c, ".kp-kaustyka"), { scale: 1.25 }, { scale: 1, duration: 1.4, ease: "expo.out" }, 5.6);
+  tl.fromTo($(c, ".cap-bot"), { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, ease: "expo.out" }, 6.05);
+  // zastosowania – twarde cięcia
+  const cuts = [
+    ["on-woda", `${KP.kaustyka(true)}<div class="ctr shadow">${KP.apps.butelka()}</div>`, 1.02, -5],
+    ["on-atrament", `<div class="ctr shadow">${KP.apps.plakat()}</div>`, 0.86, 2.5],
+    ["", `<div class="ctr">${KP.apps.podkladka()}</div>`, 0.98, -8],
+    ["on-atrament", `${KP.kaustyka()}<div class="ctr shadow">${KP.apps.billboard()}</div><div class="cap-bot kp-cap" style="top:1300px">Billboard 6${" "}×${" "}3${" "}m</div>`, 0.56, 0],
+    ["on-papier", `<div class="ctr shadow" style="top:44%">${KP.apps.post()}</div><div class="ctr" style="left:71%;top:67%">${KP.apps.naklejka()}</div>`, 0.68, -2],
+  ];
+  let t = 6.9, prev = c;
+  cuts.forEach(([cls, html, sc, rot], i) => {
+    const d = add(html, cls); if (i === 2) d.style.background = "var(--kp-mgla)";
+    const items = $$(d, ".ctr");
+    items.forEach((it, j) => { fit(it, j ? 0.42 : sc); tl.fromTo(it, { scale: (j ? 0.42 : sc) * 1.16, rotation: rot - 3 }, { scale: j ? 0.42 : sc, rotation: j ? 9 : rot, duration: 0.8, ease: "expo.out" }, t + j * 0.12); });
+    on(d, t); off(prev, t); prev = d; t += 0.78;
+  });
+  endCard(t, "Źródło masz w kuchni.", prev);
+}
+
+/* ============================================================ ROLKA 2 – „Lej, tej.” */
+function rolka2() {
+  const a = add(`${KP.kaustyka()}<div class="cap-top kp-cap" style="font-size:30px;top:300px">Poznań · woda z kranu</div>
+    <h1 class="big kp-d outline" style="left:64px;top:520px;font-size:440px">Lej,<br>tej.</h1>
+    <h1 class="big kp-d fill" style="left:64px;top:520px;font-size:440px;color:var(--kp-woda)">Lej,<br>tej.</h1>`, "on-atrament cicha");
+  on(a, 0);
+  const fill = $(a, ".fill"); fill.style.width = "1016px"; fill.style.height = "900px";
+  KP.wave(tl, fill, 0, 1.9, { W: 1016, H: 900, amp: 30, k: 1.6, from: 0.1, ease: "power1.inOut" });
+  tl.fromTo($$(a, ".big"), { scale: 1 }, { scale: 1.035, duration: 0.18, ease: "power2.out", yoyo: true, repeat: 1, transformOrigin: "30% 60%" }, 1.9);
+  KP.ripples(tl, a, 1.9, 540, 960, { color: "rgba(245,243,238,.5)", size: 1700, n: 2, dur: 1.0 });
+
+  const b = add(`<div class="abs kp-cap" style="left:76px;top:330px;font-size:30px">Najkrótsza dostawa w${" "}mieście</div>
+    <h1 class="big kp-d" style="left:70px;top:430px;font-size:212px">Z kranu<br>do szklanki.</h1>
+    <div class="abs ln2" style="left:538px;top:870px;width:5px;height:300px;background:var(--kp-woda);transform-origin:50% 0"></div>
+    <div class="abs zn" style="left:400px;top:1150px;width:280px;height:280px;color:var(--kp-woda)">${KP.odcisk()}</div>`, "on-papier");
+  on(b, 2.5); KP.wave(tl, b, 2.5, 0.6); off(a, 3.12);
+  tl.fromTo($(b, ".kp-cap"), { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.5, ease: "expo.out" }, 2.95);
+  KP.rise(tl, $(b, "h1"), 3.0);
+  tl.fromTo($(b, ".ln2"), { scaleY: 0 }, { scaleY: 1, duration: 0.5, ease: "power2.in" }, 3.5);
+  tl.fromTo($(b, ".zn"), { scale: 0 }, { scale: 1, duration: 0.7, ease: "elastic.out(1,.5)" }, 4.0);
+  tl.to($(b, ".ln2"), { scaleY: 0, transformOrigin: "50% 100%", duration: 0.3, ease: "power2.out" }, 4.0);
+  KP.ripples(tl, b, 4.0, 540, 1290, { color: "rgba(46,168,255,.55)", size: 900, n: 3 });
+
+  const c = add(`${KP.kaustyka(true)}<h1 class="big kp-d h1" style="left:70px;top:420px;font-size:196px">Poznaniak<br>umie<br>liczyć.</h1>
+    <h1 class="big kp-d h2" style="left:70px;top:1090px;font-size:150px;color:var(--kp-papier)">Dlatego pije<br>z${" "}kranu.</h1>`, "on-woda");
+  on(c, 5.35); KP.circle(tl, c, 5.35, 0.55, 540, 1290); off(b, 5.92);
+  KP.rise(tl, $(c, ".h1"), 5.7);
+  KP.rise(tl, $(c, ".h2"), 6.75);
+  endCard(8.3, "Woda z dostawą do domu. Od zawsze.", c);
+}
+
+/* ============================================================ ROLKA 3 – „Nie dźwigaj. Odkręć.” */
+function rolka3() {
+  const a = add(`<h1 class="big kp-d nie" style="left:70px;top:350px;font-size:250px">Nie</h1>
+    <h1 class="big kp-d dzw" style="left:70px;top:580px;font-size:226px">dźwigaj.</h1>
+    <div class="cap-bot kp-cap" style="top:262px;text-align:left;left:78px">Zgrzewka 6${" "}×${" "}1,5${" "}l to${" "}9${" "}kg wody</div>
+    <div class="abs kropla" style="left:500px;top:-160px;width:80px;height:120px;color:var(--kp-woda)"><svg viewBox="-40 -80 80 160" style="width:100%;height:100%;overflow:visible"><path fill="currentColor" d="${KP_LOGO.drop}"/></svg></div>`, "on-papier");
+  on(a, 0);
+  const dzw = $(a, ".dzw");
+  dzw.innerHTML = [..."dźwigaj."].map((ch) => `<span style="display:inline-block">${ch}</span>`).join("");
+  const chars = $$(dzw, "span");
+  tl.fromTo($(a, ".cap-bot"), { opacity: 0 }, { opacity: 1, duration: 0.4 }, 0.15);
+  // ciężar: litery osiadają i spadają
+  tl.to(chars, { y: 34, duration: 0.3, ease: "power2.in", stagger: 0.02 }, 0.45);
+  tl.to(chars, { y: 640, rotation: (i) => [-9, 6, -5, 8, -7, 5, -8, 10][i], duration: 0.62, ease: "bounce.out", stagger: { each: 0.045, from: "end" } }, 0.75);
+  tl.to($(a, ".nie"), { y: 22, duration: 0.12, ease: "power2.in", yoyo: true, repeat: 1 }, 1.18);
+  // kropla
+  tl.to($(a, ".kropla"), { y: 1180, duration: 0.5, ease: "power2.in" }, 1.75);
+
+  const b = add(`<h1 class="big kp-d" style="left:0;right:0;top:790px;font-size:258px;text-align:center;color:var(--kp-papier)">Odkręć.</h1>`, "on-woda");
+  on(b, 2.25); KP.circle(tl, b, 2.25, 0.5, 540, 1020); off(a, 2.78);
+  KP.ripples(tl, b, 2.3, 540, 920, { color: "rgba(245,243,238,.75)", size: 1900, n: 3, dur: 1.3, gap: 0.2 });
+  tl.fromTo($(b, "h1"), { rotation: -110, scale: 0.3, opacity: 0, transformOrigin: "50% 55%" }, { rotation: 0, scale: 1, opacity: 1, duration: 0.85, ease: "back.out(1.5)" }, 2.42);
+  tl.to($(b, "h1"), { scale: 1.05, duration: 1.5, ease: "none" }, 3.27);
+
+  const c = add(`${KP.kaustyka()}<h1 class="big kp-d" style="left:70px;top:470px;font-size:168px;line-height:1.04">Bez <em>kaucji.</em><br>Bez <em>zakrętki.</em><br>Bez <em>noszenia.</em></h1>
+    <div class="cap-bot kp-cap" style="top:1330px;text-align:left;left:78px">Kranówka Poznańska</div>`, "on-atrament cicha");
+  $$(c, "em").forEach((e) => (e.style.cssText = "font-style:normal;color:var(--kp-woda)"));
+  on(c, 4.7); KP.wave(tl, c, 4.7, 0.6); off(b, 5.32);
+  KP.rise(tl, $(c, "h1"), 5.05, { stagger: 0.42, dur: 0.6 });
+  tl.fromTo($(c, ".cap-bot"), { opacity: 0 }, { opacity: 0.7, duration: 0.5 }, 6.2);
+  endCard(7.6, "Najkrótsza dostawa w mieście.", c);
+}
+
+[rolka1, rolka2, rolka3][R - 1]();
+KP.drift(tl, stage, tl.duration());
+window.KP_DUR = tl.duration();
+window.seek = (t) => { tl.time(t, false); };
+tl.time(0);
+
+if (!RENDER) {
+  const scale = () => { const s = Math.min(innerWidth / 1080, innerHeight / 1920); stage.style.transform = `translate(${(innerWidth - 1080 * s) / 2}px,0) scale(${s})`; };
+  scale(); addEventListener("resize", scale);
+  document.getElementById("ui").innerHTML = `rolka ${R} · ${tl.duration().toFixed(1)} s` + [1, 2, 3].map((i) => `<a href="?r=${i}">${i}</a>`).join("");
+  document.fonts.ready.then(() => tl.repeat(-1).repeatDelay(0.6).play(0));
+}
+</script>
+</body>
+</html>
