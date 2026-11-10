@@ -45,6 +45,7 @@ Nie bierz: wojen i konfliktów zbrojnych, religii, szczepionek i sporów medyczn
 - Dowód: `dokument` (dosłowny przepis), `wycinek` (dosłowny nagłówek PAP/Reuters), `mapa` (gdzie), liczby z `"count": true`; zwrot akcji jako `myth` z `myth_label: "TWIST"`.
 - Ostatnia plansza: pytanie, na które każdy zna odpowiedź + „Wyślij komuś, kto…”.
 - Opis: co, od kiedy, kogo dotyczy, źródła z datą (komunikat + media), dopiski („To nie jest porada podatkowa/prawna/inwestycyjna”), przypięty komentarz, ankieta do relacji, 3 szkice odpowiedzi (w tym na wątpliwy szczegół, którego nie dałeś na planszę).
+- Tło: klip AI „lupa” (motyw śledczy, `zrodla/ai_higgsfield/2026-11-10/wideo/lupa.mp4`) przez `wideo_tlo.py` + `"etykieta_ai": true` – sposób w `szkola-klamala-dynamic-visual`.
 - Render i wysyłka – `dostawa.py` (5 plików), kontrola `kontrola.py`; wysyłka od razu po kontroli.
 
 ## 6. Zapis

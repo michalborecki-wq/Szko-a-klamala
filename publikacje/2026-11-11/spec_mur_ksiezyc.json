@@ -1,0 +1,23 @@
+{
+ "handle": "@szkola_klamala",
+ "posts": [
+  {
+   "id": "mur_ksiezyc",
+   "format": "reel",
+   "subject": "NAUKA",
+   "series": "MIT TYGODNIA",
+   "ton": "CIEKAWOSTKA",
+   "moc": "mocna",
+   "tlo3d": {"klatki": "VIRAL_REELS_FACTORY/VIDEOS/tla/tablica", "fps": 30, "krycie": 0.5},
+   "etykieta_ai": true,
+   "durations": [3.2, 4.5, 4.8, 5.2, 5.0],
+   "slides": [
+    {"type": "cover", "title": "Wielkiego Muru nie widać z Księżyca.", "accent": "Szkoła kłamała."},
+    {"type": "number", "tag": "SZEROKOŚĆ", "big": "< 6 m", "title": "tyle ma mur", "accent": "przy 7300 km długości", "source": "N. López-Gil, Journal of Optometry"},
+    {"type": "number", "tag": "Z KSIĘŻYCA", "big": "×17 000", "count": true, "title": "tyle razy lepszy wzrok", "accent": "byłby potrzebny", "body": "Księżyc: co najmniej **350 tys. km** od nas.", "source": "N. López-Gil, Journal of Optometry"},
+    {"type": "myth", "myth_label": "TWIST", "myth": "Z orbity widać go gołym okiem.", "fact": "Z 160 km to jak kabel 2 cm z ponad pół kilometra. Chiński astronauta w 2003 r. **go nie zobaczył**.", "source": "Scientific American; J. Optom."},
+    {"type": "outro", "question": "Też słyszałeś to w szkole?", "sub": "Wyślij komuś, kto wciąż w to wierzy.", "sources": "Tło: ilustracja AI.", "partner_slot": false}
+   ]
+  }
+ ]
+}

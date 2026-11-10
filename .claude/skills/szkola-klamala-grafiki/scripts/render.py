@@ -231,6 +231,8 @@ h1 .y{{display:block}}
 .fpel:after{{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,14,24,.55) 0%,rgba(10,14,24,.05) 30%,
   rgba(10,14,24,.25) 55%,rgba(10,14,24,.92) 80%,#0A0E18 100%)}}
 .content.napelnym{{justify-content:flex-end}}
+.ai-lab{{position:absolute;left:{f['padL']}px;bottom:{int(f['safeBottom']*0.36) if f['H']==1350 else 200}px;z-index:6;font-size:{int(f['note']*0.75)}px;
+  font-weight:700;color:#fff;background:rgba(10,14,24,.72);padding:8px 14px;border-radius:8px;letter-spacing:.3px}}
 .mapa{{position:relative;margin:10px 0 18px;flex-shrink:1;min-height:0}}
 .mapa-svg{{display:block;max-height:880px;overflow:visible}}
 .mapa-svg .obs{{fill:rgba(47,107,255,.16);stroke:{TOK['blue']};stroke-width:2.4;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:0}}
@@ -557,7 +559,9 @@ def tpl(s, post, f, i, n):
     return (f"<!doctype html><html><head><meta charset='utf-8'><style>{css(f)}</style></head><body{body_cls}>"
             f"<div class='bg'></div><div class='st a'></div><div class='st a2'></div><div class='st b'></div>"
             f"<div class='st b2'></div><div class='vig'></div><div class='grain'></div>{s.pop('_pelny', '')}"
-            f"{top}<div class='content {cls}'>{b}</div>{bot}</body></html>")
+            f"{top}<div class='content {cls}'>{b}</div>{bot}"
+            + ("<div class='ai-lab'>Ilustracja AI – nie jest zdjęciem wydarzenia</div>" if post.get('etykieta_ai') else "")
+            + "</body></html>")
 
 
 # ───────────────────────── autodopasowanie + QA w przeglądarce ─────────────────────────

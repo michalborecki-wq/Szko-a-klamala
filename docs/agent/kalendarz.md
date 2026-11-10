@@ -31,17 +31,17 @@ Po wysłaniu agent zmienia status na **wysłane**. **Decyzja Michała 8.11: „M
 | wt. 10.11 | 9:00 | Pieniądze bez ściemy: „500 zł miesięcznie przez 30 lat to nie 180 tys. zł” (F3, przesunięte z 12.11) | `publikacje/2026-11-10/spec_finanse_500zl.json#finanse_500zl` | `publikacje/2026-11-10/0900_opis.md` | wysłane (sesja główna, 10.11 rano) – NIE ROBIĆ |
 | wt. 10.11 | 13:00 | NOWA – karuzela 9:16 (TikTok) | NOWA | NOWA | do zrobienia |
 | wt. 10.11 | 18:00 | „Pilny komunikat skarbówki” to nie kara – PIT telefonem od 5.11 (temat od Michała, RMF FM) | `publikacje/2026-11-10/spec_pit_telefon.json#pit_telefon` | `publikacje/2026-11-10/1800_opis.md` | wysłane (sesja główna, 10.11 rano) – NIE ROBIĆ |
-| śr. 11.11 | 9:00 | NOWA (fabryka) | NOWA | NOWA | do zrobienia |
+| śr. 11.11 | 9:00 | Mit tygodnia: „Wielkiego Muru nie widać z Księżyca” (tło: klip AI „tablica” z Higgsfield, etykieta „Ilustracja AI”) | `publikacje/2026-11-11/spec_mur_ksiezyc.json#mur_ksiezyc` | `publikacje/2026-11-11/0900_opis.md` | gotowe (sesja główna, wysyłka zaplanowana 11.11 ok. 7:45) – NIE ROBIĆ |
 | śr. 11.11 | 13:00 | NOWA – karuzela 9:16 (TikTok) | NOWA | NOWA | do zrobienia |
 | śr. 11.11 | 18:00 | Co może policja #6 – +51 km/h (przeniesione z 7.11) | `specs/tydzien_4-8.11_r2-9.json#prawo_policja6_50kmh` | `docs/agent/opisy/tydzien_4-8.11.md` (Co może policja #6) | do wysłania |
 
 | czw. 12.11 | 9:00 | NOWA – finanse: „Spadek o 100 tys. zł w jeden dzień to nie strata” (strata papierowa a zrealizowana, art. 30b PIT – sprawdzić) – F5 przesunięte z 13.11 | NOWA (F5) | NOWA | do zrobienia |
 | czw. 12.11 | 13:00 | NOWA – karuzela 9:16 (kosmos/ciało/rekord) | NOWA | NOWA | do zrobienia |
-| czw. 12.11 | 18:00 | NEWS – rolka z bieżących informacji (skill `szkola-klamala-sledczy`: `sledczy.py` → wybór → dokument pierwotny + 2. źródło); bez broni, przemocy i tragedii | NEWS | NOWA | do zrobienia |
+| czw. 12.11 | 18:00 | NEWS – rolka z bieżących informacji (skill `szkola-klamala-sledczy`); **tło: klip AI „lupa”** – `python3 VIRAL_REELS_FACTORY/narzedzia/wideo_tlo.py zrodla/ai_higgsfield/2026-11-10/wideo/lupa.mp4 --sek 40 --jasnosc -0.15`, w poście `"tlo3d": {"klatki": "VIRAL_REELS_FACTORY/VIDEOS/tla/lupa", "fps": 30, "krycie": 0.5}, "etykieta_ai": true`; bez broni, przemocy i tragedii | NEWS | NOWA | do zrobienia |
 | pt. 13.11 | 9:00 | NOWA – motoryzacja albo prawo w codzienności | NOWA | NOWA | do zrobienia |
 | pt. 13.11 | 13:00 | NOWA – karuzela 9:16 | NOWA | NOWA | do zrobienia |
 | pt. 13.11 | 18:00 | Co może policja #8 – „Masz prawo znać nazwisko policjanta” (§ 2 ust. 1 rozp. RM, Dz.U. 2023 poz. 2535) | NOWA (P1) | NOWA | do zrobienia |
-| sob. 14.11 | 9:00 | NOWA – ciało/medycyna (oficjalne źródła, bez porad) | NOWA | NOWA | do zrobienia |
+| sob. 14.11 | 9:00 | Mit tygodnia: „Największa pustynia świata jest z lodu” – rolka IG (tło: klip AI „antarktyda”) | `publikacje/2026-11-14/spec_antarktyda_pustynia.json#antarktyda_pustynia` | `publikacje/2026-11-14/0900_opis.md` | gotowe (sesja główna, wysyłka zaplanowana 14.11 ok. 7:45) – NIE ROBIĆ |
 | sob. 14.11 | 13:00 | NOWA – karuzela 9:16 | NOWA | NOWA | do zrobienia |
 | sob. 14.11 | 18:00 | NEWS – rolka z bieżących informacji (skill `szkola-klamala-sledczy`: `sledczy.py` → wybór → dokument pierwotny + 2. źródło); bez broni, przemocy i tragedii | NEWS | NOWA | do zrobienia |
 | nd 15.11 | 9:00 | NOWA – kosmos/rekord (szablon B) | NOWA | NOWA | do zrobienia |

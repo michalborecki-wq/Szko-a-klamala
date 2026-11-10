@@ -1,0 +1,65 @@
+{
+ "handle": "@szkola_klamala",
+ "posts": [
+  {
+   "id": "antarktyda_pustynia",
+   "format": "reel",
+   "subject": "NAUKA",
+   "series": "MIT TYGODNIA",
+   "ton": "CIEKAWOSTKA",
+   "moc": "mocna",
+   "tlo3d": {
+    "klatki": "VIRAL_REELS_FACTORY/VIDEOS/tla/antarktyda",
+    "fps": 30,
+    "krycie": 0.55
+   },
+   "etykieta_ai": true,
+   "durations": [
+    3.2,
+    4.8,
+    4.8,
+    5.0,
+    5.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "title": "Największa pustynia świata",
+     "accent": "jest z lodu."
+    },
+    {
+     "type": "number",
+     "tag": "REKORD",
+     "big": "14,2 mln km²",
+     "title": "Antarktyda –",
+     "accent": "największa pustynia",
+     "body": "Liczą się opady: mniej niż **250 mm** rocznie.",
+     "source": "Live Science, Wikipedia"
+    },
+    {
+     "type": "number",
+     "tag": "PORÓWNANIE",
+     "big": "9,2 mln km²",
+     "title": "Sahara –",
+     "accent": "największa gorąca",
+     "body": "Antarktyda jest od niej ok. **1,5 raza** większa.",
+     "source": "Live Science, Wikipedia"
+    },
+    {
+     "type": "myth",
+     "myth_label": "TWIST",
+     "myth": "Pustynia = piasek i upał.",
+     "fact": "Na Antarktydzie spada średnio tylko ok. **50 mm** opadów rocznie.",
+     "source": "Guinness World Records"
+    },
+    {
+     "type": "outro",
+     "question": "Jaką pustynię wskazałbyś na lekcji geografii?",
+     "sub": "Wyślij komuś, kto obstawia Saharę.",
+     "sources": "Tło: ilustracja AI.",
+     "partner_slot": false
+    }
+   ]
+  }
+ ]
+}
