@@ -1,0 +1,21 @@
+{
+ "handle": "@szkola_klamala",
+ "posts": [
+  {
+   "id": "finanse_500zl",
+   "format": "reel",
+   "subject": "FINANSE",
+   "series": "PIENIĄDZE BEZ ŚCIEMY",
+   "ton": "FINANSE",
+   "moc": "mocna",
+   "durations": [3.2, 4.2, 5.0, 5.0, 5.0],
+   "slides": [
+    {"type": "cover", "obraz": "monety", "pieczatka": "×2,3", "title": "500 zł miesięcznie przez 30 lat", "accent": "to nie 180 tys. zł."},
+    {"type": "number", "tag": "WPŁATY", "big": "180 000 zł", "count": true, "title": "Tyle wpłacisz", "accent": "przez 30 lat", "body": "500 zł × 360 miesięcy."},
+    {"type": "number", "tag": "PRZYKŁAD", "big": "416 129 zł", "count": true, "title": "Tyle może być", "accent": "przy 5% rocznie", "body": "**57%** to odsetki. Przykład, nie prognoza.", "source": "obliczenia własne – procent składany"},
+    {"type": "myth", "myth_label": "TWIST", "myth": "Zacznę za 10 lat – nadrobię.", "fact": "20 lat zamiast 30 to **205 517 zł** – ponad 2 razy mniej.", "source": "obliczenia własne, 5% rocznie"},
+    {"type": "outro", "question": "Ile miałeś lat, gdy zacząłeś odkładać?", "sub": "Wyślij komuś, kto mówi „zacznę później”.", "sources": "To nie jest porada inwestycyjna.", "partner_slot": false}
+   ]
+  }
+ ]
+}
