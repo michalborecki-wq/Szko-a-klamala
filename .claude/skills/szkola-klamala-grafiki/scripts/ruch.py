@@ -397,7 +397,7 @@ PREP = r"""
         const txt = el.textContent, val = parseFloat((txt.match(/\d+(?:[.,]\d+)?/) || ['0'])[0].replace(',', '.'));
         if (!o.first) anim(el, 'kPop', .5, t0);
         let land = t0 + .35;
-        if (o.count && fx.liczba === 'slot' && /\d/.test(txt)) {
+        if (o.count && fx.liczba === 'slot' && /\d/.test(txt) && !/[a-ząćęłńóśźżA-Z²³]/.test(txt)) {   // bęben tylko dla samych liczb – z jednostką (np. „mln km²”) zwykły licznik
           // licznik jak w jednorękim bandycie: każda cyfra kręci się i ląduje, od lewej do prawej
           el.classList.add('slotbig');
           const tw = document.createTreeWalker(el, NodeFilter.SHOW_TEXT), nodes = [];
