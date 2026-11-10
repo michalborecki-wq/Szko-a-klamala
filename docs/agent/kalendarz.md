@@ -30,7 +30,7 @@ Po wysłaniu agent zmienia status na **wysłane**. **Decyzja Michała 8.11: „M
 | pon. 9.11 | 18:00 | Co może policja #5 – „Mandat? Możesz powiedzieć »nie«” (art. 97 § 2–3, art. 99 KPSW) | `publikacje/2026-11-09/spec_policja5_mandat.json#policja5_mandat` | `publikacje/2026-11-09/1800_opis.md` | wysłane (9.11 ok. 18:40, sesja główna – sesja zadania nie pobrała repozytorium) |
 | wt. 10.11 | 9:00 | Pieniądze bez ściemy: „500 zł miesięcznie przez 30 lat to nie 180 tys. zł” (F3, przesunięte z 12.11) | `publikacje/2026-11-10/spec_finanse_500zl.json#finanse_500zl` | `publikacje/2026-11-10/0900_opis.md` | wysłane (sesja główna, 10.11 rano) – NIE ROBIĆ |
 | wt. 10.11 | 13:00 | NOWA – karuzela 9:16 (TikTok) | NOWA | NOWA | do zrobienia |
-| wt. 10.11 | 18:00 | NOWA – temat z fabryki z mocną, prawdziwą kontrowersją (bez broni, bez przemocy). **Nie: „Nawigacja w telefonie – 500 zł” (opublikowane 4.11), nie: „Pod szlabanem” (8.11)** | NOWA | NOWA | do zrobienia |
+| wt. 10.11 | 18:00 | „Pilny komunikat skarbówki” to nie kara – PIT telefonem od 5.11 (temat od Michała, RMF FM) | `publikacje/2026-11-10/spec_pit_telefon.json#pit_telefon` | `publikacje/2026-11-10/1800_opis.md` | wysłane (sesja główna, 10.11 rano) – NIE ROBIĆ |
 | śr. 11.11 | 9:00 | NOWA (fabryka) | NOWA | NOWA | do zrobienia |
 | śr. 11.11 | 13:00 | NOWA – karuzela 9:16 (TikTok) | NOWA | NOWA | do zrobienia |
 | śr. 11.11 | 18:00 | Co może policja #6 – +51 km/h (przeniesione z 7.11) | `specs/tydzien_4-8.11_r2-9.json#prawo_policja6_50kmh` | `docs/agent/opisy/tydzien_4-8.11.md` (Co może policja #6) | do wysłania |

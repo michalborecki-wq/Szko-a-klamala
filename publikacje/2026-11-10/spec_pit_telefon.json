@@ -1,0 +1,21 @@
+{
+ "handle": "@szkola_klamala",
+ "posts": [
+  {
+   "id": "pit_telefon",
+   "format": "reel",
+   "subject": "FINANSE",
+   "series": "PIENIĄDZE BEZ ŚCIEMY",
+   "ton": "KONTROWERSJA",
+   "moc": "mocna",
+   "durations": [3.2, 4.8, 4.8, 5.0, 5.0],
+   "slides": [
+    {"type": "cover", "obraz": "dowod", "pieczatka": "PILNE?", "title": "„Pilny komunikat skarbówki”", "accent": "to nie kara. To telefon."},
+    {"type": "number", "tag": "OD 5 LISTOPADA", "big": "PIT", "title": "zapłacisz telefonem", "accent": "w e-Urzędzie Skarbowym", "body": "Doszły portfele **Google Pay i Apple Pay**.", "source": "komunikat MF, 9.11.2026"},
+    {"type": "number", "tag": "OPŁATA", "big": "0 zł", "title": "opłaty transakcyjnej", "accent": "kartą i telefonem", "body": "Wcześniej: przelew, BLIK albo karta.", "source": "komunikat MF wg RMF FM"},
+    {"type": "myth", "myth_label": "TWIST", "myth": "„Pilny komunikat” = kłopot z podatkiem.", "fact": "To **nowa metoda płatności**. Nagłówek straszy, treść – nie.", "source": "MF; RMF FM, XYZ – 9.11.2026"},
+    {"type": "outro", "question": "Klikasz w „pilne komunikaty” ze skarbówki?", "sub": "Wyślij komuś, kto boi się listów z urzędu.", "sources": "To nie jest porada podatkowa.", "partner_slot": false}
+   ]
+  }
+ ]
+}
