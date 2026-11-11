@@ -31,7 +31,7 @@ Po wysłaniu agent zmienia status na **wysłane**. **Decyzja Michała 8.11: „M
 | wt. 10.11 | 9:00 | Pieniądze bez ściemy: „500 zł miesięcznie przez 30 lat to nie 180 tys. zł” (F3, przesunięte z 12.11) | `publikacje/2026-11-10/spec_finanse_500zl.json#finanse_500zl` | `publikacje/2026-11-10/0900_opis.md` | wysłane (sesja główna, 10.11 rano) – NIE ROBIĆ |
 | wt. 10.11 | 13:00 | NOWA – karuzela 9:16 (TikTok) | NOWA | NOWA | do zrobienia |
 | wt. 10.11 | 18:00 | „Pilny komunikat skarbówki” to nie kara – PIT telefonem od 5.11 (temat od Michała, RMF FM) | `publikacje/2026-11-10/spec_pit_telefon.json#pit_telefon` | `publikacje/2026-11-10/1800_opis.md` | wysłane (sesja główna, 10.11 rano) – NIE ROBIĆ |
-| śr. 11.11 | 9:00 | Mit tygodnia: „Wielkiego Muru nie widać z Księżyca” (tło: klip AI „tablica” z Higgsfield, etykieta „Ilustracja AI”) | `publikacje/2026-11-11/spec_mur_ksiezyc.json#mur_ksiezyc` | `publikacje/2026-11-11/0900_opis.md` | gotowe (sesja główna, wysyłka zaplanowana 11.11 ok. 7:45) – NIE ROBIĆ |
+| śr. 11.11 | 9:00 | Mit tygodnia: „Wielkiego Muru nie widać z Księżyca” (tło: klip AI „tablica” z Higgsfield, etykieta „Ilustracja AI”) | `publikacje/2026-11-11/spec_mur_ksiezyc.json#mur_ksiezyc` | `publikacje/2026-11-11/0900_opis.md` | wysłane (11.11 7:41, sesja główna – zaplanowana wysyłka) |
 | śr. 11.11 | 13:00 | NOWA – karuzela 9:16 (TikTok) | NOWA | NOWA | do zrobienia |
 | śr. 11.11 | 18:00 | Co może policja #6 – +51 km/h (przeniesione z 7.11) | `specs/tydzien_4-8.11_r2-9.json#prawo_policja6_50kmh` | `docs/agent/opisy/tydzien_4-8.11.md` (Co może policja #6) | do wysłania |
 
