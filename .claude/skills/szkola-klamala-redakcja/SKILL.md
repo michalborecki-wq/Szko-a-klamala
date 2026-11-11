@@ -91,7 +91,7 @@ Nie rozpoczynaj produkcji, dopóki nie ustalisz, na jakiej gałęzi pracujesz i 
 
 ## 4a. LEKCJE I TERMIN (decyzja Michała 11.11)
 
-Na początku pracy przeczytaj `docs/agent/lekcje.md` i stosuj reguły. Rolka trafia do Michała ok. 1 h przed publikacją (8:00 / 12:00 / 17:00); pliki wysyłaj pojedynczo. Po dostawie dopisz do `lekcje.md` 1–3 wnioski.
+Na początku pracy przeczytaj `docs/agent/lekcje.md` i stosuj reguły – zwłaszcza **STANDARD KAŻDEJ ROLKI** (kontrowersja, dynamiczna animacja na pełnej mocy, pełna paleta kolorów marki, ruch w 1. sekundzie, muzyka na cięciach, min. 1 nowość, kontrola). Rolka trafia do Michała ok. 1 h przed publikacją (8:00 / 12:00 / 17:00); pliki wysyłaj pojedynczo. Po dostawie dopisz do `lekcje.md` 1–3 wnioski.
 
 ## 5. KALENDARZ I WYBÓR TEMATU
 

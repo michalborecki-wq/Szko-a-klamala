@@ -2,6 +2,16 @@
 
 Po każdej dostawie dopisz 1–3 linijki: co poszło źle/dobrze i jaka reguła z tego wynika. Reguły stosuj od następnej rolki.
 
+## STANDARD KAŻDEJ ROLKI (decyzja Michała 11.11 – „dynamiczna animacja, kolory, kontrowersyjna treść”)
+Każda rolka (9:00, 18:00, także karuzele w miarę możliwości) MUSI mieć wszystkie punkty:
+1. **Kontrowersja w haczyku** – stwierdzenie, które budzi sprzeciw albo „to niesprawiedliwe” (porównanie niesprawiedliwości, ukryta stawka, nagłówek straszy – treść nie); zawsze prawdziwe, 2 źródła, w granicach zakazów.
+2. **Dynamiczna animacja na pełnej mocy** – `"moc": "mocna"` (kadr nigdy nie stoi, puls na bicie), `"ton"` z presetem przejść, `fx`, liczby z `"count": true`, plansza `dokument` z markerem, `myth` TWIST ze stop-klatką na zwrocie, choreografia wejść (co prowadzi, co dołącza na uderzeniu – skill `choreograph`).
+3. **Kolory na pełnej palecie marki** – żółty #FFC727 na liczbie/kluczowym słowie, czerwony #E53935 na stawce/karze/TWIST, niebieskie smugi #2F6BFF w ruchu; kontrast tła i tekstu ≥ 4,5:1; nigdy szare, płaskie plansze.
+4. **Ruch w 1. sekundzie** – tło wideo (klip AI z etykietą, `tlo3d`) albo obraz-bohater na okładce + pieczątka.
+5. **Muzyka i efekty** zsynchronizowane z cięciami (`--muzyka`, −14 LUFS), uderzenie na zwrocie i na logo.
+6. **Min. 1 nowość** względem poprzedniej rolki (inny preset, mapa, foto, wycinek, nowy efekt) – zapisz w dzienniku, jaka.
+7. **Kontrola przed wysyłką** – `kontrola.py` + obejrzenie arkusza klatek; plansza czytelna (0,3 s/słowo), maks. ok. 12–15 słów.
+
 ## Zasada dostawy (11.11)
 - **Rolka u Michała ok. 1 h przed publikacją:** 9:00 → wysłane ok. 8:00, 18:00 → ok. 17:00, 13:00 → ok. 12:00. Start pracy min. 1,5 h przed wysyłką (render 4K 15–25 min, poprawki).
 - **Wszystkie narzędzia, które realnie podnoszą jakość:** pełny Dynamic Visual Engine (ton, moc mocna, `dokument`, `myth` TWIST, liczby `count`), tło wideo z niewykorzystanego zasobu AI (`zrodla/ai_higgsfield/*/INFO.md`) z etykietą, okładka z obrazem i pieczątką, zasady ruchu (choreograph – Emil Kowalski), kontrola `kontrola.py` + obejrzenie arkusza klatek. Płatne kredyty (Higgsfield, Adobe Firefly) tylko za zgodą Michała.
