@@ -12,6 +12,17 @@ Każda rolka (9:00, 18:00, także karuzele w miarę możliwości) MUSI mieć wsz
 6. **Min. 1 nowość** względem poprzedniej rolki (inny preset, mapa, foto, wycinek, nowy efekt) – zapisz w dzienniku, jaka.
 7. **Kontrola przed wysyłką** – `kontrola.py` + obejrzenie arkusza klatek; plansza czytelna (0,3 s/słowo), maks. ok. 12–15 słów.
 
+## KONTROWERSJA PRZEDE WSZYSTKIM (decyzja Michała 11.11 wieczorem: „Nastaw się na kontrowersje w treści. To jest najbardziej chwytliwe”)
+Temat wybieramy po sile sporu, nie po „ciekawości”. Rolka bez sporu nie wchodzi do slotów 9:00 i 18:00 (może być karuzelą 13:00).
+**Test kontrowersji – temat musi spełnić min. 2 z 4:**
+1. *Niesprawiedliwość:* dwie podobne sytuacje, różne traktowanie (krajówka vs autostrada, wiatrówka vs broń czarnoprochowa).
+2. *Pieniądze widza:* państwo/urząd/firma zabiera, dolicza albo „daruje” z haczykiem – konkretna kwota.
+3. *Władza nad zwykłym człowiekiem:* co wolno policji, urzędowi, ochronie, pracodawcy – i gdzie jest granica.
+4. *Dwie strony:* połowa widzów powie „słusznie”, połowa „skandal” – pytanie końcowe dzieli salę („Słusznie czy za surowo?”).
+**Jak pisać:** haczyk nazywa spór wprost („Za to samo: tu kara, tam nic.”); zwrot akcji pokazuje lukę albo podwójny standard; ostatnia plansza pyta o OCENĘ zasady (nie o fakt) – widz ma mieć zdanie od razu.
+**Granice bez zmian (CLAUDE.md):** tylko prawda z dokumentu + 2 źródła; fakt zamiast oceny („przepis mówi…”, nie „to skandal”); bez ataku na osoby, bez partii, bez wojen, religii, szczepionek, płci, migracji, spisków, tragedii i drastycznych opisów; stanowisko drugiej strony w opisie. Kontrowersja = prawdziwy podwójny standard, nie przesada w nagłówku.
+**Źródła tematów:** raporty NIK i RPO, wyroki, taryfikatory i ich luki, nowe ustawy (ukryta stawka), różnice „dla jednych tak, dla drugich nie” (ulgi, przywileje grup zawodowych, kary).
+
 ## HACZYK – wzór z danych (analiza 11.11, `docs/analiza-wynikow-2026-11-11.md`)
 - ≤ 7 słów; zaczyna się od podmiotu znanego każdemu (ZUS, policja, mandat, szkoła, bank); jedna liczba albo jedno zaprzeczenie; kończy się otwartą pętlą („Jest haczyk.”, „Połowa – bezprawnie.”, „Szkoła kłamała.”).
 - NIE: znak „+”, skróty, żargon („krajówka”), pytanie w 1. linii, zdanie do policzenia. Przykład zły: „+51 km/h na krajówce i 3 miesiące pieszo” (97% pominięć). Lepiej: „Policja zabierze prawo jazdy za miastem. Jest wyjątek.”
