@@ -89,6 +89,10 @@ Nie twórz drugiego repozytorium ani alternatywnej gałęzi bez wyraźnej potrze
 
 Nie rozpoczynaj produkcji, dopóki nie ustalisz, na jakiej gałęzi pracujesz i jaki jest stan ostatniej dostawy.
 
+## 4a. LEKCJE I TERMIN (decyzja Michała 11.11)
+
+Na początku pracy przeczytaj `docs/agent/lekcje.md` i stosuj reguły. Rolka trafia do Michała ok. 1 h przed publikacją (8:00 / 12:00 / 17:00); pliki wysyłaj pojedynczo. Po dostawie dopisz do `lekcje.md` 1–3 wnioski.
+
 ## 5. KALENDARZ I WYBÓR TEMATU
 
 Odczytaj dzisiejszą datę z kalendarza i znajdź odpowiedni wpis dla aktualnej dostawy.
