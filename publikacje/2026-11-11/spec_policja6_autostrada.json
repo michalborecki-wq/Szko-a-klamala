@@ -1,0 +1,60 @@
+{
+ "posts": [
+  {
+   "id": "policja6_autostrada",
+   "format": "reel",
+   "subject": "PRAWO",
+   "series": "CO MOŻE POLICJA #6",
+   "ton": "KONTROWERSJA",
+   "moc": "mocna",
+   "durations": [
+    3.4,
+    6.5,
+    5.0,
+    5.2,
+    5.5
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "licznik",
+     "pieczatka": "NOWE PRZEPISY",
+     "title": "+51 km/h na krajówce",
+     "accent": "i 3 miesiące pieszo."
+    },
+    {
+     "type": "dokument",
+     "tag": "PRZEPIS OD 3.03.2026",
+     "naglowek": "Ustawa o kierujących pojazdami · art. 102 ust. 1 pkt 4",
+     "tekst": "przekroczył prędkość o więcej niż 50 km/h na obszarze zabudowanym **lub na drodze jednojezdniowej dwukierunkowej** poza obszarem zabudowanym",
+     "linie": 1,
+     "wskaz": "nowe od marca"
+    },
+    {
+     "type": "number",
+     "tag": "MANDAT",
+     "big": "1500 zł",
+     "count": false,
+     "title": "i 13 punktów",
+     "accent": "za 51–60 km/h",
+     "body": "Recydywa: **3000 zł**.",
+     "source": "taryfikator poz. 79; MSWiA E 03"
+    },
+    {
+     "type": "myth",
+     "myth_label": "TWIST",
+     "myth": "Na autostradzie +51 też zabiorą prawko.",
+     "fact": "Autostrada ma **dwie jezdnie** – przepis jej nie obejmuje. Prawko zostaje.",
+     "source": "art. 102 ust. 1 pkt 4"
+    },
+    {
+     "type": "outro",
+     "question": "Autostrada też powinna być w przepisie?",
+     "sub": "Wyślij komuś, kto ma ciężką nogę.",
+     "sources": "Od decyzji starosty – odwołanie do SKO. To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ]
+  }
+ ]
+}
