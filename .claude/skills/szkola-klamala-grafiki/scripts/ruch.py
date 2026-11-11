@@ -182,6 +182,8 @@ def css(TOK):
 @keyframes kChip{{from{{opacity:0;transform:skew(-8deg) translateX(-70px)}}to{{opacity:1;transform:skew(-8deg)}}}}
 @keyframes kBrush{{from{{clip-path:inset(0 100% 0 0)}}to{{clip-path:inset(0 0 0 0)}}}}
 @keyframes kStrike{{from{{background-size:0% 4px}}to{{background-size:100% 4px}}}}
+body.r .myth span{{animation-name:kStrikeR !important}}
+@keyframes kStrikeR{{from{{background-size:0% 12px}}to{{background-size:100% 12px}}}}
 @keyframes kPop{{0%{{opacity:0;transform:scale(.55)}}60%{{opacity:1;transform:scale(1.07)}}100%{{opacity:1;transform:none}}}}
 @keyframes kPunch{{from{{transform:scale(1.12)}}to{{transform:none}}}}
 @keyframes kSheen{{from{{background-position:150% 0}}to{{background-position:-50% 0}}}}

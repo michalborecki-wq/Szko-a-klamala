@@ -12,6 +12,12 @@ Każda rolka (9:00, 18:00, także karuzele w miarę możliwości) MUSI mieć wsz
 6. **Min. 1 nowość** względem poprzedniej rolki (inny preset, mapa, foto, wycinek, nowy efekt) – zapisz w dzienniku, jaka.
 7. **Kontrola przed wysyłką** – `kontrola.py` + obejrzenie arkusza klatek; plansza czytelna (0,3 s/słowo), maks. ok. 12–15 słów.
 
+## HACZYK – wzór z danych (analiza 11.11, `docs/analiza-wynikow-2026-11-11.md`)
+- ≤ 7 słów; zaczyna się od podmiotu znanego każdemu (ZUS, policja, mandat, szkoła, bank); jedna liczba albo jedno zaprzeczenie; kończy się otwartą pętlą („Jest haczyk.”, „Połowa – bezprawnie.”, „Szkoła kłamała.”).
+- NIE: znak „+”, skróty, żargon („krajówka”), pytanie w 1. linii, zdanie do policzenia. Przykład zły: „+51 km/h na krajówce i 3 miesiące pieszo” (97% pominięć). Lepiej: „Policja zabierze prawo jazdy za miastem. Jest wyjątek.”
+- Cytat w `dokument` ≤ 18 słów, plansza ≤ 12 słów, rolka 20–26 s, zwrot (`myth`) najpóźniej na 3. planszy.
+- Silnik od 11.11 sam: okładka żółta/ciemna na zmianę (gdy brak `tlo3d` i `uklad`), tekst rośnie do wypełnienia kadru, TWIST czerwony, outro z żółtym przyciskiem „Wyślij komuś” (pole `sub` zaczynaj od „Wyślij komuś, kto…”).
+
 ## Zasada dostawy (11.11)
 - **Rolka u Michała ok. 1 h przed publikacją:** 9:00 → wysłane ok. 8:00, 18:00 → ok. 17:00, 13:00 → ok. 12:00. Start pracy min. 1,5 h przed wysyłką (render 4K 15–25 min, poprawki).
 - **Wszystkie narzędzia, które realnie podnoszą jakość:** pełny Dynamic Visual Engine (ton, moc mocna, `dokument`, `myth` TWIST, liczby `count`), tło wideo z niewykorzystanego zasobu AI (`zrodla/ai_higgsfield/*/INFO.md`) z etykietą, okładka z obrazem i pieczątką, zasady ruchu (choreograph – Emil Kowalski), kontrola `kontrola.py` + obejrzenie arkusza klatek. Płatne kredyty (Higgsfield, Adobe Firefly) tylko za zgodą Michała.

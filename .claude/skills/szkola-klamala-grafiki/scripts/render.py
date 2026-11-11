@@ -180,6 +180,28 @@ h1 .y{{display:block}}
 .myth span{{background-image:linear-gradient({TOK['red']},{TOK['red']});background-size:100% 4px;
   background-position:0 58%;background-repeat:no-repeat;-webkit-box-decoration-break:clone;box-decoration-break:clone}}
 
+/* ── ROLKI 2.0 (11.11): tekst wypełnia kadr, kolor niesie znaczenie ── */
+body.r .body,body.r .sub{{font-size:{int(f['body']*1.16)}px}}
+body.r h2{{font-size:{int(f['h2']*1.14)}px}}
+body.r .tag{{font-size:{int(f['note']*1.4)}px;padding:10px 26px 9px;margin-bottom:26px}}
+body.r .src{{font-size:{int(f['note']*0.92)}px}}
+body.r .myth{{font-family:'Inter Display','Inter';font-weight:900;font-style:italic;text-transform:uppercase;
+  font-size:{int(f['h2']*0.84)}px;line-height:1.08;color:rgba(255,255,255,.62);margin-bottom:58px;text-wrap:balance}}
+body.r .myth span{{background-size:100% 12px;background-position:0 54%}}
+body.r .myth ~ .body{{font-size:{int(f['body']*1.4)}px;line-height:1.22;font-weight:800;color:#fff}}
+body.r .myth ~ .body b{{background:{TOK['yellow']};color:{TOK['bg0']};padding:0 12px;border-radius:8px;
+  -webkit-box-decoration-break:clone;box-decoration-break:clone}}
+body.r.t-myth .bg{{background:radial-gradient(ellipse 95% 60% at 50% 42%,#5A1220 0%,#1B0E1C 48%,{TOK['bg0']} 78%)}}
+body.r.t-myth .st{{background:linear-gradient(90deg,rgba(229,57,53,0),{TOK['red']} 30%,{TOK['red']} 70%,rgba(229,57,53,0))}}
+body.r.t-number .bg{{background:radial-gradient(ellipse 90% 55% at 50% 40%,#24357A 0%,{TOK['bg1']} 45%,{TOK['bg0']} 78%)}}
+body.r.t-outro .bg{{background:radial-gradient(ellipse 90% 60% at 50% 42%,#1F3FA8 0%,{TOK['bg1']} 50%,{TOK['bg0']} 80%)}}
+body.r.t-outro h2{{font-size:{int(f['h1']*0.86)}px;line-height:1.0;text-shadow:0 7px 0 {TOK['blue']}}}
+body.r.t-outro .sub{{align-self:flex-start;background:{TOK['yellow']};color:{TOK['bg0']};font-weight:800;
+  font-size:{int(f['body']*1.02)}px;line-height:1.2;padding:22px 34px 22px 30px;border-radius:18px;
+  box-shadow:0 10px 0 {TOK['blue']},0 0 50px rgba(255,199,39,.35)}}
+body.r.t-outro .sub:before{{content:'➤';display:inline-block;margin-right:16px;color:#C62828}}
+body.r.t-outro .sub:empty{{display:none}}
+
 .tl-y{{display:block;font-family:'Inter Display','Inter';font-weight:900;font-style:italic;font-size:{int(f['big']*0.42)}px;
   line-height:1;color:{TOK['yellow']};text-shadow:0 5px 0 {TOK['blue']};margin-bottom:6px}}
 .tl-t{{display:block;font-size:{int(f['body']*0.92)}px;line-height:1.3;color:{TOK['text']}}}
@@ -270,7 +292,11 @@ h1 .y{{display:block}}
 # ───────────────────────── szablony slajdów ─────────────────────────
 def head(s):
     """Nagłówek: 'title' + opcjonalny 'accent' (żółty, w nowej linii w h1, w tej samej w h2)."""
-    return rich(s.get("title", "")), rich(s.get("accent", ""))
+    import re as _re
+    # zakres liczb („51–60”) i liczba z jednostką („60 km/h”, „1500 zł”) nie łamią się między wierszami
+    nb = lambda t: _re.sub(r"(\d) (?=(zł|km/h|km|m|s|h|kg|%|mln|mld|tys\.|lat|dni|punkt|mies\.)\b)", "\\1\u00a0",
+                           _re.sub(r"(\d)–(\d)", "\\1\u2060–\u2060\\2", t))
+    return rich(nb(s.get("title", ""))), rich(nb(s.get("accent", "")))
 
 
 # ───────────────────────── wycinki agencji i zdjęcia na wolnych licencjach (decyzja Michała 9.11) ─────────────────────────
@@ -555,7 +581,12 @@ def tpl(s, post, f, i, n):
     swipe = "" if (i == n - 1 or post["_fmt"] == "reel") else f"<span class='sw'>przesuń {ARROW}</span>"
     bot = f"<div class='bot'><span class='hd'>{html.escape(post['_handle'])}</span>{swipe}</div>"
 
-    body_cls = " class='zolty'" if (t == "cover" and s.get("uklad") == "zolty") else ""
+    uk_c = s.get("uklad")
+    if t == "cover" and uk_c is None and post.get("_fmt") == "reel" and not post.get("tlo3d"):
+        import hashlib   # okładki na zmianę: żółta / ciemna – w feedzie nie wyglądają jak ta sama rolka (analiza 11.11)
+        uk_c = "zolty" if int(hashlib.md5(str(post.get("id", "")).encode()).hexdigest(), 16) % 2 == 0 else "ciemny"
+    kl = (["r"] if post.get("_fmt") == "reel" else []) + [f"t-{t}"] + (["zolty"] if (t == "cover" and uk_c == "zolty") else [])
+    body_cls = f" class='{' '.join(kl)}'"
     return (f"<!doctype html><html><head><meta charset='utf-8'><style>{css(f)}</style></head><body{body_cls}>"
             f"<div class='bg'></div><div class='st a'></div><div class='st a2'></div><div class='st b'></div>"
             f"<div class='st b2'></div><div class='vig'></div><div class='grain'></div>{s.pop('_pelny', '')}"
@@ -583,6 +614,26 @@ FIT_AND_QA = """
       el.dataset.base = base;
       el.style.fontSize = (base * scale) + 'px';
     });
+  }
+  // 1b) rolki: gdy plansza jest w połowie pusta – powiększ tekst (maks. ×1,45), aż wypełni ok. 84% pola
+  if (scale === 1 && document.body.classList.contains('r') && !c.classList.contains('toptight')
+      && !c.querySelector('.mapa,.foto-in,.fpel')) {
+    const sel = 'h1,h2,.body,.sub,.myth,.doc-t,.doc-h,.wyc-t,.q-txt';   // .big ma własne dopasowanie do szerokości
+    const els = [...c.querySelectorAll(sel)];
+    const used = () => { const k = [...c.children].filter(e => e.offsetHeight); if (!k.length) return 1;
+      return (k[k.length-1].getBoundingClientRect().bottom - k[0].getBoundingClientRect().top) / c.clientHeight; };
+    const wide = () => els.some(e => e.scrollWidth > c.clientWidth + 1);
+    const set = g => els.forEach(el => { const b = parseFloat(el.dataset.gb || getComputedStyle(el).fontSize);
+      el.dataset.gb = b; el.style.fontSize = (b * g) + 'px'; });
+    let g = 1, n = 0;
+    const hero = c.classList.contains('withhero');
+    const gmax = c.querySelector('.big') ? 1.16 : 1.45;   // przy wielkiej liczbie nagłówek nie może jej zdominować
+    while (g < gmax && n++ < 20) {
+      if (!hero && used() > 0.84) break;
+      set(g * 1.03);
+      if (over() || wide() || (!hero && used() > 0.92)) { set(g); break; }
+      g *= 1.03;
+    }
   }
   const issues = [];
   if (over()) issues.push('TREŚĆ NIE MIEŚCI SIĘ w strefie bezpiecznej – skróć tekst');
