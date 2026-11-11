@@ -35,7 +35,7 @@ Po wysłaniu agent zmienia status na **wysłane**. **Decyzja Michała 8.11: „M
 | śr. 11.11 | 13:00 | NOWA – karuzela 9:16 (TikTok) | NOWA | NOWA | do zrobienia |
 | śr. 11.11 | 18:00 | Co może policja #6 – „+51 km/h na krajówce i 3 miesiące pieszo” – zwrot: autostrada (dwie jezdnie) poza przepisem; stary scenariusz „poza miastem prawko zostaje” NIEAKTUALNY od 3.03.2026 (Dz.U. 2025 poz. 1676, art. 4 pkt 25) | `publikacje/2026-11-11/spec_policja6_autostrada.json#policja6_autostrada` | `publikacje/2026-11-11/1800_opis.md` | wysłane (11.11 18:30, spóźnione – restart sesji) |
 
-| czw. 12.11 | 9:00 | NOWA – finanse: „Spadek o 100 tys. zł w jeden dzień to nie strata” (strata papierowa a zrealizowana, art. 30b PIT – sprawdzić) – F5 przesunięte z 13.11 | NOWA (F5) | NOWA | do zrobienia |
+| czw. 12.11 | 9:00 | NOWA – finanse: „Spadek o 100 tys. zł w jeden dzień to nie strata” (strata papierowa a zrealizowana, art. 30b PIT – sprawdzić) – F5 przesunięte z 13.11 | NOWA (F5) | NOWA | ROBI SESJA GŁÓWNA (start 6:30, wysyłka ok. 8:00) – zadanie cykliczne NIE ROBI tej rolki |
 | czw. 12.11 | 13:00 | NOWA – karuzela 9:16 (kosmos/ciało/rekord) | NOWA | NOWA | do zrobienia |
 | czw. 12.11 | 18:00 | NEWS – rolka z bieżących informacji (skill `szkola-klamala-sledczy`); **tło: klip AI „lupa”** – `python3 VIRAL_REELS_FACTORY/narzedzia/wideo_tlo.py zrodla/ai_higgsfield/2026-11-10/wideo/lupa.mp4 --sek 40 --jasnosc -0.15`, w poście `"tlo3d": {"klatki": "VIRAL_REELS_FACTORY/VIDEOS/tla/lupa", "fps": 30, "krycie": 0.5}, "etykieta_ai": true`; bez broni, przemocy i tragedii | NEWS | NOWA | do zrobienia |
 | pt. 13.11 | 9:00 | NOWA – motoryzacja albo prawo w codzienności | NOWA | NOWA | do zrobienia |
