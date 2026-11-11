@@ -35,6 +35,10 @@ ZYCIE = r"podat|\bpit\b|\bvat\b|zus|emerytur|rent[ay]|składk|mandat|punkt(y|ów
         r"ustaw[aęy]|przepis|nowelizac|rozporządzen|prezydent podpisał|sejm uchwalił|od (dziś|jutra|1 |stycznia|nowego roku)"
 STRASZAK = r"pilny|pilne|uwaga|ważny komunikat|komunikat|przed chwilą|ostrzega|alarm|nie wszyscy wiedzą|sprawdź|od dziś|zmiany od|" \
            r"koniec z|rewolucja|szok|musisz|obowiązek|kara do|grzywna do"
+# kontrowersja (decyzja Michała 11.11): spór, niesprawiedliwość, podwójny standard, kontrola władzy
+KONTROWERSJA = r"nik\b|najwyższa izba|rpo\b|rzecznik praw|uokik|kontrol[ai] wykazał|nieprawidłow|wyrok|sąd uznał|trybunał|skarg|" \
+               r"niesprawiedliw|przywilej|podwójn|luk[ai] w przepis|absurd|bezprawn|nadużyc|odszkodowan|kara dla|ukaran|" \
+               r"zabior[aą]|strac[ąi]|dopłac|podwyżk|zakaz|obowiązk|bez zgody|bez wyroku|spór|oburz|protestuj[ąe] (kierowc|pacjen|rolnic|nauczyciel)"
 PIERWOTNE = [
     (r"podat|pit|vat|urząd skarbow|e-urząd", "podatki.gov.pl (komunikat MF/KAS), ISAP – ustawa o PIT/VAT"),
     (r"zus|emerytur|składk|świadczen|rent", "zus.pl (komunikat), gov.pl/rodzina, ISAP – ustawa o systemie ubezpieczeń"),
@@ -63,6 +67,10 @@ def ocena(w, teraz):
         pkt += 4; powody.append("sprawa z życia widza")
     if re.search(STRASZAK, t):
         pkt += 3; powody.append("nagłówek-straszak do rozbrojenia (treść vs tytuł)")
+    if re.search(KONTROWERSJA, t):
+        pkt += 3; powody.append("kontrowersja: spór / niesprawiedliwość / kontrola władzy")
+    if 1 + len(w.get("inne_zrodla", [])) >= 3:
+        pkt += 2; powody.append("temat z pierwszych stron (3+ redakcje)")
     if re.search(POLITYKA, t):
         pkt -= 3; powody.append("polityka – tylko fakty (ustawa, liczby, skutek), bez ocen")
     zr = 1 + len(w.get("inne_zrodla", []))

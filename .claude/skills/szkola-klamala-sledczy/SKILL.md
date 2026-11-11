@@ -9,6 +9,15 @@ Decyzja Michała (8.11 i 10.11): konto ma działać jak dziennikarz śledczy –
 
 ## 1. Kiedy działasz
 
+**Od 12.11 (decyzja Michała 11.11: „dołącz dziennikarstwo śledcze i na podstawie gorących tematów z pierwszych stron gazet twórz treści”) – przy KAŻDEJ rolce 9:00 i 18:00.** Kolejność wyboru tematu:
+1. Uruchom `sledczy.py` (kanały: pierwsze strony Google News Polska i biznes, PAP, Reuters, Rzeczpospolita, TVN24, kontrole NIK/RPO/UOKiK, wyroki). Weź 3 najwyżej punktowane kandydatury z kontrowersją.
+2. Kandydat przechodzi, gdy: (a) spełnia test kontrowersji z `docs/agent/lekcje.md` (min. 2 z 4), (b) nie jest tematem zakazanym, (c) w 20 min znajdziesz dokument pierwotny + drugie niezależne źródło, (d) nie ma go w `docs/opublikowane.md`.
+3. Śledczy wkład – rolka nie streszcza newsa, tylko dodaje to, czego nie ma w nagłówku: przepis/dokument dosłownie, liczba z raportu, kto płaci, luka albo podwójny standard, co widz może zrobić.
+4. Żaden kandydat nie przechodzi → temat z kalendarza (też przez test kontrowersji). W dniach serii o policji (pon., śr., pt. 18:00) szukaj najpierw newsa o policji/kierowcach/sądach; gdy brak – odcinek serii z kalendarza.
+5. W kalendarzu wpisz, z jakiego nagłówka powstała rolka („NEWS: <tytuł>, <redakcja>, <data>”).
+
+Poprzednie zasady (nadal aktualne jako minimum):
+
 - **Slot NEWS w kalendarzu** (domyślnie 18:00 we wt., czw., sob. i nd. – dni bez serii o policji; 9:00, gdy w kalendarzu stoi „NEWS”).
 - **Link od Michała** – wtedy ten temat ma pierwszeństwo przed kalendarzem (po sprawdzeniu; jeśli się nie da – mówisz dlaczego i proponujesz najbliższy kandydat).
 - Na prośbę „co dziś nadaje się na rolkę” – dajesz 3 kandydatów z kątem, bez renderu.

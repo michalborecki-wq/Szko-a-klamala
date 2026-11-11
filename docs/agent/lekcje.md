@@ -23,6 +23,10 @@ Temat wybieramy po sile sporu, nie po „ciekawości”. Rolka bez sporu nie wch
 **Granice bez zmian (CLAUDE.md):** tylko prawda z dokumentu + 2 źródła; fakt zamiast oceny („przepis mówi…”, nie „to skandal”); bez ataku na osoby, bez partii, bez wojen, religii, szczepionek, płci, migracji, spisków, tragedii i drastycznych opisów; stanowisko drugiej strony w opisie. Kontrowersja = prawdziwy podwójny standard, nie przesada w nagłówku.
 **Źródła tematów:** raporty NIK i RPO, wyroki, taryfikatory i ich luki, nowe ustawy (ukryta stawka), różnice „dla jednych tak, dla drugich nie” (ulgi, przywileje grup zawodowych, kary).
 
+## GORĄCE TEMATY + ŚLEDZTWO (decyzja Michała 11.11)
+Każda rolka 9:00 i 18:00: najpierw `python3 VIRAL_REELS_FACTORY/narzedzia/sledczy.py --godziny 48 --top 15` → 3 kandydaci z pierwszych stron → test kontrowersji → dokument pierwotny + 2. źródło (maks. 20 min na kandydata) → rolka dodaje to, czego nie ma w nagłówku. Brak kandydata = temat z kalendarza. Procedura: skill `szkola-klamala-sledczy`, sekcja 1.
+Uwaga na nagłówki-straszaki („najniebezpieczniejsza w UE”, „bezwzględna zasada”) – sprawdź w dokumencie, często teza jest słabsza; wtedy rolka „nagłówek straszy, dokument mówi…”.
+
 ## HACZYK – wzór z danych (analiza 11.11, `docs/analiza-wynikow-2026-11-11.md`)
 - ≤ 7 słów; zaczyna się od podmiotu znanego każdemu (ZUS, policja, mandat, szkoła, bank); jedna liczba albo jedno zaprzeczenie; kończy się otwartą pętlą („Jest haczyk.”, „Połowa – bezprawnie.”, „Szkoła kłamała.”).
 - NIE: znak „+”, skróty, żargon („krajówka”), pytanie w 1. linii, zdanie do policzenia. Przykład zły: „+51 km/h na krajówce i 3 miesiące pieszo” (97% pominięć). Lepiej: „Policja zabierze prawo jazdy za miastem. Jest wyjątek.”
