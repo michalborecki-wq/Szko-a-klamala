@@ -1,0 +1,12 @@
+{"posts": [{
+ "id": "pozyczka_kurs", "format": "reel", "subject": "FINANSE", "series": "ŚLEDZTWO",
+ "ton": "KONTROWERSJA", "moc": "mocna",
+ "tlo3d": {"klatki": "VIRAL_REELS_FACTORY/VIDEOS/tla/waga", "fps": 30, "krycie": 0.5}, "etykieta_ai": true,
+ "durations": [3.2, 4.4, 5.6, 5.6, 5.0],
+ "slides": [
+  {"type": "cover", "obraz": "monety", "pieczatka": "ZARZUTY UOKiK", "title": "Pożyczasz 6000 zł.", "accent": "Oddajesz 13 000."},
+  {"type": "number", "tag": "HACZYK", "big": "7000 zł", "count": true, "title": "za kurs językowy", "accent": "bez niego nie ma pożyczki", "source": "UOKiK, komunikat z 10.11.2026"},
+  {"type": "myth", "myth_label": "UMOWA", "fact_label": "UOKiK", "myth": "„To kurs, nie koszt pożyczki.”", "fact": "To **ukryty koszt kredytu**. Limit przekroczony nawet **7 razy**.", "source": "zarzuty UOKiK – sprawa w toku"},
+  {"type": "dokument", "tag": "KOMUNIKAT", "naglowek": "UOKiK · 10.11.2026", "tekst": "Warunkiem uzyskania kredytu jest **wykupienie przez konsumenta pakietu edukacyjnego lub telemedycyny**.", "linie": 1, "wskaz": "klienci głównie 50+"},
+  {"type": "outro", "question": "Zakazać kursów doklejanych do pożyczek?", "sub": "Wyślij komuś, kto bierze chwilówki.", "sources": "Sprawa w toku – to zarzuty, nie decyzja. To nie jest porada prawna.", "partner_slot": false}
+ ]}]}

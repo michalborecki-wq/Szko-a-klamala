@@ -62,6 +62,8 @@ def ocena(w, teraz):
     t = w["tytul"].lower()
     if re.search(ZAKAZ, t) or re.search(r"\bkrak[oó]w", t) and re.search(r"atak|strzel|ofiar|sprawc", t):
         return None, "zakazany temat"
+    if re.search(r"prosi[ęa]t|trzod|tucznik|brojler|drobiu|skup(u|ie)? (zbóż|mleka|żywca)|ceny (zbóż|rzepaku|bydła|mleka)|notowania|kurs (euro|dolara|franka)", t):
+        return None, "cennik branżowy – nie temat rolki"
     pkt, powody = 0, []
     if re.search(ZYCIE, t):
         pkt += 4; powody.append("sprawa z życia widza")

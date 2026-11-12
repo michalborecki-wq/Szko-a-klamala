@@ -25,3 +25,5 @@ Decyzja Michała: 2 dostawy dziennie (ok. 9:00 i 17:00), każda = 1 rolka + opis
 
 - 11.11 18:00: spec Policja #6 z 7.11 miał nieaktualny twist („poza miastem prawko zostaje”) – nowela Dz.U. 2025 poz. 1676 (od 3.03.2026) objęła drogi jednojezdniowe dwukierunkowe. Nowy zwrot: autostrada/dwujezdniowe poza przepisem. Źródła: tekst ustawy (API Sejmu) + KRBRD, Auto Świat. Lekcja: przed użyciem starego specu sprawdzić folder `zrodla/prawo/policja/zmiany/`. Wysłane ok. 18:30 (restart procesu).
 - 11.11 (analiza): dane i zmiany silnika – patrz docs/analiza-wynikow-2026-11-11.md; Higgsfield wg docs/higgsfield-procedura.md (saldo 0 kr., najpierw REJESTR).
+
+- 12.11 9:00: NEWS UOKiK „pożyczka za kurs” (komunikat 10.11 – cytaty sprawdzone dosłownie na uokik.gov.pl; TVN24, 300Gospodarka). Nowość: pierwszy materiał z procedury „gorące tematy”, czerwony TWIST 2.0, tło wideo „waga”. Odrzucone: ceny prosiąt/drobiu (branżowe), TK/NBP (polityka personalna), renta→emerytura (rezerwa). Wysłane 7:08.

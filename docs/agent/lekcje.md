@@ -46,3 +46,6 @@ Uwaga na nagłówki-straszaki („najniebezpieczniejsza w UE”, „bezwzględna
 - 11.11 – rolka 39 s, bo silnik wydłużył planszę z długim przepisem. **Reguła:** cytat w `dokument` ≤ 18 słów; reszta przepisu w opisie.
 - 11.11 – Michał pytał, czy wygląd go zaskoczy; uczciwa odpowiedź: standard. **Reguła:** każda rolka ma min. 1 element nowy względem poprzedniej (tło wideo, mapa, foto, wycinek, nowy preset przejść) – zapisz w dzienniku, który.
 - 11.11 – start zadania cyklicznego 16:23 padł: USAGE_LIMIT_REACHED (limit użycia konta), stąd brak rolki 18:00. Starty przesunięte na 6:23/10:23/15:23. **Reguła:** sesja główna pilnuje slotów, gdy limit jest blisko.
+- 12.11 – na planszy `myth` w wideo podświetlone słowa były żółte na żółtym (animacja `kHi` kończy na żółtym kolorze tekstu; w podglądzie statycznym tego nie widać). Poprawione w silniku (`!important`). **Reguła:** arkusz klatek z gotowego WIDEO oglądać zawsze – sam podgląd plansz nie wystarcza; każdą zmianę CSS sprawdzać w obu wariantach animacji.
+- 12.11 – render 4K z tłem wideo: ok. 13 min obraz + 3 min muzyka i paczka; drugi render po poprawce zmieścił się, bo start był 6:30. Start 1,5 h przed wysyłką zostaje.
+- 12.11 – skaner: cennik skupu (prosięta, drób) dostaje wysokie punkty za słowo „ceny” – do odfiltrowania (rolnicze portale branżowe).

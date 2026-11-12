@@ -189,7 +189,7 @@ body.r .myth{{font-family:'Inter Display','Inter';font-weight:900;font-style:ita
   font-size:{int(f['h2']*0.84)}px;line-height:1.08;color:rgba(255,255,255,.62);margin-bottom:58px;text-wrap:balance}}
 body.r .myth span{{background-size:100% 12px;background-position:0 54%}}
 body.r .myth ~ .body{{font-size:{int(f['body']*1.4)}px;line-height:1.22;font-weight:800;color:#fff}}
-body.r .myth ~ .body b{{background:{TOK['yellow']};color:{TOK['bg0']};padding:0 12px;border-radius:8px;
+body.r .myth ~ .body b{{background:{TOK['yellow']};color:{TOK['bg0']} !important;text-shadow:none !important;padding:0 12px;border-radius:8px;
   -webkit-box-decoration-break:clone;box-decoration-break:clone}}
 body.r.t-myth .bg{{background:radial-gradient(ellipse 95% 60% at 50% 42%,#5A1220 0%,#1B0E1C 48%,{TOK['bg0']} 78%)}}
 body.r.t-myth .st{{background:linear-gradient(90deg,rgba(229,57,53,0),{TOK['red']} 30%,{TOK['red']} 70%,rgba(229,57,53,0))}}
