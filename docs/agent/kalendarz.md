@@ -39,10 +39,10 @@ Po wysłaniu agent zmienia status na **wysłane**. **Decyzja Michała 8.11: „M
 
 | czw. 12.11 | 9:00 | Śledztwo: „Pożyczasz 6000 zł. Oddajesz 13 000.” – pożyczka z obowiązkowym kursem (NEWS: „Pożyczka za kurs. Zarzuty dla spółek…”, UOKiK, 10.11.2026; TVN24, 300Gospodarka); tło: klip AI „waga” | `publikacje/2026-11-12/spec_pozyczka_kurs.json#pozyczka_kurs` | `publikacje/2026-11-12/0900_opis.md` | wysłane (12.11 7:08, sesja główna) |
 | czw. 12.11 | 13:00 | NOWA – karuzela 9:16 (kosmos/ciało/rekord) | NOWA | NOWA | do zrobienia |
-| czw. 12.11 | 18:00 | NEWS – rolka z bieżących informacji (skill `szkola-klamala-sledczy`); **tło: klip AI „lupa”** – `python3 VIRAL_REELS_FACTORY/narzedzia/wideo_tlo.py zrodla/ai_higgsfield/2026-11-10/wideo/lupa.mp4 --sek 40 --jasnosc -0.15`, w poście `"tlo3d": {"klatki": "VIRAL_REELS_FACTORY/VIDEOS/tla/lupa", "fps": 30, "krycie": 0.5}, "etykieta_ai": true`; bez broni, przemocy i tragedii | NEWS | NOWA | do zrobienia |
-| pt. 13.11 | 9:00 | NOWA – motoryzacja albo prawo w codzienności | NOWA | NOWA | do zrobienia |
+| czw. 12.11 | 18:00 | Śledztwo: „Mandat za letnie opony: 0 zł. Jest haczyk.” – OC płaci zawsze, AC może odmówić (art. 827 § 1 KC; NEWS: Elektromobilni.pl, Forsal.pl, 11.11); tło: klip AI „lupa” | `publikacje/2026-11-12/spec_zimowki_ac.json#zimowki_ac` | `publikacje/2026-11-12/1800_opis.md` | wysłane (automat 16:11 w swojej sesji – Michał nie widział; ponownie z sesji głównej 19:40) |
+| pt. 13.11 | 9:00 | NOWA – motoryzacja albo prawo w codzienności | NOWA | NOWA | ROBI SESJA GŁÓWNA (wysyłka w rozmowie głównej ok. 8:00 / 17:00) – zadanie cykliczne NIE ROBI tej rolki |
 | pt. 13.11 | 13:00 | NOWA – karuzela 9:16 | NOWA | NOWA | do zrobienia |
-| pt. 13.11 | 18:00 | Co może policja #8 – „Masz prawo znać nazwisko policjanta” (§ 2 ust. 1 rozp. RM, Dz.U. 2023 poz. 2535) | NOWA (P1) | NOWA | do zrobienia |
+| pt. 13.11 | 18:00 | Co może policja #8 – „Masz prawo znać nazwisko policjanta” (§ 2 ust. 1 rozp. RM, Dz.U. 2023 poz. 2535) | NOWA (P1) | NOWA | ROBI SESJA GŁÓWNA (wysyłka w rozmowie głównej ok. 8:00 / 17:00) – zadanie cykliczne NIE ROBI tej rolki |
 | sob. 14.11 | 9:00 | Mit tygodnia: „Największa pustynia świata jest z lodu” – rolka IG (tło: klip AI „antarktyda”) | `publikacje/2026-11-14/spec_antarktyda_pustynia.json#antarktyda_pustynia` | `publikacje/2026-11-14/0900_opis.md` | gotowe (sesja główna, wysyłka zaplanowana 14.11 ok. 7:45) – NIE ROBIĆ |
 | sob. 14.11 | 13:00 | NOWA – karuzela 9:16 | NOWA | NOWA | do zrobienia |
 | sob. 14.11 | 18:00 | NEWS – rolka z bieżących informacji (skill `szkola-klamala-sledczy`: `sledczy.py` → wybór → dokument pierwotny + 2. źródło); bez broni, przemocy i tragedii | NEWS | NOWA | do zrobienia |

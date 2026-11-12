@@ -1,0 +1,11 @@
+{"posts": [{
+ "id": "zimowki_ac", "format": "reel", "subject": "MOTORYZACJA", "series": "ŚLEDZTWO",
+ "ton": "MOTORYZACJA", "moc": "mocna",
+ "tlo3d": {"klatki": "VIRAL_REELS_FACTORY/VIDEOS/tla/lupa", "fps": 30, "krycie": 0.5}, "etykieta_ai": true,
+ "durations": [4.0, 5.6, 6.9, 6.2],
+ "slides": [
+  {"type": "cover", "obraz": "opona", "pieczatka": "ART. 827 KC", "title": "Mandat za letnie opony: 0 zł.", "accent": "Jest haczyk."},
+  {"type": "myth", "myth_label": "MIT", "fact_label": "TWIST", "myth": "„Mandatu nie ma, więc AC zapłaci.”", "fact": "OC – **zawsze**. AC może **odmówić wypłaty**."},
+  {"type": "dokument", "naglowek": "Kodeks cywilny · art. 827 § 1", "tekst": "w razie **rażącego niedbalstwa odszkodowanie nie należy się** (…)", "linie": 1, "wskaz": "chyba że umowa inaczej"},
+  {"type": "outro", "question": "Odmowa za letnie opony – słusznie?", "sub": "Wyślij komuś, kto jeździ na letnich.", "sources": "To nie jest porada prawna.", "partner_slot": false}
+ ]}]}

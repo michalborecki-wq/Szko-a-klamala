@@ -6,7 +6,7 @@ Procedura: `docs/higgsfield-procedura.md`. Saldo 11.11.2026: **0 kredytów** (pl
 | Plik | Model | Koszt | Status |
 |---|---|---|---|
 | tablica.mp4 | Kling 3.0 | 10 | użyty 11.11 – Mur z Księżyca (potem tylko jako tło drugoplanowe / intro marki) |
-| lupa.mp4 | Kling 3.0 | 7,5 | zarezerwowany – 12.11 18:00 NEWS |
+| lupa.mp4 | Kling 3.0 | 7,5 | użyty 12.11 18:00 – Zimówki a AC; dalej motyw śledczy jako tło drugoplanowe |
 | antarktyda_seedance.mp4 | Seedance 2.5 | 35 | zarezerwowany – 14.11 9:00 Antarktyda |
 | waga.mp4 | Kling 3.0 | 7,5 | użyty 12.11 – Pożyczka z kursem (UOKiK); dalej tylko tło drugoplanowe |
 | klepsydra.mp4 | Kling 3.0 | 7,5 | wolny – terminy, emerytura, „przepada” |

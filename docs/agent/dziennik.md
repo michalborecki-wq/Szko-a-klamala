@@ -27,3 +27,5 @@ Decyzja Michała: 2 dostawy dziennie (ok. 9:00 i 17:00), każda = 1 rolka + opis
 - 11.11 (analiza): dane i zmiany silnika – patrz docs/analiza-wynikow-2026-11-11.md; Higgsfield wg docs/higgsfield-procedura.md (saldo 0 kr., najpierw REJESTR).
 
 - 12.11 9:00: NEWS UOKiK „pożyczka za kurs” (komunikat 10.11 – cytaty sprawdzone dosłownie na uokik.gov.pl; TVN24, 300Gospodarka). Nowość: pierwszy materiał z procedury „gorące tematy”, czerwony TWIST 2.0, tło wideo „waga”. Odrzucone: ceny prosiąt/drobiu (branżowe), TK/NBP (polityka personalna), renta→emerytura (rezerwa). Wysłane 7:08.
+
+- 12.11 18:00: „Mandat za letnie opony: 0 zł. Jest haczyk.” (automat, 4 plansze, 26 s, tło „lupa”); ponowny render i wysyłka w sesji głównej 19:40 po pytaniu Michała. Fakty: art. 827 § 1 KC, art. 9 ust. 2 ustawy o ubezpieczeniach obowiązkowych (sprawdzone przez automat w tekstach jednolitych), Auto Świat, AutoCentrum.
