@@ -12,6 +12,9 @@ Każda rolka (9:00, 18:00, także karuzele w miarę możliwości) MUSI mieć wsz
 6. **Min. 1 nowość** względem poprzedniej rolki (inny preset, mapa, foto, wycinek, nowy efekt) – zapisz w dzienniku, jaka.
 7. **Kontrola przed wysyłką** – `kontrola.py` + obejrzenie arkusza klatek; plansza czytelna (0,3 s/słowo), maks. ok. 12–15 słów.
 
+## FORMAT I RÓŻNORODNOŚĆ (Brand Growth Director, 13.11)
+Przed specem: otwórz `BRAND_GROWTH/CONTENT/CONTENT_CALENDAR.md` → format z planu rotacji (nie ten sam co 2 ostatnie) → przepis z `FORMAT_LIBRARY.md` → karta rolki → ocena różnorodności ≥ 7. Po wysyłce dopisz wiersz w „Wpisy bieżące”. Test kontrowersji dotyczy filarów 2–4; filar 1 „szkoła kłamała” przechodzi testem „mitu powszechnego”.
+
 ## KONTROWERSJA PRZEDE WSZYSTKIM (decyzja Michała 11.11 wieczorem: „Nastaw się na kontrowersje w treści. To jest najbardziej chwytliwe”)
 Temat wybieramy po sile sporu, nie po „ciekawości”. Rolka bez sporu nie wchodzi do slotów 9:00 i 18:00 (może być karuzelą 13:00).
 **Test kontrowersji – temat musi spełnić min. 2 z 4:**
