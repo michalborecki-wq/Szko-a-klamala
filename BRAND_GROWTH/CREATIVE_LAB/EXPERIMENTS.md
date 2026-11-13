@@ -3,7 +3,7 @@
 | # | Hipoteza | Jak | Miara | Status |
 |---|---|---|---|---|
 | E1 | Żółta okładka zmniejsza pominięcia w feedzie | okładki na zmianę (silnik, od 12.11) | pominięcia w 3 s: żółte vs ciemne | w toku (1 żółta: 13.11) |
-| E2 | Ruchome tło wydłuża średni czas | co druga rolka z `tlo3d` | śr. czas: z tłem vs bez | w toku (Mur 7,7 s przy n=5) |
+| E2 | Ruchome tło wydłuża średni czas | co druga rolka z `tlo3d` | śr. czas: z tłem vs bez | w toku (IG: Mur 7,7 s przy n=5; TikTok: opona 3D 1210 wyśw. vs płaska plansza 9 wyśw.) |
 | E3 | Żółty przycisk „Wyślij komuś” daje pierwsze udostępnienia | outro 2.0 (od 12.11) | udostępnienia > 0 | w toku |
 | E4 | Format POV trzyma lepiej niż MYTH w filarze „Twoje prawa” | 3 rolki POV w 2 tygodnie | pominięcia, śr. czas | start 13.11 18:00 |
 | E5 | INTERACTIVE (quiz) podnosi komentarze | 1× tygodniowo | komentarze na rolkę | start 14.11 |

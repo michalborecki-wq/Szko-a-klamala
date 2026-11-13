@@ -44,3 +44,16 @@ Wnioski robocze (1 film – sygnał, nie dowód):
 1. **9 wyświetleń w 3 dni to problem dystrybucji, nie haczyka.** TikTok zwykle pokazuje nowy film przynajmniej kilkudziesięciu–kilkuset osobom; tu po pierwszej godzinie ruch ustał. Przy 9 widzach nie da się oceniać treści.
 2. Kształt krzywej jest taki sam jak na IG (ucieczka w 2 s) – pierwsza klatka nadal rozstrzyga.
 3. Do sprawdzenia przez Michała: (a) lista filmów w Analityce → Treści – czy wszystkie mają jednocyfrowe wyświetlenia, czy tylko ten; (b) Ustawienia → Pomoc/Wsparcie → „Stan konta” (ograniczenia, naruszenia); (c) czy filmy są wstawiane z aplikacji TikTok (nie z przeglądarki) i z dodanym dźwiękiem z biblioteki; (d) czy przy publikacji nie włącza się „tylko znajomi”/ograniczeń wieku.
+
+### TikTok – drugi film (zrzuty Michała, 13.11 7:33)
+| Film | Publikacja | Wyśw. | Polub. | Kom. | Udost. | Zapisy | Śr. czas | Do końca | Śr. % filmu | Źródła | Nowi obs. |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| „Od 1 listopada zimówki albo mandat?” (31,3 s; pełnokadrowe tło 3D – opona) | 2.11 21:03 | 1210 | 2 | 0 | 0 | 0 | 5,5 s | 2,02% | 18% | Dla Ciebie 99,5% | 1 |
+
+Korekta wniosku z pierwszego pomiaru: **konto nie jest zablokowane** – TikTok potrafi dać filmowi ponad 1,2 tys. wyświetleń z „Dla Ciebie” w jeden dzień. Różnica 1210 vs 9 wyświetleń dotyczy więc konkretnego filmu.
+Co różni te dwa filmy (hipotezy, n=2):
+1. Pierwsza klatka: pełnokadrowy, „filmowy” obraz 3D (opona) kontra płaska plansza z ikoną. → zgodne z E2 (ruch/obraz na start).
+2. Temat sezonowy i powszechny (opony, 1 listopada) kontra niszowy (płatność PIT telefonem).
+3. Haczyk-pytanie z datą kontra zaprzeczenie w cudzysłowie.
+Wspólne: widzowie wychodzą po 1–2 s, do końca 0–2%, zero komentarzy i udostępnień – nawet przy 1,2 tys. wyświetleń. Zasięg startowy da się dostać; nie umiemy go utrzymać.
+Do zrobienia: lista wszystkich filmów z wyświetleniami (Analityka → Treści), szczególnie rolki 12.11 z tłem wideo – czy pełnokadrowy obraz powtarza efekt.
