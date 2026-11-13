@@ -7,7 +7,7 @@
 | E3 | Żółty przycisk „Wyślij komuś” daje pierwsze udostępnienia | outro 2.0 (od 12.11) | udostępnienia > 0 | w toku |
 | E4 | Format POV trzyma lepiej niż MYTH w filarze „Twoje prawa” | 3 rolki POV w 2 tygodnie | pominięcia, śr. czas | start 13.11 18:00 |
 | E5 | INTERACTIVE (quiz) podnosi komentarze | 1× tygodniowo | komentarze na rolkę | start 14.11 |
-| E6 | Rolka 12–15 s (FAST, 3 plansze) ma wyższy odsetek obejrzeń do końca | 2 rolki FAST | śr. czas / długość | plan 18.11 |
+| E6 | Rolka 12–15 s (FAST, 3 plansze) ma wyższy odsetek obejrzeń do końca | 2 rolki FAST (zgoda Michała 13.11) | śr. czas / długość | próba 1: 18.11 9:00 |
 | E7 | Filar „szkoła kłamała” (mit z lekcji) ma większy zasięg niż „śledztwo” | min. 3 rolki/tydz. | wyświetlenia IG+FB (zrzut) | start 14.11 |
 
 Zasady: jedna zmienna na rolkę, wynik wpisać do `ANALYTICS/PERFORMANCE.md`, po 3 próbach decyzja: zostaje / poprawka / koniec. Eksperymenty łamiące reguły z CLAUDE.md (np. lektor, rolka < 20 s jako główna) – tylko za zgodą Michała.

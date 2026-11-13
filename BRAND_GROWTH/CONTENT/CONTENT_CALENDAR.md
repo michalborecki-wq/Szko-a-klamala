@@ -28,8 +28,8 @@ Wniosek: 3 formaty na 9 rolek, jeden schemat narracji. Od 13.11 18:00 obowiązuj
 | pon. 16.11 18:00 | NEWS | 3 (policja) | `wycinek` |
 | wt. 17.11 9:00 | EXPLAINER | 4 | animowany wykres |
 | wt. 17.11 18:00 | DOC | 2 | `timeline` |
-| śr. 18.11 9:00 | FAST | 1 | 3 liczby, cięcia na bicie |
-| śr. 18.11 18:00 | QUESTION | 3 (policja) | dwie strony sporu (`quote`×2) |
+| śr. 18.11 9:00 | FAST 12–15 s (próba 1 z 2, zgoda Michała 13.11) | 1 | 3 liczby, cięcia na bicie |
+| śr. 18.11 18:00 | QUESTION | 3 („Twoje prawa” poza policją: sklep/urząd/praca) | dwie strony sporu (`quote`×2) |
 | czw. 19.11 9:00 | BA | 2 (Black Friday – ceny przed/po) | `versus` „Było / Jest” |
 | czw. 19.11 18:00 | DARK albo CINEMATIC | 5 | zdjęcie archiwalne PD, wolne tempo |
 | pt. 20.11 9:00 | VISUAL | 5 | eksperyment z `CREATIVE_LAB` |

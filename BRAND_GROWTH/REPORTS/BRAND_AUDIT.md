@@ -41,3 +41,6 @@ Zakres: struktura projektu, silnik graficzny, 10 ostatnich rolek (9–13.11), da
 3. **Do 17.11:** V1 kinetyczna typografia + V2 okładka ze zdjęciem.
 4. **Co tydzień (niedziela):** raport + zrzut statystyk FB od Michała.
 5. **Decyzje dla Michała:** (a) zgoda na 2 rolki FAST 12–15 s jako główne (reguła „min. 20 s”), (b) czy filar „szkoła kłamała” ma wrócić do min. 3 rolek tygodniowo kosztem części „śledztw”, (c) czy seria o policji zostaje 3× w tygodniu, czy 2× + 1 POV „Twoje prawa” poza policją.
+
+## Decyzje Michała (13.11)
+(a) FAST 12–15 s – zgoda na 2 próby. (b) Filar „szkoła kłamała” min. 3×/tydz. – tak. (c) Policja 2×/tydz. + 1 rolka „Twoje prawa” poza policją (odpowiedź „ok” na pytanie z dwiema opcjami – przyjęto wariant z większą różnorodnością; do potwierdzenia). (d) Zrzut statystyk FB co tydzień – tak.

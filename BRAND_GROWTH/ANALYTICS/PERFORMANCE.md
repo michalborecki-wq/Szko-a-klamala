@@ -25,3 +25,6 @@ Udostępnienia i zapisy: 0 we wszystkich rolkach konta. Rekord łączny (IG+FB, 
 
 ## Następny pomiar
 14.11 wieczorem: rolki 12.11 (×2) i 13.11 (×2) – ta sama tabela + kolumny Format, Okładka, Tło.
+
+## Zrzut Facebooka (zgoda Michała 13.11)
+Co niedzielę Michał przysyła zrzuty „Statystyki rolki” (IG → rolka → Statystyki) dla rolek z tygodnia. Tabela: rolka | wyśw. łącznie | z FB | śr. czas | pominięcia | udostępnienia.
