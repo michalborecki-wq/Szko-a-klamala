@@ -71,3 +71,22 @@ Wnioski (3 filmy):
 3. Wcześniejszy zapis „Policja #1 – ponad 2 tys., rekord konta” (4.11) dotyczył najpewniej TikToka sprzed promocji, nie Facebooka.
 4. Retencja wszędzie taka sama: wyjście po 1 s, średnio 4–5,5 s, do końca 2%. Nawet zwycięzca traci widza na starcie – skrócenie i szybszy zwrot zostają priorytetem.
 5. **Uwaga do decyzji z 13.11 (policja 2× w tygodniu):** dane TikToka przemawiają za utrzymaniem policji 3× – do decyzji Michała.
+
+### TikTok – siatka profilu (zrzut Michała, 13.11 16:59)
+| Film | Wyświetlenia |
+|---|---|
+| Opinie w Google sprzedawano pakietami (13.11 rano, żółta okładka) | 6 |
+| Mandat za letnie opony: 0 zł (12.11) | 792 |
+| „7 razy” – strażnik parku (karuzela/film 13:00) | 721 |
+| Pożyczasz 6000 zł. Oddajesz 13 000. (12.11) | 741 |
+| Policja #1 – „weekly report Nov.02–Nov.08” (ponowna publikacja?) | 762 |
+| +51 km/h na krajówce (11.11) | 836 |
+| Wielkiego Muru nie widać z Księżyca (11.11) | 755 |
+| „Pilny komunikat skarbówki” (10.11) | 9 |
+| 99,8% – Słońce (karuzela) | 88 |
+
+Wnioski:
+1. **Typowy film na TikToku ma dziś 720–840 wyświetleń** – wielokrotnie więcej niż na Instagramie (5–110). TikTok jest realnym kanałem zasięgu obok Facebooka.
+2. Rozrzut między „zwykłymi” filmami jest mały (721–836), niezależnie od tematu i okładki – wygląda na stałą pulę testową, której żaden film nie przebija (retencja 13–18%, do końca ok. 2%).
+3. **Dwa filmy mają 6 i 9 wyświetleń** – to nie słabszy wynik, tylko brak dystrybucji. Wspólne: temat „pilny komunikat skarbówki” i „kupione opinie w Google” – oba brzmią jak oszustwo/usługa sztucznych opinii. Hipoteza: moderacja TikToka wstrzymała je przed „Dla Ciebie”. Do sprawdzenia: w analityce filmu komunikat o ograniczeniu / „nie kwalifikuje się do Dla Ciebie”; dla „Opinii” także to, że film ma dopiero kilka godzin.
+4. Żeby przebić pułap ok. 800, trzeba poprawić retencję: krótsze rolki, zwrot w 2.–3. sekundzie, ujęcia zamiast plansz (test: kameleon 13.11).

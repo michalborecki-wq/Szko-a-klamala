@@ -1,6 +1,6 @@
 # Rejestr zasobów Higgsfield (magazyn) – aktualizować po każdym użyciu i generowaniu
 
-Procedura: `docs/higgsfield-procedura.md`. Saldo 11.11.2026: **0 kredytów** (plan Plus). Wszystko poniżej to ilustracje AI – w rolce zawsze `"etykieta_ai": true`.
+Procedura: `docs/higgsfield-procedura.md`. Saldo 13.11.2026 po rolce „kameleon”: **960 kredytów** (plan Plus; 13.11 rano było 1000). Wszystko poniżej to ilustracje AI – w rolce zawsze `"etykieta_ai": true`.
 
 ## Wideo (2026-11-10/wideo/, 720×1280, 5 s)
 | Plik | Model | Koszt | Status |
@@ -13,6 +13,11 @@ Procedura: `docs/higgsfield-procedura.md`. Saldo 11.11.2026: **0 kredytów** (pl
 | ziemia.mp4 | Kling 3.0 | 7,5 | wolny – kosmos (nowy temat) |
 | saturn.mp4, mozg.mp4, monety.mp4, szlaban.mp4 | Kling 3.0 | 30 | temat opublikowany – tylko tło drugoplanowe w innym temacie (monety: finanse) |
 
+## Wideo 2026-11-13/wideo/ (720×1280, 5 s, Kling 3.0 tekst→wideo, po 10 kr.)
+| Plik | Status |
+|---|---|
+| kameleon_1_oko.mp4, kameleon_2_pokaz.mp4, kameleon_3_skora.mp4, kameleon_4_odejscie.mp4 | użyte 13.11 18:00 – rolka filmowa „Kameleon”; dalej tylko tło drugoplanowe (przyroda) |
+
 ## Obrazy (2026-11-10/obrazy/, 752×1344)
 | Plik | Status |
 |---|---|
@@ -24,3 +29,4 @@ Procedura: `docs/higgsfield-procedura.md`. Saldo 11.11.2026: **0 kredytów** (pl
 | Data | Pliki | Kredyty | Zgoda Michała | Uwagi |
 |---|---|---|---|---|
 | 10.11 | 10 wideo, 20 obrazów | 110 | „Wykorzystaj wszystkie kredyty” | test konektora; część pod tematy już opublikowane – stąd procedura |
+| 13.11 | 4 wideo (kameleon) | 40 | plan przedstawiony w rozmowie (31–40 kr.), Michał odpowiedział zmianą terminu na dziś 18:00 – przyjęte jako zgoda | tekst→wideo bez kadru startowego (brak czasu); Kling policzył 10 kr. za klip (z dźwiękiem) zamiast 7,5 – następnym razem wyłączyć dźwięk |

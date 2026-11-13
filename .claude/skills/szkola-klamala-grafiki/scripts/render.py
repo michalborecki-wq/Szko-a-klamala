@@ -201,6 +201,11 @@ body.r.t-outro .sub{{align-self:flex-start;background:{TOK['yellow']};color:{TOK
   box-shadow:0 10px 0 {TOK['blue']},0 0 50px rgba(255,199,39,.35)}}
 body.r.t-outro .sub:before{{content:'➤';display:inline-block;margin-right:16px;color:#C62828}}
 body.r.t-outro .sub:empty{{display:none}}
+/* rolka filmowa (13.11): "tresc": "dol" – napisy w dolnej części kadru, górę zostawiamy ujęciu wideo */
+body.dol .content{{justify-content:flex-end;padding-bottom:20px}}
+body.dol .vig{{background:linear-gradient(180deg,rgba(5,8,16,.25) 0%,transparent 22%,transparent 40%,rgba(5,8,16,.86) 66%,rgba(5,8,16,.94) 100%)}}
+body.dol .st{{display:none}}
+body.dol .content.hook h1{{font-size:{int(f['h1']*0.98)}px}}
 
 .tl-y{{display:block;font-family:'Inter Display','Inter';font-weight:900;font-style:italic;font-size:{int(f['big']*0.42)}px;
   line-height:1;color:{TOK['yellow']};text-shadow:0 5px 0 {TOK['blue']};margin-bottom:6px}}
@@ -585,7 +590,7 @@ def tpl(s, post, f, i, n):
     if t == "cover" and uk_c is None and post.get("_fmt") == "reel" and not post.get("tlo3d"):
         import hashlib   # okładki na zmianę: żółta / ciemna – w feedzie nie wyglądają jak ta sama rolka (analiza 11.11)
         uk_c = "zolty" if int(hashlib.md5(str(post.get("id", "")).encode()).hexdigest(), 16) % 2 == 0 else "ciemny"
-    kl = (["r"] if post.get("_fmt") == "reel" else []) + [f"t-{t}"] + (["zolty"] if (t == "cover" and uk_c == "zolty") else [])
+    kl = (["r"] if post.get("_fmt") == "reel" else []) + [f"t-{t}"] + (["dol"] if post.get("tresc") == "dol" else []) + (["zolty"] if (t == "cover" and uk_c == "zolty") else [])
     body_cls = f" class='{' '.join(kl)}'"
     return (f"<!doctype html><html><head><meta charset='utf-8'><style>{css(f)}</style></head><body{body_cls}>"
             f"<div class='bg'></div><div class='st a'></div><div class='st a2'></div><div class='st b'></div>"
@@ -616,7 +621,7 @@ FIT_AND_QA = """
     });
   }
   // 1b) rolki: gdy plansza jest w połowie pusta – powiększ tekst (maks. ×1,45), aż wypełni ok. 84% pola
-  if (scale === 1 && document.body.classList.contains('r') && !c.classList.contains('toptight')
+  if (scale === 1 && document.body.classList.contains('r') && !document.body.classList.contains('dol') && !c.classList.contains('toptight')
       && !c.querySelector('.mapa,.foto-in,.fpel')) {
     const sel = 'h1,h2,.body,.sub,.myth,.doc-t,.doc-h,.wyc-t,.q-txt';   // .big ma własne dopasowanie do szerokości
     const els = [...c.querySelectorAll(sel)];

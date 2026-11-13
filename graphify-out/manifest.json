@@ -72,9 +72,9 @@
     "semantic_hash": ""
   },
   ".claude/skills/szkola-klamala-grafiki/scripts/render.py": {
-    "mtime": 1794462666.5127327,
-    "seen": 1794565853.7803671,
-    "ast_hash": "c90fd3b680fd9e741be3ea43db0ea276",
+    "mtime": 1794586490.9011323,
+    "seen": 1794587398.7418456,
+    "ast_hash": "e9acfecf3a984d71f95e16f2ce0aaf54",
     "semantic_hash": ""
   },
   ".claude/skills/szkola-klamala-grafiki/scripts/ruch.py": {
@@ -474,9 +474,9 @@
     "semantic_hash": ""
   },
   "BRAND_GROWTH/ANALYTICS/PERFORMANCE.md": {
-    "mtime": 1794551764.9768825,
-    "seen": 1794565853.780557,
-    "ast_hash": "bcb63ba5b10b3da1fb0d442bc8874634",
+    "mtime": 1794587386.841829,
+    "seen": 1794587398.7420208,
+    "ast_hash": "85c034865e6090989ca5f8286b8117cc",
     "semantic_hash": ""
   },
   "BRAND_GROWTH/BRAND_IDENTITY/BRAND_GUIDELINES.md": {
@@ -498,9 +498,9 @@
     "semantic_hash": ""
   },
   "BRAND_GROWTH/CONTENT/CONTENT_CALENDAR.md": {
-    "mtime": 1794551072.2205353,
-    "seen": 1794565853.7805653,
-    "ast_hash": "46bcc79720ff7ee4c8640edc7ce0d978",
+    "mtime": 1794587386.8378599,
+    "seen": 1794587398.7420309,
+    "ast_hash": "662f5a91b7525b822666e601e80847f2",
     "semantic_hash": ""
   },
   "BRAND_GROWTH/CONTENT/CONTENT_PILLARS.md": {
@@ -726,21 +726,21 @@
     "semantic_hash": ""
   },
   "docs/agent/dziennik.md": {
-    "mtime": 1794549396.608847,
-    "seen": 1794565853.7806468,
-    "ast_hash": "badbb12ea2d3933d829a2bc30a84d2e3",
+    "mtime": 1794587386.841829,
+    "seen": 1794587398.7421277,
+    "ast_hash": "5fc450ba82760771b7cbde66d6419fc8",
     "semantic_hash": ""
   },
   "docs/agent/kalendarz.md": {
-    "mtime": 1794549396.608847,
-    "seen": 1794565853.780649,
-    "ast_hash": "eb988ecca6528752c3adf8d7405382f8",
+    "mtime": 1794587386.6641088,
+    "seen": 1794587398.7421298,
+    "ast_hash": "0b6765b9a3350178c76d82ca54ee3244",
     "semantic_hash": ""
   },
   "docs/agent/lekcje.md": {
-    "mtime": 1794550648.766652,
-    "seen": 1794565853.780651,
-    "ast_hash": "7d1487aae94b2e49a685304a2ea49fcf",
+    "mtime": 1794587386.841829,
+    "seen": 1794587398.7421327,
+    "ast_hash": "56b3d8f4e815d91c56bdc6e6ef757328",
     "semantic_hash": ""
   },
   "docs/agent/opisy/tydzien_4-8.11.md": {
@@ -960,15 +960,27 @@
     "semantic_hash": ""
   },
   "zrodla/ai_higgsfield/REJESTR.md": {
-    "mtime": 1794508680.313631,
-    "seen": 1794565853.7807276,
-    "ast_hash": "24565931de22d70c048be69ce677a161",
+    "mtime": 1794587386.8344338,
+    "seen": 1794587398.7422276,
+    "ast_hash": "878a7afa1824a1983973ab71c2163f5b",
     "semantic_hash": ""
   },
   "scripts/graphify.sh": {
     "mtime": 1794565879.9425447,
     "seen": 1794565881.9971077,
     "ast_hash": "a88a7351372321f647b71701ae70c47f",
+    "semantic_hash": ""
+  },
+  "publikacje/2026-11-13/spec_kameleon.json": {
+    "mtime": 1794586474.8377564,
+    "seen": 1794587398.7419372,
+    "ast_hash": "50b163557721e2068fb4ee28c18f4632",
+    "semantic_hash": ""
+  },
+  "publikacje/2026-11-13/1800_opis.md": {
+    "mtime": 1794585521.896322,
+    "seen": 1794587398.7422163,
+    "ast_hash": "361a3e383e0471b53433b2dd0d847fd3",
     "semantic_hash": ""
   }
 }

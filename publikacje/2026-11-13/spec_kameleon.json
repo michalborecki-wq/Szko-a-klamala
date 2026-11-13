@@ -1,0 +1,55 @@
+{
+ "posts": [
+  {
+   "id": "kameleon",
+   "format": "reel",
+   "subject": "NAUKA",
+   "series": "SZKOŁA KŁAMAŁA",
+   "ton": "CIEKAWOSTKA",
+   "moc": "mocna",
+   "durations": [
+    4.2,
+    7.2,
+    5.8,
+    7.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "title": "Kameleon zmienia kolor, żeby go widziano.",
+     "accent": "Szkoła kłamała."
+    },
+    {
+     "type": "myth",
+     "myth_label": "W SZKOLE",
+     "fact_label": "NAPRAWDĘ",
+     "myth": "„Zmienia kolor, żeby się ukryć.”",
+     "fact": "Głównie po to, **żeby się pokazać** – rywalowi i samicy.",
+     "source": "Stuart-Fox, Moussalli – PLoS Biology 2008"
+    },
+    {
+     "type": "text",
+     "tag": "JAK",
+     "title": "Kolor robią",
+     "accent": "kryształy w skórze.",
+     "body": "Rozsuwa je – i **zmienia kolor**.",
+     "source": "Teyssier i in. – Nature Communications 2015"
+    },
+    {
+     "type": "outro",
+     "question": "Co jeszcze w szkole było na odwrót?",
+     "sub": "Wyślij komuś, kto lubi zwierzęta.",
+     "sources": "Kamuflaż też się zdarza – ale to nie główny powód.",
+     "partner_slot": false
+    }
+   ],
+   "tlo3d": {
+    "klatki": "VIRAL_REELS_FACTORY/VIDEOS/tla/kameleon",
+    "fps": 30,
+    "krycie": 0.96
+   },
+   "etykieta_ai": true,
+   "tresc": "dol"
+  }
+ ]
+}

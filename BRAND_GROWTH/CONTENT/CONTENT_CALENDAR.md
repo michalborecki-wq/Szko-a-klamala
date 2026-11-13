@@ -20,9 +20,10 @@ Wniosek: 3 formaty na 9 rolek, jeden schemat narracji. Od 13.11 18:00 obowiązuj
 ## Plan rotacji 13–20.11 (formaty; temat wybiera procedura redakcyjna tego dnia)
 | Slot | Format | Filar | Kluczowy klocek (nowość) |
 |---|---|---|---|
-| pt. 13.11 18:00 | POV | 3 (policja) | druga osoba, kroki „co robisz” zamiast twistu na 2. planszy |
+| pt. 13.11 18:00 | CINEMATIC (kameleon – zrobione) | 1 | 4 ujęcia AI, napisy u dołu |
+| sob. 14.11 18:00 | POV | 3 (policja) | druga osoba, kroki „co robisz” |
 | sob. 14.11 9:00 | MYTH (gotowa: Antarktyda) | 1 | tło wideo, mapa |
-| sob. 14.11 18:00 | INTERACTIVE | 1 | plansza `quiz` z odliczaniem |
+| nd. 15.11 9:00 | INTERACTIVE | 1 | plansza `quiz` z odliczaniem |
 | nd. 15.11 18:00 | TOP | 4 lub 1 | plansza `bars` |
 | pon. 16.11 9:00 | SVR | 1 | plansza `versus` „W szkole / Naprawdę” |
 | pon. 16.11 18:00 | NEWS | 3 (policja) | `wycinek` |
@@ -39,3 +40,5 @@ Karuzela 13:00 (TikTok): FAST/TOP/INTERACTIVE na zmianę; co tydzień 1 karuzela
 
 ## Wpisy bieżące
 (dopisywać: data | rolka | filar | format | okładka | tło | schemat | ocena różnorodności | uwagi)
+| 13.11 9:00 | Opinie w Google sprzedawano pakietami | 2 | NEWS | żółta | – | cover→twist→number→dokument→outro | 5 | nowy obraz „gwiazdki” |
+| 13.11 18:00 | Kameleon zmienia kolor, żeby go widziano | 1 | CINEMATIC | ciemna (wideo) | 4 ujęcia AI, inne na każdej planszy | cover→twist→text→outro, napisy u dołu | 8 | pierwsza rolka filmowa; temat: 9, kompozycja: 9, schemat: 6, hook: 7, nowość: 9, doświadczenie: 9 |
