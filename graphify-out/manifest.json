@@ -1,0 +1,974 @@
+{
+  ".claude/skills/szkola-klamala-3d/przyklady/pory_roku.json": {
+    "mtime": 1793489825.346886,
+    "seen": 1794565853.7803288,
+    "ast_hash": "d66cf73498b582257a61d23338b9f1dc",
+    "semantic_hash": ""
+  },
+  ".claude/skills/szkola-klamala-3d/scripts/marka3d.py": {
+    "mtime": 1793485535.2200568,
+    "seen": 1794565853.7803404,
+    "ast_hash": "6c4bcac8068f1276a959c441a76ac1a2",
+    "semantic_hash": ""
+  },
+  ".claude/skills/szkola-klamala-3d/scripts/sceny/opona.py": {
+    "mtime": 1793618400.3168516,
+    "seen": 1794565853.7803452,
+    "ast_hash": "a2017ce75cb684bda04badb5ad3e7b26",
+    "semantic_hash": ""
+  },
+  ".claude/skills/szkola-klamala-3d/scripts/sceny/opona_bok.py": {
+    "mtime": 1793616219.226933,
+    "seen": 1794565853.7803478,
+    "ast_hash": "fac9f405db7fa9403a1a1c891599c1ef",
+    "semantic_hash": ""
+  },
+  ".claude/skills/szkola-klamala-3d/scripts/sceny/pory_roku.py": {
+    "mtime": 1793486045.1499016,
+    "seen": 1794565853.7803504,
+    "ast_hash": "c8a35ac1f3279e9e8129f25e92e86467",
+    "semantic_hash": ""
+  },
+  ".claude/skills/szkola-klamala-animacje/scripts/lektor.py": {
+    "mtime": 1793293642.1140988,
+    "seen": 1794565853.7803526,
+    "ast_hash": "2925fdeff0b0abe8729f7db679005807",
+    "semantic_hash": ""
+  },
+  ".claude/skills/szkola-klamala-animacje/scripts/muzyka.py": {
+    "mtime": 1793342400.5803378,
+    "seen": 1794565853.7803545,
+    "ast_hash": "7b4f9fd38c2de95b0d2f6c395c1e0e98",
+    "semantic_hash": ""
+  },
+  ".claude/skills/szkola-klamala-dynamic-visual/scripts/kontrola.py": {
+    "mtime": 1794218152.0596228,
+    "seen": 1794565853.7803564,
+    "ast_hash": "ec7a1c2bf4b75eedda815c7e7da85a37",
+    "semantic_hash": ""
+  },
+  ".claude/skills/szkola-klamala-grafiki/assets/mapa_polska.json": {
+    "mtime": 1793568012.0023487,
+    "seen": 1794565853.780358,
+    "ast_hash": "18954508d51c9863c5bf4023465dbf36",
+    "semantic_hash": ""
+  },
+  ".claude/skills/szkola-klamala-grafiki/examples/przyklad.json": {
+    "mtime": 1793289873.3196542,
+    "seen": 1794565853.7803602,
+    "ast_hash": "25a0e92ad6d8cb0b4ef0b91519257801",
+    "semantic_hash": ""
+  },
+  ".claude/skills/szkola-klamala-grafiki/scripts/logo_outro.py": {
+    "mtime": 1793806105.450103,
+    "seen": 1794565853.7803626,
+    "ast_hash": "948e7f27db3a3832fecf17f9b408ec70",
+    "semantic_hash": ""
+  },
+  ".claude/skills/szkola-klamala-grafiki/scripts/obrazy.py": {
+    "mtime": 1794548020.464554,
+    "seen": 1794565853.7803648,
+    "ast_hash": "ad282032f3d72506229922f2822fda5f",
+    "semantic_hash": ""
+  },
+  ".claude/skills/szkola-klamala-grafiki/scripts/render.py": {
+    "mtime": 1794462666.5127327,
+    "seen": 1794565853.7803671,
+    "ast_hash": "c90fd3b680fd9e741be3ea43db0ea276",
+    "semantic_hash": ""
+  },
+  ".claude/skills/szkola-klamala-grafiki/scripts/ruch.py": {
+    "mtime": 1794433592.3800502,
+    "seen": 1794565853.780369,
+    "ast_hash": "a2980b0c8d02b052a4781cd0030e2216",
+    "semantic_hash": ""
+  },
+  ".claude/skills/szkola-klamala-montaz/scripts/klatki.py": {
+    "mtime": 1793295900.0781834,
+    "seen": 1794565853.7803714,
+    "ast_hash": "cbbec718020f77f273287b52faa9be20",
+    "semantic_hash": ""
+  },
+  ".claude/skills/szkola-klamala-montaz/scripts/montaz.py": {
+    "mtime": 1793372904.482541,
+    "seen": 1794565853.7803738,
+    "ast_hash": "f6266f98b8fb4639ac348ed5abd4e6e7",
+    "semantic_hash": ""
+  },
+  ".claude/skills/szkola-klamala-napisy/scripts/napisy.py": {
+    "mtime": 1793292428.6500416,
+    "seen": 1794565853.7803752,
+    "ast_hash": "b9d98c45721b82177fb6b52b98243d09",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_nawigacja_telefon/meta.json": {
+    "mtime": 1793793451.2674863,
+    "seen": 1794565853.7803776,
+    "ast_hash": "46416c62abf4d4ef4067d2ae89f76501",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_nawigacja_telefon/spec.json": {
+    "mtime": 1793803118.8615503,
+    "seen": 1794565853.7803795,
+    "ast_hash": "998dc934e786772315236f69274fd462",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_przejazdy_kolejowe/meta.json": {
+    "mtime": 1793793451.2672136,
+    "seen": 1794565853.7803817,
+    "ast_hash": "6980d44215137a8b1d9dc6fd07253764",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_przejazdy_kolejowe/spec.json": {
+    "mtime": 1793793574.4512894,
+    "seen": 1794565853.780384,
+    "ast_hash": "29720cae4e2423f5de6a9ba69c827f9a",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_zus_umorzenie/meta.json": {
+    "mtime": 1793793451.2668796,
+    "seen": 1794565853.7803862,
+    "ast_hash": "fac7fd5459460e7d3b0f73523e348e04",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_zus_umorzenie/spec.json": {
+    "mtime": 1793793532.4001012,
+    "seen": 1794565853.7803888,
+    "ast_hash": "cf94164127c05d3dbbfe364215c68a33",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/TOPICS/2026-11-04/tematy.json": {
+    "mtime": 1793793404.2801306,
+    "seen": 1794565853.780391,
+    "ast_hash": "560ef7b2dd736173e36c544cc1bb68ed",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/TOPICS/2026-11-04/top3.json": {
+    "mtime": 1793793404.3208482,
+    "seen": 1794565853.7803931,
+    "ast_hash": "22c31f3bdf19ee6c2647407317ec8f47",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/narzedzia/analityka.py": {
+    "mtime": 1793793235.8592694,
+    "seen": 1794565853.7803953,
+    "ast_hash": "4a08047670a461d7802aecef69ed436c",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/narzedzia/dostawa.py": {
+    "mtime": 1793980599.8119667,
+    "seen": 1794565853.7803977,
+    "ast_hash": "ea9a0ae31de16844feb8e1677517265e",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/narzedzia/lektor_koncowka.py": {
+    "mtime": 1793981322.0508204,
+    "seen": 1794565853.7803998,
+    "ast_hash": "7bc3b5f044e69a81cf00f855d05db63c",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/narzedzia/nowa_rolka.py": {
+    "mtime": 1793793190.7627525,
+    "seen": 1794565853.7804022,
+    "ast_hash": "2183a6cd3a7feef96106d328d04ce3ec",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/narzedzia/produkcja.py": {
+    "mtime": 1793793215.9263945,
+    "seen": 1794565853.7804046,
+    "ast_hash": "18d8d2f5e70bb3cc88496e1027e03ba3",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/narzedzia/ranking.py": {
+    "mtime": 1793793151.0472565,
+    "seen": 1794565853.7804062,
+    "ast_hash": "3a5be62ead227d8b3ad3dcb8c2da7487",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/narzedzia/relacja.py": {
+    "mtime": 1793980582.601741,
+    "seen": 1794565853.7804086,
+    "ast_hash": "600147f56264085dd82cd31360247c05",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/narzedzia/research.py": {
+    "mtime": 1794218955.0606127,
+    "seen": 1794565853.7804103,
+    "ast_hash": "787d8e3052daf5c7dfe81cb3283bb319",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/narzedzia/sledczy.py": {
+    "mtime": 1794463667.980586,
+    "seen": 1794565853.7804122,
+    "ast_hash": "cce0170c3f4fa14cb20cc3113a4752c5",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/narzedzia/wideo_tlo.py": {
+    "mtime": 1794314657.5008569,
+    "seen": 1794565853.780414,
+    "ast_hash": "053915ac6625fc63e38f101887e02502",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/narzedzia/zdjecia.py": {
+    "mtime": 1794221223.8362186,
+    "seen": 1794565853.7804163,
+    "ast_hash": "8c00730a099145e816c2a4ba00521289",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/narzedzia/zrodla_rss.json": {
+    "mtime": 1794434224.6509423,
+    "seen": 1794565853.7804182,
+    "ast_hash": "0a92583407dda3989427e54d6e0cb5c2",
+    "semantic_hash": ""
+  },
+  "publikacje/2026-11-06/spec_prawo_bron_czarnoprochowa.json": {
+    "mtime": 1793982456.5617967,
+    "seen": 1794565853.7804205,
+    "ast_hash": "c757704fc33c01605476628476bbc22d",
+    "semantic_hash": ""
+  },
+  "publikacje/2026-11-09/spec_policja5_mandat.json": {
+    "mtime": 1794244114.3579545,
+    "seen": 1794565853.7804227,
+    "ast_hash": "d510945670c25f8b5bc0a88334df7e89",
+    "semantic_hash": ""
+  },
+  "publikacje/2026-11-09/spec_pustynia_antarktyda.json": {
+    "mtime": 1794222786.7156827,
+    "seen": 1794565853.780425,
+    "ast_hash": "f805db82d3313a979db7329be9395fd3",
+    "semantic_hash": ""
+  },
+  "publikacje/2026-11-09/spec_zus_umorzenie.json": {
+    "mtime": 1794175129.9404688,
+    "seen": 1794565853.780427,
+    "ast_hash": "b6c5ab73be59f2894bf7e261bb0e695f",
+    "semantic_hash": ""
+  },
+  "publikacje/2026-11-10/spec_finanse_500zl.json": {
+    "mtime": 1794289256.2120059,
+    "seen": 1794565853.7804291,
+    "ast_hash": "4876635e60bf04852b77f8b82db63a1b",
+    "semantic_hash": ""
+  },
+  "publikacje/2026-11-10/spec_pit_telefon.json": {
+    "mtime": 1794292945.641809,
+    "seen": 1794565853.780431,
+    "ast_hash": "fc6e704ba9f778b72021c2c55afd8a99",
+    "semantic_hash": ""
+  },
+  "publikacje/2026-11-11/spec_mur_ksiezyc.json": {
+    "mtime": 1794314782.9833956,
+    "seen": 1794565853.7804377,
+    "ast_hash": "02044c360682b159b095aeb89e64244d",
+    "semantic_hash": ""
+  },
+  "publikacje/2026-11-11/spec_policja6_autostrada.json": {
+    "mtime": 1794416440.979165,
+    "seen": 1794565853.78044,
+    "ast_hash": "750eaa2476f5ac8cfbe0ec81cb1a6f8c",
+    "semantic_hash": ""
+  },
+  "publikacje/2026-11-12/spec_pozyczka_kurs.json": {
+    "mtime": 1794461647.9074993,
+    "seen": 1794565853.7804425,
+    "ast_hash": "a4bb02f8900b1119409014604034d3d3",
+    "semantic_hash": ""
+  },
+  "publikacje/2026-11-12/spec_zimowki_ac.json": {
+    "mtime": 1794507727.6167424,
+    "seen": 1794565853.7804444,
+    "ast_hash": "114b7d1dab73f8f1ec69782ce71b0695",
+    "semantic_hash": ""
+  },
+  "publikacje/2026-11-13/spec_falszywe_opinie.json": {
+    "mtime": 1794547983.539583,
+    "seen": 1794565853.780447,
+    "ast_hash": "099bc4a64fd9b45d3c91bdb2919d88d6",
+    "semantic_hash": ""
+  },
+  "publikacje/2026-11-14/spec_antarktyda_pustynia.json": {
+    "mtime": 1794314815.4237123,
+    "seen": 1794565853.7804494,
+    "ast_hash": "eb62c52ccfba5a7eadfa954b8d97f5b1",
+    "semantic_hash": ""
+  },
+  "scripts/instaluj.sh": {
+    "mtime": 1793485921.0804195,
+    "seen": 1794565853.7804515,
+    "ast_hash": "4ce4e5cbe2e0a3e027a38970f4ab1607",
+    "semantic_hash": ""
+  },
+  "scripts/mapy_dane.py": {
+    "mtime": 1794221347.7353435,
+    "seen": 1794565853.780454,
+    "ast_hash": "f59ca163dbb694b567df2680c6a1418e",
+    "semantic_hash": ""
+  },
+  "scripts/pobierz_prawo_policja.py": {
+    "mtime": 1793646433.196762,
+    "seen": 1794565853.7804558,
+    "ast_hash": "bc26e40d98535850f53d7badd0b20adf",
+    "semantic_hash": ""
+  },
+  "specs/06_prawo_policja6_50kmh.json": {
+    "mtime": 1793785693.5914063,
+    "seen": 1794565853.780458,
+    "ast_hash": "7c1570033b7d806846fc7680b1e446f0",
+    "semantic_hash": ""
+  },
+  "specs/08_prawo_policja7_milczenie.json": {
+    "mtime": 1793785693.591981,
+    "seen": 1794565853.7804604,
+    "ast_hash": "9f507925d80acb9a9c782f2935fe512a",
+    "semantic_hash": ""
+  },
+  "specs/demo_silnik/demo.json": {
+    "mtime": 1794173529.3588629,
+    "seen": 1794565853.7804623,
+    "ast_hash": "b305abaaedc0e078b59dc7839e399a3f",
+    "semantic_hash": ""
+  },
+  "specs/demo_silnik/demo_dve.json": {
+    "mtime": 1794218152.0596228,
+    "seen": 1794565853.7804642,
+    "ast_hash": "6351266d17192fc8e88402dd31efcd8f",
+    "semantic_hash": ""
+  },
+  "specs/demo_silnik/demo_wycinek_foto.json": {
+    "mtime": 1794221409.5194042,
+    "seen": 1794565853.780466,
+    "ast_hash": "7b2e129e0f0af01ea8989a8be1402f3b",
+    "semantic_hash": ""
+  },
+  "specs/demo_silnik/otwarcia.json": {
+    "mtime": 1794163226.6404333,
+    "seen": 1794565853.7804685,
+    "ast_hash": "1f0db93173539d9df8d11d9b1be14b32",
+    "semantic_hash": ""
+  },
+  "specs/prawo_policja2_recydywa.json": {
+    "mtime": 1793695013.869394,
+    "seen": 1794565853.7804706,
+    "ast_hash": "4f63408af4f6bb29f55a141d0f730842",
+    "semantic_hash": ""
+  },
+  "specs/prawo_policja_norma_legitymowan.json": {
+    "mtime": 1793656225.619864,
+    "seen": 1794565853.7804725,
+    "ast_hash": "35e6241bf0fe3e6b8fc41c3ba7e85c60",
+    "semantic_hash": ""
+  },
+  "specs/prawo_policja_norma_legitymowan_B_krotka.json": {
+    "mtime": 1793656225.6214857,
+    "seen": 1794565853.7804747,
+    "ast_hash": "2803f2f3f948b9c20a4723a8c5517781",
+    "semantic_hash": ""
+  },
+  "specs/tydzien_4-8.11_r1.json": {
+    "mtime": 1793771953.6846795,
+    "seen": 1794565853.7804766,
+    "ast_hash": "9010b817caa1edce8bcdb626c9c88c6a",
+    "semantic_hash": ""
+  },
+  "specs/tydzien_4-8.11_r2-9.json": {
+    "mtime": 1793771953.6867087,
+    "seen": 1794565853.7804787,
+    "ast_hash": "cbe513e8156f6929bdfd09d11b65b219",
+    "semantic_hash": ""
+  },
+  ".claude/agents/brand-director.md": {
+    "mtime": 1794550454.663089,
+    "seen": 1794565853.7804809,
+    "ast_hash": "0a2b91a872029ca96772c4de5f2e90aa",
+    "semantic_hash": ""
+  },
+  ".claude/agents/szkola-klamala-agent.md": {
+    "mtime": 1793881572.3305423,
+    "seen": 1794565853.7804825,
+    "ast_hash": "85633a2110a71902a173c77401450af4",
+    "semantic_hash": ""
+  },
+  ".claude/skills/brand-growth-director/SKILL.md": {
+    "mtime": 1794550454.6614118,
+    "seen": 1794565853.7804852,
+    "ast_hash": "70310a3aa5d9d4f5c87a9281f9ea6efc",
+    "semantic_hash": ""
+  },
+  ".claude/skills/szkola-klamala-3d/SKILL.md": {
+    "mtime": 1793485921.0856185,
+    "seen": 1794565853.7804875,
+    "ast_hash": "f16bcc71de823d4098fb199f3f05d873",
+    "semantic_hash": ""
+  },
+  ".claude/skills/szkola-klamala-agent/SKILL.md": {
+    "mtime": 1794425072.0554965,
+    "seen": 1794565853.7804897,
+    "ast_hash": "e2e9465bb6e874ff7250f13df7023b14",
+    "semantic_hash": ""
+  },
+  ".claude/skills/szkola-klamala-animacje/SKILL.md": {
+    "mtime": 1793528985.7850108,
+    "seen": 1794565853.7804918,
+    "ast_hash": "c023ea51fe6630db532b7cabf72aacc0",
+    "semantic_hash": ""
+  },
+  ".claude/skills/szkola-klamala-dynamic-visual/SKILL.md": {
+    "mtime": 1794317474.2548974,
+    "seen": 1794565853.7804937,
+    "ast_hash": "147b6353f3fa2a932d0de5b089e5a845",
+    "semantic_hash": ""
+  },
+  ".claude/skills/szkola-klamala-grafiki/SKILL.md": {
+    "mtime": 1794173195.1777942,
+    "seen": 1794565853.780496,
+    "ast_hash": "b302901451241a4e392c5421a976b53b",
+    "semantic_hash": ""
+  },
+  ".claude/skills/szkola-klamala-grafiki/references/design-system.md": {
+    "mtime": 1793289873.319206,
+    "seen": 1794565853.780498,
+    "ast_hash": "112a435f593fead6d1f67aaad1e5b9f7",
+    "semantic_hash": ""
+  },
+  ".claude/skills/szkola-klamala-grafiki/references/spec-format.md": {
+    "mtime": 1793569611.3300798,
+    "seen": 1794565853.7804997,
+    "ast_hash": "0dc4db6640560a40ce649e4eacf17317",
+    "semantic_hash": ""
+  },
+  ".claude/skills/szkola-klamala-montaz/SKILL.md": {
+    "mtime": 1793341452.0848615,
+    "seen": 1794565853.7805393,
+    "ast_hash": "fab0163bca0ca6e8764bf9ac19d3ca90",
+    "semantic_hash": ""
+  },
+  ".claude/skills/szkola-klamala-napisy/SKILL.md": {
+    "mtime": 1793298813.833003,
+    "seen": 1794565853.780544,
+    "ast_hash": "efa325780f3398ddd5ab6a9914e7b209",
+    "semantic_hash": ""
+  },
+  ".claude/skills/szkola-klamala-redakcja/SKILL.md": {
+    "mtime": 1794425111.1818614,
+    "seen": 1794565853.780547,
+    "ast_hash": "ddc0bc67dc73755cf872cd2e0dd12cbf",
+    "semantic_hash": ""
+  },
+  ".claude/skills/szkola-klamala-sledczy/SKILL.md": {
+    "mtime": 1794434294.9394875,
+    "seen": 1794565853.7805493,
+    "ast_hash": "7706d7e678382644d1c6a4dba83d985d",
+    "semantic_hash": ""
+  },
+  ".claude/skills/szkola-klamala-viral/SKILL.md": {
+    "mtime": 1793691082.3815682,
+    "seen": 1794565853.780552,
+    "ast_hash": "8478adaa4c194dab0ffe3242910c1f4a",
+    "semantic_hash": ""
+  },
+  "BRAND_GROWTH/ANALYTICS/IMPROVEMENTS.md": {
+    "mtime": 1794550624.712445,
+    "seen": 1794565853.7805545,
+    "ast_hash": "62f46905d6bb72a93788f4a0fe578d53",
+    "semantic_hash": ""
+  },
+  "BRAND_GROWTH/ANALYTICS/PERFORMANCE.md": {
+    "mtime": 1794551764.9768825,
+    "seen": 1794565853.780557,
+    "ast_hash": "bcb63ba5b10b3da1fb0d442bc8874634",
+    "semantic_hash": ""
+  },
+  "BRAND_GROWTH/BRAND_IDENTITY/BRAND_GUIDELINES.md": {
+    "mtime": 1794550624.6914475,
+    "seen": 1794565853.780559,
+    "ast_hash": "9f411655dd6d671dc02d19966c1f6f41",
+    "semantic_hash": ""
+  },
+  "BRAND_GROWTH/BRAND_IDENTITY/DESIGN_SYSTEM.md": {
+    "mtime": 1794550624.6943004,
+    "seen": 1794565853.7805612,
+    "ast_hash": "671b885f8cbddfdf614230603a2ff286",
+    "semantic_hash": ""
+  },
+  "BRAND_GROWTH/BRAND_IDENTITY/VISUAL_IDENTITY.md": {
+    "mtime": 1794550624.6929505,
+    "seen": 1794565853.780563,
+    "ast_hash": "0912ed954e187a9f917ce1f55c06d083",
+    "semantic_hash": ""
+  },
+  "BRAND_GROWTH/CONTENT/CONTENT_CALENDAR.md": {
+    "mtime": 1794551072.2205353,
+    "seen": 1794565853.7805653,
+    "ast_hash": "46bcc79720ff7ee4c8640edc7ce0d978",
+    "semantic_hash": ""
+  },
+  "BRAND_GROWTH/CONTENT/CONTENT_PILLARS.md": {
+    "mtime": 1794550624.7022223,
+    "seen": 1794565853.7805674,
+    "ast_hash": "6653149778285e1b5a48e4fdbd1e046f",
+    "semantic_hash": ""
+  },
+  "BRAND_GROWTH/CONTENT/FORMAT_LIBRARY.md": {
+    "mtime": 1794550624.7039905,
+    "seen": 1794565853.7805693,
+    "ast_hash": "2c11f498f88b0a738c7230ae4e0f8408",
+    "semantic_hash": ""
+  },
+  "BRAND_GROWTH/CREATIVE_LAB/EXPERIMENTS.md": {
+    "mtime": 1794551680.1634908,
+    "seen": 1794565853.7805738,
+    "ast_hash": "a823ff5763cece21a8e93dd799105cb8",
+    "semantic_hash": ""
+  },
+  "BRAND_GROWTH/CREATIVE_LAB/VISUAL_INNOVATIONS.md": {
+    "mtime": 1794550624.7095082,
+    "seen": 1794565853.7805765,
+    "ast_hash": "3b29b1a71b06296556dac2b94f40cbd4",
+    "semantic_hash": ""
+  },
+  "BRAND_GROWTH/README.md": {
+    "mtime": 1794550624.689277,
+    "seen": 1794565853.7805786,
+    "ast_hash": "b43f938a907056227ceed62e665db9da",
+    "semantic_hash": ""
+  },
+  "BRAND_GROWTH/REPORTS/BRAND_AUDIT.md": {
+    "mtime": 1794551072.2201352,
+    "seen": 1794565853.7805805,
+    "ast_hash": "44b6e08c3c4d3eaeac5a0e4b78cf4a73",
+    "semantic_hash": ""
+  },
+  "BRAND_GROWTH/STRATEGY/AUDIENCE.md": {
+    "mtime": 1794550624.6984293,
+    "seen": 1794565853.7805827,
+    "ast_hash": "91fa955e82bb2328c0f196da07fbb0d0",
+    "semantic_hash": ""
+  },
+  "BRAND_GROWTH/STRATEGY/BRAND_STRATEGY.md": {
+    "mtime": 1794550624.6966531,
+    "seen": 1794565853.7805848,
+    "ast_hash": "eed65f448d8036f2bdb1d12b4b392b1a",
+    "semantic_hash": ""
+  },
+  "BRAND_GROWTH/STRATEGY/GROWTH_PLAN.md": {
+    "mtime": 1794550624.7001505,
+    "seen": 1794565853.7805865,
+    "ast_hash": "e64ee393b6747913fded2ea99fa030f4",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1794565879.9636035,
+    "seen": 1794565881.997173,
+    "ast_hash": "c2d919cf86dc15dce9106c6a95c8db32",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/IMAGES/2026-11-04_nawigacja_telefon/prompty.md": {
+    "mtime": 1793793427.103007,
+    "seen": 1794565853.7805908,
+    "ast_hash": "05f6e20d16fb4c1cb172a5ed4fab8b11",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/IMAGES/2026-11-04_przejazdy_kolejowe/prompty.md": {
+    "mtime": 1793793427.0607061,
+    "seen": 1794565853.780593,
+    "ast_hash": "c0a7b38b226f4d44e84e24375ef03afe",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/IMAGES/2026-11-04_zus_umorzenie/prompty.md": {
+    "mtime": 1793793427.0195746,
+    "seen": 1794565853.7805953,
+    "ast_hash": "4ff89e16381b8d5c958a63e10febe623",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/README.md": {
+    "mtime": 1793793618.971292,
+    "seen": 1794565853.7805974,
+    "ast_hash": "1502ba8e2eea237855cc7e6d0f737478",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/READY_TO_PUBLISH/2026-11-04_nawigacja_telefon/LISTA.md": {
+    "mtime": 1793808865.306761,
+    "seen": 1794565853.7805994,
+    "ast_hash": "8bdd5ae8de7798ef185edbc35a150038",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/READY_TO_PUBLISH/2026-11-04_nawigacja_telefon/opis.md": {
+    "mtime": 1793808865.3055398,
+    "seen": 1794565853.7806015,
+    "ast_hash": "8fcab1c5b8fa9976e4d45aa3eaf67e1c",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/READY_TO_PUBLISH/2026-11-04_nawigacja_telefon/scenariusz.md": {
+    "mtime": 1793808865.306481,
+    "seen": 1794565853.7806034,
+    "ast_hash": "4a963001c3cabc74f3fb50a9920dda7c",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/READY_TO_PUBLISH/2026-11-04_nawigacja_telefon/zrodla.md": {
+    "mtime": 1793808865.3061051,
+    "seen": 1794565853.780606,
+    "ast_hash": "c5aa5ccf869dd9aca73c92fe256c6d0d",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/READY_TO_PUBLISH/2026-11-04_przejazdy_kolejowe/LISTA.md": {
+    "mtime": 1793800217.2734406,
+    "seen": 1794565853.7806077,
+    "ast_hash": "746c6928ddb47ef38a240c421733eb6c",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/READY_TO_PUBLISH/2026-11-04_przejazdy_kolejowe/opis.md": {
+    "mtime": 1793800217.2731268,
+    "seen": 1794565853.7806098,
+    "ast_hash": "20701962fcd30988e4c12b8b4173cb7a",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/READY_TO_PUBLISH/2026-11-04_przejazdy_kolejowe/scenariusz.md": {
+    "mtime": 1793800217.2733238,
+    "seen": 1794565853.7806118,
+    "ast_hash": "1b1322a696136d805060252c9f66fc46",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/READY_TO_PUBLISH/2026-11-04_przejazdy_kolejowe/zrodla.md": {
+    "mtime": 1793800217.2732253,
+    "seen": 1794565853.780614,
+    "ast_hash": "ddf9b19991f840560632f90f55d845f1",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/READY_TO_PUBLISH/2026-11-04_zus_umorzenie/LISTA.md": {
+    "mtime": 1793797439.675474,
+    "seen": 1794565853.7806163,
+    "ast_hash": "40729f7b5a3cbdcae9afe5303f32b316",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/READY_TO_PUBLISH/2026-11-04_zus_umorzenie/opis.md": {
+    "mtime": 1793797439.6751194,
+    "seen": 1794565853.7806182,
+    "ast_hash": "07a5e6b74fb4108a04ffa141b8538b8e",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/READY_TO_PUBLISH/2026-11-04_zus_umorzenie/scenariusz.md": {
+    "mtime": 1793797439.675327,
+    "seen": 1794565853.7806203,
+    "ast_hash": "d02b23c416b713fe5a4f3d694e9aa1c9",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/READY_TO_PUBLISH/2026-11-04_zus_umorzenie/zrodla.md": {
+    "mtime": 1793797439.6752465,
+    "seen": 1794565853.7806222,
+    "ast_hash": "965b1925a533bbd6c281abda8d4e7a9f",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_nawigacja_telefon/opis.md": {
+    "mtime": 1793793685.3781993,
+    "seen": 1794565853.7806244,
+    "ast_hash": "8fcab1c5b8fa9976e4d45aa3eaf67e1c",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_nawigacja_telefon/scenariusz.md": {
+    "mtime": 1793793685.3763583,
+    "seen": 1794565853.7806265,
+    "ast_hash": "4a963001c3cabc74f3fb50a9920dda7c",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_nawigacja_telefon/zrodla.md": {
+    "mtime": 1793793685.3801184,
+    "seen": 1794565853.7806282,
+    "ast_hash": "c5aa5ccf869dd9aca73c92fe256c6d0d",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_przejazdy_kolejowe/opis.md": {
+    "mtime": 1793793685.3727028,
+    "seen": 1794565853.7806304,
+    "ast_hash": "20701962fcd30988e4c12b8b4173cb7a",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_przejazdy_kolejowe/scenariusz.md": {
+    "mtime": 1793793685.3706114,
+    "seen": 1794565853.7806323,
+    "ast_hash": "1b1322a696136d805060252c9f66fc46",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_przejazdy_kolejowe/zrodla.md": {
+    "mtime": 1793793685.374499,
+    "seen": 1794565853.7806344,
+    "ast_hash": "ddf9b19991f840560632f90f55d845f1",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_zus_umorzenie/opis.md": {
+    "mtime": 1793793685.2102172,
+    "seen": 1794565853.7806363,
+    "ast_hash": "07a5e6b74fb4108a04ffa141b8538b8e",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_zus_umorzenie/scenariusz.md": {
+    "mtime": 1793793685.207815,
+    "seen": 1794565853.7806382,
+    "ast_hash": "d02b23c416b713fe5a4f3d694e9aa1c9",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/SCRIPTS/2026-11-04_zus_umorzenie/zrodla.md": {
+    "mtime": 1793793685.212205,
+    "seen": 1794565853.7806404,
+    "ast_hash": "965b1925a533bbd6c281abda8d4e7a9f",
+    "semantic_hash": ""
+  },
+  "VIRAL_REELS_FACTORY/TOPICS/2026-11-04/TOP10.md": {
+    "mtime": 1793793404.32121,
+    "seen": 1794565853.7806423,
+    "ast_hash": "c1996a1de9362c837d0ba0b209ca1dd3",
+    "semantic_hash": ""
+  },
+  "docs/KONTEKST_szkola_klamala.md": {
+    "mtime": 1793289873.324128,
+    "seen": 1794565853.780645,
+    "ast_hash": "81c770efaf9fc54597b056137b745c9e",
+    "semantic_hash": ""
+  },
+  "docs/agent/dziennik.md": {
+    "mtime": 1794549396.608847,
+    "seen": 1794565853.7806468,
+    "ast_hash": "badbb12ea2d3933d829a2bc30a84d2e3",
+    "semantic_hash": ""
+  },
+  "docs/agent/kalendarz.md": {
+    "mtime": 1794549396.608847,
+    "seen": 1794565853.780649,
+    "ast_hash": "eb988ecca6528752c3adf8d7405382f8",
+    "semantic_hash": ""
+  },
+  "docs/agent/lekcje.md": {
+    "mtime": 1794550648.766652,
+    "seen": 1794565853.780651,
+    "ast_hash": "7d1487aae94b2e49a685304a2ea49fcf",
+    "semantic_hash": ""
+  },
+  "docs/agent/opisy/tydzien_4-8.11.md": {
+    "mtime": 1793820335.2583172,
+    "seen": 1794565853.780653,
+    "ast_hash": "8c2c7f434c3410db3e787ede380b8c7c",
+    "semantic_hash": ""
+  },
+  "docs/analiza-canva-2026-11.md": {
+    "mtime": 1793569611.3434956,
+    "seen": 1794565853.7806554,
+    "ast_hash": "473aa0d01f122068c8eea8951361486f",
+    "semantic_hash": ""
+  },
+  "docs/analiza-konkurencji-2026-10.md": {
+    "mtime": 1793429539.7233696,
+    "seen": 1794565853.7806573,
+    "ast_hash": "ea0fe3c72c584aa1b9c1e61c71673812",
+    "semantic_hash": ""
+  },
+  "docs/analiza-wynikow-2026-11-09.md": {
+    "mtime": 1794222949.173754,
+    "seen": 1794565853.7806597,
+    "ast_hash": "aff21ace05c85d61ec5cbc74ba16b16c",
+    "semantic_hash": ""
+  },
+  "docs/analiza-wynikow-2026-11-11.md": {
+    "mtime": 1794433483.1318316,
+    "seen": 1794565853.7806616,
+    "ast_hash": "cc6cbe7509bbd0254cb4364ab1e2c422",
+    "semantic_hash": ""
+  },
+  "docs/analiza-zasiegu-2026-11-02.md": {
+    "mtime": 1793636248.2269428,
+    "seen": 1794565853.780664,
+    "ast_hash": "8a5b4c9828ac6ba622d502333f99f6fa",
+    "semantic_hash": ""
+  },
+  "docs/higgsfield-procedura.md": {
+    "mtime": 1794433642.23251,
+    "seen": 1794565853.7806664,
+    "ast_hash": "03cacc4a1c95bda6311fcf66127adbdf",
+    "semantic_hash": ""
+  },
+  "docs/ig-voice.md": {
+    "mtime": 1793653250.703871,
+    "seen": 1794565853.7806685,
+    "ast_hash": "ad8150d114eb1f8ce21804347d284b63",
+    "semantic_hash": ""
+  },
+  "docs/opublikowane.md": {
+    "mtime": 1794289281.4068127,
+    "seen": 1794565853.7806704,
+    "ast_hash": "42a1e9160e051c04bfddc46e58f42fa3",
+    "semantic_hash": ""
+  },
+  "docs/otwarte-sprawy.md": {
+    "mtime": 1793867708.2940197,
+    "seen": 1794565853.7806726,
+    "ast_hash": "6e4537f5f1e8d5298e6dbf7828309a4f",
+    "semantic_hash": ""
+  },
+  "docs/plan-2-7.11.md": {
+    "mtime": 1793541966.1913695,
+    "seen": 1794565853.7806745,
+    "ast_hash": "1104634277a1c8c2170bbbaf6fef6f5f",
+    "semantic_hash": ""
+  },
+  "docs/plan-wzrostu-2026-11.md": {
+    "mtime": 1793607050.154388,
+    "seen": 1794565853.7806766,
+    "ast_hash": "296ca15fb300451ac0e488f97e7eb55f",
+    "semantic_hash": ""
+  },
+  "docs/pomysly-tematow.md": {
+    "mtime": 1793606424.6583507,
+    "seen": 1794565853.7806787,
+    "ast_hash": "335804076eeeff900c87bb7b3b7daa73",
+    "semantic_hash": ""
+  },
+  "docs/profil.md": {
+    "mtime": 1793289848.0563202,
+    "seen": 1794565853.780681,
+    "ast_hash": "cb012fcc624daae9da68d47601759450",
+    "semantic_hash": ""
+  },
+  "docs/przekazanie-claude-code-2026-11-09.md": {
+    "mtime": 1794218152.0596228,
+    "seen": 1794565853.780683,
+    "ast_hash": "ed3a96fd518d53229dc81eb780b07dee",
+    "semantic_hash": ""
+  },
+  "docs/seria-policja.md": {
+    "mtime": 1793656225.624569,
+    "seen": 1794565853.7806847,
+    "ast_hash": "9f2e9e20362698aa192ba3df2fbd2a97",
+    "semantic_hash": ""
+  },
+  "docs/tiktok-shop-produkty.md": {
+    "mtime": 1793954009.6094782,
+    "seen": 1794565853.780687,
+    "ast_hash": "f73088860e39737bf2e3ba47131d9d2e",
+    "semantic_hash": ""
+  },
+  "docs/tiktok-shop.md": {
+    "mtime": 1793872500.5953717,
+    "seen": 1794565853.7806892,
+    "ast_hash": "c115824d1e85d34d8d40b717d41a2e1e",
+    "semantic_hash": ""
+  },
+  "docs/wyniki.md": {
+    "mtime": 1794222949.1750462,
+    "seen": 1794565853.7806911,
+    "ast_hash": "2ecc357051305aa8778f23545fa64b26",
+    "semantic_hash": ""
+  },
+  "docs/zrodla.md": {
+    "mtime": 1793486094.133961,
+    "seen": 1794565853.7806933,
+    "ast_hash": "fafd112ec24ded965913720aaaf5bd77",
+    "semantic_hash": ""
+  },
+  "publikacje/2026-11-06/1800_opis.md": {
+    "mtime": 1793984029.6633048,
+    "seen": 1794565853.7806952,
+    "ast_hash": "4df995e697da938d6976a17c0aea40c3",
+    "semantic_hash": ""
+  },
+  "publikacje/2026-11-07/1800_opis.md": {
+    "mtime": 1794076589.424638,
+    "seen": 1794565853.780697,
+    "ast_hash": "2633da44487701e03671b78bc06e1b67",
+    "semantic_hash": ""
+  },
+  "publikacje/2026-11-08/1800_opis.md": {
+    "mtime": 1794155788.953002,
+    "seen": 1794565853.7806995,
+    "ast_hash": "a0cbbde0e59099f14eea5041587f111d",
+    "semantic_hash": ""
+  },
+  "publikacje/2026-11-09/0900_opis.md": {
+    "mtime": 1794173902.9490066,
+    "seen": 1794565853.7807012,
+    "ast_hash": "dc125821be70dccef08c476291853dbb",
+    "semantic_hash": ""
+  },
+  "publikacje/2026-11-09/1300_opis.md": {
+    "mtime": 1794222674.2594082,
+    "seen": 1794565853.7807033,
+    "ast_hash": "80dbea9b7a58ab3be48d11b485ebda42",
+    "semantic_hash": ""
+  },
+  "publikacje/2026-11-09/1800_opis.md": {
+    "mtime": 1794244114.3630219,
+    "seen": 1794565853.7807055,
+    "ast_hash": "79d17bc76f2bdccd423fcafb2ca62529",
+    "semantic_hash": ""
+  },
+  "publikacje/2026-11-10/0900_opis.md": {
+    "mtime": 1794289256.214544,
+    "seen": 1794565853.7807076,
+    "ast_hash": "dbdff5ad21f77baaa8335d4e8080b1ae",
+    "semantic_hash": ""
+  },
+  "publikacje/2026-11-10/1800_opis.md": {
+    "mtime": 1794292945.6434639,
+    "seen": 1794565853.7807097,
+    "ast_hash": "03bee3a8dde487ea242f96f9b90e8ed7",
+    "semantic_hash": ""
+  },
+  "publikacje/2026-11-11/0900_opis.md": {
+    "mtime": 1794314815.4308665,
+    "seen": 1794565853.7807117,
+    "ast_hash": "9ef7edc4bad39d12ba81533590586c55",
+    "semantic_hash": ""
+  },
+  "publikacje/2026-11-11/1800_opis.md": {
+    "mtime": 1794415530.199429,
+    "seen": 1794565853.7807136,
+    "ast_hash": "79ea66a7bbb72337c2d5f3251f55dcc0",
+    "semantic_hash": ""
+  },
+  "publikacje/2026-11-12/0900_opis.md": {
+    "mtime": 1794461630.9585397,
+    "seen": 1794565853.7807152,
+    "ast_hash": "9e11d9a5b55bf07ae49c280d94c46a58",
+    "semantic_hash": ""
+  },
+  "publikacje/2026-11-12/1800_opis.md": {
+    "mtime": 1794508645.2673266,
+    "seen": 1794565853.7807174,
+    "ast_hash": "3fac6d50ee199f01fd9d9b397bceb3df",
+    "semantic_hash": ""
+  },
+  "publikacje/2026-11-13/0900_opis.md": {
+    "mtime": 1794548227.2513015,
+    "seen": 1794565853.7807193,
+    "ast_hash": "60b56863da07495e9411678ebb626f2b",
+    "semantic_hash": ""
+  },
+  "publikacje/2026-11-14/0900_opis.md": {
+    "mtime": 1794314815.4323988,
+    "seen": 1794565853.7807214,
+    "ast_hash": "717c9a0ed5e2e0b1bfa7bb2a5b2f6775",
+    "semantic_hash": ""
+  },
+  "requirements.txt": {
+    "mtime": 1793483273.1920743,
+    "seen": 1794565853.7807236,
+    "ast_hash": "229508bdeb101d549ff97be1c3e24d56",
+    "semantic_hash": ""
+  },
+  "zrodla/ai_higgsfield/2026-11-10/INFO.md": {
+    "mtime": 1794314513.80993,
+    "seen": 1794565853.7807255,
+    "ast_hash": "57f935486c6dbd7615ccc802ad6f408a",
+    "semantic_hash": ""
+  },
+  "zrodla/ai_higgsfield/REJESTR.md": {
+    "mtime": 1794508680.313631,
+    "seen": 1794565853.7807276,
+    "ast_hash": "24565931de22d70c048be69ce677a161",
+    "semantic_hash": ""
+  },
+  "scripts/graphify.sh": {
+    "mtime": 1794565879.9425447,
+    "seen": 1794565881.9971077,
+    "ast_hash": "a88a7351372321f647b71701ae70c47f",
+    "semantic_hash": ""
+  }
+}

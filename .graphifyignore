@@ -1,0 +1,24 @@
+# graphify – tylko nasz kod i dokumenty (bez cudzych skilli, renderów i tekstów ustaw)
+.claude/skills/*
+!.claude/skills/szkola-klamala-*/
+!.claude/skills/brand-growth-director/
+.claude/commands/
+.claude/agents/*
+!.claude/agents/szkola-klamala-agent.md
+!.claude/agents/brand-director.md
+legacy/
+out/
+VIRAL_REELS_FACTORY/VIDEOS/
+VIRAL_REELS_FACTORY/DOSTAWA/
+VIRAL_REELS_FACTORY/RESEARCH/
+zrodla/prawo/
+zrodla/mapy/
+zrodla/zdjecia/
+zrodla/ai_higgsfield/*/wideo/
+zrodla/ai_higgsfield/*/obrazy/
+docs/archiwum/
+*.jpg
+*.png
+*.mp4
+*.pdf
+graphify-out/
