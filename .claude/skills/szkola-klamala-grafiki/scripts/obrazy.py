@@ -211,8 +211,21 @@ def odznaka(**_):
     return _svg("-320 -340 640 700", f"<g class='ob-in'>{tarcza}<path d='{gw}' fill='{Y}' class='ob-pulse'/></g>")
 
 
+def gwiazdki(**_):
+    # karta opinii z pięcioma gwiazdkami (13.11) – recenzje, oceny, „5/5”; bez logo żadnego serwisu
+    gw = "M0 -62 L18 -20 L64 -18 L28 10 L40 54 L0 30 L-40 54 L-28 10 L-64 -18 L-18 -20 Z"
+    karta = (f"<rect x='-330' y='-210' width='660' height='420' rx='34' fill='{N2}' stroke='{B}' stroke-width='14'/>"
+             f"<circle cx='-235' cy='-115' r='46' fill='{B}'/><rect x='-165' y='-140' width='300' height='22' rx='11' fill='{W}' opacity='.85'/>"
+             f"<rect x='-165' y='-100' width='190' height='18' rx='9' fill='{W}' opacity='.45'/>"
+             f"<rect x='-270' y='110' width='540' height='18' rx='9' fill='{W}' opacity='.35'/>"
+             f"<rect x='-270' y='146' width='380' height='18' rx='9' fill='{W}' opacity='.25'/>")
+    stars = "".join(f"<g transform='translate({-240 + i * 120} 20)'><path d='{gw}' fill='{Y}' class='ob-drop' "
+                    f"style='animation-delay:{.05 * i}s'/></g>" for i in range(5))
+    return _svg("-360 -250 720 500", f"<g class='ob-in'>{karta}</g>{stars}")
+
+
 OBRAZY = {"polska": polska, "torba": torba, "suwak": suwak, "dowod": dowod, "monety": monety, "opona": opona, "zegar": zegar,
-          "licznik": licznik, "ruletka": ruletka, "saturn": saturn, "odznaka": odznaka}
+          "licznik": licznik, "ruletka": ruletka, "saturn": saturn, "odznaka": odznaka, "gwiazdki": gwiazdki}
 
 
 def html(nazwa, opcje=None, wysokosc=520, pieczatka=None):

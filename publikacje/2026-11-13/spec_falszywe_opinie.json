@@ -1,0 +1,11 @@
+{"posts": [{
+ "id": "falszywe_opinie", "format": "reel", "subject": "PIENIĄDZE", "series": "ŚLEDZTWO",
+ "ton": "KONTROWERSJA", "moc": "mocna",
+ "durations": [3.2, 5.4, 4.6, 5.0, 4.6],
+ "slides": [
+  {"type": "cover", "obraz": "gwiazdki", "pieczatka": "KUPIONE", "title": "Opinie w Google sprzedawano pakietami.", "accent": "Jest kara."},
+  {"type": "myth", "myth_label": "MIT", "fact_label": "UOKiK", "myth": "„Opinie piszą prawdziwi klienci.”", "fact": "Recenzenci **nie testowali produktów** ani usług.", "source": "UOKiK, komunikat z 5.11.2026"},
+  {"type": "number", "tag": "KARY", "big": "222 tys. zł", "count": false, "title": "za fałszywe opinie", "accent": "dwie decyzje", "body": "Decyzje **nieprawomocne**.", "source": "UOKiK, 5.11.2026"},
+  {"type": "dokument", "tag": "OFERTA FIRMY", "naglowek": "Komunikat UOKiK · 5.11.2026", "tekst": "publikuje opinie w Google i **ponad 20 innych serwisach**", "linie": 1, "wskaz": "także o lekarzach"},
+  {"type": "outro", "question": "Kara 222 tys. zł – wystarczy?", "sub": "Wyślij komuś, kto kupuje po opiniach.", "sources": "Decyzje nieprawomocne. To nie jest porada prawna.", "partner_slot": false}
+ ]}]}

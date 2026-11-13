@@ -29,3 +29,5 @@ Decyzja Michała: 2 dostawy dziennie (ok. 9:00 i 17:00), każda = 1 rolka + opis
 - 12.11 9:00: NEWS UOKiK „pożyczka za kurs” (komunikat 10.11 – cytaty sprawdzone dosłownie na uokik.gov.pl; TVN24, 300Gospodarka). Nowość: pierwszy materiał z procedury „gorące tematy”, czerwony TWIST 2.0, tło wideo „waga”. Odrzucone: ceny prosiąt/drobiu (branżowe), TK/NBP (polityka personalna), renta→emerytura (rezerwa). Wysłane 7:08.
 
 - 12.11 18:00: „Mandat za letnie opony: 0 zł. Jest haczyk.” (automat, 4 plansze, 26 s, tło „lupa”); ponowny render i wysyłka w sesji głównej 19:40 po pytaniu Michała. Fakty: art. 827 § 1 KC, art. 9 ust. 2 ustawy o ubezpieczeniach obowiązkowych (sprawdzone przez automat w tekstach jednolitych), Auto Świat, AutoCentrum.
+
+- 13.11 9:00: NEWS UOKiK – fałszywe opinie (komunikat 5.11, cytaty dosłownie; Gazeta Prawna, Bankier). Nowość: obraz okładki „gwiazdki”, pierwsza żółta okładka w publikacji. Bez tła wideo. 28,4 s. Odrzucone: ZUS umorzenie (było 9.11), TSUE/TK/NBP (polityka), NIK żywność (do sprawdzenia w raporcie – kandydat na później), fałszywe SMS-y o mandatach (kandydat na 18:00 – policja). Wysłane 6:57.
