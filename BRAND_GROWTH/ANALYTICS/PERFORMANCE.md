@@ -57,3 +57,17 @@ Co różni te dwa filmy (hipotezy, n=2):
 3. Haczyk-pytanie z datą kontra zaprzeczenie w cudzysłowie.
 Wspólne: widzowie wychodzą po 1–2 s, do końca 0–2%, zero komentarzy i udostępnień – nawet przy 1,2 tys. wyświetleń. Zasięg startowy da się dostać; nie umiemy go utrzymać.
 Do zrobienia: lista wszystkich filmów z wyświetleniami (Analityka → Treści), szczególnie rolki 12.11 z tłem wideo – czy pełnokadrowy obraz powtarza efekt.
+
+### TikTok – trzeci film, PROMOWANY (zrzuty Michała, 13.11 7:35)
+| Film | Publikacja | Wyśw. | Polub. | Kom. | Udost. | Zapisy | Nowi obs. | Śr. czas | Do końca | Śr. % filmu | Źródła |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| Policja #1 „Policjant miał wylegitymować 3 osoby. Kogokolwiek.” (32,2 s; płaska okładka z dowodem) | 3.11 5:23 | 7775 | 81 | 3 | 4 | 6 | **72** | 4,2 s | 2,34% | 13% | Dla Ciebie 95,6%, profil 2,1%, obserwowani 1,2%, inne 1,1%; wyszukiwania: „policja aresztuje dziewczyny”, „Policja szkola” |
+
+Rozkład w czasie (wykres 7 dni): ok. 2 tys. w dniu publikacji (3.11), potem blisko zera, szczyt ok. 5,3 tys. czwartego dnia (ok. 6.11) – to najpewniej promocja. **Do potwierdzenia u Michała:** budżet, cel promocji i liczby z zakładki „Promocja” (podział organiczne/płatne, koszt obserwującego).
+
+Wnioski (3 filmy):
+1. **Najlepszy film konta na TikToku to seria o policji z haczykiem niesprawiedliwości** – ok. 2 tys. wyświetleń organicznie pierwszego dnia, przy płaskiej okładce. Temat i haczyk ważą więcej niż rodzaj obrazu; hipoteza „pełnokadrowy obraz” (opona 1210 vs skarbówka 9) słabnie – okładka Policji #1 była taka sama jak skarbówki.
+2. **Jedyny film z realnym zaangażowaniem:** 81 polubień (1,0% wyświetleń), 4 udostępnienia, 6 zapisów, 72 nowych obserwujących (0,9% wyświetleń). To pierwsze udostępnienia i zapisy na jakiejkolwiek platformie.
+3. Wcześniejszy zapis „Policja #1 – ponad 2 tys., rekord konta” (4.11) dotyczył najpewniej TikToka sprzed promocji, nie Facebooka.
+4. Retencja wszędzie taka sama: wyjście po 1 s, średnio 4–5,5 s, do końca 2%. Nawet zwycięzca traci widza na starcie – skrócenie i szybszy zwrot zostają priorytetem.
+5. **Uwaga do decyzji z 13.11 (policja 2× w tygodniu):** dane TikToka przemawiają za utrzymaniem policji 3× – do decyzji Michała.
