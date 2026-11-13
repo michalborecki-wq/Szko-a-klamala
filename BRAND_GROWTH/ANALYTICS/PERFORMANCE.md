@@ -28,3 +28,9 @@ Udostępnienia i zapisy: 0 we wszystkich rolkach konta. Rekord łączny (IG+FB, 
 
 ## Zrzut Facebooka (zgoda Michała 13.11)
 Co niedzielę Michał przysyła zrzuty „Statystyki rolki” (IG → rolka → Statystyki) dla rolek z tygodnia. Tabela: rolka | wyśw. łącznie | z FB | śr. czas | pominięcia | udostępnienia.
+
+## TikTok – pomiar (prośba Michała 13.11)
+- **Composio → TikTok (logowanie konta): nie działa** – TikTok odrzuca aplikację pośrednika („Coś poszło nie tak… client_key”, 13.11 7:29). To błąd po stronie integracji, nie konta. Niedokończone połączenia usunięte. Ponowić próbę za kilka tygodni albo po założeniu własnej aplikacji w TikTok for Developers (wymaga weryfikacji – na razie nie).
+- Publiczna strona profilu nie oddaje danych automatom; zabezpieczeń nie obchodzimy.
+- **Droga obowiązująca (0 zł):** raz w tygodniu Michał pobiera w TikTok Studio na komputerze (tiktok.com/tiktokstudio → Analityka → „Pobierz dane”) plik z zakładki Treści i Przegląd (ostatnie 7 dni) i wysyła w rozmowie; agent wczytuje CSV/XLSX i dopisuje tabelę: film | wyświetlenia | polubienia | komentarze | udostępnienia | śr. czas | obejrzane do końca. Z telefonu: zrzuty „Analityka filmu” dla 3 najlepszych i 3 najgorszych.
+- Opcja płatna (ok. 0,001 USD za zapytanie, publiczne liczniki bez czasu oglądania) – tylko za zgodą Michała.
