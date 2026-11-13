@@ -34,3 +34,13 @@ Co niedzielę Michał przysyła zrzuty „Statystyki rolki” (IG → rolka → 
 - Publiczna strona profilu nie oddaje danych automatom; zabezpieczeń nie obchodzimy.
 - **Droga obowiązująca (0 zł):** raz w tygodniu Michał pobiera w TikTok Studio na komputerze (tiktok.com/tiktokstudio → Analityka → „Pobierz dane”) plik z zakładki Treści i Przegląd (ostatnie 7 dni) i wysyła w rozmowie; agent wczytuje CSV/XLSX i dopisuje tabelę: film | wyświetlenia | polubienia | komentarze | udostępnienia | śr. czas | obejrzane do końca. Z telefonu: zrzuty „Analityka filmu” dla 3 najlepszych i 3 najgorszych.
 - Opcja płatna (ok. 0,001 USD za zapytanie, publiczne liczniki bez czasu oglądania) – tylko za zgodą Michała.
+
+### TikTok – pierwszy pomiar (zrzuty Michała, 13.11 7:32)
+| Film | Publikacja | Wyśw. | Polub. | Kom. | Udost. | Zapisy | Śr. czas | Do końca | Śr. % filmu | Uwagi |
+|---|---|---|---|---|---|---|---|---|---|---|
+| „Pilny komunikat skarbówki” to nie kara. To telefon. (31,6 s) | 10.11 19:50 | 9 | 0 | 0 | 0 | 0 | 4,5 s | 0% | 14% | większość wychodzi po 0:02; krzywa: ok. 35% po 2 s, ok. 20% po 4 s, ok. 10% do 26 s; źródła ruchu niedostępne (< 100 wyśw.); wszystkie wyświetlenia 10.11, potem 0 |
+
+Wnioski robocze (1 film – sygnał, nie dowód):
+1. **9 wyświetleń w 3 dni to problem dystrybucji, nie haczyka.** TikTok zwykle pokazuje nowy film przynajmniej kilkudziesięciu–kilkuset osobom; tu po pierwszej godzinie ruch ustał. Przy 9 widzach nie da się oceniać treści.
+2. Kształt krzywej jest taki sam jak na IG (ucieczka w 2 s) – pierwsza klatka nadal rozstrzyga.
+3. Do sprawdzenia przez Michała: (a) lista filmów w Analityce → Treści – czy wszystkie mają jednocyfrowe wyświetlenia, czy tylko ten; (b) Ustawienia → Pomoc/Wsparcie → „Stan konta” (ograniczenia, naruszenia); (c) czy filmy są wstawiane z aplikacji TikTok (nie z przeglądarki) i z dodanym dźwiękiem z biblioteki; (d) czy przy publikacji nie włącza się „tylko znajomi”/ograniczeń wieku.
