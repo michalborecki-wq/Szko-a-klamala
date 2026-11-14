@@ -33,3 +33,5 @@ Decyzja Michała: 2 dostawy dziennie (ok. 9:00 i 17:00), każda = 1 rolka + opis
 - 13.11 9:00: NEWS UOKiK – fałszywe opinie (komunikat 5.11, cytaty dosłownie; Gazeta Prawna, Bankier). Nowość: obraz okładki „gwiazdki”, pierwsza żółta okładka w publikacji. Bez tła wideo. 28,4 s. Odrzucone: ZUS umorzenie (było 9.11), TSUE/TK/NBP (polityka), NIK żywność (do sprawdzenia w raporcie – kandydat na później), fałszywe SMS-y o mandatach (kandydat na 18:00 – policja). Wysłane 6:57.
 
 - 13.11 18:00: rolka filmowa „Kameleon” (4 ujęcia Higgsfield, 40 kr., saldo 960). Wysłane 17:30. Policja POV → sob. 14.11 18:00. TikTok: typowy film 720–840 wyśw., dwa filmy po 6–9 (podejrzenie moderacji).
+
+- 14.11: 9:00 Antarktyda wysłana 7:44 (zaplanowana). 18:00 Policja #8 POV (Higgsfield 40 kr., saldo 920; zdjęcie radiowozu CC0) wysłana 9:03. Dysk zapełniony przez stare podglądy – usunięte 16 GB.

@@ -1,17 +1,17 @@
-# Graph Report - Szko-a-klamala  (2026-11-13)
+# Graph Report - Szko-a-klamala  (2026-11-14)
 
 ## Corpus Check
-- 163 files · ~113,269 words
+- 165 files · ~114,175 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 12 file(s) not represented in the graph (top: (none) 11, .srt 1)
 
 ## Summary
-- 828 nodes · 1262 edges · 109 communities (59 shown, 50 thin omitted)
+- 831 nodes · 1264 edges · 111 communities (59 shown, 52 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.89)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `098110c2`
+- Built from commit: `65e9c6ec`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -20,7 +20,7 @@
 - render.py
 - muzyka.py
 - opona.py
-- re
+- render_all
 - obrazy.py
 - montaz.py
 - SZKOŁA KŁAMAŁA – AUTONOMICZNY AGENT REDAKCYJNY
@@ -119,6 +119,8 @@
 - opona_bok.py
 - Format pliku JSON (spec)
 - 2026-11-13/1800_opis.md
+- pory_roku.py
+- 2026-11-14/1800_opis.md
 
 ## God Nodes (most connected - your core abstractions)
 1. `SZKOŁA KŁAMAŁA – AUTONOMICZNY AGENT REDAKCYJNY` - 24 edges
@@ -147,27 +149,27 @@
 ## Import Cycles
 - None detected.
 
-## Communities (109 total, 50 thin omitted)
+## Communities (111 total, 52 thin omitted)
 
 ### Community 0 - "json"
-Cohesion: 0.06
-Nodes (40): main(), norm(), sprawdz_lektora(), srt_time(), tts(), voice_model(), tiktok_1080(), arkusz() (+32 more)
+Cohesion: 0.05
+Nodes (45): main(), norm(), sprawdz_lektora(), srt_time(), tts(), voice_model(), tiktok_1080(), arkusz() (+37 more)
 
 ### Community 1 - "render.py"
-Cohesion: 0.07
-Nodes (24): contact_sheet(), css(), default_durations(), foto_dane(), foto_tlo_uri(), foto_uri(), head(), licencja_ok() (+16 more)
+Cohesion: 0.08
+Nodes (32): render_outro(), contact_sheet(), css(), default_durations(), foto_dane(), foto_tlo_uri(), foto_uri(), head() (+24 more)
 
 ### Community 2 - "muzyka.py"
 Cohesion: 0.16
 Nodes (34): bass(), bell(), clap(), compose(), env(), filt(), hat(), kick() (+26 more)
 
 ### Community 3 - "opona.py"
-Cohesion: 0.13
-Nodes (6): mapuj(), obrot_profilu(), okno(), P(), wygladz_katem(), pozycja()
+Cohesion: 0.16
+Nodes (5): mapuj(), obrot_profilu(), okno(), P(), wygladz_katem()
 
-### Community 4 - "re"
-Cohesion: 0.12
-Nodes (20): get(), data_wpisu(), main(), norm(), parsuj(), pobierz(), kat(), main() (+12 more)
+### Community 4 - "render_all"
+Cohesion: 0.16
+Nodes (7): render_all(), Tlo3D, bpm(), _h(), nastroj(), preset(), styl()
 
 ### Community 5 - "obrazy.py"
 Cohesion: 0.22
@@ -354,8 +356,8 @@ Cohesion: 0.40
 Nodes (4): Higgsfield – test konektora (10.11.2026), Obrazy (gpt_image_2_6, 752×1344) – tła i okładki, Status użycia (10.11, uwaga Michała), Wideo (720×1280, 5 s, 24 kl./s – do 4K trzeba skalować; w silniku jako tło/przebitka)
 
 ### Community 51 - "Rejestr zasobów Higgsfield (magazyn) – aktualizować po każdym użyciu i generowaniu"
-Cohesion: 0.33
-Nodes (5): Dziennik generowania, Obrazy (2026-11-10/obrazy/, 752×1344), Rejestr zasobów Higgsfield (magazyn) – aktualizować po każdym użyciu i generowaniu, Wideo (2026-11-10/wideo/, 720×1280, 5 s), Wideo 2026-11-13/wideo/ (720×1280, 5 s, Kling 3.0 tekst→wideo, po 10 kr.)
+Cohesion: 0.29
+Nodes (6): Dziennik generowania, Obrazy (2026-11-10/obrazy/, 752×1344), Rejestr zasobów Higgsfield (magazyn) – aktualizować po każdym użyciu i generowaniu, Wideo (2026-11-10/wideo/, 720×1280, 5 s), Wideo 2026-11-13/wideo/ (720×1280, 5 s, Kling 3.0 tekst→wideo, po 10 kr.), Wideo 2026-11-14/wideo/ (720×1280, 5 s, Kling 3.0, po 10 kr.)
 
 ### Community 52 - "Biblioteka formatów (14) – przepis na spec silnika"
 Cohesion: 0.50
@@ -374,7 +376,7 @@ Cohesion: 0.29
 Nodes (6): Dodawanie nowego typu slajdu, Elementy stałe, Kolory (tokeny w `TOK` w render.py), Siatka i strefy bezpieczne, System wizualny „Szkoła kłamała”, Typografia
 
 ### Community 104 - "marka3d.py"
-Cohesion: 0.14
+Cohesion: 0.15
 Nodes (6): emisja(), poswiata(), renderuj(), rgb(), tlo_gwiazdy(), wygladz()
 
 ### Community 105 - "Lekcje – czytać PRZED każdą rolką (decyzja Michała 11.11: „wyciągaj wnioski, ucz się, dąż do perfekcji”)"
@@ -386,22 +388,22 @@ Cohesion: 0.40
 Nodes (4): Format pliku JSON (spec), Formatowanie tekstu w każdym polu, Post, Typowe układy
 
 ## Knowledge Gaps
-- **50 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **52 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `render_all()` connect `render.py` to `json`, `opona.py`?**
+- **Why does `render_all()` connect `render_all` to `json`, `render.py`, `opona.py`?**
   _High betweenness centrality (0.010) - this node is a cross-community bridge._
 - **Should `json` be split into smaller, more focused modules?**
-  _Cohesion score 0.06233062330623306 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.053763440860215055 - nodes in this community are weakly interconnected._
 - **Why does `gwiazdki()` connect `obrazy.py` to `Lekcje – czytać PRZED każdą rolką (decyzja Michała 11.11: „wyciągaj wnioski, ucz się, dąż do perfekcji”)`?**
   _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **Should `render.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.06938775510204082 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07562008469449485 - nodes in this community are weakly interconnected._
 - **Why does `Lekcje` connect `Lekcje – czytać PRZED każdą rolką (decyzja Michała 11.11: „wyciągaj wnioski, ucz się, dąż do perfekcji”)` to `obrazy.py`?**
   _High betweenness centrality (0.008) - this node is a cross-community bridge._
-- **Should `opona.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.1341991341991342 - nodes in this community are weakly interconnected._
-- **Should `re` be split into smaller, more focused modules?**
-  _Cohesion score 0.11806543385490754 - nodes in this community are weakly interconnected._
+- **Should `SZKOŁA KŁAMAŁA – AUTONOMICZNY AGENT REDAKCYJNY` be split into smaller, more focused modules?**
+  _Cohesion score 0.08 - nodes in this community are weakly interconnected._
+- **Should `BRAND GROWTH DIRECTOR` be split into smaller, more focused modules?**
+  _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._

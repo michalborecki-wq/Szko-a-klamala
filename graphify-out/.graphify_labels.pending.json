@@ -3,7 +3,7 @@
   "1": "render.py",
   "2": "muzyka.py",
   "3": "opona.py",
-  "4": "re",
+  "4": "render_all",
   "5": "obrazy.py",
   "6": "montaz.py",
   "7": "SZKOŁA KŁAMAŁA – AUTONOMICZNY AGENT REDAKCYJNY",
@@ -107,5 +107,7 @@
   "105": "Lekcje – czytać PRZED każdą rolką (decyzja Michała 11.11: „wyciągaj wnioski, ucz się, dąż do perfekcji”)",
   "106": "opona_bok.py",
   "107": "Format pliku JSON (spec)",
-  "108": "2026-11-13/1800_opis.md"
+  "108": "2026-11-13/1800_opis.md",
+  "109": "pory_roku.py",
+  "110": "2026-11-14/1800_opis.md"
 }

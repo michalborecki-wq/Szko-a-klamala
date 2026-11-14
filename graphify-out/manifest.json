@@ -498,9 +498,9 @@
     "semantic_hash": ""
   },
   "BRAND_GROWTH/CONTENT/CONTENT_CALENDAR.md": {
-    "mtime": 1794587386.8378599,
-    "seen": 1794587398.7420309,
-    "ast_hash": "662f5a91b7525b822666e601e80847f2",
+    "mtime": 1794643354.3050022,
+    "seen": 1794643364.9224293,
+    "ast_hash": "5e57582cfccd2e14959d731a65d2edfb",
     "semantic_hash": ""
   },
   "BRAND_GROWTH/CONTENT/CONTENT_PILLARS.md": {
@@ -726,21 +726,21 @@
     "semantic_hash": ""
   },
   "docs/agent/dziennik.md": {
-    "mtime": 1794587386.841829,
-    "seen": 1794587398.7421277,
-    "ast_hash": "5fc450ba82760771b7cbde66d6419fc8",
+    "mtime": 1794643354.3050022,
+    "seen": 1794643364.9225008,
+    "ast_hash": "842189c2c0b3ad7172d2dd6b25f8f2f3",
     "semantic_hash": ""
   },
   "docs/agent/kalendarz.md": {
-    "mtime": 1794587386.6641088,
-    "seen": 1794587398.7421298,
-    "ast_hash": "0b6765b9a3350178c76d82ca54ee3244",
+    "mtime": 1794643354.1074934,
+    "seen": 1794643364.9225025,
+    "ast_hash": "1fa413a4613fadea561da7eab1f88ecc",
     "semantic_hash": ""
   },
   "docs/agent/lekcje.md": {
-    "mtime": 1794587386.841829,
-    "seen": 1794587398.7421327,
-    "ast_hash": "56b3d8f4e815d91c56bdc6e6ef757328",
+    "mtime": 1794643354.3050022,
+    "seen": 1794643364.9225042,
+    "ast_hash": "28931060880e7c9569f4d3c323f04f8f",
     "semantic_hash": ""
   },
   "docs/agent/opisy/tydzien_4-8.11.md": {
@@ -960,9 +960,9 @@
     "semantic_hash": ""
   },
   "zrodla/ai_higgsfield/REJESTR.md": {
-    "mtime": 1794587386.8344338,
-    "seen": 1794587398.7422276,
-    "ast_hash": "878a7afa1824a1983973ab71c2163f5b",
+    "mtime": 1794643354.108848,
+    "seen": 1794643364.9225674,
+    "ast_hash": "f8353fceca019065e5c38f677e6cc5dd",
     "semantic_hash": ""
   },
   "scripts/graphify.sh": {
@@ -981,6 +981,18 @@
     "mtime": 1794585521.896322,
     "seen": 1794587398.7422163,
     "ast_hash": "361a3e383e0471b53433b2dd0d847fd3",
+    "semantic_hash": ""
+  },
+  "publikacje/2026-11-14/spec_policja8_nazwisko.json": {
+    "mtime": 1794642127.5587373,
+    "seen": 1794643364.9223292,
+    "ast_hash": "4eb4f1259491531c27db939ac744a5a5",
+    "semantic_hash": ""
+  },
+  "publikacje/2026-11-14/1800_opis.md": {
+    "mtime": 1794639997.7619894,
+    "seen": 1794643364.9225616,
+    "ast_hash": "d7ee71bfd9eb662d7df2eb5d13ecd712",
     "semantic_hash": ""
   }
 }

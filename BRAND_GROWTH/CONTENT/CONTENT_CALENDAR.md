@@ -42,3 +42,5 @@ Karuzela 13:00 (TikTok): FAST/TOP/INTERACTIVE na zmianę; co tydzień 1 karuzela
 (dopisywać: data | rolka | filar | format | okładka | tło | schemat | ocena różnorodności | uwagi)
 | 13.11 9:00 | Opinie w Google sprzedawano pakietami | 2 | NEWS | żółta | – | cover→twist→number→dokument→outro | 5 | nowy obraz „gwiazdki” |
 | 13.11 18:00 | Kameleon zmienia kolor, żeby go widziano | 1 | CINEMATIC | ciemna (wideo) | 4 ujęcia AI, inne na każdej planszy | cover→twist→text→outro, napisy u dołu | 8 | pierwsza rolka filmowa; temat: 9, kompozycja: 9, schemat: 6, hook: 7, nowość: 9, doświadczenie: 9 |
+| 14.11 9:00 | Największa pustynia świata jest z lodu | 1 | MYTH | ciemna (wideo) | Seedance | gotowa z 10.11 | – | wysyłka zaplanowana |
+| 14.11 18:00 | Legitymuje Cię policjant. Najpierw on się przedstawia. | 3 | POV | ciemna (wideo) | 4 ujęcia AI + zdjęcie radiowozu CC0 | cover→foto→dokument→twist→outro, napisy u dołu | 8 | 34 s – za długo; pierwsze zdjęcie prawdziwego radiowozu |

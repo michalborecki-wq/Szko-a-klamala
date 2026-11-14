@@ -1,0 +1,63 @@
+{
+ "posts": [
+  {
+   "id": "policja8_nazwisko",
+   "format": "reel",
+   "subject": "PRAWO",
+   "series": "CO MOŻE POLICJA #8",
+   "ton": "PRAWO",
+   "moc": "mocna",
+   "durations": [
+    5.5,
+    4.0,
+    8.8,
+    7.2,
+    5.5
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "title": "Legitymuje Cię policjant.",
+     "accent": "Najpierw on się przedstawia."
+    },
+    {
+     "type": "foto",
+     "zdjecie": "zrodla/zdjecia/polish-police-patrol-car-kadr.jpg",
+     "tag": "POV",
+     "title": "Zatrzymuje Cię",
+     "accent": "patrol."
+    },
+    {
+     "type": "dokument",
+     "tag": "KROK 1 · SŁYSZYSZ",
+     "naglowek": "Dz.U. 2023 poz. 2535 · § 2 ust. 1",
+     "tekst": "podaje swój **stopień, imię i nazwisko**, w sposób umożliwiający odnotowanie tych danych, przyczynę",
+     "linie": 1,
+     "wskaz": "możesz zapisać"
+    },
+    {
+     "type": "myth",
+     "myth_label": "KROK 2 · MIT",
+     "fact_label": "PRZEPIS",
+     "myth": "„Po kontroli nic nie zrobisz.”",
+     "fact": "Policjant ma Ci powiedzieć o **zażaleniu do prokuratora**.",
+     "source": "§ 2 ust. 4 – tamże"
+    },
+    {
+     "type": "outro",
+     "question": "Przedstawił Ci się kiedyś policjant?",
+     "sub": "Wyślij komuś, kto jeździ autem.",
+     "sources": "To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ],
+   "tresc": "dol",
+   "etykieta_ai": true,
+   "tlo3d": {
+    "klatki": "VIRAL_REELS_FACTORY/VIDEOS/tla/policja8",
+    "fps": 30,
+    "krycie": 0.92
+   }
+  }
+ ]
+}
