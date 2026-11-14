@@ -61,3 +61,5 @@ Po wysłaniu agent zmienia status na **wysłane**. **Decyzja Michała 8.11: „M
 | czw. 19.11 | 9:00 | Black Friday – „»Było 999 zł« to nie jest cena sprzed promocji” (najniższa cena z 30 dni, art. 4 ust. 2 ustawy o informowaniu o cenach – sprawdzić w ISAP; start oficjalnej sprzedaży TikTok Shop 19.11) | NOWA (S2) | NOWA | do zrobienia |
 
 Wcześniej (4.11, ręcznie): Co może policja #3 – 48 h – wysłane.
+| nd. 15.11 | 9:00 | Szkoła kłamała – format INTERACTIVE (quiz) | NOWA | NOWA | ROBI SESJA GŁÓWNA (wysyłka w rozmowie głównej ok. 8:00) – zadanie cykliczne NIE ROBI tej rolki |
+| nd. 15.11 | 18:00 | TOP (ranking, plansza bars) – pieniądze bez ściemy / szkoła kłamała | NOWA | NOWA | ROBI SESJA GŁÓWNA (wysyłka w rozmowie głównej ok. 17:00) – zadanie cykliczne NIE ROBI tej rolki |
