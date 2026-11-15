@@ -35,3 +35,5 @@ Decyzja Michała: 2 dostawy dziennie (ok. 9:00 i 17:00), każda = 1 rolka + opis
 - 13.11 18:00: rolka filmowa „Kameleon” (4 ujęcia Higgsfield, 40 kr., saldo 960). Wysłane 17:30. Policja POV → sob. 14.11 18:00. TikTok: typowy film 720–840 wyśw., dwa filmy po 6–9 (podejrzenie moderacji).
 
 - 14.11: 9:00 Antarktyda wysłana 7:44 (zaplanowana). 18:00 Policja #8 POV (Higgsfield 40 kr., saldo 920; zdjęcie radiowozu CC0) wysłana 9:03. Dysk zapełniony przez stare podglądy – usunięte 16 GB.
+
+- 15.11 9:00: quiz „Złota rybka” (23 s, bez tła wideo), wysłane 7:05; poprawka po pierwszym renderze (licznik w quizie, pieczątka).

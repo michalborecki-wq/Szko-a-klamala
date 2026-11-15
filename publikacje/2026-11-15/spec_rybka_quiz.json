@@ -1,0 +1,51 @@
+{
+ "posts": [
+  {
+   "id": "rybka_quiz",
+   "format": "reel",
+   "subject": "NAUKA",
+   "series": "SZKOŁA KŁAMAŁA",
+   "ton": "CIEKAWOSTKA",
+   "moc": "mocna",
+   "durations": [
+    3.4,
+    5.2,
+    5.4,
+    4.6
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "rybka",
+     "pieczatka": "MIT",
+     "title": "Złota rybka nie zapomina",
+     "accent": "po 3 sekundach."
+    },
+    {
+     "type": "quiz",
+     "question": "ILE PAMIĘTA ZŁOTA RYBKA? ZGADUJ.",
+     "options": [
+      "3 sekundy",
+      "3 minuty",
+      "co najmniej 3 miesiące"
+     ]
+    },
+    {
+     "type": "myth",
+     "myth_label": "W SZKOLE",
+     "fact_label": "BADANIA",
+     "myth": "„Pamięta 3 sekundy.”",
+     "fact": "Pamięta **co najmniej 3 miesiące**. Uczy się nawet pory karmienia.",
+     "source": "Univ. of Plymouth; BBC Wildlife"
+    },
+    {
+     "type": "outro",
+     "question": "Ile miałeś?",
+     "sub": "Wyślij komuś na próbę.",
+     "sources": "Odpowiedź: C.",
+     "partner_slot": false
+    }
+   ]
+  }
+ ]
+}

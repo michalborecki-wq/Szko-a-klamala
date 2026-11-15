@@ -3,7 +3,7 @@
   "1": "render.py",
   "2": "muzyka.py",
   "3": "opona.py",
-  "4": "render_all",
+  "4": "sys",
   "5": "obrazy.py",
   "6": "montaz.py",
   "7": "SZKOŁA KŁAMAŁA – AUTONOMICZNY AGENT REDAKCYJNY",
@@ -108,6 +108,6 @@
   "106": "opona_bok.py",
   "107": "Format pliku JSON (spec)",
   "108": "2026-11-13/1800_opis.md",
-  "109": "pory_roku.py",
+  "109": "2026-11-15/0900_opis.md",
   "110": "2026-11-14/1800_opis.md"
 }

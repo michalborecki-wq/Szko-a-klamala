@@ -1,17 +1,17 @@
-# Graph Report - Szko-a-klamala  (2026-11-14)
+# Graph Report - Szko-a-klamala  (2026-11-15)
 
 ## Corpus Check
-- 165 files · ~114,175 words
+- 167 files · ~114,787 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 12 file(s) not represented in the graph (top: (none) 11, .srt 1)
 
 ## Summary
-- 831 nodes · 1264 edges · 111 communities (59 shown, 52 thin omitted)
-- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.89)
+- 834 nodes · 1267 edges · 111 communities (59 shown, 52 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 23 edges (avg confidence: 0.88)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `65e9c6ec`
+- Built from commit: `331dd2c3`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -20,7 +20,7 @@
 - render.py
 - muzyka.py
 - opona.py
-- render_all
+- sys
 - obrazy.py
 - montaz.py
 - SZKOŁA KŁAMAŁA – AUTONOMICZNY AGENT REDAKCYJNY
@@ -119,7 +119,7 @@
 - opona_bok.py
 - Format pliku JSON (spec)
 - 2026-11-13/1800_opis.md
-- pory_roku.py
+- 2026-11-15/0900_opis.md
 - 2026-11-14/1800_opis.md
 
 ## God Nodes (most connected - your core abstractions)
@@ -127,11 +127,11 @@
 2. `sfx_track()` - 16 edges
 3. `Scenariusze pod zasięg` - 16 edges
 4. `render_all()` - 15 edges
-5. `filt()` - 14 edges
-6. `main()` - 14 edges
-7. `tpl()` - 13 edges
-8. `compose()` - 13 edges
-9. `_svg()` - 13 edges
+5. `_svg()` - 14 edges
+6. `filt()` - 14 edges
+7. `main()` - 14 edges
+8. `tpl()` - 13 edges
+9. `compose()` - 13 edges
 10. `Agent „Szkoła kłamała” – cykl dzienny` - 13 edges
 
 ## Surprising Connections (you probably didn't know these)
@@ -139,12 +139,12 @@
   docs/agent/lekcje.md → .claude/skills/szkola-klamala-grafiki/scripts/obrazy.py
 - `Dodawanie nowego typu slajdu` --references--> `tpl()`  [INFERRED]
   .claude/skills/szkola-klamala-grafiki/references/design-system.md → .claude/skills/szkola-klamala-grafiki/scripts/render.py
-- `Zasady montażu (8)` --references--> `kontrola()`  [INFERRED]
-  .claude/skills/szkola-klamala-montaz/SKILL.md → .claude/skills/szkola-klamala-montaz/scripts/montaz.py
 - `main()` --calls--> `tiktok_1080()`  [INFERRED]
   VIRAL_REELS_FACTORY/narzedzia/lektor_koncowka.py → .claude/skills/szkola-klamala-animacje/scripts/muzyka.py
 - `render_lektor()` --calls--> `tiktok_1080()`  [INFERRED]
   VIRAL_REELS_FACTORY/narzedzia/produkcja.py → .claude/skills/szkola-klamala-animacje/scripts/muzyka.py
+- `Zasady montażu (8)` --references--> `kontrola()`  [INFERRED]
+  .claude/skills/szkola-klamala-montaz/SKILL.md → .claude/skills/szkola-klamala-montaz/scripts/montaz.py
 
 ## Import Cycles
 - None detected.
@@ -153,27 +153,27 @@
 
 ### Community 0 - "json"
 Cohesion: 0.05
-Nodes (45): main(), norm(), sprawdz_lektora(), srt_time(), tts(), voice_model(), tiktok_1080(), arkusz() (+37 more)
+Nodes (48): main(), norm(), sprawdz_lektora(), srt_time(), tts(), voice_model(), arkusz(), glosnosc() (+40 more)
 
 ### Community 1 - "render.py"
-Cohesion: 0.08
-Nodes (32): render_outro(), contact_sheet(), css(), default_durations(), foto_dane(), foto_tlo_uri(), foto_uri(), head() (+24 more)
+Cohesion: 0.07
+Nodes (25): render_outro(), contact_sheet(), css(), default_durations(), foto_dane(), foto_tlo_uri(), foto_uri(), head() (+17 more)
 
 ### Community 2 - "muzyka.py"
-Cohesion: 0.16
-Nodes (34): bass(), bell(), clap(), compose(), env(), filt(), hat(), kick() (+26 more)
+Cohesion: 0.15
+Nodes (35): bass(), bell(), clap(), compose(), env(), filt(), hat(), kick() (+27 more)
 
 ### Community 3 - "opona.py"
-Cohesion: 0.16
-Nodes (5): mapuj(), obrot_profilu(), okno(), P(), wygladz_katem()
+Cohesion: 0.13
+Nodes (6): mapuj(), obrot_profilu(), okno(), P(), wygladz_katem(), pozycja()
 
-### Community 4 - "render_all"
-Cohesion: 0.16
-Nodes (7): render_all(), Tlo3D, bpm(), _h(), nastroj(), preset(), styl()
+### Community 4 - "sys"
+Cohesion: 0.24
+Nodes (10): bez_html(), commons(), commons_meta(), get(), licencja_ok(), main(), nasa(), slug() (+2 more)
 
 ### Community 5 - "obrazy.py"
-Cohesion: 0.22
-Nodes (15): Typy slajdów i pola, dowod(), gwiazdki(), html(), licznik(), monety(), odznaka(), opona() (+7 more)
+Cohesion: 0.20
+Nodes (16): Typy slajdów i pola, dowod(), gwiazdki(), html(), licznik(), monety(), odznaka(), opona() (+8 more)
 
 ### Community 6 - "montaz.py"
 Cohesion: 0.15
@@ -393,17 +393,17 @@ Nodes (4): Format pliku JSON (spec), Formatowanie tekstu w każdym polu, Post, T
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `render_all()` connect `render_all` to `json`, `render.py`, `opona.py`?**
+- **Why does `render_all()` connect `render.py` to `json`, `opona.py`?**
   _High betweenness centrality (0.010) - this node is a cross-community bridge._
 - **Should `json` be split into smaller, more focused modules?**
-  _Cohesion score 0.053763440860215055 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05238796549547654 - nodes in this community are weakly interconnected._
 - **Why does `gwiazdki()` connect `obrazy.py` to `Lekcje – czytać PRZED każdą rolką (decyzja Michała 11.11: „wyciągaj wnioski, ucz się, dąż do perfekcji”)`?**
   _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **Should `render.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.07562008469449485 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07315233785822021 - nodes in this community are weakly interconnected._
 - **Why does `Lekcje` connect `Lekcje – czytać PRZED każdą rolką (decyzja Michała 11.11: „wyciągaj wnioski, ucz się, dąż do perfekcji”)` to `obrazy.py`?**
   _High betweenness centrality (0.008) - this node is a cross-community bridge._
-- **Should `SZKOŁA KŁAMAŁA – AUTONOMICZNY AGENT REDAKCYJNY` be split into smaller, more focused modules?**
-  _Cohesion score 0.08 - nodes in this community are weakly interconnected._
-- **Should `BRAND GROWTH DIRECTOR` be split into smaller, more focused modules?**
-  _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._
+- **Should `muzyka.py` be split into smaller, more focused modules?**
+  _Cohesion score 0.1484848484848485 - nodes in this community are weakly interconnected._
+- **Should `opona.py` be split into smaller, more focused modules?**
+  _Cohesion score 0.13043478260869565 - nodes in this community are weakly interconnected._

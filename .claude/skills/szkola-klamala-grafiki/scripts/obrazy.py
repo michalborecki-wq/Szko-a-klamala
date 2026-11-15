@@ -224,8 +224,20 @@ def gwiazdki(**_):
     return _svg("-360 -250 720 500", f"<g class='ob-in'>{karta}</g>{stars}")
 
 
+def rybka(**_):
+    # złota rybka (15.11) – pamięć zwierząt, przyroda; prosta sylwetka w palecie marki
+    cialo = (f"<ellipse cx='0' cy='0' rx='230' ry='140' fill='{Y}'/>"
+             f"<path d='M200 0 L360 -130 L330 0 L360 130 Z' fill='#E0A800'/>"
+             f"<path d='M-60 -135 Q0 -230 90 -130 Z' fill='#E0A800'/>"
+             f"<circle cx='-130' cy='-30' r='34' fill='{W}'/><circle cx='-138' cy='-30' r='18' fill='{N}'/>"
+             f"<path d='M-40 -100 Q20 0 -40 100' fill='none' stroke='#E0A800' stroke-width='14'/>")
+    bab = "".join(f"<circle cx='{-300 + 40*i}' cy='{-170 - 70*i}' r='{18 + 8*i}' fill='none' stroke='{B}' stroke-width='10' "
+                  f"class='ob-drop' style='animation-delay:{.05*i}s'/>" for i in range(3))
+    return _svg("-400 -420 800 620", f"<g class='ob-in'>{cialo}</g>{bab}")
+
+
 OBRAZY = {"polska": polska, "torba": torba, "suwak": suwak, "dowod": dowod, "monety": monety, "opona": opona, "zegar": zegar,
-          "licznik": licznik, "ruletka": ruletka, "saturn": saturn, "odznaka": odznaka, "gwiazdki": gwiazdki}
+          "licznik": licznik, "ruletka": ruletka, "saturn": saturn, "odznaka": odznaka, "gwiazdki": gwiazdki, "rybka": rybka}
 
 
 def html(nazwa, opcje=None, wysokosc=520, pieczatka=None):
