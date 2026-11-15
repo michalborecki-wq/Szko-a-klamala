@@ -64,3 +64,8 @@ Uwaga na nagłówki-straszaki („najniebezpieczniejsza w UE”, „bezwzględna
 - 14.11 – Michał prosił o logo Policji: odmowa (znak instytucji – wygląda na materiał policji/jej poparcie). Zamiast tego prawdziwe zdjęcie radiowozu CC0 (Wikimedia Commons) z rozmytymi tablicami i autami w tle.
 - 15.11 – plansza `quiz` z `countdown` w rolce stoi na jednej cyfrze (odliczanie wymaga kilku plansz quiz z kolejnymi cyframi) – bez tego pola. Pieczątka z długim tekstem zasłania obraz – na okładce krótkie słowo (MIT, KARA).
 - 15.11 – przy danych statystycznych zawsze szukaj najnowszego komunikatu (najpierw znalazły się dane za 2024, a był już komunikat za 2025). Schemat 4 plansz z tłem wideo (cover → bars/dokument → twist → outro) dał 26 s – trzymać.
+
+## 15.11 – decyzja Michała: policja znów 3× w tygodniu
+- Seria „Co może policja” wraca na **pon., śr., pt. 18:00**; „Twoje prawa” poza policją (sklep, urząd, praca) – **sob. 18:00**.
+- Powód (raport `BRAND_GROWTH/REPORTS/RAPORT_2026-11-15.md`): na TikToku policja daje najwięcej (Policja #1 – 7775), na IG Policja #8 (71) i #6 (56) w czwórce tygodnia.
+- Każda rolka policyjna: teza ≤ 7 słów od klatki 0 (najlepiej ze zdjęciem radiowozu CC0), zakończenie „jak się bronić”, pytanie o zasadę.
