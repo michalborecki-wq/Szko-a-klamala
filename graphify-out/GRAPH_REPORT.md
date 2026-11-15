@@ -1,17 +1,17 @@
 # Graph Report - Szko-a-klamala  (2026-11-15)
 
 ## Corpus Check
-- 167 files · ~114,787 words
+- 170 files · ~115,727 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 12 file(s) not represented in the graph (top: (none) 11, .srt 1)
 
 ## Summary
-- 834 nodes · 1267 edges · 111 communities (59 shown, 52 thin omitted)
+- 842 nodes · 1273 edges · 112 communities (59 shown, 53 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 23 edges (avg confidence: 0.88)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `331dd2c3`
+- Built from commit: `e68c62fa`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -20,7 +20,7 @@
 - render.py
 - muzyka.py
 - opona.py
-- sys
+- re
 - obrazy.py
 - montaz.py
 - SZKOŁA KŁAMAŁA – AUTONOMICZNY AGENT REDAKCYJNY
@@ -112,7 +112,7 @@
 - SCRIPTS/2026-11-04_przejazdy_kolejowe/opis.md
 - SCRIPTS/2026-11-04_zus_umorzenie/opis.md
 - SCRIPTS/2026-11-04_zus_umorzenie/zrodla.md
-- System wizualny „Szkoła kłamała”
+- Szybka analiza konkurencji przed rolką viralową – 15.11.2026
 - graphify.sh
 - marka3d.py
 - Lekcje – czytać PRZED każdą rolką (decyzja Michała 11.11: „wyciągaj wnioski, ucz się, dąż do perfekcji”)
@@ -121,15 +121,16 @@
 - 2026-11-13/1800_opis.md
 - 2026-11-15/0900_opis.md
 - 2026-11-14/1800_opis.md
+- 2026-11-15/1800_opis.md
 
 ## God Nodes (most connected - your core abstractions)
 1. `SZKOŁA KŁAMAŁA – AUTONOMICZNY AGENT REDAKCYJNY` - 24 edges
 2. `sfx_track()` - 16 edges
 3. `Scenariusze pod zasięg` - 16 edges
 4. `render_all()` - 15 edges
-5. `_svg()` - 14 edges
-6. `filt()` - 14 edges
-7. `main()` - 14 edges
+5. `filt()` - 14 edges
+6. `main()` - 14 edges
+7. `_svg()` - 14 edges
 8. `tpl()` - 13 edges
 9. `compose()` - 13 edges
 10. `Agent „Szkoła kłamała” – cykl dzienny` - 13 edges
@@ -137,27 +138,27 @@
 ## Surprising Connections (you probably didn't know these)
 - `Lekcje` --references--> `gwiazdki()`  [INFERRED]
   docs/agent/lekcje.md → .claude/skills/szkola-klamala-grafiki/scripts/obrazy.py
-- `Dodawanie nowego typu slajdu` --references--> `tpl()`  [INFERRED]
-  .claude/skills/szkola-klamala-grafiki/references/design-system.md → .claude/skills/szkola-klamala-grafiki/scripts/render.py
 - `main()` --calls--> `tiktok_1080()`  [INFERRED]
   VIRAL_REELS_FACTORY/narzedzia/lektor_koncowka.py → .claude/skills/szkola-klamala-animacje/scripts/muzyka.py
 - `render_lektor()` --calls--> `tiktok_1080()`  [INFERRED]
   VIRAL_REELS_FACTORY/narzedzia/produkcja.py → .claude/skills/szkola-klamala-animacje/scripts/muzyka.py
+- `Dodawanie nowego typu slajdu` --references--> `tpl()`  [INFERRED]
+  .claude/skills/szkola-klamala-grafiki/references/design-system.md → .claude/skills/szkola-klamala-grafiki/scripts/render.py
 - `Zasady montażu (8)` --references--> `kontrola()`  [INFERRED]
   .claude/skills/szkola-klamala-montaz/SKILL.md → .claude/skills/szkola-klamala-montaz/scripts/montaz.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (111 total, 52 thin omitted)
+## Communities (112 total, 53 thin omitted)
 
 ### Community 0 - "json"
-Cohesion: 0.05
-Nodes (48): main(), norm(), sprawdz_lektora(), srt_time(), tts(), voice_model(), arkusz(), glosnosc() (+40 more)
+Cohesion: 0.06
+Nodes (40): main(), norm(), sprawdz_lektora(), srt_time(), tts(), voice_model(), arkusz(), glosnosc() (+32 more)
 
 ### Community 1 - "render.py"
-Cohesion: 0.07
-Nodes (25): render_outro(), contact_sheet(), css(), default_durations(), foto_dane(), foto_tlo_uri(), foto_uri(), head() (+17 more)
+Cohesion: 0.06
+Nodes (29): Dodawanie nowego typu slajdu, Elementy stałe, Kolory (tokeny w `TOK` w render.py), Siatka i strefy bezpieczne, System wizualny „Szkoła kłamała”, Typografia, contact_sheet(), css() (+21 more)
 
 ### Community 2 - "muzyka.py"
 Cohesion: 0.15
@@ -167,9 +168,9 @@ Nodes (35): bass(), bell(), clap(), compose(), env(), filt(), hat(), kick() (+27
 Cohesion: 0.13
 Nodes (6): mapuj(), obrot_profilu(), okno(), P(), wygladz_katem(), pozycja()
 
-### Community 4 - "sys"
-Cohesion: 0.24
-Nodes (10): bez_html(), commons(), commons_meta(), get(), licencja_ok(), main(), nasa(), slug() (+2 more)
+### Community 4 - "re"
+Cohesion: 0.12
+Nodes (20): get(), data_wpisu(), main(), norm(), parsuj(), pobierz(), kat(), main() (+12 more)
 
 ### Community 5 - "obrazy.py"
 Cohesion: 0.20
@@ -356,8 +357,8 @@ Cohesion: 0.40
 Nodes (4): Higgsfield – test konektora (10.11.2026), Obrazy (gpt_image_2_6, 752×1344) – tła i okładki, Status użycia (10.11, uwaga Michała), Wideo (720×1280, 5 s, 24 kl./s – do 4K trzeba skalować; w silniku jako tło/przebitka)
 
 ### Community 51 - "Rejestr zasobów Higgsfield (magazyn) – aktualizować po każdym użyciu i generowaniu"
-Cohesion: 0.29
-Nodes (6): Dziennik generowania, Obrazy (2026-11-10/obrazy/, 752×1344), Rejestr zasobów Higgsfield (magazyn) – aktualizować po każdym użyciu i generowaniu, Wideo (2026-11-10/wideo/, 720×1280, 5 s), Wideo 2026-11-13/wideo/ (720×1280, 5 s, Kling 3.0 tekst→wideo, po 10 kr.), Wideo 2026-11-14/wideo/ (720×1280, 5 s, Kling 3.0, po 10 kr.)
+Cohesion: 0.25
+Nodes (7): Dziennik generowania, Obrazy (2026-11-10/obrazy/, 752×1344), Rejestr zasobów Higgsfield (magazyn) – aktualizować po każdym użyciu i generowaniu, Wideo (2026-11-10/wideo/, 720×1280, 5 s), Wideo 2026-11-13/wideo/ (720×1280, 5 s, Kling 3.0 tekst→wideo, po 10 kr.), Wideo 2026-11-14/wideo/ (720×1280, 5 s, Kling 3.0, po 10 kr.), Wideo 2026-11-15/wideo/ (Kling 3.0, po 10 kr.)
 
 ### Community 52 - "Biblioteka formatów (14) – przepis na spec silnika"
 Cohesion: 0.50
@@ -371,9 +372,9 @@ Nodes (3): Jak pracować, Sceny 3D (Blender), Zasady
 Cohesion: 0.50
 Nodes (3): Analiza wyników Instagrama – 9.11.2026 (deep dive), Rekomendacje do agenta (od 10.11), Wnioski
 
-### Community 102 - "System wizualny „Szkoła kłamała”"
-Cohesion: 0.29
-Nodes (6): Dodawanie nowego typu slajdu, Elementy stałe, Kolory (tokeny w `TOK` w render.py), Siatka i strefy bezpieczne, System wizualny „Szkoła kłamała”, Typografia
+### Community 102 - "Szybka analiza konkurencji przed rolką viralową – 15.11.2026"
+Cohesion: 0.40
+Nodes (4): Co robią konta, które rosną w niszy, Czego unikamy (u konkurencji częste), Jak to przełożyliśmy (rolka 15.11 18:00), Szybka analiza konkurencji przed rolką viralową – 15.11.2026
 
 ### Community 104 - "marka3d.py"
 Cohesion: 0.15
@@ -388,7 +389,7 @@ Cohesion: 0.40
 Nodes (4): Format pliku JSON (spec), Formatowanie tekstu w każdym polu, Post, Typowe układy
 
 ## Knowledge Gaps
-- **52 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **53 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -396,13 +397,13 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `render_all()` connect `render.py` to `json`, `opona.py`?**
   _High betweenness centrality (0.010) - this node is a cross-community bridge._
 - **Should `json` be split into smaller, more focused modules?**
-  _Cohesion score 0.05238796549547654 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.061416397296503084 - nodes in this community are weakly interconnected._
 - **Why does `gwiazdki()` connect `obrazy.py` to `Lekcje – czytać PRZED każdą rolką (decyzja Michała 11.11: „wyciągaj wnioski, ucz się, dąż do perfekcji”)`?**
-  _High betweenness centrality (0.009) - this node is a cross-community bridge._
-- **Should `render.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.07315233785822021 - nodes in this community are weakly interconnected._
-- **Why does `Lekcje` connect `Lekcje – czytać PRZED każdą rolką (decyzja Michała 11.11: „wyciągaj wnioski, ucz się, dąż do perfekcji”)` to `obrazy.py`?**
   _High betweenness centrality (0.008) - this node is a cross-community bridge._
+- **Should `render.py` be split into smaller, more focused modules?**
+  _Cohesion score 0.059932659932659935 - nodes in this community are weakly interconnected._
+- **Why does `Lekcje` connect `Lekcje – czytać PRZED każdą rolką (decyzja Michała 11.11: „wyciągaj wnioski, ucz się, dąż do perfekcji”)` to `obrazy.py`?**
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **Should `muzyka.py` be split into smaller, more focused modules?**
   _Cohesion score 0.1484848484848485 - nodes in this community are weakly interconnected._
 - **Should `opona.py` be split into smaller, more focused modules?**

@@ -1,0 +1,11 @@
+{"posts": [{
+ "id": "czas_pracy", "format": "reel", "subject": "PIENIĄDZE", "series": "PIENIĄDZE BEZ ŚCIEMY",
+ "ton": "KONTROWERSJA", "moc": "mocna", "tresc": "dol", "etykieta_ai": true,
+ "tlo3d": {"klatki": "VIRAL_REELS_FACTORY/VIDEOS/tla/praca", "fps": 30, "krycie": 0.92},
+ "durations": [4.2, 6.4, 7.8, 4.6],
+ "slides": [
+  {"type": "cover", "title": "Polak pracuje dłużej niż Niemiec.", "accent": "Co tydzień."},
+  {"type": "bars", "title": "Godziny pracy", "accent": "w tygodniu", "label_width": 260, "rows": [["Grecja", 39.6, "39,6"], ["**Polska**", 38.7, "**38,7**"], ["Średnia UE", 35.9, "35,9"], ["Niemcy", 33.9, "33,9"], ["Holandia", 31.9, "31,9"]], "source": "Eurostat, dane za 2025"},
+  {"type": "myth", "myth_label": "MIT", "fact_label": "EUROSTAT", "myth": "„Polacy to lenie Europy.”", "fact": "Polska: **2. miejsce w UE**. Prawie **29 dni pracy** rocznie więcej niż Niemcy.", "source": "obliczenia własne: 4,8 h × 48 tyg."},
+  {"type": "outro", "question": "Krótszy tydzień pracy – tak czy nie?", "sub": "Wyślij komuś, kto bierze nadgodziny.", "sources": "Eurostat, 27.05.2026.", "partner_slot": false}
+ ]}]}

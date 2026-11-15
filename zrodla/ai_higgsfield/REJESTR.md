@@ -1,6 +1,6 @@
 # Rejestr zasobów Higgsfield (magazyn) – aktualizować po każdym użyciu i generowaniu
 
-Procedura: `docs/higgsfield-procedura.md`. Saldo 14.11.2026 po rolce „Policja #8”: **920 kredytów** (plan Plus; 13.11 rano było 1000). Wszystko poniżej to ilustracje AI – w rolce zawsze `"etykieta_ai": true`.
+Procedura: `docs/higgsfield-procedura.md`. Saldo 15.11.2026 po rolce „Czas pracy”: **880 kredytów** (plan Plus; 13.11 rano było 1000). Wszystko poniżej to ilustracje AI – w rolce zawsze `"etykieta_ai": true`.
 
 ## Wideo (2026-11-10/wideo/, 720×1280, 5 s)
 | Plik | Model | Koszt | Status |
@@ -23,6 +23,11 @@ Procedura: `docs/higgsfield-procedura.md`. Saldo 14.11.2026 po rolce „Policja 
 |---|---|
 | noc_niebieskie_swiatla.mp4, notes_deska.mp4, biurko_pieczatka.mp4, szyba_deszcz.mp4 | użyte 14.11 18:00 – Policja #8; nadają się jako tło drugoplanowe do kolejnych odcinków serii o policji (bez oznaczeń) |
 
+## Wideo 2026-11-15/wideo/ (Kling 3.0, po 10 kr.)
+| Plik | Status |
+|---|---|
+| budzik_swit.mp4, biuro_noc.mp4, kawa_biurko.mp4, biurowiec_noc.mp4 | użyte 15.11 18:00 – Czas pracy; tło drugoplanowe do tematów praca/pieniądze |
+
 ## Obrazy (2026-11-10/obrazy/, 752×1344)
 | Plik | Status |
 |---|---|
@@ -36,3 +41,4 @@ Procedura: `docs/higgsfield-procedura.md`. Saldo 14.11.2026 po rolce „Policja 
 | 10.11 | 10 wideo, 20 obrazów | 110 | „Wykorzystaj wszystkie kredyty” | test konektora; część pod tematy już opublikowane – stąd procedura |
 | 13.11 | 4 wideo (kameleon) | 40 | plan przedstawiony w rozmowie (31–40 kr.), Michał odpowiedział zmianą terminu na dziś 18:00 – przyjęte jako zgoda | tekst→wideo bez kadru startowego (brak czasu); Kling policzył 10 kr. za klip (z dźwiękiem) zamiast 7,5 – następnym razem wyłączyć dźwięk |
 | 14.11 | 4 wideo (seria policja: noc, notes, biurko, szyba) | 40 | „W rolce o 18 wykorzystaj higgsfield” (Michał, 14.11) | bez ludzi, mundurów i oznaczeń; logo Policji – odmowa (znak instytucji), zamiast tego zdjęcie radiowozu CC0 z Wikimedia Commons |
+| 15.11 | 4 wideo (praca: budzik, biuro, kawa, biurowiec) | 40 | „W rolce na 18 zastosuj higgsfield” (Michał, 15.11) | – |

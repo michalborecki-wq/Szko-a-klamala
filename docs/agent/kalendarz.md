@@ -62,4 +62,4 @@ Po wysłaniu agent zmienia status na **wysłane**. **Decyzja Michała 8.11: „M
 
 Wcześniej (4.11, ręcznie): Co może policja #3 – 48 h – wysłane.
 | nd. 15.11 | 9:00 | Szkoła kłamała (quiz): „Złota rybka nie zapomina po 3 sekundach.” – BBC Wildlife, przegląd badań (Plymouth 1994) | `publikacje/2026-11-15/spec_rybka_quiz.json#rybka_quiz` | `publikacje/2026-11-15/0900_opis.md` | wysłane (15.11 7:05, sesja główna) |
-| nd. 15.11 | 18:00 | TOP (ranking, plansza bars) – pieniądze bez ściemy / szkoła kłamała | NOWA | NOWA | ROBI SESJA GŁÓWNA (wysyłka w rozmowie głównej ok. 17:00) – zadanie cykliczne NIE ROBI tej rolki |
+| nd. 15.11 | 18:00 | Pieniądze bez ściemy (TOP, viral po analizie konkurencji): „Polak pracuje dłużej niż Niemiec. Co tydzień.” – Eurostat 27.05.2026 (dane 2025); 4 ujęcia Higgsfield | `publikacje/2026-11-15/spec_czas_pracy.json#czas_pracy` | `publikacje/2026-11-15/1800_opis.md` | wysłane (15.11 14:55, sesja główna) |

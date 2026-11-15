@@ -45,3 +45,4 @@ Karuzela 13:00 (TikTok): FAST/TOP/INTERACTIVE na zmianę; co tydzień 1 karuzela
 | 14.11 9:00 | Największa pustynia świata jest z lodu | 1 | MYTH | ciemna (wideo) | Seedance | gotowa z 10.11 | – | wysyłka zaplanowana |
 | 14.11 18:00 | Legitymuje Cię policjant. Najpierw on się przedstawia. | 3 | POV | ciemna (wideo) | 4 ujęcia AI + zdjęcie radiowozu CC0 | cover→foto→dokument→twist→outro, napisy u dołu | 8 | 34 s – za długo; pierwsze zdjęcie prawdziwego radiowozu |
 | 15.11 9:00 | Złota rybka nie zapomina po 3 sekundach | 1 | INTERACTIVE | żółta | – | cover→quiz→twist→outro | 8 | pierwszy quiz; nowy obraz „rybka”; 23 s (w celu) |
+| 15.11 18:00 | Polak pracuje dłużej niż Niemiec | 4 | TOP | ciemna (wideo) | 4 ujęcia AI | cover→bars→twist→outro, napisy u dołu | 8 | pierwszy ranking `bars`; 26 s; viral po analizie konkurencji (`ANALYTICS/KONKURENCJA_2026-11-15.md`) |

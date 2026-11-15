@@ -3,7 +3,7 @@
   "1": "render.py",
   "2": "muzyka.py",
   "3": "opona.py",
-  "4": "sys",
+  "4": "re",
   "5": "obrazy.py",
   "6": "montaz.py",
   "7": "SZKOŁA KŁAMAŁA – AUTONOMICZNY AGENT REDAKCYJNY",
@@ -101,7 +101,7 @@
   "99": "READY_TO_PUBLISH/2026-11-04_przejazdy_kolejowe/zrodla.md",
   "100": "SCRIPTS/2026-11-04_nawigacja_telefon/zrodla.md",
   "101": "SCRIPTS/2026-11-04_przejazdy_kolejowe/zrodla.md",
-  "102": "System wizualny „Szkoła kłamała”",
+  "102": "Szybka analiza konkurencji przed rolką viralową – 15.11.2026",
   "103": "graphify.sh",
   "104": "marka3d.py",
   "105": "Lekcje – czytać PRZED każdą rolką (decyzja Michała 11.11: „wyciągaj wnioski, ucz się, dąż do perfekcji”)",
@@ -109,5 +109,6 @@
   "107": "Format pliku JSON (spec)",
   "108": "2026-11-13/1800_opis.md",
   "109": "2026-11-15/0900_opis.md",
-  "110": "2026-11-14/1800_opis.md"
+  "110": "2026-11-14/1800_opis.md",
+  "111": "2026-11-15/1800_opis.md"
 }
