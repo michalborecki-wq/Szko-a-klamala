@@ -49,9 +49,9 @@ Po wysłaniu agent zmienia status na **wysłane**. **Decyzja Michała 8.11: „M
 | nd 15.11 | 9:00 | NOWA – kosmos/rekord (szablon B) | NOWA | NOWA | do zrobienia |
 | nd 15.11 | 13:00 | NOWA – karuzela 9:16 | NOWA | NOWA | do zrobienia |
 | nd 15.11 | 18:00 | NEWS – rolka z bieżących informacji (skill `szkola-klamala-sledczy`: `sledczy.py` → wybór → dokument pierwotny + 2. źródło); bez broni, przemocy i tragedii | NEWS | NOWA | do zrobienia |
-| pon. 16.11 | 9:00 | NOWA – prawo w codzienności | NOWA | NOWA | do zrobienia |
+| pon. 16.11 | 9:00 | NOWA – prawo w codzienności | NOWA | NOWA | do zrobienia – ROBI SESJA GŁÓWNA (send_later 6:30) |
 | pon. 16.11 | 13:00 | NOWA – karuzela 9:16 | NOWA | NOWA | do zrobienia |
-| pon. 16.11 | 18:00 | Co może policja #9 – „Policjant w cywilu? Poproś o legitymację – i ją przepisz” (§ 2 ust. 2 rozp. RM) | NOWA (P2) | NOWA | do zrobienia |
+| pon. 16.11 | 18:00 | Co może policja #9 – „Policjant w cywilu? Poproś o legitymację – i ją przepisz” (§ 2 ust. 2 rozp. RM) | NOWA (P2) | NOWA | do zrobienia – ROBI SESJA GŁÓWNA (send_later 14:30) |
 | wt. 17.11 | 9:00 | NOWA – motoryzacja (przepisy, mity kierowców) | NOWA | NOWA | do zrobienia |
 | wt. 17.11 | 13:00 | NOWA – karuzela 9:16 | NOWA | NOWA | do zrobienia |
 | wt. 17.11 | 18:00 | NEWS – rolka z bieżących informacji (skill `szkola-klamala-sledczy`: `sledczy.py` → wybór → dokument pierwotny + 2. źródło); bez broni, przemocy i tragedii | NEWS | NOWA | do zrobienia |
