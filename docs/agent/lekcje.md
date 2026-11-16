@@ -69,3 +69,4 @@ Uwaga na nagłówki-straszaki („najniebezpieczniejsza w UE”, „bezwzględna
 - Seria „Co może policja” wraca na **pon., śr., pt. 18:00**; „Twoje prawa” poza policją (sklep, urząd, praca) – **sob. 18:00**.
 - Powód (raport `BRAND_GROWTH/REPORTS/RAPORT_2026-11-15.md`): na TikToku policja daje najwięcej (Policja #1 – 7775), na IG Policja #8 (71) i #6 (56) w czwórce tygodnia.
 - Każda rolka policyjna: teza ≤ 7 słów od klatki 0 (najlepiej ze zdjęciem radiowozu CC0), zakończenie „jak się bronić”, pytanie o zasadę.
+- 16.11 – rolka SVR z tłem AI „ziemia” z magazynu (0 kredytów): start 6:31, wysyłka 7:05. Silnik wydłużył outro z 4,6 do 6,4 s (18 słów z źródłem) → rolka 30 s. **Reguła:** w outro źródło krótkie (≤ 5 słów), pełne w opisie.
