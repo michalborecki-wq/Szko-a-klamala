@@ -134,7 +134,7 @@ def styl(post, i, n):
 
 def css(TOK):
     return f"""
-.w{{display:inline-block}} .ch{{display:inline-block}}
+.w{{display:inline-block;white-space:nowrap}} .ch{{display:inline-block}}
 .m{{display:inline-block;vertical-align:top;padding:0 .14em .34em 0;margin:0 -.14em -.34em 0}}
 .fxbg{{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}}
 .fxbg canvas{{position:absolute;inset:0}}
