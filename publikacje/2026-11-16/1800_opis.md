@@ -13,7 +13,7 @@ Podstawa:
 
 Druga strona: przepisy chronią też samych policjantów – spisane dane pozwalają szybko wyjaśnić skargę, a obywatelowi odróżnić funkcjonariusza od oszusta, który się pod niego podszywa.
 
-Sprawdziłbyś legitymację policjanta w cywilu? 👇
+A Ty byś sprawdził legitymację policjanta w cywilu? 👇
 Wyślij komuś, kto by uwierzył na słowo.
 
 To nie jest porada prawna.

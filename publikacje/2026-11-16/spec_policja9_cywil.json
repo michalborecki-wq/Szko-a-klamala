@@ -39,7 +39,7 @@
     },
     {
      "type": "outro",
-     "question": "Sprawdziłbyś legitymację policjanta w cywilu?",
+     "question": "A Ty byś sprawdził?",
      "sub": "Wyślij komuś, kto by uwierzył na słowo.",
      "sources": "To nie jest porada prawna.",
      "partner_slot": false
