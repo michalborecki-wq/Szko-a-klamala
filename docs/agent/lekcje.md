@@ -70,3 +70,5 @@ Uwaga na nagłówki-straszaki („najniebezpieczniejsza w UE”, „bezwzględna
 - Powód (raport `BRAND_GROWTH/REPORTS/RAPORT_2026-11-15.md`): na TikToku policja daje najwięcej (Policja #1 – 7775), na IG Policja #8 (71) i #6 (56) w czwórce tygodnia.
 - Każda rolka policyjna: teza ≤ 7 słów od klatki 0 (najlepiej ze zdjęciem radiowozu CC0), zakończenie „jak się bronić”, pytanie o zasadę.
 - 16.11 – rolka SVR z tłem AI „ziemia” z magazynu (0 kredytów): start 6:31, wysyłka 7:05. Silnik wydłużył outro z 4,6 do 6,4 s (18 słów z źródłem) → rolka 30 s. **Reguła:** w outro źródło krótkie (≤ 5 słów), pełne w opisie.
+- 16.11 (18:00) – na planszy `text` silnik powiększa nagłówek do wypełnienia kadru i łamie długie słowa w połowie („PROKUR-ATORA”, potem „ZAŻA-LENIE”). Dwa zbędne rendery (ok. 40 min). **Reguła:** w `title`/`accent` planszy `text` słowa ≤ 8 liter; długie słowo daj do `body`. Sprawdzaj arkusz z `--draft` także pod kątem łamania słów, zanim puścisz render 4K.
+- 16.11 – `durations` w specu to minimum: silnik i tak wydłuża plansze do czasu czytania (0,3 s/słowo). Długość rolki skracasz tylko mniejszą liczbą słów lub plansz.
