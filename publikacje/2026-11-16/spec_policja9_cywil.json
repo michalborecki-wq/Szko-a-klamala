@@ -1,0 +1,59 @@
+{
+ "posts": [
+  {
+   "id": "policja9_cywil",
+   "format": "reel",
+   "subject": "PRAWO",
+   "series": "CO MOŻE POLICJA #9",
+   "ton": "PRAWO",
+   "moc": "mocna",
+   "durations": [
+    4.0,
+    7.0,
+    6.0,
+    5.0,
+    5.5
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "odznaka",
+     "pieczatka": "PRAWO",
+     "title": "Policjant w cywilu?",
+     "accent": "Możesz przepisać jego legitymację."
+    },
+    {
+     "type": "dokument",
+     "tag": "PRZEPIS",
+     "naglowek": "Ustawa o Policji · art. 61 ust. 1",
+     "tekst": "okazać legitymację służbową w taki sposób, aby zainteresowany miał możliwość **odczytać i zanotować** numer",
+     "linie": 1,
+     "wskaz": "numer, organ, nazwisko"
+    },
+    {
+     "type": "myth",
+     "myth_label": "MIT",
+     "fact_label": "PRZEPIS",
+     "myth": "„Pokazał z daleka – wystarczy.”",
+     "fact": "Na Twoje żądanie pokazuje tak, byś **zapisał dane**.",
+     "source": "Dz.U. 2023 poz. 2535, § 2 ust. 2"
+    },
+    {
+     "type": "text",
+     "tag": "JAK SIĘ BRONIĆ",
+     "title": "Odmówił?",
+     "accent": "Zażalenie do prokuratora.",
+     "body": "Po kontroli policjant ma Cię o nim **pouczyć**.",
+     "source": "§ 2 ust. 4 – tamże"
+    },
+    {
+     "type": "outro",
+     "question": "Sprawdziłbyś legitymację policjanta w cywilu?",
+     "sub": "Wyślij komuś, kto by uwierzył na słowo.",
+     "sources": "To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ]
+  }
+ ]
+}
