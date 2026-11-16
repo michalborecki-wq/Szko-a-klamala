@@ -26,7 +26,7 @@ Wniosek: 3 formaty na 9 rolek, jeden schemat narracji. Od 13.11 18:00 obowiązuj
 | nd. 15.11 9:00 | INTERACTIVE | 1 | plansza `quiz` z odliczaniem |
 | nd. 15.11 18:00 | TOP | 4 lub 1 | plansza `bars` |
 | pon. 16.11 9:00 | SVR | 1 | `versus` „W szkole / Naprawdę” – ZROBIONE: Kolumb (tło AI ziemia) |
-| pon. 16.11 18:00 | NEWS | 3 (policja) | `wycinek` |
+| pon. 16.11 18:00 | DOC (zamiast NEWS – brak świeżego newsa) | 3 (policja) | `dokument` – ZROBIONE: Policja #9 |
 | wt. 17.11 9:00 | EXPLAINER | 4 | animowany wykres |
 | wt. 17.11 18:00 | DOC | 2 | `timeline` |
 | śr. 18.11 9:00 | FAST 12–15 s (próba 1 z 2, zgoda Michała 13.11) | 1 | 3 liczby, cięcia na bicie |

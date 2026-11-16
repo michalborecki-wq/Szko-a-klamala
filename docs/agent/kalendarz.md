@@ -51,7 +51,7 @@ Po wysłaniu agent zmienia status na **wysłane**. **Decyzja Michała 8.11: „M
 | nd 15.11 | 18:00 | NEWS – rolka z bieżących informacji (skill `szkola-klamala-sledczy`: `sledczy.py` → wybór → dokument pierwotny + 2. źródło); bez broni, przemocy i tragedii | NEWS | NOWA | do zrobienia |
 | pon. 16.11 | 9:00 | Szkoła kłamała (SVR „W szkole / Naprawdę”): „Kolumb nie udowodnił, że Ziemia jest okrągła.” – NASA Stargazers; J.B. Russell 1991; tło AI „ziemia” (magazyn, 0 kr.) | `publikacje/2026-11-16/spec_kolumb.json#kolumb` | `publikacje/2026-11-16/0900_opis.md` | wysłane (16.11 7:05, sesja główna) |
 | pon. 16.11 | 13:00 | NOWA – karuzela 9:16 | NOWA | NOWA | do zrobienia |
-| pon. 16.11 | 18:00 | Co może policja #9 – „Policjant w cywilu? Poproś o legitymację – i ją przepisz” (§ 2 ust. 2 rozp. RM) | NOWA (P2) | NOWA | do zrobienia – ROBI SESJA GŁÓWNA (send_later 14:30) |
+| pon. 16.11 | 18:00 | Co może policja #9 – „Policjant w cywilu? Możesz przepisać jego legitymację.” (art. 61 ust. 1 u.o.P.; § 2 ust. 2 i 4 Dz.U. 2023 poz. 2535) | `publikacje/2026-11-16/spec_policja9_cywil.json#policja9_cywil` | `publikacje/2026-11-16/1800_opis.md` | wysłane (16.11 16:45, sesja główna) |
 | wt. 17.11 | 9:00 | NOWA – motoryzacja (przepisy, mity kierowców) | NOWA | NOWA | do zrobienia |
 | wt. 17.11 | 13:00 | NOWA – karuzela 9:16 | NOWA | NOWA | do zrobienia |
 | wt. 17.11 | 18:00 | NEWS – rolka z bieżących informacji (skill `szkola-klamala-sledczy`: `sledczy.py` → wybór → dokument pierwotny + 2. źródło); bez broni, przemocy i tragedii | NEWS | NOWA | do zrobienia |
