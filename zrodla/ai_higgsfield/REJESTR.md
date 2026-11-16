@@ -10,7 +10,7 @@ Procedura: `docs/higgsfield-procedura.md`. Saldo 15.11.2026 po rolce „Czas pra
 | antarktyda_seedance.mp4 | Seedance 2.5 | 35 | zarezerwowany – 14.11 9:00 Antarktyda |
 | waga.mp4 | Kling 3.0 | 7,5 | użyty 12.11 – Pożyczka z kursem (UOKiK); dalej tylko tło drugoplanowe |
 | klepsydra.mp4 | Kling 3.0 | 7,5 | wolny – terminy, emerytura, „przepada” |
-| ziemia.mp4 | Kling 3.0 | 7,5 | wolny – kosmos (nowy temat) |
+| ziemia.mp4 | Kling 3.0 | 7,5 | użyty 16.11 – Kolumb (tło); dalej tylko tło drugoplanowe |
 | saturn.mp4, mozg.mp4, monety.mp4, szlaban.mp4 | Kling 3.0 | 30 | temat opublikowany – tylko tło drugoplanowe w innym temacie (monety: finanse) |
 
 ## Wideo 2026-11-13/wideo/ (720×1280, 5 s, Kling 3.0 tekst→wideo, po 10 kr.)

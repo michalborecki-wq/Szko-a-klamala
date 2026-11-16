@@ -1,0 +1,65 @@
+{
+ "posts": [
+  {
+   "id": "kolumb",
+   "format": "reel",
+   "subject": "HISTORIA",
+   "series": "SZKOŁA KŁAMAŁA",
+   "ton": "CIEKAWOSTKA",
+   "moc": "mocna",
+   "tresc": "dol",
+   "etykieta_ai": true,
+   "tlo3d": {
+    "klatki": "VIRAL_REELS_FACTORY/VIDEOS/tla/ziemia",
+    "fps": 30,
+    "krycie": 0.9
+   },
+   "slides": [
+    {
+     "type": "cover",
+     "title": "Kolumb nie udowodnił,",
+     "accent": "że Ziemia jest okrągła."
+    },
+    {
+     "type": "versus",
+     "side": "przeciw",
+     "label": "W SZKOLE",
+     "title": "„Bali się",
+     "accent": "krawędzi świata.”",
+     "body": "Kolumb popłynął **wbrew uczonym** – zwolennikom płaskiej Ziemi."
+    },
+    {
+     "type": "versus",
+     "side": "za",
+     "label": "NAPRAWDĘ",
+     "title": "Ok. 240 p.n.e.",
+     "accent": "Eratostenes zmierzył Ziemię.",
+     "body": "Ponad **1700 lat** przed Kolumbem.",
+     "source": "NASA; J.B. Russell 1991"
+    },
+    {
+     "type": "myth",
+     "myth_label": "MIT",
+     "fact_label": "PRAWDA",
+     "myth": "„Uczeni się mylili.”",
+     "fact": "Mylił się **Kolumb**: zaniżył rozmiar Ziemi. **Uratowała go Ameryka.**",
+     "source": "NASA Stargazers"
+    },
+    {
+     "type": "outro",
+     "question": "Czego jeszcze uczyli Cię jako pewnik?",
+     "sub": "Wyślij komuś, kto wierzy w krawędź świata.",
+     "sources": "NASA; Russell, Inventing the Flat Earth (1991).",
+     "partner_slot": false
+    }
+   ],
+   "durations": [
+    4.2,
+    5.0,
+    5.8,
+    6.2,
+    4.6
+   ]
+  }
+ ]
+}

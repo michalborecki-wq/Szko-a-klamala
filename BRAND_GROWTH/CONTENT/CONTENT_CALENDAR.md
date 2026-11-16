@@ -25,7 +25,7 @@ Wniosek: 3 formaty na 9 rolek, jeden schemat narracji. Od 13.11 18:00 obowiązuj
 | sob. 14.11 9:00 | MYTH (gotowa: Antarktyda) | 1 | tło wideo, mapa |
 | nd. 15.11 9:00 | INTERACTIVE | 1 | plansza `quiz` z odliczaniem |
 | nd. 15.11 18:00 | TOP | 4 lub 1 | plansza `bars` |
-| pon. 16.11 9:00 | SVR | 1 | plansza `versus` „W szkole / Naprawdę” |
+| pon. 16.11 9:00 | SVR | 1 | `versus` „W szkole / Naprawdę” – ZROBIONE: Kolumb (tło AI ziemia) |
 | pon. 16.11 18:00 | NEWS | 3 (policja) | `wycinek` |
 | wt. 17.11 9:00 | EXPLAINER | 4 | animowany wykres |
 | wt. 17.11 18:00 | DOC | 2 | `timeline` |
