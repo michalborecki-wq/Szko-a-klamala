@@ -627,7 +627,20 @@ FIT_AND_QA = """
     const els = [...c.querySelectorAll(sel)];
     const used = () => { const k = [...c.children].filter(e => e.offsetHeight); if (!k.length) return 1;
       return (k[k.length-1].getBoundingClientRect().bottom - k[0].getBoundingClientRect().top) / c.clientHeight; };
-    const wide = () => els.some(e => e.scrollWidth > c.clientWidth + 1);
+    // 16.11: słowo złamane w połowie (overflow-wrap) nie daje scrollWidth > clientWidth – sprawdź każde słowo osobno
+    const broken = () => els.some(el => {
+      const w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+      for (let t = w.nextNode(); t; t = w.nextNode()) {
+        const re = /\\S+/g; let m;
+        while ((m = re.exec(t.data))) {
+          const r = document.createRange(); r.setStart(t, m.index); r.setEnd(t, m.index + m[0].length);
+          const rs = [...r.getClientRects()].filter(x => x.width > 0);
+          if (rs.length > 1 && Math.abs(rs[0].top - rs[rs.length-1].top) > 2) return true;
+        }
+      }
+      return false;
+    });
+    const wide = () => els.some(e => e.scrollWidth > c.clientWidth + 1) || broken();
     const set = g => els.forEach(el => { const b = parseFloat(el.dataset.gb || getComputedStyle(el).fontSize);
       el.dataset.gb = b; el.style.fontSize = (b * g) + 'px'; });
     let g = 1, n = 0;
