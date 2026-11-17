@@ -53,7 +53,7 @@ Po wysłaniu agent zmienia status na **wysłane**. **Decyzja Michała 8.11: „M
 | pon. 16.11 | 13:00 | NOWA – karuzela 9:16 | NOWA | NOWA | do zrobienia |
 | pon. 16.11 | 18:00 | Co może policja #9 – „Policjant w cywilu? Możesz przepisać jego legitymację.” (art. 61 ust. 1 u.o.P.; § 2 ust. 2 i 4 Dz.U. 2023 poz. 2535) | `publikacje/2026-11-16/spec_policja9_cywil.json#policja9_cywil` | `publikacje/2026-11-16/1800_opis.md` | wysłane (16.11 16:45, sesja główna) |
 | wt. 17.11 | 9:00 | Mit kierowców: „Łańcuchy na kołach? Możesz dostać mandat.” – art. 60 ust. 3 PoRD (100 zł), znak C-18 (200 zł), taryfikator zm. Dz.U. 2021 poz. 2484 | `publikacje/2026-11-17/spec_lancuchy.json#lancuchy` | `publikacje/2026-11-17/0900_opis.md` | wysłane (17.11 7:45, sesja główna) |
-| wt. 17.11 | 13:00 | NOWA – karuzela 9:16 | NOWA | NOWA | do zrobienia |
+| wt. 17.11 | 13:00 | Karuzela TikTok: „Banan to jagoda. Truskawka – nie.” – Live Science; McGill OSS | `publikacje/2026-11-17/spec_banan.json#banan_jagoda` | `publikacje/2026-11-17/1300_opis.md` | wysłane (17.11 13:05, sesja główna – zadanie cykliczne wyłączone przez limit) |
 | wt. 17.11 | 18:00 | NEWS – rolka z bieżących informacji (skill `szkola-klamala-sledczy`: `sledczy.py` → wybór → dokument pierwotny + 2. źródło); bez broni, przemocy i tragedii | NEWS | NOWA | do zrobienia – ROBI SESJA GŁÓWNA (send_later 6:30/14:30) |
 | śr. 18.11 | 9:00 | NOWA – nauka/mózg | NOWA | NOWA | do zrobienia – ROBI SESJA GŁÓWNA (send_later 6:30/14:30) |
 | śr. 18.11 | 13:00 | NOWA – karuzela 9:16 | NOWA | NOWA | do zrobienia |

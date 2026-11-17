@@ -1,0 +1,8 @@
+{"handle": "@szkola_klamala", "posts": [{
+ "id": "banan_jagoda", "format": "vertical", "subject": "NAUKA", "ton": "CIEKAWOSTKA",
+ "slides": [
+  {"type": "cover", "title": "Banan to jagoda.", "accent": "Truskawka – nie.", "sub": "Botanika ma swoje zasady."},
+  {"type": "text", "tag": "DEFINICJA", "title": "Jagoda to owoc", "accent": "z jednego słupka", "body": "Jeden kwiat, **jedna zalążnia**, miąższ i nasiona w środku. Banan, pomidor i winogrono pasują.", "source": "Live Science; McGill OSS"},
+  {"type": "text", "tag": "TWIST", "title": "Truskawka", "accent": "to „oszustka”", "body": "Powstaje z **wielu zalążni** jednego kwiatu. Żółte kropki na skórce to osobne owocki – **niełupki**.", "source": "Live Science"},
+  {"type": "outro", "question": "Wiedziałeś, że banan to jagoda?", "sub": "Wyślij komuś, kto je truskawki „jagodowo”.", "sources": "Źródła: Live Science; McGill Office for Science and Society", "partner_slot": false}
+ ]}]}
