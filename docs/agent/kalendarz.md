@@ -52,13 +52,13 @@ Po wysłaniu agent zmienia status na **wysłane**. **Decyzja Michała 8.11: „M
 | pon. 16.11 | 9:00 | Szkoła kłamała (SVR „W szkole / Naprawdę”): „Kolumb nie udowodnił, że Ziemia jest okrągła.” – NASA Stargazers; J.B. Russell 1991; tło AI „ziemia” (magazyn, 0 kr.) | `publikacje/2026-11-16/spec_kolumb.json#kolumb` | `publikacje/2026-11-16/0900_opis.md` | wysłane (16.11 7:05, sesja główna) |
 | pon. 16.11 | 13:00 | NOWA – karuzela 9:16 | NOWA | NOWA | do zrobienia |
 | pon. 16.11 | 18:00 | Co może policja #9 – „Policjant w cywilu? Możesz przepisać jego legitymację.” (art. 61 ust. 1 u.o.P.; § 2 ust. 2 i 4 Dz.U. 2023 poz. 2535) | `publikacje/2026-11-16/spec_policja9_cywil.json#policja9_cywil` | `publikacje/2026-11-16/1800_opis.md` | wysłane (16.11 16:45, sesja główna) |
-| wt. 17.11 | 9:00 | NOWA – motoryzacja (przepisy, mity kierowców) | NOWA | NOWA | do zrobienia |
+| wt. 17.11 | 9:00 | Mit kierowców: „Łańcuchy na kołach? Możesz dostać mandat.” – art. 60 ust. 3 PoRD (100 zł), znak C-18 (200 zł), taryfikator zm. Dz.U. 2021 poz. 2484 | `publikacje/2026-11-17/spec_lancuchy.json#lancuchy` | `publikacje/2026-11-17/0900_opis.md` | w produkcji (sesja główna, start 7:19 – brak przypomnienia) |
 | wt. 17.11 | 13:00 | NOWA – karuzela 9:16 | NOWA | NOWA | do zrobienia |
-| wt. 17.11 | 18:00 | NEWS – rolka z bieżących informacji (skill `szkola-klamala-sledczy`: `sledczy.py` → wybór → dokument pierwotny + 2. źródło); bez broni, przemocy i tragedii | NEWS | NOWA | do zrobienia |
-| śr. 18.11 | 9:00 | NOWA – nauka/mózg | NOWA | NOWA | do zrobienia |
+| wt. 17.11 | 18:00 | NEWS – rolka z bieżących informacji (skill `szkola-klamala-sledczy`: `sledczy.py` → wybór → dokument pierwotny + 2. źródło); bez broni, przemocy i tragedii | NEWS | NOWA | do zrobienia – ROBI SESJA GŁÓWNA (send_later 6:30/14:30) |
+| śr. 18.11 | 9:00 | NOWA – nauka/mózg | NOWA | NOWA | do zrobienia – ROBI SESJA GŁÓWNA (send_later 6:30/14:30) |
 | śr. 18.11 | 13:00 | NOWA – karuzela 9:16 | NOWA | NOWA | do zrobienia |
-| śr. 18.11 | 18:00 | Co może policja #10 – „Zatrzymanie nielegalne? Sąd może Cię wypuścić od ręki” (art. 246 § 1–3 KPK) | NOWA (P6) | NOWA | do zrobienia |
-| czw. 19.11 | 9:00 | Black Friday – „»Było 999 zł« to nie jest cena sprzed promocji” (najniższa cena z 30 dni, art. 4 ust. 2 ustawy o informowaniu o cenach – sprawdzić w ISAP; start oficjalnej sprzedaży TikTok Shop 19.11) | NOWA (S2) | NOWA | do zrobienia |
+| śr. 18.11 | 18:00 | Co może policja #10 – „Zatrzymanie nielegalne? Sąd może Cię wypuścić od ręki” (art. 246 § 1–3 KPK) | NOWA (P6) | NOWA | do zrobienia – ROBI SESJA GŁÓWNA (send_later 6:30/14:30) |
+| czw. 19.11 | 9:00 | Black Friday – „»Było 999 zł« to nie jest cena sprzed promocji” (najniższa cena z 30 dni, art. 4 ust. 2 ustawy o informowaniu o cenach – sprawdzić w ISAP; start oficjalnej sprzedaży TikTok Shop 19.11) | NOWA (S2) | NOWA | do zrobienia – ROBI SESJA GŁÓWNA (send_later 6:30/14:30) |
 
 Wcześniej (4.11, ręcznie): Co może policja #3 – 48 h – wysłane.
 | nd. 15.11 | 9:00 | Szkoła kłamała (quiz): „Złota rybka nie zapomina po 3 sekundach.” – BBC Wildlife, przegląd badań (Plymouth 1994) | `publikacje/2026-11-15/spec_rybka_quiz.json#rybka_quiz` | `publikacje/2026-11-15/0900_opis.md` | wysłane (15.11 7:05, sesja główna) |

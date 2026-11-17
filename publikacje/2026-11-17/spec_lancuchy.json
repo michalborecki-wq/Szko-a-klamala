@@ -1,0 +1,11 @@
+{"posts": [{
+ "id": "lancuchy", "format": "reel", "subject": "MOTORYZACJA", "series": "MIT KIEROWCÓW",
+ "ton": "KONTROWERSJA", "moc": "mocna",
+ "durations": [3.5, 6.0, 5.5, 5.0, 4.5],
+ "slides": [
+  {"type": "cover", "obraz": "opona", "pieczatka": "100 ZŁ", "title": "Łańcuchy na kołach?", "accent": "Możesz dostać mandat."},
+  {"type": "dokument", "tag": "PRZEPIS", "naglowek": "Prawo o ruchu drogowym · art. 60 ust. 3", "tekst": "Używanie łańcuchów przeciwślizgowych na oponach jest dozwolone **tylko na drodze pokrytej śniegiem**.", "linie": 1, "wskaz": "czarny asfalt = 100 zł"},
+  {"type": "myth", "myth_label": "MIT", "fact_label": "TWIST", "myth": "„Zimą łańcuchy zawsze wolno.”", "fact": "Znak C-18 „nakaz łańcuchów”? Bez nich – **200 zł**.", "source": "taryfikator, Dz.U. 2021 poz. 2484"},
+  {"type": "text", "tag": "CO ROBIĆ", "title": "Śnieg się", "accent": "skończył?", "body": "Zatrzymaj się i **zdejmij łańcuchy**. Kara za nie i kara za ich brak."},
+  {"type": "outro", "question": "To ma sens?", "sub": "Wyślij komuś, kto jedzie w góry.", "sources": "To nie jest porada prawna.", "partner_slot": false}
+ ]}]}
