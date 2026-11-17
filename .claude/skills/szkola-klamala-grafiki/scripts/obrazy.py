@@ -236,8 +236,20 @@ def rybka(**_):
     return _svg("-400 -420 800 620", f"<g class='ob-in'>{cialo}</g>{bab}")
 
 
+def butelka(**_):
+    # przezroczysta butelka „jak woda” z kroplami (17.11) – napoje, etykiety, reklamy; bez logo marki
+    b = (f"<path d='M-40 -330 h80 v60 q0 30 40 60 q60 45 60 120 v330 q0 40 -40 40 h-200 q-40 0 -40 -40 v-330 q0 -75 60 -120 q40 -30 40 -60 Z' "
+         f"fill='{B}' fill-opacity='.18' stroke='{W}' stroke-width='14'/>"
+         f"<rect x='-55' y='-370' width='110' height='50' rx='10' fill='{B}'/>"
+         f"<path d='M-138 20 h276 v170 q0 30 -30 30 h-216 q-30 0 -30 -30 Z' fill='{B}' fill-opacity='.45'/>"
+         f"<rect x='-120' y='-40' width='240' height='90' rx='12' fill='{W}' opacity='.9'/>")
+    kr = "".join(f"<path d='M{x} {y} q14 24 0 34 q-14 -10 0 -34 Z' fill='{B}' class='ob-drop' style='animation-delay:{.04*i}s'/>"
+                 for i,(x,y) in enumerate([(-220,-200),(220,-120),(-240,80)]))
+    return _svg("-320 -400 640 660", f"<g class='ob-in'>{b}</g>{kr}")
+
+
 OBRAZY = {"polska": polska, "torba": torba, "suwak": suwak, "dowod": dowod, "monety": monety, "opona": opona, "zegar": zegar,
-          "licznik": licznik, "ruletka": ruletka, "saturn": saturn, "odznaka": odznaka, "gwiazdki": gwiazdki, "rybka": rybka}
+          "licznik": licznik, "ruletka": ruletka, "saturn": saturn, "odznaka": odznaka, "gwiazdki": gwiazdki, "rybka": rybka, "butelka": butelka}
 
 
 def html(nazwa, opcje=None, wysokosc=520, pieczatka=None):

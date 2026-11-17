@@ -1,0 +1,60 @@
+{
+ "posts": [
+  {
+   "id": "kubus_woda",
+   "format": "reel",
+   "subject": "PIENIĄDZE",
+   "series": "ŚLEDZTWO",
+   "ton": "KONTROWERSJA",
+   "moc": "mocna",
+   "durations": [
+    3.5,
+    6.5,
+    5.0,
+    5.5,
+    4.5
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "obraz": "butelka",
+     "pieczatka": "ZARZUTY",
+     "title": "Woda dla dzieci?",
+     "accent": "UOKiK: to sok."
+    },
+    {
+     "type": "dokument",
+     "tag": "UOKIK · 16.11.2026",
+     "naglowek": "Prezes UOKiK o reklamach Kubuś Waterrr",
+     "tekst": "Reklama nie może sprawiać, że konsument **widzi wodę** tam, gdzie w rzeczywistości jest **napój z sokiem**.",
+     "linie": 1,
+     "wskaz": "zarzuty dla Grupy Maspex"
+    },
+    {
+     "type": "number",
+     "tag": "SKŁAD",
+     "big": "30%",
+     "title": "Sok",
+     "accent": "z jabłek.",
+     "body": "Truskawka albo malina z obrazka: **0,1%**.",
+     "source": "UOKiK, 16.11.2026"
+    },
+    {
+     "type": "myth",
+     "myth_label": "WIDZISZ",
+     "fact_label": "TWIST",
+     "myth": "„ZERO … CUKRU”",
+     "fact": "Drobnym drukiem: **dodanego**. Sok ma **własny cukier**.",
+     "source": "UOKiK; WHO"
+    },
+    {
+     "type": "outro",
+     "question": "Uczciwa reklama?",
+     "sub": "Wyślij komuś, kto pakuje dziecku napój.",
+     "sources": "Postępowanie w toku. Firma się nie zgadza.",
+     "partner_slot": false
+    }
+   ]
+  }
+ ]
+}
