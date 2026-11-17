@@ -118,6 +118,12 @@ Dla każdej rolki w `publikacje/RRRR-MM-DD/opisy.md`:
 3. Raport do Michała: tabela (godz. | sieć | rolka | haczyk A/B | karta), pliki przez SendUserFile (display: attach) w kolejności publikacji, opisy w blokach kodu, przypięte komentarze, szkice odpowiedzi, wnioski ze statystyk w 2 zdaniach.
 4. Push (PushNotification, tagi routine_summary): „2 rolki na dziś gotowe: <haczyk 1>, <haczyk 2>. Wczoraj: <najlepsza rolka – wyświetlenia>.” Jeśli coś się nie udało – napisz co i co zostało gotowe.
 
+## Zespół 36 agentów (od 17.11)
+
+- Role z tej procedury mają swoich podagentów `zm-*` (mapa: `docs/zespol/README.md`, dyrygent: skill `zespol-marketingu`). Możesz delegować kroki (np. fakty → `zm-scenarzysta`, kontrola → `zm-straznik-marki`). Format i godziny DOSTAWY się nie zmieniają.
+- **Niedziela, start po 15:00, po dostawie:** `/zespol tydzien` = niedzielny raport rozwoju marki (jeden plik w `BRAND_GROWTH/REPORTS/`, nie dwa). W wiadomości tylko 1 linia „Raport tygodnia w repo” + maks. 3 decyzje.
+- **Dostawa 9:00:** `zm-przypominacz` dopisuje do wiadomości maks. 3 linie, tylko gdy w `docs/zespol/sprzedaz/crm.md` jest termin na dziś. Pilna eskalacja (`docs/zespol/spolecznosc/eskalacje.md`) – 1 zdanie.
+
 ## Awaria
 
 - Render przerwany limitem czasu – uruchom ponownie tylko brakujące rolki; nie wysyłaj niesprawdzonych plików.
