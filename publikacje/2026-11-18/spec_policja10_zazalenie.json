@@ -1,0 +1,64 @@
+{
+ "posts": [
+  {
+   "id": "policja10_zazalenie",
+   "format": "reel",
+   "subject": "PRAWO",
+   "series": "POLICJA #10",
+   "ton": "PRAWO",
+   "moc": "mocna",
+   "tresc": "dol",
+   "etykieta_ai": true,
+   "tlo3d": {
+    "klatki": "VIRAL_REELS_FACTORY/VIDEOS/tla/policja10",
+    "fps": 30,
+    "krycie": 0.9
+   },
+   "slides": [
+    {
+     "type": "cover",
+     "title": "Zatrzymali Cię bezprawnie?",
+     "accent": "Sąd Cię wypuści."
+    },
+    {
+     "type": "dokument",
+     "tag": "PRZEPIS",
+     "naglowek": "Kodeks postępowania karnego · art. 246 § 3",
+     "tekst": "sąd zarządza **natychmiastowe zwolnienie** zatrzymanego",
+     "linie": 1,
+     "wskaz": "natychmiast"
+    },
+    {
+     "type": "myth",
+     "myth_label": "MIT",
+     "fact_label": "PRAWDA",
+     "myth": "„Zatrzymali – nic nie zrobisz.”",
+     "fact": "Masz **zażalenie do sądu**. Sąd bada je **niezwłocznie**.",
+     "source": "art. 246 § 1–2 KPK"
+    },
+    {
+     "type": "text",
+     "tag": "JAK SIĘ BRONIĆ",
+     "title": "Masz",
+     "accent": "7 dni.",
+     "body": "Zażalenie składasz przez **policję** albo – gdy już Cię wypuszczono – wprost do **sądu**.",
+     "source": "art. 460 KPK; pouczenie Policji"
+    },
+    {
+     "type": "outro",
+     "question": "Znałeś to prawo?",
+     "sub": "Wyślij komuś, kto zna swoje prawa.",
+     "sources": "To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ],
+   "durations": [
+    3.5,
+    5.5,
+    5.5,
+    5.5,
+    4.5
+   ]
+  }
+ ]
+}

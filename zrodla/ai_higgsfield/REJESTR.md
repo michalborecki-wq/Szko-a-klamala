@@ -43,3 +43,11 @@ Procedura: `docs/higgsfield-procedura.md`. Saldo 15.11.2026 po rolce „Czas pra
 | 13.11 | 4 wideo (kameleon) | 40 | plan przedstawiony w rozmowie (31–40 kr.), Michał odpowiedział zmianą terminu na dziś 18:00 – przyjęte jako zgoda | tekst→wideo bez kadru startowego (brak czasu); Kling policzył 10 kr. za klip (z dźwiękiem) zamiast 7,5 – następnym razem wyłączyć dźwięk |
 | 14.11 | 4 wideo (seria policja: noc, notes, biurko, szyba) | 40 | „W rolce o 18 wykorzystaj higgsfield” (Michał, 14.11) | bez ludzi, mundurów i oznaczeń; logo Policji – odmowa (znak instytucji), zamiast tego zdjęcie radiowozu CC0 z Wikimedia Commons |
 | 15.11 | 4 wideo (praca: budzik, biuro, kawa, biurowiec) | 40 | „W rolce na 18 zastosuj higgsfield” (Michał, 15.11) | – |
+
+## 2026-11-18 (stała zgoda Michała 18.11)
+| plik | model | koszt | użycie |
+|---|---|---|---|
+| 2026-11-18/wideo/cela.mp4 | Kling 3.0, 9:16, 5 s | 10 | użyty 18.11 – Policja #10 (zażalenie na zatrzymanie) |
+| 2026-11-18/wideo/sala_sadowa.mp4 | Kling 3.0, 9:16, 5 s | 10 | użyty 18.11 – Policja #10; nadaje się do kolejnych rolek o sądzie |
+| 2026-11-18/wideo/zegar_korytarz.mp4 | Kling 3.0, 9:16, 5 s | 10 | użyty 18.11 – Policja #10; wolny do tematów o terminach |
+Saldo: 880 → 850.
