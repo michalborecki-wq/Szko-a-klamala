@@ -32,7 +32,8 @@ Procedura: `docs/higgsfield-procedura.md`. Saldo 15.11.2026 po rolce „Czas pra
 | Plik | Status |
 |---|---|
 | metka_promocja | zarezerwowany – Black Friday 19.11 |
-| fotoradar, dystrybutor, licznik_prad, koperty_urzad, klasa_tablica, globus, blyskawica, serce, pingwiny, mlotek_prawo, kalendarz_termin, ksiezyc_ziemia | wolne |
+| fotoradar, dystrybutor, licznik_prad, koperty_urzad, klasa_tablica, globus, serce, pingwiny, mlotek_prawo, kalendarz_termin, ksiezyc_ziemia | wolne |
+| blyskawica | użyty 18.11 – Piorun (FAST), tło z ruchem (zoompan) |
 | saturn_ocean, mozg, monety_stosy, szlaban_noc, opona_zima, telefon_platnosc, skarbonka | temat opublikowany – tylko tło w innym temacie |
 
 ## Dziennik generowania

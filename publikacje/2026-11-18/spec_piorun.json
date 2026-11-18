@@ -1,0 +1,55 @@
+{
+ "posts": [
+  {
+   "id": "piorun_fast",
+   "format": "reel",
+   "subject": "NAUKA",
+   "series": "SZKOŁA KŁAMAŁA",
+   "ton": "CIEKAWOSTKA",
+   "moc": "mocna",
+   "durations": [
+    2.8,
+    3.4,
+    3.4,
+    3.0
+   ],
+   "slides": [
+    {
+     "type": "cover",
+     "title": "Piorun nie trafia dwa razy?",
+     "accent": "Bzdura."
+    },
+    {
+     "type": "number",
+     "tag": "WIEŻOWIEC",
+     "big": "25×",
+     "title": "rocznie",
+     "accent": "Empire State.",
+     "source": "esbnyc.com"
+    },
+    {
+     "type": "number",
+     "tag": "CZŁOWIEK",
+     "big": "7×",
+     "title": "jeden",
+     "accent": "strażnik parku.",
+     "source": "Guinness World Records"
+    },
+    {
+     "type": "outro",
+     "question": "Kto Cię tego uczył?",
+     "sub": "Wyślij komuś, kto wierzy w ten mit.",
+     "sources": "ESB; Guinness",
+     "partner_slot": false
+    }
+   ],
+   "tresc": "dol",
+   "etykieta_ai": true,
+   "tlo3d": {
+    "klatki": "VIRAL_REELS_FACTORY/VIDEOS/tla/piorun",
+    "fps": 30,
+    "krycie": 0.9
+   }
+  }
+ ]
+}
