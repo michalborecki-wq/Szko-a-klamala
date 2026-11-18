@@ -36,3 +36,10 @@ Prompt (po angielsku, jeden akapit): przedmiot + powolny ruch kamery (slow push-
 
 ## 5. Rozliczenie
 Po każdej sesji generowania w wiadomości do Michała: wydane / pozostałe kredyty, lista plików, do których rolek. Raz w tygodniu (ig-audit): porównanie śr. czasu oglądania rolek z tłem AI i bez – jeśli tło nie daje poprawy przez 2 tygodnie, wstrzymujemy generowanie.
+
+## Stała zgoda – 18.11.2026
+Michał: „Są kredyty do wykorzystania na Higgsfield, więc póki ich nie wykorzystamy – działaj.”
+- Sesja główna generuje nowe ujęcia (zwykle 2–4 klipy kling3_0, 9:16, 5 s, bez dźwięku, gdy się da) do każdej rolki 9:00 i 18:00 – bez osobnej zgody na każdy wydatek – aż do wyczerpania kredytów (stan 18.11: 880).
+- Bez zmian: najpierw zweryfikowany scenariusz i sprawdzenie, że temat nie był publikowany; bez ludzi, tekstu i logo; paleta marki; wpis w `zrodla/ai_higgsfield/REJESTR.md`; `"etykieta_ai": true`.
+- W każdej wiadomości z dostawą: ile kredytów wydano i ile zostało.
+- Zadanie cykliczne nadal nie wydaje kredytów.
