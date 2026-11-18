@@ -15,3 +15,4 @@ Zasady: jedna zmienna na rolkę, wynik wpisać do `ANALYTICS/PERFORMANCE.md`, po
 ## Zakończone
 - Okładka z obrazem-bohaterem (2.11): sama nie obniżyła pominięć → zostaje jako standard, ale nie jako rozwiązanie.
 - Lektor (4.11): wstrzymany decyzją Michała tego samego dnia – brak danych.
+| FAST (E6 1/2) | 18.11 9:00 | Piorun – 17,6 s z logo | wynik po 7 dniach |
