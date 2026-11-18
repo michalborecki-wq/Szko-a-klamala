@@ -1,0 +1,8 @@
+{"handle": "@szkola_klamala", "posts": [{
+ "id": "wielblad_garb", "format": "vertical", "subject": "NAUKA", "ton": "CIEKAWOSTKA",
+ "slides": [
+  {"type": "cover", "title": "W garbie wielbłąda", "accent": "nie ma wody.", "sub": "Jest coś innego."},
+  {"type": "text", "tag": "PRAWDA", "title": "W garbie jest", "accent": "tłuszcz.", "body": "To **zapas energii** na czas, gdy brakuje jedzenia.", "source": "Library of Congress; San Diego Zoo"},
+  {"type": "text", "tag": "BONUS", "title": "Garb", "accent": "chudnie.", "body": "Gdy wielbłąd zużywa tłuszcz, garb **się kurczy**. Po dobrym jedzeniu znów rośnie.", "source": "Library of Congress"},
+  {"type": "outro", "question": "Też myślałeś, że to woda?", "sub": "Wyślij komuś, kto uczył się tego w szkole.", "sources": "Źródła: Library of Congress; San Diego Zoo Wildlife Alliance; Britannica", "partner_slot": false}
+ ]}]}
