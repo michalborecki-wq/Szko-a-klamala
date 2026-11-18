@@ -1,0 +1,10 @@
+{"posts": [{
+ "id": "strus_fast", "format": "reel", "subject": "NAUKA", "series": "SZKOŁA KŁAMAŁA",
+ "ton": "CIEKAWOSTKA", "moc": "mocna",
+ "durations": [2.8, 3.4, 4.2, 3.0],
+ "slides": [
+  {"type": "cover", "title": "Struś nie chowa głowy", "accent": "w piasek."},
+  {"type": "number", "tag": "UCIECZKA", "big": "70 km/h", "title": "tyle", "accent": "biegnie struś.", "source": "BBC Wildlife"},
+  {"type": "myth", "myth_label": "MIT", "fact_label": "PRAWDA", "myth": "„Chowa głowę ze strachu.”", "fact": "Kładzie się **płasko** – wygląda jak kopiec.", "source": "BBC Wildlife; Wonderopolis"},
+  {"type": "outro", "question": "Kto Ci to mówił?", "sub": "Wyślij komuś, kto chowa głowę w piasek.", "sources": "BBC Wildlife; Wonderopolis", "partner_slot": false}
+ ]}]}
