@@ -51,3 +51,10 @@ Procedura: `docs/higgsfield-procedura.md`. Saldo 15.11.2026 po rolce „Czas pra
 | 2026-11-18/wideo/sala_sadowa.mp4 | Kling 3.0, 9:16, 5 s | 10 | użyty 18.11 – Policja #10; nadaje się do kolejnych rolek o sądzie |
 | 2026-11-18/wideo/zegar_korytarz.mp4 | Kling 3.0, 9:16, 5 s | 10 | użyty 18.11 – Policja #10; wolny do tematów o terminach |
 Saldo: 880 → 850.
+
+## 2026-11-19 (stała zgoda 18.11)
+| plik | model | koszt | użycie |
+|---|---|---|---|
+| 2026-11-19/wideo/metka_kolysze.mp4 | Kling 3.0, 9:16, 5 s | 10 | użyty 19.11 – Black Friday; pusta żółta metka – do tematów o cenach |
+| 2026-11-19/wideo/wozek_alejka.mp4 | Kling 3.0, 9:16, 5 s | 10 | użyty 19.11 – Black Friday; do tematów o zakupach |
+Saldo: 850 → 830.
