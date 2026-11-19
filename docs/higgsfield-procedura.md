@@ -43,3 +43,6 @@ Michał: „Są kredyty do wykorzystania na Higgsfield, więc póki ich nie wyko
 - Bez zmian: najpierw zweryfikowany scenariusz i sprawdzenie, że temat nie był publikowany; bez ludzi, tekstu i logo; paleta marki; wpis w `zrodla/ai_higgsfield/REJESTR.md`; `"etykieta_ai": true`.
 - W każdej wiadomości z dostawą: ile kredytów wydano i ile zostało.
 - Zadanie cykliczne nadal nie wydaje kredytów.
+
+## Zmiana 19.11.2026
+Michał: „Higgsfield głównie w weekendy, bo kredytów ubywa.” → nowe klipy przede wszystkim do rolek sob. i niedz.; w dni robocze tła z Canvy (generate-image → zoompan), magazynu i zdjęć CC. Wyjątek w tygodniu tylko dla najważniejszej rolki, z uzasadnieniem w wiadomości.
