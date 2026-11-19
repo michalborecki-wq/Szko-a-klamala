@@ -1,0 +1,8 @@
+{"handle": "@szkola_klamala", "posts": [{
+ "id": "byk_czerwony", "format": "vertical", "subject": "NAUKA", "ton": "CIEKAWOSTKA",
+ "slides": [
+  {"type": "cover", "title": "Byka nie złości", "accent": "czerwony kolor.", "sub": "„Czerwona płachta” to mit."},
+  {"type": "text", "tag": "PRAWDA", "title": "Byk nie widzi", "accent": "czerwieni.", "body": "Bydło **nie rozróżnia** czerwonego koloru tak jak my.", "source": "Live Science"},
+  {"type": "text", "tag": "TEST", "title": "Liczy się", "accent": "ruch.", "body": "W teście MythBusters (2007) byk szarżował na **machające** osoby, a nieruchomą postać w czerwieni **ominął**.", "source": "Live Science; Wonderopolis"},
+  {"type": "outro", "question": "Też tak myślałeś?", "sub": "Wyślij komuś, kto boi się czerwonej kurtki na łące.", "sources": "Źródła: Live Science; Wonderopolis", "partner_slot": false}
+ ]}]}
