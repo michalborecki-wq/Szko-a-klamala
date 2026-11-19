@@ -58,3 +58,7 @@ Saldo: 880 → 850.
 | 2026-11-19/wideo/metka_kolysze.mp4 | Kling 3.0, 9:16, 5 s | 10 | użyty 19.11 – Black Friday; pusta żółta metka – do tematów o cenach |
 | 2026-11-19/wideo/wozek_alejka.mp4 | Kling 3.0, 9:16, 5 s | 10 | użyty 19.11 – Black Friday; do tematów o zakupach |
 Saldo: 850 → 830.
+| 2026-11-19/wideo/polki_prl.mp4 | Kling 3.0, 9:16, 5 s | 10 | użyty 19.11 – Kartki w PRL; puste półki z butelkami – do tematów PRL |
+| 2026-11-19/wideo/cukier_waga.mp4 | Kling 3.0, 9:16, 5 s | 10 | użyty 19.11 – Kartki w PRL; cukier na wadze – do tematów o cenach/żywności |
+| 2026-11-19/wideo/kalendarz_kartki.mp4 | Kling 3.0, 9:16, 5 s | 10 | ODRZUCONY – na kartce kalendarza cyfry i rysunek postaci (zasada: bez tekstu i ludzi) |
+Saldo: 830 → 800.

@@ -1,0 +1,64 @@
+{
+ "posts": [
+  {
+   "id": "kartki_cukier",
+   "format": "reel",
+   "subject": "HISTORIA",
+   "series": "PRL",
+   "ton": "CIEKAWOSTKA",
+   "moc": "mocna",
+   "tresc": "dol",
+   "etykieta_ai": true,
+   "tlo3d": {
+    "klatki": "VIRAL_REELS_FACTORY/VIDEOS/tla/kartki",
+    "fps": 30,
+    "krycie": 0.92
+   },
+   "slides": [
+    {
+     "type": "cover",
+     "title": "1976. Cukier tylko na kartki.",
+     "accent": "Przez 13 lat."
+    },
+    {
+     "type": "text",
+     "tag": "SIERPIEŃ 1976",
+     "title": "Władza cofa",
+     "accent": "podwyżki.",
+     "body": "W sklepach panika. Cukier trafia **na kartki**.",
+     "source": "IPN"
+    },
+    {
+     "type": "text",
+     "tag": "POTEM",
+     "title": "Nie tylko",
+     "accent": "cukier.",
+     "body": "Na kartki trafiły też m.in. **mięso** i **benzyna**.",
+     "source": "dzieje.pl"
+    },
+    {
+     "type": "myth",
+     "myth_label": "MIT",
+     "fact_label": "PRAWDA",
+     "myth": "„Kartki to stan wojenny.”",
+     "fact": "Cukier był na kartki **5 lat wcześniej**. Ostatnie zniesiono w **1989**.",
+     "source": "IPN; dzieje.pl"
+    },
+    {
+     "type": "outro",
+     "question": "Pamiętasz kartki?",
+     "sub": "Wyślij komuś, kto to pamięta.",
+     "sources": "IPN; dzieje.pl; ZPE",
+     "partner_slot": false
+    }
+   ],
+   "durations": [
+    4.0,
+    4.8,
+    4.5,
+    5.5,
+    4.5
+   ]
+  }
+ ]
+}
