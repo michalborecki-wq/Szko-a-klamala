@@ -82,3 +82,6 @@ Uwaga na nagłówki-straszaki („najniebezpieczniejsza w UE”, „bezwzględna
 - 19.11 – w treści planszy kwota „40 000 zł” rozbiła się na dwie linie („40 / 000 zł”). Silnik miał twardą spację tylko przed jednostką. Naprawione w `nbsp()` (render.py): cyfra + spacja + 3 cyfry = twarda spacja. Wymagało drugiego renderu (+10 min).
 - 19.11 – Higgsfield: prompt „no readable text, no numbers” nie wystarczył przy kalendarzu – model narysował cyfry i postać. **Reguła:** nie zamawiać ujęć przedmiotów, które z natury mają napisy (kalendarz, gazeta, szyld, dokument); każdy klip obejrzeć na klatce przed użyciem.
 - 19.11 – gorący temat (UOKiK: 55 mln zł kary dla Allegro za greenwashing) odłożony na pt. 9:00, bo trzecia z rzędu rolka o urzędach i przepisach łamie zasadę różnorodności.
+
+## OBOWIĄZEK 19.11 – wszystkie narzędzia przy każdej rolce (Michał: „obrazy, grafiki, animacje mają być perfekcyjne”)
+Lista kontrolna przed renderem 4K: [ ] Higgsfield – nowe ujęcia (1 na akt) · [ ] Canva generate-image – tło/okładka 9:16 · [ ] magazyn/CC, gdy pasuje · [ ] silnik: moc mocna, dokument z markerem, TWIST, licznik liczby · [ ] okładka z obrazem-bohaterem · [ ] arkusz z WIDEO bez błędów (łamanie słów, liczby, zasłonięcia) · [ ] w wiadomości: co użyte, kredyty Higgsfield.
