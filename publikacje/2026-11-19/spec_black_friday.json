@@ -1,11 +1,58 @@
-{"posts": [{
- "id": "black_friday", "format": "reel", "subject": "PIENIĄDZE", "series": "BLACK FRIDAY",
- "ton": "KONTROWERSJA", "moc": "mocna", "tresc": "dol", "etykieta_ai": true,
- "tlo3d": {"klatki": "VIRAL_REELS_FACTORY/VIDEOS/tla/black_friday", "fps": 30, "krycie": 0.9},
- "slides": [
-  {"type": "cover", "title": "„Było 999 zł”?", "accent": "To może być fikcja."},
-  {"type": "dokument", "tag": "PRZEPIS", "naglowek": "Ustawa o informowaniu o cenach · art. 4 ust. 2", "tekst": "uwidacznia się również informację o **najniższej cenie** (…) w okresie **30 dni** przed wprowadzeniem obniżki", "linie": 1, "wskaz": "patrz na tę cenę"},
-  {"type": "number", "tag": "KARA", "big": "20 000 zł", "title": "dla sklepu.", "accent": "Za brak tej ceny.", "body": "Po 3 wpadkach w rok – **40 000 zł**.", "source": "art. 6 ustawy"},
-  {"type": "myth", "myth_label": "MIT", "fact_label": "HACZYK", "myth": "„Kod rabatowy – ta sama zasada.”", "fact": "Kod na **cały sklep**? Obowiązek **nie działa**.", "source": "UOKiK"},
-  {"type": "outro", "question": "Uczciwe zasady?", "sub": "Wyślij komuś, kto poluje na promocje.", "sources": "To nie jest porada prawna.", "partner_slot": false}
- ]}]}
+{
+ "posts": [
+  {
+   "id": "black_friday",
+   "format": "reel",
+   "subject": "PIENIĄDZE",
+   "series": "BLACK FRIDAY",
+   "ton": "KONTROWERSJA",
+   "moc": "mocna",
+   "tresc": "dol",
+   "etykieta_ai": true,
+   "tlo3d": {
+    "klatki": "VIRAL_REELS_FACTORY/VIDEOS/tla/black_friday",
+    "fps": 30,
+    "krycie": 0.9
+   },
+   "slides": [
+    {
+     "type": "cover",
+     "title": "„Było 999 zł”?",
+     "accent": "To może być fikcja."
+    },
+    {
+     "type": "dokument",
+     "tag": "PRZEPIS",
+     "naglowek": "Ustawa o informowaniu o cenach · art. 4 ust. 2",
+     "tekst": "uwidacznia się również informację o **najniższej cenie** (…) w okresie **30 dni** przed wprowadzeniem obniżki",
+     "linie": 1,
+     "wskaz": "patrz na tę cenę"
+    },
+    {
+     "type": "number",
+     "tag": "KARA",
+     "big": "20 000 zł",
+     "title": "dla sklepu.",
+     "accent": "Za brak tej ceny.",
+     "body": "Po 3 wpadkach w rok – **40 000 zł**.",
+     "source": "art. 6 ustawy"
+    },
+    {
+     "type": "myth",
+     "myth_label": "MIT",
+     "fact_label": "HACZYK",
+     "myth": "„Kod rabatowy – ta sama zasada.”",
+     "fact": "Kod na **cały sklep**? Obowiązek **nie działa**.",
+     "source": "UOKiK"
+    },
+    {
+     "type": "outro",
+     "question": "Uczciwe zasady?",
+     "sub": "Wyślij komuś, kto poluje na promocje.",
+     "sources": "To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ]
+  }
+ ]
+}

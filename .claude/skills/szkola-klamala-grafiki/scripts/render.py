@@ -76,6 +76,7 @@ ARROW = ("<svg viewBox='0 0 24 24' width='1em' height='1em' style='vertical-alig
 def nbsp(t: str) -> str:
     """Twarde spacje po jednoliterowych spójnikach i przyimkach (polska typografia) + przed „r.”, „%” itd."""
     t = re.sub(r"(?<![\w&;])([aAiIoOuUwWzZ])\s+", r"\1&nbsp;", t)
+    t = re.sub(r"(\d)\s+(?=\d{3}(?!\d))", r"\1&nbsp;", t)   # 19.11: „40 000” nie rozdziela się na dwie linie
     t = re.sub(r"(\d)\s+(r\.|w\.|mln|mld|tys\.|km|kg|lat|dni|°C|%|zł)", r"\1&nbsp;\2", t)
     t = re.sub(r"\s+–\s+", "&nbsp;– ", t)
     return t
