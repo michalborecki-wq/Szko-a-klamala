@@ -31,7 +31,7 @@ Wniosek: 3 formaty na 9 rolek, jeden schemat narracji. Od 13.11 18:00 obowiązuj
 | wt. 17.11 18:00 | DOC | 2 | `timeline` |
 | śr. 18.11 9:00 | FAST 12–15 s (próba 1 z 2, zgoda Michała 13.11) | 1 | 2 liczby, tło AI błyskawica – ZROBIONE: Struś (piorun wycofany – był) |
 | śr. 18.11 18:00 | QUESTION | 3 (policja – decyzja Michała 15.11: policja znów 3× w tygodniu) | dwie strony sporu (`quote`×2) |
-| czw. 19.11 9:00 | BA | 2 (Black Friday – ceny przed/po) | `versus` „Było / Jest” |
+| czw. 19.11 9:00 | DOC (zamiast BA) | 2 (Black Friday) | `dokument` + kara – ZROBIONE |
 | czw. 19.11 18:00 | DARK albo CINEMATIC | 5 | zdjęcie archiwalne PD, wolne tempo |
 | pt. 20.11 9:00 | VISUAL | 5 | eksperyment z `CREATIVE_LAB` |
 | pt. 20.11 18:00 | POV | 3 (policja) | – |
