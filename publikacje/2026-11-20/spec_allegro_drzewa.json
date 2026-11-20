@@ -1,0 +1,11 @@
+{"posts": [{
+ "id": "allegro_drzewa", "format": "reel", "subject": "PIENIĄDZE", "series": "ŚLEDZTWO",
+ "ton": "KONTROWERSJA", "moc": "mocna", "tresc": "dol", "etykieta_ai": true,
+ "tlo3d": {"klatki": "VIRAL_REELS_FACTORY/VIDEOS/tla/allegro", "fps": 30, "krycie": 0.9},
+ "slides": [
+  {"type": "cover", "title": "10 paczek = 1 drzewo?", "accent": "UOKiK: 55 mln zł kary."},
+  {"type": "dokument", "tag": "OBIETNICA", "naglowek": "Komunikat Allegro cytowany przez UOKiK", "tekst": "Za każde 10 przesyłek **zasadzimy drzewo** z dedykacją w Twoim Imieniu!", "linie": 1, "wskaz": "sprawdźmy"},
+  {"type": "myth", "myth_label": "OBIETNICA", "fact_label": "UOKiK", "myth": "„Zasadzimy drzewo.”", "fact": "**Kilku milionów** drzew – ponad połowy – **nie posadzono w ogóle**.", "source": "Prezes UOKiK, 18.11.2026"},
+  {"type": "number", "tag": "KARA", "big": "54 728 000 zł", "title": "za dwie", "accent": "praktyki.", "body": "Decyzja **nieprawomocna** – firma może się odwołać.", "source": "UOKiK"},
+  {"type": "outro", "question": "Ekologia czy marketing?", "sub": "Wyślij komuś, kto zbierał drzewka za paczki.", "sources": "UOKiK, 18.11.2026", "partner_slot": false}
+ ]}]}
