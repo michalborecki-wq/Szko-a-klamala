@@ -1,0 +1,11 @@
+{"posts": [{
+ "id": "policja11_adwokat", "format": "reel", "subject": "PRAWO", "series": "POLICJA #11",
+ "ton": "PRAWO", "moc": "mocna", "tresc": "dol", "etykieta_ai": true,
+ "tlo3d": {"klatki": "VIRAL_REELS_FACTORY/VIDEOS/tla/policja11", "fps": 30, "krycie": 0.9},
+ "slides": [
+  {"type": "cover", "title": "Zatrzymali Cię?", "accent": "Żądaj adwokata."},
+  {"type": "dokument", "tag": "PRZEPIS", "naglowek": "Kodeks postępowania karnego · art. 245 § 1", "tekst": "Zatrzymanemu na jego żądanie należy **niezwłocznie** umożliwić nawiązanie (…) kontaktu z adwokatem", "linie": 1, "wskaz": "na żądanie"},
+  {"type": "myth", "myth_label": "MIT", "fact_label": "PRAWDA", "myth": "„Policjant zawsze słucha.”", "fact": "Może być przy rozmowie **tylko wyjątkowo** – w szczególnych okolicznościach.", "source": "art. 245 § 1 KPK"},
+  {"type": "text", "tag": "JAK SIĘ BRONIĆ", "title": "Powiedz", "accent": "wprost.", "body": "„Żądam kontaktu z adwokatem.” Możesz też żądać, by zawiadomiono **osobę najbliższą**.", "source": "art. 245 § 3 KPK"},
+  {"type": "outro", "question": "Znałeś to prawo?", "sub": "Wyślij komuś, kto powinien to wiedzieć.", "sources": "To nie jest porada prawna.", "partner_slot": false}
+ ]}]}
