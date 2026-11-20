@@ -1,0 +1,8 @@
+{"handle": "@szkola_klamala", "posts": [{
+ "id": "nietoperz_slepy", "format": "vertical", "subject": "NAUKA", "ton": "CIEKAWOSTKA",
+ "slides": [
+  {"type": "cover", "title": "„Ślepy jak nietoperz”?", "accent": "Nietoperze widzą.", "sub": "Szkoła i przysłowie kłamały."},
+  {"type": "text", "tag": "PRAWDA", "title": "Mają oczy", "accent": "i widzą.", "body": "Małe, ale **bardzo czułe** – widzą w ciemności, którą my uznalibyśmy za całkowitą.", "source": "USGS"},
+  {"type": "text", "tag": "SKĄD MIT?", "title": "Echolokacja", "accent": "w nocy.", "body": "Polują po ciemku, nasłuchując **echa** własnych dźwięków. Stąd wrażenie, że nie potrzebują oczu.", "source": "Live Science; Britannica"},
+  {"type": "outro", "question": "Też tak mówiłeś?", "sub": "Wyślij komuś, kto mówi „ślepy jak nietoperz”.", "sources": "Źródła: USGS; Live Science; Britannica", "partner_slot": false}
+ ]}]}

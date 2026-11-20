@@ -62,6 +62,7 @@ Po wysłaniu agent zmienia status na **wysłane**. **Decyzja Michała 8.11: „M
 | czw. 19.11 | 13:00 | Karuzela TikTok: „Byka nie złości czerwony kolor.” – Live Science; Wonderopolis | `publikacje/2026-11-19/spec_byk.json#byk_czerwony` | `publikacje/2026-11-19/1300_opis.md` | wysłane (19.11 10:38, sesja główna) |
 | czw. 19.11 | 18:00 | CINEMATIC (PRL): „1976. Cukier tylko na kartki. Przez 13 lat.” – IPN; dzieje.pl; ZPE; Higgsfield 3 ujęcia (1 odrzucone, 30 kr.) | `publikacje/2026-11-19/spec_kartki.json#kartki_cukier` | `publikacje/2026-11-19/1800_opis.md` | wysłane (19.11 14:55, sesja główna) |
 | pt. 20.11 | 9:00 | Śledztwo (NEWS): „10 paczek = 1 drzewo? UOKiK: 55 mln zł kary.” – UOKiK 18.11.2026 (54 728 000 zł, Allegro, greenwashing); PRoto.pl, Cashless.pl, MamBiznes.pl; tło Canva (sadzonka) | `publikacje/2026-11-20/spec_allegro_drzewa.json#allegro_drzewa` | `publikacje/2026-11-20/0900_opis.md` | wysłane (20.11 6:52, sesja główna) |
+| pt. 20.11 | 13:00 | Karuzela TikTok: „Ślepy jak nietoperz”? Nietoperze widzą. – USGS; Live Science; Britannica | `publikacje/2026-11-20/spec_nietoperz.json#nietoperz_slepy` | `publikacje/2026-11-20/1300_opis.md` | wysłane (20.11 10:36, sesja główna) |
 
 Wcześniej (4.11, ręcznie): Co może policja #3 – 48 h – wysłane.
 | nd. 15.11 | 9:00 | Szkoła kłamała (quiz): „Złota rybka nie zapomina po 3 sekundach.” – BBC Wildlife, przegląd badań (Plymouth 1994) | `publikacje/2026-11-15/spec_rybka_quiz.json#rybka_quiz` | `publikacje/2026-11-15/0900_opis.md` | wysłane (15.11 7:05, sesja główna) |
