@@ -1,0 +1,8 @@
+{"handle": "@szkola_klamala", "posts": [{
+ "id": "wikingowie_rogi", "format": "vertical", "subject": "HISTORIA", "ton": "CIEKAWOSTKA",
+ "slides": [
+  {"type": "cover", "title": "Wikingowie nie nosili", "accent": "hełmów z rogami.", "sub": "To kostium z opery."},
+  {"type": "text", "tag": "1876", "title": "Rogi rozsławił", "accent": "kostiumograf.", "body": "Carl Emil Doepler zaprojektował je do premiery „Pierścienia Nibelunga” **Wagnera** w Bayreuth.", "source": "History.com; Snopes"},
+  {"type": "text", "tag": "TWIST", "title": "Hełmy z rogami", "accent": "istniały.", "body": "Znaleziono je w Danii – ale z ok. **900 r. p.n.e.**, ok. 1700 lat przed epoką wikingów.", "source": "History.com"},
+  {"type": "outro", "question": "Też rysowałeś wikinga z rogami?", "sub": "Wyślij komuś, kto lubi historię.", "sources": "Źródła: History.com; Snopes; Discover Magazine", "partner_slot": false}
+ ]}]}
