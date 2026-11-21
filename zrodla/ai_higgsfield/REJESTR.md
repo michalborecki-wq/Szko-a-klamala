@@ -62,3 +62,9 @@ Saldo: 850 → 830.
 | 2026-11-19/wideo/cukier_waga.mp4 | Kling 3.0, 9:16, 5 s | 10 | użyty 19.11 – Kartki w PRL; cukier na wadze – do tematów o cenach/żywności |
 | 2026-11-19/wideo/kalendarz_kartki.mp4 | Kling 3.0, 9:16, 5 s | 10 | ODRZUCONY – na kartce kalendarza cyfry i rysunek postaci (zasada: bez tekstu i ludzi) |
 Saldo: 830 → 800.
+
+## 2026-11-21 (sobota – Higgsfield wg decyzji 19.11)
+| plik | model | koszt | użycie |
+|---|---|---|---|
+| 2026-11-21/wideo/czerwony_plyn.mp4 | Kling 3.0, 9:16, 5 s | 10 | użyty 21.11 – krew nie jest niebieska |
+| 2026-11-21/wideo/osmiornica.mp4 | Kling 3.0, 9:16, 5 s | 10 | użyty 21.11 – krew (twist: ośmiornica); do tematów o zwierzętach morskich |

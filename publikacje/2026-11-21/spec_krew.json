@@ -1,0 +1,11 @@
+{"posts": [{
+ "id": "krew_niebieska", "format": "reel", "subject": "NAUKA", "series": "SZKOŁA KŁAMAŁA",
+ "ton": "CIEKAWOSTKA", "moc": "mocna", "tresc": "dol", "etykieta_ai": true,
+ "tlo3d": {"klatki": "VIRAL_REELS_FACTORY/VIDEOS/tla/krew", "fps": 30, "krycie": 0.9},
+ "slides": [
+  {"type": "cover", "title": "Twoja krew nie jest niebieska.", "accent": "Nawet w żyłach."},
+  {"type": "versus", "side": "przeciw", "label": "W SZKOLE", "title": "Żyły", "accent": "na niebiesko.", "body": "Na rysunkach w podręcznikach tętnice były **czerwone**, a żyły **niebieskie**."},
+  {"type": "myth", "myth_label": "MIT", "fact_label": "PRAWDA", "myth": "„Krew bez tlenu jest niebieska.”", "fact": "Jest **ciemnoczerwona**. Niebieski kolor żył to **złudzenie** – skóra i światło.", "source": "Live Science; ASU Ask a Biologist"},
+  {"type": "text", "tag": "TWIST", "title": "Niebieską krew", "accent": "ma ośmiornica.", "body": "Tlen przenosi u niej białko z **miedzią** – hemocyjanina.", "source": "NPR; ASU"},
+  {"type": "outro", "question": "Też tak Cię uczono?", "sub": "Wyślij komuś, kto widział niebieskie żyły w podręczniku.", "sources": "Live Science; ASU; NPR", "partner_slot": false}
+ ]}]}
