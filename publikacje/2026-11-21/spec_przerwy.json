@@ -1,11 +1,57 @@
-{"posts": [{
- "id": "przerwy_praca", "format": "reel", "subject": "PRAWO", "series": "TWOJE PRAWA",
- "ton": "PRAWO", "moc": "mocna", "tresc": "dol", "etykieta_ai": true,
- "tlo3d": {"klatki": "VIRAL_REELS_FACTORY/VIDEOS/tla/przerwy", "fps": 30, "krycie": 0.9},
- "slides": [
-  {"type": "cover", "title": "Pracujesz 10 godzin?", "accent": "Masz 2 płatne przerwy."},
-  {"type": "dokument", "tag": "PRZEPIS", "naglowek": "Kodeks pracy · art. 134 § 1 pkt 2", "tekst": "jest dłuższy niż **9 godzin** – pracownik ma prawo do **dodatkowej przerwy** w pracy trwającej co najmniej 15 minut", "linie": 1, "wskaz": "druga przerwa"},
-  {"type": "myth", "myth_label": "MIT", "fact_label": "PRAWDA", "myth": "„Przerwa jest jedna – i tyle.”", "fact": "Od 6 h – **15 min**. Ponad 9 h – **kolejne 15**. Ponad 16 h – **trzecie**.", "source": "art. 134 KP"},
-  {"type": "text", "tag": "HACZYK", "title": "Wliczone", "accent": "w pensję.", "body": "Te przerwy wlicza się do **czasu pracy**. Inaczej niż przerwa na obiad do 60 min – ta jest **niepłatna**.", "source": "art. 134 § 2, art. 141 KP"},
-  {"type": "outro", "question": "Ty masz drugą przerwę?", "sub": "Wyślij komuś, kto robi po 12 godzin.", "sources": "To nie jest porada prawna.", "partner_slot": false}
- ]}]}
+{
+ "posts": [
+  {
+   "id": "przerwy_praca",
+   "format": "reel",
+   "subject": "PRAWO",
+   "series": "TWOJE PRAWA",
+   "ton": "PRAWO",
+   "moc": "mocna",
+   "tresc": "dol",
+   "etykieta_ai": true,
+   "tlo3d": {
+    "klatki": "VIRAL_REELS_FACTORY/VIDEOS/tla/przerwy",
+    "fps": 30,
+    "krycie": 0.9
+   },
+   "slides": [
+    {
+     "type": "cover",
+     "title": "Pracujesz 10 godzin?",
+     "accent": "Masz 2 płatne przerwy."
+    },
+    {
+     "type": "dokument",
+     "tag": "PRZEPIS",
+     "naglowek": "Kodeks pracy · art. 134 § 1 pkt 2",
+     "tekst": "jest dłuższy niż **9 godzin** – pracownik ma prawo do **dodatkowej przerwy**",
+     "linie": 1,
+     "wskaz": "druga przerwa"
+    },
+    {
+     "type": "myth",
+     "myth_label": "MIT",
+     "fact_label": "PRAWDA",
+     "myth": "„Przerwa jest jedna – i tyle.”",
+     "fact": "Od 6 h – **15 min**. Ponad 9 h – **kolejne 15**. Ponad 16 h – **trzecie**.",
+     "source": "art. 134 KP"
+    },
+    {
+     "type": "text",
+     "tag": "HACZYK",
+     "title": "Wliczone",
+     "accent": "w pensję.",
+     "body": "Wlicza się je do **czasu pracy**. Przerwa na obiad (do 60 min) – **nie**.",
+     "source": "art. 134 § 2, art. 141 KP"
+    },
+    {
+     "type": "outro",
+     "question": "Ty masz drugą przerwę?",
+     "sub": "Wyślij komuś, kto robi po 12 godzin.",
+     "sources": "To nie jest porada prawna.",
+     "partner_slot": false
+    }
+   ]
+  }
+ ]
+}
