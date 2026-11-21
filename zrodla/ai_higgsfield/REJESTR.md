@@ -68,3 +68,5 @@ Saldo: 830 → 800.
 |---|---|---|---|
 | 2026-11-21/wideo/czerwony_plyn.mp4 | Kling 3.0, 9:16, 5 s | 10 | użyty 21.11 – krew nie jest niebieska |
 | 2026-11-21/wideo/osmiornica.mp4 | Kling 3.0, 9:16, 5 s | 10 | użyty 21.11 – krew (twist: ośmiornica); do tematów o zwierzętach morskich |
+| 2026-11-21/wideo/kawa_biurko.mp4 | Kling 3.0, 9:16, 5 s | 10 | użyty 21.11 – przerwy w pracy; do tematów o pracy |
+| 2026-11-21/wideo/biuro_noc.mp4 | Kling 3.0, 9:16, 5 s | 10 | użyty 21.11 – przerwy w pracy; puste biuro nocą |
