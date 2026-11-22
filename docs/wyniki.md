@@ -106,3 +106,9 @@ Wniosek: okładka z obrazem nie obniżyła pominięć. Następny test: ruch w 1.
 ## 9.11 – pomiar IG (Composio)
 
 Pełna tabela i wnioski: `docs/analiza-wynikow-2026-11-09.md`. Najniższe pominięcia na koncie: ZUS w nowym stylu DVE (63,3%, 4,9 s; mediana konta 86.4%). Wszystkie rolki: 0 udostępnień, 0 zapisów w IG. Facebook (ponad 90% wyświetleń) niewidoczny w API.
+
+
+## 22.11 – pętla 7 s (TikTok)
+| Rolka | Format | Wyświetlenia | Uwagi |
+|---|---|---|---|
+| „Policja przeszuka Ci mieszkanie bez sądu. Legalnie.” (art. 220 § 3 k.p.k.) | pętla 7 s, bez dźwięku (dźwięk z trendów w aplikacji), ~110 słów, tło Higgsfield | **> 5 000 w 2 h** (zrzut/relacja Michała 22.11 ok. 21:40) | 11 komentarzy, 18 polubień w ok. 1 h; dyskusja o zasadności – nowa rutyna od 23.11 |

@@ -5,6 +5,10 @@ description: Autonomiczny agent „Szkoła kłamała” – 3 dostawy dziennie: 
 
 # Agent „Szkoła kłamała” – cykl dzienny
 
+## PĘTLA 7 S – obowiązuje od 23.11 (decyzja Michała 22.11, ma pierwszeństwo przed sekcją DOSTAWA w części o formacie rolki)
+
+Rolki 9:00 i 18:00 = pętla ok. 7 s bez dźwięku, z animacją i gęstym tekstem (90–120 słów, haczyk ≤ 7 słów + riposta), tematy: policja, polityka i afery, pierwsze strony gazet – ostry komentarz i cięta riposta w granicach z CLAUDE.md (sekcja „NOWA RUTYNA – ROLKA 7 S”). Render: `python3 VIRAL_REELS_FACTORY/narzedzia/petla7.py publikacje/RRRR-MM-DD/<HHMM>_petla.json --data RRRR-MM-DD --pora HHMM --opis publikacje/RRRR-MM-DD/<HHMM>_opis.md --relacja "nagłówek|pod"` (spec: id, seria, tag, haczyk[], riposta, akapity[], bronisz, pasek, stopka, tlo, rozmycie, ai). Kontrola `<ID>_klatki.jpg`, potem 5 plików pojedynczo (INSTAGRAM, TIKTOK, okładka, relacja, opis). W opisie: propozycja dźwięku z trendów. Wzór: `publikacje/2026-11-22/loop7/` i lekcje z 22.11.
+
 ## DOSTAWA – obowiązuje od 6.11 (decyzja Michała 5.11, ma pierwszeństwo przed krokami 3–8 poniżej)
 
 „Zróbmy tak: dwie rolki plus jeden post koło 13.” (5.11; wcześniej 4.11: „Nie chcę bałaganu.”)

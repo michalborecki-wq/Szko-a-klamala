@@ -96,3 +96,10 @@ Lista kontrolna przed renderem 4K: [ ] Higgsfield – nowe ujęcia (1 na akt) �
 - Tło: klip 3,5 s + odwrócony 3,5 s = pętla bez szwu; rozmycie gblur ~10 (czytelność + ukrywa cyfry z AI); warstwa cienia 25–70%, cień liter – przy 80%+ tło znika i nie ma ruchu.
 - Canva: limit kredytów blokuje create-design → bez pełnej rozdzielczości obrazu; przy formacie pętli sprawdzić limit przed generowaniem.
 - Do porównania po 7 dniach: pominięcia i średni czas (> 7 s = powtórki) vs zwykłe rolki policyjne.
+
+## 22.11 wieczór – PĘTLA 7 S = NOWA RUTYNA (decyzja Michała, zapis w CLAUDE.md)
+- **Wynik:** pętla „Policja przeszuka Ci mieszkanie bez sądu. Legalnie.” (statyczna plansza na tle Higgsfield, 7 s, bez dźwięku, ~110 słów) – **ponad 5 tys. wyświetleń w 2 h na TikToku**, 11 komentarzy w 1. godzinie, dyskusja pod spodem. Rekord konta.
+- **Wniosek:** gęsty tekst + kontrowersyjny haczyk + krótka pętla = powtórki i komentarze. Od 23.11 każda rolka 9:00 i 18:00 w tym formacie, z animacją (Michał: „animacja, grafika, video muszą przyciągać widza”).
+- **Narzędzie:** `VIRAL_REELS_FACTORY/narzedzia/petla7.py spec.json --data … --pora … --opis … --relacja "…|…"` – kinetyczne napisy (światła koguta czerwony/niebieski, licznik „zdążysz?” 7,0→0,0 s, żółte podświetlenie szybsze niż czytanie, pulsująca riposta z markerem, pasek PILNE, drganie haczyka, błysk tylko na końcu pętli – klatka 0 czysta), tło wideo tam i z powrotem lub obraz z zoomem. Render ok. 4 min.
+- **Kontrola:** arkusz `<ID>_klatki.jpg` – haczyk czytelny na klatce 0, żadnego tekstu pod tłem markera, cyfry/napisy z ujęć AI rozmyte lub zasłonięte (numer drzwi „125” przebijał na telefonie przy sigma 10 – dać ≥ 14 albo kadr bez napisów).
+- **Komentarze:** odpowiadać ripostą + faktem z przepisu + pytaniem do wszystkich; polityka partyjna w komentarzach – nie podsycać (bez stawania po stronie partii).
