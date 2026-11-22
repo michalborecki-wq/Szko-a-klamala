@@ -1,0 +1,8 @@
+{"handle": "@szkola_klamala", "posts": [{
+ "id": "pingwiny_biegun", "format": "vertical", "subject": "NAUKA", "ton": "CIEKAWOSTKA",
+ "slides": [
+  {"type": "cover", "title": "Na biegunie północnym", "accent": "nie ma pingwinów.", "sub": "Ani jednego dzikiego."},
+  {"type": "text", "tag": "PRAWDA", "title": "Pingwiny żyją", "accent": "na południu.", "body": "Prawie wszystkie gatunki – na **półkuli południowej**: Antarktyda, Afryka, Ameryka Płd., Australia.", "source": "PBS Nature; Wikipedia"},
+  {"type": "text", "tag": "TWIST", "title": "Jeden przekracza", "accent": "równik.", "body": "Pingwin **galapagoski**. Wyspa Isabela sięga na półkulę północną – i on razem z nią.", "source": "Guinness World Records; WWF"},
+  {"type": "outro", "question": "Też myślałeś, że pingwiny są na obu biegunach?", "sub": "Wyślij komuś, kto lubi zwierzęta.", "sources": "Źródła: PBS Nature; WWF; Guinness World Records; Discover Wildlife", "partner_slot": false}
+ ]}]}
