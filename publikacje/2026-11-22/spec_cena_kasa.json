@@ -1,0 +1,10 @@
+{"posts": [{
+ "id": "cena_kasa", "format": "reel", "subject": "PIENIĄDZE", "series": "TWOJE PRAWA",
+ "ton": "KONTROWERSJA", "moc": "mocna", "tresc": "dol", "etykieta_ai": true,
+ "tlo3d": {"klatki": "VIRAL_REELS_FACTORY/VIDEOS/tla/cena_kasa", "fps": 30, "krycie": 0.9},
+ "slides": [
+  {"type": "cover", "title": "Półka 9,99. Kasa 12,99?", "accent": "Płacisz mniej."},
+  {"type": "dokument", "tag": "PRZEPIS", "naglowek": "Ustawa o informowaniu o cenach · art. 5", "tekst": "konsument ma prawo do żądania sprzedaży (…) po cenie **dla niego najkorzystniejszej**", "linie": 1, "wskaz": "niższa cena"},
+  {"type": "number", "tag": "KARA DLA SKLEPU – DO", "big": "20 000 zł", "title": "za ceny", "accent": "niejednoznaczne.", "body": "Różnicę kasa–półka Inspekcja Handlowa uznaje za **naruszenie**.", "source": "art. 4 ust. 1 i art. 6 ustawy; decyzje UOKiK"},
+  {"type": "outro", "question": "Sprawdzasz paragon?", "sub": "Wyślij komuś, kto nie sprawdza.", "sources": "To nie jest porada prawna.", "partner_slot": false}
+ ]}]}
