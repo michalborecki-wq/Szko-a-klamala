@@ -71,3 +71,8 @@ Saldo: 830 → 800.
 | 2026-11-21/wideo/osmiornica.mp4 | Kling 3.0, 9:16, 5 s | 10 | użyty 21.11 – krew (twist: ośmiornica); do tematów o zwierzętach morskich |
 | 2026-11-21/wideo/kawa_biurko.mp4 | Kling 3.0, 9:16, 5 s | 10 | użyty 21.11 – przerwy w pracy; do tematów o pracy |
 | 2026-11-21/wideo/biuro_noc.mp4 | Kling 3.0, 9:16, 5 s | 10 | użyty 21.11 – przerwy w pracy; puste biuro nocą |
+
+## 2026-11-22 (niedziela)
+| plik | model | koszt | użycie |
+|---|---|---|---|
+| 2026-11-22/wideo/laser_ksiezyc.mp4 | Kling 3.0, 9:16, 5 s | 10 | wolny – generowanie trwało > 6 min, rolkę 22.11 zrobiono z obrazu z magazynu; do tematów o Księżycu/pomiarach |
