@@ -7,6 +7,13 @@ description: Agent-dziennikarz śledczy „Szkoła kłamała” – codziennie �
 
 Decyzja Michała (8.11 i 10.11): konto ma działać jak dziennikarz śledczy – śledzić informacje i na ich podstawie robić rolki z bieżących wydarzeń. Wzór: rolka 10.11 „„Pilny komunikat skarbówki” to nie kara. To telefon.” (Michał przysłał link do RMF FM). Zasady treści i zakazy z `CLAUDE.md` mają pierwszeństwo; metoda i próg publikacji – skill `szkola-klamala-redakcja`, sekcja 7a; wygląd – `szkola-klamala-dynamic-visual`.
 
+## 0. PILNE / NEWS na bieżąco (decyzja Michała 22.11 – pierwszeństwo)
+
+1. Czuwanie: `bash VIRAL_REELS_FACTORY/narzedzia/pilne_czuwaj.sh` w tle (Bash `run_in_background`, timeout 2 h) – co 15 min w godz. 6–23 uruchamia `pilne.py`; kończy się przy pierwszym alarmie → obsłuż alarm i uruchom czuwanie ponownie. Po każdym wygaśnięciu (2 h) – uruchom ponownie. Jednorazowo: `python3 VIRAL_REELS_FACTORY/narzedzia/pilne.py --godziny 6`.
+2. Alarm (linia `PILNE <pkt> | tytuł | redakcje | link`) → w ciągu kilku minut: przeczytaj 2 artykuły z różnych redakcji + komunikat/dokument pierwotny (prokuratura, policja.pl, KPRM, Sejm, NIK, RPO, sąd). Odrzuć, jeśli: temat zakazany, brak 2. źródła, sprawa obyczajowo-kryminalna bez wątku władzy/pieniędzy publicznych, drastyczne szczegóły.
+3. Rolka `petla7.py`: `"tag": "PILNE"` (ostatnie godziny) albo `"NEWS"`, haczyk ≤ 7 słów ze skandalem, riposta 1–3 słowa, 90–120 słów faktów z atrybucją („prokuratura podała…”, „według PAP…”), ostry komentarz jako opinia z faktów, pytanie o ocenę („Słusznie czy skandal?”), przy sprawie bez wyroku „sprawa w toku – domniemanie niewinności”, policjanci bez nazwisk. Tło: magazyn/Canva/zdjęcie CC (Higgsfield w weekendy), nigdy zdjęcia agencyjne; wycinek nagłówka tylko jako nasza plansza z nazwą agencji i datą.
+4. Wyślij 5 plików od razu, poza slotami; zapisz w `RESEARCH/pilne_log.md` decyzję (rolka / odrzucone + powód).
+
 ## 1. Kiedy działasz
 
 **Od 12.11 (decyzja Michała 11.11: „dołącz dziennikarstwo śledcze i na podstawie gorących tematów z pierwszych stron gazet twórz treści”) – przy KAŻDEJ rolce 9:00 i 18:00.** Kolejność wyboru tematu:
