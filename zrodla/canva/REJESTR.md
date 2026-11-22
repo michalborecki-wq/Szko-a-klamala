@@ -7,3 +7,4 @@ Procedura: `generate-image` (9:16, paleta marki, bez ludzi/tekstu/logo) → `cre
 | 20.11 | 2026-11-20/sadzonka_karton.png | MAHbZfOYPYg / DAHbbX-Owu8 | rolka 20.11 9:00 – Allegro, drzewa (greenwashing) |
 | 20.11 | 2026-11-20/telefon_biurko.png | MAHbdfoiNWc / DAHbdWY-l7I | rolka 20.11 18:00 – Policja #11 (adwokat) |
 | 20.11 | – (tylko miniatura) | MAHbdSALUnk | uchylone drzwi – nie wyeksportowane: limit projektów AI Canvy (quota_exceeded) |
+| 2026-11-22 | drzwi_swiatlo (MAHbqo9yF6A) | generate-image 9:16 – drzwi mieszkania od środka, światło pod drzwiami | **nieużyty** – eksport w pełnej rozdzielczości zablokowany (quota_exceeded przy create-design); dostępna tylko miniatura 112×198 |

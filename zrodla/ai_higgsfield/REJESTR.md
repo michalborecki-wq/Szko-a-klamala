@@ -77,3 +77,4 @@ Saldo: 830 → 800.
 |---|---|---|---|
 | 2026-11-22/wideo/laser_ksiezyc.mp4 | Kling 3.0, 9:16, 5 s | 10 | wolny – generowanie trwało > 6 min, rolkę 22.11 zrobiono z obrazu z magazynu; do tematów o Księżycu/pomiarach |
 | 2026-11-22/wideo/tasma_kasa.mp4 | Kling 3.0, 9:16, 5 s | 10 | użyty 22.11 18:00 – cena przy kasie; taśma kasy z jabłkami, chlebem, masłem (bez ludzi i napisów) |
+| 2026-11-22/wideo/drzwi_noc.mp4 | Kling 3.0, 9:16, 5 s | 10 | użyty 22.11 – pętla 7 s „przeszukanie bez sądu”; drzwi w bloku nocą, latarka, czerwono-niebieskie światło; **numer „125” na drzwiach – używać tylko z rozmyciem** |

@@ -90,3 +90,9 @@ Lista kontrolna przed renderem 4K: [ ] Higgsfield – nowe ujęcia (1 na akt) �
 - 20.11 – Canva: `create-design` (potrzebny do eksportu pełnej rozdzielczości) ma dzienny limit kredytów AI – trzeci projekt dnia: `quota_exceeded`. `generate-image` dalej działał. **Reguła:** max 2 obrazy z Canvy dziennie w pełnej rozdzielczości (1 na rolkę); drugie tło – magazyn Higgsfield/CC.
 - 21.11 – rolka z 5 planszami (cover + dokument + myth + text + outro) i tłem wideo wyszła 39 s, po skróceniu tekstów 36 s. Silnik wydłuża plansze z tłem wideo i animacją wejścia bardziej, niż wynika z draftu (draft 19–25 s → wideo ok. 30–39 s). **Reguła:** przy tle wideo maks. 4 plansze treści łącznie z outro albo łącznie ≤ 40 słów na całą rolkę; draft z tłem wideo nie może przekraczać 20 s.
 - 22.11 – 4 plansze (cover + number + myth + outro), ≤ 30 słów łącznie, tło z obrazu (zoompan) → 20,9 s z logo, idealnie w normie. Wzór długości do powtarzania.
+
+## 22.11 – format „pętla 7 s” (prośba Michała)
+- 7 s, bez dźwięku (dźwięk dodaje Michał), cały tekst od klatki 0, ok. 110 słów – celowo za dużo na jedno obejrzenie, żeby widz obejrzał drugi raz (powtórki = sygnał dla algorytmu).
+- Tło: klip 3,5 s + odwrócony 3,5 s = pętla bez szwu; rozmycie gblur ~10 (czytelność + ukrywa cyfry z AI); warstwa cienia 25–70%, cień liter – przy 80%+ tło znika i nie ma ruchu.
+- Canva: limit kredytów blokuje create-design → bez pełnej rozdzielczości obrazu; przy formacie pętli sprawdzić limit przed generowaniem.
+- Do porównania po 7 dniach: pominięcia i średni czas (> 7 s = powtórki) vs zwykłe rolki policyjne.
