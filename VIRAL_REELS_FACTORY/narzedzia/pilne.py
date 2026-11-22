@@ -20,7 +20,6 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 from research import pobierz, data_wpisu, parsuj, norm  # noqa: E402
-from sledczy import ZAKAZ  # noqa: E402
 
 STAN = os.path.join(ROOT, "RESEARCH", "pilne_stan.json")
 LOG = os.path.join(ROOT, "RESEARCH", "pilne_log.md")
@@ -58,8 +57,16 @@ def tokeny(t):
     return {w for w in norm(t).split() if len(w) > 3}
 
 
-ZAKAZ_PILNE = (r"rosyj|rosjan|pocisk|wtargn|obiekt(y|ów)? (nad|w) pols|królewi|okręt|myśliw|armi|zbrojn|"
-               r"ciał[ao]\b|zwłok|nie żyj|zmarł|śmier|tragedi|dzieck[oa] (zginę|zmarł)|pobi[łt]|nożem|katastrof")
+# Wojna/bezpieczeństwo – dozwolone, gdy dotyczy Polski (decyzja Michała 22.11); inne konflikty – poza kontem.
+WOJNA = (r"wojn|wojsk|ukrain|rosj|rosyj|rosjan|putin|izrael|gaz[ay]\b|hamas|iran|nato|dron|rakiet|pocisk|ostrzał|front\b|"
+         r"wtargn|obiekt(y|ów)? (nad|w) pols|królewi|okręt|myśliw|armi|zbrojn|alarm lotnicz|schron|obron[ay] cywil")
+POLSKA = (r"pols|kraj\b|rcb|\bmon\b|dowództw|wojsko polskie|sił zbrojnych rp|lubelsk|podkarpac|podlas|warmi|mazow|"
+          r"prokuratur|samorząd|wojewod|straż|policj|gmin|mieszkańc|kosiniak|tusk|nawrock|sikorsk|gawkowsk|kierwińsk")
+SLUZBY = r"rcb|alert|syren|schron|ewakuac|służb|wojewod|samorząd|straż|policj|wojsko|dowództw|reakcj|zawiod|opóźni|nie zadział|brak"
+# zawsze poza kontem (CLAUDE.md): religia, szczepionki, płeć, migracja, spiski + drastyczne treści
+ZAKAZ_STALY = (r"religi|kości[oó]ł|papie|bisk|ksi[eę]dz|szczepi|aborc|gender|transpł|lgbt|migra|imigra|uchodźc|spisk|"
+               r"ciał[ao]\b|zwłok|nie żyj|zmarł|śmier|zabój|zabit|zginęł|zgin[aą]ł|ofiar|morderst|gwałt|samobój|"
+               r"tragedi|pobi[łt]|nożem|strzelanin|katastrof|lotto|losowani|kasyn|bukmach")
 
 
 def redakcja(n):
@@ -70,9 +77,15 @@ def redakcja(n):
 
 def ocena(t):
     tl = t.lower()
-    if re.search(ZAKAZ, tl) or re.search(ZAKAZ_PILNE, tl):
+    if re.search(ZAKAZ_STALY, tl):
         return None
     pkt = 3 * len(set(re.findall(SKANDAL, tl)))
+    if re.search(WOJNA, tl):
+        if not re.search(POLSKA, tl):
+            return None                      # konflikt bez związku z Polską
+        pkt += 6                             # bezpieczeństwo kraju = temat dnia
+        if re.search(SLUZBY, tl):
+            pkt += 3                         # kąt: jak zachowały się służby / co zawiodło
     if re.search(PILNE, tl):
         pkt += 3
     if re.search(DUZE, tl):

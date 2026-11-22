@@ -111,4 +111,4 @@ Pełna tabela i wnioski: `docs/analiza-wynikow-2026-11-09.md`. Najniższe pomini
 ## 22.11 – pętla 7 s (TikTok)
 | Rolka | Format | Wyświetlenia | Uwagi |
 |---|---|---|---|
-| „Policja przeszuka Ci mieszkanie bez sądu. Legalnie.” (art. 220 § 3 k.p.k.) | pętla 7 s, bez dźwięku (dźwięk z trendów w aplikacji), ~110 słów, tło Higgsfield | **> 5 000 w 2 h** (zrzut/relacja Michała 22.11 ok. 21:40) | 11 komentarzy, 18 polubień w ok. 1 h; dyskusja o zasadności – nowa rutyna od 23.11 |
+| „Policja przeszuka Ci mieszkanie bez sądu. Legalnie.” (art. 220 § 3 k.p.k.) | pętla 7 s, bez dźwięku (dźwięk z trendów w aplikacji), ~110 słów, tło Higgsfield | **> 5 000 w 2 h; 6 100 ok. 22:30** (informacje Michała 22.11) | 11 komentarzy, 18 polubień w ok. 1 h; dyskusja o zasadności – nowa rutyna od 23.11 |
