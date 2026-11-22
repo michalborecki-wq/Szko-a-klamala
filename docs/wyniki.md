@@ -112,3 +112,5 @@ Pełna tabela i wnioski: `docs/analiza-wynikow-2026-11-09.md`. Najniższe pomini
 | Rolka | Format | Wyświetlenia | Uwagi |
 |---|---|---|---|
 | „Policja przeszuka Ci mieszkanie bez sądu. Legalnie.” (art. 220 § 3 k.p.k.) | pętla 7 s, bez dźwięku (dźwięk z trendów w aplikacji), ~110 słów, tło Higgsfield | **> 5 000 w 2 h; 6 100 ok. 22:30** (informacje Michała 22.11) | 11 komentarzy, 18 polubień w ok. 1 h; dyskusja o zasadności – nowa rutyna od 23.11 |
+
+**Analiza filmu TikTok (zrzuty Michała 22.11, 22:31, ok. 2 h 45 min po publikacji o 19:45):** 6 303 wyświetlenia, 25 polubień, 20 komentarzy, 5 udostępnień, 12 zapisów, 4 nowych obserwujących; średni czas oglądania **12,0 s przy filmie 7,01 s (≈ 1,7 odtworzenia na widza – pętla działa)**; łączny czas 20 h 20 min 42 s; obejrzało cały film 38,95%; ruch 99,9% „Dla Ciebie”; wzrost przyspiesza (ok. 1,6 tys. po ~2 h → ok. 4,7 tys. przy 3 h na wykresie). Słabe: obserwujący 4 na 6,3 tys. (0,06%) – widz nie wie, że będzie ciąg dalszy.
