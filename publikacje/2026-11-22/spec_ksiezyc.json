@@ -1,0 +1,10 @@
+{"posts": [{
+ "id": "ksiezyc_ucieka", "format": "reel", "subject": "KOSMOS", "series": "SZKOŁA KŁAMAŁA",
+ "ton": "CIEKAWOSTKA", "moc": "mocna", "tresc": "dol", "etykieta_ai": true,
+ "tlo3d": {"klatki": "VIRAL_REELS_FACTORY/VIDEOS/tla/ksiezyc", "fps": 30, "krycie": 0.9},
+ "slides": [
+  {"type": "cover", "title": "Księżyc ucieka od Ziemi.", "accent": "3,8 cm rocznie."},
+  {"type": "number", "tag": "OD 1969", "big": "ponad 2 m", "title": "dalej niż", "accent": "przy Apollo 11.", "source": "NASA; obliczenia: 57 lat × 3,8 cm"},
+  {"type": "myth", "myth_label": "MIT", "fact_label": "PRAWDA", "myth": "„Księżyc stoi w miejscu.”", "fact": "Mierzą to **lasery** odbite od luster zostawionych przez **Apollo**.", "source": "NASA"},
+  {"type": "outro", "question": "Wiedziałeś?", "sub": "Wyślij komuś, kto patrzy w niebo.", "sources": "NASA; JPL", "partner_slot": false}
+ ]}]}
