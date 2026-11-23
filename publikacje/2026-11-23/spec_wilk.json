@@ -1,0 +1,8 @@
+{"handle": "@szkola_klamala", "posts": [{
+ "id": "wilk_ksiezyc", "format": "vertical", "subject": "NAUKA", "ton": "CIEKAWOSTKA",
+ "slides": [
+  {"type": "cover", "title": "Wilki nie wyją", "accent": "do Księżyca.", "sub": "Ani w pełnię, ani bez niej."},
+  {"type": "text", "tag": "PRAWDA", "title": "Wycie to", "accent": "telefon watahy.", "body": "Wilk wyje, żeby **zwołać swoich**, odnaleźć się po polowaniu i ostrzec obcych: **to nasz teren**.", "source": "Smithsonian National Zoo; Discovery"},
+  {"type": "text", "tag": "TWIST", "title": "Pysk w górze?", "accent": "Dla zasięgu.", "body": "Uniesiona głowa niesie dźwięk **dalej**. A nocą wyją, bo wtedy są **najbardziej aktywne** – Księżyc tylko świeci w tle.", "source": "Wonderopolis; ScienceABC"},
+  {"type": "outro", "question": "Skąd u Ciebie mit o wyciu do Księżyca – bajki czy filmy?", "sub": "Wyślij komuś, kto wierzy w wilkołaki.", "sources": "Źródła: Smithsonian's National Zoo; Discovery; Wonderopolis; ScienceABC", "partner_slot": false}
+ ]}]}
