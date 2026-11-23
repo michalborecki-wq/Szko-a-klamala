@@ -74,3 +74,8 @@ Po wysłaniu agent zmienia status na **wysłane**. **Decyzja Michała 8.11: „M
 Wcześniej (4.11, ręcznie): Co może policja #3 – 48 h – wysłane.
 | nd. 15.11 | 9:00 | Szkoła kłamała (quiz): „Złota rybka nie zapomina po 3 sekundach.” – BBC Wildlife, przegląd badań (Plymouth 1994) | `publikacje/2026-11-15/spec_rybka_quiz.json#rybka_quiz` | `publikacje/2026-11-15/0900_opis.md` | wysłane (15.11 7:05, sesja główna) |
 | nd. 15.11 | 18:00 | Pieniądze bez ściemy (TOP, viral po analizie konkurencji): „Polak pracuje dłużej niż Niemiec. Co tydzień.” – Eurostat 27.05.2026 (dane 2025); 4 ujęcia Higgsfield | `publikacje/2026-11-15/spec_czas_pracy.json#czas_pracy` | `publikacje/2026-11-15/1800_opis.md` | wysłane (15.11 14:55, sesja główna) |
+
+## pon. 23.11
+- 9:00 – GOTOWE: pętla 7 s NEWS „Korek za torami? Tracisz prawko.” (KOREK_TORY), tło magazyn szlaban.mp4, wysłane ok. 7:10.
+- 13:00 – karuzela TikTok (do zrobienia od 10:30).
+- 18:00 – pętla 7 s, policja (pon.) (do zrobienia od 14:30).

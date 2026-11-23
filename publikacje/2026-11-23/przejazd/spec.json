@@ -1,0 +1,22 @@
+{
+"id": "KOREK_TORY",
+"seria": "KIEROWCO, UWAŻAJ",
+"tag": "NEWS",
+"haczyk": [
+"Korek za torami?",
+"*Tracisz prawko.*"
+],
+"riposta": "Bez sądu.",
+"akapity": [
+"Od soboty policjant zabiera prawko *na miejscu*: za objazd półzapór, wjazd na *czerwonym* i gdy zapory dopiero opadają.",
+"Najmniej znany punkt: wjeżdżasz na tory, a po drugiej stronie stoi korek? Też !3 miesiące! bez prawka. Przepis nie pyta, czy nadjeżdżał pociąg.",
+"Jeździsz mimo zatrzymania? Starosta przedłuża do **6 miesięcy**. Spowodujesz katastrofę? Sąd musi orzec zakaz na co najmniej !3 lata!.",
+"Ustawodawca w końcu zauważył, że pociąg nie hamuje jak hulajnoga."
+],
+"bronisz": "**Co robisz:** na tory wjeżdżasz, gdy za nimi jest miejsce na *całe auto*. Wyślij temu, kto zawsze „zdąży przed szlabanem”.",
+"pasek": "NEWS · OD 21.11 · KOREK ZA TORAMI = 3 MIES. BEZ PRAWA JAZDY · JEŹDZISZ MIMO TO = 6 MIES. · KATASTROFA = MIN. 3 LATA ZAKAZU",
+"stopka": "Ustawa z 8.10.2026, Dz.U. 2026 poz. 1466 (art. 135 PoRD, art. 102 ustawy o kierujących, art. 42 k.k.) · auto-swiat.pl · To nie jest porada prawna.",
+"tlo": "zrodla/ai_higgsfield/2026-11-10/wideo/szlaban.mp4",
+"rozmycie": 7,
+"ai": true
+}
