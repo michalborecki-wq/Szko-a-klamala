@@ -103,3 +103,8 @@ Lista kontrolna przed renderem 4K: [ ] Higgsfield – nowe ujęcia (1 na akt) �
 - **Narzędzie:** `VIRAL_REELS_FACTORY/narzedzia/petla7.py spec.json --data … --pora … --opis … --relacja "…|…"` – kinetyczne napisy (światła koguta czerwony/niebieski, licznik „zdążysz?” 7,0→0,0 s, żółte podświetlenie szybsze niż czytanie, pulsująca riposta z markerem, pasek PILNE, drganie haczyka, błysk tylko na końcu pętli – klatka 0 czysta), tło wideo tam i z powrotem lub obraz z zoomem. Render ok. 4 min.
 - **Kontrola:** arkusz `<ID>_klatki.jpg` – haczyk czytelny na klatce 0, żadnego tekstu pod tłem markera, cyfry/napisy z ujęć AI rozmyte lub zasłonięte (numer drzwi „125” przebijał na telefonie przy sigma 10 – dać ≥ 14 albo kadr bez napisów).
 - **Komentarze:** odpowiadać ripostą + faktem z przepisu + pytaniem do wszystkich; polityka partyjna w komentarzach – nie podsycać (bez stawania po stronie partii).
+
+## 23.11 – pętla 7 s: mniej tekstu w rolce, więcej w opisie (decyzja Michała)
+- „Nie za dużo tekstu. Więcej tekstu w opisie, a w rolce sprytne zaznaczenie tematu – zahaczenie w sposób redaktorski, nagłówek budzący kontrowersję.”
+- Wzór: „Odpolitycznili spółki. *Swoimi.* 219 nazwisk.” + 1 akapit z liczbami + „Sprawdź sam: … Szczegóły w opisie.” (ok. 30 słów). Opis IG = pełny reportaż: obietnica (cytat), dane, rozbicie, uczciwe zastrzeżenie, co może obywatel, pytanie, źródła.
+- Nagłówek: gra słów / ironia redakcyjna, ale fakt z 2 źródeł; riposta do decyzji i liczb, nie do osób.

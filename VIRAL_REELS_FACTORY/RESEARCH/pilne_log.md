@@ -6,3 +6,4 @@
 - 2026-11-23 07:05 | decyzja | alarm „wybory do Senatu” – bez skandalu, pominięty; 9:00 = NEWS przejazdy (Dz.U. 2026 poz. 1466).
 - 2026-11-23 07:17 | 5 pkt | Miażdżący sondaż dla rządu Tuska. Polacy rozliczają ich z obietnic | Interia, Radio Zet | https://news.google.com/rss/articles/CBMipgFBVV95cUxQVC13UUJVT0l5b19jZDlZV3BuYmNfNllXTk4wM0QxV1c3dEJMS3B0ZDc4TDZ0dTV6UUI2UnFGUTVfdGIxX05ibmNDU2ZiWmxFazJDTlhRVDM3QU9obFh3aXNMVlJQN3BCNjI3R3dGYXlvUFpMYXhMMnRWN2xsSHZNSThqM1hYak1oWmFQZGFybnUtanYyaHZwUHI4NEhiQm00WUFXZ0NB?oc=5
 - 2026-11-23 08:10 | kandydat | „219 polityków koalicji w spółkach” (Rz, WP/money.pl, Fakt, Do Rzeczy, Tysol) – czeka na decyzję Michała; Gawkowski/dezinformacja – słabszy.
+- 2026-11-23 | decyzja | „Sami swoi” – rolka NEWS wyrenderowana i wysłana (Rz + WP + money.pl).
