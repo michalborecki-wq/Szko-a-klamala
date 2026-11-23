@@ -78,4 +78,4 @@ Wcześniej (4.11, ręcznie): Co może policja #3 – 48 h – wysłane.
 ## pon. 23.11
 - 9:00 – GOTOWE: pętla 7 s NEWS „Korek za torami? Tracisz prawko.” (KOREK_TORY), tło magazyn szlaban.mp4, wysłane ok. 7:10.
 - 13:00 – GOTOWE: karuzela TikTok „Wilki nie wyją do Księżyca” (Smithsonian National Zoo; Discovery; Wonderopolis; ScienceABC), wysłana ok. 10:40.
-- 18:00 – pętla 7 s, policja (pon.) (do zrobienia od 14:30).
+- 18:00 – GOTOWE: pętla 7 s „Policja Cię nagrywa. Ty ją też możesz.” (Co może policja #12; art. 15 ust. 1 pkt 5a–5b uoP, art. 65a k.w., RPO), wysłane ok. 12:50.

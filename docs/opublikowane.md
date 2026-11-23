@@ -69,3 +69,4 @@ Odrzucone 1.11: ujęcie obywatelskie (art. 243 k.p.k.) – polityka/migracja; ko
 - 23.11 9:00 (NEWS, pętla 7 s): „Korek za torami? Tracisz prawko. Bez sądu.” – przepisy o przejazdach od 21.11 (Dz.U. 2026 poz. 1466). Temat pokrewny „Pod szlabanem” (8.11) – teraz jako NEWS po wejściu w życie; nie powtarzać.
 - 23.11 NEWS (poza slotem): „Odpolitycznili spółki. Swoimi. 219 nazwisk.” – lista „Rz” (395 spółek SP, TD 117, KO 80+, Lewica ~20), konkret 68 KO.
 - 23.11 13:00 (TikTok, karuzela): „Wilki nie wyją do Księżyca.”
+- 23.11 18:00 (pętla 7 s): Co może policja #12 – „Policja Cię nagrywa. Ty ją też możesz.” (nagrywanie interwencji).
