@@ -7,7 +7,5 @@
 5. Zrobione 29.10: silnik grafik dodany do `.claude/skills/szkola-klamala-grafiki` i przetestowany na `examples/przyklad.json` (0 ostrzeżeń QA, MP4 z cichą ścieżką AAC).
 - TikTok Shop (5.11): Michał weryfikuje zaproszenie w aplikacji, akceptuje, dodaje 3–5 produktów do Showcase i przysyła zrzut regulaminu – szczegóły `docs/tiktok-shop.md`.
 
-## OmniRoute (23.11, prośba Michała „zainstaluj omniroute”)
-- Zainstalowany w kontenerze sesji: `npm install -g omniroute --engine-strict=false` (v3.8.x, MIT, github.com/diegosouzapw/OmniRoute) + `omniroute runtime repair`. Start: `omniroute` → panel http://localhost:20128, API zgodne z OpenAI: http://localhost:20128/v1 (test 23.11: działa).
-- Kontener jest ulotny – w nowej sesji instalacja od nowa (ok. 2 min, ok. 580 MB).
-- Do zdecydowania z Michałem: do czego używamy (router modeli AI – wymaga kont/kluczy dostawców; klucze tylko w ustawieniach środowiska, budżet na płatne API 0 zł).
+## OmniRoute (23.11)
+- Zainstalowany na próbę i tego samego dnia usunięty na prośbę Michała („bez sensu” – router modeli AI wymaga kluczy/kont dostawców, budżet 0 zł, do rolek niepotrzebny). Nie instalować ponownie bez prośby.
