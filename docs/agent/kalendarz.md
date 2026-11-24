@@ -83,5 +83,5 @@ Wcześniej (4.11, ręcznie): Co może policja #3 – 48 h – wysłane.
 ## wt. 24.11
 - PILNE (ok. 7:10): pętla 7 s „Zgoda na strzał. Nie strzelili.” – rosyjski dron, DORSZ (rp.pl, Polsat, WP), wysłane.
 - 9:00 – GOTOWE: NEWS „Dyplom za łapówkę? Najpierw zgoda Sejmu.” – immunitety, Collegium Humanum (Prokuratura Krajowa za Interią, rp.pl, TVP Info, TVN24; Konstytucja art. 105), wysłane ok. 7:15.
-- 13:00 – karuzela TikTok (od 10:30).
+- 13:00 – GOTOWE: karuzela TikTok „Napoleon nie był niski” (History.com; Britannica; przeliczenie w kodzie: 5 st. 2 cale FR ≈ 167,8 cm), wysłana ok. 10:45.
 - 18:00 – pętla 7 s, nie policja (wtorek) (od 14:30).

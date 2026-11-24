@@ -23,7 +23,7 @@ Stan na 29.10.2026.
 
 ## Odrzucone
 
-- Wzrost Napoleona – zbyt słabe źródło; nie używać bez źródła encyklopedycznego.
+- Wzrost Napoleona – OPUBLIKOWANE 24.11 13:00 (karuzela TikTok; History.com + Britannica).
 
 ## Przygotowane 30.10 (do publikacji 30.10–1.11 – po publikacji nie powtarzać)
 

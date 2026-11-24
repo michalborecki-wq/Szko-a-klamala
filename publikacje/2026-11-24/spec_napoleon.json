@@ -1,0 +1,43 @@
+{
+ "handle": "@szkola_klamala",
+ "posts": [
+  {
+   "id": "napoleon_wzrost",
+   "format": "vertical",
+   "subject": "HISTORIA",
+   "ton": "CIEKAWOSTKA",
+   "slides": [
+    {
+     "type": "cover",
+     "title": "Napoleon nie był",
+     "accent": "niski.",
+     "sub": "Zawiniła linijka."
+    },
+    {
+     "type": "number",
+     "tag": "LICZBA",
+     "big": "ok. 168 cm",
+     "title": "Tyle daje „5 stóp 2 cale”",
+     "accent": "w stopach francuskich.",
+     "body": "Przeciętny albo nawet nieco wyższy niż Francuz z jego epoki.",
+     "source": "History.com; Britannica"
+    },
+    {
+     "type": "text",
+     "tag": "TWIST",
+     "title": "Francuski cal",
+     "accent": "był dłuższy.",
+     "body": "**2,7 cm** zamiast 2,54 cm. Anglicy czytali „5 stóp 2 cale” po swojemu – i Napoleon „skurczył się” o **ok. 10 cm**.",
+     "source": "History.com; obliczenia własne"
+    },
+    {
+     "type": "outro",
+     "question": "Skąd znasz mit o niskim Napoleonie – ze szkoły czy z kreskówek?",
+     "sub": "Wyślij komuś, kto mówi o „kompleksie Napoleona”.",
+     "sources": "Źródła: History.com (U. McIlvenna); Encyclopaedia Britannica",
+     "partner_slot": false
+    }
+   ]
+  }
+ ]
+}
