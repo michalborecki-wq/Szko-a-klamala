@@ -79,3 +79,9 @@ Wcześniej (4.11, ręcznie): Co może policja #3 – 48 h – wysłane.
 - 9:00 – GOTOWE: pętla 7 s NEWS „Korek za torami? Tracisz prawko.” (KOREK_TORY), tło magazyn szlaban.mp4, wysłane ok. 7:10.
 - 13:00 – GOTOWE: karuzela TikTok „Wilki nie wyją do Księżyca” (Smithsonian National Zoo; Discovery; Wonderopolis; ScienceABC), wysłana ok. 10:40.
 - 18:00 – GOTOWE: pętla 7 s „Policja Cię nagrywa. Ty ją też możesz.” (Co może policja #12; art. 15 ust. 1 pkt 5a–5b uoP, art. 65a k.w., RPO), wysłane ok. 12:50.
+
+## wt. 24.11
+- PILNE (ok. 7:10): pętla 7 s „Zgoda na strzał. Nie strzelili.” – rosyjski dron, DORSZ (rp.pl, Polsat, WP), wysłane.
+- 9:00 – GOTOWE: NEWS „Dyplom za łapówkę? Najpierw zgoda Sejmu.” – immunitety, Collegium Humanum (Prokuratura Krajowa za Interią, rp.pl, TVP Info, TVN24; Konstytucja art. 105), wysłane ok. 7:15.
+- 13:00 – karuzela TikTok (od 10:30).
+- 18:00 – pętla 7 s, nie policja (wtorek) (od 14:30).
