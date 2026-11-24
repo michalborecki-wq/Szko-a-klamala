@@ -72,3 +72,4 @@ Odrzucone 1.11: ujęcie obywatelskie (art. 243 k.p.k.) – polityka/migracja; ko
 - 23.11 18:00 (pętla 7 s): Co może policja #12 – „Policja Cię nagrywa. Ty ją też możesz.” (nagrywanie interwencji).
 - 24.11 PILNE: „Zgoda na strzał. Nie strzelili.” (dron, DORSZ).
 - 24.11 9:00 NEWS: „Dyplom za łapówkę? Najpierw zgoda Sejmu.” (immunitety, Collegium Humanum).
+- 24.11 18:00 NEWS: „Szlaban prawie w górze. Prawko zabrane.” (przejazd – pierwszy przypadek, 28-latka).
