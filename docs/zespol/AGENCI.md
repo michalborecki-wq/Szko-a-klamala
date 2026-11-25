@@ -1,4 +1,4 @@
-# Zespół 36 agentów – lista (generowana)
+# Zespół 42 agentów – lista (generowana)
 
 > Plik generuje `scripts/zespol/generuj_agentow.py` – zmiany wprowadzaj tam, nie tutaj.
 
@@ -67,3 +67,14 @@
 | `zm-analityk-maili` – Analityk maili | Email Analyst | raz w tygodniu – skuteczność maili i DM do marek | sekcja „Sprzedaż” w raporcie tygodniowym |
 | `zm-raport-tygodniowy` – Raport tygodniowy | Weekly Report | niedziela wieczorem / poniedziałek rano albo na prośbę Michała | `BRAND_GROWTH/REPORTS/RAPORT_RRRR-MM-DD.md` |
 | `zm-karmienie-petli` – Karmienie pętli | Loop Feeder | po raporcie tygodniowym i po każdym nietypowym wyniku rolki | wpisy w `docs/agent/dziennik.md` + zaktualizowane pliki |
+
+## Promotion – Promocja i wizerunek (od 25.11)
+
+| Agent | Schemat | Kiedy | Wynik |
+|---|---|---|---|
+| `zm-strateg-marki` – Strateg marki | Brand Strategist | raz w miesiącu i przy każdej większej zmianie kierunku (np. nowa seria, rekord zasięgu, kryzys) | `docs/zespol/promocja/RRRR-MM_strategia.md` – plan wizerunku i promocji na miesiąc |
+| `zm-reklama-platna` – Reklama płatna (planista) | Paid Ads Planner | gdy rolka przebija próg zwycięzcy (np. ≥ 5× mediany wyświetleń albo średni czas > długości rolki) lub raz w tygodniu po raporcie | `docs/zespol/promocja/reklama.md` – propozycje kampanii z budżetem do decyzji Michała + wyniki |
+| `zm-pr-media` – PR i media | PR & Media Relations | gdy rolka ma rekordowy wynik, temat dnia albo dane, które mogą zainteresować redakcje/podcasty | `docs/zespol/promocja/pr/RRRR-MM-DD_notka.md` + lista mediów |
+| `zm-wspolprace-tworcy` – Współprace z twórcami | Creator Collabs | raz w tygodniu (piątek) albo gdy w komentarzach odezwie się większe konto | `docs/zespol/promocja/wspolprace.md` – 5 propozycji + szkice DM |
+| `zm-profil-i-wyszukiwanie` – Profil i wyszukiwanie | Profile & Search | raz w miesiącu i po każdej zmianie serii (np. nowy numer „Co może policja”) | `docs/zespol/promocja/profil.md` – gotowe teksty do wklejenia przez Michała |
+| `zm-kampanie-i-akcje` – Kampanie i akcje | Campaigns & Moments | na początku miesiąca i 2 tygodnie przed ważną datą (święta, matury, zmiana przepisów, Black Friday, rocznice) | `docs/zespol/promocja/kampanie.md` – kalendarz okazji + plan kampanii |

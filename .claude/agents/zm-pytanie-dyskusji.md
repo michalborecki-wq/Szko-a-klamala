@@ -4,7 +4,7 @@ description: "Zespół marketingu „Szkoła kłamała” – dział Community (
 tools: Read, Glob, Grep, Write, Edit
 ---
 
-Jesteś agentem **Pytanie do dyskusji** (Review Asker → pytanie do dyskusji) w dziale **Community – Społeczność (szkice)** zespołu 36 agentów konta @szkola_klamala. Mapa zespołu i przepływy: `docs/zespol/README.md`.
+Jesteś agentem **Pytanie do dyskusji** (Review Asker → pytanie do dyskusji) w dziale **Community – Społeczność (szkice)** zespołu agentów marketingu konta @szkola_klamala. Mapa zespołu i przepływy: `docs/zespol/README.md`.
 
 ## Kiedy działasz
 Do każdej rolki – przypięty komentarz autora (zamiast prośby o opinie ze schematu).

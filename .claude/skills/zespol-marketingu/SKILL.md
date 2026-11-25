@@ -1,9 +1,9 @@
 ---
 name: zespol-marketingu
-description: Dyrygent zespołu 36 agentów marketingu „Szkoła kłamała” (Research, Content, Publish, Community, Sales, The loop – podagenci zm-*). Używaj, gdy Michał pisze „/zespol”, „uruchom zespół”, „cykl tygodniowy”, „odpowiedzi na komentarze”, „sponsor się odezwał”, „co dziś w zespole”, albo gdy zadanie da się podzielić na role z mapy zespołu. Nie publikuje i nie wysyła – zespół przygotowuje szkice i pliki.
+description: Dyrygent zespołu 42 agentów marketingu „Szkoła kłamała” (Research, Content, Publish, Community, Sales, The loop, Promocja i wizerunek – podagenci zm-*). Używaj, gdy Michał pisze „/zespol”, „uruchom zespół”, „cykl tygodniowy”, „odpowiedzi na komentarze”, „sponsor się odezwał”, „co dziś w zespole”, „promocja”, „wizerunek”, „reklama”, „PR”, „współprace”, albo gdy zadanie da się podzielić na role z mapy zespołu. Nie publikuje i nie wysyła – zespół przygotowuje szkice i pliki.
 ---
 
-# /zespol – dyrygent 36 agentów
+# /zespol – dyrygent 42 agentów
 
 Mapa i przepływy są w `docs/zespol/README.md`, lista agentów w `docs/zespol/AGENCI.md`, a zasady w `docs/zespol/ZASADY.md` (CLAUDE.md ma pierwszeństwo).
 
@@ -20,6 +20,7 @@ Podagenci nie mogą uruchamiać innych podagentów, dlatego **dyrygujesz Ty, czy
 | `sponsor <wklejka>` | zm-lowca-leadow → zm-ocena-leadow → (zm-autor-maili lub zm-umawianie-rozmow) → zm-straznik-marki → zm-crm | szkic odpowiedzi + ocena + następny krok |
 | `oferta <marka>` | zm-oferta-i-platnosc → zm-straznik-marki → zm-crm | oferta do wysłania przez Michała |
 | `tydzien` (niedziela – razem z raportem brand-director, jeden plik) | (zm-analityk-postow + zm-przychody + zm-analityk-maili + zm-sluchacz-odbiorcow + zm-obserwator-konkurencji) → zm-gornik-komentarzy + zm-baza-faq → zm-raport-tygodniowy → zm-karmienie-petli → zm-planista | raport (1 strona) + 3 decyzje do podjęcia |
+| `promocja` (raz w miesiącu i po rekordzie zasięgu) | zm-strateg-marki → (zm-reklama-platna + zm-pr-media + zm-wspolprace-tworcy + zm-profil-i-wyszukiwanie + zm-kampanie-i-akcje) → zm-straznik-marki | plan promocji na miesiąc: 3 działania, teksty do profilu, propozycje kampanii płatnych do decyzji Michała |
 | `research` | (zm-zwiadowca-trendow + zm-obserwator-konkurencji + zm-sluchacz-odbiorcow) → zm-gornik-komentarzy | 5 tematów z kątem i dokumentem |
 | `<nazwa agenta> <zadanie>` | tylko ten agent | jego wynik |
 
@@ -34,4 +35,4 @@ Podagenci nie mogą uruchamiać innych podagentów, dlatego **dyrygujesz Ty, czy
 
 ## Zmiany w zespole
 
-Agentów nie edytuj ręcznie. Zmieniaj `scripts/zespol/generuj_agentow.py` i uruchom go ponownie. Nowy agent musi trafić do któregoś z 6 działów, a skrypt sprawdza, że w każdym dziale jest po 6.
+Agentów nie edytuj ręcznie. Zmieniaj `scripts/zespol/generuj_agentow.py` i uruchom go ponownie. Nowy agent musi trafić do któregoś z 7 działów, a skrypt sprawdza, że w każdym dziale jest po 6.

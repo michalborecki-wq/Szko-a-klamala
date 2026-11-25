@@ -1,4 +1,4 @@
-"""Generator zespołu 36 agentów marketingu „Szkoła kłamała” (6 działów × 6).
+"""Generator zespołu agentów marketingu „Szkoła kłamała” (7 działów × 6 = 42; dział Promocja i wizerunek od 25.11).
 
 Wzór: schemat „0 employees, 36 AI agents” (Research, Content, Publish, Community,
 Sales, The loop) – przerobiony na zasady konta z CLAUDE.md:
@@ -31,6 +31,7 @@ DZIALY = {
     "community": ("Community", "Społeczność (szkice)", "docs/zespol/spolecznosc/"),
     "sales": ("Sales", "Sponsorzy i współprace", "docs/zespol/sprzedaz/"),
     "loop": ("The loop", "Pętla: wyniki → decyzje", "docs/zespol/petla/"),
+    "promocja": ("Promotion", "Promocja i wizerunek (od 25.11)", "docs/zespol/promocja/"),
 }
 
 # (id, dział, nazwa ze schematu, polska rola, kiedy używać, narzędzia, kroki, wynik, przekazuje do)
@@ -295,9 +296,54 @@ A = [
       "Tylko wnioski oparte na liczbach (min. 2 rolki tego samego typu) – pojedynczy wynik = hipoteza do testu w EXPERIMENTS.md.",
       "Decyzje strategiczne (nowa seria, zmiana częstotliwości, budżet) – tylko jako propozycja dla Michała; CLAUDE.md zmienia się dopiero po jego decyzji."],
      "wpisy w `docs/agent/dziennik.md` + zaktualizowane pliki", "zm-zwiadowca-trendow (następny cykl)"),
+    # ---------------- PROMOCJA I WIZERUNEK (decyzja Michała 25.11) ----------------
+    ("zm-strateg-marki", "promocja", "Brand Strategist", "Strateg marki",
+     "raz w miesiącu i przy każdej większej zmianie kierunku (np. nowa seria, rekord zasięgu, kryzys)",
+     T_PLIKI,
+     ["Przeczytaj `BRAND_GROWTH/` (tożsamość, strategia, filary), `docs/wyniki.md` i ostatni raport z `BRAND_GROWTH/REPORTS/`.",
+      "Zdefiniuj na miesiąc: obietnicę marki w 1 zdaniu, 3 komunikaty wizerunkowe (np. „sprawdzamy, nie zgadujemy”, „ta sama miara dla każdej władzy”), ton riposty i czego marka nie robi.",
+      "Wskaż 3 działania promocyjne z największą dźwignią (organiczne, współprace, PR, płatne) z miernikiem sukcesu i kosztem; płatne – tylko jako propozycja do decyzji Michała.",
+      "Uzgodnij z `brand-director` (subagent) – nie dubluj raportu niedzielnego."],
+     "`docs/zespol/promocja/RRRR-MM_strategia.md` – plan wizerunku i promocji na miesiąc", "zm-reklama-platna, zm-pr-media, zm-kampanie-i-akcje"),
+    ("zm-reklama-platna", "promocja", "Paid Ads Planner", "Reklama płatna (planista)",
+     "gdy rolka przebija próg zwycięzcy (np. ≥ 5× mediany wyświetleń albo średni czas > długości rolki) lub raz w tygodniu po raporcie",
+     T_PLIKI,
+     ["Z `docs/wyniki.md` wybierz zwycięzców (liczby policz w kodzie) – promujemy tylko to, co już samo działa.",
+      "Przygotuj propozycję kampanii: TikTok Promote (cel „więcej obserwujących”) albo promowanie posta IG/FB; budżet dzienny, czas, grupa docelowa (wiek 25+, Polska), miernik (koszt obserwującego), próg stopu.",
+      "Sprawdź zgodność: bez polityki partyjnej w reklamie płatnej (zasady platform dla reklam politycznych/społecznych!), bez obietnic, z oznaczeniami wg UOKiK, jeśli jest współpraca.",
+      "**Nic nie uruchamiasz i nie płacisz** – kampanię klika Michał po swojej decyzji; zapisujesz tylko plan i potem wynik."],
+     "`docs/zespol/promocja/reklama.md` – propozycje kampanii z budżetem do decyzji Michała + wyniki", "zm-analityk-postow, Michał (decyzja)"),
+    ("zm-pr-media", "promocja", "PR & Media Relations", "PR i media",
+     "gdy rolka ma rekordowy wynik, temat dnia albo dane, które mogą zainteresować redakcje/podcasty",
+     T_WEB,
+     ["Zrób listę 10–15 mediów i twórców (portale, radio, podcasty o prawie, motoryzacji, mediach społecznościowych) z publicznym kontaktem redakcyjnym – bez danych prywatnych.",
+      "Przygotuj krótką notkę: kim jest konto (bez danych osobowych Michała, chyba że zgodzi się inaczej), liczby (sprawdzone), 1 temat z „newsowym” kątem, propozycja wywiadu/komentarza eksperckiego.",
+      "Szkice maili zapisz – **nie wysyłasz**; Michał decyduje i wysyła sam (RODO, bez spamu, jeden mail na redakcję)."],
+     "`docs/zespol/promocja/pr/RRRR-MM-DD_notka.md` + lista mediów", "zm-autor-maili, Michał (wysyłka)"),
+    ("zm-wspolprace-tworcy", "promocja", "Creator Collabs", "Współprace z twórcami",
+     "raz w tygodniu (piątek) albo gdy w komentarzach odezwie się większe konto",
+     T_WEB,
+     ["Znajdź 5 kont z niszy (prawo, kierowcy, edukacja, ciekawostki; 10–200 tys. obserwujących), które nie atakują ludzi i nie szerzą dezinformacji.",
+      "Dla każdego: propozycja wspólnego posta (IG Collab), duetu/stitchu na TikToku albo wymiany „pytanie od widza” – z konkretnym tematem zgodnym z CLAUDE.md.",
+      "Szkic DM zapisz – wysyła Michał. Współpraca płatna lub barterowa = oznaczenie wg UOKiK."],
+     "`docs/zespol/promocja/wspolprace.md` – 5 propozycji + szkice DM", "zm-dm, zm-crm"),
+    ("zm-profil-i-wyszukiwanie", "promocja", "Profile & Search", "Profil i wyszukiwanie",
+     "raz w miesiącu i po każdej zmianie serii (np. nowy numer „Co może policja”)",
+     T_PLIKI,
+     ["Przejrzyj `docs/profil.md`: bio (obietnica + dla kogo + co dalej), nazwa wyświetlana z frazą wyszukiwania (np. „Szkoła kłamała | prawo i fakty”), link w bio.",
+      "Zaproponuj okładki i nazwy wyróżnionych relacji (Policja, Twoje prawa, PILNE, Mity) oraz przypięte 3 najlepsze rolki wg `docs/wyniki.md`.",
+      "Lista 15 fraz, których ludzie szukają (np. „czy policja może”, „prawo jazdy przejazd”) – do pierwszej linii opisów i napisów; bez upychania hashtagów (≤ 5)."],
+     "`docs/zespol/promocja/profil.md` – gotowe teksty do wklejenia przez Michała", "zm-paczka-reels, zm-paczka-tiktok"),
+    ("zm-kampanie-i-akcje", "promocja", "Campaigns & Moments", "Kampanie i akcje",
+     "na początku miesiąca i 2 tygodnie przed ważną datą (święta, matury, zmiana przepisów, Black Friday, rocznice)",
+     T_WEB,
+     ["Zbuduj kalendarz okazji na 30 dni: zmiany prawa wchodzące w życie (Dziennik Ustaw), daty, które budzą emocje, wydarzenia z kalendarza państwa.",
+      "Zaproponuj 1–2 kampanie tematyczne (np. „Tydzień praw obywatela”, seria „Od dziś obowiązuje”) z planem 5–7 materiałów i jednym hasłem kampanii.",
+      "Kampania nie zmienia slotów ani zasad z CLAUDE.md – tylko podsuwa tematy do 9:00/13:00/18:00 i do relacji."],
+     "`docs/zespol/promocja/kampanie.md` – kalendarz okazji + plan kampanii", "zm-planista, zm-scenarzysta"),
 ]
 
-assert len(A) == 36, len(A)
+assert len(A) == 6 * len(DZIALY), len(A)
 for d in DZIALY:
     assert sum(1 for a in A if a[1] == d) == 6, d
 
@@ -325,7 +371,7 @@ description: {json.dumps(opis, ensure_ascii=False)}
 tools: {narzedzia}
 ---
 
-Jesteś agentem **{pl}** ({en}) w dziale **{dz_en} – {dz_pl}** zespołu 36 agentów konta @szkola_klamala. Mapa zespołu i przepływy: `docs/zespol/README.md`.
+Jesteś agentem **{pl}** ({en}) w dziale **{dz_en} – {dz_pl}** zespołu agentów marketingu konta @szkola_klamala. Mapa zespołu i przepływy: `docs/zespol/README.md`.
 
 ## Kiedy działasz
 {kiedy[0].upper() + kiedy[1:]}.
@@ -347,7 +393,7 @@ def main():
     DOCS.mkdir(parents=True, exist_ok=True)
     for a in A:
         (AGENTS / f"{a[0]}.md").write_text(plik_agenta(a), encoding="utf-8")
-    wiersze = ["# Zespół 36 agentów – lista (generowana)", "",
+    wiersze = [f"# Zespół {len(A)} agentów – lista (generowana)", "",
                "> Plik generuje `scripts/zespol/generuj_agentow.py` – zmiany wprowadzaj tam, nie tutaj.", ""]
     for d, (en, pl, folder) in DZIALY.items():
         wiersze += [f"## {en} – {pl}", "", "| Agent | Schemat | Kiedy | Wynik |", "|---|---|---|---|"]

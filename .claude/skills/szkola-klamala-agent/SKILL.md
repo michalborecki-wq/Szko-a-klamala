@@ -5,6 +5,9 @@ description: Autonomiczny agent „Szkoła kłamała” – 3 dostawy dziennie: 
 
 # Agent „Szkoła kłamała” – cykl dzienny
 
+## ZESPÓŁ – automatyczne działania przy dostawach (od 26.11, decyzja Michała 25.11)
+Po każdej dostawie uruchom agentów `zm-*` z tabeli w `docs/zespol/HARMONOGRAM.md` dla danej pory i dnia (6:30 / 10:30 / 14:30, dni tygodnia, 1. dzień miesiąca, wyzwalacze REKORD/sponsor/hejt). Najpierw dostawa – zespół nigdy jej nie opóźnia. Do Michała najwyżej 3 linie „Zespół:” pod dostawą, tylko gdy coś wymaga jego decyzji. Bez publikowania, wysyłania i płacenia.
+
 ## KARUZELA 13:00 – od 25.11 (decyzja Michała)
 Temat karuzeli TikTok 13:00 bierzemy z kontrowersji z przeglądu stacji TV i radiowych (`pilne.py`, `sledczy.py`), nie z wiedzy ogólnej. Inny temat niż rolki dnia; 4 slajdy: haczyk → fakt z dokumentu pierwotnego → zwrot/riposta → pytanie o ocenę; granice jak w rolkach.
 

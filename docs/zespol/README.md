@@ -1,4 +1,6 @@
-# Zespół marketingu: 0 pracowników, 36 agentów
+# Zespół marketingu: 0 pracowników, 42 agentów
+
+> **25.11 (decyzja Michała „zbuduj cały zespół marketingowy… promocja marki, budowa wizerunku, reklama”):** dodany 7. dział **Promocja i wizerunek** – strateg marki, reklama płatna (tylko plany do decyzji Michała), PR i media, współprace z twórcami, profil i wyszukiwanie, kampanie i akcje. Tryb: `/zespol promocja`. Wyniki: `docs/zespol/promocja/`.
 
 Wzór: schemat „A marketing team with 0 employees: 36 Claude agents” (TikTok, zrzut Michała 17.11). Został przerobiony na zasady konta @szkola_klamala.
 
