@@ -73,3 +73,4 @@ Odrzucone 1.11: ujęcie obywatelskie (art. 243 k.p.k.) – polityka/migracja; ko
 - 24.11 PILNE: „Zgoda na strzał. Nie strzelili.” (dron, DORSZ).
 - 24.11 9:00 NEWS: „Dyplom za łapówkę? Najpierw zgoda Sejmu.” (immunitety, Collegium Humanum).
 - 24.11 18:00 NEWS: „Szlaban prawie w górze. Prawko zabrane.” (przejazd – pierwszy przypadek, 28-latka).
+- 25.11 9:00 NEWS: „Broń w domu. Badanie raz w życiu.” (badania okresowe posiadaczy broni).

@@ -85,3 +85,8 @@ Wcześniej (4.11, ręcznie): Co może policja #3 – 48 h – wysłane.
 - 9:00 – GOTOWE: NEWS „Dyplom za łapówkę? Najpierw zgoda Sejmu.” – immunitety, Collegium Humanum (Prokuratura Krajowa za Interią, rp.pl, TVP Info, TVN24; Konstytucja art. 105), wysłane ok. 7:15.
 - 13:00 – GOTOWE: karuzela TikTok „Napoleon nie był niski” (History.com; Britannica; przeliczenie w kodzie: 5 st. 2 cale FR ≈ 167,8 cm), wysłana ok. 10:45.
 - 18:00 – GOTOWE: NEWS „Szlaban prawie w górze. Prawko zabrane.” (28-latka, pierwsze zatrzymanie wg nowych przepisów; Policja Mazowiecka + Polsat, o2, Interia; art. 102 ust. 1 pkt 10), wysłane ok. 14:50.
+
+## śr. 25.11
+- 9:00 – GOTOWE: NEWS „Broń w domu. Badanie raz w życiu.” (ustawa o broni i amunicji art. 10, 15 ust. 4–5; Rz 24.11; druk 1931), wysłane ok. 7:25.
+- 13:00 – karuzela TikTok (od 10:30).
+- 18:00 – pętla 7 s, policja (śr.) (od 14:30).
