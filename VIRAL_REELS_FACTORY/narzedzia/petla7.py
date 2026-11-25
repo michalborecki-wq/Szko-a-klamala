@@ -52,6 +52,8 @@ def build_html(s):
     bron = s.get("bronisz")
     bron_html = f'<div class="box"><p>{words(mark(bron))}</p></div>' if bron else ""
     pasek = html.escape(s.get("pasek", "PILNE"))
+    if len(s.get("pasek", "")) > 40:
+        sys.exit(f"Pasek ma {len(s.get('pasek',''))} znaków – maks. 40 (czytelność, poprawka Michała 25.11). Skróć „pasek” w specu.")
     ai = "Ilustracja AI – nie jest zdjęciem wydarzenia · " if s.get("ai", True) else ""
     stopka = mark(s.get("stopka", ""))
     return f"""<!doctype html><html><head><meta charset="utf-8"><style>
@@ -106,7 +108,10 @@ function setT(t, T){{
   const ph = t / T;                         // 0..1, okresowe
   const k = Math.floor(ph * ws.length);     // „czytające” podświetlenie – za szybkie
   ws.forEach((w,i)=>w.classList.toggle('on', i>=k && i<k+3));
-  tt.style.transform = `translateX(${{-ph*unit*2}}px)`;   // 2 powtórzenia paska na okres
+  // pasek czytelny (poprawka Michała 25.11): ok. 130 px/s zamiast ok. 700 px/s; przesunięcie = całe powtórzenia
+  // paska, więc pętla dalej jest bez szwu (krótki pasek ≤ 40 znaków → 1 powtórzenie na 7 s)
+  const nrep = Math.max(1, Math.round(900/unit));
+  tt.style.transform = `translateX(${{-ph*unit*nrep}}px)`;
   const pul = 1 + 0.06*Math.pow(Math.max(0,Math.sin(ph*Math.PI*4)),6);
   document.getElementById('rip').style.transform = `scale(${{pul}}) rotate(-2deg)`;
   const mk = document.getElementById('mk');

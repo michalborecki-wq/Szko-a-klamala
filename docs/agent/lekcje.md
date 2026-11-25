@@ -111,3 +111,6 @@ Lista kontrolna przed renderem 4K: [ ] Higgsfield – nowe ujęcia (1 na akt) �
 
 ## 25.11 – karuzele 13:00 z kontrowersji (decyzja Michała)
 - „Karuzele twórz z kontrowersji, jakie zdobędziesz skanując stacje TV i radiowe.” Od 26.11 temat karuzeli = najmocniejszy kandydat z `pilne.py`/`sledczy.py`, którego nie wzięła rolka 9:00/18:00.
+
+## 25.11 – pasek w pętli 7 s był nieczytelny (Michał)
+- Pasek przesuwał się ok. 700 px/s (2 długie powtórzenia na 7 s). Teraz: maks. 40 znaków, 1 przejście na 7 s (ok. 130 px/s), pętla nadal bez szwu; `petla7.py` przerywa render przy dłuższym pasku.
