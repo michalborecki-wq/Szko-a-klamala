@@ -108,3 +108,6 @@ Lista kontrolna przed renderem 4K: [ ] Higgsfield – nowe ujęcia (1 na akt) �
 - „Nie za dużo tekstu. Więcej tekstu w opisie, a w rolce sprytne zaznaczenie tematu – zahaczenie w sposób redaktorski, nagłówek budzący kontrowersję.”
 - Wzór: „Odpolitycznili spółki. *Swoimi.* 219 nazwisk.” + 1 akapit z liczbami + „Sprawdź sam: … Szczegóły w opisie.” (ok. 30 słów). Opis IG = pełny reportaż: obietnica (cytat), dane, rozbicie, uczciwe zastrzeżenie, co może obywatel, pytanie, źródła.
 - Nagłówek: gra słów / ironia redakcyjna, ale fakt z 2 źródeł; riposta do decyzji i liczb, nie do osób.
+
+## 25.11 – karuzele 13:00 z kontrowersji (decyzja Michała)
+- „Karuzele twórz z kontrowersji, jakie zdobędziesz skanując stacje TV i radiowe.” Od 26.11 temat karuzeli = najmocniejszy kandydat z `pilne.py`/`sledczy.py`, którego nie wzięła rolka 9:00/18:00.
