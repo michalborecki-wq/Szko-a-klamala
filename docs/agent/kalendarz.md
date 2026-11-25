@@ -88,5 +88,5 @@ Wcześniej (4.11, ręcznie): Co może policja #3 – 48 h – wysłane.
 
 ## śr. 25.11
 - 9:00 – GOTOWE: NEWS „Broń w domu. Badanie raz w życiu.” (ustawa o broni i amunicji art. 10, 15 ust. 4–5; Rz 24.11; druk 1931), wysłane ok. 7:25.
-- 13:00 – karuzela TikTok (od 10:30).
+- 13:00 – GOTOWE: karuzela TikTok „Einstein nie oblał matematyki” (TIME; Britannica; Ripley's), wysłana ok. 10:45.
 - 18:00 – pętla 7 s, policja (śr.) (od 14:30).

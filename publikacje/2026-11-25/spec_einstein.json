@@ -1,0 +1,8 @@
+{"handle": "@szkola_klamala", "posts": [{
+ "id": "einstein_matma", "format": "vertical", "subject": "HISTORIA", "ton": "CIEKAWOSTKA",
+ "slides": [
+  {"type": "cover", "title": "Einstein nie oblał", "accent": "matematyki.", "sub": "Nigdy. Sam to prostował."},
+  {"type": "number", "tag": "LICZBA", "big": "przed 15.", "title": "Tyle miał lat,", "accent": "gdy znał całki.", "body": "„Zanim skończyłem 15 lat, opanowałem rachunek różniczkowy i całkowy” – odpowiedział w 1935 r. na plotkę z gazety.", "source": "TIME; Ripley's"},
+  {"type": "text", "tag": "TWIST", "title": "Oblał – ale", "accent": "co innego.", "body": "Egzamin na politechnikę w Zurychu. Z **matematyki i fizyki** – świetnie. Poległ na **językach i przedmiotach ogólnych**. Był młodszy od innych kandydatów.", "source": "Britannica; Ripley's"},
+  {"type": "outro", "question": "Kto Ci powiedział, że Einstein był słaby z matmy – nauczyciel czy internet?", "sub": "Wyślij komuś, kto się tym pociesza.", "sources": "Źródła: TIME; Encyclopaedia Britannica; Ripley's Believe It or Not!", "partner_slot": false}
+ ]}]}
