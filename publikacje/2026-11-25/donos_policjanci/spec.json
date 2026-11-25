@@ -1,0 +1,19 @@
+{
+"id": "DONOS_BOHATER",
+"seria": "CO MOŻE POLICJA #13",
+"tag": "POLICJA",
+"haczyk": [
+"Zatrzymał zamachowca.",
+"*Dostał donos.*"
+],
+"riposta": "I prokuratura musi go czytać.",
+"akapity": [
+"Po zamachu w Krakowie wpłynęły zawiadomienia na *dwóch policjantów* – „przekroczenie uprawnień” przy użyciu broni. Śledczy z urzędu !podstaw nie widzieli!, ale każdy donos muszą rozpatrzyć – do *30 dni* (art. 307 k.p.k.)."
+],
+"bronisz": "**Druga strona:** świadomie fałszywe zawiadomienie to przestępstwo – do *2 lat* więzienia (art. 238 k.k.).",
+"pasek": "CO MOŻE POLICJA #13 · ZAMACH W KRAKOWIE · DONOSY NA 2 POLICJANTÓW · PROKURATURA: Z URZĘDU BRAK PODSTAW · 30 DNI NA DECYZJĘ · FAŁSZYWY DONOS = ART. 238 K.K.",
+"stopka": "Prokuratura za rp.pl, WP, Interia, TVN24, Polsat News (13–24.11) · k.p.k. art. 305, 307 · k.k. art. 238 · To nie jest porada prawna.",
+"tlo": "zrodla/ai_higgsfield/2026-11-14/wideo/notes_deska.mp4",
+"rozmycie": 7,
+"ai": true
+}
