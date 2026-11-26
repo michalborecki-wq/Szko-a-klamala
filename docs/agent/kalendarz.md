@@ -93,5 +93,5 @@ Wcześniej (4.11, ręcznie): Co może policja #3 – 48 h – wysłane.
 
 ## czw. 26.11
 - 9:00 – GOTOWE: NEWS „Zmowa na gazomierzach. Mogłeś dopłacać.” (UOKiK 25.11, 44,5 mln zł, nieprawomocna; TVN24, Bankier, ISBnews, zero.pl), wysłane ok. 7:15.
-- 13:00 – karuzela z kontrowersji (od 10:30).
+- 13:00 – GOTOWE: karuzela „Ponad 3 mln ton soli rocznie – do rzek” (raport NIK 24.11; ekologia.pl, CEO, Dziennik Zachodni, portalsamorzadowy.pl), wysłana ok. 10:50.
 - 18:00 – pętla 7 s, nie policja (od 14:30).

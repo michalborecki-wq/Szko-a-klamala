@@ -77,3 +77,4 @@ Odrzucone 1.11: ujęcie obywatelskie (art. 243 k.p.k.) – polityka/migracja; ko
 - 25.11 13:00 (TikTok, karuzela): „Einstein nie oblał matematyki.”
 - 25.11 18:00: Co może policja #13 – „Zatrzymał zamachowca. Dostał donos.” (Kraków, zawiadomienia na policjantów).
 - 26.11 9:00 NEWS: „Zmowa na gazomierzach. Mogłeś dopłacać.” (UOKiK).
+- 26.11 13:00 (TikTok, karuzela): „Ponad 3 mln ton soli rocznie – do rzek” (NIK).

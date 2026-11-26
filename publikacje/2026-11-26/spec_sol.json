@@ -1,0 +1,8 @@
+{"handle": "@szkola_klamala", "posts": [{
+ "id": "sol_rzeki", "format": "vertical", "subject": "ŚLEDZTWO", "ton": "SKANDAL",
+ "slides": [
+  {"type": "cover", "title": "Ponad 3 mln ton soli", "accent": "rocznie – do rzek.", "sub": "NIK: po Odrze nic się nie zmieniło."},
+  {"type": "number", "tag": "LICZBA", "big": "14 g/l", "title": "Tyle soli w zrzutach", "accent": "ok. 2× więcej niż Bałtyk.", "body": "Średnio w wodzie z kopalń wpuszczanej do polskich rzek.", "source": "NIK, raport 24.11.2026"},
+  {"type": "text", "tag": "TWIST", "title": "Odra 2022.", "accent": "Zmian systemowych: brak.", "body": "Brak aktualnych danych, kto i ile zrzuca. Brak skutecznego automatycznego monitoringu. Infrastruktura w zasolonej wodzie: **57–100%** droższa w utrzymaniu.", "source": "NIK; Politechnika Gdańska dla NIK"},
+  {"type": "outro", "question": "Kto powinien płacić za sól w rzekach – kopalnie czy wszyscy?", "sub": "Wyślij komuś, kto pamięta śnięte ryby w Odrze.", "sources": "Źródła: NIK (raport z 24.11.2026) za ekologia.pl, CEO Magazyn, Dziennik Zachodni, portalsamorzadowy.pl", "partner_slot": false}
+ ]}]}
