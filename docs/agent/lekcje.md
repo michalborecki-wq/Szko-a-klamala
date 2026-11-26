@@ -114,3 +114,6 @@ Lista kontrolna przed renderem 4K: [ ] Higgsfield – nowe ujęcia (1 na akt) �
 
 ## 25.11 – pasek w pętli 7 s był nieczytelny (Michał)
 - Pasek przesuwał się ok. 700 px/s (2 długie powtórzenia na 7 s). Teraz: maks. 40 znaków, 1 przejście na 7 s (ok. 130 px/s), pętla nadal bez szwu; `petla7.py` przerywa render przy dłuższym pasku.
+
+## 26.11 – koszyk TikTok w pętli 7 s
+- `petla7.py` nie ma opcji `--reklama`; etykietę „Reklama – <marka>” nakładamy na plik TikTok ffmpeg drawtext (InterDisplay-Bold, 30 px, prawy górny róg, y=150). Do zrobienia: opcja `--reklama` w silniku.

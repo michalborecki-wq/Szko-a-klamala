@@ -1,0 +1,19 @@
+{
+"id": "MANDAT_1KMH",
+"seria": "KIEROWCO, UWAŻAJ",
+"tag": "NEWS",
+"haczyk": [
+"1 km/h za szybko?",
+"*Mandat.*"
+],
+"riposta": "Radar myli się bardziej.",
+"akapity": [
+"Taryfikator: przekroczenie *do 10 km/h* – do !50 zł! i *1 punkt*. Także o 1 km/h. RPO szacuje błąd pomiaru na ok. 3 km/h i chce go odliczać. Resort zapowiada zmiany – przepisy jeszcze stoją."
+],
+"bronisz": "**Co możesz:** mandatu nie musisz przyjąć – wtedy rozstrzyga sąd.",
+"pasek": "1 KM/H = DO 50 ZŁ I 1 PUNKT",
+"stopka": "Taryfikator mandatów, poz. 367; rozp. o punktach karnych (E 10) · RPO · rp.pl, portalsamorzadowy.pl (11.2026) · To nie jest porada prawna.",
+"tlo": "zrodla/ai_higgsfield/2026-11-15/wideo/budzik_swit.mp4",
+"rozmycie": 7,
+"ai": true
+}
