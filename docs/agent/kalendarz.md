@@ -90,3 +90,8 @@ Wcześniej (4.11, ręcznie): Co może policja #3 – 48 h – wysłane.
 - 9:00 – GOTOWE: NEWS „Broń w domu. Badanie raz w życiu.” (ustawa o broni i amunicji art. 10, 15 ust. 4–5; Rz 24.11; druk 1931), wysłane ok. 7:25.
 - 13:00 – GOTOWE: karuzela TikTok „Einstein nie oblał matematyki” (TIME; Britannica; Ripley's), wysłana ok. 10:45.
 - 18:00 – GOTOWE: Co może policja #13 „Zatrzymał zamachowca. Dostał donos.” (zawiadomienia na 2 policjantów po zamachu w Krakowie; rp.pl, WP, Interia, TVN24, Polsat; k.p.k. 305, 307; k.k. 238), wysłane ok. 14:55.
+
+## czw. 26.11
+- 9:00 – GOTOWE: NEWS „Zmowa na gazomierzach. Mogłeś dopłacać.” (UOKiK 25.11, 44,5 mln zł, nieprawomocna; TVN24, Bankier, ISBnews, zero.pl), wysłane ok. 7:15.
+- 13:00 – karuzela z kontrowersji (od 10:30).
+- 18:00 – pętla 7 s, nie policja (od 14:30).
