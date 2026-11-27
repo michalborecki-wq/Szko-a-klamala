@@ -1,0 +1,8 @@
+{"handle": "@szkola_klamala", "posts": [{
+ "id": "stopnie_alarmowe", "format": "vertical", "subject": "BEZPIECZEŃSTWO", "ton": "SKANDAL",
+ "slides": [
+  {"type": "cover", "title": "Polska na 2. stopniu", "accent": "alarmowym. Do lutego.", "sub": "A kolej – na 3. z 4."},
+  {"type": "number", "tag": "DATA", "big": "luty 2027", "title": "Do końca lutego", "accent": "BRAVO w całym kraju.", "body": "Plus **BRAVO-CRP** – zagrożenie w cyberprzestrzeni. Premier podpisał 4 zarządzenia 26.11; działają od 1.12.", "source": "RCB za Polsat News, TVN24, Interia"},
+  {"type": "text", "tag": "TWIST", "title": "CHARLIE", "accent": "na kolei.", "body": "**3. stopień z 4** – na wskazanych liniach kolejowych, po aktach sabotażu na torach. Służby w podwyższonej gotowości.", "source": "RCB; ustawa o działaniach antyterrorystycznych"},
+  {"type": "outro", "question": "Czujesz się bezpieczniej – czy po prostu przyzwyczaiłeś się do alarmu?", "sub": "Wyślij komuś, kto nie wie, że stopnie obowiązują.", "sources": "Źródła: RCB / zarządzenia Prezesa Rady Ministrów nr 63–66 z 26.11.2026 za Polsat News, TVN24, Interia, lublin112.pl", "partner_slot": false}
+ ]}]}

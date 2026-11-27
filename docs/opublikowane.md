@@ -80,3 +80,4 @@ Odrzucone 1.11: ujęcie obywatelskie (art. 243 k.p.k.) – polityka/migracja; ko
 - 26.11 13:00 (TikTok, karuzela): „Ponad 3 mln ton soli rocznie – do rzek” (NIK).
 - 26.11 18:00 NEWS: „1 km/h za szybko? Mandat.” (błąd pomiaru, RPO).
 - 27.11 9:00 NEWS: „Kupiłeś mieszkanie? Dopłać 30%.” (UOKiK, deweloperzy).
+- 27.11 13:00 (TikTok, karuzela): stopnie alarmowe do końca lutego 2027.
