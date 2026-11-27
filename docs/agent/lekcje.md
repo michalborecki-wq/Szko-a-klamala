@@ -117,3 +117,6 @@ Lista kontrolna przed renderem 4K: [ ] Higgsfield – nowe ujęcia (1 na akt) �
 
 ## 26.11 – koszyk TikTok w pętli 7 s
 - `petla7.py` nie ma opcji `--reklama`; etykietę „Reklama – <marka>” nakładamy na plik TikTok ffmpeg drawtext (InterDisplay-Bold, 30 px, prawy górny róg, y=150). Do zrobienia: opcja `--reklama` w silniku.
+
+## 27.11 – tlo_start skraca pętlę
+- `"tlo_start": 2` przy 5-sekundowym klipie dał plik 6,07 s zamiast 7 s (ostatnie klatki czarne). Przy klipach 5 s nie ustawiać `tlo_start`; po renderze sprawdzić `ffprobe` – czas musi wynosić 7,0 s.

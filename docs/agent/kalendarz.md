@@ -99,4 +99,4 @@ Wcześniej (4.11, ręcznie): Co może policja #3 – 48 h – wysłane.
 ## pt. 27.11
 - 9:00 – GOTOWE: NEWS „Kupiłeś mieszkanie? Dopłać 30%.” (UOKiK – 3 deweloperzy, >10 mln zł, nieprawomocne; TVN24, money.pl, wnp.pl, portalsamorzadowy.pl), wysłane ok. 7:10.
 - 13:00 – GOTOWE: karuzela „Polska na 2. stopniu alarmowym. Do lutego.” (zarządzenia PRM 63–66 z 26.11; RCB za Polsat, TVN24, Interia), wysłana ok. 10:45.
-- 18:00 – Co może policja #14 (od 14:30).
+- 18:00 – GOTOWE: Co może policja #14 „Nie wykonałeś polecenia? Paralizatora nie wolno.” (ustawa o ŚPB art. 6, 11, 25), wysłane ok. 14:55.

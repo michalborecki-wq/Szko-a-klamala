@@ -1,0 +1,19 @@
+{
+"id": "PARALIZATOR",
+"seria": "CO MOŻE POLICJA #14",
+"tag": "POLICJA",
+"haczyk": [
+"Nie wykonałeś polecenia?",
+"*Paralizatora nie wolno.*"
+],
+"riposta": "Siły – owszem.",
+"akapity": [
+"Polecenie policjanta można wyegzekwować środkami przymusu (art. 11 pkt 1). Ale paralizator – !tylko! przy zamachu, ucieczce, pościgu czy zatrzymaniu (art. 25). I zawsze środek *najmniej dolegliwy* (art. 6)."
+],
+"bronisz": "**Co robisz:** paralizator „za nieposłuszeństwo”? Nagrywaj, zapisz dane policjanta, złóż skargę albo zawiadomienie do prokuratury.",
+"pasek": "PARALIZATOR ZA NIEPOSŁUSZEŃSTWO? NIE",
+"stopka": "Ustawa o środkach przymusu bezpośredniego i broni palnej (t.j. Dz.U. 2026 poz. 244), art. 6, 11, 25 · To nie jest porada prawna.",
+"tlo": "zrodla/ai_higgsfield/2026-11-14/wideo/noc_niebieskie_swiatla.mp4",
+"rozmycie": 8,
+"ai": true
+}
