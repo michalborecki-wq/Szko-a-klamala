@@ -100,3 +100,8 @@ Wcześniej (4.11, ręcznie): Co może policja #3 – 48 h – wysłane.
 - 9:00 – GOTOWE: NEWS „Kupiłeś mieszkanie? Dopłać 30%.” (UOKiK – 3 deweloperzy, >10 mln zł, nieprawomocne; TVN24, money.pl, wnp.pl, portalsamorzadowy.pl), wysłane ok. 7:10.
 - 13:00 – GOTOWE: karuzela „Polska na 2. stopniu alarmowym. Do lutego.” (zarządzenia PRM 63–66 z 26.11; RCB za Polsat, TVN24, Interia), wysłana ok. 10:45.
 - 18:00 – GOTOWE: Co może policja #14 „Nie wykonałeś polecenia? Paralizatora nie wolno.” (ustawa o ŚPB art. 6, 11, 25), wysłane ok. 14:55.
+
+## sob. 28.11
+- 9:00 – GOTOWE: NEWS „Były szef policji. Zarzut za Pegasusa.” (Prokuratura Krajowa za Interią, WP, Polsat, rp.pl, TVN24, RMF24; bez nazwiska; domniemanie niewinności), tło Higgsfield telefon_sygnal (10 kr., stan 710), wysłane ok. 7:20.
+- 13:00 – karuzela z kontrowersji (od 10:30).
+- 18:00 – Twoje prawa (poza policją) + przypomnienia na 29.11–5.12 (od 14:30).

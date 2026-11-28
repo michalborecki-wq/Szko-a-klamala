@@ -79,3 +79,4 @@ Saldo: 830 → 800.
 | 2026-11-22/wideo/tasma_kasa.mp4 | Kling 3.0, 9:16, 5 s | 10 | użyty 22.11 18:00 – cena przy kasie; taśma kasy z jabłkami, chlebem, masłem (bez ludzi i napisów) |
 | 2026-11-22/wideo/drzwi_noc.mp4 | Kling 3.0, 9:16, 5 s | 10 | użyty 22.11 – pętla 7 s „przeszukanie bez sądu”; drzwi w bloku nocą, latarka, czerwono-niebieskie światło; **numer „125” na drzwiach – używać tylko z rozmyciem** |
 | 2026-11-22/wideo/pole_lej.mp4 | Kling 3.0, 9:16, 5 s | 10 | przygotowany 22.11 – rolka PILNE „MON: dron. Prokuratura: rakieta.” (wysłana 22.11 ok. 22:35); pole w śniegu z lejem i dymem przy lesie, bez ludzi i napisów |
+| 2026-11-28/wideo/telefon_sygnal.mp4 | Kling 3.0, 9:16, 5 s | 10 | użyty 28.11 9:00 – NEWS Pegasus; telefon na biurku z czerwonym pulsującym sygnałem (drobne elementy ekranu – zawsze rozmycie ≥ 6); nadaje się do tematów inwigilacja, telefon, cyber |
