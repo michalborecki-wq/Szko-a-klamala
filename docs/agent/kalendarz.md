@@ -104,4 +104,4 @@ Wcześniej (4.11, ręcznie): Co może policja #3 – 48 h – wysłane.
 ## sob. 28.11
 - 9:00 – GOTOWE: NEWS „Były szef policji. Zarzut za Pegasusa.” (Prokuratura Krajowa za Interią, WP, Polsat, rp.pl, TVN24, RMF24; bez nazwiska; domniemanie niewinności), tło Higgsfield telefon_sygnal (10 kr., stan 710), wysłane ok. 7:20.
 - 13:00 – GOTOWE: karuzela „12,4 mln cichych kontroli skarbówki” (raport MDDP/Lewiatan za Infor, Filary Biznesu, AMOLA), wysłana ok. 10:45.
-- 18:00 – Twoje prawa (poza policją) + przypomnienia na 29.11–5.12 (od 14:30).
+- 18:00 – GOTOWE: Twoje prawa „3 niedziele handlowe. Pracujesz najwyżej w 2.” (art. 7 ust. 1b, Dz.U. 2024 poz. 1965; Infor, Forsal), wysłane ok. 15:15. Przypomnienia 29.11–5.12 ustawione (21 szt., ostatnie 5.12 14:30 ustawia 6–12.12).
