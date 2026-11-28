@@ -120,3 +120,6 @@ Lista kontrolna przed renderem 4K: [ ] Higgsfield – nowe ujęcia (1 na akt) �
 
 ## 27.11 – tlo_start skraca pętlę
 - `"tlo_start": 2` przy 5-sekundowym klipie dał plik 6,07 s zamiast 7 s (ostatnie klatki czarne). Przy klipach 5 s nie ustawiać `tlo_start`; po renderze sprawdzić `ffprobe` – czas musi wynosić 7,0 s.
+
+## 28.11 – haczyk-stwierdzenie > haczyk-pytanie (dane zespołu 26–28.11)
+- „Zmowa na gazomierzach.” 67% pominięć vs „Kupiłeś mieszkanie?” 78% i „Nie wykonałeś polecenia?” 73%. Od następnej rolki: haczyk = stwierdzenie ze znanym podmiotem (pytanie tylko w ripoście/opisie).
