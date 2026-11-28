@@ -83,3 +83,4 @@ Odrzucone 1.11: ujęcie obywatelskie (art. 243 k.p.k.) – polityka/migracja; ko
 - 27.11 13:00 (TikTok, karuzela): stopnie alarmowe do końca lutego 2027.
 - 27.11 18:00: Co może policja #14 – „Paralizatora nie wolno” (art. 25 ustawy o ŚPB).
 - 28.11 9:00 NEWS: „Były szef policji. Zarzut za Pegasusa.”
+- 28.11 13:00 (TikTok, karuzela): 12,4 mln „cichych kontroli” skarbówki.

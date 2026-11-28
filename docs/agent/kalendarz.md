@@ -103,5 +103,5 @@ Wcześniej (4.11, ręcznie): Co może policja #3 – 48 h – wysłane.
 
 ## sob. 28.11
 - 9:00 – GOTOWE: NEWS „Były szef policji. Zarzut za Pegasusa.” (Prokuratura Krajowa za Interią, WP, Polsat, rp.pl, TVN24, RMF24; bez nazwiska; domniemanie niewinności), tło Higgsfield telefon_sygnal (10 kr., stan 710), wysłane ok. 7:20.
-- 13:00 – karuzela z kontrowersji (od 10:30).
+- 13:00 – GOTOWE: karuzela „12,4 mln cichych kontroli skarbówki” (raport MDDP/Lewiatan za Infor, Filary Biznesu, AMOLA), wysłana ok. 10:45.
 - 18:00 – Twoje prawa (poza policją) + przypomnienia na 29.11–5.12 (od 14:30).

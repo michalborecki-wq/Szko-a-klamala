@@ -1,0 +1,8 @@
+{"handle": "@szkola_klamala", "posts": [{
+ "id": "ciche_kontrole", "format": "vertical", "subject": "PIENIĄDZE", "ton": "SKANDAL",
+ "slides": [
+  {"type": "cover", "title": "12,4 mln", "accent": "„cichych kontroli” skarbówki.", "sub": "W 5 lat. Bez formalnej kontroli."},
+  {"type": "number", "tag": "LICZBA", "big": "ok. 11 mld zł", "title": "zaległości", "accent": "wykrytych w 2025 r.", "body": "W latach 2021–2025 – ponad **38,8 mld zł**.", "source": "raport MDDP i Konfederacji Lewiatan"},
+  {"type": "text", "tag": "TWIST", "title": "To nie kontrola.", "accent": "A działa lepiej.", "body": "Czynności sprawdzające są prostsze i mniej sformalizowane niż kontrola – a dają budżetowi więcej niż kontrole podatkowe i celno-skarbowe **razem**.", "source": "MDDP / Lewiatan za Infor.pl, Filary Biznesu"},
+  {"type": "outro", "question": "Fiskus sprawdza po cichu – skuteczność czy przesada?", "sub": "Wyślij komuś, kto prowadzi firmę.", "sources": "Źródła: raport MDDP i Konfederacji Lewiatan (2021–2025) za Infor.pl, Filary Biznesu, AMOLA", "partner_slot": false}
+ ]}]}
